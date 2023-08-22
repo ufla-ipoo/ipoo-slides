@@ -1,0 +1,36 @@
+project:
+  title: "GAC125 - Introdução à Programação Orientada a Objetos"
+
+lang: pt-BR
+
+format: 
+  clean-revealjs:
+  # revealjs:
+    self-contained: true
+    incremental: true
+    smaller: true
+    logo: imagens/logo_UFLA.png
+
+revealjs-plugins:
+  - pointer
+
+author:
+ - name: Prof. Julio César Alves
+   affiliation: DAC - ICET - Universidade Federal de Lavras
+   url: https://julio.dac.ufla.br
+
+license: "CC BY-SA"
+
+title-block-banner: true
+
+date: last-modified
+date-format: "DD/MM/YYYY"
+
+filters:
+  - roughnotation
+  - code-fullscreen
+
+
+
+
+

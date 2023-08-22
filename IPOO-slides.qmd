@@ -1,0 +1,334 @@
+---
+title: Cap. 1 Objetos e Classes
+subtitle: GAC125 - Introdução à Programação Orientada a Objetos
+---
+
+## Como estudar esse conteúdo? 
+
+. . .
+
+Estes slides se baseiam no [Cap. 1 do livro]{.alert} da disciplina
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](imagens/livro_bluej.png){fig-alt="Capa do livro do Barnes e Kolling." fig-align="left"}
+:::
+
+::: {.column width="70%"}
+- Portanto, recomendo que [estude pelo livro]{.alert}, pois ele tem muito mais detalhes que os slides.
+- E você pode também assistir à **videoaula** desse capítulo.
+:::
+
+::::
+
+. . . 
+
+::: {.callout-tip}
+## Dica: faça anotações!
+
+Em qualquer dos casos, é altamente recomendável, ter um caderno e caneta para [anotar]{.alert} os principais [conceitos]{.alert} e eventuais [dúvidas]{.alert} que surgirem.
+
+:::
+
+## Como estudar esse conteúdo?
+
+Outra dica fundamental é:
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+- O conteúdo é totalmente atrelado à prática usando o BlueJ
+- Não adianta ler os slides, ou ficar apenas assistindo à videoaula.
+- É [necessário usar o BlueJ e praticar]{.alert} você mesmo!
+
+- Se ainda não instalou o BlueJ em seu computador, a hora é agora!
+  {{< video https://www.youtube.com/watch?v=XxoX1I1yy5Q >}}
+
+:::
+
+::: {.column width="30%"}
+![](imagens/bluej_completo_vertical.png){fig-alt="Prints do BlueJ."}
+:::
+
+::::
+
+
+## Principais Conceitos do Capítulo
+
+::: {.nonincremental}
+- Objetos
+- Classes
+- Métodos
+- Parâmetros
+:::
+
+. . .
+
+Vamos começar nossa jornada no mundo da Programação Orientada a Objetos (PPOO)!
+
+. . .
+
+Vamos conhecer os conceitos mais importantes que são a base de tudo: **Objetos e Classes**
+
+# 1.1 Objetos e Classes {background-color="#40666e"}
+
+---
+
+## Como você descreveria essa cena?
+
+![](imagens/escritorio.png)
+
+. . .
+
+Provavelmente listando [os objetos]{.alert} que nela se encontram.
+
+- Isso porque nós entendemos o mundo através dos objetos!
+
+## E o que essas imagens têm em comum?
+
+![](imagens/objetos.png)
+
+. . .
+
+Elas são [objetos]{.alert}!
+
+- Objetos são uma forma de representarmos o mundo.
+
+---
+
+Ao [criar um programa]{.alert} em uma [linguagem Orientada a Objetos]{.alert} (OO)
+
+- você está criando um [modelo]{.alert} de alguma parte do mundo
+- as partes do modelo são construídas a partir de objetos do [domínio do problema]{.alert}
+
+![](imagens/modelagem_objetos.png)
+
+---
+ 
+Os objetos que criamos dependem do problema que estamos resolvendo
+
+- Se estiver criando um software com o [Word]{.rn rn-type=circle rn-index=1}, podem ser [palavras e parágrafos]{.rn rn-type=underline rn-index=1}.
+- Já se estiver programando uma [rede social]{.rn rn-type=circle rn-index=2}, podem ser [usuários e mensagens]{.rn rn-type=underline rn-index=2}.
+- Mas podem ser também [monstros]{.rn rn-type=underline rn-index=1} se estiver criando um [jogo]{.rn rn-type=circle rn-index=1}
+
+. . .
+
+Os objetos podem ser coisas mais concretas, como jogadores em um jogo de futebol.
+
+- Ou coisas mais abstratas, como um campeonato ou uma partida do jogo
+
+. . .
+
+::: {.callout-note title="Conceito" icon=false}
+Objeto
+: **Objetos** Java modelam objetos do domínio de um problema
+:::
+
+## Objetos podem ser categorizados
+
+. . .
+
+Uma [classe]{.alert} descreve, de forma abstrata, todos os objetos de um tipo específico.
+
+. . .
+
+Para ficar mais claro, vamos pensar em um exemplo: uma simulação de trânsito.
+
+- Claramente, nós precisaremos lidar com carros.
+- Nesse contexto, um carro é uma classe ou um objeto?
+
+. . .
+
+Para nos ajudar a decidir, vamos pensar em algumas perguntas?
+
+- Que cor tem um carro?
+- O carro é rápido?
+- Qual direção está indo agora?
+
+---
+
+Não dá para responder sem especificar de qual carro estamos falando.
+
+- Isso porque a palavra "carro" nesse contexto, se refere a uma [classe]{.alert} *carro*.
+- Estamos falando de carros em geral e não de um carro em particular.
+
+. . .
+
+Agora, se eu digo: "meu carro velho está parado no estacionamento".
+
+- Podemos responder às perguntas.
+- O carro é prata, é lento, e está no estacionamento.
+
+. . .
+
+Portanto, agora estou falando de um [objeto]{.alert} carro, pois é um exemplo de um carro em particular.
+
+---
+
+Uma classe pode ser vista como o projeto de um carro
+
+![](imagens/fabrica_carros.png)
+
+Em uma fábrica de automóveis, por exemplo:
+
+- Os engenheiros criam o projeto do carro.
+- Depois os carros são produzidos de acordo com aquele projeto.
+
+. . .
+
+Nesse exemplo o projeto seria a classe, e os carros os objetos.
+
+---
+
+Uma classe pode ser vista como a planta de uma casa
+
+![](imagens/conjunto_habitacional.png)
+
+Em um conjunto habitacional:
+
+- O engenheiro cria uma planta idêntica para todas as casas.
+- As casas são então construídas de acordo com a planta.
+
+. . .
+
+Nesse exemplo a planta seria a classe, e as casas os objetos.
+
+---
+
+![](imagens/duvida_um_objeto.png)
+
+. . .
+
+Pode realmente acontecer de nosso programa ter apenas um objeto de uma determinada classe.
+
+---
+
+Costumamos dizer que um objeto particular é uma [instância]{.alert} de uma classe.
+
+- Instância é sinônimo de exemplar daquele tipo, sinônimo de objeto em OO.
+- Serve para enfatizar que é um exemplo particular de um classe específica.
+
+. . .
+
+::: {.callout-note title="Conceito" icon=false}
+Classe
+: Objetos são criados a partir de **classes**. A classe descreve o tipo do objeto; e os objetos representam instâncias individuais da classe.
+:::
+
+# 1.2 Criando objetos {background-color="#40666e"}
+
+---
+
+Baixe o projeto de exemplo [figuras](https://github.com/ufla-ipoo/figuras) e abra-o no BlueJ.
+
+. . .
+
+:::: {.callout-caution title="Como baixar o projeto?" collapse="true"}
+Os projetos da disciplina são disponibilizados no GitHub. Se nunca o utilizou, não se preocupe.
+
+::: {.nonincremental}
+- Clicando no link do projeto você verá um botão verde bem destacado escrito **Code**.
+- Clique nele e vá na última opção: **Download ZIP**.
+- Descompacte o arquivo no seu computador, entre na pasta criada e clique duas vezes no arquivo: **package.bluej**.
+:::
+::::
+
+. . .
+
+Ao abrir o projeto verá um diagrama.
+
+- Cada retângulo representa uma classe no seu projeto.
+- Clique com o botão direito em **Circulo** e escolha a opção **new Circulo()**.
+- O sistema pedirá o nome da instância, apenas clique em OK.
+
+![](imagens/print_bluej_figuras.png)
+
+---
+
+Você verá um retângulo na parte inferior do BlueJ, chamado "circulo1".
+
+![](imagens/print_bluej_objeto.png)
+
+. . .
+
+Acabamos de [criar]{.alert} nosso [primeiro objeto]{.alert}.
+
+- A caixa retangular representa a classe **Circulo**.
+- E **circulo1** é um objeto dessa classe.
+  - Essa parte que mostra os objetos é chamada de *bancada de objetos*.
+
+. . .
+
+::: {.callout-note title="Convenção" appearance="simple" icon=false}
+Começamos os nomes de classes com letras maiúsculas e os nomes de objetos com letras minúsculas. Isso ajuda a identificar do que estamos falando.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Agora é com você: experimente criar outro círculo e um quadrado.
+:::
+
+# 1.3 Chamando métodos {background-color="#40666e"}
+
+---
+
+Clique com o botão direito no objeto círculo (não na classe!) e você verá um menu com várias opções.
+
+![](imagens/print_bluej_menu_objeto.png)
+
+. . .
+
+Escolha a opção **exibir** no menu
+
+- Isso vai desenhar uma representação do círculo em uma janela separada
+
+---
+
+![](imagens/print_bluej_circulo.png)
+
+
+. . .
+
+Veja que existem várias opções no menu do círculo.
+
+- Tente chamar **moverDireita** e **moverBaixo** algumas vezes até o círculo chegar perto do canto.
+- Experimente também usar **exibir** e **esconder**.
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+O que acontece se você chamar **moverBaixo** duas vezes? Ou três vezes? O que acontece se chamar **esconder** duas vezes?
+:::
+
+---
+
+As opções do menu círculo representam [operações]{.alert} que você pode usar para manipular o círculo
+
+- Elas são chamadas de [métodos]{.alert} em Java.
+- Nós dizemos que os métodos são *chamados* ou *invocados*.
+
+. . .
+
+::: {.callout-note title="Conceito" icon=false}
+Método
+: Podemos nos comunicar com objetos através da chamada de seus **métodos**. Geralmente os objetos fazem alguma coisa quando chamamos um método.
+:::
+
+
+# 1.3 Chamando métodos {background-color="#40666e"}
+
+---
+
+
+
+. . .
+
+::: {.callout-note title="Conceito" icon=false}
+Parâmetros
+: Métodos podem ter **parâmetros** para fornecer informação adicional para uma tarefa.
+:::
