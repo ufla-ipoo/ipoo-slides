@@ -3,6 +3,8 @@ project:
 
 lang: pt-BR
 
+from: markdown+emoji
+
 format: 
   clean-revealjs:
   # revealjs:
