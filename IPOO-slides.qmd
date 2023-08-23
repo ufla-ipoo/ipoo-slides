@@ -120,7 +120,7 @@ Os objetos podem ser coisas mais concretas, como [jogadores]{.bg style="--col: #
 
 . . .
 
-::: {.callout-note title="Conceito" icon=false}
+::: {.callout-tip title="Conceito" icon=false}
 **Objetos** Java modelam objetos do domínio de um problema.
 :::
 
@@ -234,7 +234,7 @@ Costumamos dizer que um objeto particular é uma [instância]{.alert} de uma cla
 
 . . .
 
-::: {.callout-note title="Conceito" icon=false}
+::: {.callout-tip title="Conceito" icon=false}
 Objetos são criados a partir de **classes**. A classe descreve o tipo do objeto; e os objetos representam instâncias individuais da classe.
 :::
 
@@ -296,24 +296,33 @@ Agora é com você: experimente criar outro círculo e um quadrado.
 
 ---
 
+
+:::: {.columns}
+
+::: {.column width="50%"}
 Clique com o botão direito no objeto círculo (não na classe!) e você verá um menu com várias opções.
 
-. . .
-
+::: {.fragment}
 ![](imagens/print_bluej_menu_objeto.png)
+:::
 
-. . .
+:::
 
+::: {.column width="50%"}
+
+::: {.fragment}
 Escolha a opção **exibir** no menu
-
 - Isso vai desenhar uma representação do círculo em uma janela separada
+:::
+
+::: {.fragment}
+![](imagens/print_bluej_circulo.png)
+:::
+
+:::
+::::
 
 ---
-
-![](imagens/print_bluej_circulo.png)
-
-
-. . .
 
 Veja que existem várias opções no menu do círculo.
 
@@ -335,19 +344,412 @@ As opções do menu círculo representam [operações]{.alert} que você pode us
 
 . . .
 
-::: {.callout-note title="Conceito" icon=false}
+::: {.callout-tip title="Conceito" icon=false}
 Podemos nos comunicar com objetos através da chamada de seus **métodos**. Geralmente os objetos fazem alguma coisa quando chamamos um método.
 :::
 
+---
 
-# 1.3 Chamando métodos {background-color="#40666e"}
+Nós podemos entender métodos também como **comportamentos**, ou **mensagens** que podem ser enviadas para os objetos.
+
+. . .
+
+Em um jogo de futebol, por exemplo, quais são os comportamentos que um jogador pode ter?
+
+![](imagens/joystick_futebol.png)
+
+. . .
+
+Alguns exemplos são: *chutar*, *dar passe* e *correr*.
+
+- Portanto, um objeto jogador poderia ter os métodos `chutar`, `darPasse` e `correr`.
+
+. . .
+
+Já `fazerGol` seria um método válido para um objeto jogador?
+- Veja que o comportamento do jogador no jogo é *chutar a bola*. Fazer gol é uma consequência que pode acontecer ou não.
+
+
+# 1.4 Parâmetros {background-color="#40666e"}
 
 ---
 
+Vamos agora chamar o método **moverHorizontal**
+
+- Veja que aparece uma caixa de diálogo que pede uma informação.
+
+![](imagens/print_bluej_moverhorizontal.png)
+
+. . .
+
+Digite 50 e clique em OK.
+
+::: {.nonincremental}
+- Você verá que o círculo de move 50 pixels para a direita.
+:::
+
+---
+
+O método que usamos precisa de informação adicional para ser executado.
+
+- Nesse caso, é a distância que o círculo deve ser mover.
+- Veja que o método **moverHorizontal** é mais flexível que os métodos **moverDireita** e **moverEsquerda** que movem sempre por uma distância fixa.
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+Métodos podem ter **parâmetros** para fornecer informação adicional para uma tarefa.
+:::
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Tente chamar os métodos **moverVertical**, **moverVerticalLento** e **mudarTamanho** antes de continuar lendo. Descubra como o método **moverHorizontal** pode ser usado para movimentar o círculo 70 pixels para a *esquerda*.
+:::
+
+---
+
+As informações adicionais que alguns métodos precisam para executar são chamadas [parâmetros]{.alert}.
+
+- O método indica que tipos de parâmetros ele precisa.
+
+. . .
+
+Ao chamar o método **moverHorizontal** vemos na caixa de diálogo o seguinte:
+
+```{.java code-line-numbers="false"}
+void moverHorizontal(int distancia)
+```
+
+. . .
+
+Isso é o que chamamos de [assinatura]{.alert} do método.
+
+- A parte que está entre parênteses **(int distancia)** indica as informações que o método precisa para executar.
+- Para cada parâmetro, temos: 
+  - o *tipo* que indica o tipo de dado do parâmetro
+  - e o *nome* que dá uma ideia sobre o que significa a informação que é esperada.
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+O nome do método e os tipos dos seus parâmetros são chamados de **assinatura**. Ela tem todas as informações necessárias para chamar o método.
+:::
+
+---
+
+Quais poderiam ser os **parâmetros** de um método **chutar** de um objeto jogador em um jogo de futebol?
+
+![](imagens/futebol_cegos.png)
+
+. . .
+
+Os parâmetros poderiam ser, por exemplo, a **direção** e a **força** do chute.
+
+# 1.5 Tipos de Dados {background-color="#40666e"}
+
+---
+
+Um tipo indica quais tipos de dados podem ser passados para um parâmetro.
+
+- No caso do método **moverHorizontal** o valor passado deve ser um inteiro (`int`).
+
+. . .
+
+A maior parte dos métodos do projeto `figuras` que espera parâmetros, são parâmetros inteiros.
+
+- Repare que ao clicarmos com o botão direito em um objeto (ex: `circulo1`), os métodos são listados já mostrando os parâmetros que eles esperam.
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+Parâmetros têm **tipos**. O tipo define quais tipos de valores um parâmetro pode receber
+:::
+
+---
+
+Veja que o método **mudarCor** espera um parâmetro do tipo **String** (texto).
+
+- Strings em Java devem ser passadas entre aspas duplas (ex: `"vermelha"`).
+
+. . .
+
+Veja que quando clicamos em um método no BlueJ, a caixa de diálogo mostra também um texto de [comentário]{.alert} antes da assinatura do método.
+
+- Comentários são usados para fornecer informações para nós, programadores.
+- Veja que o comentário do método **mudarCor** indica quais são as cores que o programa conhece.
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Chame o método **mudarCor** para um dos seus círculos e use a string **"vermelha"**. Tente também outras cores.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Experimente o que acontece quando você tenta usar uma cor que não existe.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Tente chamar o método **mudarCor** e passar uma cor como parâmetro, mas **sem as aspas**. O que acontece?
+:::
+
+# 1.6 Múltiplas Instâncias {background-color="#40666e"}
+
+---
+
+A partir de uma classe, você pode criar vários objetos (ou instâncias).
+
+- Usando a classe **Circulo** você pode cirar muitos círculos. E o mesmo acontece com a classe **Quadrado**.
 
 
 . . .
 
-::: {.callout-note title="Conceito" icon=false}
-Métodos podem ter **parâmetros** para fornecer informação adicional para uma tarefa.
+::: {.callout-note title="Exercício" icon=false}
+Crie vários objetos círculos, usando a opção **new Circulo()** no menu da classe **Circulo**. Faça um grande e amarelo e outro pequeno e verde. Experimente também criar alguns triângulos, quadrados e pessoas, mudando suas posições, tamanhos e cores.
+:::
+
+. . .
+
+Cada um desses objetos tem sua própria posição, cor e tamanho.
+
+- Você pode mudar uma característica de um objeto (como o tamanho), chamando um método daquele objeto.
+- Isso muda apenas aquele objeto e não os demais.
+- Nós costumamos chamar as característica dos objetos de [atributos]{.alert}.
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+**Múltiplas instâncias**: muitos objetos similares podem ser criados a partir de uma única classe.
+:::
+
+- - -
+
+Ao fazer o último exercício você deve ter notado que o método **mudarTamanho** da classe **Triangulo** tem a seguinte assinatura.
+
+```{.java code-line-numbers="false"}
+void mudarTamanho(int novaAltura, int novaLargura)
+```
+
+. . . 
+
+Portanto, esse é um exemplo de um método com mais de um parâmetro.
+
+::: {.nonincremental}
+- De fato, métodos pode ter quaisquer quantidades de parâmetros.
+:::
+
+# 1.7 Estado {background-color="#40666e"}
+
+---
+
+Nós chamamos de [estado]{.alert} de um objeto, o conjunto dos valores de todos os seus atributos.
+
+- Para um círculo, por exemplo, seriam os valores de sua posição (X e Y), sua cor, seu diâmetro e sua informação de visibilidade.
+
+. . .
+
+Podemos ver o estado de um objeto no BlueJ através da opção *Inspecionar* do menu de um objeto.
+
+::: {.nonincremental}
+- Ela exibe o *Inspetor de objetos* que mostra os atributos guardados dentro de um objeto.
+:::
+
+![](imagens/print_bluej_inspetor_objetos.png)
+
+---
+
+::: {.callout-note title="Exercício" icon=false}
+Crie vários objetos de uma mesma classe e inspecione o estado de cada um. Com o inspetor de objetos aberto, mude o estado de um objeto (chamando o método **moverEsquerda**, por exemplo). Você verá os valores sendo modificados no inspetor de objetos.
+:::
+
+. . .
+
+No exercício vimos que alguns métodos, quando chamados, podem alterar o estado de um objeto.
+
+- O método **moverEsquerda**, por exemplo, muda o valor do atributo **posicaoX**.
+- Na linguagem Java, esses atributos também são chamados de *campos*.
+
+# 1.8 O que tem dentro de um objeto {background-color="#40666e"}
+
+---
+
+Inspecionando objetos diferentes, você deve ter notado que objetos da [mesma classe]{.alert} tem todos os [mesmos atributos]{.alert}.
+
+- Ou seja, a quantidade, o tipo e os nomes dos campos são os mesmos.
+- Mas os valores de um atributo de cada objeto podem ser diferentes.
+
+. . .
+
+Já objetos de [classes diferentes]{.alert} podem ter [atributos diferentes]{.alert}.
+
+- Por exemplo: um círculo tem o atributo *diâmetro*, já um triângulo tem os atributos *largura* e *altura*. 
+
+. . .
+
+Mas por que será que isso acontece?
+
+- É que a quantidade, os tipos e os nomes dos atributos são [definidos em uma classe]{.alert}, e não em um objeto.
+
+---
+
+A classe **Circulo**, por exemplo, define que um objeto círculo terá cinco atributos chamados:
+
+::: {.nonincremental}
+- diametro
+- posicaoX
+- posicaoY
+- cor
+- estaVisivel
+:::
+
+. . .
+
+A classe também define os tipos de cada atributo: os primeiros são `int`, a cor é do tipo `String` e o último é `boolean` (verdadeiro ou falso).
+
+. . .
+
+Assim, quando um objeto da classe Círculo for criado, o objeto terá esses atributos.
+
+- Já os [valores dos atributos]{.alert} são guardados [dentro do objeto]{.alert}.
+- Por isso, que cada círculo pode ter uma cor diferente, por exemplo.
+
+![](imagens/print_bluej_inspetor_dois_objetos.png)
+
+---
+
+A mesma ideia vale para os [métodos]{.alert}.
+
+- Métodos são [definidos na classe]{.alert} do objeto.
+- Assim, objetos da mesma classe têm os mesmos métodos.
+
+. . .
+
+Mas, repare que os métodos são [chamados nos objetos]{.alert}.
+
+- Assim, quando o método **moverDireita** é chamado para um círculo, é apenas esse círculo que se move.
+
+---
+
+::: {.callout-note title="Exercício" icon=false}
+Escolha uma das imagens abaixo e tente criar uma imagem parecida usando as formas do projeto `figuras`. Mas seja criativo e utilize cores, posições e tamanhos diferentes. Ao fazer isso, anote o que você teve que fazer para conseguir. Seria possível fazer de formas diferentes?
+:::
+
+. . .
+
+::: {.callout-important title="Entrega no Campus Virtual"}
+Tire um print da imagem que você criou no exercício anterior. Você precisará desse print para as atividades de entrega dessa aula!
+:::
+
+![](imagens/desenhos_figuras.png.png)
+
+
+# 1.9 Valores de Retorno {background-color="#40666e"}
+
+---
+
+Vamos reforçar os conceitos que aprendemos usando agora um outro exemplo.
+
+::: {.nonincremental}
+- Baixe o projeto de exemplo [disciplina](https://github.com/ufla-ipoo/disciplina) e abra-o no BlueJ.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Crie um objeto da classe **Estudante**. Veja que agora você precisa fornecer não só o nome do objeto, mas também alguns outros parâmetros.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Crie alguns objetos da classe **Estudante**. Chame o método **obterNome** de cada objeto. Explique o que está acontecendo.
+:::
+
+---
+
+O método **obterNome** da classe **Estudante** tem algo diferente:
+
+- Ele pode retornar um valor.
+
+. . .
+
+Nós conseguimos saber o tipo do valor retornado pela assinatura do método
+
+```{.java code-line-numbers="false"}
+String obterNome()
+```
+
+. . .
+
+A palavra **String** antes do nome do método indica que ele retorna um valor string (texto).
+
+. . .
+
+Agora repare a assinatura do método **mudarNome**.
+
+- A palavra **void** indica que o métod não retorna nenhum valor.
+
+```{.java code-line-numbers="false"}
+void mudarNome(String novoNome)
+```
+
+---
+
+Portanto, podemos obter informações de um objeto através de uma chamada de método.
+
+- Quer dizer então que os métodos podem mudar o estado de um objeto e/ou retornar algo sobre seu estado.
+
+::: {.callout-tip title="Conceito" icon=false}
+Métodos podem retornar informação sobre o objeto através de um **valor de retorno**
+:::
+
+# 1.10 Objetos como Parâmetros {background-color="#40666e"}
+
+---
+
+Vamos agora criar um objeto da classe **Disciplina** no projeto `disciplina`, chamado `poo`.
+
+- Acesse o método **matricularEstudante**, o que o método espera como parâmetro?
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Crie três estudantes e matricule-os na disciplina `poo`. Em seguida, chame o método `exibirLista` do objeto `poo`.
+:::
+
+. . .
+
+Fazendo o exercício podemos perceber que [objetos]{.alert} podem ser [passados como parâmetros]{.alert} de métodos de outros objetos.
+
+- Quando um método espera um objeto como parâmetro, o [tipo do parâmetro é o nome da classe do objeto]{.alert} que deve ser passado.
+
+# 1.11 Entregas dessa Aula {background-color="#40666e"}
+
+---
+
+::: {.nonincremental}
+
+As aulas teóricas da disciplina GAC125 - Introdução à Programação Orientada a Objetos são no formato ANP (Atividade Não-Presencial).
+
+- Isso significa que você precisa estudar o conteúdo da aula à distância (assistindo à videoaula, seguindo os slides e fazendo os exercícios propostos).
+
+Para que você tenha a presença considerada para essa aula, você precisa demonstrar que realmente estudou o conteúdo. Para essa aula, faça os itens a seguir.
+
+::: {.callout-important title="Entregas no Campus Virtual"}
+1. Responda ao quiz de perguntas teóricas disponibilizado no Campus Virtual.
+
+2. Envie o print que tirou no exercício da seção 1.8.
+
+3. Envie também o print da tela que aparece no último passo do exercício abaixo.
+:::
+
+
+::: {.callout-note title="Exercício" icon=false}
+Usando o projeto `disciplina`, crie um objeto para representar a nossa disciplina. 
+
+- Defina o professor, a sala e o horário das aulas.
+- Em seguida, matricule pelo menos dois alunos na disciplina (um deles deve ser você, ou seja, deve ter seu nome e número de matrícula).
+- Por fim, chame o método **exibirLista** para o objeto da disciplina.
+:::
+
+
 :::
