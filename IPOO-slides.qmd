@@ -3,11 +3,33 @@ title: Cap. 1 Objetos e Classes
 subtitle: GAC125 - Introdução à Programação Orientada a Objetos
 ---
 
-## Como estudar esse conteúdo? 
+## Como estudar esse conteúdo? {.smaller}
+
+Uma [dica fundamental]{.alert} é:
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+- O conteúdo é totalmente atrelado à prática usando o BlueJ.
+- Não adianta ler os slides, ou ficar apenas assistindo à **videoaula**.
+- É [necessário usar o BlueJ e praticar]{.alert} você mesmo!
+- Se ainda não instalou o BlueJ em seu computador, a hora é agora!
+  {{< video https://www.youtube.com/watch?v=XxoX1I1yy5Q >}}
+
+:::
+
+::: {.column width="30%"}
+![](imagens/bluej_completo_vertical.png){fig-alt="Prints do BlueJ." width=80%}
+:::
+
+::::
+
+## Como estudar esse conteúdo? {.smaller}
 
 . . .
 
-Estes slides se baseiam no [Cap. 1 do livro]{.alert} do Barnes e Kölling.
+Além disso, estes slides se baseiam no [Cap. 1 do livro]{.alert} do Barnes e Kölling.
 
 . . .
 
@@ -18,8 +40,8 @@ Estes slides se baseiam no [Cap. 1 do livro]{.alert} do Barnes e Kölling.
 :::
 
 ::: {.column width="70%"}
-- Portanto, recomendo que [estude pelo livro]{.alert}, pois ele tem muito mais detalhes que os slides :wink:.
-- E você pode também assistir à **videoaula** desse capítulo.
+- Eles seguem de forma bem direta o livro, com algumas poucas coisas a mais.
+- Portanto, é muito interessante também ler o capítulo no livro para tirar dúvidas e complementar o que está sendo estudado.
 :::
 
 ::::
@@ -33,30 +55,8 @@ Em qualquer dos casos, é altamente recomendável, ter um caderno e caneta para 
 
 :::
 
-## Como estudar esse conteúdo?
 
-Outra [dica fundamental]{.alert} é:
-
-:::: {.columns}
-
-::: {.column width="70%"}
-
-- O conteúdo é totalmente atrelado à prática usando o BlueJ.
-- Não adianta ler os slides, ou ficar apenas assistindo à videoaula.
-- É [necessário usar o BlueJ e praticar]{.alert} você mesmo!
-  - E se ainda não instalou o BlueJ em seu computador, a hora é agora!
-    {{< video https://www.youtube.com/watch?v=XxoX1I1yy5Q >}}
-
-:::
-
-::: {.column width="30%"}
-![](imagens/bluej_completo_vertical.png){fig-alt="Prints do BlueJ."}
-:::
-
-::::
-
-
-## Principais Conceitos do Capítulo
+## Principais Conceitos do Capítulo {.smaller}
 
 ::: {.nonincremental}
 - Objetos
@@ -77,9 +77,9 @@ Começaremos pelos conceitos mais importantes que são a base de tudo: **Objetos
 
 ---
 
-## Como você descreveria essa cena para alguém não a está vendo?
+Como você descreveria essa cena para alguém não a está vendo?
 
-![](imagens/escritorio.png)
+![](imagens/escritorio.png){width=50%}
 
 . . .
 
@@ -87,9 +87,11 @@ Provavelmente listando [os objetos]{.alert} que nela se encontram.
 
 - Isso porque nós entendemos o mundo através dos objetos!
 
-## E o que essas imagens têm em comum?
+---
 
-![](imagens/objetos.png)
+E o que essas imagens têm em comum?
+
+![](imagens/objetos.png){width=50%}
 
 . . .
 
@@ -104,11 +106,11 @@ Ao [criar um programa]{.alert} em uma [linguagem Orientada a Objetos]{.alert} (O
 
 ![](imagens/modelagem_objetos.png)
 
----
- 
-Os **objetos** que criamos **dependem do problema** que estamos resolvendo
+## {.smaller}
 
-- Se estiver criando um software como o [Word]{.bg style="--col: #eef5a6"}, os objetos podem ser [palavras e parágrafos]{.bg style="--col: #eef5a6"}.
+Os **objetos** que criamos **dependem do problema** que estamos [resolvendo]{.rn}
+
+- Se estiver criando um software como o [Word]{.bg style="--col: #eef5a6"}, os [objetos]{.rn} podem ser [palavras e parágrafos]{.bg style="--col: #eef5a6"}.
 - Já se estiver programando uma [rede social]{.bg style="--col: #eef5a6"}, podem ser [usuários e mensagens]{.bg style="--col: #eef5a6"}.
 - Mas podem ser também [monstros]{.bg style="--col: #eef5a6"} se estiver criando um [jogo]{.bg style="--col: #eef5a6"}.
 
@@ -118,13 +120,14 @@ Os objetos podem ser coisas mais concretas, como [jogadores]{.bg style="--col: #
 
 - Ou coisas mais abstratas, como um [campeonato]{.bg style="--col: #eef5a6"} ou [uma partida]{.bg style="--col: #eef5a6"} do jogo
 
+
 . . .
 
 ::: {.callout-tip title="Conceito" icon=false}
 **Objetos** Java modelam objetos do domínio de um problema.
 :::
 
-## Objetos podem ser categorizados
+## Objetos podem ser categorizados {.smaller}
 
 . . .
 
@@ -149,14 +152,10 @@ Para nos ajudar a decidir, vamos pensar em algumas perguntas?
 
 Não dá para responder sem especificar de qual carro estamos falando.
 
----
-
-Não dá para responder sem especificar de qual carro estamos falando.
-
 - Isso porque a palavra "carro" nesse contexto, se refere a uma [classe]{.alert} *carro*.
 - Estamos falando de carros em geral e não de um carro em particular.
 
-. . .
+---
 
 Agora, se eu digo: "meu carro velho está parado no estacionamento".
 
@@ -240,7 +239,7 @@ Objetos são criados a partir de **classes**. A classe descreve o tipo do objeto
 
 # 1.2 Criando objetos {background-color="#40666e"}
 
----
+## {.smaller}
 
 Baixe o projeto de exemplo [figuras](https://github.com/ufla-ipoo/figuras) e abra-o no BlueJ.
 
@@ -260,11 +259,19 @@ Os projetos da disciplina são disponibilizados no GitHub. Se nunca o utilizou, 
 
 Ao abrir o projeto verá um diagrama.
 
+:::: {.columns}
+
+::: {.column width="50%"}
 - Cada retângulo representa uma classe no seu projeto.
 - Clique com o botão direito em **Circulo** e escolha a opção **new Circulo()**.
 - O sistema pedirá o nome da instância, apenas clique em OK.
+:::
 
-![](imagens/print_bluej_figuras.png){.relative width=40%}
+::: {.column width="50%"}
+![](imagens/print_bluej_figuras.png){.relative width=80%}
+:::
+
+::::
 
 ---
 
@@ -639,7 +646,7 @@ Escolha uma das imagens abaixo e tente criar uma imagem parecida usando as forma
 Tire um print da imagem que você criou no exercício anterior. Você precisará desse print para as atividades de entrega dessa aula!
 :::
 
-![](imagens/desenhos_figuras.png.png)
+![](imagens/desenhos_figuras.png)
 
 
 # 1.9 Valores de Retorno {background-color="#40666e"}
