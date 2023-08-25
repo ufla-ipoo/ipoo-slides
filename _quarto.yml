@@ -8,11 +8,13 @@ from: markdown+emoji
 format: 
   clean-revealjs:
   # revealjs:
-    self-contained: true
+    theme: [default, custom.scss]
+    # self-contained: true
     incremental: true
     # smaller: true
     logo: imagens/logo_UFLA.png
     auto-stretch: false
+    chalkboard: true
 
 revealjs-plugins:
   - pointer
