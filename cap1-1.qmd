@@ -241,6 +241,21 @@ Costumamos dizer que um objeto particular é uma [instância]{.alert} de uma cla
 Objetos são criados a partir de **classes**. A classe descreve o tipo do objeto; e os objetos representam instâncias individuais da classe.
 :::
 
+## Quiz {background-color="#f7fad1"}
+
+::: {.nonincremental}
+[Sobre objetos e classes é correto afirmar que:]{.alert}
+
+a. Objetos são usados para criar classes
+b. Classes são instâncias de objetos
+c. Instância é sinônimo de classe
+d. Objetos são instâncias de classes
+:::
+
+::: {.callout-important title="Entregas no Campus Virtual"}
+Anote a resposta, pois você precisará depois responder ao Quiz no Campus Virtual para considerar a presença nessa aula.
+:::
+
 # Criando objetos {background-color="#40666e"}
 
 ## {.smaller}
@@ -473,6 +488,17 @@ Quais poderiam ser os **parâmetros** de um método **chutar** de um objeto joga
 
 Os parâmetros poderiam ser, por exemplo, a **direção** e a **força** do chute.
 
+## Quiz {background-color="#f7fad1"}
+
+::: {.nonincremental}
+[Sobre métodos e parâmetros é *incorreto* afirmar que:]{.alert}
+
+a. Métodos nos permitem comunicar com os objetos.
+b. Parâmetros nos permitem de fornecer informações adicionais aos métodos.
+c. A assinatura de um método indica quem o criou.
+d. Em Java, os parâmetros possuem um tipo e um nome.
+:::
+
 # Tipos de Dados {background-color="#40666e"}
 
 ## {.smaller}
@@ -541,7 +567,7 @@ Cada um desses objetos tem sua própria posição, cor e tamanho.
 
 - Você pode mudar uma característica de um objeto (como o tamanho), chamando um método daquele objeto.
 - Isso muda apenas aquele objeto e não os demais.
-- Nós costumamos chamar as característica dos objetos de [atributos]{.alert}.
+- Nós costumamos chamar as características dos objetos de [atributos]{.alert}.
 
 . . .
 
@@ -598,11 +624,22 @@ No exercício vimos que alguns métodos, quando chamados, podem alterar o estado
 - O método **moverEsquerda**, por exemplo, muda o valor do atributo **posicaoX**.
 - Na linguagem Java, esses atributos também são chamados de *campos*.
 
+## Quiz {background-color="#f7fad1"}
+
+::: {.nonincremental}
+[Se um programa tiver um objeto que é uma bola, a cor da bola é:]{.alert}
+
+a. Uma instância.
+b. Um atributo.
+c. Um tipo.
+d. Um estado.
+:::
+
 # O que tem dentro de um objeto {background-color="#40666e"}
 
 ## {.smaller}
 
-Inspecionando objetos diferentes, você deve ter notado que objetos da [mesma classe]{.alert} tem todos os [mesmos atributos]{.alert}.
+Inspecionando objetos diferentes, você deve ter notado que objetos da [mesma classe]{.alert} têm todos os [mesmos atributos]{.alert}.
 
 - Ou seja, a quantidade, o tipo e os nomes dos campos são os mesmos.
 - Mas os valores de um atributo de cada objeto podem ser diferentes.
@@ -758,6 +795,17 @@ Fazendo o exercício podemos perceber que [objetos]{.alert} podem ser [passados 
 
 - Quando um método espera um objeto como parâmetro, o [tipo do parâmetro é o nome da classe do objeto]{.alert} que deve ser passado.
 
+## Quiz {background-color="#f7fad1"}
+
+::: {.nonincremental}
+[Marque a alternativa *incorreta*:]{.alert}
+
+a. Objetos da mesma classe têm os mesmos atributos.
+b. Valores dos atributos são guardados dentro das classes.
+c. Métodos podem retornar valores.
+d. Objetos podem ser passados como parâmetros.
+:::
+
 # Entregas dessa Aula {background-color="#40666e"}
 
 ## {.smaller}
@@ -769,10 +817,10 @@ As aulas teóricas dessa disciplina são no [formato ANP]{.alert} (Atividade Nã
 - Isso significa que você precisa [estudar]{.alert} o conteúdo da aula [à distância]{.alert}.
 - E para que você tenha a [presença]{.alert} considerada para essa aula, você precisa **demonstrar que** realmente **estudou** o conteúdo.
 
-Para essa aula, faça os itens a seguir.
+Para essa aula, você terá presença se fizer **todos** os itens abaixo.
 
 ::: {.callout-important title="Entregas no Campus Virtual"}
-1. Responda ao quiz de perguntas teóricas disponibilizado no Campus Virtual.
+1. Responda, no Campus Virtual, aos quizes presentes nesses slides.
 
 2. Envie o print que tirou no exercício da seção *O que tem dentro de um objeto*.
 
