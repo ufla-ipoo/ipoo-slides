@@ -1,6 +1,6 @@
 ---
-title: Cap. 1 Objetos e Classes
-subtitle: GAC125 - Introdução à Programação Orientada a Objetos
+title: IPOO - Cap. 1 Objetos e Classes
+subtitle: Aula 1.1 - Teórica
 ---
 
 ## Como estudar esse conteúdo? {.smaller}
@@ -241,7 +241,7 @@ Costumamos dizer que um objeto particular é uma [instância]{.alert} de uma cla
 Objetos são criados a partir de **classes**. A classe descreve o tipo do objeto; e os objetos representam instâncias individuais da classe.
 :::
 
-## Quiz {background-color="#f7fad1"}
+## Quiz {background-color="#f7fad1" .smaller}
 
 ::: {.nonincremental}
 [Sobre objetos e classes é correto afirmar que:]{.alert}
@@ -469,10 +469,11 @@ Isso é o que chamamos de [assinatura]{.alert} do método.
 
 . . .
 
-
 ::: {.callout-tip title="Conceito" icon=false}
 Métodos podem ter **parâmetros** para fornecer informação adicional para uma tarefa.
 :::
+
+. . .
 
 ::: {.callout-tip title="Conceito" icon=false}
 O nome do método e os tipos dos seus parâmetros são chamados de **assinatura**. Ela tem todas as informações necessárias para chamar o método.
@@ -488,7 +489,7 @@ Quais poderiam ser os **parâmetros** de um método **chutar** de um objeto joga
 
 Os parâmetros poderiam ser, por exemplo, a **direção** e a **força** do chute.
 
-## Quiz {background-color="#f7fad1"}
+## Quiz {background-color="#f7fad1" .smaller}
 
 ::: {.nonincremental}
 [Sobre métodos e parâmetros é *incorreto* afirmar que:]{.alert}
@@ -624,7 +625,7 @@ No exercício vimos que alguns métodos, quando chamados, podem alterar o estado
 - O método **moverEsquerda**, por exemplo, muda o valor do atributo **posicaoX**.
 - Na linguagem Java, esses atributos também são chamados de *campos*.
 
-## Quiz {background-color="#f7fad1"}
+## Quiz {background-color="#f7fad1" .smaller}
 
 ::: {.nonincremental}
 [Se um programa tiver um objeto que é uma bola, a cor da bola é:]{.alert}
@@ -795,7 +796,7 @@ Fazendo o exercício podemos perceber que [objetos]{.alert} podem ser [passados 
 
 - Quando um método espera um objeto como parâmetro, o [tipo do parâmetro é o nome da classe do objeto]{.alert} que deve ser passado.
 
-## Quiz {background-color="#f7fad1"}
+## Quiz {background-color="#f7fad1" .smaller}
 
 ::: {.nonincremental}
 [Marque a alternativa *incorreta*:]{.alert}

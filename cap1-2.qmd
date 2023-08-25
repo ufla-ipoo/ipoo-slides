@@ -1,6 +1,6 @@
 ---
-title: Cap. 1 Objetos e Classes - Aula Prática
-subtitle: GAC125 - Introdução à Programação Orientada a Objetos
+title: IPOO - Cap. 1 Objetos e Classes
+subtitle: Aula 1.2 - Prática
 ---
 
 ## Sobre as Aulas Práticas {.smaller}
@@ -80,7 +80,7 @@ Confira se o Bloco de Códigos está sendo exibido no seu BlueJ.
 
 - Para isso, acesse o menu **Exibir** --> **Exibir Bloco e Códigos** (ou use o atalho {{< kbd Ctrl-E >}})
   - Vai aparecer um painel na parte inferior, à direita da bancada de objetos.
-- Agora digite os comandos do slide anterior para criar uma pessoa, exibi-la e movê-la para direita.
+- Agora digite no Bloco de Códigos os comandos do slide anterior para criar uma pessoa, exibi-la e movê-la para direita.
 - Experimente criar outros objetos e chamar seus métodos.
 :::
 
@@ -113,7 +113,7 @@ Geralmente, quando queremos fazer alguma tarefa em Java, nós não fazemos na m�
 
 - Nós criamos uma classe que faça a tarefa para nós.
 - É isso que a classe `Figura` faz.
-  - A classe `Figura` é escrita de forma que, quando uma instância é criada, são criados dos objetos quadrado (para a parece e para a janela), um triângulo e um círculo.
+  - A classe `Figura` é escrita de forma que, quando uma instância é criada, são criados dois objetos quadrado (para a parede e para a janela), um triângulo e um círculo.
   - Esses objetos são então exibidos, movidos e têm seu tamanho e cor alterados até a figura ficar como vimos.
 
 ## {.smaller}
@@ -121,7 +121,7 @@ Geralmente, quando queremos fazer alguma tarefa em Java, nós não fazemos na m�
 O importante aqui é entendermos que [objetos podem criar objetos]{.alert}.
 
 - E [objetos podem chamar métodos de outros objetos]{.alert}.
-- Um programa em java tem centenas ou milhares de objetos. O usuário inicia o programa (que geralmente cria o primeiro objeto) e, daí em diante, todos os objetos são criados a partir de outros.
+- Um programa em Java tem centenas ou milhares de objetos. O usuário inicia o programa (que geralmente cria o primeiro objeto) e, daí em diante, todos os objetos são criados a partir de outros objetos.
 
 . . .
 
@@ -273,6 +273,7 @@ A dinâmica do jogo é simples.
 - Se você morrer, você pode reiniciar o jogo apertando a tecla {{< kbd F2 >}}.
 
 Jogue um pouco e veja quantos pontos consegue alcançar:
+
 - Mas não se esqueça de continuar os exercícios ☺
 
 :::
@@ -305,6 +306,7 @@ Abra o código da classe TesteJogo.
 - Mas isso é exatamente o que fizemos para iniciar o jogo.
 
 Ou seja, essa classe é um atalho para inicializarmos o jogo mais rápido.
+
 - Basta criar um objeto dessa classe que o jogo será executado.
 
 Experimente!
@@ -326,10 +328,11 @@ A classe `Nave` possui um método chamado `getTextoExibicao`.
 Você viu que o texto aparece ao lado da nave. Vamos aproveitar esse fato então para criar um atributo novo na classe `Nave` para guardar o nome da nave.
 
 - Crie então um atributo do tipo String chamado `nome`.
-- Avalie onde seria possível iniciar o atributo `nome` com o seu nome no código da classe `Nave`. 
-- Por fim, altere o método `getTextoExibicao` para que ele exiba o valor do atributo nome.
+- Avalie onde seria possível iniciar o atributo `nome` e coloque um nome bem criativo para a sua nave. 
+- Por fim, altere o método `getTextoExibicao` para que ele exiba o valor do atributo `nome`.
 
 Vale ressaltar que o nome será definido diretamente no código.
+
 - Portanto, se você quiser usar um nome diferente, será necessário alterar o código, recompilar e executar o jogo novamente.
 
 Teste suas alterações.
@@ -367,7 +370,7 @@ Jogue e teste o campo de proteção da nave.
 ::: {.callout-note title="Exercício 2.6 - Melhorando a usabilidade" icon=false}
 
 ::: {.nonincremental}
-Bom, foi bacana nossa nave ter ficado mais forte
+Bom, foi bacana nossa nave ter ficado mais forte.
 
 - Mas quem está jogando não sabe qual o nível de proteção atual da nave!
 
@@ -376,6 +379,7 @@ Altere o método `getTextoExibicao` para exibir o nível do campo de proteção.
 - Exiba, na frente do nome da nave, o nível de proteção da nave.
 
 Jogue novamente e teste a alteração.
+
 - Agora ficou bem melhor, não ficou?
 
 :::
