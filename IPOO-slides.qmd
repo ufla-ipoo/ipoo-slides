@@ -131,14 +131,14 @@ Os objetos podem ser coisas mais concretas, como [jogadores]{.bg style="--col: #
 
 . . .
 
-Uma [classe]{.alert} descreve, de forma abstrata, [todos os objetos de um tipo]{.alert} específico.
+Uma [**classe**]{.alert} descreve, de forma abstrata, [todos os objetos de um tipo]{.alert} específico.
 
 . . .
 
 Para ficar mais claro, vamos pensar em um exemplo: uma **simulação de trânsito**.
 
 - Claramente, nós precisaremos lidar com **carros**.
-- Nesse contexto, um carro é uma *classe* ou um *objeto*?
+- Nesse contexto, carro é uma *classe* ou um *objeto*?
 
 . . .
 
@@ -164,7 +164,7 @@ Agora, se eu digo: "meu carro velho está parado no estacionamento".
 
 . . .
 
-Portanto, agora estou falando de um [objeto]{.alert} carro, pois é um exemplo de um carro em particular.
+Portanto, agora estou falando de um [**objeto**]{.alert} carro, pois é um exemplo de um carro em particular.
 
 ---
 
@@ -246,7 +246,7 @@ Baixe o projeto de exemplo [figuras](https://github.com/ufla-ipoo/figuras) e abr
 . . .
 
 :::: {.callout-caution title="Como baixar o projeto?" collapse="true"}
-Os projetos da disciplina são disponibilizados no GitHub. Se nunca o utilizou, não se preocupe.
+Os projetos da disciplina são disponibilizados no GitHub. Se nunca o utilizou, não se preocupe, basta fazer o seguinte:
 
 ::: {.nonincremental}
 - Clicando no link do projeto você verá um botão verde bem destacado escrito **`Code`**.
@@ -257,7 +257,7 @@ Os projetos da disciplina são disponibilizados no GitHub. Se nunca o utilizou, 
 
 . . .
 
-Ao abrir o projeto verá um diagrama.
+Ao abrir o projeto, você verá um diagrama.
 
 :::: {.columns}
 
@@ -273,19 +273,33 @@ Ao abrir o projeto verá um diagrama.
 
 ::::
 
----
+## {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
 
 Você verá um retângulo na parte inferior do BlueJ, chamado "circulo1".
 
 ![](imagens/print_bluej_objeto.png)
 
-. . .
+:::
 
-Acabamos de [criar]{.alert} nosso [primeiro objeto]{.alert}.
+::: {.column width="50%"}
+
+::: {.fragment}
+
+Acabamos de [**criar**]{.alert} nosso [**primeiro objeto**]{.alert}.
 
 - A caixa retangular representa a classe **Circulo**.
 - E **circulo1** é um objeto dessa classe.
   - Essa parte que mostra os objetos é chamada de *bancada de objetos*.
+
+:::
+
+:::
+
+::::
 
 . . .
 
@@ -301,8 +315,7 @@ Agora é com você: experimente criar outro círculo e um quadrado.
 
 # 1.3 Chamando métodos {background-color="#40666e"}
 
----
-
+# {.smaller}
 
 :::: {.columns}
 
@@ -317,8 +330,9 @@ Clique com o botão direito no objeto círculo (não na classe!) e você verá u
 
 ::: {.column width="50%"}
 
-::: {.fragment}
+::: {.fragment .nonincremental}
 Escolha a opção **exibir** no menu
+
 - Isso vai desenhar uma representação do círculo em uma janela separada
 :::
 
@@ -329,7 +343,7 @@ Escolha a opção **exibir** no menu
 :::
 ::::
 
----
+## {.smaller}
 
 Veja que existem várias opções no menu do círculo.
 
@@ -342,11 +356,11 @@ Veja que existem várias opções no menu do círculo.
 O que acontece se você chamar **moverBaixo** duas vezes? Ou três vezes? O que acontece se chamar **esconder** duas vezes?
 :::
 
----
+## {.smaller}
 
 As opções do menu círculo representam [operações]{.alert} que você pode usar para manipular o círculo
 
-- Elas são chamadas de [métodos]{.alert} em Java.
+- Elas são chamadas de [**métodos**]{.alert} em Java.
 - Nós dizemos que os **métodos são *chamados* ou *invocados***.
 
 . . .
@@ -355,7 +369,7 @@ As opções do menu círculo representam [operações]{.alert} que você pode us
 Podemos nos comunicar com objetos através da chamada de seus **métodos**. Geralmente os objetos fazem alguma coisa quando chamamos um método.
 :::
 
----
+## {.smaller}
 
 Nós podemos entender métodos também como **comportamentos**, ou **mensagens** que podem ser enviadas para os objetos.
 
@@ -363,7 +377,7 @@ Nós podemos entender métodos também como **comportamentos**, ou **mensagens**
 
 Em um jogo de futebol, por exemplo, quais são os comportamentos que um jogador pode ter?
 
-![](imagens/joystick_futebol.png)
+![](imagens/joystick_futebol.png){width=40%}
 
 . . .
 
@@ -374,18 +388,18 @@ Alguns exemplos são: *chutar*, *dar passe* e *correr*.
 . . .
 
 Já `fazerGol` seria um método válido para um objeto jogador?
+
 - Veja que o comportamento do jogador no jogo é *chutar a bola*. Fazer gol é uma consequência que pode acontecer ou não.
 
 
 # 1.4 Parâmetros {background-color="#40666e"}
 
----
+## {.smaller}
 
 Vamos agora chamar o método **moverHorizontal**
 
 - Veja que aparece uma caixa de diálogo que pede uma informação.
-
-![](imagens/print_bluej_moverhorizontal.png)
+  ![](imagens/print_bluej_moverhorizontal.png)
 
 . . .
 
@@ -395,35 +409,30 @@ Digite 50 e clique em OK.
 - Você verá que o círculo de move 50 pixels para a direita.
 :::
 
----
+## {.smaller}
 
-O método que usamos precisa de informação adicional para ser executado.
+O método que usamos precisa de [informação adicional]{.alert} para ser executado.
 
 - Nesse caso, é a distância que o círculo deve ser mover.
 - Veja que o método **moverHorizontal** é mais flexível que os métodos **moverDireita** e **moverEsquerda** que movem sempre por uma distância fixa.
 
 . . .
 
-::: {.callout-tip title="Conceito" icon=false}
-Métodos podem ter **parâmetros** para fornecer informação adicional para uma tarefa.
-:::
-. . .
-
 ::: {.callout-note title="Exercício" icon=false}
 Tente chamar os métodos **moverVertical**, **moverVerticalLento** e **mudarTamanho** antes de continuar lendo. Descubra como o método **moverHorizontal** pode ser usado para movimentar o círculo 70 pixels para a *esquerda*.
 :::
 
----
+. . .
 
-As informações adicionais que alguns métodos precisam para executar são chamadas [parâmetros]{.alert}.
+As informações adicionais que alguns métodos precisam para executar são chamadas [**parâmetros**]{.alert}.
 
 - O método indica que tipos de parâmetros ele precisa.
 
-. . .
+## {.smaller}
 
 Ao chamar o método **moverHorizontal** vemos na caixa de diálogo o seguinte:
 
-```{.java code-line-numbers="false"}
+```{.java code-line-numbers="false" .nonsmaller}
 void moverHorizontal(int distancia)
 ```
 
@@ -438,11 +447,16 @@ Isso é o que chamamos de [assinatura]{.alert} do método.
 
 . . .
 
+
+::: {.callout-tip title="Conceito" icon=false}
+Métodos podem ter **parâmetros** para fornecer informação adicional para uma tarefa.
+:::
+
 ::: {.callout-tip title="Conceito" icon=false}
 O nome do método e os tipos dos seus parâmetros são chamados de **assinatura**. Ela tem todas as informações necessárias para chamar o método.
 :::
 
----
+## {.smaller}
 
 Quais poderiam ser os **parâmetros** de um método **chutar** de um objeto jogador em um jogo de futebol?
 
