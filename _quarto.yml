@@ -1,5 +1,6 @@
 project:
   title: "GAC125 - Introdução à Programação Orientada a Objetos"
+  output-dir: docs
 
 lang: pt-BR
 
