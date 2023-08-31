@@ -36,6 +36,7 @@ filters:
   - roughnotation
   - code-fullscreen
 
+highlight-style: github
 
 
 

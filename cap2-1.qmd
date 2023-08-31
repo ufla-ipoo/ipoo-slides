@@ -1,0 +1,361 @@
+---
+title: IPOO - Cap. 2 Entendendo as Definições de Classe
+subtitle: Aula 2.1 - Teórica
+---
+
+## Como estudar esse conteúdo? {.smaller}
+
+Relembrando as [dicas]{.alert}:
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+- É essencial **praticar enquanto estuda**, usando o BlueJ.
+- Ajuda muito se você **ler o** capítulo do **livro** da disciplina para tirar dúvidas e complementar o que está sendo estudado.
+- Use um caderno e caneta para [anotar]{.alert} os principais [conceitos]{.alert} e eventuais [dúvidas]{.alert} que surgirem.
+
+:::
+
+::: {.column width="30%"}
+![](imagens/bluej_completo_vertical.png){fig-alt="Prints do BlueJ." width=50%}
+![](imagens/livro_bluej.png){fig-alt="Capa do livro do Barnes e Kolling." fig-align="left" width=50%}
+:::
+
+
+::::
+
+## Observações sobre o livro {.smaller}
+
+Gostaria de ressaltar algumas observações sobre o livro:
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](imagens/livro_bluej.png){fig-alt="Capa do livro do Barnes e Kolling." fig-align="left"}
+:::
+
+::: {.column width="70%"}
+- Para construir os slides usei também a 6ª edição do livro (que só tem em inglês).
+  - Portanto, os slides podem ter coisas a mais ou ligeiramente diferentes que o livro.
+- Apesar do livro ser em português, todo o código nele é em inglês.
+  - Nos slides vocês podem notar que traduzi todos os códigos para ficar mais fácil entender.
+- Os exercícios no slide nem sempre são iguais aos do livro.
+  - Portanto, sigam o enunciado dos slides.
+- Nem sempre uso a mesma tradução do livro
+  - Em alguns casos por simples preferência pessoal (ex: prefiro *atributo* que *campo*).
+  - Em outros casos porque tentei fazer uma tradução melhor.
+:::
+
+::::
+
+## Principais Conceitos do Capítulo {.smaller}
+
+::: {.nonincremental}
+- Atributos
+- Construtores
+- Parâmetros
+- Métodos (de acesso e modificadores)
+:::
+
+. . .
+
+Construções Java do capítulo
+
+::: {.nonincremental}
+- Atributo, construtor, comentário, parâmetro, atribuição (`=`), bloco, comando de retorno, `void`, operadores de atribuição compostos (`+=`, `-=`), comando `if`.
+:::
+
+. . .
+
+Neste capítulo vamos começar a examinar em mais detalhes o código-fonte de uma classe.
+
+- Vamos discutir os elementos básicos de uma classe: *atributos*, *construtores* e *métodos*.
+
+# Máquina de Ingressos {background-color="#40666e"}
+
+## {.smaller}
+
+Para ilustrar os conceitos desse capítulo, vamos usar um novo projeto: uma **máquina de ingressos ingênua**
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](imagens/maquina-ingressos.png)
+:::
+
+::: {.column width="70%"}
+
+- Uma máquina de ingressos (ou bilhetes, ou passagens) permite que o cliente coloque quantias de dinheiro e imprima seu ingresso.
+- Vamos começar com uma simulação bem básica que nos permitirá avaliar os conceitos do capítulo.
+  - Na próxima aula vamos melhorar nossa máquina.
+- O funcionamento básico é o seguinte:
+  - O cliente coloca dinheiro na máquina (pode fazer isso várias vezes).
+  - A todo momento a máquina guarda quanto dinheiro o cliente já inseriu e o total já inserido.
+  - O cliente pode então solicitar a impressão do ingresso.
+- Máquinas mais completas permitam a compra de ingressos de preços diferentes.
+  - Nossa máquina inicial trata apenas um tipo de ingresso.
+  - Mas criando várias instâncias (objetos) da máquina, podemos ter máquinas com ingressos diferentes.
+
+:::
+
+::::
+
+## {.smaller}
+
+Abra então o projeto [maquina-ingressos-ingenua](https://github.com/ufla-ipoo/maquina-ingressos-ingenua) e vamos explorá-lo como fizemos para outros exemplos.
+
+- O projeto tem uma única classe `MaquinaIngressos`.
+- Ao criar um objeto da classe, você precisa informar o preço do ingresso.
+  - O preço do ingresso é dado em centavos.
+  - Ex.: se o ingresso custa R$ 12,00, o valor informado deve ser 1200.
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+**Criação de objetos**: alguns objetos não podem ser criados se você não fornecer informação adicional para ele.
+:::
+
+## {.smaller}
+
+::: {.callout-note title="Exercício" icon=false}
+Crie um objeto `MaquinaIngressos` e verifique os métodos disponíveis.
+Chame o método `obterPreco` e confira o preço do ingresso.
+Em seguida, insira uma quantia de dinheiro menor que o preço do ingresso usando o método `inserirDinheiro` e confira o saldo usando o método `obterSaldo`.
+Insira mais dinheiro até ter a quantidade exata necessária para comprar o ingresso, e então chame o método `imprimirIngresso`.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Qual é o saldo da máquina depois que você compra um ingresso?
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Experimente inserir quantidades diferentes de dinheiro antes de imprimir um ingresso.
+Você percebeu alguma coisa estranha?
+Quando você insere muito dinheiro, você recebe o troco?
+O que acontece se você não colocar dinheiro suficiente e tentar imprimir um ingresso?
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Tente entender bem o funciona da máquina interagindo com o objeto no BlueJ antes de ver o código na próxima seção.
+Crie outra máquina que tenha ingressos de preço diferente e compre um ingresso dessa máquina.
+A impressão do bilhete é diferente?
+:::
+
+# Examinando uma definição de classe {background-color="#40666e"}
+
+## {.smaller}
+
+Nos exercícios vimos que a máquina só funciona como deveria se inserirmos a quantidade exata de dinheiro para comprar um ingresso.
+
+- Vamos examinar os detalhes da classe e entender porque isso está acontecendo.
+
+. . .
+
+Dê uma olhada no código da classe `MaquinaIngressos`, clicando duas vezes na classe no diagrama do BlueJ.
+
+- Avaliando o código podemo identificar alguns dos conceitos de OO que vimos no capítulo 1.
+- A classe tem muitas funcionalidades do Java que veremos várias vezes, portanto, avalie o código cuidadosamente.
+
+# O cabeçalho da classe {background-color="#40666e"}
+
+## {.smaller}
+
+Podemos dividir o código da classe em duas partes principais.
+
+- Uma pequena [parte externa]{.alert} que dá nome para a classe (aparecendo com fundo verde).
+- E uma [parte interna]{.alert} muito maior que faz todo o trabalho.
+
+. . .
+
+A parte externa tem o seguindo trecho de código
+
+::: {.doublefontsize}
+```{.java code-line-numbers="false"}
+public class MaquinaIngressos
+{
+  // Parte interna da classe omitida
+}
+```
+:::
+
+. . .
+
+A **parte externa** de todas as classe se parecem muito, já que o objetivo é [nomear a classe]{.alert}.
+
+- Por convenção, sempre começamos o nome da classe com letra maiúscula.
+- No BlueJ, vemos que antes dessa linha há um texto azul que nos diz alguma coisa sobre a classe.
+
+## {.smaller}
+
+::: {.callout-note title="Exercício" icon=false}
+Escreva como você acha que seria a parte externa das classes `Estudante` e `Disciplina`. Não se preocupe com a parte interna.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Faz diferença escrever `public class MaquinaIngressos` ou `class public MaquinaIngressos`?
+
+Faça essa alteração no código, feche o editor e observe a mudança no diagrama.
+Clique no botão *Compilar*.
+Que mensagem de erro aparece?
+Ela explica claramente o que tem de errado?
+
+Volte o código para como estava antes compile (confira se não aparece mais a mensagem de erro).
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Verifique se é possível remover a palavra `public` da parte externa da classe `MaquinaIngressos` (compile o código).
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Coloque a palavra `public` de volta e agora tente remover a palavra `class` e tente compilar de novo.
+
+Volte o código original para continuar a aula.
+:::
+
+## Palavras-chave {.smaller}
+
+As palavras `public` e `class` são parte da linguagem Java.
+
+- Mas `MaquinaIngressos` não é.
+  - Quem criou a classe é que escolheu esse nome.
+
+### {.fragment}
+
+Nós chamamos as palavras `public` e `class` de [palavras-chave]{.alert} ou [palavras reservadas]{.alert}.
+
+- Há cerca de 50 palavras desse tipo em Java.
+- Em breve conheceremos diversas delas.
+
+###
+
+# Atributos, construtores e métodos {background-color="#40666e"}
+
+## {.smaller}
+
+A [parte interna]{.alert} da classe é onde nós definimos os *atributos*, *construtores* e *métodos* que fazem os objetos terem suas características e comportamentos.
+
+. . .
+
+Em resumo:
+
+- [Atributos]{.alert} guardam dados dentro de um objeto.
+- [Construtores]{.alert} são responsáveis por garantir que um objeto é configurado corretamente quando ele é criado.
+- [Métodos]{.alert} implementam o comportamento de um objeto. Fornecem o que ele é capaz de fazer.
+
+. . .
+
+
+:::: {.columns}
+
+::: {.column width="70%"}
+No BlueJ os atributos aparecem em um fundo branco.
+
+- Já os constrututores e métodos são mostrados em caixas amarelas.
+:::
+
+::: {.column width="30%"}
+![](imagens/print_bluej_codigo.png)
+:::
+
+::::
+
+## {.smaller}
+
+A linguagem Java permitem que os atributos, construtores e métodos sejam colocados em qualquer ordem dentro de uma classe.
+
+- Mas, geralmente, nós colocamos primeiro os atributos, depois os construtores e depois os métodos.
+- Você não é obrigado a seguir isso, mas deixa seu código mais claro.
+  - Especialmente declarar todos os atributos primeiro.
+
+. . .
+
+::: {.doublefontsize}
+```{.java code-line-numbers="false"}
+public class NomeDaClasse
+{
+  // Atributos
+
+  // Construtores
+
+  // Métodos
+}
+```
+:::
+
+## {.smaller}
+
+::: {.callout-note title="Exercício" icon=false}
+Sabendo a ordem que os atributos, métodos e construtores são geralmente implementados em uma classe, avalie o código da classe `MaquinaIngressos` e faça uma tabela com três colunas.
+Na primeira coloque os nomes dos atributos, na segunda os nomes dos construtores e, na terceira, os construtores.
+*Dica*: a classe tem apenas um construtor.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+A assinatura do construtor tem duas características que são diferentes dos métodos.
+Você consegue descobrir quais são?
+:::
+
+## Atributos {.smaller}
+
+**Atributos** guardam dados dentro de um objeto.
+
+- Atributos também são chamados de [variáveis de instância]{.alert}.
+  - O nome **variável** é usado para coisas que são armazenadas na memória do computador por um programa.
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{.java code-line-numbers="false"}
+public class MaquinaIngressos
+{
+    private int preco;
+    private int saldo;
+    private int total;
+
+    // Construtores e métodos omitidos
+}
+```
+:::
+
+::: {.column width="50%"}
+A classe `MaquinaIngressos` tem três atributos:
+
+- `preco`: guarda o valor fixo de cada ingresso.
+- `saldo`: guarda a quantidade de dinheiro inserida na máquina por um usuário antes dele pedir para imprimir um ingresso.
+- `total`: guarda o total de dinheiro inserido na máquina por todos os usuários, desde que ela foi construída (excluindo o saldo atual).
+:::
+
+::::
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+**Atributos** guardam dados para um objeto usar. Eles também são chamado de variáveis de instância.
+:::
+
+## {.smaller}
+
+Atributos são pequenos espaços dentro de um objeto que podem usados para guardar dados de forma permanente.
+
+- Cada objeto terá espaço para cada atributo declarado na classe.
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="70%"}
+Podemos representar um objeto como mostrado na figura ao lado.
+
+- Cada atributo tem um espaço para guardar um valor quando o objeto for criado.
+:::
+
+::: {.column width="30%"}
+![](imagens/objeto_maquina_ingressos.png)
+:::
+
+::::
