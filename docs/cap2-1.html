@@ -731,15 +731,14 @@
 </section>
 <section id="section-9" class="slide level2 smaller">
 <h2></h2>
-<p>A linguagem Java permitem que os atributos, construtores e métodos sejam colocados em qualquer ordem dentro de uma classe.</p>
+<p>A linguagem Java permitem que os atributos, construtores e métodos sejam colocados em <strong>qualquer ordem</strong> dentro de uma classe.</p>
 <ul>
-<li class="fragment">Mas, geralmente, nós colocamos primeiro os atributos, depois os construtores e depois os métodos.</li>
-<li class="fragment">Você não é obrigado a seguir isso, mas deixa seu código mais claro.
+<li class="fragment">Mas, <strong>geralmente</strong>, nós colocamos <strong>primeiro os atributos, depois os construtores e depois os métodos</strong>.</li>
+<li class="fragment">Você não é obrigado a seguir isso, mas deixa seu <strong>código mais claro</strong>.
 <ul>
 <li class="fragment">Especialmente declarar todos os atributos primeiro.</li>
 </ul></li>
 </ul>
-<div class="fragment">
 <div class="doublefontsize">
 <div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> NomeDaClasse</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
@@ -749,7 +748,6 @@
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Métodos</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </div>
 </section>
 <section id="section-10" class="slide level2 smaller">
@@ -785,13 +783,13 @@
 </ul></li>
 </ul>
 <div class="fragment">
-<div class="columns">
-<div class="column" style="width:50%;">
+<div class="columns" style="display: flex !important; height: 90%;">
+<div class="column" style="display: flex; justify-content: center; align-items: center;">
 <div class="sourceCode" id="cb3" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MaquinaIngressos</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> preco<span class="op">;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> saldo<span class="op">;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> total<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> preco<span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> saldo<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> total<span class="op">;</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Construtores e métodos omitidos</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -835,12 +833,190 @@
 <p><img data-src="imagens/objeto_maquina_ingressos.png"></p>
 </div>
 </div>
+</div>
+</section>
+<section id="section-12" class="slide level2 smaller">
+<h2></h2>
+<p>Cada atributo tem sua própria declaração no código-fonte.</p>
+<ul>
+<li class="fragment">E na linha acima de cada declaração acrescentamos uma linha de texto: o <span class="alert">comentário</span>.</li>
+</ul>
+<div class="doublefontsize">
+<div class="sourceCode" id="cb4" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">// O preço de um ingresso desta máquina</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> preco<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Assim como em C++, comentários de uma única linha começam com <code>//</code>.</p>
+<ul>
+<li class="fragment">Comentários de várias linhas podem começar com <code>/*</code> e terminar com <code>*/</code>.
+<ul>
+<li class="fragment">Veja, como exemplo, os comentários antes do cabeçalho da classe <code>MaquinaIngressos</code>.</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Comentários</strong> são inseridos em uma classe para explicar o código para leitores humanos. Eles não alteram nada no funcionamento da classe.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-13" class="slide level2 smaller">
+<h2></h2>
+<p>As declarações dos atributos da classe <code>MaquinaIngressos</code> são todas bem similares.</p>
+<ul>
+<li class="fragment">Todas elas indicam que os campos são <span class="alert">privados</span> do objeto.
+<ul>
+<li class="fragment">Vamos entender melhor o que isso significa ao estudarmos o Capítulo 6.</li>
+<li class="fragment">Por enquanto, basta sabermos que os <strong>atributos</strong> devem <strong>sempre</strong> ser definidos como <strong>privados</strong>.</li>
+</ul></li>
+<li class="fragment">Os três atributos são do tipo <code>int</code>.
+<ul>
+<li class="fragment"><code>int</code> é uma <strong>palavra-chave</strong> do Java e indica que os atributos podem guardar valores que são números inteiros.</li>
+<li class="fragment">Como nossa máquina guarda os valores em centavos, o tipo de dados é apropriado.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p><strong>Atributos</strong> podem armazenar <strong>valores</strong> que <strong>mudam</strong> com o tempo.</p>
+<ul>
+<li class="fragment">Por isso, eles também são chamados de <em>variáveis</em>.</li>
+<li class="fragment">O atributo <code>saldo</code>, por exemplo, é alterado sempre que o usuário insere dinheiro ou imprime um ingresso.</li>
+<li class="fragment">Podemos ter atributos que mudam muito, como <code>saldo</code> e <code>total</code>,
+<ul>
+<li class="fragment">e atributos que não variam depois de inicializados, como o <code>preco</code>.</li>
+</ul></li>
+<li class="fragment">Mais adiante veremos que existem outros tipos de váriaveis, com a mesma ideia de que são dados armazenados no computador.</li>
+</ul>
+</div>
+</section>
+<section id="section-14" class="slide level2 smaller">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Qual é o <strong>tipo</strong> de cada um dos atributos abaixo?</p>
+<div class="sourceCode" id="cb5" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> contador<span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Estudante monitor<span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Computador notebook<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Qual é o <strong>nome</strong> de cada um dos atributos abaixo?</p>
+<div class="sourceCode" id="cb6" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">boolean</span> vivo<span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Pessoa professor<span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Jogo jogo<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Pelo que você sabe das convenções de nomes de classes, nos dois exercícios anteriores quais tipos de atributos você acha que são classes?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Será que a ordem das palavras na declaração de um atributo fazem diferença? A classe <code>MaquinaIngressos</code> tem a seguinte declaração: <code>private int preco;</code>. Experimente mudar a ordem, fechar o editor e ver como a classe fica no diagrama. Tente compilar a classe e avalie a mensagem de erro que aparece.</p>
+<p>Obs.: não se esqueça de voltar a declaração original.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>É muito interessante quando aprendemos as coisas pela experimentação, em vez de <em>decorar</em> uma regra. Será que, em Java, as declarações dos atributos precisam sempre terminar com ponto-e-vírgula? Experimente você mesmo e descubra!</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Escreva a declaração completa de um atributo do tipo <code>int</code> chamado <code>situacao</code>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="construtores" class="slide level2 smaller">
+<h2>Construtores</h2>
+<p><span class="alert">Construtores</span> têm um papel especial.</p>
+<ul>
+<li class="fragment">São responsáveis por garantir que um objeto seja <span class="alert">configurado adequadamente quando é criado</span>.</li>
+<li class="fragment">Ou seja, garantir que esteja pronto para ser usado logo após a criação.</li>
+<li class="fragment">Nós também costumamos chamar isso de <strong>inicialização</strong>.</li>
+</ul>
+<div class="fragment">
+<p>Depois que o objeto é criado, o construtor não tem mais utilidade para aquele objeto específico.</p>
+<ul>
+<li class="fragment">E não podemos chamar o construtor para um objeto já criado.</li>
+</ul>
+<p><img data-src="imagens/balao_inicializar_atributos.png"></p>
+</div>
+<div class="fragment">
+<p>Em Java, <strong>construtores</strong> têm o <strong>mesmo nome da classe</strong>.</p>
+<ul>
+<li class="fragment">Veja que o construtor da classe <code>MaquinaIngressos</code> se chama: <code>MaquinaIngressos</code>.</li>
+<li class="fragment">Geralmente usamos a palavra-chave <code>public</code> antes do nome do construtor.</li>
+<li class="fragment">E construtores não têm tipo de retorno.</li>
+</ul>
+</div>
+</section>
+<section id="section-15" class="slide level2 smaller">
+<h2></h2>
+<p>Existe uma relação direta entre o que acontece no corpo<sup>1</sup> de um construtor e os atributos da classe.</p>
+<ul>
+<li class="fragment">Isso porque a principal responsabilidade do construtor é inicializar os atributos.</li>
+<li class="fragment">Atributos podem ser inicializados com constantes.
+<ul>
+<li class="fragment">Como é o caso do <code>saldo</code> e <code>total</code> que são inicializados com zero.</li>
+</ul></li>
+<li class="fragment">Ou podem ser inicializados por valores determinados externamente à classe.
+<ul>
+<li class="fragment">E que são passados para o construtor por parâmetro.</li>
+<li class="fragment">Como é o caso do atributo <code>preco</code>.</li>
+</ul></li>
+</ul>
+<div class="fragment">
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
 </div>
-</section></section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Obs.: corpo de um construtor ou de um método é o bloco de código que contém sua implementação. Ou seja, é tudo que tem entre <code>{</code> e <code>}</code> logo após a assinatura.</p></li></ol></aside></section></section>
+
     </div>
   </div>
 

@@ -264,13 +264,12 @@ No BlueJ os atributos aparecem em um fundo branco.
 
 ## {.smaller}
 
-A linguagem Java permitem que os atributos, construtores e métodos sejam colocados em qualquer ordem dentro de uma classe.
+A linguagem Java permitem que os atributos, construtores e métodos sejam colocados em **qualquer ordem** dentro de uma classe.
 
-- Mas, geralmente, nós colocamos primeiro os atributos, depois os construtores e depois os métodos.
-- Você não é obrigado a seguir isso, mas deixa seu código mais claro.
+- Mas, **geralmente**, nós colocamos **primeiro os atributos, depois os construtores e depois os métodos**.
+- Você não é obrigado a seguir isso, mas deixa seu **código mais claro**.
   - Especialmente declarar todos os atributos primeiro.
 
-. . .
 
 ::: {.doublefontsize}
 ```{.java code-line-numbers="false"}
@@ -307,15 +306,15 @@ Você consegue descobrir quais são?
 
 . . .
 
-:::: {.columns}
+:::: {.columns style='display: flex !important; height: 90%;'}
 
-::: {.column width="50%"}
+::: {.column width="50%" style='display: flex; justify-content: center; align-items: center;'}
 ```{.java code-line-numbers="false"}
 public class MaquinaIngressos
 {
-    private int preco;
-    private int saldo;
-    private int total;
+  private int preco;
+  private int saldo;
+  private int total;
 
     // Construtores e métodos omitidos
 }
@@ -359,3 +358,141 @@ Podemos representar um objeto como mostrado na figura ao lado.
 :::
 
 ::::
+
+## {.smaller}
+
+Cada atributo tem sua própria declaração no código-fonte.
+
+- E na linha acima de cada declaração acrescentamos uma linha de texto: o [comentário]{.alert}.
+
+::: {.doublefontsize}
+```{.java code-line-numbers="false"}
+  // O preço de um ingresso desta máquina
+  private int preco;
+```
+:::
+
+. . .
+
+Assim como em C++, comentários de uma única linha começam com `//`.
+
+- Comentários de várias linhas podem começar com `/*` e terminar com `*/`.
+  - Veja, como exemplo, os comentários antes do cabeçalho da classe `MaquinaIngressos`.
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+**Comentários** são inseridos em uma classe para explicar o código para leitores humanos.
+Eles não alteram nada no funcionamento da classe.
+:::
+
+## {.smaller}
+
+As declarações dos atributos da classe `MaquinaIngressos` são todas bem similares.
+
+- Todas elas indicam que os campos são [privados]{.alert} do objeto.
+  - Vamos entender melhor o que isso significa ao estudarmos o Capítulo 6.
+  - Por enquanto, basta sabermos que os **atributos** devem **sempre** ser definidos como **privados**.
+- Os três atributos são do tipo `int`.
+  - `int` é uma **palavra-chave** do Java e indica que os atributos podem guardar valores que são números inteiros.
+  - Como nossa máquina guarda os valores em centavos, o tipo de dados é apropriado.
+
+. . .
+
+**Atributos** podem armazenar **valores** que **mudam** com o tempo.
+
+- Por isso, eles também são chamados de *variáveis*.
+- O atributo `saldo`, por exemplo, é alterado sempre que o usuário insere dinheiro ou imprime um ingresso.
+- Podemos ter atributos que mudam muito, como `saldo` e `total`,
+  - e atributos que não variam depois de inicializados, como o `preco`.
+- Mais adiante veremos que existem outros tipos de váriaveis, com a mesma ideia de que são dados armazenados no computador.
+
+## {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.callout-note title="Exercício" icon=false}
+Qual é o **tipo** de cada um dos atributos abaixo?
+```{.java code-line-numbers="false"}
+  private int contador;
+  private Estudante monitor;
+  private Computador notebook;
+```
+:::
+:::
+
+::: {.column width="50%"}
+::: {.callout-note title="Exercício" icon=false}
+Qual é o **nome** de cada um dos atributos abaixo?
+```{.java code-line-numbers="false"}
+  private boolean vivo;
+  private Pessoa professor;
+  private Jogo jogo;
+```
+:::
+:::
+
+::::
+
+::: {.callout-note title="Exercício" icon=false}
+Pelo que você sabe das convenções de nomes de classes, nos dois exercícios anteriores quais tipos de atributos você acha que são classes?
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Será que a ordem das palavras na declaração de um atributo fazem diferença?
+A classe `MaquinaIngressos` tem a seguinte declaração: `private int preco;`.
+Experimente mudar a ordem, fechar o editor e ver como a classe fica no diagrama.
+Tente compilar a classe e avalie a mensagem de erro que aparece.
+
+Obs.: não se esqueça de voltar a declaração original.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+É muito interessante quando aprendemos as coisas pela experimentação, em vez de *decorar* uma regra.
+Será que, em Java, as declarações dos atributos precisam sempre terminar com ponto-e-vírgula?
+Experimente você mesmo e descubra!
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Escreva a declaração completa de um atributo do tipo `int` chamado `situacao`.
+:::
+
+## Construtores {.smaller}
+
+[Construtores]{.alert} têm um papel especial.
+
+- São responsáveis por garantir que um objeto seja [configurado adequadamente quando é criado]{.alert}.
+- Ou seja, garantir que esteja pronto para ser usado logo após a criação.
+- Nós também costumamos chamar isso de **inicialização**.
+
+. . .
+
+Depois que o objeto é criado, o construtor não tem mais utilidade para aquele objeto específico.
+
+- E não podemos chamar o construtor para um objeto já criado.
+
+![](imagens/balao_inicializar_atributos.png)
+
+## {.smaller}
+
+Em Java, **construtores** têm o **mesmo nome da classe**.
+
+- Veja que o construtor da classe `MaquinaIngressos` se chama: `MaquinaIngressos`.
+- Geralmente usamos a palavra-chave `public` antes do nome do construtor.
+- E construtores não têm tipo de retorno.
+
+. . .
+
+Existe uma relação direta entre o que acontece no corpo^[Obs.: corpo de um construtor ou de um método é o bloco de código que contém sua implementação. Ou seja, é tudo que tem entre `{` e `}` logo após a assinatura.] de um construtor e os atributos da classe.
+
+- Isso porque a principal responsabilidade do construtor é inicializar os atributos.
+- Atributos podem ser inicializados com constantes.
+  - Como é o caso do `saldo` e `total` que são inicializados com zero.
+- Ou podem ser inicializados por valores determinados externamente à classe.
+  - E que são passados para o construtor por parâmetro.
+  - Como é o caso do atributo `preco`.
+
+. . .
+
+Mas porque o preço é recebido de fora?
