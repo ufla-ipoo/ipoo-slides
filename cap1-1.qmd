@@ -553,7 +553,7 @@ Tente chamar o método **mudarCor** e passar uma cor como parâmetro, mas **sem 
 
 A partir de uma classe, você pode criar vários objetos (ou instâncias).
 
-- Usando a classe **Circulo** você pode cirar muitos círculos. E o mesmo acontece com a classe **Quadrado**.
+- Usando a classe **Circulo** você pode criar muitos círculos. E o mesmo acontece com a classe **Quadrado**.
 
 
 . . .
@@ -787,7 +787,7 @@ Vamos agora criar um objeto da classe **Disciplina** no projeto `disciplina`, ch
 . . .
 
 ::: {.callout-note title="Exercício" icon=false}
-Crie três estudantes e matricule-os na disciplina `poo`. Em seguida, chame o método `exibirLista` do objeto `poo`.
+Crie três estudantes e matricule-os na disciplina `poo`. Em seguida, chame o método `imprimirLista` do objeto `poo`.
 :::
 
 . . .
@@ -835,7 +835,7 @@ Usando o projeto `disciplina`, crie um objeto para representar a nossa disciplin
 - Defina o professor, a sala e o horário das aulas.
 - Em seguida, matricule pelo menos dois alunos na disciplina.
   - Um deles deve ser você, ou seja, deve ter seu nome e número de matrícula).
-- Por fim, chame o método **exibirLista** para o objeto da disciplina.
+- Por fim, chame o método **imprimirLista** para o objeto da disciplina.
 :::
 
 

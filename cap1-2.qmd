@@ -95,7 +95,7 @@ Confira se o Bloco de Códigos está sendo exibido no seu BlueJ.
 ::: {.nonincremental}
 Baixe o projeto de exemplo [casa](https://github.com/ufla-ipoo/casa) e abra-o no BlueJ.
 
-- Crie uma instância da classe `Figura` e chame seu método `desenhar`. Em seguida, experimente os métodos `definirPretoEBranco` e `definirColorido`.
+- Crie uma instância da classe `Figura` e chame seu método `desenhar`. Em seguida, experimente os métodos `definirPretoEBranco` e `definirColorida`.
 - Como você acha que a classe `Figura` desenha a figura que aparece?
 :::
 :::
