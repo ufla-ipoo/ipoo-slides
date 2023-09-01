@@ -83,25 +83,26 @@ Para ilustrar os conceitos desse capítulo, vamos usar um novo projeto: uma **m�
 :::: {.columns}
 
 ::: {.column width="30%"}
-![](imagens/maquina-ingressos.png)
+![](imagens/maquina-ingressos.png){width="50%"}
 :::
 
 ::: {.column width="70%"}
-
-- Uma máquina de ingressos (ou bilhetes, ou passagens) permite que o cliente coloque quantias de dinheiro e imprima seu ingresso.
+- Uma máquina de ingressos permite que o cliente coloque quantias de dinheiro e imprima seu ingresso.
 - Vamos começar com uma simulação bem básica que nos permitirá avaliar os conceitos do capítulo.
   - Na próxima aula vamos melhorar nossa máquina.
-- O funcionamento básico é o seguinte:
-  - O cliente coloca dinheiro na máquina (pode fazer isso várias vezes).
-  - A todo momento a máquina guarda quanto dinheiro o cliente já inseriu e o total já inserido.
-  - O cliente pode então solicitar a impressão do ingresso.
-- Máquinas mais completas permitam a compra de ingressos de preços diferentes.
-  - Nossa máquina inicial trata apenas um tipo de ingresso.
-  - Mas criando várias instâncias (objetos) da máquina, podemos ter máquinas com ingressos diferentes.
-
 :::
 
 ::::
+
+. . .
+
+O funcionamento básico da máquina o seguinte:
+
+- O cliente coloca dinheiro na máquina (pode fazer isso várias vezes).
+- A todo momento a máquina guarda quanto dinheiro o cliente já inseriu e o total já inserido.
+- O cliente pode então solicitar a impressão do ingresso.
+- Nossa máquina inicial trata apenas um tipo de ingresso.
+- Mas, criando várias instâncias (objetos) da máquina, podemos ter máquinas com ingressos diferentes.
 
 ## {.smaller}
 
@@ -156,7 +157,7 @@ Nos exercícios vimos que a máquina só funciona como deveria se inserirmos a q
 
 Dê uma olhada no código da classe `MaquinaIngressos`, clicando duas vezes na classe no diagrama do BlueJ.
 
-- Avaliando o código podemo identificar alguns dos conceitos de OO que vimos no capítulo 1.
+- Avaliando o código podemos identificar alguns dos conceitos de OO que vimos no capítulo 1.
 - A classe tem muitas funcionalidades do Java que veremos várias vezes, portanto, avalie o código cuidadosamente.
 
 # O cabeçalho da classe {background-color="#40666e"}
@@ -165,7 +166,7 @@ Dê uma olhada no código da classe `MaquinaIngressos`, clicando duas vezes na c
 
 Podemos dividir o código da classe em duas partes principais.
 
-- Uma pequena [parte externa]{.alert} que dá nome para a classe (aparecendo com fundo verde).
+- Uma pequena [parte externa]{.alert} que dá nome à classe (aparece com fundo verde).
 - E uma [parte interna]{.alert} muito maior que faz todo o trabalho.
 
 . . .
@@ -222,18 +223,14 @@ As palavras `public` e `class` são parte da linguagem Java.
 - Mas `MaquinaIngressos` não é.
   - Quem criou a classe é que escolheu esse nome.
 
-### {.fragment}
+. . .
 
 Nós chamamos as palavras `public` e `class` de [palavras-chave]{.alert} ou [palavras reservadas]{.alert}.
 
 - Há cerca de 50 palavras desse tipo em Java.
 - Em breve conheceremos diversas delas.
 
-###
-
-# Atributos, construtores e métodos {background-color="#40666e"}
-
-## {.smaller}
+## Atributos, construtores e métodos{.smaller}
 
 A [parte interna]{.alert} da classe é onde nós definimos os *atributos*, *construtores* e *métodos* que fazem os objetos terem suas características e comportamentos.
 
@@ -264,25 +261,28 @@ No BlueJ os atributos aparecem em um fundo branco.
 
 ## {.smaller}
 
-A linguagem Java permitem que os atributos, construtores e métodos sejam colocados em **qualquer ordem** dentro de uma classe.
+A linguagem Java permite que os atributos, construtores e métodos sejam colocados em **qualquer ordem** dentro de uma classe.
 
 - Mas, **geralmente**, nós colocamos **primeiro os atributos, depois os construtores e depois os métodos**.
-- Você não é obrigado a seguir isso, mas deixa seu **código mais claro**.
-  - Especialmente declarar todos os atributos primeiro.
 
+  ::: {.doublefontsize}
+  ```{.java code-line-numbers="false"}
+  public class NomeDaClasse
+  {
+    // Atributos
 
-::: {.doublefontsize}
-```{.java code-line-numbers="false"}
-public class NomeDaClasse
-{
-  // Atributos
+    // Construtores
 
-  // Construtores
+    // Métodos
+  }
+  ```
+  :::
 
-  // Métodos
-}
-```
-:::
+. . .
+
+Você não é obrigado a seguir isso, mas deixa seu **código mais claro**.
+
+- Especialmente declarar todos os atributos primeiro.
 
 ## {.smaller}
 
@@ -297,7 +297,9 @@ A assinatura do construtor tem duas características que são diferentes dos mé
 Você consegue descobrir quais são?
 :::
 
-## Atributos {.smaller}
+# Atributos {background-color="#40666e"}
+
+## {.smaller}
 
 **Atributos** guardam dados dentro de um objeto.
 
@@ -308,7 +310,7 @@ Você consegue descobrir quais são?
 
 :::: {.columns style='display: flex !important; height: 90%;'}
 
-::: {.column width="50%" style='display: flex; justify-content: center; align-items: center;'}
+::: {.column width="30%" style='display: flex; justify-content: center; align-items: center;'}
 ```{.java code-line-numbers="false"}
 public class MaquinaIngressos
 {
@@ -321,12 +323,12 @@ public class MaquinaIngressos
 ```
 :::
 
-::: {.column width="50%"}
+::: {.column width="70%"}
 A classe `MaquinaIngressos` tem três atributos:
 
 - `preco`: guarda o valor fixo de cada ingresso.
 - `saldo`: guarda a quantidade de dinheiro inserida na máquina por um usuário antes dele pedir para imprimir um ingresso.
-- `total`: guarda o total de dinheiro inserido na máquina por todos os usuários, desde que ela foi construída (excluindo o saldo atual).
+- `total`: guarda o total de dinheiro inserido na máquina por todos os usuários, desde que ela foi construída (sem contar o saldo atual).
 :::
 
 ::::
@@ -395,9 +397,9 @@ As declarações dos atributos da classe `MaquinaIngressos` são todas bem simil
   - Por enquanto, basta sabermos que os **atributos** devem **sempre** ser definidos como **privados**.
 - Os três atributos são do tipo `int`.
   - `int` é uma **palavra-chave** do Java e indica que os atributos podem guardar valores que são números inteiros.
-  - Como nossa máquina guarda os valores em centavos, o tipo de dados é apropriado.
+  - Como nossa máquina guarda os valores em centavos, o tipo inteiro é apropriado.
 
-. . .
+## {.smaller}
 
 **Atributos** podem armazenar **valores** que **mudam** com o tempo.
 
@@ -436,7 +438,8 @@ Qual é o **nome** de cada um dos atributos abaixo?
 ::::
 
 ::: {.callout-note title="Exercício" icon=false}
-Pelo que você sabe das convenções de nomes de classes, nos dois exercícios anteriores quais tipos de atributos você acha que são classes?
+Repare os tipos dos atributos nos dois exercícios anteriores.
+Pelo que você sabe das convenções de nomes de classes, quais tipos você acha que são classes?
 :::
 
 ::: {.callout-note title="Exercício" icon=false}
@@ -444,7 +447,6 @@ Será que a ordem das palavras na declaração de um atributo fazem diferença?
 A classe `MaquinaIngressos` tem a seguinte declaração: `private int preco;`.
 Experimente mudar a ordem, fechar o editor e ver como a classe fica no diagrama.
 Tente compilar a classe e avalie a mensagem de erro que aparece.
-
 Obs.: não se esqueça de voltar a declaração original.
 :::
 
@@ -458,7 +460,9 @@ Experimente você mesmo e descubra!
 Escreva a declaração completa de um atributo do tipo `int` chamado `situacao`.
 :::
 
-## Construtores {.smaller}
+# Construtores {background-color="#40666e"}
+
+## {.smaller}
 
 [Construtores]{.alert} têm um papel especial.
 
@@ -470,9 +474,35 @@ Escreva a declaração completa de um atributo do tipo `int` chamado `situacao`.
 
 Depois que o objeto é criado, o construtor não tem mais utilidade para aquele objeto específico.
 
-- E não podemos chamar o construtor para um objeto já criado.
+- Portanto, não podemos chamar o construtor para um objeto já criado.
 
+. . .
+
+:::: {.columns}
+
+::: {.column width="70%"}
+Abaixo está o código do construtor da classe `MaquinaIngressos`.
+
+```{.java code-line-numbers="false"}
+  /**
+   * Cria uma máquina que emite ingressos de um dado preço.
+   * Note que o preço deve ser maior que zero, e não tem
+   * nenhuma verificação para garantir isso.
+   */
+  public MaquinaIngressos(int custoIngresso)
+  {
+      preco = custoIngresso;
+      saldo = 0;
+      total = 0;
+  }
+```
+:::
+
+::: {.column width="30%"}
 ![](imagens/balao_inicializar_atributos.png)
+:::
+
+::::
 
 ## {.smaller}
 
@@ -484,15 +514,289 @@ Em Java, **construtores** têm o **mesmo nome da classe**.
 
 . . .
 
-Existe uma relação direta entre o que acontece no corpo^[Obs.: corpo de um construtor ou de um método é o bloco de código que contém sua implementação. Ou seja, é tudo que tem entre `{` e `}` logo após a assinatura.] de um construtor e os atributos da classe.
+Existe uma relação direta entre o que acontece no corpo de um construtor e os atributos da classe.
 
 - Isso porque a principal responsabilidade do construtor é inicializar os atributos.
+- *Obs.: corpo de um construtor ou de um método é o bloco de código que contém sua implementação. Ou seja, é tudo que tem entre `{` e `}` logo após a assinatura.*
 - Atributos podem ser inicializados com constantes.
   - Como é o caso do `saldo` e `total` que são inicializados com zero.
 - Ou podem ser inicializados por valores determinados externamente à classe.
   - E que são passados para o construtor por parâmetro.
   - Como é o caso do atributo `preco`.
 
+
+## {.smaller}
+
+
+:::: {.columns}
+
+::: {.column width="40%"}
+![](imagens/porque_parametro_construtor.png)
+:::
+
+::: {.column width="60%"}
+::: {.fragment}
+A questão é que podem ser criadas várias máquinas (instâncias) a partir da classe `MaquinaIngressos`.
+
+- E cada máquina pode trabalhar com ingressos de preços diferentes.
+- Portanto, não temos como saber o preço do ingresso de uma máquina específica, até que ela seja criada.
+:::
+:::
+
+::::
+
 . . .
 
-Mas porque o preço é recebido de fora?
+Portanto, uma das principais funções de um atributo é **"lembrar" de informações externas** passada para o objeto.
+
+- De forma que a informação continue disponível durante **todo o tempo de vida do objeto**.
+- Assim, atributos servem para guardar informações que duram (são mantidas) por um tempo maior.
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+**Construtores** permitem que cada objeto seja configurado adequadamente quando é criado.
+:::
+
+## {.smaller}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+No diagrama ao lado, vemos a representação de um objeto máquina de ingressos, depois que o construtor é chamado.
+
+- Podemos ver que ela foi criada com um preço de ingresso de 500 (R$ 5,00).
+:::
+
+::: {.column width="40%"}
+![](imagens/objeto_maquina_ingressos_criado.png)
+:::
+
+::::
+
+## {.smaller}
+
+
+Em Java, se um atributo não for inicializado explicitamente no código, ele é **inicializado automaticamente** com um [valor padrão]{.alert}.
+
+- Atributos **inteiros**, por exemplo, são inicializados automaticamente **com zero**.
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="40%"}
+![](imagens/porque_inicializar_com_zero.png)
+:::
+
+::: {.column width="60%"}
+::: {.fragment}
+Há duas **vantagens**:
+
+1. Quem lê a classe entende que realmente queremos inicializar com zero.
+  
+  - Se não tivéssemos colocado, a pessoa poderia ficar em dúvida se esquecemos de inicializar ou se queríamos deixar o valor padrão zero.
+
+2. Quem lê a classe não precisa conhecer o valor padrão do Java para os atributos.
+:::
+:::
+
+::::
+
+# Parâmetros: recebendo dados {background-color="#40666e"}
+
+## {.smaller}
+
+
+Construtores e métodos têm funções diferentes, mas ambos podem **receber valores de fora do objeto** da mesma maneira:
+
+- Através dos [parâmetros]{.alert}.
+
+. . .
+
+Nós vimos um pouco sobre parâmetros no capítulo anterior.
+
+- Parâmetros são variáveis **definidas na assinatura de um método ou construtor**.
+  ```{.java code-line-numbers="false"}
+  public MaquinaIngressos(int custoIngresso)
+  ```
+- Este construtor tem um único parâmetro `custoIngresso` de tipo `int`.
+  - O mesmo tipo do campo `preco` que guardará o valor do parâmetro.
+
+. . .
+
+Repare que diferentemente de um atributo, um parâmetro é usado para guardar uma **informação temporária**.
+
+- Basicamente para carregar dados de fora do objeto para dentro do seu construtor ou método.
+
+## {.smaller}
+
+![](imagens/diagrama_passagem_parametros.png){width=55%}
+
+No BlueJ, um usuário envia informação externa para o objeto através da caixa de diálogo, que aparece quando um objeto máquina de ingressos é criado.
+
+- O valor é copiado para o parâmetro `custoIngresso` do construtor da nova máquina (A).
+  - A caixa "MaquinaIngressos (construtor)" ilustra o espaço adicional que é criado para o objeto somente quando o construtor é chamado.
+  - Ele é chamado de *espaço do construtor*, e é usado para armazenar seus parâmetros.
+
+## {.smaller}
+
+Tecnicamente, nós chamamos de [parâmetro formal]{.alert} o [nome]{.alert} **do parâmetro declarado** na assinatura do construtor ou método.
+
+- Apesar de, na prática, chamarmos simplesmente de **parâmetro**.
+- Já o [valor]{.alert} passado de fora do objeto é chamado, tecnicamente, de [argumento]{.alert} ou [parâmetro real]{.alert}.
+- Portanto, no exemplo anterior, `custoIngresso` é o parâmetro formal e o valor `500` é o argumento.
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="20%"}
+![](imagens/icone_escopo.png)
+:::
+
+::: {.column width="80%"}
+Um parâmetro formal está **disponível** para o objeto somente **dentro do corpo do construtor ou método** que onde ele é declarado.
+
+- Dizemos que é o [escopo]{.alert} do parâmetro.
+- Veja que o **escopo** de um atributo é diferente, pois ele pode ser acessado em qualquer lugar dentro da classe.
+:::
+
+::::
+
+## {.smaller}
+
+:::: {.columns}
+
+::: {.column width="20%"}
+![](imagens/tempo_de_vida.png)
+:::
+
+::: {.column width="80%"}
+[Tempo de vida]{.alert} de uma variável é um conceito relacionado à escopo.
+
+- Um **parâmetro só existe durante** uma única **chamada do construtor ou do método**.
+- Quando o construtor é chamado, o espaço do construtor é criado, e depois que ele termina, esse espaço desaparece.
+- Portanto, o tempo de vida de um parâmetro é limitado a uma única chamada do construtor.
+:::
+
+::::
+
+. . .
+
+Repare que é diferente do **tempo de vida de um atributo**.
+
+- O tempo de vida de um atributo é o mesmo do objeto.
+- Ou seja, ele existe a partir do momento que o objeto é criado até ele ser destruído.
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+O **escopo**  de uma variável define o trecho de código a partir do qual a variável pode ser acessada.
+:::
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+O **tempo de vida** de uma variável indica quanto tempo ela vai existir até ser destruída.
+:::
+
+## {.smaller}
+
+::: {.callout-note title="Exercício" icon=false}
+A qual classe pertence o construtor abaixo?
+```{.java code-line-numbers="false"}
+public Estudante(String nome)
+```
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Quantos parâmetros tem o construtor abaixo e quais são seus tipos?
+```{.java code-line-numbers="false"}
+public Livro(String titulo, double preco)
+```
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Apenas pela assinatura do construtor do exercício anterior, você conseguiria chutar alguma coisa sobre os nomes e tipos dos atributos da classe `Livro`?
+:::
+
+## {.smaller}
+
+![](imagens/fica_a_dica.png)
+
+Repare que os nomes que escolhemos para os atributos e parâmetros indicam para que eles servem.
+
+- Apenas lendo os nomes `preco`, `custo`, `titulo` e `vivo`, já podemos ter uma noção de sua utilidade
+
+- Portanto, apesar da linguagem Java permitir que você dê qualquer nome, evite nomes sem sentido como `a`, `b` ou `x1`, `x2`.
+
+## {.smaller}
+
+Como vocês já aprenderam em disciplinas anteriores de programação, nós usamos `=` para [atribuir]{.alert} valores a variáveis.
+
+- Assim, o comando `preco = custoIngresso;` indica que o valor do parâmetro `custoIngresso` será copiado para o atributo `preco`.
+- Dica: geralmente a gente lê o comando acima assim: "preço igual a custo do ingresso"
+  - Mas eu acho que fica mais fácil entender se usarmos a palavra *recebe*.
+  - Repare a diferença: "preço recebe custo do ingresso"
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="60%"}
+![](imagens/diagrama_passagem_parametros.png)
+:::
+
+::: {.column width="40%"}
+No diagrama, a atribuição é representada pela seta indica pela letra (B).
+:::
+
+::::
+
+. . .
+
+O lado direito (o que vem depois do `=`) é chamado [expressão]{.alert}.
+
+- Uma expressão pode ser um único valor (como `custoIngresso`).
+- Ou algo mais complexo, como o resultado de uma cálculo
+
+## {.smaller}
+
+Em Java, o tipo da expressão tem que ter **o mesmo tipo** da variável.
+
+- Não podemos, por exemplo, guardar o valor de uma expressão que é um número inteiro em uma variável string.
+
+- Da mesma forma, não podemos passar um valor inteiro como argumento para um parâmetro string de um construtor, por exemplo.
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+**Comandos de atribuição** guardando os valores representados pelo lado direito do comando na variável nomeada do lado esquerdo.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Suponha que uma classe `Cachorro` tem um atributo `nome`.
+Escreva o comando de atribuição que inicializa o atributo nome, sabendo que a assinatura do construtor da classe `public Cachorro(String nomeCachorro)`.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+A linha de código abaixo cria um objeto, chamando o construtor da classe `Date`.
+```{.java code-line-numbers="false"}
+  new Date("Setembro", 1, 2023)
+```
+Você conseguiria escrever a assinatura do construtor da classe `Date`?
+Obs.: escolha nomes representativos para os parâmetros.
+:::
+
+# Métodos {background-color="#40666e"}
+
+
+# Métodos de acesso e modificadores {background-color="#40666e"}
+
+
+
+# Imprimindo a partir de métodos {background-color="#40666e"}
+

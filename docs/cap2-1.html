@@ -16,6 +16,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
+  <meta name="dcterms.date" content="2023-01-09">
   <title>IPOO - Cap. 2 Entendendo as Definições de Classe</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -412,7 +413,7 @@
     </div>
 </div>
 
-  <p class="date">31/08/2023</p>
+  <p class="date">01/09/2023</p>
 </section>
 <section id="como-estudar-esse-conteúdo" class="slide level2 smaller">
 <h2>Como estudar esse conteúdo?</h2>
@@ -498,28 +499,27 @@
 <div class="fragment">
 <div class="columns">
 <div class="column" style="width:30%;">
-<p><img data-src="imagens/maquina-ingressos.png"></p>
+<p><img data-src="imagens/maquina-ingressos.png" style="width:50.0%"></p>
 </div><div class="column" style="width:70%;">
 <ul>
-<li class="fragment">Uma máquina de ingressos (ou bilhetes, ou passagens) permite que o cliente coloque quantias de dinheiro e imprima seu ingresso.</li>
+<li class="fragment">Uma máquina de ingressos permite que o cliente coloque quantias de dinheiro e imprima seu ingresso.</li>
 <li class="fragment">Vamos começar com uma simulação bem básica que nos permitirá avaliar os conceitos do capítulo.
 <ul>
 <li class="fragment">Na próxima aula vamos melhorar nossa máquina.</li>
 </ul></li>
-<li class="fragment">O funcionamento básico é o seguinte:
+</ul>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>O funcionamento básico da máquina o seguinte:</p>
 <ul>
 <li class="fragment">O cliente coloca dinheiro na máquina (pode fazer isso várias vezes).</li>
 <li class="fragment">A todo momento a máquina guarda quanto dinheiro o cliente já inseriu e o total já inserido.</li>
 <li class="fragment">O cliente pode então solicitar a impressão do ingresso.</li>
-</ul></li>
-<li class="fragment">Máquinas mais completas permitam a compra de ingressos de preços diferentes.
-<ul>
 <li class="fragment">Nossa máquina inicial trata apenas um tipo de ingresso.</li>
-<li class="fragment">Mas criando várias instâncias (objetos) da máquina, podemos ter máquinas com ingressos diferentes.</li>
-</ul></li>
+<li class="fragment">Mas, criando várias instâncias (objetos) da máquina, podemos ter máquinas com ingressos diferentes.</li>
 </ul>
-</div>
-</div>
 </div>
 </section>
 <section id="section-1" class="slide level2 smaller">
@@ -603,7 +603,7 @@
 <div class="fragment">
 <p>Dê uma olhada no código da classe <code>MaquinaIngressos</code>, clicando duas vezes na classe no diagrama do BlueJ.</p>
 <ul>
-<li class="fragment">Avaliando o código podemo identificar alguns dos conceitos de OO que vimos no capítulo 1.</li>
+<li class="fragment">Avaliando o código podemos identificar alguns dos conceitos de OO que vimos no capítulo 1.</li>
 <li class="fragment">A classe tem muitas funcionalidades do Java que veremos várias vezes, portanto, avalie o código cuidadosamente.</li>
 </ul>
 </div>
@@ -617,7 +617,7 @@
 <h2></h2>
 <p>Podemos dividir o código da classe em duas partes principais.</p>
 <ul>
-<li class="fragment">Uma pequena <span class="alert">parte externa</span> que dá nome para a classe (aparecendo com fundo verde).</li>
+<li class="fragment">Uma pequena <span class="alert">parte externa</span> que dá nome à classe (aparece com fundo verde).</li>
 <li class="fragment">E uma <span class="alert">parte interna</span> muito maior que faz todo o trabalho.</li>
 </ul>
 <div class="fragment">
@@ -692,21 +692,16 @@
 <li class="fragment">Quem criou a classe é que escolheu esse nome.</li>
 </ul></li>
 </ul>
-<h3 class="fragment" id="section-6"></h3>
+<div class="fragment">
 <p>Nós chamamos as palavras <code>public</code> e <code>class</code> de <span class="alert">palavras-chave</span> ou <span class="alert">palavras reservadas</span>.</p>
 <ul>
 <li class="fragment">Há cerca de 50 palavras desse tipo em Java.</li>
 <li class="fragment">Em breve conheceremos diversas delas.</li>
 </ul>
-<h3 id="section-7"></h3>
-</section></section>
-<section>
-<section id="atributos-construtores-e-métodos" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>Atributos, construtores e métodos</h1>
-
+</div>
 </section>
-<section id="section-8" class="slide level2 smaller">
-<h2></h2>
+<section id="atributos-construtores-e-métodos" class="slide level2 smaller">
+<h2>Atributos, construtores e métodos</h2>
 <p>A <span class="alert">parte interna</span> da classe é onde nós definimos os <em>atributos</em>, <em>construtores</em> e <em>métodos</em> que fazem os objetos terem suas características e comportamentos.</p>
 <div class="fragment">
 <p>Em resumo:</p>
@@ -729,16 +724,11 @@
 </div>
 </div>
 </section>
-<section id="section-9" class="slide level2 smaller">
+<section id="section-6" class="slide level2 smaller">
 <h2></h2>
-<p>A linguagem Java permitem que os atributos, construtores e métodos sejam colocados em <strong>qualquer ordem</strong> dentro de uma classe.</p>
+<p>A linguagem Java permite que os atributos, construtores e métodos sejam colocados em <strong>qualquer ordem</strong> dentro de uma classe.</p>
 <ul>
-<li class="fragment">Mas, <strong>geralmente</strong>, nós colocamos <strong>primeiro os atributos, depois os construtores e depois os métodos</strong>.</li>
-<li class="fragment">Você não é obrigado a seguir isso, mas deixa seu <strong>código mais claro</strong>.
-<ul>
-<li class="fragment">Especialmente declarar todos os atributos primeiro.</li>
-</ul></li>
-</ul>
+<li class="fragment"><p>Mas, <strong>geralmente</strong>, nós colocamos <strong>primeiro os atributos, depois os construtores e depois os métodos</strong>.</p>
 <div class="doublefontsize">
 <div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> NomeDaClasse</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
@@ -748,9 +738,16 @@
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Métodos</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+</ul>
+<div class="fragment">
+<p>Você não é obrigado a seguir isso, mas deixa seu <strong>código mais claro</strong>.</p>
+<ul>
+<li class="fragment">Especialmente declarar todos os atributos primeiro.</li>
+</ul>
 </div>
 </section>
-<section id="section-10" class="slide level2 smaller">
+<section id="section-7" class="slide level2 smaller">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -772,9 +769,14 @@
 </div>
 </div>
 </div>
+</section></section>
+<section>
+<section id="atributos" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Atributos</h1>
+
 </section>
-<section id="atributos" class="slide level2 smaller">
-<h2>Atributos</h2>
+<section id="section-8" class="slide level2 smaller">
+<h2></h2>
 <p><strong>Atributos</strong> guardam dados dentro de um objeto.</p>
 <ul>
 <li class="fragment">Atributos também são chamados de <span class="alert">variáveis de instância</span>.
@@ -793,12 +795,12 @@
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Construtores e métodos omitidos</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:70%;">
 <p>A classe <code>MaquinaIngressos</code> tem três atributos:</p>
 <ul>
 <li class="fragment"><code>preco</code>: guarda o valor fixo de cada ingresso.</li>
 <li class="fragment"><code>saldo</code>: guarda a quantidade de dinheiro inserida na máquina por um usuário antes dele pedir para imprimir um ingresso.</li>
-<li class="fragment"><code>total</code>: guarda o total de dinheiro inserido na máquina por todos os usuários, desde que ela foi construída (excluindo o saldo atual).</li>
+<li class="fragment"><code>total</code>: guarda o total de dinheiro inserido na máquina por todos os usuários, desde que ela foi construída (sem contar o saldo atual).</li>
 </ul>
 </div>
 </div>
@@ -816,7 +818,7 @@
 </div>
 </div>
 </section>
-<section id="section-11" class="slide level2 smaller">
+<section id="section-9" class="slide level2 smaller">
 <h2></h2>
 <p>Atributos são pequenos espaços dentro de um objeto que podem usados para guardar dados de forma permanente.</p>
 <ul>
@@ -835,7 +837,7 @@
 </div>
 </div>
 </section>
-<section id="section-12" class="slide level2 smaller">
+<section id="section-10" class="slide level2 smaller">
 <h2></h2>
 <p>Cada atributo tem sua própria declaração no código-fonte.</p>
 <ul>
@@ -867,7 +869,7 @@
 </div>
 </div>
 </section>
-<section id="section-13" class="slide level2 smaller">
+<section id="section-11" class="slide level2 smaller">
 <h2></h2>
 <p>As declarações dos atributos da classe <code>MaquinaIngressos</code> são todas bem similares.</p>
 <ul>
@@ -879,10 +881,12 @@
 <li class="fragment">Os três atributos são do tipo <code>int</code>.
 <ul>
 <li class="fragment"><code>int</code> é uma <strong>palavra-chave</strong> do Java e indica que os atributos podem guardar valores que são números inteiros.</li>
-<li class="fragment">Como nossa máquina guarda os valores em centavos, o tipo de dados é apropriado.</li>
+<li class="fragment">Como nossa máquina guarda os valores em centavos, o tipo inteiro é apropriado.</li>
 </ul></li>
 </ul>
-<div class="fragment">
+</section>
+<section id="section-12" class="slide level2 smaller">
+<h2></h2>
 <p><strong>Atributos</strong> podem armazenar <strong>valores</strong> que <strong>mudam</strong> com o tempo.</p>
 <ul>
 <li class="fragment">Por isso, eles também são chamados de <em>variáveis</em>.</li>
@@ -893,9 +897,8 @@
 </ul></li>
 <li class="fragment">Mais adiante veremos que existem outros tipos de váriaveis, com a mesma ideia de que são dados armazenados no computador.</li>
 </ul>
-</div>
 </section>
-<section id="section-14" class="slide level2 smaller">
+<section id="section-13" class="slide level2 smaller">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -934,7 +937,7 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>Pelo que você sabe das convenções de nomes de classes, nos dois exercícios anteriores quais tipos de atributos você acha que são classes?</p>
+<p>Repare os tipos dos atributos nos dois exercícios anteriores. Pelo que você sabe das convenções de nomes de classes, quais tipos você acha que são classes?</p>
 </div>
 </div>
 </div>
@@ -944,8 +947,7 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>Será que a ordem das palavras na declaração de um atributo fazem diferença? A classe <code>MaquinaIngressos</code> tem a seguinte declaração: <code>private int preco;</code>. Experimente mudar a ordem, fechar o editor e ver como a classe fica no diagrama. Tente compilar a classe e avalie a mensagem de erro que aparece.</p>
-<p>Obs.: não se esqueça de voltar a declaração original.</p>
+<p>Será que a ordem das palavras na declaração de um atributo fazem diferença? A classe <code>MaquinaIngressos</code> tem a seguinte declaração: <code>private int preco;</code>. Experimente mudar a ordem, fechar o editor e ver como a classe fica no diagrama. Tente compilar a classe e avalie a mensagem de erro que aparece. Obs.: não se esqueça de voltar a declaração original.</p>
 </div>
 </div>
 </div>
@@ -969,9 +971,14 @@
 </div>
 </div>
 </div>
+</section></section>
+<section>
+<section id="construtores" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Construtores</h1>
+
 </section>
-<section id="construtores" class="slide level2 smaller">
-<h2>Construtores</h2>
+<section id="section-14" class="slide level2 smaller">
+<h2></h2>
 <p><span class="alert">Construtores</span> têm um papel especial.</p>
 <ul>
 <li class="fragment">São responsáveis por garantir que um objeto seja <span class="alert">configurado adequadamente quando é criado</span>.</li>
@@ -981,24 +988,43 @@
 <div class="fragment">
 <p>Depois que o objeto é criado, o construtor não tem mais utilidade para aquele objeto específico.</p>
 <ul>
-<li class="fragment">E não podemos chamar o construtor para um objeto já criado.</li>
+<li class="fragment">Portanto, não podemos chamar o construtor para um objeto já criado.</li>
 </ul>
-<p><img data-src="imagens/balao_inicializar_atributos.png"></p>
 </div>
 <div class="fragment">
+<div class="columns">
+<div class="column" style="width:70%;">
+<p>Abaixo está o código do construtor da classe <code>MaquinaIngressos</code>.</p>
+<div class="sourceCode" id="cb7" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Cria uma m<span class="co">á</span>quina que emite ingressos de um dado pre<span class="co">ç</span>o<span class="co">.</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Note que o pre<span class="co">ç</span>o deve ser maior que zero<span class="co">,</span> e n<span class="co">ã</span>o tem</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> nenhuma verifica<span class="co">çã</span>o para garantir isso<span class="co">.</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>   <span class="co">*/</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dt">int</span> custoIngresso<span class="op">)</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>      preco <span class="op">=</span> custoIngresso<span class="op">;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>      total <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:30%;">
+<p><img data-src="imagens/balao_inicializar_atributos.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-15" class="slide level2 smaller">
+<h2></h2>
 <p>Em Java, <strong>construtores</strong> têm o <strong>mesmo nome da classe</strong>.</p>
 <ul>
 <li class="fragment">Veja que o construtor da classe <code>MaquinaIngressos</code> se chama: <code>MaquinaIngressos</code>.</li>
 <li class="fragment">Geralmente usamos a palavra-chave <code>public</code> antes do nome do construtor.</li>
 <li class="fragment">E construtores não têm tipo de retorno.</li>
 </ul>
-</div>
-</section>
-<section id="section-15" class="slide level2 smaller">
-<h2></h2>
-<p>Existe uma relação direta entre o que acontece no corpo<sup>1</sup> de um construtor e os atributos da classe.</p>
+<div class="fragment">
+<p>Existe uma relação direta entre o que acontece no corpo de um construtor e os atributos da classe.</p>
 <ul>
 <li class="fragment">Isso porque a principal responsabilidade do construtor é inicializar os atributos.</li>
+<li class="fragment"><em>Obs.: corpo de um construtor ou de um método é o bloco de código que contém sua implementação. Ou seja, é tudo que tem entre <code>{</code> e <code>}</code> logo após a assinatura.</em></li>
 <li class="fragment">Atributos podem ser inicializados com constantes.
 <ul>
 <li class="fragment">Como é o caso do <code>saldo</code> e <code>total</code> que são inicializados com zero.</li>
@@ -1009,14 +1035,325 @@
 <li class="fragment">Como é o caso do atributo <code>preco</code>.</li>
 </ul></li>
 </ul>
+</div>
+</section>
+<section id="section-16" class="slide level2 smaller">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="imagens/porque_parametro_construtor.png"></p>
+</div><div class="column" style="width:60%;">
 <div class="fragment">
+<p>A questão é que podem ser criadas várias máquinas (instâncias) a partir da classe <code>MaquinaIngressos</code>.</p>
+<ul>
+<li class="fragment">E cada máquina pode trabalhar com ingressos de preços diferentes.</li>
+<li class="fragment">Portanto, não temos como saber o preço do ingresso de uma máquina específica, até que ela seja criada.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Portanto, uma das principais funções de um atributo é <strong>“lembrar” de informações externas</strong> passada para o objeto.</p>
+<ul>
+<li class="fragment">De forma que a informação continue disponível durante <strong>todo o tempo de vida do objeto</strong>.</li>
+<li class="fragment">Assim, atributos servem para guardar informações que duram (são mantidas) por um tempo maior.</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Construtores</strong> permitem que cada objeto seja configurado adequadamente quando é criado.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-17" class="slide level2 smaller">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>No diagrama ao lado, vemos a representação de um objeto máquina de ingressos, depois que o construtor é chamado.</p>
+<ul>
+<li class="fragment">Podemos ver que ela foi criada com um preço de ingresso de 500 (R$ 5,00).</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="imagens/objeto_maquina_ingressos_criado.png"></p>
+</div>
+</div>
+</section>
+<section id="section-18" class="slide level2 smaller">
+<h2></h2>
+<p>Em Java, se um atributo não for inicializado explicitamente no código, ele é <strong>inicializado automaticamente</strong> com um <span class="alert">valor padrão</span>.</p>
+<ul>
+<li class="fragment">Atributos <strong>inteiros</strong>, por exemplo, são inicializados automaticamente <strong>com zero</strong>.</li>
+</ul>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="imagens/porque_inicializar_com_zero.png"></p>
+</div><div class="column" style="width:60%;">
+<div class="fragment">
+<p>Há duas <strong>vantagens</strong>:</p>
+<ol type="1">
+<li class="fragment">Quem lê a classe entende que realmente queremos inicializar com zero.</li>
+</ol>
+<ul>
+<li class="fragment">Se não tivéssemos colocado, a pessoa poderia ficar em dúvida se esquecemos de inicializar ou se queríamos deixar o valor padrão zero.</li>
+</ul>
+<ol start="2" type="1">
+<li class="fragment">Quem lê a classe não precisa conhecer o valor padrão do Java para os atributos.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="parâmetros-recebendo-dados" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Parâmetros: recebendo dados</h1>
+
+</section>
+<section id="section-19" class="slide level2 smaller">
+<h2></h2>
+<p>Construtores e métodos têm funções diferentes, mas ambos podem <strong>receber valores de fora do objeto</strong> da mesma maneira:</p>
+<ul>
+<li class="fragment">Através dos <span class="alert">parâmetros</span>.</li>
+</ul>
+<div class="fragment">
+<p>Nós vimos um pouco sobre parâmetros no capítulo anterior.</p>
+<ul>
+<li class="fragment"><p>Parâmetros são variáveis <strong>definidas na assinatura de um método ou construtor</strong>.</p>
+<div class="sourceCode" id="cb8" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dt">int</span> custoIngresso<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li class="fragment"><p>Este construtor tem um único parâmetro <code>custoIngresso</code> de tipo <code>int</code>.</p>
+<ul>
+<li class="fragment">O mesmo tipo do campo <code>preco</code> que guardará o valor do parâmetro.</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p>Repare que diferentemente de um atributo, um parâmetro é usado para guardar uma <strong>informação temporária</strong>.</p>
+<ul>
+<li class="fragment">Basicamente para carregar dados de fora do objeto para dentro do seu construtor ou método.</li>
+</ul>
+</div>
+</section>
+<section id="section-20" class="slide level2 smaller">
+<h2></h2>
+<p><img data-src="imagens/diagrama_passagem_parametros.png" style="width:55.0%"></p>
+<p>No BlueJ, um usuário envia informação externa para o objeto através da caixa de diálogo, que aparece quando um objeto máquina de ingressos é criado.</p>
+<ul>
+<li class="fragment">O valor é copiado para o parâmetro <code>custoIngresso</code> do construtor da nova máquina (A).
+<ul>
+<li class="fragment">A caixa “MaquinaIngressos (construtor)” ilustra o espaço adicional que é criado para o objeto somente quando o construtor é chamado.</li>
+<li class="fragment">Ele é chamado de <em>espaço do construtor</em>, e é usado para armazenar seus parâmetros.</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-21" class="slide level2 smaller">
+<h2></h2>
+<p>Tecnicamente, nós chamamos de <span class="alert">parâmetro formal</span> o <span class="alert">nome</span> <strong>do parâmetro declarado</strong> na assinatura do construtor ou método.</p>
+<ul>
+<li class="fragment">Apesar de, na prática, chamarmos simplesmente de <strong>parâmetro</strong>.</li>
+<li class="fragment">Já o <span class="alert">valor</span> passado de fora do objeto é chamado, tecnicamente, de <span class="alert">argumento</span> ou <span class="alert">parâmetro real</span>.</li>
+<li class="fragment">Portanto, no exemplo anterior, <code>custoIngresso</code> é o parâmetro formal e o valor <code>500</code> é o argumento.</li>
+</ul>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img data-src="imagens/icone_escopo.png"></p>
+</div><div class="column" style="width:80%;">
+<p>Um parâmetro formal está <strong>disponível</strong> para o objeto somente <strong>dentro do corpo do construtor ou método</strong> que onde ele é declarado.</p>
+<ul>
+<li class="fragment">Dizemos que é o <span class="alert">escopo</span> do parâmetro.</li>
+<li class="fragment">Veja que o <strong>escopo</strong> de um atributo é diferente, pois ele pode ser acessado em qualquer lugar dentro da classe.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="section-22" class="slide level2 smaller">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img data-src="imagens/tempo_de_vida.png"></p>
+</div><div class="column" style="width:80%;">
+<p><span class="alert">Tempo de vida</span> de uma variável é um conceito relacionado à escopo.</p>
+<ul>
+<li class="fragment">Um <strong>parâmetro só existe durante</strong> uma única <strong>chamada do construtor ou do método</strong>.</li>
+<li class="fragment">Quando o construtor é chamado, o espaço do construtor é criado, e depois que ele termina, esse espaço desaparece.</li>
+<li class="fragment">Portanto, o tempo de vida de um parâmetro é limitado a uma única chamada do construtor.</li>
+</ul>
+</div>
+</div>
+<div class="fragment">
+<p>Repare que é diferente do <strong>tempo de vida de um atributo</strong>.</p>
+<ul>
+<li class="fragment">O tempo de vida de um atributo é o mesmo do objeto.</li>
+<li class="fragment">Ou seja, ele existe a partir do momento que o objeto é criado até ele ser destruído.</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p>O <strong>escopo</strong> de uma variável define o trecho de código a partir do qual a variável pode ser acessada.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p>O <strong>tempo de vida</strong> de uma variável indica quanto tempo ela vai existir até ser destruída.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-23" class="slide level2 smaller">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>A qual classe pertence o construtor abaixo?</p>
+<div class="sourceCode" id="cb9" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">Estudante</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Quantos parâmetros tem o construtor abaixo e quais são seus tipos?</p>
+<div class="sourceCode" id="cb10" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">Livro</span><span class="op">(</span><span class="bu">String</span> titulo<span class="op">,</span> <span class="dt">double</span> preco<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Apenas pela assinatura do construtor do exercício anterior, você conseguiria chutar alguma coisa sobre os nomes e tipos dos atributos da classe <code>Livro</code>?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-24" class="slide level2 smaller">
+<h2></h2>
+<p><img data-src="imagens/fica_a_dica.png"></p>
+<p>Repare que os nomes que escolhemos para os atributos e parâmetros indicam para que eles servem.</p>
+<ul>
+<li class="fragment"><p>Apenas lendo os nomes <code>preco</code>, <code>custo</code>, <code>titulo</code> e <code>vivo</code>, já podemos ter uma noção de sua utilidade</p></li>
+<li class="fragment"><p>Portanto, apesar da linguagem Java permitir que você dê qualquer nome, evite nomes sem sentido como <code>a</code>, <code>b</code> ou <code>x1</code>, <code>x2</code>.</p></li>
+</ul>
+</section>
+<section id="section-25" class="slide level2 smaller">
+<h2></h2>
+<p>Como vocês já aprenderam em disciplinas anteriores de programação, nós usamos <code>=</code> para <span class="alert">atribuir</span> valores a variáveis.</p>
+<ul>
+<li class="fragment">Assim, o comando <code>preco = custoIngresso;</code> indica que o valor do parâmetro <code>custoIngresso</code> será copiado para o atributo <code>preco</code>.</li>
+<li class="fragment">Dica: geralmente a gente lê o comando acima assim: “preço igual a custo do ingresso”
+<ul>
+<li class="fragment">Mas eu acho que fica mais fácil entender se usarmos a palavra <em>recebe</em>.</li>
+<li class="fragment">Repare a diferença: “preço recebe custo do ingresso”</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="imagens/diagrama_passagem_parametros.png"></p>
+</div><div class="column" style="width:40%;">
+<p>No diagrama, a atribuição é representada pela seta indica pela letra (B).</p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>O lado direito (o que vem depois do <code>=</code>) é chamado <span class="alert">expressão</span>.</p>
+<ul>
+<li class="fragment">Uma expressão pode ser um único valor (como <code>custoIngresso</code>).</li>
+<li class="fragment">Ou algo mais complexo, como o resultado de uma cálculo</li>
+</ul>
+</div>
+</section>
+<section id="section-26" class="slide level2 smaller">
+<h2></h2>
+<p>Em Java, o tipo da expressão tem que ter <strong>o mesmo tipo</strong> da variável.</p>
+<ul>
+<li class="fragment"><p>Não podemos, por exemplo, guardar o valor de uma expressão que é um número inteiro em uma variável string.</p></li>
+<li class="fragment"><p>Da mesma forma, não podemos passar um valor inteiro como argumento para um parâmetro string de um construtor, por exemplo.</p></li>
+</ul>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Comandos de atribuição</strong> guardando os valores representados pelo lado direito do comando na variável nomeada do lado esquerdo.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Suponha que uma classe <code>Cachorro</code> tem um atributo <code>nome</code>. Escreva o comando de atribuição que inicializa o atributo nome, sabendo que a assinatura do construtor da classe <code>public Cachorro(String nomeCachorro)</code>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>A linha de código abaixo cria um objeto, chamando o construtor da classe <code>Date</code>.</p>
+<div class="sourceCode" id="cb11" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="bu">Date</span><span class="op">(</span><span class="st">"Setembro"</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2023</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Você conseguiria escrever a assinatura do construtor da classe <code>Date</code>? Obs.: escolha nomes representativos para os parâmetros.</p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section id="métodos" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Métodos</h1>
+
+</section>
+
+<section id="métodos-de-acesso-e-modificadores" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Métodos de acesso e modificadores</h1>
+
+</section>
+
+<section id="imprimindo-a-partir-de-métodos" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Imprimindo a partir de métodos</h1>
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
-</div>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Obs.: corpo de um construtor ou de um método é o bloco de código que contém sua implementação. Ou seja, é tudo que tem entre <code>{</code> e <code>}</code> logo após a assinatura.</p></li></ol></aside></section></section>
-
+</section>
     </div>
   </div>
 
