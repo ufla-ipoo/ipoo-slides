@@ -460,6 +460,17 @@ Experimente você mesmo e descubra!
 Escreva a declaração completa de um atributo do tipo `int` chamado `situacao`.
 :::
 
+## Quiz {background-color="#f7fad1" .smaller}
+
+::: {.nonincremental}
+[Atributo também é chamado de:]{.alert}
+
+a. Variável de instância.
+b. Variável de classe.
+c. Variável local.
+d. Variável binária.
+:::
+
 # Construtores {background-color="#40666e"}
 
 ## {.smaller}
@@ -602,6 +613,17 @@ Há duas **vantagens**:
 :::
 
 ::::
+
+## Quiz {background-color="#f7fad1" .smaller}
+
+::: {.nonincremental}
+[Marque a alternativa incorreta:]{.alert}
+
+a. Um construtor é chamado quando um objeto é criado.
+b. Construtores podem receber informações externas ao objeto.
+c. Construtores servem para definir valores válidos para os atributos do objeto.
+d. Podemos chamar um construtor para um objeto depois que ele foi criado.
+:::
 
 # Parâmetros: recebendo dados {background-color="#40666e"}
 
@@ -802,6 +824,17 @@ Você conseguiria escrever a assinatura do construtor da classe `Date`?
 Obs.: escolha nomes representativos para os parâmetros.
 :::
 
+## Quiz {background-color="#f7fad1" .smaller}
+
+::: {.nonincremental}
+[Complete a frase: _______ têm tempo de vida igual ao do objeto:]{.alert}
+
+a. Parâmetros.
+b. Atributos.
+c. Métodos.
+d. Classes.
+:::
+
 # Métodos {background-color="#40666e"}
 
 ## {.smaller}
@@ -869,7 +902,8 @@ Tanto construtores quanto métodos podem ter **quaisquer quantidades de parâmet
 
 Mas como podemos diferenciar um contrutor de um método?
 
-- Note que **construtores não têm tipo de retorno** enquanto métodos têm (aparecem antes do nome do método).
+- Note que **construtores não têm tipo de retorno** enquanto métodos têm
+  - Obs.: o tipo de retorno aparece antes do nome do método.
   ```{.java code-line-numbers="false"}
   public MaquinaIngressos(int custoIngresso)
   public int obterPreco()
@@ -914,12 +948,6 @@ Métodos de acesso têm um comando de retorno.
 
 - Porque eles retornam, ou repassam, uma informação do objeto para quem chamou o método.
 
-. . .
-
-::: {.callout-tip title="Conceito" icon=false}
-**Métodos de acesso** retornam informações sobre o estado de um objeto.
-:::
-
 ## {.smaller}
 
 :::: {.columns}
@@ -936,11 +964,17 @@ Em inglês, usamos a palavra `get` em vez de `obter`.
   - Ex.: `getPrice`, `getBalance`, etc.
 - Isso é tão comum que até em códigos em português costumamos usar a palavra `get`.
   - Ex.: `getPreco`, `getSaldo`, etc.
-- Obs.: nesse material vou preferir usar sempre `obter`, mas fique para escolher o que prefere.
+- Obs.: nesse material vou preferir usar sempre `obter`, mas fique à vontade para escolher o que prefere.
 :::
 :::
 
 ::::
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+**Métodos de acesso** retornam informações sobre o estado de um objeto.
+:::
 
 ## {.smaller}
 
@@ -1010,7 +1044,7 @@ Nós chamamos os métodos que **mudam o estado de seus objetos** de [métodos mo
 
 ::: {.column width="80%"}
 ::: {.callout-note title="Convenção" appearance="simple" icon=false}
-Em inglês, assim como os métodos de acesso começam com `get`, os métodos modificadores começam com `set`
+Em inglês, assim como os métodos de acesso começam com `get`, os métodos modificadores costumam começar com a palavra `set`.
 
 - Poderíamos ter, por exemplo, o método `setName`.
 - Nesse caso é também comum usarmos a palavra `set` em códigos em português. Ex.: `setNome`.
@@ -1075,6 +1109,173 @@ Avaliando apenas a assinatura abaixo, você saberia dizer se ela é de um constr
 Complete o código do método anterior de modo que ele atualize o valor de um atributo `preco`.
 :::
 
+## Quiz {background-color="#f7fad1" .smaller}
+
+::: {.nonincremental}
+[Marque a alternativa incorreta:]{.alert}
+
+a. Métodos de acesso geralmente retornam o valor de um atributo.
+b. Métodos modificadores mudam o estado do objeto.
+c. Os nomes dos métodos de acesso obrigatoriamente começam com a palavra `get`.
+d. Métodos com retorno do tipo `void` não retornam nenhum valor.
+:::
+
 
 # Imprimindo a partir de métodos {background-color="#40666e"}
 
+## {.smaller}
+
+O método `imprimirIngresso` é o mais complexo da classe.
+
+. . .
+
+```{.java code-line-numbers="false"}
+  /**
+   * Imprime um ingresso.
+   * Atualiza o total coletado e reduz o saldo para zero.
+   */
+  public void imprimirIngresso()
+  {
+    // Simula a impressão de um ingresso
+    System.out.println("##################");
+    System.out.println("# Ingressos & Cia ");
+    System.out.println("# Ingresso");
+    System.out.println("# " + preco + " centavos.");
+    System.out.println("##################");
+    System.out.println();
+
+    // Atualiza o total coletado com o saldo
+    total = total + saldo;
+    // Zera o saldo
+    saldo = 0;
+  }
+```
+
+. . .
+
+Você deve ter notado que, ao chamar o método, o seguinte texto aparece no terminal.
+
+```
+##################
+# Ingressos & Cia 
+# Ingresso
+# 500 centavos.
+##################
+```
+
+## {.smaller}
+
+Vamos avaliar o método passo a passo.
+
+```{.java code-line-numbers="false"}
+  /**
+   * Imprime um ingresso.
+   * Atualiza o total coletado e reduz o saldo para zero.
+   */
+  public void imprimirIngresso()                     // <1>
+  {
+    // Simula a impressão de um ingresso
+    System.out.println("##################");        // <2>
+    System.out.println("# Ingressos & Cia ");        // <2>
+    System.out.println("# Ingresso");                // <2>
+    System.out.println("# " + preco + " centavos."); // <2>
+    System.out.println("##################");        // <2>  
+    System.out.println();
+
+    // Atualiza o total coletado com o saldo
+    total = total + saldo;                           // <3>
+    // Zera o saldo
+    saldo = 0;                                       // <4>
+  }
+```
+1. A assinatura indica que o método tem retorno `void` e não espera nenhum parâmetro.
+2. Os primeiros seis comandos imprimem o que vemos no terminal.
+3. O sétimo comando adiciona o saldo atual inserido pelo usuário ao total acumulado.
+4. O último comando retorna o saldo para zero, esperando o próximo usuário.
+
+## {.smaller}
+
+O método `imprimirIngresso` chama várias vezes o método `println` do objeto `System.out`.
+
+- O objeto `System.out` é construído dentro da linguagem Java.
+- O que está dentro dos parênteses é o argumento que estamos passando para o método: alguma string.
+
+. . .
+
+A maioria das chamadas do método `println` passa uma string **literal**.
+
+- Ex.: `"# Ingressos & Cia "`.
+- Isso significa que o método simplesmente exibe na tela o texto passa  do entre aspas duplas.
+
+## {.smaller}
+
+Mas veja que a linha abaixo é um pouco diferente.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    System.out.println("# " + preco + " centavos.");    
+```
+:::
+
+. . .
+
+Essa linha tem duas coisas diferentes.
+
+- O operador `+` está sendo usado para concatenar (juntar) strings, criando uma nova string.
+  - Ex.: `"Tião" + " " + "Silva"` resulta em `"Tião Silva"`.
+- Mas, além disso, o atributo `preco` está sendo concatenado diretamente na string.
+  - Java converte valores automaticamente para String quando o operador `+` é usado.
+  - Repare que se digitássemos `"preco"`, seria exibida a palavra *preco* e não o valor do atributo `preco`.
+
+. . .
+
+Outra linha diferente é a última chamada do método `println`.
+
+- Quando o método é chamado sem nenhum argumento, uma linha em branco é deixada no terminal.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    System.out.println();
+```
+:::
+
+
+## {.smaller}
+
+::: {.callout-note title="Exercício" icon=false}
+O que exatamente será exibido na tela pelo comando abaixo.
+```{.java code-line-numbers="false"}
+  System.out.println("Orgulho de ser UFLA!")
+```
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Adicione um método `imprimirPreco` à classe `MaquinaIngressos`.
+O método deve ter retorno `void`, não ter nenhum parâmetro e exibir uma mensagem como a abaixo.
+```
+  O preco do ingresso é X centavos
+```
+Onde no lugar de X deve aparecer o valor do atributo `preco`.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Cria duas máquinas de ingressos com valores de ingresso diferentes.
+Ao chamar o método `imprimirPreco` para as duas máquinas, o texto exibido é igual ou diferente?
+Por que?
+:::
+
+# Entregas dessa Aula {background-color="#40666e"}
+
+## {.smaller}
+
+::: {.nonincremental}
+
+Como você já viu na aula anterior, para que você tenha a [presença]{.alert} 
+
+- considerada nas aula em [formato ANP]{.alert} (Atividade Não-Presencial), 
+- você precisa **demonstrar que** realmente **estudou** o conteúdo.
+
+::: {.callout-important title="Entregas no Campus Virtual"}
+Para ter presença nessa aula você deve responder, no Campus Virtual, aos quizes presentes nesses slides.
+:::
+:::

@@ -16,7 +16,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2023-01-09">
+  <meta name="dcterms.date" content="2023-02-09">
   <title>IPOO - Cap. 2 Entendendo as Definições de Classe</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -413,7 +413,7 @@
     </div>
 </div>
 
-  <p class="date">01/09/2023</p>
+  <p class="date">02/09/2023</p>
 </section>
 <section id="como-estudar-esse-conteúdo" class="slide level2 smaller">
 <h2>Como estudar esse conteúdo?</h2>
@@ -971,6 +971,18 @@
 </div>
 </div>
 </div>
+</section>
+<section id="quiz" class="slide level2 smaller" data-background-color="#f7fad1">
+<h2>Quiz</h2>
+<div>
+<p><span class="alert">Atributo também é chamado de:</span></p>
+<ol type="a">
+<li>Variável de instância.</li>
+<li>Variável de classe.</li>
+<li>Variável local.</li>
+<li>Variável binária.</li>
+</ol>
+</div>
 </section></section>
 <section>
 <section id="construtores" class="title-slide slide level1 center" data-background-color="#40666e">
@@ -1110,6 +1122,18 @@
 </div>
 </div>
 </div>
+</div>
+</section>
+<section id="quiz-1" class="slide level2 smaller" data-background-color="#f7fad1">
+<h2>Quiz</h2>
+<div>
+<p><span class="alert">Marque a alternativa incorreta:</span></p>
+<ol type="a">
+<li>Um construtor é chamado quando um objeto é criado.</li>
+<li>Construtores podem receber informações externas ao objeto.</li>
+<li>Construtores servem para definir valores válidos para os atributos do objeto.</li>
+<li>Podemos chamar um construtor para um objeto depois que ele foi criado.</li>
+</ol>
 </div>
 </section></section>
 <section>
@@ -1345,6 +1369,18 @@
 </div>
 </div>
 </div>
+</section>
+<section id="quiz-2" class="slide level2 smaller" data-background-color="#f7fad1">
+<h2>Quiz</h2>
+<div>
+<p><span class="alert">Complete a frase: _______ têm tempo de vida igual ao do objeto:</span></p>
+<ol type="a">
+<li>Parâmetros.</li>
+<li>Atributos.</li>
+<li>Métodos.</li>
+<li>Classes.</li>
+</ol>
+</div>
 </section></section>
 <section>
 <section id="métodos" class="title-slide slide level1 center" data-background-color="#40666e">
@@ -1420,10 +1456,13 @@
 <div class="fragment">
 <p>Mas como podemos diferenciar um contrutor de um método?</p>
 <ul>
-<li class="fragment"><p>Note que <strong>construtores não têm tipo de retorno</strong> enquanto métodos têm (aparecem antes do nome do método).</p>
+<li class="fragment">Note que <strong>construtores não têm tipo de retorno</strong> enquanto métodos têm
+<ul>
+<li class="fragment">Obs.: o tipo de retorno aparece antes do nome do método.</li>
+</ul>
 <div class="sourceCode" id="cb14" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dt">int</span> custoIngresso<span class="op">)</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">obterPreco</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li class="fragment"><p>Além disso, <strong>construtores possuem o mesmo nome da classe</strong>.</p></li>
+<li class="fragment">Além disso, <strong>construtores possuem o mesmo nome da classe</strong>.</li>
 </ul>
 </div>
 </section>
@@ -1470,18 +1509,6 @@
 <li class="fragment">Porque eles retornam, ou repassam, uma informação do objeto para quem chamou o método.</li>
 </ul>
 </div>
-<div class="fragment">
-<div class="callout callout-tip no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Conceito</strong></p>
-</div>
-<div class="callout-content">
-<p><strong>Métodos de acesso</strong> retornam informações sobre o estado de um objeto.</p>
-</div>
-</div>
-</div>
-</div>
 </section>
 <section id="section-32" class="slide level2 smaller">
 <h2></h2>
@@ -1505,9 +1532,21 @@
 <ul>
 <li class="fragment">Ex.: <code>getPreco</code>, <code>getSaldo</code>, etc.</li>
 </ul></li>
-<li class="fragment">Obs.: nesse material vou preferir usar sempre <code>obter</code>, mas fique para escolher o que prefere.</li>
+<li class="fragment">Obs.: nesse material vou preferir usar sempre <code>obter</code>, mas fique à vontade para escolher o que prefere.</li>
 </ul>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Métodos de acesso</strong> retornam informações sobre o estado de um objeto.</p>
 </div>
 </div>
 </div>
@@ -1606,7 +1645,7 @@
 <p><strong>Convenção</strong></p>
 </div>
 <div class="callout-content">
-<p>Em inglês, assim como os métodos de acesso começam com <code>get</code>, os métodos modificadores começam com <code>set</code></p>
+<p>Em inglês, assim como os métodos de acesso começam com <code>get</code>, os métodos modificadores costumam começar com a palavra <code>set</code>.</p>
 <ul>
 <li class="fragment">Poderíamos ter, por exemplo, o método <code>setName</code>.</li>
 <li class="fragment">Nesse caso é também comum usarmos a palavra <code>set</code> em códigos em português. Ex.: <code>setNome</code>.</li>
@@ -1617,7 +1656,9 @@
 </div>
 </div>
 </div>
-<div class="fragment">
+</section>
+<section id="section-36" class="slide level2 smaller">
+<h2></h2>
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1628,10 +1669,7 @@
 </div>
 </div>
 </div>
-</div>
-</section>
-<section id="section-36" class="slide level2 smaller">
-<h2></h2>
+<div class="fragment">
 <div class="fragment">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1645,6 +1683,7 @@
 <li>Chame novamente o método <code>obterSaldo</code>.</li>
 <li>As duas chamadas do método <code>obterSaldo</code> retornaram o mesmo valor? Por que?</li>
 </ul>
+</div>
 </div>
 </div>
 </div>
@@ -1663,11 +1702,11 @@
 <span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
-<p>Repare que o método tem retorno do tipo <span class="alert"><code>void</code></span></p>
+<p>Repare que o método tem retorno do tipo <span class="alert"><code>void</code></span>.</p>
 <ul>
-<li class="fragment">Isso significa que o método não retorna nenhum valor.</li>
+<li class="fragment">Isso significa que o método <strong>não retorna nenhum valor</strong>.</li>
 <li class="fragment">No BlueJ percemos que a diferença é que não aparece a caixa de diálogo quando chamamos métodos desse tipo.</li>
-<li class="fragment">A diferença no corpo do método é que ele não tem comando de retorno.</li>
+<li class="fragment">A diferença no corpo do método é que ele <strong>não tem comando de retorno</strong>.</li>
 </ul>
 </div>
 </section>
@@ -1694,14 +1733,211 @@
 </div>
 </div>
 </div>
+</section>
+<section id="quiz-3" class="slide level2 smaller" data-background-color="#f7fad1">
+<h2>Quiz</h2>
+<div>
+<p><span class="alert">Marque a alternativa incorreta:</span></p>
+<ol type="a">
+<li>Métodos de acesso geralmente retornam o valor de um atributo.</li>
+<li>Métodos modificadores mudam o estado do objeto.</li>
+<li>Os nomes dos métodos de acesso obrigatoriamente começam com a palavra <code>get</code>.</li>
+<li>Métodos com retorno do tipo <code>void</code> não retornam nenhum valor.</li>
+</ol>
+</div>
 </section></section>
+<section>
 <section id="imprimindo-a-partir-de-métodos" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Imprimindo a partir de métodos</h1>
+
+</section>
+<section id="section-39" class="slide level2 smaller">
+<h2></h2>
+<p>O método <code>imprimirIngresso</code> é o mais complexo da classe.</p>
+<div class="fragment">
+<div class="sourceCode" id="cb19" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Imprime um ingresso<span class="co">.</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Atualiza o total coletado e reduz o saldo para zero<span class="co">.</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>   <span class="co">*/</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">imprimirIngresso</span><span class="op">()</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Simula a impressão de um ingresso</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"##################"</span><span class="op">);</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# Ingressos &amp; Cia "</span><span class="op">);</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# Ingresso"</span><span class="op">);</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# "</span> <span class="op">+</span> preco <span class="op">+</span> <span class="st">" centavos."</span><span class="op">);</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"##################"</span><span class="op">);</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">();</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Atualiza o total coletado com o saldo</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> saldo<span class="op">;</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Zera o saldo</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Você deve ter notado que, ao chamar o método, o seguinte texto aparece no terminal.</p>
+<pre><code>##################
+# Ingressos &amp; Cia 
+# Ingresso
+# 500 centavos.
+##################</code></pre>
+</div>
+</section>
+<section id="section-40" class="slide level2 smaller">
+<h2></h2>
+<p>Vamos avaliar o método passo a passo.</p>
+<div class="sourceCode" id="annotated-cell-5" data-code-line-numbers="false"><pre class="sourceCode java code-annotation-code code-with-copy code-annotated"><code class="sourceCode java"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
+<span id="annotated-cell-5-2"><a href="#annotated-cell-5-2" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Imprime um ingresso<span class="co">.</span></span>
+<span id="annotated-cell-5-3"><a href="#annotated-cell-5-3" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Atualiza o total coletado e reduz o saldo para zero<span class="co">.</span></span>
+<span id="annotated-cell-5-4"><a href="#annotated-cell-5-4" aria-hidden="true" tabindex="-1"></a>   <span class="co">*/</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="1" onclick="event.preventDefault();" href="">1</a><span id="annotated-cell-5-5" class="code-annotation-target"><a href="#annotated-cell-5-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">imprimirIngresso</span><span class="op">()</span></span>
+<span id="annotated-cell-5-6"><a href="#annotated-cell-5-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="annotated-cell-5-7"><a href="#annotated-cell-5-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Simula a impressão de um ingresso</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="2" onclick="event.preventDefault();" href="">2</a><span id="annotated-cell-5-8" class="code-annotation-target"><a href="#annotated-cell-5-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"##################"</span><span class="op">);</span></span>
+<span id="annotated-cell-5-9"><a href="#annotated-cell-5-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# Ingressos &amp; Cia "</span><span class="op">);</span></span>
+<span id="annotated-cell-5-10"><a href="#annotated-cell-5-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# Ingresso"</span><span class="op">);</span></span>
+<span id="annotated-cell-5-11"><a href="#annotated-cell-5-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# "</span> <span class="op">+</span> preco <span class="op">+</span> <span class="st">" centavos."</span><span class="op">);</span></span>
+<span id="annotated-cell-5-12"><a href="#annotated-cell-5-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"##################"</span><span class="op">);</span></span>
+<span id="annotated-cell-5-13"><a href="#annotated-cell-5-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">();</span></span>
+<span id="annotated-cell-5-14"><a href="#annotated-cell-5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-5-15"><a href="#annotated-cell-5-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Atualiza o total coletado com o saldo</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="3" onclick="event.preventDefault();" href="">3</a><span id="annotated-cell-5-16" class="code-annotation-target"><a href="#annotated-cell-5-16" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> saldo<span class="op">;</span></span>
+<span id="annotated-cell-5-17"><a href="#annotated-cell-5-17" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Zera o saldo</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="4" onclick="event.preventDefault();" href="">4</a><span id="annotated-cell-5-18" class="code-annotation-target"><a href="#annotated-cell-5-18" aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="annotated-cell-5-19"><a href="#annotated-cell-5-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<dl class="code-annotation-container-grid">
+<dt class="fragment" data-target-cell="annotated-cell-5" data-target-annotation="1">1</dt>
+<dd class="fragment">
+<span data-code-lines="5" data-code-cell="annotated-cell-5" data-code-annotation="1">A assinatura indica que o método tem retorno <code>void</code> e não espera nenhum parâmetro.</span>
+</dd>
+<dt class="fragment" data-target-cell="annotated-cell-5" data-target-annotation="2">2</dt>
+<dd class="fragment">
+<span data-code-lines="8,9,10,11,12" data-code-cell="annotated-cell-5" data-code-annotation="2">Os primeiros seis comandos imprimem o que vemos no terminal.</span>
+</dd>
+<dt class="fragment" data-target-cell="annotated-cell-5" data-target-annotation="3">3</dt>
+<dd class="fragment">
+<span data-code-lines="16" data-code-cell="annotated-cell-5" data-code-annotation="3">O sétimo comando adiciona o saldo atual inserido pelo usuário ao total acumulado.</span>
+</dd>
+<dt class="fragment" data-target-cell="annotated-cell-5" data-target-annotation="4">4</dt>
+<dd class="fragment">
+<span data-code-lines="18" data-code-cell="annotated-cell-5" data-code-annotation="4">O último comando retorna o saldo para zero, esperando o próximo usuário.</span>
+</dd>
+</dl>
+</section>
+<section id="section-41" class="slide level2 smaller">
+<h2></h2>
+<p>O método <code>imprimirIngresso</code> chama várias vezes o método <code>println</code> do objeto <code>System.out</code>.</p>
+<ul>
+<li class="fragment">O objeto <code>System.out</code> é construído dentro da linguagem Java.</li>
+<li class="fragment">O que está dentro dos parênteses é o argumento que estamos passando para o método: alguma string.</li>
+</ul>
+<div class="fragment">
+<p>A maioria das chamadas do método <code>println</code> passa uma string <strong>literal</strong>.</p>
+<ul>
+<li class="fragment">Ex.: <code>"# Ingressos &amp; Cia "</code>.</li>
+<li class="fragment">Isso significa que o método simplesmente exibe na tela o texto passa do entre aspas duplas.</li>
+</ul>
+</div>
+</section>
+<section id="section-42" class="slide level2 smaller">
+<h2></h2>
+<p>Mas veja que a linha abaixo é um pouco diferente.</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb21" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# "</span> <span class="op">+</span> preco <span class="op">+</span> <span class="st">" centavos."</span><span class="op">);</span>    </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Essa linha tem duas coisas diferentes.</p>
+<ul>
+<li class="fragment">O operador <code>+</code> está sendo usado para concatenar (juntar) strings, criando uma nova string.
+<ul>
+<li class="fragment">Ex.: <code>"Tião" + " " + "Silva"</code> resulta em <code>"Tião Silva"</code>.</li>
+</ul></li>
+<li class="fragment">Mas, além disso, o atributo <code>preco</code> está sendo concatenado diretamente na string.
+<ul>
+<li class="fragment">Java converte valores automaticamente para String quando o operador <code>+</code> é usado.</li>
+<li class="fragment">Repare que se digitássemos <code>"preco"</code>, seria exibida a palavra <em>preco</em> e não o valor do atributo <code>preco</code>.</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p>Outra linha diferente é a última chamada do método <code>println</code>.</p>
+<ul>
+<li class="fragment">Quando o método é chamado sem nenhum argumento, uma linha em branco é deixada no terminal.</li>
+</ul>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb22" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-43" class="slide level2 smaller">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>O que exatamente será exibido na tela pelo comando abaixo.</p>
+<div class="sourceCode" id="cb23" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>  <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Orgulho de ser UFLA!"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Adicione um método <code>imprimirPreco</code> à classe <code>MaquinaIngressos</code>. O método deve ter retorno <code>void</code>, não ter nenhum parâmetro e exibir uma mensagem como a abaixo.</p>
+<pre><code>  O preco do ingresso é X centavos</code></pre>
+<p>Onde no lugar de X deve aparecer o valor do atributo <code>preco</code>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Cria duas máquinas de ingressos com valores de ingresso diferentes. Ao chamar o método <code>imprimirPreco</code> para as duas máquinas, o texto exibido é igual ou diferente? Por que?</p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="entregas-dessa-aula" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Entregas dessa Aula</h1>
+
+</section>
+<section id="section-44" class="slide level2 smaller">
+<h2></h2>
+<div>
+<p>Como você já viu na aula anterior, para que você tenha a <span class="alert">presença</span></p>
+<ul>
+<li>considerada nas aula em <span class="alert">formato ANP</span> (Atividade Não-Presencial),</li>
+<li>você precisa <strong>demonstrar que</strong> realmente <strong>estudou</strong> o conteúdo.</li>
+</ul>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Entregas no Campus Virtual</strong></p>
+</div>
+<div class="callout-content">
+<p>Para ter presença nessa aula você deve responder, no Campus Virtual, aos quizes presentes nesses slides.</p>
+</div>
+</div>
+</div>
+</div>
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
