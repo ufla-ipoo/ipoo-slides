@@ -617,9 +617,15 @@ Construtores e métodos têm funções diferentes, mas ambos podem **receber val
 Nós vimos um pouco sobre parâmetros no capítulo anterior.
 
 - Parâmetros são variáveis **definidas na assinatura de um método ou construtor**.
-  ```{.java code-line-numbers="false"}
+
+. . .
+
+::: {.doublefontsize}
+```{.java code-line-numbers="false"}
   public MaquinaIngressos(int custoIngresso)
-  ```
+```
+:::
+
 - Este construtor tem um único parâmetro `custoIngresso` de tipo `int`.
   - O mesmo tipo do campo `preco` que guardará o valor do parâmetro.
 
@@ -658,7 +664,7 @@ Tecnicamente, nós chamamos de [parâmetro formal]{.alert} o [nome]{.alert} **do
 ::: {.column width="80%"}
 Um parâmetro formal está **disponível** para o objeto somente **dentro do corpo do construtor ou método** que onde ele é declarado.
 
-- Dizemos que é o [escopo]{.alert} do parâmetro.
+- Dizemos que este é o [escopo]{.alert} do parâmetro.
 - Veja que o **escopo** de um atributo é diferente, pois ele pode ser acessado em qualquer lugar dentro da classe.
 :::
 
@@ -676,7 +682,7 @@ Um parâmetro formal está **disponível** para o objeto somente **dentro do cor
 [Tempo de vida]{.alert} de uma variável é um conceito relacionado à escopo.
 
 - Um **parâmetro só existe durante** uma única **chamada do construtor ou do método**.
-- Quando o construtor é chamado, o espaço do construtor é criado, e depois que ele termina, esse espaço desaparece.
+- Quando o construtor é chamado, o espaço do construtor é criado e, depois que ele termina, esse espaço desaparece.
 - Portanto, o tempo de vida de um parâmetro é limitado a uma única chamada do construtor.
 :::
 
@@ -687,7 +693,7 @@ Um parâmetro formal está **disponível** para o objeto somente **dentro do cor
 Repare que é diferente do **tempo de vida de um atributo**.
 
 - O tempo de vida de um atributo é o mesmo do objeto.
-- Ou seja, ele existe a partir do momento que o objeto é criado até ele ser destruído.
+- Ou seja, ele existe a partir do momento que o objeto é criado e até ele ser destruído.
 
 . . .
 
@@ -705,7 +711,7 @@ O **tempo de vida** de uma variável indica quanto tempo ela vai existir até se
 
 ::: {.callout-note title="Exercício" icon=false}
 A qual classe pertence o construtor abaixo?
-```{.java code-line-numbers="false"}
+```{.java code-line-numbers="false" }
 public Estudante(String nome)
 ```
 :::
@@ -733,19 +739,24 @@ Repare que os nomes que escolhemos para os atributos e parâmetros indicam para 
 
 ## {.smaller}
 
-Como vocês já aprenderam em disciplinas anteriores de programação, nós usamos `=` para [atribuir]{.alert} valores a variáveis.
+Como vocês já aprenderam em disciplinas anteriores de programação, nós usamos o operador `=` para [atribuir]{.alert} valores a variáveis.
 
-- Assim, o comando `preco = custoIngresso;` indica que o valor do parâmetro `custoIngresso` será copiado para o atributo `preco`.
-- Dica: geralmente a gente lê o comando acima assim: "preço igual a custo do ingresso"
-  - Mas eu acho que fica mais fácil entender se usarmos a palavra *recebe*.
-  - Repare a diferença: "preço recebe custo do ingresso"
+- Assim, o comando:
+  ```{.java code-line-numbers="false" } 
+  preco = custoIngresso;
+  ```
+  Indica que o valor do parâmetro `custoIngresso` será copiado para o atributo `preco`.
+- [Dica]{.alert}:
+  - Geralmente a gente lê o comando acima assim: *"preço igual a custo do ingresso"*
+  - Mas eu acho que fica **mais fácil entender** se usarmos a palavra ***recebe***.
+  - Repare a diferença: *"preço recebe custo do ingresso"*
 
 . . .
 
 :::: {.columns}
 
 ::: {.column width="60%"}
-![](imagens/diagrama_passagem_parametros.png)
+![](imagens/diagrama_passagem_parametros.png){width=80%}
 :::
 
 ::: {.column width="40%"}
@@ -763,23 +774,23 @@ O lado direito (o que vem depois do `=`) é chamado [expressão]{.alert}.
 
 ## {.smaller}
 
-Em Java, o tipo da expressão tem que ter **o mesmo tipo** da variável.
+Em Java, o tipo do resultado da expressão tem que ser **o mesmo tipo** da variável.
 
-- Não podemos, por exemplo, guardar o valor de uma expressão que é um número inteiro em uma variável string.
+- Não podemos, por exemplo, guardar o valor de uma expressão que resulta em um número inteiro em uma variável string.
 
-- Da mesma forma, não podemos passar um valor inteiro como argumento para um parâmetro string de um construtor, por exemplo.
+- Seguindo a mesma ideia, não podemos passar um valor inteiro como argumento para um parâmetro string de um construtor, por exemplo.
 
 . . .
 
 ::: {.callout-tip title="Conceito" icon=false}
-**Comandos de atribuição** guardando os valores representados pelo lado direito do comando na variável nomeada do lado esquerdo.
+**Comandos de atribuição** guardam os valores representados pelo lado direito do comando na variável nomeada do lado esquerdo.
 :::
 
 . . .
 
 ::: {.callout-note title="Exercício" icon=false}
 Suponha que uma classe `Cachorro` tem um atributo `nome`.
-Escreva o comando de atribuição que inicializa o atributo nome, sabendo que a assinatura do construtor da classe `public Cachorro(String nomeCachorro)`.
+Escreva o comando de atribuição que inicializa o atributo `nome`, sabendo que a assinatura do construtor da classe é `public Cachorro(String nomeCachorro)`.
 :::
 
 ::: {.callout-note title="Exercício" icon=false}
@@ -793,9 +804,276 @@ Obs.: escolha nomes representativos para os parâmetros.
 
 # Métodos {background-color="#40666e"}
 
+## {.smaller}
+
+Analisando o código-fonte da classe `MaquinaIngressos` podemos ver que ela tem quatro [métodos]{.alert}.
+
+- Os métodos são mostrados em caixas amarelas no BlueJ.
+
+. . .
+
+Veja, por exemplo, a implementação do método `obterPreco`.
+
+- Vemos que os métodos têm duas partes: a **assinatura** e o **corpo** do método.
+- Vemos também que antes da assinatura há um comentáro que descreve o método.
+
+```{.java code-line-numbers="false"}
+public class MaquinaIngressos
+{
+  // atributos ommitidos
+  // construtor omitido
+  /**
+   * Retorna o preço do ingresso.
+   */
+  public int obterPreco()
+  {
+    return preco;
+  }  
+  // métodos restantes omitidos
+```
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+Métodos são formados por duas partes: assinatura e corpo.
+:::
+
+## {.smaller}
+
+Repare que a assinatura do método se parece um pouco com a declaração de atributo.
+
+- Como então sabemos que é um método e não um atributo?
+  - Repare que a assinatura `public int obterPreco()` possui parênteses e não termina com ponto-e-vírgula.
+
+. . .
+
+O corpo do método, que é o que fica entre chaves `{` `}`, pode conter **declarações** e **comandos**.
+
+- Eles definem o que o objeto faz quando o método é chamado.
+- Declarações servem para criar variáveis temporárias adicionais.
+- E os comandos são as ações feitas pelo método.
+
+. . .
+
+Nós chamamos de [bloco de código]{.alert} o conjunto de declarações e comandos que ficam entre um par de chaves.
+
+- Vemos então que o corpo da classe `MaquinaIngressos` define um bloco de código.
+- O corpo do construtor e de cada método também definem blocos de código.
+
+
+
+## {.smaller}
+
+Tanto construtores quanto métodos podem ter **quaisquer quantidades de parâmetros** (inclusive nenhum).
+
+. . .
+
+Mas como podemos diferenciar um contrutor de um método?
+
+- Note que **construtores não têm tipo de retorno** enquanto métodos têm (aparecem antes do nome do método).
+  ```{.java code-line-numbers="false"}
+  public MaquinaIngressos(int custoIngresso)
+  public int obterPreco()
+  ```
+- Além disso, **construtores possuem o mesmo nome da classe**.
+
+## {.smaller}
+
+O corpo do método `obterPreco` tem apenas um comando.
+
+::: {.doublefontsize}
+```{.java code-line-numbers="false"}
+  return preco;
+```
+:::
+
+- Esse comando é chamado [comando de retorno]{.alert}.
+- Ele deve retornar um valor que seja do mesmo tipo do método.
+- E deve ser sempre o último comando do método
+  - pois depois dele nenhum outro comando é executado no método.
+
+. . .
+
+Podemos pensar em uma **chamada de método** como **uma pergunta** feita ao objeto.
+
+- Quando o método `obterPreco` é chamado é como se fosse feita a pergunta *Quanto custa o ingresso?* para o objeto.
+- Nesse caso específico, o objeto não precisa fazer nenhuma conta, já que ele tem o valor do ingresso guardado no atributo `preco`.
+  - Mas veremos que métodos podem precisar de códigos mais complexos para retornar uma informação.
 
 # Métodos de acesso e modificadores {background-color="#40666e"}
 
+## {.smaller}
+
+Nós chamamos de [métodos de acesso]{.alert} os métodos que começam com **obter** (como `obterPreco` e `obterSaldo`).
+
+- Porque eles retornam uma informação do **estado do objeto** para quem chamou o método.
+- Ou seja, eles fornecem **acesso** ao estado do objeto.
+
+. . .
+
+Métodos de acesso têm um comando de retorno.
+
+- Porque eles retornam, ou repassam, uma informação do objeto para quem chamou o método.
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+**Métodos de acesso** retornam informações sobre o estado de um objeto.
+:::
+
+## {.smaller}
+
+:::: {.columns}
+
+::: {.column width="20%"}
+![](imagens/fica_a_dica.png)
+:::
+
+::: {.column width="80%"}
+::: {.callout-note title="Convenção" appearance="simple" icon=false}
+Em inglês, usamos a palavra `get` em vez de `obter`.
+
+- Assim, geralmente todos o métodos de acesso começam com a palavra `get`.
+  - Ex.: `getPrice`, `getBalance`, etc.
+- Isso é tão comum que até em códigos em português costumamos usar a palavra `get`.
+  - Ex.: `getPreco`, `getSaldo`, etc.
+- Obs.: nesse material vou preferir usar sempre `obter`, mas fique para escolher o que prefere.
+:::
+:::
+
+::::
+
+## {.smaller}
+
+::: {.callout-note title="Exercício" icon=false}
+Compare as assinaturas e os corpos dos métodos `obterSaldo` e `obterPreco`.
+O que eles têm de diferente?
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Qual seria a pergunta feita ao objeto máquina de ingressos na chamada do método `obterSaldo`?
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Como você acha que seria a implementação de um método `obterTotal`?
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Experimente excluir o comando de retorno do método `obterPreco`.
+Qual mensagem de erro aparece quando você tenta compilar a classe?
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Além da diferença de nome, o que mais há de diferente nas assinaturas dos métodos `obterPreco` e `inserirDinheiro`.
+Você acha que isso pode ter algo a ver com o fato de que o primeiro método tem comando de retorno e o segundo não?
+:::
+
+
+
+## {.smaller}
+
+Os métodos **obter** da classe `MaquinaIngressos` retornam valores dos atributos da classe.
+
+- Os demais métodos (`inserirDinheiro` e `imprimirIngresso`) têm um papel muito mais importante.
+- Principalmente porque eles **mudam** o valor de **um ou mais atributos** do objeto toda vez que são chamados.
+
+. . .
+
+Nós chamamos os métodos que **mudam o estado de seus objetos** de [métodos modificadores]{.alert}.
+
+- Podemos pensar nesses métodos como pedidos feitos para os objetos alterarem seus estados.
+
+## {.smaller}
+
+É muito comum que classes tenham métodos modificadores que recebem um novo valor para um de seus atributos.
+
+- Nós não temos métodos desse tipo na classe `MaquinaIngressos`.
+- Mas podemos pensar, por exemplo, que uma classe `Pessoa` que tenha um atributo `nome`, poderia ter o método:
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  public void definirNome(String novoNome)
+  {
+    nome = novoNome;
+  }
+```
+:::
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="20%"}
+![](imagens/fica_a_dica.png)
+:::
+
+::: {.column width="80%"}
+::: {.callout-note title="Convenção" appearance="simple" icon=false}
+Em inglês, assim como os métodos de acesso começam com `get`, os métodos modificadores começam com `set`
+
+- Poderíamos ter, por exemplo, o método `setName`.
+- Nesse caso é também comum usarmos a palavra `set` em códigos em português. Ex.: `setNome`.
+:::
+:::
+
+::::
+
+
+## {.smaller}
+
+::: {.callout-tip title="Conceito" icon=false}
+**Métodos modificadores** mudam o estado de um objeto.
+:::
+
+. . .
+
+::: {.fragment .nonincremental}
+::: {.callout-note title="Exercício" icon=false}
+Crie uma máquina de ingressos e chame o método `obterSaldo`.
+
+- Em seguida, chame o método `inserirDinheiro` passando uma quantidade maior que zero.
+- Chame novamente o método `obterSaldo`.
+- As duas chamadas do método `obterSaldo` retornaram o mesmo valor? Por que?
+:::
+:::
+
+## {.smaller}
+
+Vamos analisar agora o código do método `inserirDinheiro`.
+
+. . .
+
+```{.java code-line-numbers="false"}
+  /**
+   * Recebe uma quantidade de dinheiro de um cliente.
+   */
+  public void inserirDinheiro(int quantidade)
+  {
+      saldo = saldo + quantidade;
+  }
+```
+
+. . .
+
+Repare que o método tem retorno do tipo [`void`]{.alert}.
+
+- Isso significa que o método **não retorna nenhum valor**.
+- No BlueJ percemos que a diferença é que não aparece a caixa de diálogo quando chamamos métodos desse tipo.
+- A diferença no corpo do método é que ele **não tem comando de retorno**.
+
+## {.smaller}
+
+::: {.callout-note title="Exercício" icon=false}
+Avaliando apenas a assinatura abaixo, você saberia dizer se ela é de um construtor ou de um método?
+```{.java code-line-numbers="false"}
+  public void setPreco(int custo)
+```
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Complete o código do método anterior de modo que ele atualize o valor de um atributo `preco`.
+:::
 
 
 # Imprimindo a partir de métodos {background-color="#40666e"}

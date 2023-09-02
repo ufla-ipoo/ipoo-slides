@@ -1126,9 +1126,15 @@
 <div class="fragment">
 <p>Nós vimos um pouco sobre parâmetros no capítulo anterior.</p>
 <ul>
-<li class="fragment"><p>Parâmetros são variáveis <strong>definidas na assinatura de um método ou construtor</strong>.</p>
-<div class="sourceCode" id="cb8" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dt">int</span> custoIngresso<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li class="fragment"><p>Este construtor tem um único parâmetro <code>custoIngresso</code> de tipo <code>int</code>.</p>
+<li class="fragment">Parâmetros são variáveis <strong>definidas na assinatura de um método ou construtor</strong>.</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="doublefontsize">
+<div class="sourceCode" id="cb8" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dt">int</span> custoIngresso<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li class="fragment">Este construtor tem um único parâmetro <code>custoIngresso</code> de tipo <code>int</code>.
 <ul>
 <li class="fragment">O mesmo tipo do campo <code>preco</code> que guardará o valor do parâmetro.</li>
 </ul></li>
@@ -1168,7 +1174,7 @@
 </div><div class="column" style="width:80%;">
 <p>Um parâmetro formal está <strong>disponível</strong> para o objeto somente <strong>dentro do corpo do construtor ou método</strong> que onde ele é declarado.</p>
 <ul>
-<li class="fragment">Dizemos que é o <span class="alert">escopo</span> do parâmetro.</li>
+<li class="fragment">Dizemos que este é o <span class="alert">escopo</span> do parâmetro.</li>
 <li class="fragment">Veja que o <strong>escopo</strong> de um atributo é diferente, pois ele pode ser acessado em qualquer lugar dentro da classe.</li>
 </ul>
 </div>
@@ -1184,7 +1190,7 @@
 <p><span class="alert">Tempo de vida</span> de uma variável é um conceito relacionado à escopo.</p>
 <ul>
 <li class="fragment">Um <strong>parâmetro só existe durante</strong> uma única <strong>chamada do construtor ou do método</strong>.</li>
-<li class="fragment">Quando o construtor é chamado, o espaço do construtor é criado, e depois que ele termina, esse espaço desaparece.</li>
+<li class="fragment">Quando o construtor é chamado, o espaço do construtor é criado e, depois que ele termina, esse espaço desaparece.</li>
 <li class="fragment">Portanto, o tempo de vida de um parâmetro é limitado a uma única chamada do construtor.</li>
 </ul>
 </div>
@@ -1193,7 +1199,7 @@
 <p>Repare que é diferente do <strong>tempo de vida de um atributo</strong>.</p>
 <ul>
 <li class="fragment">O tempo de vida de um atributo é o mesmo do objeto.</li>
-<li class="fragment">Ou seja, ele existe a partir do momento que o objeto é criado até ele ser destruído.</li>
+<li class="fragment">Ou seja, ele existe a partir do momento que o objeto é criado e até ele ser destruído.</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1267,19 +1273,22 @@
 </section>
 <section id="section-25" class="slide level2 smaller">
 <h2></h2>
-<p>Como vocês já aprenderam em disciplinas anteriores de programação, nós usamos <code>=</code> para <span class="alert">atribuir</span> valores a variáveis.</p>
+<p>Como vocês já aprenderam em disciplinas anteriores de programação, nós usamos o operador <code>=</code> para <span class="alert">atribuir</span> valores a variáveis.</p>
 <ul>
-<li class="fragment">Assim, o comando <code>preco = custoIngresso;</code> indica que o valor do parâmetro <code>custoIngresso</code> será copiado para o atributo <code>preco</code>.</li>
-<li class="fragment">Dica: geralmente a gente lê o comando acima assim: “preço igual a custo do ingresso”
+<li class="fragment"><p>Assim, o comando:</p>
+<div class="sourceCode" id="cb11" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>preco <span class="op">=</span> custoIngresso<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Indica que o valor do parâmetro <code>custoIngresso</code> será copiado para o atributo <code>preco</code>.</p></li>
+<li class="fragment"><p><span class="alert">Dica</span>:</p>
 <ul>
-<li class="fragment">Mas eu acho que fica mais fácil entender se usarmos a palavra <em>recebe</em>.</li>
-<li class="fragment">Repare a diferença: “preço recebe custo do ingresso”</li>
+<li class="fragment">Geralmente a gente lê o comando acima assim: <em>“preço igual a custo do ingresso”</em></li>
+<li class="fragment">Mas eu acho que fica <strong>mais fácil entender</strong> se usarmos a palavra <strong><em>recebe</em></strong>.</li>
+<li class="fragment">Repare a diferença: <em>“preço recebe custo do ingresso”</em></li>
 </ul></li>
 </ul>
 <div class="fragment">
 <div class="columns">
 <div class="column" style="width:60%;">
-<p><img data-src="imagens/diagrama_passagem_parametros.png"></p>
+<p><img data-src="imagens/diagrama_passagem_parametros.png" style="width:80.0%"></p>
 </div><div class="column" style="width:40%;">
 <p>No diagrama, a atribuição é representada pela seta indica pela letra (B).</p>
 </div>
@@ -1295,10 +1304,10 @@
 </section>
 <section id="section-26" class="slide level2 smaller">
 <h2></h2>
-<p>Em Java, o tipo da expressão tem que ter <strong>o mesmo tipo</strong> da variável.</p>
+<p>Em Java, o tipo do resultado da expressão tem que ser <strong>o mesmo tipo</strong> da variável.</p>
 <ul>
-<li class="fragment"><p>Não podemos, por exemplo, guardar o valor de uma expressão que é um número inteiro em uma variável string.</p></li>
-<li class="fragment"><p>Da mesma forma, não podemos passar um valor inteiro como argumento para um parâmetro string de um construtor, por exemplo.</p></li>
+<li class="fragment"><p>Não podemos, por exemplo, guardar o valor de uma expressão que resulta em um número inteiro em uma variável string.</p></li>
+<li class="fragment"><p>Seguindo a mesma ideia, não podemos passar um valor inteiro como argumento para um parâmetro string de um construtor, por exemplo.</p></li>
 </ul>
 <div class="fragment">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
@@ -1307,7 +1316,7 @@
 <p><strong>Conceito</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Comandos de atribuição</strong> guardando os valores representados pelo lado direito do comando na variável nomeada do lado esquerdo.</p>
+<p><strong>Comandos de atribuição</strong> guardam os valores representados pelo lado direito do comando na variável nomeada do lado esquerdo.</p>
 </div>
 </div>
 </div>
@@ -1319,7 +1328,7 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>Suponha que uma classe <code>Cachorro</code> tem um atributo <code>nome</code>. Escreva o comando de atribuição que inicializa o atributo nome, sabendo que a assinatura do construtor da classe <code>public Cachorro(String nomeCachorro)</code>.</p>
+<p>Suponha que uma classe <code>Cachorro</code> tem um atributo <code>nome</code>. Escreva o comando de atribuição que inicializa o atributo <code>nome</code>, sabendo que a assinatura do construtor da classe é <code>public Cachorro(String nomeCachorro)</code>.</p>
 </div>
 </div>
 </div>
@@ -1330,23 +1339,362 @@
 </div>
 <div class="callout-content">
 <p>A linha de código abaixo cria um objeto, chamando o construtor da classe <code>Date</code>.</p>
-<div class="sourceCode" id="cb11" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="bu">Date</span><span class="op">(</span><span class="st">"Setembro"</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2023</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="bu">Date</span><span class="op">(</span><span class="st">"Setembro"</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2023</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Você conseguiria escrever a assinatura do construtor da classe <code>Date</code>? Obs.: escolha nomes representativos para os parâmetros.</p>
 </div>
 </div>
 </div>
 </div>
 </section></section>
+<section>
 <section id="métodos" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Métodos</h1>
 
 </section>
-
+<section id="section-27" class="slide level2 smaller">
+<h2></h2>
+<p>Analisando o código-fonte da classe <code>MaquinaIngressos</code> podemos ver que ela tem quatro <span class="alert">métodos</span>.</p>
+<ul>
+<li class="fragment">Os métodos são mostrados em caixas amarelas no BlueJ.</li>
+</ul>
+<div class="fragment">
+<p>Veja, por exemplo, a implementação do método <code>obterPreco</code>.</p>
+<ul>
+<li class="fragment">Vemos que os métodos têm duas partes: a <strong>assinatura</strong> e o <strong>corpo</strong> do método.</li>
+<li class="fragment">Vemos também que antes da assinatura há um comentáro que descreve o método.</li>
+</ul>
+<div class="sourceCode" id="cb13" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MaquinaIngressos</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// atributos ommitidos</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// construtor omitido</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Retorna o pre<span class="co">ç</span>o do ingresso<span class="co">.</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>   <span class="co">*/</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">int</span> <span class="fu">obterPreco</span><span class="op">()</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> preco<span class="op">;</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span>  </span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">// métodos restantes omitidos</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p>Métodos são formados por duas partes: assinatura e corpo.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-28" class="slide level2 smaller">
+<h2></h2>
+<p>Repare que a assinatura do método se parece um pouco com a declaração de atributo.</p>
+<ul>
+<li class="fragment">Como então sabemos que é um método e não um atributo?
+<ul>
+<li class="fragment">Repare que a assinatura <code>public int obterPreco()</code> possui parênteses e não termina com ponto-e-vírgula.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>O corpo do método, que é o que fica entre chaves <code>{</code> <code>}</code>, pode conter <strong>declarações</strong> e <strong>comandos</strong>.</p>
+<ul>
+<li class="fragment">Eles definem o que o objeto faz quando o método é chamado.</li>
+<li class="fragment">Declarações servem para criar variáveis temporárias adicionais.</li>
+<li class="fragment">E os comandos são as ações feitas pelo método.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Nós chamamos de <span class="alert">bloco de código</span> o conjunto de declarações e comandos que ficam entre um par de chaves.</p>
+<ul>
+<li class="fragment">Vemos então que o corpo da classe <code>MaquinaIngressos</code> define um bloco de código.</li>
+<li class="fragment">O corpo do construtor e de cada método também definem blocos de código.</li>
+</ul>
+</div>
+</section>
+<section id="section-29" class="slide level2 smaller">
+<h2></h2>
+<p>Tanto construtores quanto métodos podem ter <strong>quaisquer quantidades de parâmetros</strong> (inclusive nenhum).</p>
+<div class="fragment">
+<p>Mas como podemos diferenciar um contrutor de um método?</p>
+<ul>
+<li class="fragment"><p>Note que <strong>construtores não têm tipo de retorno</strong> enquanto métodos têm (aparecem antes do nome do método).</p>
+<div class="sourceCode" id="cb14" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dt">int</span> custoIngresso<span class="op">)</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">obterPreco</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li class="fragment"><p>Além disso, <strong>construtores possuem o mesmo nome da classe</strong>.</p></li>
+</ul>
+</div>
+</section>
+<section id="section-30" class="slide level2 smaller">
+<h2></h2>
+<p>O corpo do método <code>obterPreco</code> tem apenas um comando.</p>
+<div class="doublefontsize">
+<div class="sourceCode" id="cb15" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> preco<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li class="fragment">Esse comando é chamado <span class="alert">comando de retorno</span>.</li>
+<li class="fragment">Ele deve retornar um valor que seja do mesmo tipo do método.</li>
+<li class="fragment">E deve ser sempre o último comando do método
+<ul>
+<li class="fragment">pois depois dele nenhum outro comando é executado no método.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Podemos pensar em uma <strong>chamada de método</strong> como <strong>uma pergunta</strong> feita ao objeto.</p>
+<ul>
+<li class="fragment">Quando o método <code>obterPreco</code> é chamado é como se fosse feita a pergunta <em>Quanto custa o ingresso?</em> para o objeto.</li>
+<li class="fragment">Nesse caso específico, o objeto não precisa fazer nenhuma conta, já que ele tem o valor do ingresso guardado no atributo <code>preco</code>.
+<ul>
+<li class="fragment">Mas veremos que métodos podem precisar de códigos mais complexos para retornar uma informação.</li>
+</ul></li>
+</ul>
+</div>
+</section></section>
+<section>
 <section id="métodos-de-acesso-e-modificadores" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Métodos de acesso e modificadores</h1>
 
 </section>
-
+<section id="section-31" class="slide level2 smaller">
+<h2></h2>
+<p>Nós chamamos de <span class="alert">métodos de acesso</span> os métodos que começam com <strong>obter</strong> (como <code>obterPreco</code> e <code>obterSaldo</code>).</p>
+<ul>
+<li class="fragment">Porque eles retornam uma informação do <strong>estado do objeto</strong> para quem chamou o método.</li>
+<li class="fragment">Ou seja, eles fornecem <strong>acesso</strong> ao estado do objeto.</li>
+</ul>
+<div class="fragment">
+<p>Métodos de acesso têm um comando de retorno.</p>
+<ul>
+<li class="fragment">Porque eles retornam, ou repassam, uma informação do objeto para quem chamou o método.</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Métodos de acesso</strong> retornam informações sobre o estado de um objeto.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-32" class="slide level2 smaller">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img data-src="imagens/fica_a_dica.png"></p>
+</div><div class="column" style="width:80%;">
+<div class="callout callout-note no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Convenção</strong></p>
+</div>
+<div class="callout-content">
+<p>Em inglês, usamos a palavra <code>get</code> em vez de <code>obter</code>.</p>
+<ul>
+<li class="fragment">Assim, geralmente todos o métodos de acesso começam com a palavra <code>get</code>.
+<ul>
+<li class="fragment">Ex.: <code>getPrice</code>, <code>getBalance</code>, etc.</li>
+</ul></li>
+<li class="fragment">Isso é tão comum que até em códigos em português costumamos usar a palavra <code>get</code>.
+<ul>
+<li class="fragment">Ex.: <code>getPreco</code>, <code>getSaldo</code>, etc.</li>
+</ul></li>
+<li class="fragment">Obs.: nesse material vou preferir usar sempre <code>obter</code>, mas fique para escolher o que prefere.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-33" class="slide level2 smaller">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Compare as assinaturas e os corpos dos métodos <code>obterSaldo</code> e <code>obterPreco</code>. O que eles têm de diferente?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Qual seria a pergunta feita ao objeto máquina de ingressos na chamada do método <code>obterSaldo</code>?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Como você acha que seria a implementação de um método <code>obterTotal</code>?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Experimente excluir o comando de retorno do método <code>obterPreco</code>. Qual mensagem de erro aparece quando você tenta compilar a classe?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Além da diferença de nome, o que mais há de diferente nas assinaturas dos métodos <code>obterPreco</code> e <code>inserirDinheiro</code>. Você acha que isso pode ter algo a ver com o fato de que o primeiro método tem comando de retorno e o segundo não?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-34" class="slide level2 smaller">
+<h2></h2>
+<p>Os métodos <strong>obter</strong> da classe <code>MaquinaIngressos</code> retornam valores dos atributos da classe.</p>
+<ul>
+<li class="fragment">Os demais métodos (<code>inserirDinheiro</code> e <code>imprimirIngresso</code>) têm um papel muito mais importante.</li>
+<li class="fragment">Principalmente porque eles <strong>mudam</strong> o valor de <strong>um ou mais atributos</strong> do objeto toda vez que são chamados.</li>
+</ul>
+<div class="fragment">
+<p>Nós chamamos os métodos que <strong>mudam o estado de seus objetos</strong> de <span class="alert">métodos modificadores</span>.</p>
+<ul>
+<li class="fragment">Podemos pensar nesses métodos como pedidos feitos para os objetos alterarem seus estados.</li>
+</ul>
+</div>
+</section>
+<section id="section-35" class="slide level2 smaller">
+<h2></h2>
+<p>É muito comum que classes tenham métodos modificadores que recebem um novo valor para um de seus atributos.</p>
+<ul>
+<li class="fragment">Nós não temos métodos desse tipo na classe <code>MaquinaIngressos</code>.</li>
+<li class="fragment">Mas podemos pensar, por exemplo, que uma classe <code>Pessoa</code> que tenha um atributo <code>nome</code>, poderia ter o método:</li>
+</ul>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb16" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">definirNome</span><span class="op">(</span><span class="bu">String</span> novoNome<span class="op">)</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    nome <span class="op">=</span> novoNome<span class="op">;</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img data-src="imagens/fica_a_dica.png"></p>
+</div><div class="column" style="width:80%;">
+<div class="callout callout-note no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Convenção</strong></p>
+</div>
+<div class="callout-content">
+<p>Em inglês, assim como os métodos de acesso começam com <code>get</code>, os métodos modificadores começam com <code>set</code></p>
+<ul>
+<li class="fragment">Poderíamos ter, por exemplo, o método <code>setName</code>.</li>
+<li class="fragment">Nesse caso é também comum usarmos a palavra <code>set</code> em códigos em português. Ex.: <code>setNome</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Métodos modificadores</strong> mudam o estado de um objeto.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-36" class="slide level2 smaller">
+<h2></h2>
+<div class="fragment">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Crie uma máquina de ingressos e chame o método <code>obterSaldo</code>.</p>
+<ul>
+<li>Em seguida, chame o método <code>inserirDinheiro</code> passando uma quantidade maior que zero.</li>
+<li>Chame novamente o método <code>obterSaldo</code>.</li>
+<li>As duas chamadas do método <code>obterSaldo</code> retornaram o mesmo valor? Por que?</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-37" class="slide level2 smaller">
+<h2></h2>
+<p>Vamos analisar agora o código do método <code>inserirDinheiro</code>.</p>
+<div class="fragment">
+<div class="sourceCode" id="cb17" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Recebe uma quantidade de dinheiro de um cliente<span class="co">.</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>   <span class="co">*/</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">inserirDinheiro</span><span class="op">(</span><span class="dt">int</span> quantidade<span class="op">)</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>      saldo <span class="op">=</span> saldo <span class="op">+</span> quantidade<span class="op">;</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Repare que o método tem retorno do tipo <span class="alert"><code>void</code></span></p>
+<ul>
+<li class="fragment">Isso significa que o método não retorna nenhum valor.</li>
+<li class="fragment">No BlueJ percemos que a diferença é que não aparece a caixa de diálogo quando chamamos métodos desse tipo.</li>
+<li class="fragment">A diferença no corpo do método é que ele não tem comando de retorno.</li>
+</ul>
+</div>
+</section>
+<section id="section-38" class="slide level2 smaller">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Avaliando apenas a assinatura abaixo, você saberia dizer se ela é de um construtor ou de um método?</p>
+<div class="sourceCode" id="cb18" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">setPreco</span><span class="op">(</span><span class="dt">int</span> custo<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Complete o código do método anterior de modo que ele atualize o valor de um atributo <code>preco</code>.</p>
+</div>
+</div>
+</div>
+</section></section>
 <section id="imprimindo-a-partir-de-métodos" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Imprimindo a partir de métodos</h1>
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
