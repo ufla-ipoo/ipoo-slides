@@ -324,7 +324,7 @@ public class MaquinaIngressos
 :::
 
 ::: {.column width="70%"}
-A classe `MaquinaIngressos` tem três atributos:
+A classe `MaquinaIngressos`, por exemplo, tem três atributos:
 
 - `preco`: guarda o valor fixo de cada ingresso.
 - `saldo`: guarda a quantidade de dinheiro inserida na máquina por um usuário antes dele pedir para imprimir um ingresso.
@@ -333,11 +333,87 @@ A classe `MaquinaIngressos` tem três atributos:
 
 ::::
 
+## {.smaller}
+
+Atributos  (ou campos) descrevem características dos objetos.
+
 . . .
 
-::: {.callout-tip title="Conceito" icon=false}
-**Atributos** guardam dados para um objeto usar. Eles também são chamado de variáveis de instância.
+:::: {.columns}
+
+::: {.column width="60%"}
+- Como você descreveria essa bola, por exemplo?  
+- Dizendo de outra forma, como contaria como ela é para alguém que não está vendo a bola?
+- Você poderia descrevê-la, informando:
+  - A cor.
+  - O tamanho.
+  - O tipo.
+  - Etc.
 :::
+
+::: {.column width="40%"}
+![](imagens/lupa_bola.png)
+:::
+
+::::
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+E quais seriam as características de um jogador em um jogo de videogame de futebol?
+
+- Poderiam ser: nome, nacionalidade, altura, velocidade, agilidade, etc.
+:::
+
+::: {.column width="30%"}
+![](imagens/messi_fifa_ratings.png){width="50%"}
+:::
+
+::::
+
+. . .
+
+Nós chamamos essas características dos objetos de [atributos]{.alert}.
+
+## {.smaller}
+
+Atributos podem representar coisas mais palpáveis ou coisas mais abstratas.
+
+. . .
+
+![](imagens/casal_fazendo_careta.png){width="30%"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Dada a imagem acima, por exemplo, quais seriam os atributos físicos de cada pessoa?
+
+- Cor dos olhos.
+- Estilo de roupa.
+- Altura.
+- Etc.
+
+:::
+
+::: {.column width="50%"}
+
+::: {.fragment}
+E quais seriam características mais abstratas?
+
+- Inteligência.
+- Humor.
+- Beleza.
+- Etc.
+:::
+
+:::
+
+::::
+
 
 ## {.smaller}
 
@@ -360,6 +436,12 @@ Podemos representar um objeto como mostrado na figura ao lado.
 :::
 
 ::::
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+**Atributos** guardam dados para um objeto usar. Eles também são chamados de variáveis de instância.
+:::
 
 ## {.smaller}
 
@@ -460,7 +542,7 @@ Experimente você mesmo e descubra!
 Escreva a declaração completa de um atributo do tipo `int` chamado `situacao`.
 :::
 
-## Quiz {background-color="#f7fad1" .smaller}
+## Quiz 2.1 {background-color="#f7fad1" .smaller}
 
 ::: {.nonincremental}
 [Atributo também é chamado de:]{.alert}
@@ -614,7 +696,7 @@ Há duas **vantagens**:
 
 ::::
 
-## Quiz {background-color="#f7fad1" .smaller}
+## Quiz 2.2 {background-color="#f7fad1" .smaller}
 
 ::: {.nonincremental}
 [Marque a alternativa incorreta:]{.alert}
@@ -824,7 +906,7 @@ Você conseguiria escrever a assinatura do construtor da classe `Date`?
 Obs.: escolha nomes representativos para os parâmetros.
 :::
 
-## Quiz {background-color="#f7fad1" .smaller}
+## Quiz 2.3 {background-color="#f7fad1" .smaller}
 
 ::: {.nonincremental}
 [Complete a frase: _______ têm tempo de vida igual ao do objeto:]{.alert}
@@ -1109,7 +1191,7 @@ Avaliando apenas a assinatura abaixo, você saberia dizer se ela é de um constr
 Complete o código do método anterior de modo que ele atualize o valor de um atributo `preco`.
 :::
 
-## Quiz {background-color="#f7fad1" .smaller}
+## Quiz 2.4 {background-color="#f7fad1" .smaller}
 
 ::: {.nonincremental}
 [Marque a alternativa incorreta:]{.alert}

@@ -16,7 +16,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2023-02-09">
+  <meta name="dcterms.date" content="2023-04-09">
   <title>IPOO - Cap. 2 Entendendo as Definições de Classe</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -413,7 +413,7 @@
     </div>
 </div>
 
-  <p class="date">02/09/2023</p>
+  <p class="date">04/09/2023</p>
 </section>
 <section id="como-estudar-esse-conteúdo" class="slide level2 smaller">
 <h2>Como estudar esse conteúdo?</h2>
@@ -796,7 +796,7 @@
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Construtores e métodos omitidos</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:70%;">
-<p>A classe <code>MaquinaIngressos</code> tem três atributos:</p>
+<p>A classe <code>MaquinaIngressos</code>, por exemplo, tem três atributos:</p>
 <ul>
 <li class="fragment"><code>preco</code>: guarda o valor fixo de cada ingresso.</li>
 <li class="fragment"><code>saldo</code>: guarda a quantidade de dinheiro inserida na máquina por um usuário antes dele pedir para imprimir um ingresso.</li>
@@ -805,20 +805,75 @@
 </div>
 </div>
 </div>
+</section>
+<section id="section-9" class="slide level2 smaller">
+<h2></h2>
+<p>Atributos (ou campos) descrevem características dos objetos.</p>
 <div class="fragment">
-<div class="callout callout-tip no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Conceito</strong></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li class="fragment">Como você descreveria essa bola, por exemplo?<br>
+</li>
+<li class="fragment">Dizendo de outra forma, como contaria como ela é para alguém que não está vendo a bola?</li>
+<li class="fragment">Você poderia descrevê-la, informando:
+<ul>
+<li class="fragment">A cor.</li>
+<li class="fragment">O tamanho.</li>
+<li class="fragment">O tipo.</li>
+<li class="fragment">Etc.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="imagens/lupa_bola.png"></p>
 </div>
-<div class="callout-content">
-<p><strong>Atributos</strong> guardam dados para um objeto usar. Eles também são chamado de variáveis de instância.</p>
+</div>
+</div>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:70%;">
+<p>E quais seriam as características de um jogador em um jogo de videogame de futebol?</p>
+<ul>
+<li class="fragment">Poderiam ser: nome, nacionalidade, altura, velocidade, agilidade, etc.</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img data-src="imagens/messi_fifa_ratings.png" style="width:50.0%"></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Nós chamamos essas características dos objetos de <span class="alert">atributos</span>.</p>
+</div>
+</section>
+<section id="section-10" class="slide level2 smaller">
+<h2></h2>
+<p>Atributos podem representar coisas mais palpáveis ou coisas mais abstratas.</p>
+<div class="fragment">
+<p><img data-src="imagens/casal_fazendo_careta.png" style="width:30.0%"></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Dada a imagem acima, por exemplo, quais seriam os atributos físicos de cada pessoa?</p>
+<ul>
+<li class="fragment">Cor dos olhos.</li>
+<li class="fragment">Estilo de roupa.</li>
+<li class="fragment">Altura.</li>
+<li class="fragment">Etc.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p>E quais seriam características mais abstratas?</p>
+<ul>
+<li class="fragment">Inteligência.</li>
+<li class="fragment">Humor.</li>
+<li class="fragment">Beleza.</li>
+<li class="fragment">Etc.</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="section-9" class="slide level2 smaller">
+<section id="section-11" class="slide level2 smaller">
 <h2></h2>
 <p>Atributos são pequenos espaços dentro de um objeto que podem usados para guardar dados de forma permanente.</p>
 <ul>
@@ -836,8 +891,20 @@
 </div>
 </div>
 </div>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Atributos</strong> guardam dados para um objeto usar. Eles também são chamados de variáveis de instância.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="section-10" class="slide level2 smaller">
+<section id="section-12" class="slide level2 smaller">
 <h2></h2>
 <p>Cada atributo tem sua própria declaração no código-fonte.</p>
 <ul>
@@ -869,7 +936,7 @@
 </div>
 </div>
 </section>
-<section id="section-11" class="slide level2 smaller">
+<section id="section-13" class="slide level2 smaller">
 <h2></h2>
 <p>As declarações dos atributos da classe <code>MaquinaIngressos</code> são todas bem similares.</p>
 <ul>
@@ -885,7 +952,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-12" class="slide level2 smaller">
+<section id="section-14" class="slide level2 smaller">
 <h2></h2>
 <p><strong>Atributos</strong> podem armazenar <strong>valores</strong> que <strong>mudam</strong> com o tempo.</p>
 <ul>
@@ -898,7 +965,7 @@
 <li class="fragment">Mais adiante veremos que existem outros tipos de váriaveis, com a mesma ideia de que são dados armazenados no computador.</li>
 </ul>
 </section>
-<section id="section-13" class="slide level2 smaller">
+<section id="section-15" class="slide level2 smaller">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -972,8 +1039,8 @@
 </div>
 </div>
 </section>
-<section id="quiz" class="slide level2 smaller" data-background-color="#f7fad1">
-<h2>Quiz</h2>
+<section id="quiz-2.1" class="slide level2 smaller" data-background-color="#f7fad1">
+<h2>Quiz 2.1</h2>
 <div>
 <p><span class="alert">Atributo também é chamado de:</span></p>
 <ol type="a">
@@ -989,7 +1056,7 @@
 <h1>Construtores</h1>
 
 </section>
-<section id="section-14" class="slide level2 smaller">
+<section id="section-16" class="slide level2 smaller">
 <h2></h2>
 <p><span class="alert">Construtores</span> têm um papel especial.</p>
 <ul>
@@ -1024,7 +1091,7 @@
 </div>
 </div>
 </section>
-<section id="section-15" class="slide level2 smaller">
+<section id="section-17" class="slide level2 smaller">
 <h2></h2>
 <p>Em Java, <strong>construtores</strong> têm o <strong>mesmo nome da classe</strong>.</p>
 <ul>
@@ -1049,7 +1116,7 @@
 </ul>
 </div>
 </section>
-<section id="section-16" class="slide level2 smaller">
+<section id="section-18" class="slide level2 smaller">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -1084,7 +1151,7 @@
 </div>
 </div>
 </section>
-<section id="section-17" class="slide level2 smaller">
+<section id="section-19" class="slide level2 smaller">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:60%;">
@@ -1097,7 +1164,7 @@
 </div>
 </div>
 </section>
-<section id="section-18" class="slide level2 smaller">
+<section id="section-20" class="slide level2 smaller">
 <h2></h2>
 <p>Em Java, se um atributo não for inicializado explicitamente no código, ele é <strong>inicializado automaticamente</strong> com um <span class="alert">valor padrão</span>.</p>
 <ul>
@@ -1124,8 +1191,8 @@
 </div>
 </div>
 </section>
-<section id="quiz-1" class="slide level2 smaller" data-background-color="#f7fad1">
-<h2>Quiz</h2>
+<section id="quiz-2.2" class="slide level2 smaller" data-background-color="#f7fad1">
+<h2>Quiz 2.2</h2>
 <div>
 <p><span class="alert">Marque a alternativa incorreta:</span></p>
 <ol type="a">
@@ -1141,7 +1208,7 @@
 <h1>Parâmetros: recebendo dados</h1>
 
 </section>
-<section id="section-19" class="slide level2 smaller">
+<section id="section-21" class="slide level2 smaller">
 <h2></h2>
 <p>Construtores e métodos têm funções diferentes, mas ambos podem <strong>receber valores de fora do objeto</strong> da mesma maneira:</p>
 <ul>
@@ -1171,7 +1238,7 @@
 </ul>
 </div>
 </section>
-<section id="section-20" class="slide level2 smaller">
+<section id="section-22" class="slide level2 smaller">
 <h2></h2>
 <p><img data-src="imagens/diagrama_passagem_parametros.png" style="width:55.0%"></p>
 <p>No BlueJ, um usuário envia informação externa para o objeto através da caixa de diálogo, que aparece quando um objeto máquina de ingressos é criado.</p>
@@ -1183,7 +1250,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-21" class="slide level2 smaller">
+<section id="section-23" class="slide level2 smaller">
 <h2></h2>
 <p>Tecnicamente, nós chamamos de <span class="alert">parâmetro formal</span> o <span class="alert">nome</span> <strong>do parâmetro declarado</strong> na assinatura do construtor ou método.</p>
 <ul>
@@ -1205,7 +1272,7 @@
 </div>
 </div>
 </section>
-<section id="section-22" class="slide level2 smaller">
+<section id="section-24" class="slide level2 smaller">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:20%;">
@@ -1251,7 +1318,7 @@
 </div>
 </div>
 </section>
-<section id="section-23" class="slide level2 smaller">
+<section id="section-25" class="slide level2 smaller">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1286,7 +1353,7 @@
 </div>
 </div>
 </section>
-<section id="section-24" class="slide level2 smaller">
+<section id="section-26" class="slide level2 smaller">
 <h2></h2>
 <p><img data-src="imagens/fica_a_dica.png"></p>
 <p>Repare que os nomes que escolhemos para os atributos e parâmetros indicam para que eles servem.</p>
@@ -1295,7 +1362,7 @@
 <li class="fragment"><p>Portanto, apesar da linguagem Java permitir que você dê qualquer nome, evite nomes sem sentido como <code>a</code>, <code>b</code> ou <code>x1</code>, <code>x2</code>.</p></li>
 </ul>
 </section>
-<section id="section-25" class="slide level2 smaller">
+<section id="section-27" class="slide level2 smaller">
 <h2></h2>
 <p>Como vocês já aprenderam em disciplinas anteriores de programação, nós usamos o operador <code>=</code> para <span class="alert">atribuir</span> valores a variáveis.</p>
 <ul>
@@ -1326,7 +1393,7 @@
 </ul>
 </div>
 </section>
-<section id="section-26" class="slide level2 smaller">
+<section id="section-28" class="slide level2 smaller">
 <h2></h2>
 <p>Em Java, o tipo do resultado da expressão tem que ser <strong>o mesmo tipo</strong> da variável.</p>
 <ul>
@@ -1370,8 +1437,8 @@
 </div>
 </div>
 </section>
-<section id="quiz-2" class="slide level2 smaller" data-background-color="#f7fad1">
-<h2>Quiz</h2>
+<section id="quiz-2.3" class="slide level2 smaller" data-background-color="#f7fad1">
+<h2>Quiz 2.3</h2>
 <div>
 <p><span class="alert">Complete a frase: _______ têm tempo de vida igual ao do objeto:</span></p>
 <ol type="a">
@@ -1387,7 +1454,7 @@
 <h1>Métodos</h1>
 
 </section>
-<section id="section-27" class="slide level2 smaller">
+<section id="section-29" class="slide level2 smaller">
 <h2></h2>
 <p>Analisando o código-fonte da classe <code>MaquinaIngressos</code> podemos ver que ela tem quatro <span class="alert">métodos</span>.</p>
 <ul>
@@ -1425,7 +1492,7 @@
 </div>
 </div>
 </section>
-<section id="section-28" class="slide level2 smaller">
+<section id="section-30" class="slide level2 smaller">
 <h2></h2>
 <p>Repare que a assinatura do método se parece um pouco com a declaração de atributo.</p>
 <ul>
@@ -1450,7 +1517,7 @@
 </ul>
 </div>
 </section>
-<section id="section-29" class="slide level2 smaller">
+<section id="section-31" class="slide level2 smaller">
 <h2></h2>
 <p>Tanto construtores quanto métodos podem ter <strong>quaisquer quantidades de parâmetros</strong> (inclusive nenhum).</p>
 <div class="fragment">
@@ -1466,7 +1533,7 @@
 </ul>
 </div>
 </section>
-<section id="section-30" class="slide level2 smaller">
+<section id="section-32" class="slide level2 smaller">
 <h2></h2>
 <p>O corpo do método <code>obterPreco</code> tem apenas um comando.</p>
 <div class="doublefontsize">
@@ -1496,7 +1563,7 @@
 <h1>Métodos de acesso e modificadores</h1>
 
 </section>
-<section id="section-31" class="slide level2 smaller">
+<section id="section-33" class="slide level2 smaller">
 <h2></h2>
 <p>Nós chamamos de <span class="alert">métodos de acesso</span> os métodos que começam com <strong>obter</strong> (como <code>obterPreco</code> e <code>obterSaldo</code>).</p>
 <ul>
@@ -1510,7 +1577,7 @@
 </ul>
 </div>
 </section>
-<section id="section-32" class="slide level2 smaller">
+<section id="section-34" class="slide level2 smaller">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:20%;">
@@ -1552,7 +1619,7 @@
 </div>
 </div>
 </section>
-<section id="section-33" class="slide level2 smaller">
+<section id="section-35" class="slide level2 smaller">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1605,7 +1672,7 @@
 </div>
 </div>
 </section>
-<section id="section-34" class="slide level2 smaller">
+<section id="section-36" class="slide level2 smaller">
 <h2></h2>
 <p>Os métodos <strong>obter</strong> da classe <code>MaquinaIngressos</code> retornam valores dos atributos da classe.</p>
 <ul>
@@ -1619,7 +1686,7 @@
 </ul>
 </div>
 </section>
-<section id="section-35" class="slide level2 smaller">
+<section id="section-37" class="slide level2 smaller">
 <h2></h2>
 <p>É muito comum que classes tenham métodos modificadores que recebem um novo valor para um de seus atributos.</p>
 <ul>
@@ -1657,7 +1724,7 @@
 </div>
 </div>
 </section>
-<section id="section-36" class="slide level2 smaller">
+<section id="section-38" class="slide level2 smaller">
 <h2></h2>
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1689,7 +1756,7 @@
 </div>
 </div>
 </section>
-<section id="section-37" class="slide level2 smaller">
+<section id="section-39" class="slide level2 smaller">
 <h2></h2>
 <p>Vamos analisar agora o código do método <code>inserirDinheiro</code>.</p>
 <div class="fragment">
@@ -1710,7 +1777,7 @@
 </ul>
 </div>
 </section>
-<section id="section-38" class="slide level2 smaller">
+<section id="section-40" class="slide level2 smaller">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1734,8 +1801,8 @@
 </div>
 </div>
 </section>
-<section id="quiz-3" class="slide level2 smaller" data-background-color="#f7fad1">
-<h2>Quiz</h2>
+<section id="quiz-2.4" class="slide level2 smaller" data-background-color="#f7fad1">
+<h2>Quiz 2.4</h2>
 <div>
 <p><span class="alert">Marque a alternativa incorreta:</span></p>
 <ol type="a">
@@ -1751,7 +1818,7 @@
 <h1>Imprimindo a partir de métodos</h1>
 
 </section>
-<section id="section-39" class="slide level2 smaller">
+<section id="section-41" class="slide level2 smaller">
 <h2></h2>
 <p>O método <code>imprimirIngresso</code> é o mais complexo da classe.</p>
 <div class="fragment">
@@ -1784,7 +1851,7 @@
 ##################</code></pre>
 </div>
 </section>
-<section id="section-40" class="slide level2 smaller">
+<section id="section-42" class="slide level2 smaller">
 <h2></h2>
 <p>Vamos avaliar o método passo a passo.</p>
 <div class="sourceCode" id="annotated-cell-5" data-code-line-numbers="false"><pre class="sourceCode java code-annotation-code code-with-copy code-annotated"><code class="sourceCode java"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
@@ -1809,23 +1876,23 @@
 <dl class="code-annotation-container-grid">
 <dt class="fragment" data-target-cell="annotated-cell-5" data-target-annotation="1">1</dt>
 <dd class="fragment">
-<span data-code-lines="5" data-code-cell="annotated-cell-5" data-code-annotation="1">A assinatura indica que o método tem retorno <code>void</code> e não espera nenhum parâmetro.</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="5" data-code-annotation="1">A assinatura indica que o método tem retorno <code>void</code> e não espera nenhum parâmetro.</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-5" data-target-annotation="2">2</dt>
 <dd class="fragment">
-<span data-code-lines="8,9,10,11,12" data-code-cell="annotated-cell-5" data-code-annotation="2">Os primeiros seis comandos imprimem o que vemos no terminal.</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="8,9,10,11,12" data-code-annotation="2">Os primeiros seis comandos imprimem o que vemos no terminal.</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-5" data-target-annotation="3">3</dt>
 <dd class="fragment">
-<span data-code-lines="16" data-code-cell="annotated-cell-5" data-code-annotation="3">O sétimo comando adiciona o saldo atual inserido pelo usuário ao total acumulado.</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="16" data-code-annotation="3">O sétimo comando adiciona o saldo atual inserido pelo usuário ao total acumulado.</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-5" data-target-annotation="4">4</dt>
 <dd class="fragment">
-<span data-code-lines="18" data-code-cell="annotated-cell-5" data-code-annotation="4">O último comando retorna o saldo para zero, esperando o próximo usuário.</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="18" data-code-annotation="4">O último comando retorna o saldo para zero, esperando o próximo usuário.</span>
 </dd>
 </dl>
 </section>
-<section id="section-41" class="slide level2 smaller">
+<section id="section-43" class="slide level2 smaller">
 <h2></h2>
 <p>O método <code>imprimirIngresso</code> chama várias vezes o método <code>println</code> do objeto <code>System.out</code>.</p>
 <ul>
@@ -1840,7 +1907,7 @@
 </ul>
 </div>
 </section>
-<section id="section-42" class="slide level2 smaller">
+<section id="section-44" class="slide level2 smaller">
 <h2></h2>
 <p>Mas veja que a linha abaixo é um pouco diferente.</p>
 <div class="halfincfontsize">
@@ -1870,7 +1937,7 @@
 </div>
 </div>
 </section>
-<section id="section-43" class="slide level2 smaller">
+<section id="section-45" class="slide level2 smaller">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1911,7 +1978,7 @@
 <h1>Entregas dessa Aula</h1>
 
 </section>
-<section id="section-44" class="slide level2 smaller">
+<section id="section-46" class="slide level2 smaller">
 <h2></h2>
 <div>
 <p>Como você já viu na aula anterior, para que você tenha a <span class="alert">presença</span></p>
