@@ -869,20 +869,18 @@ No diagrama, a atribuição é representada pela seta indica pela letra (B).
 
 ::::
 
-. . .
+## {.smaller}
 
 O lado direito (o que vem depois do `=`) é chamado [expressão]{.alert}.
 
 - Uma expressão pode ser um único valor (como `custoIngresso`).
-- Ou algo mais complexo, como o resultado de uma cálculo
+- Ou algo mais complexo, como o resultado de uma cálculo.
 
-## {.smaller}
+. . .
 
 Em Java, o tipo do resultado da expressão tem que ser **o mesmo tipo** da variável.
 
-- Não podemos, por exemplo, guardar o valor de uma expressão que resulta em um número inteiro em uma variável string.
-
-- Seguindo a mesma ideia, não podemos passar um valor inteiro como argumento para um parâmetro string de um construtor, por exemplo.
+- Ex.: não podemos guardar um resultado inteiro em uma variável string.
 
 . . .
 
