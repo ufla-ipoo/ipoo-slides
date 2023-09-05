@@ -1,0 +1,88 @@
+---
+title: IPOO - Cap. 1 Objetos e Classes
+subtitle: Aula 2.2 - Prática
+---
+
+## Sobre as Aulas Práticas {.smaller}
+
+::: {.nonincremental}
+
+Como já foi comentado na aula passada:
+
+- **aulas práticas são fundamentais** para o entendimento dos conceitos.
+- Mas, para isso, é fundamental que tenha estudado o conteúdo teórico ANP **antes da aula prática**.
+
+:::: {.columns}
+
+::: {.column width="20%"}
+![](imagens/fica_a_dica.png)
+:::
+
+::: {.column width="80%"}
+::: {.callout-note title="Convenção" appearance="simple" icon=false}
+Lembre-se que para ter presença na aula prática é necessário.
+
+- Responder à **chamada**;
+- e, **também**, entregar, no mínimo, 30% do exercícios propostos até o final da aula.
+:::
+:::
+
+::::
+:::
+
+## 
+
+::: {.callout-note title="Exercício 1" icon=false}
+Modifique o construtor da classe `MaquinaIngressos` de forma que ele não receba mais parâmetros.
+Em vez disso, o preço dos ingressos deveria ser fixado em 1000 centavos (R$ 10,00).
+Com essa alteração, o que muda na hora de criar uma máquina de ingressos no BlueJ?
+:::
+
+. . .
+
+::: {.callout-note title="Exercício 2" icon=false}
+Altere agora a classe de forma que ela passe a ter dois construtores.
+Um que recebe o preço do ingresso por parâmetro e outro que não receba nenhum parâmetro
+(neste caso, escolha um valor fixo padrão para o preço dos ingressos).
+Teste as alterações criando máquinas usando os dois construtores.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício 3" icon=false}
+Crie um método na classe `MaquinaIngressos` que retorne o valor do total de dinheiro arrecado na máquina
+(atributo `total`).
+Acrescente um comentário no método explicando se esse é um *método de acesso* ou um *método modificador*, justificando sua resposta.
+Obs.: siga a convenção de nomenclatura da classe.
+:::
+
+##
+
+::: {.callout-note title="Exercício 4" icon=false}
+Para simular a operação de remover dinheiro da máquina de ingressos, crie um método chamado `esvaziar` na classe `MaquinaIngressos`.
+O método deve ter tipo de retorno `void` e deve somente mudar o valor do `total` para zero.
+Avalie se o método precisa receber algum parâmetro.
+Acrescente um comentário no método explicando se esse é um *método de acesso* ou um *método modificador*, justificando sua resposta.
+Por fim, teste sua implementação inserindo dinheiro na máquina, comprando ingresso, verificando o total e então esvaziando a máquina. 
+:::
+
+::: {.callout-note title="Exercício 5" icon=false}
+Altere o método `imprimirIngresso` de forma que o preço do ingresso seja exibido em reais, em vez de centavos.
+Obs.: você deve alterar apenas este método.
+O preço deve aparecer conforme o exemplo abaixo (não se preocupe em usar vírgula no lugar do ponto):
+```
+##################
+# Ingressos & Cia 
+# Ingresso
+# R$ 5.00 reais.
+##################
+```
+:::
+
+
+
+## 
+
+::: {.callout-important title="Entrega no Campus Virtual"}
+Acesse, no Campus Virtual, a atividade correspondente a essa segunda parte dos exercícios e envie o código do projeto `maquina-ingressos-ingenua` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
+:::
