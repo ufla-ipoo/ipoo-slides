@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR"><head>
-<script src="cap1-2_files/libs/clipboard/clipboard.min.js"></script>
-<script src="cap1-2_files/libs/quarto-html/tabby.min.js"></script>
-<script src="cap1-2_files/libs/quarto-html/popper.min.js"></script>
-<script src="cap1-2_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="cap1-2_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="cap1-2_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="cap1-2_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="cap1-2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="cap1-2_files/libs/quarto-contrib/jquery-3.6.3/jquery-3.6.3.min.js"></script>
-<script src="cap1-2_files/libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.js" defer="true"></script>
-<link href="cap1-2_files/libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
-<script src="cap1-2_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
-<script src="cap1-2_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
-<script src="cap1-2_files/libs/quarto-contrib/kbd/kbd.js"></script>
-<link href="cap1-2_files/libs/quarto-contrib/kbd/kbd.css" rel="stylesheet"><meta charset="utf-8">
+<script src="cap2-2_files/libs/clipboard/clipboard.min.js"></script>
+<script src="cap2-2_files/libs/quarto-html/tabby.min.js"></script>
+<script src="cap2-2_files/libs/quarto-html/popper.min.js"></script>
+<script src="cap2-2_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="cap2-2_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="cap2-2_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="cap2-2_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="cap2-2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="cap2-2_files/libs/quarto-contrib/jquery-3.6.3/jquery-3.6.3.min.js"></script>
+<script src="cap2-2_files/libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.js" defer="true"></script>
+<link href="cap2-2_files/libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
+<script src="cap2-2_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
+<script src="cap2-2_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
   <meta name="dcterms.date" content="2023-06-09">
-  <title>IPOO - Cap. 1 Objetos e Classes</title>
+  <title>IPOO - Cap. 2 Entendendo as Definições de Classe</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="cap1-2_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="cap1-2_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="cap2-2_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="cap2-2_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -103,14 +101,14 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="cap1-2_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="cap1-2_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="cap1-2_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="cap1-2_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="cap1-2_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="cap1-2_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="cap1-2_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
-  <link href="cap1-2_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="cap2-2_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="cap2-2_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="cap2-2_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="cap2-2_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="cap2-2_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="cap2-2_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="cap2-2_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
+  <link href="cap2-2_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -401,8 +399,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">IPOO - Cap. 1 Objetos e Classes</h1>
-  <p class="subtitle">Aula 1.2 - Prática</p>
+  <h1 class="title">IPOO - Cap. 2 Entendendo as Definições de Classe</h1>
+  <p class="subtitle">Aula 2.2 - Prática</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -420,280 +418,154 @@
 <section id="sobre-as-aulas-práticas" class="slide level2 smaller">
 <h2>Sobre as Aulas Práticas</h2>
 <div>
-<p>As <strong>aulas práticas são fundamentais</strong> para que consigamos entender os conceitos e saber como aplicá-los em um programa real.</p>
+<p>Como já foi comentado na aula passada:</p>
 <ul>
-<li>E, para conseguirmos acompanhar a aula, é fundamental ter estudado o conteúdo teórico ANP <strong>antes da aula prática</strong>.</li>
+<li><strong>Aulas práticas são fundamentais</strong> para o entendimento dos conceitos.</li>
+<li>Mas, para isso, é fundamental que tenha <strong>estudado</strong> o conteúdo teórico ANP <strong>antes da aula prática</strong>.</li>
 </ul>
-<p>Lembre-se também que, como apresentado no Plano de Ensino, <span class="alert">para ter presença</span> na aula prática, <strong>não basta vir à aula</strong>.</p>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img data-src="imagens/fica_a_dica.png"></p>
+</div><div class="column" style="width:80%;">
+<div class="callout callout-note no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Convenção</strong></p>
+</div>
+<div class="callout-content">
+<p>Lembre-se que para ter presença na aula prática é necessário.</p>
 <ul>
-<li>É necessário entregar, no mínimo, 30% do exercícios propostos até o final da aula.</li>
-<li>Portanto, <strong>não se esqueça de enviar</strong> suas atividades <strong>ao terminar aula</strong> (mesmo que não tiver terminado).</li>
+<li>Responder à <strong>chamada</strong>;</li>
+<li>e, <strong>também</strong>, entregar, no mínimo, 30% do exercícios propostos até o final da aula.</li>
 </ul>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section>
-<section id="código-java" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>Código Java</h1>
-
-</section>
-<section id="section" class="slide level2 smaller">
+<section id="section" class="slide level2">
 <h2></h2>
-<p><strong>Programar em Java</strong> consiste basicamente em escrever <strong>comandos para chamar métodos de objetos</strong>.</p>
-<ul>
-<li class="fragment">Usando o BlueJ, nós chamamos os métodos clicando nos objetos e acessando opções de menu.</li>
-<li class="fragment">Mas, em Java, nós digitamos os códigos que chamam os métodos.</li>
-</ul>
-</section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<p>O BlueJ tem uma opção interessante que nos permite ver como as chamadas de métodos são feitas em Java.</p>
+<div>
+<p>Para fazer os exercícios, baixe o projeto <a href="https://github.com/ufla-ipoo/maquina-ingressos-ingenua">maquina-ingressos-ingenua</a>.</p>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <p><strong>Exercício 1.1</strong></p>
 </div>
 <div class="callout-content">
-<div>
-<p>Baixe o projeto de exemplo <a href="https://github.com/ufla-ipoo/figuras">figuras</a> e abra-o no BlueJ.</p>
-<ul>
-<li>Acesse o menu <strong>Exibir</strong> –&gt; <strong>Exibir Terminal</strong> (ou use o atalho <kbd>Ctrl-T</kbd>)
-<ul>
-<li>Será exibida uma janela que o BlueJ usa para exibir dados de saída.</li>
-<li>Dica: arraste as janelas para que você consiga ver a janela principal do BlueJ e o Terminal ao mesmo tempo.</li>
-</ul></li>
-<li>Na janela do Terminal, acesse o menu <strong>Opções</strong> –&gt; <strong>Anotar chamadas de métodos</strong>.
-<ul>
-<li>Com essa opção, todas as chamadas de método feitas pelo BlueJ serão exibidas como código Java.</li>
-</ul></li>
-<li>Agora, crie alguns objetos, chame alguns de seus métodos e observe a saída na janela do terminal.</li>
-</ul>
+<p>Modifique o construtor da classe <code>MaquinaIngressos</code> de forma que ele não receba mais parâmetros. Em vez disso, o preço dos ingressos deve ser fixado em 1000 centavos (R$ 10,00).</p>
+<p>Com essa alteração, o que muda na hora de criar uma máquina de ingressos no BlueJ?</p>
 </div>
 </div>
 </div>
-</div>
-</section>
-<section id="section-2" class="slide level2 smaller">
-<h2></h2>
-<p>No passo anterior, vimos que criar uma pessoa, exibi-la e fazê-la mover para a direita seria feito da seguinte forma em Java.</p>
-<div class="doublefontsize">
-<div class="sourceCode" id="cb1" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Pessoa pessoa1 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Pessoa</span><span class="op">();</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pessoa1<span class="op">.</span><span class="fu">exibir</span><span class="op">();</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>pessoa1<span class="op">.</span><span class="fu">moverDireita</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<p>Podemos observar que:</p>
-<ul>
-<li class="fragment">Quando criamos um objeto e damos um nome a ele, na verdade estamos <strong>armazenando um objeto Pessoa em uma variável</strong>.</li>
-<li class="fragment">Chamamos métodos usando o nome do objeto, seguido de <code>.</code>, seguido do nome do método, seguido da lista de parâmetros (que pode ser vazia) entre parênteses.</li>
-<li class="fragment">Todos os comandos em Java terminam com <code>;</code>.</li>
-</ul>
-</div>
-</section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<p>Nós também podemos digitar comandos Java usando o <strong>Bloco de Códigos</strong>.</p>
-<div class="fragment">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <p><strong>Exercício 1.2</strong></p>
 </div>
 <div class="callout-content">
-<div>
-<p>Confira se o Bloco de Códigos está sendo exibido no seu BlueJ.</p>
-<ul>
-<li>Para isso, acesse o menu <strong>Exibir</strong> –&gt; <strong>Exibir Bloco e Códigos</strong> (ou use o atalho <kbd>Ctrl-E</kbd>)
-<ul>
-<li>Vai aparecer um painel na parte inferior, à direita da bancada de objetos.</li>
-</ul></li>
-<li>Agora digite no Bloco de Códigos os comandos do slide anterior para criar uma pessoa, exibi-la e movê-la para direita.</li>
-<li>Experimente criar outros objetos e chamar seus métodos.</li>
-</ul>
+<p>Altere agora a classe de forma que ela passe a ter dois construtores. Um que recebe o preço do ingresso por parâmetro e outro que não receba nenhum parâmetro (neste caso, escolha um valor fixo padrão para o preço dos ingressos).</p>
+<p>Teste as alterações criando máquinas usando os dois construtores.</p>
 </div>
 </div>
 </div>
 </div>
-</div>
-</section></section>
-<section>
-<section id="interação-entre-objetos" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>Interação entre Objetos</h1>
-
 </section>
-<section id="section-4" class="slide level2">
+<section id="section-1" class="slide level2">
 <h2></h2>
+<div>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <p><strong>Exercício 1.3</strong></p>
 </div>
 <div class="callout-content">
-<div>
-<p>Baixe o projeto de exemplo <a href="https://github.com/ufla-ipoo/casa">casa</a> e abra-o no BlueJ.</p>
-<ul>
-<li>Crie uma instância da classe <code>Figura</code> e chame seu método <code>desenhar</code>. Em seguida, experimente os métodos <code>definirPretoEBranco</code> e <code>definirColorida</code>.</li>
-<li>Como você acha que a classe <code>Figura</code> desenha a figura que aparece?</li>
-</ul>
+<p>Crie um método na classe <code>MaquinaIngressos</code> que retorne o valor do total de dinheiro arrecado na máquina (o valor do atributo <code>total</code>). Ao escolher o nome do método, siga a convenção de nomenclatura da classe.</p>
+<p>Acrescente um comentário no método dizendo se esse é um <em>método de acesso</em> ou um <em>método modificador</em> e justificando sua resposta.</p>
 </div>
 </div>
 </div>
-</div>
-</section>
-<section id="section-5" class="slide level2 smaller">
-<h2></h2>
-<p>Repare que cinco classes do projeto <code>casa</code> são idênticas as do projeto <code>figuras</code>.</p>
-<ul>
-<li class="fragment">Mas há uma classe adicional: <code>Figura</code>.</li>
-<li class="fragment">Essa classe é programada exatamente como você fez no exercício da aula teórica.</li>
-</ul>
-<div class="fragment">
-<p>Geralmente, quando queremos fazer alguma tarefa em Java, nós não fazemos na mão.</p>
-<ul>
-<li class="fragment">Nós criamos uma classe que faça a tarefa para nós.</li>
-<li class="fragment">É isso que a classe <code>Figura</code> faz.
-<ul>
-<li class="fragment">A classe <code>Figura</code> é escrita de forma que, quando uma instância é criada, são criados dois objetos quadrado (para a parede e para a janela), um triângulo e um círculo.</li>
-<li class="fragment">Esses objetos são então exibidos, movidos e têm seu tamanho e cor alterados até a figura ficar como vimos.</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="section-6" class="slide level2 smaller">
-<h2></h2>
-<p>O importante aqui é entendermos que <span class="alert">objetos podem criar objetos</span>.</p>
-<ul>
-<li class="fragment">E <span class="alert">objetos podem chamar métodos de outros objetos</span>.</li>
-<li class="fragment">Um programa em Java tem centenas ou milhares de objetos. O usuário inicia o programa (que geralmente cria o primeiro objeto) e, daí em diante, todos os objetos são criados a partir de outros objetos.</li>
-</ul>
-<div class="fragment">
-<div class="callout callout-tip no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Conceito</strong></p>
-</div>
-<div class="callout-content">
-<p>Objetos podem se comunicar <strong>chamando métodos</strong> uns dos outros.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="fragment">
-<p>Mas <strong>como podemos escrever a classe para que objetos façam isso?</strong></p>
-</div>
-</section></section>
-<section>
-<section id="código-fonte" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>Código-fonte</h1>
-
-</section>
-<section id="section-7" class="slide level2 smaller">
-<h2></h2>
-<p>Cada classe tem um <em>código-fonte</em> associada a ela; é o texto que define os detalhes da classe.</p>
-<ul>
-<li class="fragment">No BlueJ podemos ver o código de uma classe clicando duas vezes no retângulo da classe no diagrama.</li>
-</ul>
-<div class="fragment">
-<p>O código-fonte de nossas classes é escrito na linguagem Java.</p>
-<ul>
-<li class="fragment">Ele define os atributos e métodos que uma classe tem, e o que exatamente acontece quando um método é chamado.</li>
-<li class="fragment">Veremos isso melhor na próxima aula.</li>
-</ul>
-</div>
-<div class="fragment">
-<p>A maior parte da arte da programação consiste em aprender como escrever essas definições de classes.</p>
-<ul>
-<li class="fragment">Para isso precisamos aprender a usar a linguagem Java (ou, claro, outras linguagens que existem).</li>
-</ul>
-</div>
-<div class="fragment">
-<div class="callout callout-tip no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Conceito</strong></p>
-</div>
-<div class="callout-content">
-<p>O <strong>código-fonte</strong> de uma classe determina a estrutura e o comportamento (os atributos e métodos) de cada um dos objetos daquela classe.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-8" class="slide level2 smaller">
-<h2></h2>
-<p>No BlueJ, quando alteramos o código de uma classe e fechamos o editor, o retângulo da classe aparece listrado.</p>
-<ul>
-<li class="fragment">Isso indica que o código foi alterado e precisa ser recompilado.</li>
-<li class="fragment">Você pode recompilar uma classe, clicando com o botão direito no retângulo da classe e acessando a opção <strong>Compilar</strong>.</li>
-<li class="fragment">Ou você pode compilar todas as classes acessando o menu <strong>Ferramentas</strong> –&gt; <strong>Compilar</strong> (ou o atalho de teclado <kbd>Ctrl-K</kbd>)</li>
-<li class="fragment">Quando recompilamos uma classe, o BlueJ remove quaisquer objetos que tenham sido criados antes.</li>
-</ul>
-</section>
-<section id="section-9" class="slide level2">
-<h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <p><strong>Exercício 1.4</strong></p>
 </div>
 <div class="callout-content">
-<p>No código-fonte da classe <code>Figura</code>, encontre a parte que realmente desenha a figura e o altere de forma que o sol seja azul em vez de amarelo.</p>
+<p>Para simular a operação de remover dinheiro da máquina de ingressos, crie um método chamado <code>esvaziar</code> na classe <code>MaquinaIngressos</code>. O método deve ter tipo de retorno <code>void</code> e deve somente mudar o valor do <code>total</code> para zero. Avalie se o método precisa receber algum parâmetro.</p>
+<p>Acrescente um comentário no método dizendo se esse é um <em>método de acesso</em> ou um <em>método modificador</em> e justificando sua resposta.</p>
+<p>Por fim, teste sua implementação inserindo dinheiro na máquina, comprando ingresso, verificando o total e então esvaziando a máquina e verificando o total novamente.</p>
 </div>
 </div>
 </div>
+</div>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <p><strong>Exercício 1.5</strong></p>
 </div>
 <div class="callout-content">
-<p>Adicione um segundo sol à figura. Para isso, repare a definição dos atributos no início da classe. Você verá o seguinte código</p>
-<div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> Quadrado parede<span class="op">;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> Quadrado janela<span class="op">;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> Triangulo telhado<span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> Circulo sol<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Você precisará adicionar uma linha nesse trecho para o segundo sol. Além disso, faça as alterações necessárias para que ele apareça quando a figura é desenhada.</p>
+<p>Ao imprimir um ingresso você deve ter notado que aparece o texto <code>Ingressos &amp; Cia</code>, que seria o nome da empresa que vende os ingressos. Vamos agora permitir que cada máquina possa vender ingressos de uma empresa diferente. Repare que, para isso, quando uma máquina é criada ela precisará guardar o nome da empresa.</p>
+<p>Como podemos tratar isso? (<em>Pense na solução antes de continuar.</em>)</p>
+<div class="fragment">
+<p>Veja que basta você alterar a classe <code>MaquinaIngressos</code> fazendo o seguinte:</p>
+<ul>
+<li>Crie um novo atributo para guardar o nome da empresa.</li>
+<li>Receba o nome da empresa por parâmetro nos dois construtores da classe e guarde a informação no novo atributo.</li>
+<li>Altere o método <code>imprimirIngresso</code> para que ele exiba o nome da empresa em vez do texto <code>Ingressos &amp; Cia</code>.</li>
+<li>Para que o código fique mais completo, crie também um método de acesso que retorne o nome da empresa.</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 </section>
-<section id="section-10" class="slide level2">
+<section id="section-3" class="slide level2">
 <h2></h2>
+<div>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <p><strong>Exercício 1.6</strong></p>
 </div>
 <div class="callout-content">
-<p>Vamos criar um pôr do sol no nosso projeto. Ou melhor, dois! Altere a classe <code>Figura</code> de forma que, quando uma figura é criada, os dois sóis se ponham automaticamente. Dica: lembre-se que a classe <code>Circulo</code> tem um método <code>moverVerticalLento</code> que você pode usar.</p>
-</div>
-</div>
-</div>
-<div class="fragment">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 1.7</strong></p>
-</div>
-<div class="callout-content">
-<p>Fica mais interessante se o pôr do sol for tratado em um método separado. Assim podemos criar a figura e depois começarmos o pôr do sol quando quisermos. Altere o código da classe <code>Figura</code>, criando um método chamado <code>porDoSol</code> e fazendo as alterações necessárias.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="fragment">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 1.8</strong></p>
-</div>
-<div class="callout-content">
-<p>Altere a classe <code>Figura</code> para que a pessoa caminhe para a casa depois do pôr do sol.</p>
+<p>Para evitar a ação de cambistas, as empresas que vendem ingressos pediram que o nome do comprador seja impresso junto com o ingresso.</p>
+<p>Como você pode tratar isso fazendo alterações apenas no método <code>imprimirIngresso</code>?</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="section-11" class="slide level2">
+<section id="section-4" class="slide level2">
+<h2></h2>
+<div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>(OPCIONAL) Exercício 1.7 - Desafio</strong></p>
+</div>
+<div class="callout-content">
+<p>Altere o método <code>imprimirIngresso</code> de forma que o preço do ingresso seja exibido em reais, em vez de centavos. O preço deve aparecer conforme o exemplo abaixo.</p>
+<pre><code>##################
+# Ingressos &amp; Cia 
+# Ingresso
+# R$ 5,00 reais.
+##################</code></pre>
+<p>Observações:</p>
+<ul>
+<li>O valor do ingresso deve continuar sendo guardado em centavos. A alteração deve ser feita somente na hora de exibir os dados do ingresso na tela.</li>
+<li>Pesquise na internet sobre como uma String pode ser formatada em Java de forma que o valor sempre apareça com duas casas decimais e com vírgula como separador dos decimais.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-5" class="slide level2">
 <h2></h2>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
@@ -704,251 +576,117 @@
 <p><strong>Entrega no Campus Virtual</strong></p>
 </div>
 <div class="callout-content">
-<p>Acesse, no Campus Virtual, a atividade correspondente a essa primeira parte dos exercícios e envie o código do projeto <code>casa</code> da forma que ficou após as suas alterações (compacte a pasta em um arquivo <code>.zip</code> para enviar);</p>
+<p>Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto <code>maquina-ingressos-ingenua</code> da forma que ficou após as suas alterações (compacte a pasta em um arquivo <code>.zip</code> para enviar);</p>
 </div>
 </div>
 </div>
 </section>
-<section id="section-12" class="slide level2 smaller">
+<section id="section-6" class="slide level2">
 <h2></h2>
-<p><img data-src="imagens/chamada-jogo-nave.png"></p>
-</section>
-<section id="section-13" class="slide level2 smaller">
-<h2></h2>
-<p>Baixe o projeto de exemplo <a href="https://github.com/ufla-ipoo/nave">nave</a> e abra-o no BlueJ.</p>
-<p><img data-src="imagens/jogo-nave.png" style="width:70.0%"></p>
-</section>
-<section id="section-14" class="slide level2 smaller">
-<h2></h2>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 2.1 - Criando objetos para jogar</strong></p>
-</div>
-<div class="callout-content">
 <div>
-<p>Esse é um jogo bem simples, mas que será interessante para reforçarmos mais alguns conceitos de OO.</p>
+<p>Os exercícios a seguir são do <strong>projeto da <a href="https://github.com/ufla-ipoo/nave">nave</a></strong>, que você já trabalhou no capítulo anterior.</p>
 <ul>
-<li>Veja que existem seis classes no projeto: <code>Nave</code>, <code>Inimigo</code>, <code>Placar</code>, <code>Cenario</code>, <code>Tiro</code> e <code>TesteJogo</code>.</li>
+<li>Eles servem para reforçar os conceitos e, ao mesmo tempo, para conhecer mais sobre a linguagem Java.</li>
 </ul>
-<p>Vamos começar conhecendo os objetos envolvidos.</p>
-<ul>
-<li>Crie um objeto da classe <code>Nave</code>.</li>
-<li>Clique com o botão direito no objeto e veja os métodos disponíveis.</li>
-<li>Clique em <em>Inspecionar</em> e veja os atributos do objeto.</li>
-</ul>
-<p>Faça o mesmo com as seguintes classes:</p>
-<ul>
-<li><code>Inimigo</code>.</li>
-<li><code>Placar</code>.</li>
-</ul>
-<p>Agora crie um objeto da classe <code>Cenario</code>:</p>
-<ul>
-<li>Veja que para criar um cenário, é necessário passar objetos da classe Nave, Inimigo e Placar por parâmetro.</li>
-<li>Passe os objetos criados anteriormente.</li>
-<li>Avalie os métodos e atributos da objeto cenário.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-15" class="slide level2 smaller">
-<h2></h2>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 2.2 - Jogando</strong></p>
-</div>
-<div class="callout-content">
-<div>
-<p>Bom, essa é a parte mais divertida…</p>
-<ul>
-<li>Chame o método <code>executarLoopDeJogo</code> do objeto da classe <code>Cenario</code>.</li>
-</ul>
-<p>A dinâmica do jogo é simples.</p>
-<ul>
-<li>Você controla a nave da esquerda usando as setas do teclado.</li>
-<li>E pode atirar digitando a tecla <kbd>Ctrl</kbd>.</li>
-<li>A tecla <kbd>ENTER</kbd> pausa o jogo.</li>
-<li>O inimigo se move aleatoriamente na vertical e também atira aleatoriamente.</li>
-<li>Seu objetivo é destruir o maior número de inimigos possível sem ser morto.</li>
-<li>Você ganha 50 pontos a cada inimigo morto.</li>
-<li>Se você morrer, você pode reiniciar o jogo apertando a tecla <kbd>F2</kbd>.</li>
-</ul>
-<p>Jogue um pouco e veja quantos pontos consegue alcançar:</p>
-<ul>
-<li>Mas não se esqueça de continuar os exercícios ☺</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-16" class="slide level2 smaller">
-<h2></h2>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 2.3 - Conhecendo as classes</strong></p>
-</div>
-<div class="callout-content">
-<div>
-<p>Nesse passo, vamos dar uma passada de olhos no código das classes do jogo.</p>
-<ul>
-<li>Não se preocupe em entender detalhes do código nesse momento.</li>
-<li>Apenas tente identificar os atributos e métodos que existem no código-fonte das classes <code>Nave</code>, <code>Inimigo</code> e <code>Placar</code>.</li>
-<li>Dê uma olhada com mais detalhes no método <code>atirar</code> da classe <code>Nave</code> e tente entender o que ele faz.</li>
-</ul>
-<p>Obs.: a classe <code>Cenario</code> é bem complexa porque usa conceitos avançado, portanto, pode ignorá-la. Mas se estiver curioso, fique à vontade.</p>
-</div>
-</div>
-</div>
 </div>
 <div class="fragment">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 2.4 - A Classe <code>TesteJogo</code></strong></p>
-</div>
-<div class="callout-content">
-<div>
-<p>Abra o código da classe TesteJogo.</p>
-<ul>
-<li>Repare que ela possui uma nave, um inimigo, um placar e um cenário.</li>
-<li>Ela cria esses objetos e chama o método executarLoopDeJogo da classe Cenario.</li>
-<li>Mas isso é exatamente o que fizemos para iniciar o jogo.</li>
-</ul>
-<p>Ou seja, essa classe é um atalho para inicializarmos o jogo mais rápido.</p>
-<ul>
-<li>Basta criar um objeto dessa classe que o jogo será executado.</li>
-</ul>
-<p>Experimente!</p>
-</div>
-</div>
-</div>
-</div>
+<p>Os exercícios dessa segunda parte são opcionais não precisam ser entregues.</p>
 </div>
 </section>
-<section id="section-17" class="slide level2 smaller">
+<section id="section-7" class="slide level2">
 <h2></h2>
+<div>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício 2.5 - Alterando o Código</strong></p>
+<p><strong>(OPCIONAL) Exercício 2.1 - Nível de proteção imprevisível</strong></p>
 </div>
 <div class="callout-content">
-<div>
-<p>A classe <code>Nave</code> possui um método chamado <code>getTextoExibicao</code>.</p>
+<p>Vamos deixar a dificuldade do jogo um pouco imprevisível.</p>
 <ul>
-<li>Repare que atualmente ele retorna uma string vazia.</li>
-<li>Coloque algum texto na String e inicie o jogo pra ver o que acontece.</li>
-<li>Dica: use um objeto da classe <code>TesteJogo</code>.</li>
-</ul>
-<p>Você viu que o texto aparece ao lado da nave. Vamos aproveitar esse fato então para criar um atributo novo na classe <code>Nave</code> para guardar o nome da nave.</p>
+<li>Crie um método na classe <code>Nave</code> chamado <code>gerarNivelDeProtecao</code>.</li>
+<li>Dentro desse método faça com que o atributo <code>nivelDeProtecao</code> receba um valor aleatório entre 0 e 140.
 <ul>
-<li>Crie então um atributo do tipo String chamado <code>nome</code>.</li>
-<li>Avalie onde seria possível iniciar o atributo <code>nome</code> e coloque um nome bem criativo para a sua nave.</li>
-<li>Por fim, altere o método <code>getTextoExibicao</code> para que ele exiba o valor do atributo <code>nome</code>.</li>
-</ul>
-<p>Vale ressaltar que o nome será definido diretamente no código.</p>
-<ul>
-<li>Portanto, se você quiser usar um nome diferente, será necessário alterar o código, recompilar e executar o jogo novamente.</li>
-</ul>
-<p>Teste suas alterações.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-18" class="slide level2 smaller">
-<h2></h2>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 2.6 - Melhorando a Nave</strong></p>
-</div>
-<div class="callout-content">
-<div>
-<p>A nave atualmente é muito fraca certo?</p>
-<ul>
-<li>Com apenas um tiro ela morre!</li>
-<li>E que tal se ela tivesse uma campo magnético de proteção contra tiros?</li>
-<li>Assim, quando ela tomar um tiro ela perde parte da proteção, mas só morre se o campo não for forte o suficiente para proteger a nave.</li>
-</ul>
-<p>Altere a classe <code>Nave</code> de forma que ela passe a ter o campo de proteção.</p>
-<ul>
-<li>Crie um atributo <code>nivelDeProtecao</code>.</li>
-<li>Avalie em qual método ele deve ser inicializado e faça com que a nave sempre comece o jogo com nível 100 de proteção.</li>
-<li>Quando a nave tomar um tiro, ela deve perder 20 pontos do seu campo de proteção.
-<ul>
-<li>Qual parte do código deve ser alterada para que a nave não morra com um único tiro, mas sim perca a proteção primeiro?</li>
-<li>Lembre-se de que a nave deve morrer se tomar um tiro e o seu campo de proteção estiver abaixo de 20.</li>
-<li>Lembre-se ainda, que ao reiniciar o jogo, a nave deve voltar a ter nível 100 de proteção.</li>
+<li><strong><em>Dica</em></strong>: Estude como o objeto da classe <code>Random</code> é usado na classe <code>Inimigo</code>.</li>
+<li>Repare todos os lugares onde ele é usado na classe <code>Inimigo</code> e veja o que precisa ser feito de forma similar na classe <code>Nave</code>.</li>
 </ul></li>
-<li>Faça a alteração no método necessário.</li>
+<li>Altere então a inicialização do atributo <code>nivelDeProtecao</code>, retirando o código atual que inicializa com 100 e chamando o método <code>gerarNivelDeProtecao</code>.</li>
 </ul>
-<p>Jogue e teste o campo de proteção da nave.</p>
+<p>Jogue o jogo e reinicie-o algumas vezes ao morrer.</p>
+<ul>
+<li>Deu certo, conforme esperado? Senão, o que ficou faltando?</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="section-19" class="slide level2 smaller">
+<section id="section-8" class="slide level2">
 <h2></h2>
+<div>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício 2.7 - Melhorando a usabilidade</strong></p>
+<p><strong>(OPCIONAL) Exercício 2.2 - Tiros variados</strong></p>
 </div>
 <div class="callout-content">
-<div>
-<p>Bom, foi bacana nossa nave ter ficado mais forte.</p>
+<p>A gente tinha facilitado as coisas colocando o campo de proteção.</p>
 <ul>
-<li>Mas quem está jogando não sabe qual o nível de proteção atual da nave!</li>
+<li>Agora vamos dificultar um pouco.</li>
 </ul>
-<p>Altere o método <code>getTextoExibicao</code> para exibir o nível do campo de proteção.</p>
+<p>Vamos fazer com que cada tiro do inimigo possa ter uma velocidade diferente.</p>
 <ul>
-<li>Exiba, na frente do nome da nave, o nível de proteção da nave.</li>
+<li>A classe <code>Tiro</code> sabe quando um tiro é do inimigo ou da nave.</li>
+<li>Altere então o construtor da classe <code>Tiro</code> de forma que a velocidade do tiro do inimigo (apenas dele) possa ser de 1 a 5 vezes mais rápida que a velocidade normal (valor sorteado aleatoriamente).</li>
 </ul>
-<p>Jogue novamente e teste a alteração.</p>
+<p>Jogue o jogo e teste a alteração.</p>
 <ul>
-<li>Agora ficou bem melhor, não ficou?</li>
+<li>E aí, ficou mais divertido?</li>
 </ul>
 </div>
-</div>
-</div>
-</div>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Dica</strong></p>
-</div>
-<div class="callout-content">
-<p>O operador <code>+</code> em Java pode ser usado para <em>concatenar</em> (juntar) Strings e também Strings com outros tipos de dados. A linguagem converte automaticamente números para strings, por exemplo.</p>
-<p>Logo, é possível em Java implementar um código como o apresentado abaixo. Experimente executá-lo no Bloco de Códigos do BlueJ e depois digite somente <code>frase</code> para que ele exiba o valor desta variável:</p>
-<div class="sourceCode" id="cb3" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> numero <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> palavra <span class="op">=</span> <span class="st">"nota"</span><span class="op">;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> frase <span class="op">=</span> palavra <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> numero<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="section-20" class="slide level2 smaller">
+<section id="section-9" class="slide level2">
 <h2></h2>
-<div class="callout callout-important callout-titled callout-style-default">
+<p>Nosso objetivo agora é fazer com que o inimigo fique mais rápido à medida que avançamos no jogo.</p>
+<ul>
+<li class="fragment">A ideia é que o jogador comece no nível 1 e mude de nível a cada 500 pontos.</li>
+<li class="fragment">E, a cada nível, o inimigo fica mais rápido.</li>
+</ul>
+</section>
+<section id="section-10" class="slide level2">
+<h2></h2>
+<div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Entrega no Campus Virtual</strong></p>
+<p><strong>(OPCIONAL) Exercício 2.3 - Tratando níveis</strong></p>
 </div>
 <div class="callout-content">
-<p>Acesse, no Campus Virtual, a atividade correspondente a essa segunda parte dos exercícios e envie o código do projeto <code>nave</code> da forma que ficou após as suas alterações (compacte a pasta em um arquivo <code>.zip</code> para enviar);</p>
+<p>Faça as alterações a seguir na classe <code>Placar</code>:</p>
+<ul>
+<li>Crie um novo atributo chamado <code>nivelAtual</code>.</li>
+<li>Inicialize o novo atributo com valor 1 dentro do método <code>inicializar</code>.</li>
+<li>Altere o método <code>contarMorteInimigo</code> de forma que, a cada 500 pontos, o nível atual seja incrementado em 1.
+<ul>
+<li>Dica: Basta acrescentar uma condição que verifique o resto da divisão por zero. <!-- ```{.java code-line-numbers="false"}
+if (pontos % 50 == 0) {
+  nivelAtual = nivelAtual + 1
+}
+``` --></li>
+</ul></li>
+<li>Crie um método de acesso que retorne o nível atual.</li>
+</ul>
+<p>Agora, precisamos que o jogador consiga saber em que nível está.</p>
+<ul>
+<li><p>Para isso, procure o método <code>desenharPlacar</code> em <code>Cenario</code> e encontre a linha abaixo:</p>
+<div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>g<span class="op">.</span><span class="fu">drawString</span><span class="op">(</span><span class="st">"Pontos: "</span> <span class="op">+</span> placar<span class="op">.</span><span class="fu">getPontos</span><span class="op">(),</span> posX<span class="op">,</span> posY<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Veja que o primeiro argumento passado para o método <code>drawString</code> é a String que aparece na tela com o valor do placar. Concatene à String passada: a palavra <em>nivel</em> e o valor do nível atual.</p></li>
+<li><p>Jogue o jogo e teste suas alterações.</p></li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -956,26 +694,26 @@
 <div class="footer footer-default">
 
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="cap1-2_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="cap2-2_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="cap1-2_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="cap2-2_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="cap2-2_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="cap2-2_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="cap2-2_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="cap2-2_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="cap2-2_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="cap2-2_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="cap1-2_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="cap2-2_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="cap2-2_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="cap2-2_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="cap2-2_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

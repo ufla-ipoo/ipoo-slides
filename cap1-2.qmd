@@ -27,11 +27,9 @@ Lembre-se também que, como apresentado no Plano de Ensino, [para ter presença]
 - Usando o BlueJ, nós chamamos os métodos clicando nos objetos e acessando opções de menu.
 - Mas, em Java, nós digitamos os códigos que chamam os métodos.
 
-. . .
+##
 
 O BlueJ tem uma opção interessante que nos permite ver como as chamadas de métodos são feitas em Java.
-
-. . .
 
 ::: {.callout-note title="Exercício 1.1" icon=false}
 
@@ -67,7 +65,7 @@ Podemos observar que:
 - Chamamos métodos usando o nome do objeto, seguido de `.`, seguido do nome do método, seguido da lista de parâmetros (que pode ser vazia) entre parênteses.
 - Todos os comandos em Java terminam com `;`.
 
-## {.smaller}
+##
 
 Nós também podemos digitar comandos Java usando o **Bloco de Códigos**.
 
@@ -88,7 +86,7 @@ Confira se o Bloco de Códigos está sendo exibido no seu BlueJ.
 
 # Interação entre Objetos {background-color="#40666e"}
 
-## {.smaller}
+##
 
 ::: {.callout-note title="Exercício 1.3" icon=false}
 
@@ -171,12 +169,13 @@ No BlueJ, quando alteramos o código de uma classe e fechamos o editor, o retân
 
 . . .
 
+##
 
 ::: {.callout-note title="Exercício 1.4" icon=false}
 No código-fonte da classe `Figura`, encontre a parte que realmente desenha a figura e o altere de forma que o sol seja azul em vez de amarelo.
 :::
 
-## {.smaller}
+. . .
 
 ::: {.callout-note title="Exercício 1.5" icon=false}
 Adicione um segundo sol à figura. Para isso, repare a definição dos atributos no início da classe. Você verá o seguinte código
@@ -189,7 +188,7 @@ private Circulo sol;
 Você precisará adicionar uma linha nesse trecho para o segundo sol. Além disso, faça as alterações necessárias para que ele apareça quando a figura é desenhada.
 :::
 
-. . .
+##
 
 ::: {.callout-note title="Exercício 1.6" icon=false}
 Vamos criar um pôr do sol no nosso projeto. Ou melhor, dois! Altere a classe `Figura` de forma que, quando uma figura é criada, os dois sóis se ponham automaticamente. Dica: lembre-se que a classe `Circulo` tem um método `moverVerticalLento` que você pode usar.
@@ -207,7 +206,7 @@ Fica mais interessante se o pôr do sol for tratado em um método separado. Assi
 Altere a classe `Figura` para que a pessoa caminhe para a casa depois do pôr do sol.
 :::
 
-## {.smaller}
+##
 
 ::: {.callout-important title="Entrega no Campus Virtual"}
 Acesse, no Campus Virtual, a atividade correspondente a essa primeira parte dos exercícios e envie o código do projeto `casa` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
@@ -367,7 +366,7 @@ Jogue e teste o campo de proteção da nave.
 
 ## {.smaller}
 
-::: {.callout-note title="Exercício 2.6 - Melhorando a usabilidade" icon=false}
+::: {.callout-note title="Exercício 2.7 - Melhorando a usabilidade" icon=false}
 
 ::: {.nonincremental}
 Bom, foi bacana nossa nave ter ficado mais forte.

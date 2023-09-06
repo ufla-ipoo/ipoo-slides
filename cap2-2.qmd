@@ -1,5 +1,5 @@
 ---
-title: IPOO - Cap. 1 Objetos e Classes
+title: IPOO - Cap. 2 Entendendo as Definições de Classe
 subtitle: Aula 2.2 - Prática
 ---
 
@@ -9,8 +9,8 @@ subtitle: Aula 2.2 - Prática
 
 Como já foi comentado na aula passada:
 
-- **aulas práticas são fundamentais** para o entendimento dos conceitos.
-- Mas, para isso, é fundamental que tenha estudado o conteúdo teórico ANP **antes da aula prática**.
+- **Aulas práticas são fundamentais** para o entendimento dos conceitos.
+- Mas, para isso, é fundamental que tenha **estudado** o conteúdo teórico ANP **antes da aula prática**.
 
 :::: {.columns}
 
@@ -32,57 +32,205 @@ Lembre-se que para ter presença na aula prática é necessário.
 
 ## 
 
-::: {.callout-note title="Exercício 1" icon=false}
+::: {.nonincremental}
+
+Para fazer os exercícios, baixe o projeto [maquina-ingressos-ingenua](https://github.com/ufla-ipoo/maquina-ingressos-ingenua).
+
+::: {.callout-note title="Exercício 1.1" icon=false}
 Modifique o construtor da classe `MaquinaIngressos` de forma que ele não receba mais parâmetros.
-Em vez disso, o preço dos ingressos deveria ser fixado em 1000 centavos (R$ 10,00).
+Em vez disso, o preço dos ingressos deve ser fixado em 1000 centavos (R$ 10,00).
+
 Com essa alteração, o que muda na hora de criar uma máquina de ingressos no BlueJ?
 :::
 
-. . .
-
-::: {.callout-note title="Exercício 2" icon=false}
+::: {.callout-note title="Exercício 1.2" icon=false}
 Altere agora a classe de forma que ela passe a ter dois construtores.
 Um que recebe o preço do ingresso por parâmetro e outro que não receba nenhum parâmetro
 (neste caso, escolha um valor fixo padrão para o preço dos ingressos).
+
 Teste as alterações criando máquinas usando os dois construtores.
 :::
 
-. . .
-
-::: {.callout-note title="Exercício 3" icon=false}
-Crie um método na classe `MaquinaIngressos` que retorne o valor do total de dinheiro arrecado na máquina
-(atributo `total`).
-Acrescente um comentário no método explicando se esse é um *método de acesso* ou um *método modificador*, justificando sua resposta.
-Obs.: siga a convenção de nomenclatura da classe.
 :::
 
 ##
 
-::: {.callout-note title="Exercício 4" icon=false}
+::: {.nonincremental}
+
+::: {.callout-note title="Exercício 1.3" icon=false}
+Crie um método na classe `MaquinaIngressos` que retorne o valor do total de dinheiro arrecado na máquina (o valor do atributo `total`). 
+Ao escolher o nome do método, siga a convenção de nomenclatura da classe.
+
+Acrescente um comentário no método dizendo se esse é um *método de acesso* ou um *método modificador* e justificando sua resposta.
+:::
+
+::: {.callout-note title="Exercício 1.4" icon=false}
 Para simular a operação de remover dinheiro da máquina de ingressos, crie um método chamado `esvaziar` na classe `MaquinaIngressos`.
 O método deve ter tipo de retorno `void` e deve somente mudar o valor do `total` para zero.
 Avalie se o método precisa receber algum parâmetro.
-Acrescente um comentário no método explicando se esse é um *método de acesso* ou um *método modificador*, justificando sua resposta.
-Por fim, teste sua implementação inserindo dinheiro na máquina, comprando ingresso, verificando o total e então esvaziando a máquina. 
+
+Acrescente um comentário no método dizendo se esse é um *método de acesso* ou um *método modificador* e justificando sua resposta.
+
+Por fim, teste sua implementação inserindo dinheiro na máquina, comprando ingresso, verificando o total e então esvaziando a máquina e verificando o total novamente. 
 :::
 
-::: {.callout-note title="Exercício 5" icon=false}
+:::
+
+##
+
+
+
+::: {.callout-note title="Exercício 1.5" icon=false}
+Ao imprimir um ingresso você deve ter notado que aparece o texto `Ingressos & Cia`, que seria o nome da empresa que vende os ingressos.
+Vamos agora permitir que cada máquina possa vender ingressos de uma empresa diferente.
+Repare que, para isso, quando uma máquina é criada ela precisará guardar o nome da empresa.
+
+Como podemos tratar isso? (*Pense na solução antes de continuar.*)
+
+::: {.fragment .nonincremental}
+
+Veja que basta você alterar a classe `MaquinaIngressos` fazendo o seguinte:
+
+- Crie um novo atributo para guardar o nome da empresa.
+- Receba o nome da empresa por parâmetro nos dois construtores da classe e guarde a informação no novo atributo.
+- Altere o método `imprimirIngresso` para que ele exiba o nome da empresa em vez do texto `Ingressos & Cia`.
+- Para que o código fique mais completo, crie também um método de acesso que retorne o nome da empresa.
+:::
+
+:::
+
+##
+
+::: {.nonincremental}
+
+::: {.callout-note title="Exercício 1.6" icon=false}
+Para evitar a ação de cambistas, as empresas que vendem ingressos pediram que o nome do comprador seja impresso junto com o ingresso.
+
+Como você pode tratar isso fazendo alterações apenas no método `imprimirIngresso`?
+:::
+
+:::
+
+##
+
+::: {.nonincremental}
+
+::: {.callout-note title="(OPCIONAL) Exercício 1.7 - Desafio" icon=false}
 Altere o método `imprimirIngresso` de forma que o preço do ingresso seja exibido em reais, em vez de centavos.
-Obs.: você deve alterar apenas este método.
-O preço deve aparecer conforme o exemplo abaixo (não se preocupe em usar vírgula no lugar do ponto):
+O preço deve aparecer conforme o exemplo abaixo.
 ```
 ##################
 # Ingressos & Cia 
 # Ingresso
-# R$ 5.00 reais.
+# R$ 5,00 reais.
 ##################
 ```
+
+Observações:
+
+- O valor do ingresso deve continuar sendo guardado em centavos. A alteração deve ser feita somente na hora de exibir os dados do ingresso na tela.
+- Pesquise na internet sobre como uma String pode ser formatada em Java de forma que o valor sempre apareça com duas casas decimais e com vírgula como separador dos decimais.
 :::
 
-
+:::
 
 ## 
 
 ::: {.callout-important title="Entrega no Campus Virtual"}
-Acesse, no Campus Virtual, a atividade correspondente a essa segunda parte dos exercícios e envie o código do projeto `maquina-ingressos-ingenua` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
+Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `maquina-ingressos-ingenua` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
 :::
+
+## 
+
+::: {.nonincremental}
+
+Os exercícios a seguir são do **projeto da [nave](https://github.com/ufla-ipoo/nave)**, que você já trabalhou no capítulo anterior.
+
+- Eles servem para reforçar os conceitos e, ao mesmo tempo, para conhecer mais sobre a linguagem Java.
+
+:::
+
+. . .
+
+Os exercícios dessa segunda parte são opcionais não precisam ser entregues.
+
+
+##
+
+::: {.nonincremental}
+
+::: {.callout-note title="(OPCIONAL) Exercício 2.1 - Nível de proteção imprevisível" icon=false}
+Vamos deixar a dificuldade do jogo um pouco imprevisível.
+
+- Crie um método na classe `Nave` chamado `gerarNivelDeProtecao`.
+- Dentro desse método faça com que o atributo `nivelDeProtecao` receba um valor aleatório entre 0 e 140.
+  - ***Dica***: Estude como o objeto da classe `Random` é usado na classe `Inimigo`.
+  - Repare todos os lugares onde ele é usado na classe `Inimigo` e veja o que precisa ser feito de forma similar na classe `Nave`.
+- Altere então a inicialização do atributo `nivelDeProtecao`, retirando o código atual que inicializa com 100 e chamando o método `gerarNivelDeProtecao`.
+
+Jogue o jogo e reinicie-o algumas vezes ao morrer.
+
+- Deu certo, conforme esperado? Senão, o que ficou faltando?
+:::
+
+:::
+
+## 
+
+::: {.nonincremental}
+
+::: {.callout-note title="(OPCIONAL) Exercício 2.2 - Tiros variados" icon=false}
+A gente tinha facilitado as coisas colocando o campo de proteção.
+
+- Agora vamos dificultar um pouco.
+
+Vamos fazer com que cada tiro do inimigo possa ter uma velocidade diferente.
+
+- A classe `Tiro` sabe quando um tiro é do inimigo ou da nave.
+- Altere então o construtor da classe `Tiro`  de forma que a velocidade do tiro do inimigo (apenas dele) possa ser de 1 a 5 vezes mais rápida que a velocidade normal (valor sorteado aleatoriamente).
+
+Jogue o jogo e teste a alteração.
+
+- E aí, ficou mais divertido?
+:::
+
+:::
+
+##
+
+Nosso objetivo agora é fazer com que o inimigo fique mais rápido à medida que avançamos no jogo.
+
+- A ideia é que o jogador comece no nível 1 e mude de nível a cada 500 pontos.
+- E, a cada nível, o inimigo fica mais rápido.
+
+##
+
+::: {.nonincremental}
+
+::: {.callout-note title="(OPCIONAL) Exercício 2.3 - Tratando níveis" icon=false}
+Faça as alterações a seguir na classe `Placar`:
+
+- Crie um novo atributo chamado `nivelAtual`.
+- Inicialize o novo atributo com valor 1 dentro do método `inicializar`.
+- Altere o método `contarMorteInimigo` de forma que, a cada 500 pontos, o nível atual seja incrementado em 1.
+  - Dica: Basta acrescentar uma condição que verifique o resto da divisão por zero.
+  <!-- ```{.java code-line-numbers="false"}
+  if (pontos % 50 == 0) {
+    nivelAtual = nivelAtual + 1
+  }
+  ``` -->
+- Crie um método de acesso que retorne o nível atual.
+
+Agora, precisamos que o jogador consiga saber em que nível está.
+
+- Para isso, procure o método `desenharPlacar` em `Cenario` e encontre a linha abaixo:
+  ```{.java code-line-numbers="false"}
+  g.drawString("Pontos: " + placar.getPontos(), posX, posY);
+  ```
+- Veja que o primeiro argumento passado para o método `drawString` é a String que aparece na tela com o valor do placar. Concatene à String passada: a palavra *nivel* e o valor do nível atual. 
+- Jogue o jogo e teste suas alterações.
+:::
+
+:::
+
+
