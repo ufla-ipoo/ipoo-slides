@@ -9,8 +9,8 @@ subtitle: Aula 2.2 - Prática
 
 Como já foi comentado na aula passada:
 
-- **Aulas práticas são fundamentais** para o entendimento dos conceitos.
-- Mas, para isso, é fundamental que tenha **estudado** o conteúdo teórico ANP **antes da aula prática**.
+- **Aulas práticas são importantes** para o entendimento dos conceitos.
+- Mas, para isso, é fundamental que tenha **estudado o conteúdo teórico ANP antes** da aula prática.
 
 :::: {.columns}
 
@@ -45,7 +45,7 @@ Com essa alteração, o que muda na hora de criar uma máquina de ingressos no B
 
 ::: {.callout-note title="Exercício 1.2" icon=false}
 Altere agora a classe de forma que ela passe a ter dois construtores.
-Um que recebe o preço do ingresso por parâmetro e outro que não receba nenhum parâmetro
+Um que recebe o preço do ingresso por parâmetro e outro que não recebe nenhum parâmetro
 (neste caso, escolha um valor fixo padrão para o preço dos ingressos).
 
 Teste as alterações criando máquinas usando os dois construtores.
@@ -61,7 +61,7 @@ Teste as alterações criando máquinas usando os dois construtores.
 Crie um método na classe `MaquinaIngressos` que retorne o valor do total de dinheiro arrecado na máquina (o valor do atributo `total`). 
 Ao escolher o nome do método, siga a convenção de nomenclatura da classe.
 
-Acrescente um comentário no método dizendo se esse é um *método de acesso* ou um *método modificador* e justificando sua resposta.
+Acrescente um comentário no método dizendo se esse é um *método de acesso* ou um *método modificador*, justificando sua resposta.
 :::
 
 ::: {.callout-note title="Exercício 1.4" icon=false}
@@ -69,7 +69,7 @@ Para simular a operação de remover dinheiro da máquina de ingressos, crie um 
 O método deve ter tipo de retorno `void` e deve somente mudar o valor do `total` para zero.
 Avalie se o método precisa receber algum parâmetro.
 
-Acrescente um comentário no método dizendo se esse é um *método de acesso* ou um *método modificador* e justificando sua resposta.
+Acrescente um comentário no método dizendo se esse é um *método de acesso* ou um *método modificador*, justificando sua resposta.
 
 Por fim, teste sua implementação inserindo dinheiro na máquina, comprando ingresso, verificando o total e então esvaziando a máquina e verificando o total novamente. 
 :::
@@ -85,9 +85,9 @@ Ao imprimir um ingresso você deve ter notado que aparece o texto `Ingressos & C
 Vamos agora permitir que cada máquina possa vender ingressos de uma empresa diferente.
 Repare que, para isso, quando uma máquina é criada ela precisará guardar o nome da empresa.
 
-Como podemos tratar isso? (*Pense na solução antes de continuar.*)
+Como podemos fazer isso? (*Pense na solução antes de continuar.*)
 
-::: {.fragment .nonincremental}
+::: {.fragment}
 
 Veja que basta você alterar a classe `MaquinaIngressos` fazendo o seguinte:
 
@@ -140,33 +140,37 @@ Observações:
 Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `maquina-ingressos-ingenua` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
 :::
 
-## 
+## {.smaller}
 
 ::: {.nonincremental}
-
 Os exercícios a seguir são do **projeto da [nave](https://github.com/ufla-ipoo/nave)**, que você já trabalhou no capítulo anterior.
 
 - Eles servem para reforçar os conceitos e, ao mesmo tempo, para conhecer mais sobre a linguagem Java.
-
 :::
 
 . . .
 
-Os exercícios dessa segunda parte são opcionais não precisam ser entregues.
+::: {.nonincremental}
+Os exercícios dessa segunda parte são **opcionais** não precisam ser entregues.
 
+- Mas fazendo os exercícios você terá um **jogo mais interessante**:
+  - O nível de proteção vai variar a cada vez que começa o jogo.
+  - Os tiros do inimigo terão velocidades diferentes.
+  - E o inimigo ficará mais rápido a cada mudança de nível (a cada 500 pontos).
+:::
 
 ##
 
 ::: {.nonincremental}
 
-::: {.callout-note title="(OPCIONAL) Exercício 2.1 - Nível de proteção imprevisível" icon=false}
+::: {.callout-note title="(OPCIONAL) Exercício 2.1 - Nível de proteção variável" icon=false}
 Vamos deixar a dificuldade do jogo um pouco imprevisível.
 
 - Crie um método na classe `Nave` chamado `gerarNivelDeProtecao`.
 - Dentro desse método faça com que o atributo `nivelDeProtecao` receba um valor aleatório entre 0 e 140.
   - ***Dica***: Estude como o objeto da classe `Random` é usado na classe `Inimigo`.
   - Repare todos os lugares onde ele é usado na classe `Inimigo` e veja o que precisa ser feito de forma similar na classe `Nave`.
-- Altere então a inicialização do atributo `nivelDeProtecao`, retirando o código atual que inicializa com 100 e chamando o método `gerarNivelDeProtecao`.
+- Altere então a inicialização do atributo `nivelDeProtecao`, retirando o código atual que o inicializa com 100 e usando o retorno do método `gerarNivelDeProtecao`.
 
 Jogue o jogo e reinicie-o algumas vezes ao morrer.
 
@@ -187,7 +191,7 @@ A gente tinha facilitado as coisas colocando o campo de proteção.
 Vamos fazer com que cada tiro do inimigo possa ter uma velocidade diferente.
 
 - A classe `Tiro` sabe quando um tiro é do inimigo ou da nave.
-- Altere então o construtor da classe `Tiro`  de forma que a velocidade do tiro do inimigo (apenas dele) possa ser de 1 a 5 vezes mais rápida que a velocidade normal (valor sorteado aleatoriamente).
+- Altere então o construtor da classe `Tiro`  de forma que a velocidade do tiro do inimigo (*apenas dele*) possa ser de 1 a 5 vezes mais rápida que a velocidade normal (valor sorteado aleatoriamente).
 
 Jogue o jogo e teste a alteração.
 
@@ -196,14 +200,15 @@ Jogue o jogo e teste a alteração.
 
 :::
 
-##
+## {.smaller}
 
-Nosso objetivo agora é fazer com que o inimigo fique mais rápido à medida que avançamos no jogo.
+Nosso objetivo agora é fazer com que o **inimigo fique mais rápido** à medida que avançamos no jogo.
 
-- A ideia é que o jogador comece no nível 1 e mude de nível a cada 500 pontos.
+- A ideia é que o jogador comece no nível 1 e **mude de nível a cada 500 pontos**.
 - E, a cada nível, o inimigo fica mais rápido.
+- Para tratar isso, vamos fazer os próximos dois exercícios.
 
-##
+## {.smaller}
 
 ::: {.nonincremental}
 
@@ -214,11 +219,11 @@ Faça as alterações a seguir na classe `Placar`:
 - Inicialize o novo atributo com valor 1 dentro do método `inicializar`.
 - Altere o método `contarMorteInimigo` de forma que, a cada 500 pontos, o nível atual seja incrementado em 1.
   - Dica: Basta acrescentar uma condição que verifique o resto da divisão por zero.
-  <!-- ```{.java code-line-numbers="false"}
-  if (pontos % 50 == 0) {
-    nivelAtual = nivelAtual + 1
-  }
-  ``` -->
+    ```{.java code-line-numbers="false"}
+    if (pontos % 500 == 0) {
+        nivelAtual = nivelAtual + 1
+    }
+    ```
 - Crie um método de acesso que retorne o nível atual.
 
 Agora, precisamos que o jogador consiga saber em que nível está.
@@ -227,10 +232,44 @@ Agora, precisamos que o jogador consiga saber em que nível está.
   ```{.java code-line-numbers="false"}
   g.drawString("Pontos: " + placar.getPontos(), posX, posY);
   ```
-- Veja que o primeiro argumento passado para o método `drawString` é a String que aparece na tela com o valor do placar. Concatene à String passada: a palavra *nivel* e o valor do nível atual. 
-- Jogue o jogo e teste suas alterações.
+- Veja que o primeiro argumento passado para o método `drawString` é a String que aparece na tela com o valor do placar (ex: `Pontos: 150`). 
+  - Concatene à String passada a palavra *nivel* e o valor do nível atual (usando o método de consulta que você criou na classe `Placar`).
+
+Jogue o jogo e teste suas alterações.
+:::
+
+:::
+
+## {.smaller}
+
+::: {.nonincremental}
+
+::: {.callout-note title="(OPCIONAL) Exercício 2.4 - Inimigo mais rápido" icon=false}
+Vamos agora fazer com que o inimigo fique mais rápido a cada mudança de nível.
+
+Quando o inimigo morre, o método `inicializar` da classe `Inimigo` é chamado para que ele viva novamente.
+
+- Vamos alterar esse método para que ele receba o nível atual do jogo e defina a velocidade do inimigo de acordo com o nível.
+  - Para isso: crie um parâmetro no método para receber o nível atual.
+  - E altere a linha que define a velocidade de forma que ela seja igual a 10 no primeiro nível, 20 no segundo nível e assim sucessivamente.
+
+Precisaremos alterar agora as chamadas do método `inicializar` do inimigo, passando o nível atual.
+
+- Na própria classe `Inimigo` o método é chamado no construtor. Altere a chamada passando o valor `1` como o nível atual.
+- O método `inicializar` do inimigo é chamado também dentro do método `reiniciarInimigo` da classe `Cenario`. Altere a chamada passando o valor do nível atual (usando o objeto `placar`).
+
+Se você testar as alterações feitas até agora, verá que, quando o jogo reinicia, a velocidade do inimigo no primeiro nível não fica correta.
+
+- Para corrigir isso, basta alterar o método `inicializar` da classe `Cenario` de forma que o placar seja inicializado antes do inimigo.
+
+**Dica**: enquanto estiver testando, para agilizar, faça com que o nível mude a cada 100 pontos em vez de 500. Mas não esqueça de voltar para 500 antes de terminar.
 :::
 
 :::
 
 
+## 
+
+::: {.callout-important title="Entrega no Campus Virtual"}
+Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `nave` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
+:::

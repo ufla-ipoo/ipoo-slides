@@ -1,0 +1,341 @@
+---
+title: IPOO - Cap. 2 Entendendo as Definições de Classe
+subtitle: Aula 2.3 - Teórica
+---
+
+
+## Como estudar? Precisa repetir? :) {.smaller}
+
+Como diz o ditado: *água mole em pedra dura tanto bate até que fura*.
+
+Então vamos relembrar as [dicas]{.alert}:
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+- É essencial **praticar enquanto estuda**, usando o BlueJ.
+- Ajuda muito se você **ler o** capítulo do **livro** da disciplina para tirar dúvidas e complementar o que está sendo estudado.
+- Use um caderno e caneta para [anotar]{.alert} os principais [conceitos]{.alert} e eventuais [dúvidas]{.alert} que surgirem.
+
+:::
+
+::: {.column width="30%"}
+![](imagens/bluej_completo_vertical.png){fig-alt="Prints do BlueJ." width=50%}
+![](imagens/livro_bluej.png){fig-alt="Capa do livro do Barnes e Kolling." fig-align="left" width=50%}
+:::
+
+::::
+
+# Design da Máquina de Ingressos e Comando Condicional {background-color="#40666e"}
+
+## {.smaller}
+
+Nas aulas anteriores você deve ter percebido que a **classe `MaquinaIngressos`** não serviria muito no mundo real, já que ela **tem vários problemas**.
+
+- Não verifica se o cliente colocou dinheiro suficiente para comprar o ingresso.
+- Não retorna troco se o cliente colocou mais dinheiro que o necessário.
+- Não verifica se a quantidade de dinheiro faz sentido (aceita valor negativo, por exemplo).
+  - E o mesmo para o preço do ingresso (passado para o construtor).
+
+. . .
+
+Corrigindo isso, teríamos um software que realmente poderia servir de base para uma máquina de ingressos real.
+
+- Vamos então avaliar o **projeto [maquina-ingressos-melhor](https://github.com/ufla-ipoo/maquina-ingressos-melhor)**, que tenta resolver os problemas apontados.
+
+. . .
+
+Antes de analisarmos o código, **experimente** criar uma máquina de ingressos e chamar seus métodos e **verifique o que funciona de forma diferente**.
+
+- Veja que há um novo método `retornarTroco`. Veja o que acontece quando ele é chamado.
+
+## {.smaller}
+
+Dê uma olhada no código da classe classe `MaquinaIngressos` do novo projeto.
+
+- Veja que o nome da classe, os atributos, o construtor e os métodos de acesso são os mesmos da versão anterior.
+- A primeira mudança está no método `inserirDinheiro`.
+  - Veja que o método possui um tratamento para evitar que o usuário insira quantidades negativas de dinheiro.
+
+. . .
+
+Na disciplina anterior de algoritmos você já aprendeu a usar **comandos condicionais** (`if`/ `else`).
+
+- Note que a **sintaxe do comando `if` em Java é a mesma do C++**.
+- Como você deve se lembrar, colocamos no comando `if` uma expressão booleana que pode ser verdadeira (`true`) ou falsa (`false`).
+  - Se a expressão for verdadeira, o bloco de código (trecho entre chaves) logo após o `if` é executado.
+  - Se for falsa, o bloco de código executado é aquele logo após o `else`.
+
+## {.smaller}
+
+Falando em expressões booleanas, **em Java, os operadores lógicos são**:
+
+- `&&` -> **e** lógico (*and em C++*).
+- `||` -> **ou** lógico (*or em C++*).
+- `!` -> **negação** (*not em C++*).
+
+. . .
+
+Outra mudança na classe `MaquinaIngressos` está no método `imprimirIngresso`.
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Compare a implementação do método `imprimirIngresso` no projeto `maquina-ingressos-melhor` com o projeto anterior.
+Experimente com o BlueJ situações iguais nos dois projetos e compare o que acontece.
+Repare que, além de ter um comando condicional, o total e o saldo são atualizados de forma diferente.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Seria possível remover o bloco `else` do método `imprimirIngresso`?
+Qual seria o efeito para o usuário, quando ele tentasse imprimir um ingresso sem inserir quantidade suficiente de dinheiro.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Avalie a implementação do método `retornarTroco`.
+Experimente colocar mais dinheiro que o necessário para um ingresso, imprima um ingresso e então chame o método `retornarTroco`.
+Tente também chamar o método quando não há saldo de dinheiro disponível.
+:::
+
+## {.smaller}
+
+Ao avaliar o código de uma classe no BlueJ, você deve ter notado que ele mostra caixas coloridas ao redor de alguns elementos.
+
+- Como ao redor dos blocos e comandos condicionais, por exemplo.
+
+. . .
+
+Esses destaques coloridos são chamados de ***scope highlighting*** (ou destaque de escopo).
+
+- Eles nos ajudam a atender as unidades lógicas do programa.
+- Um escopo, ou bloco, é o código que existe entre um par de chaves.
+  - O corpo de uma classe é um escopo.
+  - O corpo de cada método também é um escopo.
+  - E mesmo a parte do `if` de um comando condicional também é um escopo.
+  - Portanto, podemos ter escopos aninhados (ou seja, um dentro do outro).
+
+## {.smaller}
+
+O BlueJ nos ajuda a identificar os escopos usando cores diferentes para cada um.
+
+- Na imagem vemos com fundo branco os escopos de cada bloco do `if` e `else`.
+- Com fundo roxo, o escopo do comando condicional.
+- Com fundo amarelo o escopo do método.
+- E com fundo verde o escopo da classe.
+
+![](imagens/print_bluej_escopo.png)
+
+## {.smaller}
+
+Um erro muito comum para quem está começando é esquecer de fechar as chaves, ou colocar uma chave em um lugar errado.
+
+- As cores do BlueJ nos ajudam a identificar esse tipo de problema.
+- Além disso, é muito importante **indentar** o código, usando tabulação para cada bloco de código (cada trecho entre chaves).
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="20%"}
+![](imagens/fica_a_dica.png)
+:::
+
+::: {.column width="80%"}
+::: {.callout-note title="Convenção" appearance="simple" icon=false}
+Se a sua indentação estiver ficando uma bagunça, o BlueJ pode te ajudar.
+Experimente alterar o código e forma que a indentação fique errada e depois a corriga automaticamente, acessando o menu **Editar --> Auto-indentação** do editor de código do BlueJ.
+:::
+:::
+
+::::
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Experimente remover uma chave do código da classe `MaquinaIngressos` e repare o que é alterado nas cores de fundo do editor de código.
+Experimente também inserir uma chave onde ela não seria esperada.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Escreva um trecho de código em Java que compara o valor das variáveis `preco` e `estimativa`.
+Se o preço for maior que a estimativa, deve ser exibida a mensagem `Muito caro.`.
+Se o preço estiver abaixo da estimativa, a mensagem exibida deve ser `Bora comprar, tá barato.`.
+Por fim, se o preço for exatamente igual à estimativa, exiba a mensagem `Na mosca!`.
+:::
+
+# Variáveis locais {background-color="#40666e"}
+
+## {.smaller}
+
+Até agora usamos dois tipos de variáveis: **atributos** (variáveis de instância) e **parâmetros**.
+
+- Vamos agora conhecer um **terceiro tipo**.
+- O que os três tipos têm em comum?
+  - Todas eles servem para armazenar dados, mas cada um tem um objetivo diferente.
+
+. . .
+
+Repare o código do método `retornarTroco`.
+
+- Ele possui três comandos e uma declaração (da variável `troco`).
+
+::: {.doublefontsize}
+```{.java code-line-numbers="false"}
+public int retornarTroco()
+{
+    int troco;
+    troco = saldo;
+    saldo = 0;
+    return troco;
+}
+```
+:::
+
+## {.smaller}
+
+Como podemos saber que a variável `troco` não é um atributo?
+
+- Por que atributos são declarados fora dos métodos (diretamente no escopo da classe).
+
+. . .
+
+E como sabemos que ela não é um parâmetro?
+
+- Por que parâmetros são declarados na assinatura dos métodos e construtores.
+
+. . .
+
+A variável `troco` é de um terceiro tipo: ela é uma **variável local**.
+
+- Esse nome é porque ela é declarada dentro do corpo de um método.
+- E, portanto, tem um escopo *local* (do método).
+
+. . .
+
+Variáveis locais são declaradas como os atributos (mas sem os modificadores *public* e *private*).
+
+- E a principal diferença é o **tempo de vida**.
+- Variáves locais existem somente durante a execução do método.
+  - Diferente dos atributos que existem na memória enquanto o objeto existir.
+
+## {.smaller}
+
+![](imagens/duvida_variaveis_locais.png)
+
+. . .
+
+Nós evitamos declarar como atributos variáveis que não precisam ser mantidas em memória depois que o método é chamado.
+
+- Repare que atributos são características dos objetos.
+- Já variáveis locais são apenas informações temporárias usadas para fazer algo durante a execução de um método.
+- Portanto, se algo só precisa existir durante a execução do método, declará-lo como atributo desperdiçaria memória e feriria o conceito de objetos.
+
+## {.smaller}
+
+Nós usamos variáveis locais mesmo quando dois métodos na mesma classe têm variáveis locais com o mesmo objetivo (muitas vezes com o mesmo nome).
+
+- É tentador declarar como atributo para *"reaproveitar"* a mesma declaração.
+- Mas, não devemos usar atributos para valores que não precisam existir depois da chamada dos métodos.
+
+. . .
+
+Por exemplo:
+
+- No método `retornarTroco`, a variável `troco` é usada, temporariamente, apenas para guardar o valor do saldo antes dele ser zerado.
+- Depois que o método é finalizado, não faz mais sentido guardar o valor do troco.
+
+. . .
+
+::: {.callout-note title="Cuidado" appearance="simple" icon=false}
+Se você declarar uma variável local (ou um parâmetro) com o mesmo nome de um atributo, você não conseguirá acessar o atributo diretamente.
+No capítulo 3 aprenderemos um jeito de lidar com isso, se necessário.
+:::
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Porque a implementação alternativa do método `retornoTroco` abaixo não dá o mesmo resultado da original?
+Faça testes que mostrem como o funcionamento é diferente.
+
+```{.java code-line-numbers="false"}
+public int retornarTroco()
+{
+    saldo = 0;
+    return saldo;
+}
+```
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Altere o método `retornoTroco` usando a implementação abaixo. O código compila? Se não, explique porque não compila.
+
+```{.java code-line-numbers="false"}
+public int retornarTroco()
+{    
+    return saldo;
+    saldo = 0;
+}
+```
+:::
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+O que há de errado com a implementação alternativa abaixo do construtor da classe `MaquinaIngressos`?
+
+```{.java code-line-numbers="false"}
+public MaquinaIngressos(int custoIngresso)
+{    
+    int preco = custoIngresso;
+    saldo = 0;
+    total = 0;
+}
+```
+
+Tente usar essa versão. O código compila?
+Crie um objeto e inspecione o valor dos atributos. 
+Há algo de errado com o atributo `preco`?
+Consegue explicar o que aconteceu?
+:::
+
+
+# Atributos, parâmetros e variáveis locais {background-color="#40666e"}
+
+## {.smaller}
+
+É importante entender as semelhanças e diferenças entre atributos, parâmetros e variáveis locais.
+
+- Os três armazenam valores de acordo com seu tipo.
+
+. . .
+
+Mas possuem diferenças importantes:
+
+|     | Atributos | Parâmetros | Variáveis locais |
+| --- | --- | --- | --- |
+| Declaração    | fora dos métodos e construtores | na assinatura de métodos/construtores | no corpo dos métodos/construtores |
+| Tempo de vida | do objeto | do método/construtor | do método/construtor |
+| Escopo        | acessível em qualquer lugar da classe | acessível no método/construtor | acessível no bloco onde é declarado |
+| Valor padrão  | Sim | Não (valor é passado de fora do objeto) | Não (precisa ser inicializada antes de usada) |
+
+##
+
+:::: {.columns}
+
+::: {.column width="20%"}
+![](imagens/fica_a_dica.png)
+:::
+
+::: {.column width="80%"}
+::: {.callout-note title="Dica" appearance="simple" icon=false}
+Se estiver em dúvida se uma variável deve ser declarada como atributo ou variável local:
+
+- Dê preferência sempre a declará-la como variável local.
+- Só declare como atributo se tiver certeza que:
+  1. É uma informação que precisa ser mantida mesmo depois da chamada do método.
+  2. É uma característica do objeto (algo que o descreve/representa).
+:::
+:::
+
+::::

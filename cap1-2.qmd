@@ -79,7 +79,7 @@ Confira se o Bloco de Códigos está sendo exibido no seu BlueJ.
 - Para isso, acesse o menu **Exibir** --> **Exibir Bloco e Códigos** (ou use o atalho {{< kbd Ctrl-E >}})
   - Vai aparecer um painel na parte inferior, à direita da bancada de objetos.
 - Agora digite no Bloco de Códigos os comandos do slide anterior para criar uma pessoa, exibi-la e movê-la para direita.
-- Experimente criar outros objetos e chamar seus métodos.
+- Em seguida, digite os comandos necessários para **desenhar uma bandeira do Brasil**.
 :::
 
 :::
@@ -203,7 +203,8 @@ Fica mais interessante se o pôr do sol for tratado em um método separado. Assi
 . . .
 
 ::: {.callout-note title="Exercício 1.8" icon=false}
-Altere a classe `Figura` para que a pessoa caminhe para a casa depois do pôr do sol.
+Altere a classe `Figura` para incluir uma pessoa na cena.
+Faça com que ela caminhe para a casa depois do pôr do sol.
 :::
 
 ##
