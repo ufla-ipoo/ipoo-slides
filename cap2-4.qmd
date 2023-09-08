@@ -1,0 +1,224 @@
+---
+title: IPOO - Cap. 2 Entendendo as Definições de Classe
+subtitle: Aula 2.4 - Prática
+---
+
+## Sobre as Aulas Práticas {.smaller}
+
+::: {.nonincremental}
+
+Relembrando:
+
+- **Aulas práticas são importantes** para o entendimento dos conceitos.
+- Mas, para isso, é fundamental que tenha **estudado o conteúdo teórico ANP antes** da aula prática.
+
+:::: {.columns}
+
+::: {.column width="20%"}
+![](imagens/fica_a_dica.png)
+:::
+
+::: {.column width="80%"}
+::: {.callout-note title="Convenção" appearance="simple" icon=false}
+Lembre-se que para ter presença na aula prática é necessário.
+
+- Responder à **chamada**;
+- e, **também**, entregar, no mínimo, 30% do exercícios propostos até o final da aula.
+:::
+:::
+
+::::
+:::
+
+## {.smaller}
+
+É muito comum precisarmos implementar expressões em nossos códigos.
+
+- Como cálculos usando variáveis.
+- Ou chamadas de métodos de variáveis que são objetos.
+- O **Bloco de Códigos** do BlueJ pode ser muito útil para experimentarmos expressões antes de as implementarmos em nossas classes.
+
+. . .
+
+Tende adivinhar os resultados das expressões abaixo, antes de usar o Bloco de Códigos.
+
+- `2023 + 4`
+- `"passa" + "tempo"`
+- `"passa" + 9`
+- `7 + 2 + "tempo"`
+- `"tempo" + 7 + 2`
+- `"passatempo".substring(5,6)`
+- `"passatempo".substring(5,11)`
+
+. . .
+
+O que foi novidade para você nesse exercício?
+
+## {.smaller}
+
+No Bloco de Códigos, quando o resultado de uma expressão é um objeto (como uma `String`), aparece um símbolo vermelho próximo ao resultado.
+
+- Você pode clicar duas vezes no símbolo para inspecionar o objeto.
+- Ou clicar uma vez para colocá-lo na bancada de objetos.
+- Experimente!
+
+. . .
+
+Você pode também declarar variáveis e escrever comandos completos no Bloco de Códigos.
+
+- Experimente os comandos abaixo:
+- `soma = 2023 + 4;`
+- `int soma = 0;`
+- `soma = 2023 + 4;`
+
+. . .
+
+Se você digitar o nome de uma variável sem ponto-e-vírgula, o Bloco de Códigos exibe seu valor.
+
+- Experimente digitar, por exemplo: `soma`
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Abra o projeto [maquina-ingressos-melhor](https://github.com/ufla-ipoo/maquina-ingressos-melhor) e digite o código abaixo.
+Veja que tem linhas que terminam com ponto-e-virgula e outras não.
+**Preste atenção** ao valor retornado pelo método `obterSaldo` em cada chamada.
+
+::: {.halfincfontsize}
+```{.java}
+MaquinaIngressos m1 = new MaquinaIngressos(1000);
+m1.obterSaldo()
+m1.inserirDinheiro(500);
+m1.obterSaldo()
+```
+:::
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Agora digite a linha abaixo no Bloco de Códigos.
+
+::: {.halfincfontsize}
+```{.java}
+MaquinaIngressos m2 = m1;
+```
+:::
+
+O que você acha que a chamada `m2.obterSaldo()` retornaria?
+
+Experimente!
+:::
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Agora digite o comando abaixo
+
+::: {.halfincfontsize}
+```{.java}
+m1.inserirDinheiro(500);
+```
+:::
+
+Avalie a linha abaixo e tente adivinhar o que ela vai retornar antes de digitar o código no Bloco de Códigos.
+
+::: {.halfincfontsize}
+```{.java}
+m2.obterSaldo()
+```
+:::
+
+A resposta foi a que você esperava?
+
+Você consegue imaginar alguma ligação entre `m1` e `m2` que explique o que está acontecendo?
+:::
+
+## {.smaller}
+
+Vamos agora começar os **exercícios de implementação** a serem [entregues]{.alert} nessa semana.
+
+Baixe o **projeto [exercicio-livro](https://github.com/ufla-ipoo/maquina-ingressos-melhor)**.
+
+- Avalie o código da classe `Livro` antes de começar os exercícios.
+- Veja que ela tem apenas o rascunho inicial da classe, com dois atributos e um construtor.
+- Nos exercícios vamos completá-la.
+
+##
+
+::: {.callout-note title="Exercício 1.1" icon=false}
+Adicione dois métodos, `imprimirAutor` e `imprimirTitulo`, à classe `Livro` que exibem os valores do atributo correspondente no terminal.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício 1.2" icon=false}
+Adicione um atibuto `paginas` à classe `Livro` para guardar a quantidade de páginas do livro.
+O atributo deve ser do tipo `int` e seu valor inicial deve ser passado para o construtor junto com o `autor` e o `titulo`.
+Adicione também um método de acesso `obterPaginas` para esse atributo.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício 1.3" icon=false}
+Os objetos `Livro` são imutáveis?
+Escreva sua resposta no comentário da classe (que aparece antes da declaração da classe).
+:::
+
+##
+
+::: {.callout-note title="Exercício 1.4" icon=false}
+Adicione um método `imprimirDetalhes` à classe Livro, que imprime no terminal o autor, o título e o número de páginas.
+Escolha como você quer que a informação apareça na tela (poderia ser tudo em uma linha, ou uma informação por linha, por exemplo).
+Pode ser útil expliciar para o usuário o que é cada informação.
+Exemplo:
+
+::: {.halfincfontsize}
+```
+Livro de título: A Dança dos Dragões, escrito por: George R. R. Martin (864 páginas)
+```
+:::
+:::
+
+. . .
+
+::: {.callout-note title="Exercício 1.5" icon=false}
+Vamos agora adicionar um atributo para representar o número de chamada do livro, que é o identificador usado na biblioteca quando queremos buscar um livro.
+O livro da disciplina, por exemplo, tem o número de chamada `005.133 BAR pro`.
+
+Crie então um atributo para guardar essa informação (note que ele precisa ser do tipo `String`).
+O atributo deve ser inicializado com string vazia (`""`) no construtor.
+Crie um método modificador para o número de chamada, de forma que o usuário consiga defini-lo depois que o objeto estiver criado.
+Crie também um método de acesso para que o usuário consiga consultar o valor definido.
+:::
+
+##
+
+::: {.callout-note title="Exercício 1.6" icon=false}
+Modifique o método `imprimirDetalhes` para incluir o número de chamada do livro.
+Caso o livro ainda não tenha um número de chamada definido, o método deve exibir a informação `NDEF` (de "não definido").
+
+Dica: use um comando condicional e o método `length` da classe String para saber se o número de chamada já foi definido ou não.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício 1.7" icon=false}
+Altere o método que define o número de chamada de forma que ele só aceite números de chamada que tenham pelo menos três caracteres.
+Caso o valor passado tenha menos que três caracteres, uma mensagem de erro deve ser exibida e o número de chamada não deve ser alterado.
+:::
+
+##
+
+::: {.callout-note title="Exercício 1.8" icon=false}
+Por fim, vamos alterar a classe `Livro` para que seja possível contabilizar quantas vezes o livro já foi emprestado.
+
+- Crie um atributo `numeroEmprestimos` do tipo `int` para guardar a quantidade de vezes que o livro foi emprestado.
+- Crie um método `emprestar` que adiciona 1 ao atributo.
+- Crie um método de acesso que permita consultar o número de empréstimos.
+- Altere o método `imprimmirDetalhes` para incluir a informação do atributo criado.
+:::
+
+## 
+
+::: {.callout-important title="Entrega no Campus Virtual"}
+Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `exercicio-livro` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
+:::

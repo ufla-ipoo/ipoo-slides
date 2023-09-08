@@ -58,7 +58,7 @@ Teste as alterações criando máquinas usando os dois construtores.
 ::: {.nonincremental}
 
 ::: {.callout-note title="Exercício 1.3" icon=false}
-Crie um método na classe `MaquinaIngressos` que retorne o valor do total de dinheiro arrecado na máquina (o valor do atributo `total`). 
+Crie um método na classe `MaquinaIngressos` que retorne o valor do total de dinheiro arrecadado na máquina (o valor do atributo `total`). 
 Ao escolher o nome do método, siga a convenção de nomenclatura da classe.
 
 Acrescente um comentário no método dizendo se esse é um *método de acesso* ou um *método modificador*, justificando sua resposta.

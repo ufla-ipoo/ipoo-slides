@@ -1,0 +1,36 @@
+---
+title: IPOO - Cap. 3 Integração entre Objetos
+subtitle: Aula 3.1 - Teórica
+---
+
+
+## Como estudar? Precisa repetir? :) {.smaller}
+
+Será que preciso dizer de novo as [dicas]{.alert}? :)
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+- É essencial **praticar enquanto estuda**, usando o BlueJ.
+- Ajuda muito se você **ler o** capítulo do **livro** da disciplina para tirar dúvidas e complementar o que está sendo estudado.
+- Use um caderno e caneta para [anotar]{.alert} os principais [conceitos]{.alert} e eventuais [dúvidas]{.alert} que surgirem.
+
+:::
+
+::: {.column width="30%"}
+![](imagens/bluej_completo_vertical.png){fig-alt="Prints do BlueJ." width=50%}
+![](imagens/livro_bluej.png){fig-alt="Capa do livro do Barnes e Kolling." fig-align="left" width=50%}
+:::
+
+::::
+
+# Design da Máquina de Ingressos {background-color="#40666e"}
+
+## {.smaller}
+
+Falando em expressões booleanas, **em Java, os [operadores lógicos]{.alert} são**:
+
+- `&&` -> **e** lógico (*and em C++*).
+- `||` -> **ou** lógico (*or em C++*).
+- `!` -> **negação** (*not em C++*).
