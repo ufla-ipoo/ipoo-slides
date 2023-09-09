@@ -4,7 +4,7 @@ subtitle: Aula 3.1 - Teórica
 ---
 
 
-## Como estudar? Precisa repetir? :) {.smaller}
+## Como estudar? {.smaller}
 
 Será que preciso dizer de novo as [dicas]{.alert}? :)
 
@@ -25,7 +25,178 @@ Será que preciso dizer de novo as [dicas]{.alert}? :)
 
 ::::
 
-# Design da Máquina de Ingressos {background-color="#40666e"}
+## Principais Conceitos do Capítulo {.smaller}
+
+::: {.nonincremental}
+- Abstração
+- Modularização
+- Criação de objetos
+- Chamadas de métodos
+- Depuradores
+:::
+
+. . .
+
+Construções Java do capítulo
+
+::: {.nonincremental}
+- Tipos de classe, operadores lógicos (`&&` e `||`), concatenação de strings, construção de objetos (operador `new`), chamadas de métodos, `this`.
+:::
+
+. . .
+
+Nós já temos uma boa noção do que são objetos, como são implementados através de classes e como são utilizados individualmente.
+
+- Nós agora vamos ver que, para criar aplicações interessantes, precisamos usar objetos que cooperam entre si para realizar alguma tarefa.
+
+# Abstração e Modularização {background-color="#40666e"}
+
+## {.smaller}
+
+Para entender como podemos criar aplicações com **objetos que cooperam entre si**, vamos começar com um exemplo bem simples.
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="70%"}
+Um **visor de um relógio digital** que mostra horas e minutos, separados por dois-pontos.
+:::
+
+::: {.column width="30%"}
+![](imagens/visor_relogio_digital.png)
+:::
+
+::::
+
+. . .
+
+Em um primeiro momento poderíamos pensar em criar uma única classe para representar o visor do relógio.
+
+- Mas vamos usar uma abordagem diferente.
+- O objetivo é usar esse exemplo bem simples para demonstrar como podemos tratar um problema, **dividindo-o em subproblemas** menores, que são **mais fáceis de resolver**.
+
+## {.smaller}
+
+![](imagens/duvida_modularizacao.png)
+
+. . .
+
+O motivo para criarmos mais de uma classe em vez de fazer tudo em uma só é a [complexidade]{.alert}.
+
+- À medida que avançarmos na disciplina, vamos criar programas cada vez mais complexos.
+- Problemas simples como o da máquina de ingressos podem ser resolvidos com uma única classe.
+- Mas para projetos maiores é muito **difícil** conseguir **tratar todos os detalhes ao mesmo tempo**.
+- O que fazemos então é **identificar subcomponentes** do problema que possam ser **tratados em classes separadas**.
+
+## {.smaller}
+
+Para lidar com a complexidade, usamos a [abstração]{.alert}.
+
+## {.smaller auto-animate=true}
+
+::: {.nonincremental}
+
+O problema a ser resolvido, às vezes é muito grande.
+
+![](imagens/dividir-conquistar-1.png){.relative width="70%"}
+
+:::
+
+
+## {.smaller auto-animate=true}
+
+::: {.nonincremental}
+
+O problema a ser resolvido, às vezes é muito grande.
+
+- Nós então dividimos o problema subproblemas.
+
+![](imagens/dividir-conquistar-2.png){.relative width="70%"}
+
+:::
+
+
+## {.smaller auto-animate=true}
+
+::: {.nonincremental}
+
+O problema a ser resolvido, às vezes é muito grande.
+
+- Nós então dividimos o problema subproblemas.
+  - E dividimos novamente em problemas ainda menores.
+
+![](imagens/dividir-conquistar-3.png){.relative width="70%"}
+
+:::
+
+## {.smaller auto-animate=true}
+
+::: {.nonincremental}
+
+O problema a ser resolvido, às vezes é muito grande.
+
+- Nós então dividimos o problema subproblemas.
+  - E dividimos novamente em problemas ainda menores.
+  - Fazemos isso até que eles sejam pequenos o suficiente para que consigamos lidar com eles.
+
+![](imagens/dividir-conquistar-3.png){.relative width="70%"}
+
+:::
+
+## {.smaller auto-animate=true}
+
+::: {.nonincremental}
+
+O problema a ser resolvido, às vezes é muito grande.
+
+- Nós então dividimos o problema subproblemas.
+  - E dividimos novamente em problemas ainda menores.
+  - Fazemos isso até que eles sejam pequenos o suficiente para que consigamos lidar com eles.
+- Depois dos subproblemas estarem resolvidos, não pensamos mais nos detalhes deles.
+
+![](imagens/dividir-conquistar-3.png){.relative width="70%"}
+
+:::
+
+## {.smaller auto-animate=true}
+
+::: {.nonincremental}
+
+O problema a ser resolvido, às vezes é muito grande.
+
+- Nós então dividimos o problema subproblemas.
+  - E dividimos novamente em problemas ainda menores.
+  - Fazemos isso até que eles sejam pequenos o suficiente para que consigamos lidar com eles.
+- Depois dos subproblemas estarem resolvidos, não pensamos mais nos detalhes deles.
+  - E os utilizamos como blocos (caixa-preta) para resolver os problemas maiores.
+
+![](imagens/dividir-conquistar-4.png){.relative width="70%"}
+
+:::
+
+## {.smaller auto-animate=true}
+
+::: {.nonincremental}
+
+O problema a ser resolvido, às vezes é muito grande.
+
+- Nós então dividimos o problema subproblemas.
+  - E dividimos novamente em problemas ainda menores.
+  - Fazemos isso até que eles sejam pequenos o suficiente para que consigamos lidar com eles.
+- Depois dos subproblemas estarem resolvidos, não pensamos mais nos detalhes deles.
+  - E os utilizamos como blocos (caixa-preta) para resolver os problemas maiores.
+  - Até termos todo o problema resolvido.
+
+![](imagens/dividir-conquistar-5.png){.relative width="70%"}
+
+:::
+
+## {.smaller}
+
+Essa técnica de dividir o problema em problemas menores é chamada de [dividir para conquistar]{.alert}.
+
+
 
 ## {.smaller}
 
