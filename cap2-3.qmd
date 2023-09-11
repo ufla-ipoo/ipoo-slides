@@ -507,7 +507,7 @@ Já a segunda parte da expressão é `matricula.substring(0,3)`. O que ela retor
 
 Portanto, para um aluno de nome **"Sebastião da Silva"** e matrícula **435221**, qual seria o valor retornado pelo método `obterLogin`?
 
-- Pense primeiro na resposta e depois valide criando um objeto o BlueJ.
+- Pense primeiro na resposta e depois valide criando um objeto no BlueJ.
 - Veja que o retorno seria **"Seba435"**.
 
 ## 
