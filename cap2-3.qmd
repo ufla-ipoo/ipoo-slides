@@ -54,7 +54,7 @@ Antes de analisarmos o código, **experimente** criar uma máquina de ingressos 
 
 ## {.smaller}
 
-Dê uma olhada no código da classe classe `MaquinaIngressos` do novo projeto.
+Dê uma olhada no código da classe `MaquinaIngressos` do novo projeto.
 
 - Veja que o nome da classe, os atributos, o construtor e os métodos de acesso são os mesmos da versão anterior.
 - A primeira mudança está no método `inserirDinheiro`.
@@ -312,7 +312,7 @@ Consegue explicar o que aconteceu?
 a. O mesmo do programa.
 b. O mesmo da classe.
 c. O mesmo do objeto.
-c. O mesmo do método ou construtor.
+d. O mesmo do método ou construtor.
 :::
 
 ## Quiz 2.6 {background-color="#f7fad1" .smaller}
