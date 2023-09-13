@@ -136,7 +136,7 @@ Você consegue imaginar alguma ligação entre `m1` e `m2` que explique o que es
 
 Vamos agora começar os **exercícios de implementação** a serem [entregues]{.alert} nessa semana.
 
-Baixe o **projeto [exercicio-livro](https://github.com/ufla-ipoo/maquina-ingressos-melhor)**.
+Baixe o **projeto [exercicio-livro](https://github.com/ufla-ipoo/exercicio-livro)**.
 
 - Avalie o código da classe `Livro` antes de começar os exercícios.
 - Veja que ela tem apenas o rascunho inicial da classe, com dois atributos e um construtor.
@@ -168,7 +168,7 @@ Escreva sua resposta no comentário da classe (que aparece antes da declaração
 ::: {.callout-note title="Exercício 1.4" icon=false}
 Adicione um método `imprimirDetalhes` à classe Livro, que imprime no terminal o autor, o título e o número de páginas.
 Escolha como você quer que a informação apareça na tela (poderia ser tudo em uma linha, ou uma informação por linha, por exemplo).
-Pode ser útil expliciar para o usuário o que é cada informação.
+Pode ser útil explicar para o usuário o que é cada informação.
 Exemplo:
 
 ::: {.halfincfontsize}
