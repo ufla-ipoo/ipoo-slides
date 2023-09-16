@@ -196,12 +196,497 @@ O problema a ser resolvido, às vezes é muito grande.
 
 Essa técnica de dividir o problema em problemas menores é chamada de [dividir para conquistar]{.alert}.
 
+. . .
+
+Podemos entender isso melhor com um exemplo.
+
+## {.smaller}
+
+Vamos pensar em uma equipe de engenheiros **projetando um carro**.
+
+- Eles pensam nas **partes do carro**: design, tamanho, local do motor, quantidade de assentos, espaçamento entre rodas, etc.
+
+![](imagens/engenheiros_carro.jpg){width="40%"}^[Imagem de vectorjuice no Freepik ]
+
 
 
 ## {.smaller}
 
-Falando em expressões booleanas, **em Java, os [operadores lógicos]{.alert} são**:
+Outra equipe de engenheiros projeta o **motor**.
 
-- `&&` -> **e** lógico (*and em C++*).
-- `||` -> **ou** lógico (*or em C++*).
-- `!` -> **negação** (*not em C++*).
+- Eles pensam em cada **parte do motor**: as cilindradas, o mecanismo de injeção, a eletrônica, etc.
+- Para eles o motor não é uma peça única, e sim **um sistema complexo** de várias partes
+  ![](imagens/motor_carro.png){width="50%"}
+
+- Uma delas pode ser a vela de ignição
+
+
+## {.smaller}
+
+Há então uma terceira equipe de engenheiros (muitas vezes de outra empresa) que projeta a **vela de ignição**.
+
+- Eles pensam na vela como um sistema com **várias partes**.
+  ![](imagens/vela_ignicao.png){width="50%"}
+- Eles podem ter feitos estudos complexos para saber o metal certo a ser usado, e como é processo detalhado de fabricação e instalação
+
+# {.smaller}
+
+A mesma coisa acontece com as outra partes do carro.
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Um *designer* de alto nível vai pensar no **pneu como uma peça única**.
+
+![](imagens/pneu.png){width="30%"} 
+:::
+
+::: {.column width="50%"}
+::: {.fragment}
+Mas outro engenheiro estuda a **composição química ideal** para produzir o material certo para os pneus.
+
+- Para ele, o **pneu é uma coisa complexa**.
+  ![](imagens/pneu_detalhado.png){width="50%"}
+:::
+:::
+
+:::: 
+
+. . .
+
+Já a empresa que fabrica o carro, vai apenas comprar o pneu da fabricante de pneus e enxergá-lo como uma única peça.
+
+- Isto é [abstração]{.alert}!
+
+# {.smaller}
+
+Os engenheiros da fabricante de carros [abstraem]{.alert} (*ignoram*) os detalhes da fabricação dos pneus para conseguir se concentrar os detalhes de criação da roda, por exemplo.
+
+- Já os *designers* ignoram os detalhes da roda ou do motor para se concentrar no *design* do carro como um todo.
+  - Eles se preocupam apenas com o tamanho do motor e das rodas.
+
+. . .
+
+Repares que um carro é formado por tantas partes que é praticamente **impossível** uma pessoa só **saber todos os detalhes** de todas as partes ao mesmo tempo.
+
+- Se fosse assim, provavelmente carros nem seriam fabricados.
+
+# {.smaller}
+
+Se os carros podem ser fabricados aos milhares hoje em dia é porque os engenheiros usam [modularização]{.alert} e abstração.
+
+- Eles **dividem** o carro **em módulos** independentes (roda, motor, caixa de marcha, assento, etc.).
+  - E equipes separadas trabalham em **cada módulo** de forma **independente**.
+- Quando o módulo é construído, eles usam **abstração**.
+  - Ou seja, eles enxergam o **módulo como uma peça única** e o utilizam para construir componentes mais complexos.
+
+# {.smaller}
+
+Modularização e abstração se complementam.
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+**Abstração** é a habilidade de ignorar detalhes das partes, para focar a atenção em um nível mais alto de um problema.
+:::
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+**Modularização** é o processo de dividir um todo em partes bem definidas que podem ser construídas e examinadas separadamente, e que interagem de formas bem definidas.
+:::
+
+# Abstração em Software {background-color="#40666e"}
+
+## {.smaller}
+
+A mesma ideia de **modularização e abstração** do exemplo do carro **é aplicada no desenvolvimento de software**.
+
+- Para conseguirmos implementar um sistema complexo, nós tentamos dividi-lo em subcomponentes que possamos programar de forma independente.
+- Depois tentamos usar esses componentes, como se eles fossem partes simples, sem nos preocuparmos com seus detalhes internos.
+
+. . .
+
+Em **POO**, os componentes e subcomponentes são **objetos**.
+
+- Para criar um carro completo em um sistema OO, faríamos como no exemplo da fábrica.
+- Criaríamos objetos separados para motor, roda, caixa de marcha, etc.
+- E usarmos esses objetos para construir um objeto carro.
+
+## {.smaller}
+
+Não é simples pensar nos tipos de objetos (e, consequentemente, nas classes) que precisamos ter em um software.
+
+- Por isso, vamos começar com o exemplo simples do mostrador do relógio.
+
+# Modularização no exemplo do relógio {background-color="#40666e"}
+
+## {.smaller}
+
+Voltando ao exemplo do visor de relógio digital, qual seria a maneira mais direta de implementá-lo?
+
+- Poderíamos pensar em uma única classe que representasse os quatro dígitos do relógio, certo?
+
+![](imagens/visor_relogio_digital.png)
+
+. . .
+
+Mas vamos tentar usar **modularização**.
+
+- Como você poderia dividir o "problema" de representar o visor, em subproblemas?
+
+## {.smaller}
+
+Repare como funcionam os dígitos das horas.
+
+- Eles começam em 0, incrementam de 1 em 1, até chegar a 23, e depois voltam para zero.
+
+. . .
+
+E como funcionam os dígitos dos minutos?
+
+- Eles começam em 0, incrementam de 1 em 1, até chegar a 60, e depois voltam para zero.
+
+. . .
+
+Repare que o comportamento é exatamente o mesmo, o que muda é apenas o valor limite que faz o valor voltar para zero.
+
+- Podemos pensar então em um objeto capaz de representar um visor de dois dígitos.
+  ![](imagens/visor_numeros.png)
+- E poderíamos usar dois objetos desse tipo, um para as horas e outro para os minutos, para representar o relógio.
+
+# Implementando o visor do relógio {background-color="#40666e"}
+
+## {.smaller}
+
+Precisamos então definir uma classe para representar um visor de número de dois dígitos.
+
+- Ela poderia ter um método de acesso para retornar seus valores.
+- E dois métodos modificadores:
+  - Para definir o valor.
+  - E para incrementá-lo (adicionar 1), zerando ao chegar no limite.
+
+. . .
+
+Criada a classe, podemos criar dois objetos dela com limites diferentes para representar o relógio.
+
+## {.smaller}
+
+Quais **atributos** são necessários na classe que representa números de dois dígitos?
+
+- Veja que precisamos guardar o valor propriamente dito.
+- E o limite que faz o valor voltar para zero.
+
+. . .
+
+Esses valores devem ser de que tipo?
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public class VisorNumero
+{
+    private int limite;
+    private int valor;
+
+    // construtor e métodos omitidos.
+}
+```
+:::
+
+## {.smaller}
+
+Antes de pensar nos detalhes da classe `VisorNumero`, imagine que já temos a classe pronta.
+
+- Como poderíamos construir um visor de relógio completo, usando essa classe?
+- Precisamos de dois objetos visor de números (um para as horas e outro para os minutos).
+  - Portanto, cada um desses objetos deve ser um **atributo** na classe que representa o visor do relógio.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public class VisorRelogio
+{
+    private VisorNumero horas;
+    private VisorNumero minutos;
+
+    // construtor e métodos omitidos.
+}
+```
+:::
+
+. . .
+
+Repare que [classes definem tipos]{.alert}.
+
+## {.smaller}
+
+O **tipo de um atributo** determina o tipo dos valores que ele pode guardar.
+
+- Se o tipo é uma classe, o atributo pode guardar objetos daquela classe.
+
+. . .
+
+::: {.callout-warning title="Declaração não cria objetos"}
+Uma declaração de um atributo ou uma variável do tipo de uma classe não cria automaticamente um objeto daquela classe.
+
+- A princípio o atributo ou variável fica vazio.
+- Portanto, no construtor da classe `VisorRelogio` precisaremos criar os objetos a serem guardados pelos atributos.
+:::
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+**Classes definem tipos**. Um nome de classe pode ser usado como tipo de uma variável. Variáveis de tipo de uma classe podem guardar objetos daquela classe.
+:::
+
+# Diagramas de classe vs. diagramas de objetos {background-color="#40666e"}
+
+## {.smaller}
+
+Compare as duas figuras abaixo:
+
+- À esquerda temos o [diagrama de objetos]{.alert} do visor de relógio
+- À direita temos o [diagrama de classes]{.alert} para a mesma situação.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](imagens/visor_relogio_diagrama_objetos.png)
+:::
+
+::: {.column width="50%"}
+![](imagens/visor_relogio_diagrama_classes.png)
+:::
+
+:::: 
+
+. . .
+
+![](imagens/duvida_2_classes_3_objetos.png){width="40%"}
+
+## {.smaller}
+
+Repare que nós criamos dois objetos da mesma classe `VisorNumero`.
+
+. . .
+
+Os dois diagramas mostram diferentes visões do mesmo programa.
+
+- O diagrama de classes mostra uma [visão estática]{.alert}.
+  - Ou sejam, representa o **momento da programação**, quando estamos escrevendo o código.
+  - Dizemos que `VisorRelogio` usa (ou depende) de `VisorNumero`.
+
+. . .
+
+Quando o programa é iniciado, vamos criar um objeto `VisorRelogio`.
+
+- E vamos implementar a classe de forma que ela crie automaticamente dois objetos `VisorNumero`.
+- Portanto, o diagrama de objetos mostra uma [visão dinâmica]{.alert}.
+- Ele representa o **tempo de execução**, quando o programa está rodando.
+
+## {.smaller}
+
+![](imagens/visor_relogio_diagrama_objetos.png){width="50%"} 
+
+Vamos avaliar o diagrama de objetos novamente, pois ele traz um detalhe importante.
+
+- Repare que uma variável que guarda um objeto, ela não o guarda diretamente.
+- Na verdade a variável guarda uma [referência]{.alert} (um ponteiro) [para o objeto]{.alert} .
+
+. . .
+
+No diagrama a variável é representada pela caixa branca
+
+- E a referência do objeto pela seta.
+- Portanto, repare que o objeto `VisorNumero` é armazenado fora do objeto `VisorRelogio`.
+  - E a referência (o ponteiro) é que liga os dois.
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Pense no projeto de exemplo `disciplina` que vimos antes.
+Suponha que criamos um objeto `Disciplina` e três objetos `Estudante`, e matriculamos os estudantes na disciplina.
+Tente desenhar um diagrama de classes e um diagrama de objetos para essa situação.
+Explique a diferença entre os diagramas.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Quando um diagrama de classes é alterado? E como ele é alterado?
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Quando um diagrama de objetos é alterado? E como ele é alterado?
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Escreva a declaração de um atributo `orientador` que guarde uma referência para um objeto `Professor`.
+:::
+
+# Tipos primitivos e tipos objetos {background-color="#40666e"}
+
+## {.smaller}
+
+Java tem dois tipos diferentes de tipos :) 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.fragment}
+[Tipos primitivos]{.alert}
+
+![](imagens/homem_cavernas.jpg){width="30%"} <!--^[Imagem de macrovector no Freepik]-->
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment}
+[Tipos objeto]{.alert} (ou *tipos por referência*)
+
+![](imagens/o_objeto.png){width="40%"}
+:::
+:::
+
+::::
+
+. . .
+
+Tipos primitivos são predefinidos na linguagem Java
+
+- Ex.: `int`, `boolean`, `double`.
+
+. . .
+
+Já os tipos objeto são definidos por classes.
+
+- Algumas classes fazem parte do Java padrão (como a `String`).
+- E podemos criar nossas próprias classes.
+
+## {.smaller}
+
+Tipos objeto e tipos primitivos têm **semelhanças**:
+
+- Ambos podem ser usados como tipos.
+
+. . .
+
+Mas se comportam de forma **diferente**:
+
+- Tipos primitivos são guardados diretamente nas variáveis.
+  - No diagrama de objetos mostramos os valores diretamente nas caixas das variáveis.
+- Já tipos objeto guardam apenas uma referência (ponteiro) para o objeto.
+  - No diagrama representamos com uma seta.
+
+. . .
+
+
+::: {.callout-tip title="Conceito" icon=false}
+Os **tipos primitivos** em Java não definem objetos. Tipos como `int`, `boolean` e `double` são os tipos primitivos mais comuns. Tipos primitos não possuem métodos.
+:::
+
+# A classe `VisorNumero` {background-color="#40666e"}
+
+## {.smaller}
+
+Antes de vermos o exemplo do relógio, é importante entendermos a classe `VisorNumero`.
+
+- E assim sabermos como ela pode ser usada para construir o relógio.
+
+. . .
+
+Vamos avaliar o código da classe, baixando o projeto [visor-numero](https://github.com/ufla-ipoo/visor-numero).
+
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+No BlueJ acesse a opção: **Exibir** --> **Exibir terminal**, e no terminal acesse **Opcoes** --> **Anotar chamadas de métodos**.
+
+Crie um objeto `VisorNumero` com limite `24` e dê o nome `horas` para a variável.
+
+- Abra o inspetor e, com ela aberta, chame o método `incrementar` do objeto criado.
+- Repare, no terminal, como é a chamada do método.
+- Chame repetidamente o método `incrementar` até que ele volte para zero. Obs.: use um limite menor se estiver impaciente :)
+:::
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Crie outro objeto `VisorNumero`, com limite 60 , e dê o nome `minutos`.
+
+- Chame o método `incrementar` do objeto e repare como é a chamada no terminal.
+- Repare que você está fazendo o papel do relógio já que tem um visor de horas e um de minutos.
+- O que você deveria fazer a cada chamada do método `incrementar` para o objeto `minutos` para saber se é hora de incrementar o objeto de `horas`?
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Usando o bloco de códigos do BlueJ, crie um objeto `VisorNumero`, chamando `vn`, com limite 6, e experimente todos os seus métodos.
+:::
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Experimente digitar o código abaixo no Bloco de Códigos:
+```{.java code-line-numbers="false"}
+VisorNumero.obterValor();
+```
+O que a mensagem de erro indica? 
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Experimente agora a linha abaixo:
+```{.java code-line-numbers="false"}
+vn.definirValor(int 5);
+```
+A mensagem de erro, nesse caso, te ajuda a identificar o problema?
+
+Tente corrigir o código e memorizar essa situação que é muito comum para quem está começando.
+:::
+
+## {.smaller}
+
+Repare que o método `definirValor` utiliza uma expressão booleana
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public void definirValor(int novoValor)
+{
+    if((novoValor >= 0) && (novoValor < limite)) {
+        valor = novoValor;
+    }
+}
+```
+:::
+
+. . .
+
+Em **Java**, os [operadores lógicos]{.alert} são:
+
+- `&&`
+  - **e** lógico (*and em C++*).
+- `||`
+  - **ou** lógico (*or em C++*).
+- `!`
+  - **negação** (*not em C++*).
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+O que acontece quando o método `definirValor` é chamado om um valor inválido (experimente!).
+
+Você acha que da forma que foi feito é uma boa solução? Consegue pensar em uma solução melhor?
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+O que aconteceria se, no método `definirValor` o operador `>=` fosse trocado por `>`?
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+O que aconteceria se, no método `definirValor` o operador `&&` fosse trocado por `||`?
+:::

@@ -16,7 +16,6 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2023-08-09">
   <title>IPOO - Cap. 3 Integração entre Objetos</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -35,6 +34,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="cap3-1_files/libs/revealjs/dist/theme/quarto.css">
   <link href="cap3-1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -348,7 +412,7 @@
     </div>
 </div>
 
-  <p class="date">08/09/2023</p>
+  <p class="date">16/09/2023</p>
 </section>
 <section id="como-estudar" class="slide level2 smaller">
 <h2>Como estudar?</h2>
@@ -531,17 +595,629 @@
 </section>
 <section id="section-10" class="slide level2 smaller">
 <h2></h2>
-<p>Falando em expressões booleanas, <strong>em Java, os <span class="alert">operadores lógicos</span> são</strong>:</p>
+<p>Essa técnica de dividir o problema em problemas menores é chamada de <span class="alert">dividir para conquistar</span>.</p>
+<div class="fragment">
+<p>Podemos entender isso melhor com um exemplo.</p>
+</div>
+</section>
+<section id="section-11" class="slide level2 smaller">
+<h2></h2>
+<p>Vamos pensar em uma equipe de engenheiros <strong>projetando um carro</strong>.</p>
 <ul>
-<li class="fragment"><code>&amp;&amp;</code> -&gt; <strong>e</strong> lógico (<em>and em C++</em>).</li>
-<li class="fragment"><code>||</code> -&gt; <strong>ou</strong> lógico (<em>or em C++</em>).</li>
-<li class="fragment"><code>!</code> -&gt; <strong>negação</strong> (<em>not em C++</em>).</li>
+<li class="fragment">Eles pensam nas <strong>partes do carro</strong>: design, tamanho, local do motor, quantidade de assentos, espaçamento entre rodas, etc.</li>
 </ul>
+<p><img data-src="imagens/engenheiros_carro.jpg" style="width:40.0%"><sup>1</sup></p>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Imagem de vectorjuice no Freepik </p></li></ol></aside></section>
+<section id="section-12" class="slide level2 smaller">
+<h2></h2>
+<p>Outra equipe de engenheiros projeta o <strong>motor</strong>.</p>
+<ul>
+<li class="fragment"><p>Eles pensam em cada <strong>parte do motor</strong>: as cilindradas, o mecanismo de injeção, a eletrônica, etc.</p></li>
+<li class="fragment"><p>Para eles o motor não é uma peça única, e sim <strong>um sistema complexo</strong> de várias partes <img data-src="imagens/motor_carro.png" style="width:50.0%"></p></li>
+<li class="fragment"><p>Uma delas pode ser a vela de ignição</p></li>
+</ul>
+</section>
+<section id="section-13" class="slide level2 smaller">
+<h2></h2>
+<p>Há então uma terceira equipe de engenheiros (muitas vezes de outra empresa) que projeta a <strong>vela de ignição</strong>.</p>
+<ul>
+<li class="fragment">Eles pensam na vela como um sistema com <strong>várias partes</strong>. <img data-src="imagens/vela_ignicao.png" style="width:50.0%"></li>
+<li class="fragment">Eles podem ter feitos estudos complexos para saber o metal certo a ser usado, e como é processo detalhado de fabricação e instalação</li>
+</ul>
+</section></section>
+<section id="section-14" class="title-slide slide level1 smaller center">
+<h1></h1>
+<p>A mesma coisa acontece com as outra partes do carro.</p>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Um <em>designer</em> de alto nível vai pensar no <strong>pneu como uma peça única</strong>.</p>
+<p><img data-src="imagens/pneu.png" style="width:30.0%"></p>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p>Mas outro engenheiro estuda a <strong>composição química ideal</strong> para produzir o material certo para os pneus.</p>
+<ul>
+<li class="fragment">Para ele, o <strong>pneu é uma coisa complexa</strong>. <img data-src="imagens/pneu_detalhado.png" style="width:50.0%"></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Já a empresa que fabrica o carro, vai apenas comprar o pneu da fabricante de pneus e enxergá-lo como uma única peça.</p>
+<ul>
+<li class="fragment">Isto é <span class="alert">abstração</span>!</li>
+</ul>
+</div>
+</section>
+
+<section id="section-15" class="title-slide slide level1 smaller center">
+<h1></h1>
+<p>Os engenheiros da fabricante de carros <span class="alert">abstraem</span> (<em>ignoram</em>) os detalhes da fabricação dos pneus para conseguir se concentrar os detalhes de criação da roda, por exemplo.</p>
+<ul>
+<li class="fragment">Já os <em>designers</em> ignoram os detalhes da roda ou do motor para se concentrar no <em>design</em> do carro como um todo.
+<ul>
+<li class="fragment">Eles se preocupam apenas com o tamanho do motor e das rodas.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Repares que um carro é formado por tantas partes que é praticamente <strong>impossível</strong> uma pessoa só <strong>saber todos os detalhes</strong> de todas as partes ao mesmo tempo.</p>
+<ul>
+<li class="fragment">Se fosse assim, provavelmente carros nem seriam fabricados.</li>
+</ul>
+</div>
+</section>
+
+<section id="section-16" class="title-slide slide level1 smaller center">
+<h1></h1>
+<p>Se os carros podem ser fabricados aos milhares hoje em dia é porque os engenheiros usam <span class="alert">modularização</span> e abstração.</p>
+<ul>
+<li class="fragment">Eles <strong>dividem</strong> o carro <strong>em módulos</strong> independentes (roda, motor, caixa de marcha, assento, etc.).
+<ul>
+<li class="fragment">E equipes separadas trabalham em <strong>cada módulo</strong> de forma <strong>independente</strong>.</li>
+</ul></li>
+<li class="fragment">Quando o módulo é construído, eles usam <strong>abstração</strong>.
+<ul>
+<li class="fragment">Ou seja, eles enxergam o <strong>módulo como uma peça única</strong> e o utilizam para construir componentes mais complexos.</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="section-17" class="title-slide slide level1 smaller center">
+<h1></h1>
+<p>Modularização e abstração se complementam.</p>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Abstração</strong> é a habilidade de ignorar detalhes das partes, para focar a atenção em um nível mais alto de um problema.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Modularização</strong> é o processo de dividir um todo em partes bem definidas que podem ser construídas e examinadas separadamente, e que interagem de formas bem definidas.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<section id="abstração-em-software" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Abstração em Software</h1>
+
+</section>
+<section id="section-18" class="slide level2 smaller">
+<h2></h2>
+<p>A mesma ideia de <strong>modularização e abstração</strong> do exemplo do carro <strong>é aplicada no desenvolvimento de software</strong>.</p>
+<ul>
+<li class="fragment">Para conseguirmos implementar um sistema complexo, nós tentamos dividi-lo em subcomponentes que possamos programar de forma independente.</li>
+<li class="fragment">Depois tentamos usar esses componentes, como se eles fossem partes simples, sem nos preocuparmos com seus detalhes internos.</li>
+</ul>
+<div class="fragment">
+<p>Em <strong>POO</strong>, os componentes e subcomponentes são <strong>objetos</strong>.</p>
+<ul>
+<li class="fragment">Para criar um carro completo em um sistema OO, faríamos como no exemplo da fábrica.</li>
+<li class="fragment">Criaríamos objetos separados para motor, roda, caixa de marcha, etc.</li>
+<li class="fragment">E usarmos esses objetos para construir um objeto carro.</li>
+</ul>
+</div>
+</section>
+<section id="section-19" class="slide level2 smaller">
+<h2></h2>
+<p>Não é simples pensar nos tipos de objetos (e, consequentemente, nas classes) que precisamos ter em um software.</p>
+<ul>
+<li class="fragment">Por isso, vamos começar com o exemplo simples do mostrador do relógio.</li>
+</ul>
+</section></section>
+<section>
+<section id="modularização-no-exemplo-do-relógio" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Modularização no exemplo do relógio</h1>
+
+</section>
+<section id="section-20" class="slide level2 smaller">
+<h2></h2>
+<p>Voltando ao exemplo do visor de relógio digital, qual seria a maneira mais direta de implementá-lo?</p>
+<ul>
+<li class="fragment">Poderíamos pensar em uma única classe que representasse os quatro dígitos do relógio, certo?</li>
+</ul>
+<p><img data-src="imagens/visor_relogio_digital.png"></p>
+<div class="fragment">
+<p>Mas vamos tentar usar <strong>modularização</strong>.</p>
+<ul>
+<li class="fragment">Como você poderia dividir o “problema” de representar o visor, em subproblemas?</li>
+</ul>
+</div>
+</section>
+<section id="section-21" class="slide level2 smaller">
+<h2></h2>
+<p>Repare como funcionam os dígitos das horas.</p>
+<ul>
+<li class="fragment">Eles começam em 0, incrementam de 1 em 1, até chegar a 23, e depois voltam para zero.</li>
+</ul>
+<div class="fragment">
+<p>E como funcionam os dígitos dos minutos?</p>
+<ul>
+<li class="fragment">Eles começam em 0, incrementam de 1 em 1, até chegar a 60, e depois voltam para zero.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Repare que o comportamento é exatamente o mesmo, o que muda é apenas o valor limite que faz o valor voltar para zero.</p>
+<ul>
+<li class="fragment">Podemos pensar então em um objeto capaz de representar um visor de dois dígitos. <img data-src="imagens/visor_numeros.png"></li>
+<li class="fragment">E poderíamos usar dois objetos desse tipo, um para as horas e outro para os minutos, para representar o relógio.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="implementando-o-visor-do-relógio" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Implementando o visor do relógio</h1>
+
+</section>
+<section id="section-22" class="slide level2 smaller">
+<h2></h2>
+<p>Precisamos então definir uma classe para representar um visor de número de dois dígitos.</p>
+<ul>
+<li class="fragment">Ela poderia ter um método de acesso para retornar seus valores.</li>
+<li class="fragment">E dois métodos modificadores:
+<ul>
+<li class="fragment">Para definir o valor.</li>
+<li class="fragment">E para incrementá-lo (adicionar 1), zerando ao chegar no limite.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Criada a classe, podemos criar dois objetos dela com limites diferentes para representar o relógio.</p>
+</div>
+</section>
+<section id="section-23" class="slide level2 smaller">
+<h2></h2>
+<p>Quais <strong>atributos</strong> são necessários na classe que representa números de dois dígitos?</p>
+<ul>
+<li class="fragment">Veja que precisamos guardar o valor propriamente dito.</li>
+<li class="fragment">E o limite que faz o valor voltar para zero.</li>
+</ul>
+<div class="fragment">
+<p>Esses valores devem ser de que tipo?</p>
+</div>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb1" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> VisorNumero</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> limite<span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> valor<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// construtor e métodos omitidos.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-24" class="slide level2 smaller">
+<h2></h2>
+<p>Antes de pensar nos detalhes da classe <code>VisorNumero</code>, imagine que já temos a classe pronta.</p>
+<ul>
+<li class="fragment">Como poderíamos construir um visor de relógio completo, usando essa classe?</li>
+<li class="fragment">Precisamos de dois objetos visor de números (um para as horas e outro para os minutos).
+<ul>
+<li class="fragment">Portanto, cada um desses objetos deve ser um <strong>atributo</strong> na classe que representa o visor do relógio.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> VisorRelogio</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> VisorNumero horas<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> VisorNumero minutos<span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// construtor e métodos omitidos.</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p>Repare que <span class="alert">classes definem tipos</span>.</p>
+</div>
+</section>
+<section id="section-25" class="slide level2 smaller">
+<h2></h2>
+<p>O <strong>tipo de um atributo</strong> determina o tipo dos valores que ele pode guardar.</p>
+<ul>
+<li class="fragment">Se o tipo é uma classe, o atributo pode guardar objetos daquela classe.</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Declaração não cria objetos</strong></p>
+</div>
+<div class="callout-content">
+<p>Uma declaração de um atributo ou uma variável do tipo de uma classe não cria automaticamente um objeto daquela classe.</p>
+<ul>
+<li class="fragment">A princípio o atributo ou variável fica vazio.</li>
+<li class="fragment">Portanto, no construtor da classe <code>VisorRelogio</code> precisaremos criar os objetos a serem guardados pelos atributos.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Classes definem tipos</strong>. Um nome de classe pode ser usado como tipo de uma variável. Variáveis de tipo de uma classe podem guardar objetos daquela classe.</p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="diagramas-de-classe-vs.-diagramas-de-objetos" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Diagramas de classe vs.&nbsp;diagramas de objetos</h1>
+
+</section>
+<section id="section-26" class="slide level2 smaller">
+<h2></h2>
+<p>Compare as duas figuras abaixo:</p>
+<ul>
+<li class="fragment">À esquerda temos o <span class="alert">diagrama de objetos</span> do visor de relógio</li>
+<li class="fragment">À direita temos o <span class="alert">diagrama de classes</span> para a mesma situação.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="imagens/visor_relogio_diagrama_objetos.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="imagens/visor_relogio_diagrama_classes.png"></p>
+</div>
+</div>
+<div class="fragment">
+<p><img data-src="imagens/duvida_2_classes_3_objetos.png" style="width:40.0%"></p>
+</div>
+</section>
+<section id="section-27" class="slide level2 smaller">
+<h2></h2>
+<p>Repare que nós criamos dois objetos da mesma classe <code>VisorNumero</code>.</p>
+<div class="fragment">
+<p>Os dois diagramas mostram diferentes visões do mesmo programa.</p>
+<ul>
+<li class="fragment">O diagrama de classes mostra uma <span class="alert">visão estática</span>.
+<ul>
+<li class="fragment">Ou sejam, representa o <strong>momento da programação</strong>, quando estamos escrevendo o código.</li>
+<li class="fragment">Dizemos que <code>VisorRelogio</code> usa (ou depende) de <code>VisorNumero</code>.</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p>Quando o programa é iniciado, vamos criar um objeto <code>VisorRelogio</code>.</p>
+<ul>
+<li class="fragment">E vamos implementar a classe de forma que ela crie automaticamente dois objetos <code>VisorNumero</code>.</li>
+<li class="fragment">Portanto, o diagrama de objetos mostra uma <span class="alert">visão dinâmica</span>.</li>
+<li class="fragment">Ele representa o <strong>tempo de execução</strong>, quando o programa está rodando.</li>
+</ul>
+</div>
+</section>
+<section id="section-28" class="slide level2 smaller">
+<h2></h2>
+<p><img data-src="imagens/visor_relogio_diagrama_objetos.png" style="width:50.0%"></p>
+<p>Vamos avaliar o diagrama de objetos novamente, pois ele traz um detalhe importante.</p>
+<ul>
+<li class="fragment">Repare que uma variável que guarda um objeto, ela não o guarda diretamente.</li>
+<li class="fragment">Na verdade a variável guarda uma <span class="alert">referência</span> (um ponteiro) <span class="alert">para o objeto</span> .</li>
+</ul>
+<div class="fragment">
+<p>No diagrama a variável é representada pela caixa branca</p>
+<ul>
+<li class="fragment">E a referência do objeto pela seta.</li>
+<li class="fragment">Portanto, repare que o objeto <code>VisorNumero</code> é armazenado fora do objeto <code>VisorRelogio</code>.
+<ul>
+<li class="fragment">E a referência (o ponteiro) é que liga os dois.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-29" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Pense no projeto de exemplo <code>disciplina</code> que vimos antes. Suponha que criamos um objeto <code>Disciplina</code> e três objetos <code>Estudante</code>, e matriculamos os estudantes na disciplina. Tente desenhar um diagrama de classes e um diagrama de objetos para essa situação. Explique a diferença entre os diagramas.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Quando um diagrama de classes é alterado? E como ele é alterado?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Quando um diagrama de objetos é alterado? E como ele é alterado?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Escreva a declaração de um atributo <code>orientador</code> que guarde uma referência para um objeto <code>Professor</code>.</p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="tipos-primitivos-e-tipos-objetos" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Tipos primitivos e tipos objetos</h1>
+
+</section>
+<section id="section-30" class="slide level2 smaller">
+<h2></h2>
+<p>Java tem dois tipos diferentes de tipos :)</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment">
+<p><span class="alert">Tipos primitivos</span></p>
+<p><img data-src="imagens/homem_cavernas.jpg" style="width:30.0%"> <!--^[Imagem de macrovector no Freepik]--></p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p><span class="alert">Tipos objeto</span> (ou <em>tipos por referência</em>)</p>
+<p><img data-src="imagens/o_objeto.png" style="width:40.0%"></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Tipos primitivos são predefinidos na linguagem Java</p>
+<ul>
+<li class="fragment">Ex.: <code>int</code>, <code>boolean</code>, <code>double</code>.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Já os tipos objeto são definidos por classes.</p>
+<ul>
+<li class="fragment">Algumas classes fazem parte do Java padrão (como a <code>String</code>).</li>
+<li class="fragment">E podemos criar nossas próprias classes.</li>
+</ul>
+</div>
+</section>
+<section id="section-31" class="slide level2 smaller">
+<h2></h2>
+<p>Tipos objeto e tipos primitivos têm <strong>semelhanças</strong>:</p>
+<ul>
+<li class="fragment">Ambos podem ser usados como tipos.</li>
+</ul>
+<div class="fragment">
+<p>Mas se comportam de forma <strong>diferente</strong>:</p>
+<ul>
+<li class="fragment">Tipos primitivos são guardados diretamente nas variáveis.
+<ul>
+<li class="fragment">No diagrama de objetos mostramos os valores diretamente nas caixas das variáveis.</li>
+</ul></li>
+<li class="fragment">Já tipos objeto guardam apenas uma referência (ponteiro) para o objeto.
+<ul>
+<li class="fragment">No diagrama representamos com uma seta.</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p>Os <strong>tipos primitivos</strong> em Java não definem objetos. Tipos como <code>int</code>, <code>boolean</code> e <code>double</code> são os tipos primitivos mais comuns. Tipos primitos não possuem métodos.</p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="a-classe-visornumero" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>A classe <code>VisorNumero</code></h1>
+
+</section>
+<section id="section-32" class="slide level2 smaller">
+<h2></h2>
+<p>Antes de vermos o exemplo do relógio, é importante entendermos a classe <code>VisorNumero</code>.</p>
+<ul>
+<li class="fragment">E assim sabermos como ela pode ser usada para construir o relógio.</li>
+</ul>
+<div class="fragment">
+<p>Vamos avaliar o código da classe, baixando o projeto <a href="https://github.com/ufla-ipoo/visor-numero">visor-numero</a>.</p>
+</div>
+</section>
+<section id="section-33" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>No BlueJ acesse a opção: <strong>Exibir</strong> –&gt; <strong>Exibir terminal</strong>, e no terminal acesse <strong>Opcoes</strong> –&gt; <strong>Anotar chamadas de métodos</strong>.</p>
+<p>Crie um objeto <code>VisorNumero</code> com limite <code>24</code> e dê o nome <code>horas</code> para a variável.</p>
+<ul>
+<li class="fragment">Abra o inspetor e, com ela aberta, chame o método <code>incrementar</code> do objeto criado.</li>
+<li class="fragment">Repare, no terminal, como é a chamada do método.</li>
+<li class="fragment">Chame repetidamente o método <code>incrementar</code> até que ele volte para zero. Obs.: use um limite menor se estiver impaciente :)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="section-34" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Crie outro objeto <code>VisorNumero</code>, com limite 60 , e dê o nome <code>minutos</code>.</p>
+<ul>
+<li class="fragment">Chame o método <code>incrementar</code> do objeto e repare como é a chamada no terminal.</li>
+<li class="fragment">Repare que você está fazendo o papel do relógio já que tem um visor de horas e um de minutos.</li>
+<li class="fragment">O que você deveria fazer a cada chamada do método <code>incrementar</code> para o objeto <code>minutos</code> para saber se é hora de incrementar o objeto de <code>horas</code>?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Usando o bloco de códigos do BlueJ, crie um objeto <code>VisorNumero</code>, chamando <code>vn</code>, com limite 6, e experimente todos os seus métodos.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-35" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Experimente digitar o código abaixo no Bloco de Códigos:</p>
+<div class="sourceCode" id="cb3" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>VisorNumero<span class="op">.</span><span class="fu">obterValor</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>O que a mensagem de erro indica?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Experimente agora a linha abaixo:</p>
+<div class="sourceCode" id="cb4" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>vn<span class="op">.</span><span class="fu">definirValor</span><span class="op">(</span><span class="dt">int</span> <span class="dv">5</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>A mensagem de erro, nesse caso, te ajuda a identificar o problema?</p>
+<p>Tente corrigir o código e memorizar essa situação que é muito comum para quem está começando.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-36" class="slide level2 smaller">
+<h2></h2>
+<p>Repare que o método <code>definirValor</code> utiliza uma expressão booleana</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb5" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">void</span> <span class="fu">definirValor</span><span class="op">(</span><span class="dt">int</span> novoValor<span class="op">)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span><span class="op">((</span>novoValor <span class="op">&gt;=</span> <span class="dv">0</span><span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="op">(</span>novoValor <span class="op">&lt;</span> limite<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        valor <span class="op">=</span> novoValor<span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Em <strong>Java</strong>, os <span class="alert">operadores lógicos</span> são:</p>
+<ul>
+<li class="fragment"><code>&amp;&amp;</code>
+<ul>
+<li class="fragment"><strong>e</strong> lógico (<em>and em C++</em>).</li>
+</ul></li>
+<li class="fragment"><code>||</code>
+<ul>
+<li class="fragment"><strong>ou</strong> lógico (<em>or em C++</em>).</li>
+</ul></li>
+<li class="fragment"><code>!</code>
+<ul>
+<li class="fragment"><strong>negação</strong> (<em>not em C++</em>).</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-37" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>O que acontece quando o método <code>definirValor</code> é chamado om um valor inválido (experimente!).</p>
+<p>Você acha que da forma que foi feito é uma boa solução? Consegue pensar em uma solução melhor?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>O que aconteceria se, no método <code>definirValor</code> o operador <code>&gt;=</code> fosse trocado por <code>&gt;</code>?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>O que aconteceria se, no método <code>definirValor</code> o operador <code>&amp;&amp;</code> fosse trocado por <code>||</code>?</p>
+</div>
+</div>
+</div>
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
 </section></section>
+
     </div>
   </div>
 
