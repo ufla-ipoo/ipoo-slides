@@ -412,7 +412,7 @@
     </div>
 </div>
 
-  <p class="date">16/09/2023</p>
+  <p class="date">17/09/2023</p>
 </section>
 <section id="como-estudar" class="slide level2 smaller">
 <h2>Como estudar?</h2>
@@ -811,7 +811,7 @@
 </div>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb1" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> VisorNumero</span>
+<div class="sourceCode" id="cb1" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> VisorDeNumero</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> limite<span class="op">;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> valor<span class="op">;</span></span>
@@ -823,7 +823,7 @@
 </section>
 <section id="section-24" class="slide level2 smaller">
 <h2></h2>
-<p>Antes de pensar nos detalhes da classe <code>VisorNumero</code>, imagine que já temos a classe pronta.</p>
+<p>Antes de pensar nos detalhes da classe <code>VisorDeNumero</code>, imagine que já temos a classe pronta.</p>
 <ul>
 <li class="fragment">Como poderíamos construir um visor de relógio completo, usando essa classe?</li>
 <li class="fragment">Precisamos de dois objetos visor de números (um para as horas e outro para os minutos).
@@ -833,10 +833,10 @@
 </ul>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> VisorRelogio</span>
+<div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> VisorDeRelogio</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> VisorNumero horas<span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> VisorNumero minutos<span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> VisorDeNumero horas<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> VisorDeNumero minutos<span class="op">;</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// construtor e métodos omitidos.</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -865,7 +865,7 @@
 <p>Uma declaração de um atributo ou uma variável do tipo de uma classe não cria automaticamente um objeto daquela classe.</p>
 <ul>
 <li class="fragment">A princípio o atributo ou variável fica vazio.</li>
-<li class="fragment">Portanto, no construtor da classe <code>VisorRelogio</code> precisaremos criar os objetos a serem guardados pelos atributos.</li>
+<li class="fragment">Portanto, no construtor da classe <code>VisorDeRelogio</code> precisaremos criar os objetos a serem guardados pelos atributos.</li>
 </ul>
 </div>
 </div>
@@ -909,21 +909,21 @@
 </section>
 <section id="section-27" class="slide level2 smaller">
 <h2></h2>
-<p>Repare que nós criamos dois objetos da mesma classe <code>VisorNumero</code>.</p>
+<p>Repare que nós criamos dois objetos da mesma classe <code>VisorDeNumero</code>.</p>
 <div class="fragment">
 <p>Os dois diagramas mostram diferentes visões do mesmo programa.</p>
 <ul>
 <li class="fragment">O diagrama de classes mostra uma <span class="alert">visão estática</span>.
 <ul>
 <li class="fragment">Ou sejam, representa o <strong>momento da programação</strong>, quando estamos escrevendo o código.</li>
-<li class="fragment">Dizemos que <code>VisorRelogio</code> usa (ou depende) de <code>VisorNumero</code>.</li>
+<li class="fragment">Dizemos que <code>VisorDeRelogio</code> usa (ou depende) de <code>VisorDeNumero</code>.</li>
 </ul></li>
 </ul>
 </div>
 <div class="fragment">
-<p>Quando o programa é iniciado, vamos criar um objeto <code>VisorRelogio</code>.</p>
+<p>Quando o programa é iniciado, vamos criar um objeto <code>VisorDeRelogio</code>.</p>
 <ul>
-<li class="fragment">E vamos implementar a classe de forma que ela crie automaticamente dois objetos <code>VisorNumero</code>.</li>
+<li class="fragment">E vamos implementar a classe de forma que ela crie automaticamente dois objetos <code>VisorDeNumero</code>.</li>
 <li class="fragment">Portanto, o diagrama de objetos mostra uma <span class="alert">visão dinâmica</span>.</li>
 <li class="fragment">Ele representa o <strong>tempo de execução</strong>, quando o programa está rodando.</li>
 </ul>
@@ -941,7 +941,7 @@
 <p>No diagrama a variável é representada pela caixa branca</p>
 <ul>
 <li class="fragment">E a referência do objeto pela seta.</li>
-<li class="fragment">Portanto, repare que o objeto <code>VisorNumero</code> é armazenado fora do objeto <code>VisorRelogio</code>.
+<li class="fragment">Portanto, repare que o objeto <code>VisorDeNumero</code> é armazenado fora do objeto <code>VisorDeRelogio</code>.
 <ul>
 <li class="fragment">E a referência (o ponteiro) é que liga os dois.</li>
 </ul></li>
@@ -1059,13 +1059,13 @@
 </div>
 </section></section>
 <section>
-<section id="a-classe-visornumero" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>A classe <code>VisorNumero</code></h1>
+<section id="a-classe-visordenumero" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>A classe <code>VisorDeNumero</code></h1>
 
 </section>
 <section id="section-32" class="slide level2 smaller">
 <h2></h2>
-<p>Antes de vermos o exemplo do relógio, é importante entendermos a classe <code>VisorNumero</code>.</p>
+<p>Antes de vermos o exemplo do relógio, é importante entendermos a classe <code>VisorDeNumero</code>.</p>
 <ul>
 <li class="fragment">E assim sabermos como ela pode ser usada para construir o relógio.</li>
 </ul>
@@ -1082,7 +1082,7 @@
 </div>
 <div class="callout-content">
 <p>No BlueJ acesse a opção: <strong>Exibir</strong> –&gt; <strong>Exibir terminal</strong>, e no terminal acesse <strong>Opcoes</strong> –&gt; <strong>Anotar chamadas de métodos</strong>.</p>
-<p>Crie um objeto <code>VisorNumero</code> com limite <code>24</code> e dê o nome <code>horas</code> para a variável.</p>
+<p>Crie um objeto <code>VisorDeNumero</code> com limite <code>24</code> e dê o nome <code>horas</code> para a variável.</p>
 <ul>
 <li class="fragment">Abra o inspetor e, com ela aberta, chame o método <code>incrementar</code> do objeto criado.</li>
 <li class="fragment">Repare, no terminal, como é a chamada do método.</li>
@@ -1100,7 +1100,7 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>Crie outro objeto <code>VisorNumero</code>, com limite 60 , e dê o nome <code>minutos</code>.</p>
+<p>Crie outro objeto <code>VisorDeNumero</code>, com limite 60 , e dê o nome <code>minutos</code>.</p>
 <ul>
 <li class="fragment">Chame o método <code>incrementar</code> do objeto e repare como é a chamada no terminal.</li>
 <li class="fragment">Repare que você está fazendo o papel do relógio já que tem um visor de horas e um de minutos.</li>
@@ -1116,7 +1116,7 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>Usando o bloco de códigos do BlueJ, crie um objeto <code>VisorNumero</code>, chamando <code>vn</code>, com limite 6, e experimente todos os seus métodos.</p>
+<p>Usando o bloco de códigos do BlueJ, crie um objeto <code>VisorDeNumero</code>, chamando <code>vn</code>, com limite 6, e experimente todos os seus métodos.</p>
 </div>
 </div>
 </div>
@@ -1131,7 +1131,7 @@
 </div>
 <div class="callout-content">
 <p>Experimente digitar o código abaixo no Bloco de Códigos:</p>
-<div class="sourceCode" id="cb3" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>VisorNumero<span class="op">.</span><span class="fu">obterValor</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>VisorDeNumero<span class="op">.</span><span class="fu">obterValor</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>O que a mensagem de erro indica?</p>
 </div>
 </div>
@@ -1187,7 +1187,7 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>O que acontece quando o método <code>definirValor</code> é chamado om um valor inválido (experimente!).</p>
+<p>O que acontece quando o método <code>definirValor</code> é chamado com um valor inválido (experimente!).</p>
 <p>Você acha que da forma que foi feito é uma boa solução? Consegue pensar em uma solução melhor?</p>
 </div>
 </div>
@@ -1198,7 +1198,7 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>O que aconteceria se, no método <code>definirValor</code> o operador <code>&gt;=</code> fosse trocado por <code>&gt;</code>?</p>
+<p>O que aconteceria se, no método <code>definirValor</code>, o operador <code>&gt;=</code> fosse trocado por <code>&gt;</code>?</p>
 </div>
 </div>
 </div>
@@ -1208,7 +1208,132 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>O que aconteceria se, no método <code>definirValor</code> o operador <code>&amp;&amp;</code> fosse trocado por <code>||</code>?</p>
+<p>O que aconteceria se, no método <code>definirValor</code>, o operador <code>&amp;&amp;</code> fosse trocado por <code>||</code>?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-38" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Estude a implementação dos métodos <code>obterValorVisor</code> e <code>incrementar</code>. Caso tenha dúvidas, estude as páginas 56 a 59 do livro do Barnes e Kölling (4ª ed.).</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>O método <code>obterValorVisor</code> sempre funciona corretamente? Quais premissas ele assume? O que acontece, por exemplo, se você criar um objeto com limite 800?</p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="a-classe-visorderelogio" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>A classe <code>VisorDeRelogio</code></h1>
+
+</section>
+<section id="section-39" class="slide level2 smaller">
+<h2></h2>
+<p>Agora que já entendemos como criar uma clase que define um visor de números de dois dígitos, vamos estudar o projeto <a href="https://github.com/ufla-ipoo/visor-relogio">visor-relogio</a>.</p>
+<ul>
+<li class="fragment">Ele possui a classe <code>VisorDeRelogio</code> que cria dois objetos visores de números para construir o visor completo do relógio.</li>
+</ul>
+</section>
+<section id="section-40" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Crie um objeto <code>VisorDeRelogio</code>, selecionando este construtor:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb6" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Chame o método <code>obterHora</code> para descobrir a hora inicial que o relógio foi criado. Você consegue imaginar porque ele começa nesse horário específico?</p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Abra o inspetor para esse objeto. Com o inspetor aberto, chame os métodos do objeto, observando o atributo <code>stringVisor</code> no inspetor. No BlueJ, abra o arquivo <code>README.md</code> para entender melhor o funcionamento do projeto.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Quantas vezes você precisa chamar o método <code>tiqueTaque</code> no objeto <code>VisorDeRelogio</code> para fazer sua hora chegar a <code>01:00</code>. De que outra forma você poderia fazer o relógio mostrar esse mesmo horário?</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-41" class="slide level2 smaller">
+<h2></h2>
+<p>Vamos agora estudar a classe <code>VisorDeRelogio</code>.</p>
+<ul>
+<li class="fragment">Abra a classe e avalie todo o código.</li>
+</ul>
+<div class="fragment">
+<p>Veja que o atributo <code>stringVisor</code> simula um visor físico real do relógio.</p>
+<ul>
+<li class="fragment">Se esse software rodasse em um relógio de verdade, nós mostraríamos a informação no visor físico.</li>
+<li class="fragment">Aqui, o atributo <code>stringVisor</code> serve para simular o visor real do relógio.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>A classe <code>VisorDeRelogio</code> tem mais dois atributos: <code>horas</code> e <code>minutos</code>.</p>
+<ul>
+<li class="fragment">Eles guardam <strong>referências</strong> para objetos do tipo <code>VisorDeNumero</code>.</li>
+<li class="fragment">O valor lógico do horário do relógio são guardados nesses dois atributos.</li>
+</ul>
+</div>
+</section>
+<section id="section-42" class="slide level2 smaller">
+<h2></h2>
+<p>O digrama de objetos abaixo mostra de forma mais completa um objeto <code>VisorDeRelogio</code>.</p>
+<ul>
+<li class="fragment">Veja que todos os atributos são referências para outros objetos.</li>
+<li class="fragment">Inclusive <code>stringVisor</code>, já que uma string é um objeto em Java.
+<ul>
+<li class="fragment">Obs.: por simplicidade, o diagrama não mostra a representação interna do objeto String.</li>
+</ul></li>
+</ul>
+<img data-src="imagens/visor_relogio_diagrama_objetos2.png" class="r-stretch">
+</section>
+<section id="section-43" class="slide level2">
+<h2></h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Só para os curiosos</strong></p>
+</div>
+<div class="callout-content">
+<p>Você pode também abrir o projeto <a href="https://github.com/ufla-ipoo/visor-relogio">visor-relogio-com-interface-grafica</a>. Veja que ele possui uma classe a mais que você pode experimentar e ver o que faz.</p>
 </div>
 </div>
 </div>

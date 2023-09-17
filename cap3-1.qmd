@@ -387,7 +387,7 @@ Esses valores devem ser de que tipo?
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-public class VisorNumero
+public class VisorDeNumero
 {
     private int limite;
     private int valor;
@@ -399,7 +399,7 @@ public class VisorNumero
 
 ## {.smaller}
 
-Antes de pensar nos detalhes da classe `VisorNumero`, imagine que já temos a classe pronta.
+Antes de pensar nos detalhes da classe `VisorDeNumero`, imagine que já temos a classe pronta.
 
 - Como poderíamos construir um visor de relógio completo, usando essa classe?
 - Precisamos de dois objetos visor de números (um para as horas e outro para os minutos).
@@ -409,10 +409,10 @@ Antes de pensar nos detalhes da classe `VisorNumero`, imagine que já temos a cl
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-public class VisorRelogio
+public class VisorDeRelogio
 {
-    private VisorNumero horas;
-    private VisorNumero minutos;
+    private VisorDeNumero horas;
+    private VisorDeNumero minutos;
 
     // construtor e métodos omitidos.
 }
@@ -435,7 +435,7 @@ O **tipo de um atributo** determina o tipo dos valores que ele pode guardar.
 Uma declaração de um atributo ou uma variável do tipo de uma classe não cria automaticamente um objeto daquela classe.
 
 - A princípio o atributo ou variável fica vazio.
-- Portanto, no construtor da classe `VisorRelogio` precisaremos criar os objetos a serem guardados pelos atributos.
+- Portanto, no construtor da classe `VisorDeRelogio` precisaremos criar os objetos a serem guardados pelos atributos.
 :::
 
 . . .
@@ -471,7 +471,7 @@ Compare as duas figuras abaixo:
 
 ## {.smaller}
 
-Repare que nós criamos dois objetos da mesma classe `VisorNumero`.
+Repare que nós criamos dois objetos da mesma classe `VisorDeNumero`.
 
 . . .
 
@@ -479,13 +479,13 @@ Os dois diagramas mostram diferentes visões do mesmo programa.
 
 - O diagrama de classes mostra uma [visão estática]{.alert}.
   - Ou sejam, representa o **momento da programação**, quando estamos escrevendo o código.
-  - Dizemos que `VisorRelogio` usa (ou depende) de `VisorNumero`.
+  - Dizemos que `VisorDeRelogio` usa (ou depende) de `VisorDeNumero`.
 
 . . .
 
-Quando o programa é iniciado, vamos criar um objeto `VisorRelogio`.
+Quando o programa é iniciado, vamos criar um objeto `VisorDeRelogio`.
 
-- E vamos implementar a classe de forma que ela crie automaticamente dois objetos `VisorNumero`.
+- E vamos implementar a classe de forma que ela crie automaticamente dois objetos `VisorDeNumero`.
 - Portanto, o diagrama de objetos mostra uma [visão dinâmica]{.alert}.
 - Ele representa o **tempo de execução**, quando o programa está rodando.
 
@@ -503,7 +503,7 @@ Vamos avaliar o diagrama de objetos novamente, pois ele traz um detalhe importan
 No diagrama a variável é representada pela caixa branca
 
 - E a referência do objeto pela seta.
-- Portanto, repare que o objeto `VisorNumero` é armazenado fora do objeto `VisorRelogio`.
+- Portanto, repare que o objeto `VisorDeNumero` é armazenado fora do objeto `VisorDeRelogio`.
   - E a referência (o ponteiro) é que liga os dois.
 
 ##
@@ -588,11 +588,11 @@ Mas se comportam de forma **diferente**:
 Os **tipos primitivos** em Java não definem objetos. Tipos como `int`, `boolean` e `double` são os tipos primitivos mais comuns. Tipos primitos não possuem métodos.
 :::
 
-# A classe `VisorNumero` {background-color="#40666e"}
+# A classe `VisorDeNumero` {background-color="#40666e"}
 
 ## {.smaller}
 
-Antes de vermos o exemplo do relógio, é importante entendermos a classe `VisorNumero`.
+Antes de vermos o exemplo do relógio, é importante entendermos a classe `VisorDeNumero`.
 
 - E assim sabermos como ela pode ser usada para construir o relógio.
 
@@ -606,7 +606,7 @@ Vamos avaliar o código da classe, baixando o projeto [visor-numero](https://git
 ::: {.callout-note title="Exercício" icon=false}
 No BlueJ acesse a opção: **Exibir** --> **Exibir terminal**, e no terminal acesse **Opcoes** --> **Anotar chamadas de métodos**.
 
-Crie um objeto `VisorNumero` com limite `24` e dê o nome `horas` para a variável.
+Crie um objeto `VisorDeNumero` com limite `24` e dê o nome `horas` para a variável.
 
 - Abra o inspetor e, com ela aberta, chame o método `incrementar` do objeto criado.
 - Repare, no terminal, como é a chamada do método.
@@ -616,7 +616,7 @@ Crie um objeto `VisorNumero` com limite `24` e dê o nome `horas` para a variáv
 ##
 
 ::: {.callout-note title="Exercício" icon=false}
-Crie outro objeto `VisorNumero`, com limite 60 , e dê o nome `minutos`.
+Crie outro objeto `VisorDeNumero`, com limite 60 , e dê o nome `minutos`.
 
 - Chame o método `incrementar` do objeto e repare como é a chamada no terminal.
 - Repare que você está fazendo o papel do relógio já que tem um visor de horas e um de minutos.
@@ -626,7 +626,7 @@ Crie outro objeto `VisorNumero`, com limite 60 , e dê o nome `minutos`.
 . . .
 
 ::: {.callout-note title="Exercício" icon=false}
-Usando o bloco de códigos do BlueJ, crie um objeto `VisorNumero`, chamando `vn`, com limite 6, e experimente todos os seus métodos.
+Usando o bloco de códigos do BlueJ, crie um objeto `VisorDeNumero`, chamando `vn`, com limite 6, e experimente todos os seus métodos.
 :::
 
 ##
@@ -634,7 +634,7 @@ Usando o bloco de códigos do BlueJ, crie um objeto `VisorNumero`, chamando `vn`
 ::: {.callout-note title="Exercício" icon=false}
 Experimente digitar o código abaixo no Bloco de Códigos:
 ```{.java code-line-numbers="false"}
-VisorNumero.obterValor();
+VisorDeNumero.obterValor();
 ```
 O que a mensagem de erro indica? 
 :::
@@ -678,15 +678,107 @@ Em **Java**, os [operadores lógicos]{.alert} são:
 ##
 
 ::: {.callout-note title="Exercício" icon=false}
-O que acontece quando o método `definirValor` é chamado om um valor inválido (experimente!).
+O que acontece quando o método `definirValor` é chamado com um valor inválido (experimente!).
 
 Você acha que da forma que foi feito é uma boa solução? Consegue pensar em uma solução melhor?
 :::
 
 ::: {.callout-note title="Exercício" icon=false}
-O que aconteceria se, no método `definirValor` o operador `>=` fosse trocado por `>`?
+O que aconteceria se, no método `definirValor`, o operador `>=` fosse trocado por `>`?
 :::
 
 ::: {.callout-note title="Exercício" icon=false}
-O que aconteceria se, no método `definirValor` o operador `&&` fosse trocado por `||`?
+O que aconteceria se, no método `definirValor`, o operador `&&` fosse trocado por `||`?
 :::
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Estude a implementação dos métodos `obterValorVisor` e `incrementar`.
+Caso tenha dúvidas, estude as páginas 56 a 59 do livro do Barnes e Kölling (4ª ed.).
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+O método `obterValorVisor` sempre funciona corretamente?
+Quais premissas ele assume?
+O que acontece, por exemplo, se você criar um objeto com limite 800?
+:::
+
+# A classe `VisorDeRelogio` {background-color="#40666e"}
+
+## {.smaller}
+
+Agora que já entendemos como criar uma clase que define um visor de números de dois dígitos, vamos estudar o projeto [visor-relogio](https://github.com/ufla-ipoo/visor-relogio).
+
+- Ele possui a classe `VisorDeRelogio` que cria dois objetos visores de números para construir o visor completo do relógio.
+
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Crie um objeto `VisorDeRelogio`, selecionando este construtor:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  new VisorDeRelogio()
+```
+:::
+
+Chame o método `obterHora` para descobrir a hora inicial que o relógio foi criado.
+Você consegue imaginar porque ele começa nesse horário específico?
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Abra o inspetor para esse objeto.
+Com o inspetor aberto, chame os métodos do objeto, observando o atributo `stringVisor` no inspetor.
+No BlueJ, abra o arquivo `README.md` para entender melhor o funcionamento do projeto.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Quantas vezes você precisa chamar o método `tiqueTaque` no objeto `VisorDeRelogio` para fazer sua hora chegar a `01:00`.
+De que outra forma você poderia fazer o relógio mostrar esse mesmo horário?
+:::
+
+## {.smaller}
+
+Vamos agora estudar a classe `VisorDeRelogio`.
+
+- Abra a classe e avalie todo o código.
+
+. . .
+
+Veja que o atributo `stringVisor` simula um visor físico real do relógio.
+
+- Se esse software rodasse em um relógio de verdade, nós mostraríamos a informação no visor físico.
+- Aqui, o atributo `stringVisor` serve para simular o visor real do relógio.
+
+. . .
+
+A classe `VisorDeRelogio` tem mais dois atributos: `horas` e `minutos`.
+
+- Eles guardam **referências** para objetos do tipo `VisorDeNumero`.
+- O valor lógico do horário do relógio são guardados nesses dois atributos.
+
+## {.smaller}
+
+O digrama de objetos abaixo mostra de forma mais completa um objeto `VisorDeRelogio`.
+
+- Veja que todos os atributos são referências para outros objetos.
+- Inclusive `stringVisor`, já que uma string é um objeto em Java.
+  - Obs.: por simplicidade, o diagrama não mostra a representação interna do objeto String.
+
+![](imagens/visor_relogio_diagrama_objetos2.png){.r-stretch}
+
+##
+
+::: {.callout-tip title="Só para os curiosos" collapse="true"}
+Você pode também abrir o projeto [visor-relogio-com-interface-grafica](https://github.com/ufla-ipoo/visor-relogio).
+Veja que ele possui uma classe a mais que você pode experimentar e ver o que faz.
+:::
+
+
+# Objetos criando objetos {background-color="#40666e"}
