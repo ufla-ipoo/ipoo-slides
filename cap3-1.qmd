@@ -1,5 +1,5 @@
 ---
-title: IPOO - Cap. 3 Integração entre Objetos
+title: IPOO - Cap. 3 Interação entre Objetos
 subtitle: Aula 3.1 - Teórica
 ---
 
