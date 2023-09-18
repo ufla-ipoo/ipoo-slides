@@ -321,6 +321,17 @@ Não é simples pensar nos tipos de objetos (e, consequentemente, nas classes) q
 
 - Por isso, vamos começar com o exemplo simples do mostrador do relógio.
 
+## Quiz 3.1 {background-color="#f7fad1" .smaller}
+
+::: {.nonincremental}
+[O conceito de abstração tem relação com:]{.alert}
+
+a. Prestar muita atenção aos detalhes de um problema.
+b. Ignorar completamente os detalhes de um problema.
+c. Dividir um problema em problemas menores de forma a ter diferentes níveis de atenção aos seus detalhes.
+d. Criar atributos abstratos.
+:::
+
 # Modularização no exemplo do relógio {background-color="#40666e"}
 
 ## {.smaller}
@@ -525,6 +536,17 @@ Quando um diagrama de objetos é alterado? E como ele é alterado?
 
 ::: {.callout-note title="Exercício" icon=false}
 Escreva a declaração de um atributo `orientador` que guarde uma referência para um objeto `Professor`.
+:::
+
+## Quiz 3.2 {background-color="#f7fad1" .smaller}
+
+::: {.nonincremental}
+[Marque a alternativa incorreta:]{.alert}
+
+a. Classes definem tipos.
+b. Diagrama de classes dão uma visão estática do sistema.
+c. Diagrama de classes dão uma visão dinâmica do sistema.
+d. Uma visão estática representa o tempo de execução do sistema.
 :::
 
 # Tipos primitivos e tipos objetos {background-color="#40666e"}
@@ -782,3 +804,586 @@ Veja que ele possui uma classe a mais que você pode experimentar e ver o que fa
 
 
 # Objetos criando objetos {background-color="#40666e"}
+
+## {.smaller}
+
+Vimos que um visor de relógio possui dois visores de números, para horas e minutos.
+
+- Mas de onde vêm esses objetos no código?
+
+. . .
+
+Veja que **como usuários** do mostrador de relógio, nós criamos apenas o objeto da classe `VisorDeRelogio`.
+
+- E esperamos que os **visores de números** sejam **criados implicitamente**.
+
+. . .
+
+Mas, **como programadores** da classe `VisorDeRelogio`, nós precisamos fazer isso acontecer.
+
+- Para isso, basta **criarmos os objetos `VisorDeNumero` dentro do construtor** da classe `VisorDeRelogio`.
+- Como o construtor é chamado quando um objeto `VisorDeRelogio` é criado, os visores de número serão criados automaticamente.
+
+## {.smaller}
+
+Vamos analisar como o construtor de `VisorDeRelogio` faz isso:
+
+::: {.halfincfontsize}
+```{.java}
+public class VisorDeRelogio
+{
+  private VisorDeNumero horas;
+  private VisorDeNumero minutos;
+
+  // Atributos restantes omitidos
+
+  public VisorDeRelogio()
+  {
+    horas = new VisorDeNumero(24);
+    minutos = new VisorDeNumero(60);
+    atualizarVisor();
+  }
+
+  // Métodos omitidos
+}
+```
+:::
+
+## {.smaller}
+
+Vamos analisar como o construtor de `VisorDeRelogio` faz isso:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="10-11"}
+public class VisorDeRelogio
+{
+  private VisorDeNumero horas;
+  private VisorDeNumero minutos;
+
+  // Atributos restantes omitidos
+
+  public VisorDeRelogio()
+  {
+    horas = new VisorDeNumero(24);
+    minutos = new VisorDeNumero(60);
+    atualizarVisor();
+  }
+
+  // Métodos omitidos
+}
+```
+:::
+
+As duas primeiras linhas do construtor criam objetos `VisorDeNumero`
+
+- E os atribuem a variáveis.
+
+## {.smaller}
+
+Repare a **sintaxe** do **comando** que **cria um novo objeto**:
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  new NomeDaClasse(lista_de_parametros)
+```
+:::
+
+. . .
+
+O operador [`new`]{.alert} faz duas coisas:
+
+1. Cria um novo objeto da classe nomeada (no nosso exemplo `VisorDeNumero`).
+2. Executa o construtor daquela classe.
+
+. . .
+
+**Se** o construtor da classe **tiver parâmetros**, os valores deles devem ser passados.
+
+## {.smaller}
+
+Repare, por exemplo, que o construtor da classe `VisorDeNumero` espera um valor inteiro como parâmetro.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  public VisorDeNumero(int limiteParaZerar)
+```
+:::
+
+. . .
+
+Com isso, ao usarmos o operador `new` para criar um objeto `VisorDeNumero`, como ele chama o construtor da classe, precisaremos fornecer um argumento inteiro.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  new VisorDeNumero(24);
+```
+:::
+
+- Note que a passagem de parâmetros funciona da mesma forma que já tínhamos visto para os métodos.
+
+## {.smaller}
+
+Veja que da forma que fizemos, ficou como gostaríamos:
+
+- Como ***usuários*** do `VisorDeRelogio`
+  - Criamos apenas esse objeto, e os visores de números são criados implicitamente.
+- Já como ***programadores*** da classe,
+  - Precisamos explicitar a criação dos objetos, escrevendo código para isso.
+
+. . .
+
+Obs.: ao final do construtor, o método `atualizarVisor` é chamado.
+
+- Conversaremos sobre ele mais adiante.
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Escreva comandos em Java que declarem uma variável chamada `janela`, do tipo `Retangulo`, e então crie um objeto `Retangulo` e o atribua à variável.
+Assuma que o construtor de `Retangulo` tem dois parâmetros do tipo `int`.
+:::
+
+## Quiz 3.3 {background-color="#f7fad1" .smaller}
+
+::: {.nonincremental}
+[Marque a alternativa correta:]{.alert}
+
+a. Atributos de tipo objeto guardam referências (ponteiros) para objetos.
+b. Atributos de tipo primitivo guardam referências (ponteiros) para objetos primitivos. 
+c. Objetos só podem criar outros objetos dentro de construtores.
+d. Objetos são criados usando o operador `create`.
+:::
+
+
+# Múltiplos construtores {background-color="#40666e"}
+
+## {.smaller}
+
+Ao criar objetos da classe `VisorDeRelogio` usando o BlueJ, você deve ter notado que há duas opções no menu para criar o objeto.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  new VisorDeRelogio()
+  new VisorDeRelogio(int hora, int minuto)
+```
+:::
+
+. . .
+
+Isso acontece porque `VisorDeRelogio` tem [dois construtores]{.alert}.
+
+- Eles servem para **fornecer formas alternativas de inicializar um objeto** `VisorDeRelogio`.
+  - Com o construtor sem parâmetros, criamos um relógio com hora inicial 01:00.
+  - Já usando o segundo construtor, podemos criar um relógio com hora inicial diferente.
+
+. . .
+
+É comum que classes tenham vários construtores para dar várias opções de criação dos seus objetos.
+
+- Para isso funcionar, cada construtor deve ter um conjunto diferente de parâmetros.
+- Damos a isso o nome de **sobrecarga** de construtores.
+
+
+## {.smaller}
+
+![](imagens/sobrecarga_galvao.png)
+
+## {.smaller}
+
+![](imagens/sobrecarga_galvao_resposta.png)
+
+. . .
+
+Assim como os construtores, **métodos** também **podem ser sobrecarregados**.
+
+## {.smaller}
+
+![](imagens/duvida_metodos_sobrecarregados.png)
+
+. . .
+
+O que pode e o que não pode ser feito em termos de sobrecarga tem a ver com **o que o compilador consegue identificar**.
+
+. . .
+
+Imagine a chamada abaixo:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+	meuCarro.deslocar(68.5);
+```
+:::
+
+. . .
+
+Como o compilador conseguiria definir qual dos métodos está sendo chamado?
+
+- O compilador não consegue!
+- Portanto, não é possível criar dois métodos sobrecarregados dessa forma.
+
+
+## {.smaller}
+
+![](imagens/duvida_metodos_sobrecarregados_retorno.png)
+
+. . .
+
+Mais uma vez vamos pensar em um exemplo de chamada:
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+	int a = meuCarro.acelerar();
+```
+:::
+
+. . .
+
+Nesse caso, parece que seria possível pois o compilador sabe que a variável `a` é do tipo `int`.
+
+- Mas na verdade você não é obrigado a usar o valor retornado por uma chamada de método.
+  ```{.java code-line-numbers="false"}
+	meuCarro.acelerar();
+  ```
+- A chamada acima, por exemplo é válida, e, nesse caso, o compilador não consegue definir qual método será chamado.
+- Portanto, não é possível declarar métodos sobrecarregados dessa forma.
+
+
+## 
+
+::: {.callout-tip title="Conceito" icon=false}
+**Sobrecarga**: Uma classe pode ter mais de um construtor, ou mais de um método com o mesmo nome, desde que cada um tenha um conjunto diferente de tipos de parâmetros (a quantidade ou a ordem dos tipos dos parâmetros).
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Avalie segundo construtor no código da classe `VisorDeRelogio`.
+Explique o que ele faz e como ele o faz.
+
+Identifique ass semelhanças e dferenças entre os dois construtores.
+Porque o método `atualizarVisor` não é chamado no segundo construtor, por exemplo?
+:::
+
+# Chamadas de métodos {background-color="#40666e"}
+
+## {.smaller}
+
+A última linha do construtor de `VisorDeRelogio` tem o comando `atualizarVisor`.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="5"}
+  public VisorDeRelogio()
+  {
+    horas = new VisorDeNumero(24);
+    minutos = new VisorDeNumero(60);
+    atualizarVisor();
+  }
+```
+:::
+
+. . .
+
+Este comando é uma [chamada de método]{.alert}.
+
+- Você já deve ter visto que a classe `VisorDeRelogio` tem um método com a seguinte assinatura:
+  
+  ::: {.halfincfontsize}
+  ```{.java code-line-numbers="false"}
+    private void atualizarVisor()
+  ```
+  :::
+
+. . .
+
+A chamada de método no construtor, chama este método.
+
+- Como o método está na mesma classe, nós chamamos isso de [chamada de método interno]{.alert}.
+
+## {.smaller}
+
+Uma chamada de método interno tem a seguinte **sintaxe**:
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  nomeDoMetodo(lista_de_parametros)
+```
+:::
+
+. . .
+
+Repare que uma chamada de método interno não usa variável, nem ponto.
+
+- Não é necessário usar variável porque o objeto chama o método dele mesmo.
+
+. . .
+
+Métodos podem ter parâmetros ou não.
+
+- Nesse exemplo, como o método não tem parâmetros, não passamos nenhum valor na chamada do método.
+
+## {.smaller}
+
+Quando há uma chamada de método, o **método correspondente é executado**
+
+- E, então, a **execução retorna** para onde o método foi chamado e **continua depois dela**.
+- O método correspondente precisa ter o mesmo nome e a mesma sequência de tipos de parâmetros.
+  - Já que podem existir métodos **sobrecarregados**.
+
+## {.smaller}
+
+Vamos agora avaliar o código do método `tiqueTaque`:
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  public void tiqueTaque()
+  {
+    minutos.incrementar();
+    if(minutos.obterValor() == 0) {  // minutos voltaram para zero
+      horas.incrementar();
+    }
+    atualizarVisor();
+  }
+```
+:::
+
+. . .
+
+Se este visor estivesse conectado a um relógio de verdade, este método seria chamado a cada 60 segundos por um temporizador eletrônico do relógio.
+
+- Aqui, nós mesmos chamamos o método para testar o visor.
+
+## {.smaller}
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="3"}
+  public void tiqueTaque()
+  {
+    minutos.incrementar();
+    if(minutos.obterValor() == 0) {  // minutos voltaram para zero
+      horas.incrementar();
+    }
+    atualizarVisor();
+  }
+```
+:::
+
+A primeira linha do método chama o comando `incrementar` do objeto `minutos`.
+
+- Assim, quando um dos métodos do `VisorDeRelogio` é chamado, ele, por sua vez, chama um método de outro objeto como parte da tarefa.
+
+. . .
+
+Uma chamada a um método de outro objeto é uma [chamada de método externo]{.alert}.
+
+## {.smaller}
+
+Uma chamada de método externo tem a seguinte **sintaxe**:
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  objeto . nomeDoMetodo (lista_de_parametros)
+```
+:::
+
+. . .
+
+Essa sintaxe é conhecida como notação de ponto (*dot notation*).
+
+- Usamos o nome do objeto, seguido de ponto, seguindo do nome do método, seguido dos parâmetros do método.
+- Repare que usamos o nome do objeto e não da classe.
+
+
+## {.smaller}
+
+Veja que quando usamos o nome de objeto é uma chamada de método externo.
+
+- O que é bem diferente de uma chamada de método interno.
+- Porque, ao chamar o método externo, estamos pedindo a um objeto `VisorDeNumero` para fazer parte da tarefa completa.
+
+. . .
+
+Podemos dizer que a tarefa de manter as horas é dividida entre as classe `VisorDeRelogio` e `VisorDeNumero`.
+
+- Este é um exemplo prático do princípio de **dividir e conquistar** que vimos no início do capítulo ao discutirmos sobre **abstração**.
+
+
+## {.smaller}
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="3-4"}
+  public void tiqueTaque()
+  {
+    minutos.incrementar();
+    if(minutos.obterValor() == 0) {  // minutos voltaram para zero
+      horas.incrementar();
+    }
+    atualizarVisor();
+  }
+```
+:::
+
+Repare que a linha seguinte do método `tiqueTaque` faz outra chamada de método externo.
+
+- O método retorna o valor atual dos minutos.
+- Se ele acabou de ir para zero, é hora de incrementar as horas, e isso é feito em seguida.
+
+## {.smaller}
+
+Podemos agora entender os demais métodos da classe.
+
+- Identifique neles onde ocorrem chamadas de método interno e chamadas de método externo.
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+Métodos podem chamar outros métodos da mesma classe como parte de sua implementação.
+Chamamos isso de **chamada de método interno**.
+:::
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+Métodos podem chamar métodos de outros objetos usando notação de ponto.
+Chamamos isso de **chamada de método externo**.
+:::
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Suponha que exista uma variável chamada `imp1` do tipo `Impressora`, que referencia um objeto impressora, cuja classe tem métodos com as seguintes assinaturas:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  public void imprimir(String nomeDoArquivo, boolean dosDoisLados)
+  public int obterSituacao(int atraso)
+```
+:::
+
+Escreva duas possíveis chamadas para cada um desses métodos. 
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Abra o projeto [`casa`](https://github.com/ufla-ipoo/casa) e avalie a classe `Figura`.
+Que tipos de objetos são criados no construtor de `Figura`?
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Liste todas as chamadas de métodos externos que são feitas no método `desenhar` da classe `Figura` para o objeto `Triangulo` chamado `telhado`.
+:::
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Remova as duas linhas abaixo do método `desenhar` da classe `Figura`, fazendo com que a definição das cores seja feita através de uma chamada de um método interno chamado `definirCor` (que você precisará criar).
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  janela.mudarCor("preta");
+  sol.mudarCor("amarela");
+```
+:::
+
+:::
+
+## Quiz 3.4 {background-color="#f7fad1" .smaller}
+
+::: {.nonincremental}
+[Marque a alternativa incorreta:]{.alert}
+
+a. Construtores e métodos podem ser sobrecarregados.
+b. Métodos sobrecarregados são aqueles que têm muitos comandos.
+c. Métodos sobrecarregados são métodos de uma mesma classe que possuem o mesmo nome.
+d. Objetos podem chamar métodos de outros objetos através de chamadas de método externo.
+:::
+
+
+# Recapitulando o visor de relógio {background-color="#40666e"}
+
+## {.smaller}
+
+É importante reforçarmos como o projeto do visor de relógio usa o conceito de **abstração** para dividir o problema em problemas menores.
+
+- Repare que no código da classe `VisorDeRelogio` nós criamos objetos `VisorDeNumero` sem precisarmos nos preocupar sobre os detalhes internos desses objetos.
+- Depois chamamos métodos (`incrementar` e `obterValor`) dos objetos para fazer o que precisamos.
+  - Nesse ponto, assumimos que o método `incrementar` vai mudar corretamente o valor, **sem preocuparmos** com [como]{.alert} ele faz isso.
+
+## {.smaller}
+
+Em projetos reais, muitas vezes classes diferentes são feitas por pessoas diferentes.
+
+- Se tivéssemos feito assim para o exemplo do visor de relógio, o que as duas pessoas precisariam entrar em acordo?
+  - Precisariam concordar sobre as **assinaturas de método** e [o que]{.alert} **os métodos fazem**.
+  - Não seria necessário discutir **como** eles fazem.
+- Feito isso, uma pessoa poderia implementar os métodos e a outra apenas os usaria.
+
+. . .
+
+O conjunto dos métodos (assinaturas) que um objeto disponibiliza para outros objetos é chamado de [interface]{.alert}.
+
+- Esse conceito traz um poder enorme para a Orientação a Objetos.
+- Você poderá conhecê-lo melhor e utilizar todo o seu poder na disciplina PPOO ;)
+
+##
+
+::: {.callout-note title="(Opcional) Exercício - [Desafio]{.alert}" icon=false}
+Mude o relógio para que ele funcione como relógios americanos, mostrando 12 horas em vez de 24.
+
+Repare que isso pode ser mais difícil do que parece, depois da meia-noite e do meio-dia, o relógio deve mostrar 12:30 e não 00:30.
+Portanto, os minutos devem ir de 1 a 59, mas as horas devem ir de 1 a 12.
+:::
+
+::: {.callout-note title="(Opcional) Exercício - [Desafio]{.alert}" icon=false}
+Há pelo menos duas formas de fazer o exercício anterior.
+Você poderia armazenar as horas com valores entre 1 e 12.
+Ou poderia deixar o relógio funcionando internamente com um relógio de 24 horas e tratar apenas a `stringVisor` para mostrar
+horas no formato esperado de 12 horas.
+
+Implemente as duas opções.
+
+Qual opção é mais fácil? Qual é melhor? Por que?
+:::
+
+##
+
+::: {.callout-note title="(Opcional) Exercício - [Desafio]{.alert}" icon=false}
+Suponha que uma classe `Arvore` tenha um atributo do tipo `Triangulo` chamado `folhas` e um atributo do tipo `Quadrado` chamado `tronco`.
+O construtor de `Arvores` não espera nenhum parâmetro, e seu construtor cria objetos `Triangulo` e `Quadrado` para seus atributos.
+
+Usando o projeto [`figuras`](https://github.com/ufla-ipoo/casa), crie uma classe `Arvore` que corresponda a essa descrição.
+Neste exercício, não precisa definir nenhum método, e não precisa tratar a forma da árvore.
+:::
+
+::: {.callout-note title="(Opcional) Exercício - [Desafio]{.alert}" icon=false}
+Agora complete a classe `Arvore` do exercício anterior.
+O construtor deve mover o tronco para debaixo das folhas e fazer ambos serem exibidos.
+Faça isso criando um método chamado `configurar` e incluindo uma chamada a este método no construtor.
+Mude o tamanho do triângulo de forma que a árvore se pareça um pinheiro.
+:::
+
+# Entregas dessa Aula {background-color="#40666e"}
+
+## {.smaller}
+
+::: {.nonincremental}
+
+Como você já sabe das aulas anteriores, para que você tenha a [presença]{.alert} 
+
+- considerada nas aula em [formato ANP]{.alert} (Atividade Não-Presencial), 
+- você precisa **demonstrar que** realmente **estudou** o conteúdo.
+
+::: {.callout-important title="Entregas no Campus Virtual"}
+Para ter presença nessa aula você deve:
+
+- Responder, no Campus Virtual, aos quizes presentes nesses slides.
+:::
+:::
