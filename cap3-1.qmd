@@ -40,7 +40,7 @@ Será que preciso dizer de novo as [dicas]{.alert}? :)
 Construções Java do capítulo
 
 ::: {.nonincremental}
-- Tipos de classe, operadores lógicos (`&&` e `||`), concatenação de strings, construção de objetos (operador `new`), chamadas de métodos, `this`.
+- Tipos de classe, operadores lógicos (`&&` e `||`), concatenação de strings, construçãfo de objetos (operador `new`), chamadas de métodos, `this`.
 :::
 
 . . .
@@ -204,7 +204,7 @@ Podemos entender isso melhor com um exemplo.
 
 Vamos pensar em uma equipe de engenheiros **projetando um carro**.
 
-- Eles pensam nas **partes do carro**: design, tamanho, local do motor, quantidade de assentos, espaçamento entre rodas, etc.
+- Eles pensam nas **partes do carro**: *design*, tamanho, local do motor, quantidade de assentos, espaçamento entre rodas, etc.
 
 ![](imagens/engenheiros_carro.jpg){width="40%"}^[Imagem de vectorjuice no Freepik ]
 
@@ -218,7 +218,7 @@ Outra equipe de engenheiros projeta o **motor**.
 - Para eles o motor não é uma peça única, e sim **um sistema complexo** de várias partes
   ![](imagens/motor_carro.png){width="50%"}
 
-- Uma delas pode ser a vela de ignição
+- Uma delas pode ser a vela de ignição.
 
 
 ## {.smaller}
@@ -227,11 +227,11 @@ Há então uma terceira equipe de engenheiros (muitas vezes de outra empresa) qu
 
 - Eles pensam na vela como um sistema com **várias partes**.
   ![](imagens/vela_ignicao.png){width="50%"}
-- Eles podem ter feitos estudos complexos para saber o metal certo a ser usado, e como é processo detalhado de fabricação e instalação
+- Eles podem ter feito estudos complexos para saber o metal certo a ser usado, e como é o processo detalhado de fabricação e instalação.
 
 # {.smaller}
 
-A mesma coisa acontece com as outra partes do carro.
+A mesma coisa acontece com as outras partes do carro.
 
 . . .
 
@@ -262,14 +262,14 @@ Já a empresa que fabrica o carro, vai apenas comprar o pneu da fabricante de pn
 
 # {.smaller}
 
-Os engenheiros da fabricante de carros [abstraem]{.alert} (*ignoram*) os detalhes da fabricação dos pneus para conseguir se concentrar os detalhes de criação da roda, por exemplo.
+Os engenheiros da fabricante de carros [abstraem]{.alert} (*ignoram*) os detalhes da fabricação dos pneus para conseguirem se concentrar nos detalhes de criação da roda, por exemplo.
 
 - Já os *designers* ignoram os detalhes da roda ou do motor para se concentrar no *design* do carro como um todo.
   - Eles se preocupam apenas com o tamanho do motor e das rodas.
 
 . . .
 
-Repares que um carro é formado por tantas partes que é praticamente **impossível** uma pessoa só **saber todos os detalhes** de todas as partes ao mesmo tempo.
+Repare que um carro é formado por tantas partes que é praticamente **impossível** uma pessoa só **saber todos os detalhes**, de todas as partes, ao mesmo tempo.
 
 - Se fosse assim, provavelmente carros nem seriam fabricados.
 
@@ -313,7 +313,7 @@ Em **POO**, os componentes e subcomponentes são **objetos**.
 
 - Para criar um carro completo em um sistema OO, faríamos como no exemplo da fábrica.
 - Criaríamos objetos separados para motor, roda, caixa de marcha, etc.
-- E usarmos esses objetos para construir um objeto carro.
+- E usaríamos esses objetos para construir um objeto carro.
 
 ## {.smaller}
 
@@ -358,11 +358,13 @@ Repare como funcionam os dígitos das horas.
 
 E como funcionam os dígitos dos minutos?
 
-- Eles começam em 0, incrementam de 1 em 1, até chegar a 60, e depois voltam para zero.
+- Eles começam em 0, incrementam de 1 em 1, até chegar a 59, e depois voltam para zero.
 
 . . .
 
-Repare que o comportamento é exatamente o mesmo, o que muda é apenas o valor limite que faz o valor voltar para zero.
+Repare que o comportamento dos dígitos das horas e dos minutosé exatamente o mesmo.
+
+- O que muda é apenas o valor limite que faz o valor voltar para zero.
 
 - Podemos pensar então em um objeto capaz de representar um visor de dois dígitos.
   ![](imagens/visor_numeros.png)
@@ -381,7 +383,7 @@ Precisamos então definir uma classe para representar um visor de número de doi
 
 . . .
 
-Criada a classe, podemos criar dois objetos dela com limites diferentes para representar o relógio.
+Com a classe pronta, podemos criar dois objetos dela com limites diferentes para representar o relógio.
 
 ## {.smaller}
 
@@ -461,7 +463,7 @@ Uma declaração de um atributo ou uma variável do tipo de uma classe não cria
 
 Compare as duas figuras abaixo:
 
-- À esquerda temos o [diagrama de objetos]{.alert} do visor de relógio
+- À esquerda temos o [diagrama de objetos]{.alert} do visor de relógio.
 - À direita temos o [diagrama de classes]{.alert} para a mesma situação.
 
 :::: {.columns}
@@ -489,7 +491,7 @@ Repare que nós criamos dois objetos da mesma classe `VisorDeNumero`.
 Os dois diagramas mostram diferentes visões do mesmo programa.
 
 - O diagrama de classes mostra uma [visão estática]{.alert}.
-  - Ou sejam, representa o **momento da programação**, quando estamos escrevendo o código.
+  - Ou seja, representa o **momento da programação**, quando estamos escrevendo o código.
   - Dizemos que `VisorDeRelogio` usa (ou depende) de `VisorDeNumero`.
 
 . . .
@@ -502,16 +504,16 @@ Quando o programa é iniciado, vamos criar um objeto `VisorDeRelogio`.
 
 ## {.smaller}
 
-![](imagens/visor_relogio_diagrama_objetos.png){width="50%"} 
+![](imagens/visor_relogio_diagrama_objetos.png){width="40%"} 
 
 Vamos avaliar o diagrama de objetos novamente, pois ele traz um detalhe importante.
 
-- Repare que uma variável que guarda um objeto, ela não o guarda diretamente.
+- Repare que quando uma variável que guarda um objeto, ela não o guarda diretamente.
 - Na verdade a variável guarda uma [referência]{.alert} (um ponteiro) [para o objeto]{.alert} .
 
 . . .
 
-No diagrama a variável é representada pela caixa branca
+No diagrama a variável é representada pela caixa branca.
 
 - E a referência do objeto pela seta.
 - Portanto, repare que o objeto `VisorDeNumero` é armazenado fora do objeto `VisorDeRelogio`.
@@ -544,9 +546,9 @@ Escreva a declaração de um atributo `orientador` que guarde uma referência pa
 [Marque a alternativa incorreta:]{.alert}
 
 a. Classes definem tipos.
-b. Diagrama de classes dão uma visão estática do sistema.
-c. Diagrama de classes dão uma visão dinâmica do sistema.
-d. Uma visão estática representa o tempo de execução do sistema.
+b. Diagramas de classes dão uma visão estática do programa.
+c. Diagramas de objetos dão uma visão dinâmica do programa.
+d. Visão estática se referente ao tempo de execução do programa.
 :::
 
 # Tipos primitivos e tipos objetos {background-color="#40666e"}
@@ -630,7 +632,7 @@ No BlueJ acesse a opção: **Exibir** --> **Exibir terminal**, e no terminal ace
 
 Crie um objeto `VisorDeNumero` com limite `24` e dê o nome `horas` para a variável.
 
-- Abra o inspetor e, com ela aberta, chame o método `incrementar` do objeto criado.
+- Abra o inspetor e, com ele aberto, chame o método `incrementar` do objeto criado.
 - Repare, no terminal, como é a chamada do método.
 - Chame repetidamente o método `incrementar` até que ele volte para zero. Obs.: use um limite menor se estiver impaciente :)
 :::
@@ -648,24 +650,32 @@ Crie outro objeto `VisorDeNumero`, com limite 60 , e dê o nome `minutos`.
 . . .
 
 ::: {.callout-note title="Exercício" icon=false}
-Usando o bloco de códigos do BlueJ, crie um objeto `VisorDeNumero`, chamando `vn`, com limite 6, e experimente todos os seus métodos.
+Usando o bloco de códigos do BlueJ, crie um objeto `VisorDeNumero`, chamado `vn`, com limite 6, e experimente todos os seus métodos.
 :::
 
 ##
 
 ::: {.callout-note title="Exercício" icon=false}
 Experimente digitar o código abaixo no Bloco de Códigos:
+
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
 VisorDeNumero.obterValor();
 ```
+:::
+
 O que a mensagem de erro indica? 
 :::
 
 ::: {.callout-note title="Exercício" icon=false}
 Experimente agora a linha abaixo:
+
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
 vn.definirValor(int 5);
 ```
+:::
+
 A mensagem de erro, nesse caso, te ajuda a identificar o problema?
 
 Tente corrigir o código e memorizar essa situação que é muito comum para quem está começando.
@@ -783,7 +793,7 @@ Veja que o atributo `stringVisor` simula um visor físico real do relógio.
 A classe `VisorDeRelogio` tem mais dois atributos: `horas` e `minutos`.
 
 - Eles guardam **referências** para objetos do tipo `VisorDeNumero`.
-- O valor lógico do horário do relógio são guardados nesses dois atributos.
+- O valor lógico do horário do relógio é guardado nesses dois atributos.
 
 ## {.smaller}
 
@@ -813,7 +823,7 @@ Vimos que um visor de relógio possui dois visores de números, para horas e min
 
 . . .
 
-Veja que **como usuários** do mostrador de relógio, nós criamos apenas o objeto da classe `VisorDeRelogio`.
+Veja que, **como usuários** do mostrador de relógio, nós criamos apenas o objeto da classe `VisorDeRelogio`.
 
 - E esperamos que os **visores de números** sejam **criados implicitamente**.
 
@@ -832,19 +842,19 @@ Vamos analisar como o construtor de `VisorDeRelogio` faz isso:
 ```{.java}
 public class VisorDeRelogio
 {
-  private VisorDeNumero horas;
-  private VisorDeNumero minutos;
+    private VisorDeNumero horas;
+    private VisorDeNumero minutos;
 
-  // Atributos restantes omitidos
+    // Atributos restantes omitidos
 
-  public VisorDeRelogio()
-  {
-    horas = new VisorDeNumero(24);
-    minutos = new VisorDeNumero(60);
-    atualizarVisor();
-  }
+    public VisorDeRelogio()
+    {
+        horas = new VisorDeNumero(24);
+        minutos = new VisorDeNumero(60);
+        atualizarVisor();
+    }
 
-  // Métodos omitidos
+    // Métodos omitidos
 }
 ```
 :::
@@ -857,19 +867,19 @@ Vamos analisar como o construtor de `VisorDeRelogio` faz isso:
 ```{.java code-line-numbers="10-11"}
 public class VisorDeRelogio
 {
-  private VisorDeNumero horas;
-  private VisorDeNumero minutos;
+    private VisorDeNumero horas;
+    private VisorDeNumero minutos;
 
-  // Atributos restantes omitidos
+    // Atributos restantes omitidos
 
-  public VisorDeRelogio()
-  {
-    horas = new VisorDeNumero(24);
-    minutos = new VisorDeNumero(60);
-    atualizarVisor();
-  }
+    public VisorDeRelogio()
+    {
+        horas = new VisorDeNumero(24);
+        minutos = new VisorDeNumero(60);
+        atualizarVisor();
+    }
 
-  // Métodos omitidos
+    // Métodos omitidos
 }
 ```
 :::
@@ -927,16 +937,15 @@ Com isso, ao usarmos o operador `new` para criar um objeto `VisorDeNumero`, como
 
 Veja que da forma que fizemos, ficou como gostaríamos:
 
-- Como ***usuários*** do `VisorDeRelogio`
+- Como ***usuários*** do `VisorDeRelogio`:
   - Criamos apenas esse objeto, e os visores de números são criados implicitamente.
-- Já como ***programadores*** da classe,
+- Já como ***programadores*** da classe:
   - Precisamos explicitar a criação dos objetos, escrevendo código para isso.
 
 . . .
 
-Obs.: ao final do construtor, o método `atualizarVisor` é chamado.
 
-- Conversaremos sobre ele mais adiante.
+Obs.: ao final do construtor, o método `atualizarVisor` é chamado. Conversaremos sobre ele mais adiante.
 
 ## 
 
@@ -961,7 +970,7 @@ d. Objetos são criados usando o operador `create`.
 
 ## {.smaller}
 
-Ao criar objetos da classe `VisorDeRelogio` usando o BlueJ, você deve ter notado que há duas opções no menu para criar o objeto.
+Ao criar objetos da classe `VisorDeRelogio`, usando o BlueJ, você deve ter notado que há duas opções no menu para criar o objeto.
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
@@ -975,7 +984,7 @@ Ao criar objetos da classe `VisorDeRelogio` usando o BlueJ, você deve ter notad
 Isso acontece porque `VisorDeRelogio` tem [dois construtores]{.alert}.
 
 - Eles servem para **fornecer formas alternativas de inicializar um objeto** `VisorDeRelogio`.
-  - Com o construtor sem parâmetros, criamos um relógio com hora inicial 01:00.
+  - Com o construtor sem parâmetros, criamos um relógio com hora inicial 00:00.
   - Já usando o segundo construtor, podemos criar um relógio com hora inicial diferente.
 
 . . .
@@ -983,7 +992,7 @@ Isso acontece porque `VisorDeRelogio` tem [dois construtores]{.alert}.
 É comum que classes tenham vários construtores para dar várias opções de criação dos seus objetos.
 
 - Para isso funcionar, cada construtor deve ter um conjunto diferente de parâmetros.
-- Damos a isso o nome de **sobrecarga** de construtores.
+- Damos a isso o nome de [sobrecarga]{.alert} de construtores.
 
 
 ## {.smaller}
@@ -996,7 +1005,7 @@ Isso acontece porque `VisorDeRelogio` tem [dois construtores]{.alert}.
 
 . . .
 
-Assim como os construtores, **métodos** também **podem ser sobrecarregados**.
+Assim como os construtores, [métodos]{.alert} também [podem ser sobrecarregados]{.alert}.
 
 ## {.smaller}
 
@@ -1055,16 +1064,16 @@ Nesse caso, parece que seria possível pois o compilador sabe que a variável `a
 ## 
 
 ::: {.callout-tip title="Conceito" icon=false}
-**Sobrecarga**: Uma classe pode ter mais de um construtor, ou mais de um método com o mesmo nome, desde que cada um tenha um conjunto diferente de tipos de parâmetros (a quantidade ou a ordem dos tipos dos parâmetros).
+**Sobrecarga**: Uma classe pode ter mais de um construtor, ou mais de um método com o mesmo nome, desde que cada um tenha um conjunto diferente de tipos de parâmetros (ou seja, a quantidade ou a ordem dos tipos dos parâmetros precisa ser diferente).
 :::
 
 . . .
 
 ::: {.callout-note title="Exercício" icon=false}
-Avalie segundo construtor no código da classe `VisorDeRelogio`.
+Avalie o segundo construtor no código da classe `VisorDeRelogio`.
 Explique o que ele faz e como ele o faz.
 
-Identifique ass semelhanças e dferenças entre os dois construtores.
+Identifique as semelhanças e diferenças entre os dois construtores.
 Porque o método `atualizarVisor` não é chamado no segundo construtor, por exemplo?
 :::
 
@@ -1076,12 +1085,12 @@ A última linha do construtor de `VisorDeRelogio` tem o comando `atualizarVisor`
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="5"}
-  public VisorDeRelogio()
-  {
-    horas = new VisorDeNumero(24);
-    minutos = new VisorDeNumero(60);
-    atualizarVisor();
-  }
+    public VisorDeRelogio()
+    {
+        horas = new VisorDeNumero(24);
+        minutos = new VisorDeNumero(60);
+        atualizarVisor();
+    }
 ```
 :::
 
@@ -1099,9 +1108,9 @@ Este comando é uma [chamada de método]{.alert}.
 
 . . .
 
-A chamada de método no construtor, chama este método.
+Portanto, o último comando no construtor, chama este método.
 
-- Como o método está na mesma classe, nós chamamos isso de [chamada de método interno]{.alert}.
+- Como o método está na mesma classe, a essa operação damos o nome de [chamada de método interno]{.alert}.
 
 ## {.smaller}
 
@@ -1129,7 +1138,7 @@ Métodos podem ter parâmetros ou não.
 
 ## {.smaller}
 
-Quando há uma chamada de método, o **método correspondente é executado**
+Quando há uma chamada de método, o **método correspondente é executado**.
 
 - E, então, a **execução retorna** para onde o método foi chamado e **continua depois dela**.
 - O método correspondente precisa ter o mesmo nome e a mesma sequência de tipos de parâmetros.
@@ -1143,14 +1152,14 @@ Vamos agora avaliar o código do método `tiqueTaque`:
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-  public void tiqueTaque()
-  {
-    minutos.incrementar();
-    if(minutos.obterValor() == 0) {  // minutos voltaram para zero
-      horas.incrementar();
+    public void tiqueTaque()
+    {
+        minutos.incrementar();
+        if(minutos.obterValor() == 0) {  // minutos voltaram para zero
+            horas.incrementar();
+        }
+        atualizarVisor();
     }
-    atualizarVisor();
-  }
 ```
 :::
 
@@ -1164,20 +1173,20 @@ Se este visor estivesse conectado a um relógio de verdade, este método seria c
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="3"}
-  public void tiqueTaque()
-  {
-    minutos.incrementar();
-    if(minutos.obterValor() == 0) {  // minutos voltaram para zero
-      horas.incrementar();
+    public void tiqueTaque()
+    {
+        minutos.incrementar();
+        if(minutos.obterValor() == 0) {  // minutos voltaram para zero
+            horas.incrementar();
+        }
+        atualizarVisor();
     }
-    atualizarVisor();
-  }
 ```
 :::
 
 A primeira linha do método chama o comando `incrementar` do objeto `minutos`.
 
-- Assim, quando um dos métodos do `VisorDeRelogio` é chamado, ele, por sua vez, chama um método de outro objeto como parte da tarefa.
+- Veja então que, dessa, quando um dos métodos do `VisorDeRelogio` é chamado, ele, por sua vez, chama um método de outro objeto como parte da tarefa.
 
 . . .
 
@@ -1185,7 +1194,7 @@ Uma chamada a um método de outro objeto é uma [chamada de método externo]{.al
 
 ## {.smaller}
 
-Uma chamada de método externo tem a seguinte **sintaxe**:
+Uma **chamada de método externo** tem a seguinte **sintaxe**:
 
 . . .
 
@@ -1205,7 +1214,7 @@ Essa sintaxe é conhecida como notação de ponto (*dot notation*).
 
 ## {.smaller}
 
-Veja que quando usamos o nome de objeto é uma chamada de método externo.
+Veja que, quando usamos o nome de objeto, temos uma chamada de método externo.
 
 - O que é bem diferente de uma chamada de método interno.
 - Porque, ao chamar o método externo, estamos pedindo a um objeto `VisorDeNumero` para fazer parte da tarefa completa.
@@ -1220,15 +1229,15 @@ Podemos dizer que a tarefa de manter as horas é dividida entre as classe `Visor
 ## {.smaller}
 
 ::: {.halfincfontsize}
-```{.java code-line-numbers="3-4"}
-  public void tiqueTaque()
-  {
-    minutos.incrementar();
-    if(minutos.obterValor() == 0) {  // minutos voltaram para zero
-      horas.incrementar();
+```{.java code-line-numbers="4"}
+    public void tiqueTaque()
+    {
+        minutos.incrementar();
+        if(minutos.obterValor() == 0) {  // minutos voltaram para zero
+            horas.incrementar();
+        }
+        atualizarVisor();
     }
-    atualizarVisor();
-  }
 ```
 :::
 
@@ -1313,7 +1322,7 @@ d. Objetos podem chamar métodos de outros objetos através de chamadas de méto
 
 É importante reforçarmos como o projeto do visor de relógio usa o conceito de **abstração** para dividir o problema em problemas menores.
 
-- Repare que no código da classe `VisorDeRelogio` nós criamos objetos `VisorDeNumero` sem precisarmos nos preocupar sobre os detalhes internos desses objetos.
+- Repare que, no código da classe `VisorDeRelogio`, criamos objetos `VisorDeNumero` sem nos preocupar sobre os detalhes internos desses objetos.
 - Depois chamamos métodos (`incrementar` e `obterValor`) dos objetos para fazer o que precisamos.
   - Nesse ponto, assumimos que o método `incrementar` vai mudar corretamente o valor, **sem preocuparmos** com [como]{.alert} ele faz isso.
 
@@ -1322,7 +1331,7 @@ d. Objetos podem chamar métodos de outros objetos através de chamadas de méto
 Em projetos reais, muitas vezes classes diferentes são feitas por pessoas diferentes.
 
 - Se tivéssemos feito assim para o exemplo do visor de relógio, o que as duas pessoas precisariam entrar em acordo?
-  - Precisariam concordar sobre as **assinaturas de método** e [o que]{.alert} **os métodos fazem**.
+  - Precisariam concordar, apenas, sobre as **assinaturas de método** e [o que]{.alert} **os métodos fazem**.
   - Não seria necessário discutir **como** eles fazem.
 - Feito isso, uma pessoa poderia implementar os métodos e a outra apenas os usaria.
 
@@ -1360,7 +1369,7 @@ Suponha que uma classe `Arvore` tenha um atributo do tipo `Triangulo` chamado `f
 O construtor de `Arvores` não espera nenhum parâmetro, e seu construtor cria objetos `Triangulo` e `Quadrado` para seus atributos.
 
 Usando o projeto [`figuras`](https://github.com/ufla-ipoo/casa), crie uma classe `Arvore` que corresponda a essa descrição.
-Neste exercício, não precisa definir nenhum método, e não precisa tratar a forma da árvore.
+Neste exercício, não é necessário definir nenhum método, e nem tratar a forma da árvore.
 :::
 
 ::: {.callout-note title="(Opcional) Exercício - [Desafio]{.alert}" icon=false}

@@ -412,7 +412,7 @@
     </div>
 </div>
 
-  <p class="date">18/09/2023</p>
+  <p class="date">19/09/2023</p>
 </section>
 <section id="como-estudar" class="slide level2 smaller">
 <h2>Como estudar?</h2>
@@ -444,7 +444,7 @@
 <p>Construções Java do capítulo</p>
 <div>
 <ul>
-<li>Tipos de classe, operadores lógicos (<code>&amp;&amp;</code> e <code>||</code>), concatenação de strings, construção de objetos (operador <code>new</code>), chamadas de métodos, <code>this</code>.</li>
+<li>Tipos de classe, operadores lógicos (<code>&amp;&amp;</code> e <code>||</code>), concatenação de strings, construçãfo de objetos (operador <code>new</code>), chamadas de métodos, <code>this</code>.</li>
 </ul>
 </div>
 </div>
@@ -604,7 +604,7 @@
 <h2></h2>
 <p>Vamos pensar em uma equipe de engenheiros <strong>projetando um carro</strong>.</p>
 <ul>
-<li class="fragment">Eles pensam nas <strong>partes do carro</strong>: design, tamanho, local do motor, quantidade de assentos, espaçamento entre rodas, etc.</li>
+<li class="fragment">Eles pensam nas <strong>partes do carro</strong>: <em>design</em>, tamanho, local do motor, quantidade de assentos, espaçamento entre rodas, etc.</li>
 </ul>
 <p><img data-src="imagens/engenheiros_carro.jpg" style="width:40.0%"><sup>1</sup></p>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Imagem de vectorjuice no Freepik </p></li></ol></aside></section>
@@ -614,7 +614,7 @@
 <ul>
 <li class="fragment"><p>Eles pensam em cada <strong>parte do motor</strong>: as cilindradas, o mecanismo de injeção, a eletrônica, etc.</p></li>
 <li class="fragment"><p>Para eles o motor não é uma peça única, e sim <strong>um sistema complexo</strong> de várias partes <img data-src="imagens/motor_carro.png" style="width:50.0%"></p></li>
-<li class="fragment"><p>Uma delas pode ser a vela de ignição</p></li>
+<li class="fragment"><p>Uma delas pode ser a vela de ignição.</p></li>
 </ul>
 </section>
 <section id="section-13" class="slide level2 smaller">
@@ -622,12 +622,12 @@
 <p>Há então uma terceira equipe de engenheiros (muitas vezes de outra empresa) que projeta a <strong>vela de ignição</strong>.</p>
 <ul>
 <li class="fragment">Eles pensam na vela como um sistema com <strong>várias partes</strong>. <img data-src="imagens/vela_ignicao.png" style="width:50.0%"></li>
-<li class="fragment">Eles podem ter feitos estudos complexos para saber o metal certo a ser usado, e como é processo detalhado de fabricação e instalação</li>
+<li class="fragment">Eles podem ter feito estudos complexos para saber o metal certo a ser usado, e como é o processo detalhado de fabricação e instalação.</li>
 </ul>
 </section></section>
 <section id="section-14" class="title-slide slide level1 smaller center">
 <h1></h1>
-<p>A mesma coisa acontece com as outra partes do carro.</p>
+<p>A mesma coisa acontece com as outras partes do carro.</p>
 <div class="fragment">
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -653,7 +653,7 @@
 
 <section id="section-15" class="title-slide slide level1 smaller center">
 <h1></h1>
-<p>Os engenheiros da fabricante de carros <span class="alert">abstraem</span> (<em>ignoram</em>) os detalhes da fabricação dos pneus para conseguir se concentrar os detalhes de criação da roda, por exemplo.</p>
+<p>Os engenheiros da fabricante de carros <span class="alert">abstraem</span> (<em>ignoram</em>) os detalhes da fabricação dos pneus para conseguirem se concentrar nos detalhes de criação da roda, por exemplo.</p>
 <ul>
 <li class="fragment">Já os <em>designers</em> ignoram os detalhes da roda ou do motor para se concentrar no <em>design</em> do carro como um todo.
 <ul>
@@ -661,7 +661,7 @@
 </ul></li>
 </ul>
 <div class="fragment">
-<p>Repares que um carro é formado por tantas partes que é praticamente <strong>impossível</strong> uma pessoa só <strong>saber todos os detalhes</strong> de todas as partes ao mesmo tempo.</p>
+<p>Repare que um carro é formado por tantas partes que é praticamente <strong>impossível</strong> uma pessoa só <strong>saber todos os detalhes</strong>, de todas as partes, ao mesmo tempo.</p>
 <ul>
 <li class="fragment">Se fosse assim, provavelmente carros nem seriam fabricados.</li>
 </ul>
@@ -729,7 +729,7 @@
 <ul>
 <li class="fragment">Para criar um carro completo em um sistema OO, faríamos como no exemplo da fábrica.</li>
 <li class="fragment">Criaríamos objetos separados para motor, roda, caixa de marcha, etc.</li>
-<li class="fragment">E usarmos esses objetos para construir um objeto carro.</li>
+<li class="fragment">E usaríamos esses objetos para construir um objeto carro.</li>
 </ul>
 </div>
 </section>
@@ -780,14 +780,15 @@
 <div class="fragment">
 <p>E como funcionam os dígitos dos minutos?</p>
 <ul>
-<li class="fragment">Eles começam em 0, incrementam de 1 em 1, até chegar a 60, e depois voltam para zero.</li>
+<li class="fragment">Eles começam em 0, incrementam de 1 em 1, até chegar a 59, e depois voltam para zero.</li>
 </ul>
 </div>
 <div class="fragment">
-<p>Repare que o comportamento é exatamente o mesmo, o que muda é apenas o valor limite que faz o valor voltar para zero.</p>
+<p>Repare que o comportamento dos dígitos das horas e dos minutosé exatamente o mesmo.</p>
 <ul>
-<li class="fragment">Podemos pensar então em um objeto capaz de representar um visor de dois dígitos. <img data-src="imagens/visor_numeros.png"></li>
-<li class="fragment">E poderíamos usar dois objetos desse tipo, um para as horas e outro para os minutos, para representar o relógio.</li>
+<li class="fragment"><p>O que muda é apenas o valor limite que faz o valor voltar para zero.</p></li>
+<li class="fragment"><p>Podemos pensar então em um objeto capaz de representar um visor de dois dígitos. <img data-src="imagens/visor_numeros.png"></p></li>
+<li class="fragment"><p>E poderíamos usar dois objetos desse tipo, um para as horas e outro para os minutos, para representar o relógio.</p></li>
 </ul>
 </div>
 </section></section>
@@ -808,7 +809,7 @@
 </ul></li>
 </ul>
 <div class="fragment">
-<p>Criada a classe, podemos criar dois objetos dela com limites diferentes para representar o relógio.</p>
+<p>Com a classe pronta, podemos criar dois objetos dela com limites diferentes para representar o relógio.</p>
 </div>
 </section>
 <section id="section-23" class="slide level2 smaller">
@@ -905,7 +906,7 @@
 <h2></h2>
 <p>Compare as duas figuras abaixo:</p>
 <ul>
-<li class="fragment">À esquerda temos o <span class="alert">diagrama de objetos</span> do visor de relógio</li>
+<li class="fragment">À esquerda temos o <span class="alert">diagrama de objetos</span> do visor de relógio.</li>
 <li class="fragment">À direita temos o <span class="alert">diagrama de classes</span> para a mesma situação.</li>
 </ul>
 <div class="columns">
@@ -927,7 +928,7 @@
 <ul>
 <li class="fragment">O diagrama de classes mostra uma <span class="alert">visão estática</span>.
 <ul>
-<li class="fragment">Ou sejam, representa o <strong>momento da programação</strong>, quando estamos escrevendo o código.</li>
+<li class="fragment">Ou seja, representa o <strong>momento da programação</strong>, quando estamos escrevendo o código.</li>
 <li class="fragment">Dizemos que <code>VisorDeRelogio</code> usa (ou depende) de <code>VisorDeNumero</code>.</li>
 </ul></li>
 </ul>
@@ -943,14 +944,14 @@
 </section>
 <section id="section-28" class="slide level2 smaller">
 <h2></h2>
-<p><img data-src="imagens/visor_relogio_diagrama_objetos.png" style="width:50.0%"></p>
+<p><img data-src="imagens/visor_relogio_diagrama_objetos.png" style="width:40.0%"></p>
 <p>Vamos avaliar o diagrama de objetos novamente, pois ele traz um detalhe importante.</p>
 <ul>
-<li class="fragment">Repare que uma variável que guarda um objeto, ela não o guarda diretamente.</li>
+<li class="fragment">Repare que quando uma variável que guarda um objeto, ela não o guarda diretamente.</li>
 <li class="fragment">Na verdade a variável guarda uma <span class="alert">referência</span> (um ponteiro) <span class="alert">para o objeto</span> .</li>
 </ul>
 <div class="fragment">
-<p>No diagrama a variável é representada pela caixa branca</p>
+<p>No diagrama a variável é representada pela caixa branca.</p>
 <ul>
 <li class="fragment">E a referência do objeto pela seta.</li>
 <li class="fragment">Portanto, repare que o objeto <code>VisorDeNumero</code> é armazenado fora do objeto <code>VisorDeRelogio</code>.
@@ -1009,9 +1010,9 @@
 <p><span class="alert">Marque a alternativa incorreta:</span></p>
 <ol type="a">
 <li>Classes definem tipos.</li>
-<li>Diagrama de classes dão uma visão estática do sistema.</li>
-<li>Diagrama de classes dão uma visão dinâmica do sistema.</li>
-<li>Uma visão estática representa o tempo de execução do sistema.</li>
+<li>Diagramas de classes dão uma visão estática do programa.</li>
+<li>Diagramas de objetos dão uma visão dinâmica do programa.</li>
+<li>Visão estática se referente ao tempo de execução do programa.</li>
 </ol>
 </div>
 </section></section>
@@ -1108,7 +1109,7 @@
 <p>No BlueJ acesse a opção: <strong>Exibir</strong> –&gt; <strong>Exibir terminal</strong>, e no terminal acesse <strong>Opcoes</strong> –&gt; <strong>Anotar chamadas de métodos</strong>.</p>
 <p>Crie um objeto <code>VisorDeNumero</code> com limite <code>24</code> e dê o nome <code>horas</code> para a variável.</p>
 <ul>
-<li class="fragment">Abra o inspetor e, com ela aberta, chame o método <code>incrementar</code> do objeto criado.</li>
+<li class="fragment">Abra o inspetor e, com ele aberto, chame o método <code>incrementar</code> do objeto criado.</li>
 <li class="fragment">Repare, no terminal, como é a chamada do método.</li>
 <li class="fragment">Chame repetidamente o método <code>incrementar</code> até que ele volte para zero. Obs.: use um limite menor se estiver impaciente :)</li>
 </ul>
@@ -1140,7 +1141,7 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>Usando o bloco de códigos do BlueJ, crie um objeto <code>VisorDeNumero</code>, chamando <code>vn</code>, com limite 6, e experimente todos os seus métodos.</p>
+<p>Usando o bloco de códigos do BlueJ, crie um objeto <code>VisorDeNumero</code>, chamado <code>vn</code>, com limite 6, e experimente todos os seus métodos.</p>
 </div>
 </div>
 </div>
@@ -1155,7 +1156,9 @@
 </div>
 <div class="callout-content">
 <p>Experimente digitar o código abaixo no Bloco de Códigos:</p>
+<div class="halfincfontsize">
 <div class="sourceCode" id="cb3" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>VisorDeNumero<span class="op">.</span><span class="fu">obterValor</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>O que a mensagem de erro indica?</p>
 </div>
 </div>
@@ -1167,7 +1170,9 @@
 </div>
 <div class="callout-content">
 <p>Experimente agora a linha abaixo:</p>
+<div class="halfincfontsize">
 <div class="sourceCode" id="cb4" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>vn<span class="op">.</span><span class="fu">definirValor</span><span class="op">(</span><span class="dt">int</span> <span class="dv">5</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>A mensagem de erro, nesse caso, te ajuda a identificar o problema?</p>
 <p>Tente corrigir o código e memorizar essa situação que é muito comum para quem está começando.</p>
 </div>
@@ -1330,7 +1335,7 @@
 <p>A classe <code>VisorDeRelogio</code> tem mais dois atributos: <code>horas</code> e <code>minutos</code>.</p>
 <ul>
 <li class="fragment">Eles guardam <strong>referências</strong> para objetos do tipo <code>VisorDeNumero</code>.</li>
-<li class="fragment">O valor lógico do horário do relógio são guardados nesses dois atributos.</li>
+<li class="fragment">O valor lógico do horário do relógio é guardado nesses dois atributos.</li>
 </ul>
 </div>
 </section>
@@ -1374,7 +1379,7 @@
 <li class="fragment">Mas de onde vêm esses objetos no código?</li>
 </ul>
 <div class="fragment">
-<p>Veja que <strong>como usuários</strong> do mostrador de relógio, nós criamos apenas o objeto da classe <code>VisorDeRelogio</code>.</p>
+<p>Veja que, <strong>como usuários</strong> do mostrador de relógio, nós criamos apenas o objeto da classe <code>VisorDeRelogio</code>.</p>
 <ul>
 <li class="fragment">E esperamos que os <strong>visores de números</strong> sejam <strong>criados implicitamente</strong>.</li>
 </ul>
@@ -1393,19 +1398,19 @@
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb7"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">public</span> <span class="kw">class</span> VisorDeRelogio</span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="op">{</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a>  <span class="kw">private</span> VisorDeNumero horas<span class="op">;</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a>  <span class="kw">private</span> VisorDeNumero minutos<span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>    <span class="kw">private</span> VisorDeNumero horas<span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>    <span class="kw">private</span> VisorDeNumero minutos<span class="op">;</span></span>
 <span id="cb7-5"><a href="#cb7-5"></a></span>
-<span id="cb7-6"><a href="#cb7-6"></a>  <span class="co">// Atributos restantes omitidos</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>    <span class="co">// Atributos restantes omitidos</span></span>
 <span id="cb7-7"><a href="#cb7-7"></a></span>
-<span id="cb7-8"><a href="#cb7-8"></a>  <span class="kw">public</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span>
-<span id="cb7-9"><a href="#cb7-9"></a>  <span class="op">{</span></span>
-<span id="cb7-10"><a href="#cb7-10"></a>    horas <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">24</span><span class="op">);</span></span>
-<span id="cb7-11"><a href="#cb7-11"></a>    minutos <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">60</span><span class="op">);</span></span>
-<span id="cb7-12"><a href="#cb7-12"></a>    <span class="fu">atualizarVisor</span><span class="op">();</span></span>
-<span id="cb7-13"><a href="#cb7-13"></a>  <span class="op">}</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a>    <span class="kw">public</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a>    <span class="op">{</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a>        horas <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">24</span><span class="op">);</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a>        minutos <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">60</span><span class="op">);</span></span>
+<span id="cb7-12"><a href="#cb7-12"></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a>    <span class="op">}</span></span>
 <span id="cb7-14"><a href="#cb7-14"></a></span>
-<span id="cb7-15"><a href="#cb7-15"></a>  <span class="co">// Métodos omitidos</span></span>
+<span id="cb7-15"><a href="#cb7-15"></a>    <span class="co">// Métodos omitidos</span></span>
 <span id="cb7-16"><a href="#cb7-16"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -1415,19 +1420,19 @@
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb8" data-code-line-numbers="10-11"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">public</span> <span class="kw">class</span> VisorDeRelogio</span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="op">{</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a>  <span class="kw">private</span> VisorDeNumero horas<span class="op">;</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a>  <span class="kw">private</span> VisorDeNumero minutos<span class="op">;</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>    <span class="kw">private</span> VisorDeNumero horas<span class="op">;</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>    <span class="kw">private</span> VisorDeNumero minutos<span class="op">;</span></span>
 <span id="cb8-5"><a href="#cb8-5"></a></span>
-<span id="cb8-6"><a href="#cb8-6"></a>  <span class="co">// Atributos restantes omitidos</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a>    <span class="co">// Atributos restantes omitidos</span></span>
 <span id="cb8-7"><a href="#cb8-7"></a></span>
-<span id="cb8-8"><a href="#cb8-8"></a>  <span class="kw">public</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span>
-<span id="cb8-9"><a href="#cb8-9"></a>  <span class="op">{</span></span>
-<span id="cb8-10"><a href="#cb8-10"></a>    horas <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">24</span><span class="op">);</span></span>
-<span id="cb8-11"><a href="#cb8-11"></a>    minutos <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">60</span><span class="op">);</span></span>
-<span id="cb8-12"><a href="#cb8-12"></a>    <span class="fu">atualizarVisor</span><span class="op">();</span></span>
-<span id="cb8-13"><a href="#cb8-13"></a>  <span class="op">}</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a>    <span class="kw">public</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a>    <span class="op">{</span></span>
+<span id="cb8-10"><a href="#cb8-10"></a>        horas <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">24</span><span class="op">);</span></span>
+<span id="cb8-11"><a href="#cb8-11"></a>        minutos <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">60</span><span class="op">);</span></span>
+<span id="cb8-12"><a href="#cb8-12"></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
+<span id="cb8-13"><a href="#cb8-13"></a>    <span class="op">}</span></span>
 <span id="cb8-14"><a href="#cb8-14"></a></span>
-<span id="cb8-15"><a href="#cb8-15"></a>  <span class="co">// Métodos omitidos</span></span>
+<span id="cb8-15"><a href="#cb8-15"></a>    <span class="co">// Métodos omitidos</span></span>
 <span id="cb8-16"><a href="#cb8-16"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>As duas primeiras linhas do construtor criam objetos <code>VisorDeNumero</code></p>
@@ -1474,20 +1479,17 @@
 <h2></h2>
 <p>Veja que da forma que fizemos, ficou como gostaríamos:</p>
 <ul>
-<li class="fragment">Como <strong><em>usuários</em></strong> do <code>VisorDeRelogio</code>
+<li class="fragment">Como <strong><em>usuários</em></strong> do <code>VisorDeRelogio</code>:
 <ul>
 <li class="fragment">Criamos apenas esse objeto, e os visores de números são criados implicitamente.</li>
 </ul></li>
-<li class="fragment">Já como <strong><em>programadores</em></strong> da classe,
+<li class="fragment">Já como <strong><em>programadores</em></strong> da classe:
 <ul>
 <li class="fragment">Precisamos explicitar a criação dos objetos, escrevendo código para isso.</li>
 </ul></li>
 </ul>
 <div class="fragment">
-<p>Obs.: ao final do construtor, o método <code>atualizarVisor</code> é chamado.</p>
-<ul>
-<li class="fragment">Conversaremos sobre ele mais adiante.</li>
-</ul>
+<p>Obs.: ao final do construtor, o método <code>atualizarVisor</code> é chamado. Conversaremos sobre ele mais adiante.</p>
 </div>
 </section>
 <section id="section-50" class="slide level2">
@@ -1522,7 +1524,7 @@
 </section>
 <section id="section-51" class="slide level2 smaller">
 <h2></h2>
-<p>Ao criar objetos da classe <code>VisorDeRelogio</code> usando o BlueJ, você deve ter notado que há duas opções no menu para criar o objeto.</p>
+<p>Ao criar objetos da classe <code>VisorDeRelogio</code>, usando o BlueJ, você deve ter notado que há duas opções no menu para criar o objeto.</p>
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb12" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">VisorDeRelogio</span><span class="op">(</span><span class="dt">int</span> hora<span class="op">,</span> <span class="dt">int</span> minuto<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1532,7 +1534,7 @@
 <ul>
 <li class="fragment">Eles servem para <strong>fornecer formas alternativas de inicializar um objeto</strong> <code>VisorDeRelogio</code>.
 <ul>
-<li class="fragment">Com o construtor sem parâmetros, criamos um relógio com hora inicial 01:00.</li>
+<li class="fragment">Com o construtor sem parâmetros, criamos um relógio com hora inicial 00:00.</li>
 <li class="fragment">Já usando o segundo construtor, podemos criar um relógio com hora inicial diferente.</li>
 </ul></li>
 </ul>
@@ -1541,7 +1543,7 @@
 <p>É comum que classes tenham vários construtores para dar várias opções de criação dos seus objetos.</p>
 <ul>
 <li class="fragment">Para isso funcionar, cada construtor deve ter um conjunto diferente de parâmetros.</li>
-<li class="fragment">Damos a isso o nome de <strong>sobrecarga</strong> de construtores.</li>
+<li class="fragment">Damos a isso o nome de <span class="alert">sobrecarga</span> de construtores.</li>
 </ul>
 </div>
 </section>
@@ -1553,7 +1555,7 @@
 <h2></h2>
 <p><img data-src="imagens/sobrecarga_galvao_resposta.png"></p>
 <div class="fragment">
-<p>Assim como os construtores, <strong>métodos</strong> também <strong>podem ser sobrecarregados</strong>.</p>
+<p>Assim como os construtores, <span class="alert">métodos</span> também <span class="alert">podem ser sobrecarregados</span>.</p>
 </div>
 </section>
 <section id="section-54" class="slide level2 smaller">
@@ -1605,7 +1607,7 @@
 <p><strong>Conceito</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Sobrecarga</strong>: Uma classe pode ter mais de um construtor, ou mais de um método com o mesmo nome, desde que cada um tenha um conjunto diferente de tipos de parâmetros (a quantidade ou a ordem dos tipos dos parâmetros).</p>
+<p><strong>Sobrecarga</strong>: Uma classe pode ter mais de um construtor, ou mais de um método com o mesmo nome, desde que cada um tenha um conjunto diferente de tipos de parâmetros (ou seja, a quantidade ou a ordem dos tipos dos parâmetros precisa ser diferente).</p>
 </div>
 </div>
 </div>
@@ -1616,8 +1618,8 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>Avalie segundo construtor no código da classe <code>VisorDeRelogio</code>. Explique o que ele faz e como ele o faz.</p>
-<p>Identifique ass semelhanças e dferenças entre os dois construtores. Porque o método <code>atualizarVisor</code> não é chamado no segundo construtor, por exemplo?</p>
+<p>Avalie o segundo construtor no código da classe <code>VisorDeRelogio</code>. Explique o que ele faz e como ele o faz.</p>
+<p>Identifique as semelhanças e diferenças entre os dois construtores. Porque o método <code>atualizarVisor</code> não é chamado no segundo construtor, por exemplo?</p>
 </div>
 </div>
 </div>
@@ -1632,12 +1634,12 @@
 <h2></h2>
 <p>A última linha do construtor de <code>VisorDeRelogio</code> tem o comando <code>atualizarVisor</code>.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb16" data-code-line-numbers="5"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a href="#cb16-1"></a>  <span class="kw">public</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span>
-<span id="cb16-2"><a href="#cb16-2"></a>  <span class="op">{</span></span>
-<span id="cb16-3"><a href="#cb16-3"></a>    horas <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">24</span><span class="op">);</span></span>
-<span id="cb16-4"><a href="#cb16-4"></a>    minutos <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">60</span><span class="op">);</span></span>
-<span id="cb16-5"><a href="#cb16-5"></a>    <span class="fu">atualizarVisor</span><span class="op">();</span></span>
-<span id="cb16-6"><a href="#cb16-6"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16" data-code-line-numbers="5"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a href="#cb16-1"></a>    <span class="kw">public</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>    <span class="op">{</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>        horas <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">24</span><span class="op">);</span></span>
+<span id="cb16-4"><a href="#cb16-4"></a>        minutos <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">60</span><span class="op">);</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
+<span id="cb16-6"><a href="#cb16-6"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Este comando é uma <span class="alert">chamada de método</span>.</p>
@@ -1649,9 +1651,9 @@
 </ul>
 </div>
 <div class="fragment">
-<p>A chamada de método no construtor, chama este método.</p>
+<p>Portanto, o último comando no construtor, chama este método.</p>
 <ul>
-<li class="fragment">Como o método está na mesma classe, nós chamamos isso de <span class="alert">chamada de método interno</span>.</li>
+<li class="fragment">Como o método está na mesma classe, a essa operação damos o nome de <span class="alert">chamada de método interno</span>.</li>
 </ul>
 </div>
 </section>
@@ -1678,7 +1680,7 @@
 </section>
 <section id="section-59" class="slide level2 smaller">
 <h2></h2>
-<p>Quando há uma chamada de método, o <strong>método correspondente é executado</strong></p>
+<p>Quando há uma chamada de método, o <strong>método correspondente é executado</strong>.</p>
 <ul>
 <li class="fragment">E, então, a <strong>execução retorna</strong> para onde o método foi chamado e <strong>continua depois dela</strong>.</li>
 <li class="fragment">O método correspondente precisa ter o mesmo nome e a mesma sequência de tipos de parâmetros.
@@ -1692,14 +1694,14 @@
 <p>Vamos agora avaliar o código do método <code>tiqueTaque</code>:</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb19" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tiqueTaque</span><span class="op">()</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    minutos<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span><span class="op">(</span>minutos<span class="op">.</span><span class="fu">obterValor</span><span class="op">()</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span>  <span class="co">// minutos voltaram para zero</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>      horas<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">atualizarVisor</span><span class="op">();</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tiqueTaque</span><span class="op">()</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>        minutos<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span><span class="op">(</span>minutos<span class="op">.</span><span class="fu">obterValor</span><span class="op">()</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span>  <span class="co">// minutos voltaram para zero</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>            horas<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
@@ -1712,18 +1714,18 @@
 <section id="section-61" class="slide level2 smaller">
 <h2></h2>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb20" data-code-line-numbers="3"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb20-1"><a href="#cb20-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tiqueTaque</span><span class="op">()</span></span>
-<span id="cb20-2"><a href="#cb20-2"></a>  <span class="op">{</span></span>
-<span id="cb20-3"><a href="#cb20-3"></a>    minutos<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
-<span id="cb20-4"><a href="#cb20-4"></a>    <span class="cf">if</span><span class="op">(</span>minutos<span class="op">.</span><span class="fu">obterValor</span><span class="op">()</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span>  <span class="co">// minutos voltaram para zero</span></span>
-<span id="cb20-5"><a href="#cb20-5"></a>      horas<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
-<span id="cb20-6"><a href="#cb20-6"></a>    <span class="op">}</span></span>
-<span id="cb20-7"><a href="#cb20-7"></a>    <span class="fu">atualizarVisor</span><span class="op">();</span></span>
-<span id="cb20-8"><a href="#cb20-8"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20" data-code-line-numbers="3"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb20-1"><a href="#cb20-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tiqueTaque</span><span class="op">()</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a>    <span class="op">{</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a>        minutos<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a>        <span class="cf">if</span><span class="op">(</span>minutos<span class="op">.</span><span class="fu">obterValor</span><span class="op">()</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span>  <span class="co">// minutos voltaram para zero</span></span>
+<span id="cb20-5"><a href="#cb20-5"></a>            horas<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
+<span id="cb20-6"><a href="#cb20-6"></a>        <span class="op">}</span></span>
+<span id="cb20-7"><a href="#cb20-7"></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
+<span id="cb20-8"><a href="#cb20-8"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A primeira linha do método chama o comando <code>incrementar</code> do objeto <code>minutos</code>.</p>
 <ul>
-<li class="fragment">Assim, quando um dos métodos do <code>VisorDeRelogio</code> é chamado, ele, por sua vez, chama um método de outro objeto como parte da tarefa.</li>
+<li class="fragment">Veja então que, dessa, quando um dos métodos do <code>VisorDeRelogio</code> é chamado, ele, por sua vez, chama um método de outro objeto como parte da tarefa.</li>
 </ul>
 <div class="fragment">
 <p>Uma chamada a um método de outro objeto é uma <span class="alert">chamada de método externo</span>.</p>
@@ -1731,7 +1733,7 @@
 </section>
 <section id="section-62" class="slide level2 smaller">
 <h2></h2>
-<p>Uma chamada de método externo tem a seguinte <strong>sintaxe</strong>:</p>
+<p>Uma <strong>chamada de método externo</strong> tem a seguinte <strong>sintaxe</strong>:</p>
 <div class="fragment">
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb21" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>  objeto <span class="op">.</span> <span class="fu">nomeDoMetodo</span> <span class="op">(</span>lista_de_parametros<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1747,7 +1749,7 @@
 </section>
 <section id="section-63" class="slide level2 smaller">
 <h2></h2>
-<p>Veja que quando usamos o nome de objeto é uma chamada de método externo.</p>
+<p>Veja que, quando usamos o nome de objeto, temos uma chamada de método externo.</p>
 <ul>
 <li class="fragment">O que é bem diferente de uma chamada de método interno.</li>
 <li class="fragment">Porque, ao chamar o método externo, estamos pedindo a um objeto <code>VisorDeNumero</code> para fazer parte da tarefa completa.</li>
@@ -1762,14 +1764,14 @@
 <section id="section-64" class="slide level2 smaller">
 <h2></h2>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb22" data-code-line-numbers="3-4"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb22-1"><a href="#cb22-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tiqueTaque</span><span class="op">()</span></span>
-<span id="cb22-2"><a href="#cb22-2"></a>  <span class="op">{</span></span>
-<span id="cb22-3"><a href="#cb22-3"></a>    minutos<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
-<span id="cb22-4"><a href="#cb22-4"></a>    <span class="cf">if</span><span class="op">(</span>minutos<span class="op">.</span><span class="fu">obterValor</span><span class="op">()</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span>  <span class="co">// minutos voltaram para zero</span></span>
-<span id="cb22-5"><a href="#cb22-5"></a>      horas<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
-<span id="cb22-6"><a href="#cb22-6"></a>    <span class="op">}</span></span>
-<span id="cb22-7"><a href="#cb22-7"></a>    <span class="fu">atualizarVisor</span><span class="op">();</span></span>
-<span id="cb22-8"><a href="#cb22-8"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22" data-code-line-numbers="4"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb22-1"><a href="#cb22-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tiqueTaque</span><span class="op">()</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a>    <span class="op">{</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a>        minutos<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a>        <span class="cf">if</span><span class="op">(</span>minutos<span class="op">.</span><span class="fu">obterValor</span><span class="op">()</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span>  <span class="co">// minutos voltaram para zero</span></span>
+<span id="cb22-5"><a href="#cb22-5"></a>            horas<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
+<span id="cb22-6"><a href="#cb22-6"></a>        <span class="op">}</span></span>
+<span id="cb22-7"><a href="#cb22-7"></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
+<span id="cb22-8"><a href="#cb22-8"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Repare que a linha seguinte do método <code>tiqueTaque</code> faz outra chamada de método externo.</p>
 <ul>
@@ -1884,7 +1886,7 @@
 <h2></h2>
 <p>É importante reforçarmos como o projeto do visor de relógio usa o conceito de <strong>abstração</strong> para dividir o problema em problemas menores.</p>
 <ul>
-<li class="fragment">Repare que no código da classe <code>VisorDeRelogio</code> nós criamos objetos <code>VisorDeNumero</code> sem precisarmos nos preocupar sobre os detalhes internos desses objetos.</li>
+<li class="fragment">Repare que, no código da classe <code>VisorDeRelogio</code>, criamos objetos <code>VisorDeNumero</code> sem nos preocupar sobre os detalhes internos desses objetos.</li>
 <li class="fragment">Depois chamamos métodos (<code>incrementar</code> e <code>obterValor</code>) dos objetos para fazer o que precisamos.
 <ul>
 <li class="fragment">Nesse ponto, assumimos que o método <code>incrementar</code> vai mudar corretamente o valor, <strong>sem preocuparmos</strong> com <span class="alert">como</span> ele faz isso.</li>
@@ -1897,7 +1899,7 @@
 <ul>
 <li class="fragment">Se tivéssemos feito assim para o exemplo do visor de relógio, o que as duas pessoas precisariam entrar em acordo?
 <ul>
-<li class="fragment">Precisariam concordar sobre as <strong>assinaturas de método</strong> e <span class="alert">o que</span> <strong>os métodos fazem</strong>.</li>
+<li class="fragment">Precisariam concordar, apenas, sobre as <strong>assinaturas de método</strong> e <span class="alert">o que</span> <strong>os métodos fazem</strong>.</li>
 <li class="fragment">Não seria necessário discutir <strong>como</strong> eles fazem.</li>
 </ul></li>
 <li class="fragment">Feito isso, uma pessoa poderia implementar os métodos e a outra apenas os usaria.</li>
@@ -1945,7 +1947,7 @@
 </div>
 <div class="callout-content">
 <p>Suponha que uma classe <code>Arvore</code> tenha um atributo do tipo <code>Triangulo</code> chamado <code>folhas</code> e um atributo do tipo <code>Quadrado</code> chamado <code>tronco</code>. O construtor de <code>Arvores</code> não espera nenhum parâmetro, e seu construtor cria objetos <code>Triangulo</code> e <code>Quadrado</code> para seus atributos.</p>
-<p>Usando o projeto <a href="https://github.com/ufla-ipoo/casa"><code>figuras</code></a>, crie uma classe <code>Arvore</code> que corresponda a essa descrição. Neste exercício, não precisa definir nenhum método, e não precisa tratar a forma da árvore.</p>
+<p>Usando o projeto <a href="https://github.com/ufla-ipoo/casa"><code>figuras</code></a>, crie uma classe <code>Arvore</code> que corresponda a essa descrição. Neste exercício, não é necessário definir nenhum método, e nem tratar a forma da árvore.</p>
 </div>
 </div>
 </div>
