@@ -20,30 +20,41 @@ Algumas coisas **para relembrar** e pensar:
 
 Na aula teórica vimos um exemplo de interação entre objetos, no projeto `visor-relogio`.
 
-- Para aprender sobre objetos criando objetos, e objetos chamando métodos de outros objetos, nós usamos **leitura de código**.
+- Vimos que objetos podem criar objetos e chamar métodos de outros objetos
+- Aprendemos isso usando **leitura de código**.
   - Ler e entender código é uma habilidade fundamental.
-  - Você continuará precisando disso sempre que for desenvolvedor um software.
+  - Um desenvolvedor de software faz isso durante toda a carreira.
+- Mas, às vezes, vale muito a pena usar ferramentas adicionais 
+  - Para entender mais profundamente como um programa funciona.
 
 . . .
 
-Mas, às vezes, vale muito a pena usar ferramentas adicionais para entender mais profundamente como um programa funciona.
+:::: {.columns}
 
-- Uma dessas ferramentas, que vamos aprender a usar agora, é o [depurador]{.alert} (*debugger*).
-  ![](imagens/lupa_bug.png){.r-stretch}
+::: {.column width="70%"}
+Uma dessas ferramentas, que vamos aprender a usar agora, é o [depurador]{.alert} (*debugger*).
+:::
+
+::: {.column width="30%"}
+![](imagens/lupa_bug.png)
+:::
+::::
+
 
 ## {.smaller}
 
-Um depurador é um programa que permite que programadores possa executar seu programa um passo de cado vez.
+Um **depurador** é um programa que permite que programadores possam executar seus programas um passo de cado vez.
 
-- Geralmente ele tem uma função de parar e continuar a execução de um programa em um ponto específico do código.
-  - E permite examinar os valores de variáveis.
+- Geralmente ele tem uma função de **parar** e **continuar a execução de um programa** em um ponto específico do código.
+  - E permite **examinar os valores das variáveis**.
 
 . . .
 
 IDEs mais avançadas têm depuradores complexos, com inúmeras funcionalidades.
 
-- Já o BlueJ tem um depurador que faz o básico: parar o programa, executar uma linha de cada vez e ver os valores das variáveis.
-- Mesmos sendo "só isso", é uma mão na roda na hora de programar.
+- Já o BlueJ tem um depurador que faz o básico: 
+  - Parar o programa, executar uma linha de cada vez e ver os valores das variáveis.
+  - Mesmos sendo "só isso", é uma mão na roda na hora de programar.
 
 . . .
 
@@ -54,34 +65,35 @@ IDEs mais avançadas têm depuradores complexos, com inúmeras funcionalidades.
 :::
 
 ::: {.column width="80%"}
-Acredite: a **qualidade de vida** de um programador muda de patamar quando ele passa a usar um depurador!
+[Acredite]{.alert}: a **qualidade de vida** de um programador muda de patamar quando ele passa a usar um depurador!
 :::
 ::::
 
 ## O exemplo do sistema de e-mail {.smaller}
 
-Vamos trabalhar com o projeto de exemplo [sistema-de-email](https://github.com/ufla-ipoo/sistema-de-email).
+Para aprender a usar o depurador, vamos trabalhar com o projeto de exemplo [sistema-de-email](https://github.com/ufla-ipoo/sistema-de-email).
 
-- Por enquanto, não vamos avaliar o código. Vamos apenas executar o projeto e entender como ele funciona.
+- Por enquanto, não vamos avaliar o código.
+- Vamos apenas executar o projeto e entender como ele funciona.
 
 . . .
 
-A ideia do projeto é simular o envio e recebimento de e-mails entre usuários
+A ideia do projeto é simular o envio e recebimento de e-mails entre usuários.
 
-- Um usuário usa um cliente de e-mail para enviar e-mails para um servidor.
-- E outros usuários podem baixar seus e-mails do servidor.
+- Um **usuário** usa um **cliente de e-mail** para enviar e-mails para um **servidor**.
+- E outros usuários podem **baixar seus e-mails** do servidor.
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-tip title="Atividade em aula" icon=false}
 Experimente a simulação do sistema de e-mails.
 
 - Crie um objeto `ServidorDeEmail`.
 - Crie um objeto `ClienteDeEmail` para um usuário, passando o servidor de e-mail criado.
 - Crie outro objeto `ClienteDeEmail` para outro usuário, passando o mesmo servidor de e-mail.
-- Experimente enviar e-mails de um usuário para outro (usando o método `enviarEmail`)
+- Experimente enviar e-mails de um usuário para outro (usando o método `enviarEmail`);
   - e receber os e-mails (usando `obterProximoEmail` ou `imprimirProximoEmail`).
-- Experimente criar mais clientes de e-mail.
+- Experimente também criando mais clientes de e-mail.
 :::
 
 ## {.smaller}
@@ -89,8 +101,8 @@ Experimente a simulação do sistema de e-mails.
 Ao fazer o exercício anterior vimos que:
 
 - O projeto tem três classes: `ServidorDeEmail`, `ClienteDeEmail` e `Email`.
-- Um objeto servidor de email devem ser criado para ser usado pelos clientes de e-mail.
-  - É ele quem trata a troca de mensagens.
+- Um objeto servidor de email devem ser criado primeiro para ser usado pelos clientes de e-mail.
+  - É ele quem cuida da troca de mensagens.
 - Vários clientes de e-mail podem ser criados.
   - Cada cliente de e-mail está associado a um nome de usuário.
 - E-mails podem ser enviados de um cliente para outro usando um método da classe do cliente de e-mail.
@@ -100,7 +112,7 @@ Ao fazer o exercício anterior vimos que:
 
 . . .
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-tip title="Atividade em aula" icon=false}
 Desenhe o diagrama de objetos representando a situação logo após a criação de um servidor de e-mail e três clientes de e-mail.
 :::
 
@@ -116,8 +128,8 @@ Não vamos analisar todo o código do projeto.
 A classe `Email` é bem simples.
 
 - Dê uma olhada no código e veja se tem alguma dúvida.
-- Repare que, no construtor, ela usa algo do Java que não tínhamos ainda usado.
-  - A palavra-chave `this`.
+- Repare que, no construtor, ela usa algo do Java que não tínhamos visto ainda.
+  - A [palavra-chave `this`]{.alert}.
 
 ## {.smaller}
 
@@ -127,18 +139,20 @@ public class Email
 {
     private String remetente;
     private String destinatario;
-    private String messagem;
+    private String mensagem;
     
-    public Email(String remetente, String destinatario, String messagem)
+    public Email(String remetente, String destinatario, String mensagem)
     {
         this.remetente = remetente;
         this.destinatario = destinatario;
-        this.messagem = messagem;
+        this.mensagem = mensagem;
     }
 
     // métodos omitidos
 ```
 :::
+
+Vamos avaliar a primeira linha do construtor.
 
 ## {.smaller}
 
@@ -148,24 +162,22 @@ public class Email
 {
     private String remetente;
     private String destinatario;
-    private String messagem;
+    private String mensagem;
     
-    public Email(String remetente, String destinatario, String messagem)
+    public Email(String remetente, String destinatario, String mensagem)
     {
         this.remetente = remetente;
         this.destinatario = destinatario;
-        this.messagem = messagem;
+        this.mensagem = mensagem;
     }
 
     // métodos omitidos
 ```
 :::
 
-Vamos avaliar a primeira linha.
-
 - Repare que é um comando de atribuição.
   - A variável do lado esquerdo (`this.remetente`), recebe o valor da variável do lado direito (`remetente`).
-- O motivo de precisarmos usar `this` aqui é por causa da [sobrecarga de nomes]{.alert}.
+- Precisarmos usar `this` aqui por causa da [sobrecarga de nomes]{.alert}.
   - Um mesmo nome usado para coisas diferentes.
 
 ## {.smaller}
@@ -178,37 +190,37 @@ Quantos atributos a classe tem?
 
 E quantos parâmetros o construtor tem?
 
-- 3 também (também chamados `remetente`, `destinatario` e `mensagem`).
+- 3 (também chamados `remetente`, `destinatario` e `mensagem`).
 
 . . .
 
 Portanto, de quantas variáveis estamos falando?
 
 - 6 (3 parâmetros + 3 atributos).
-- Repare que apesar de terem o mesmo nome, os atributos e os parâmetro são coisas diferentes.
+- Repare que apesar de terem o mesmo nome, os atributos e os parâmetros são coisas diferentes.
 
 ## {.smaller}
 
-Suponha que no construtor tivéssemos a seguinte linha de código:
+Suponha que tivéssemos a seguinte linha de código no construtor:
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-    System.out.println(remetente).
+    System.out.println(remetente);
 ```
 :::
 
 . . .
 
-Seria exibido o valor do atributo `remetente` ou do parâmetro `remetente`.
+Seria exibido o valor do **atributo `remetente`** ou do **parâmetro `remetente`**?
 
-- A especificação da linguagem usa o escopo mais próximo.
+- A especificação da linguagem Java indica o uso do **escopo mais próximo**.
 - O parâmetro foi declarado no construtor, e o atributo na classe.
   - Logo, o parâmetro foi declarado "mais perto" da linha de código.
-  - Portanto, na linha de código acima, estamos referenciando o parâmetro `remetente`.
+  - Portanto, na linha de código acima, estamos referenciando o **parâmetro `remetente`**.
 
 ## {.smaller}
 
-Precisamos portanto de uma maneira de conseguir referenciar o atributo `remetente`
+Portanto, para inicializarmos o **atributo `remetente`** precisamos de uma maneira de conseguir referenciá-lo.
 
 - E é justamente para isso que a palavra-chave `this` serve.
 
@@ -234,7 +246,7 @@ Pode ser lido como:
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-    atributo chamado remetente = parâmetro chamado remetente;
+    atributo chamado remetente *recebe* parâmetro chamado remetente;
 ```
 :::
 
@@ -244,23 +256,24 @@ Pode ser lido como:
 
 O motivo de usarmos o mesmo nome é a **legibilidade**.
 
-- Às vezes, é o melhor nome para descrever uma variável.
-  - Como é o melhor nome, queremos usá-lo para nomear o parâmetro, para facilitar para quem usa o construtor ou método.
-  - E, pelo mesmo motivo, queremos usá-lo para nomear o atributo.
-- Logo, precisamos do `this` para diferenciar um do outro.
+- Às vezes, encontramos o melhor nome para descrever uma variável.
+- Como é o melhor nome, queremos usá-lo para nomear o parâmetro.
+  - Para facilitar para quem precisa chamar o construtor ou método.
+- E, pelo mesmo motivo, queremos usá-lo também para nomear o atributo.
+  - Logo, precisamos do `this` para diferenciar um do outro.
 
 ## 
 
-:::: {.callout-note title="Exercício" icon=false}
+:::: {.callout-tip title="Atividade em aula" icon=false}
 O que aconteceria se o construtor fosse implementado desse jeito?
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-    public Email(String remetente, String destinatario, String messagem)
+    public Email(String remetente, String destinatario, String mensagem)
     {
         remetente = this.remetente;
         destinatario = destinatario;
-        this.messagem = messagem;
+        this.mensagem = mensagem;
     }
 ```
 :::
@@ -278,7 +291,7 @@ A classe mais interessante do sistema de e-mails é a de cliente de email.
 
 ## 
 
-:::: {.callout-note title="Exercício" icon=false}
+:::: {.callout-tip title="Atividade em aula" icon=false}
 Crie um servidor de e-mail, e depois crie dois clientes de e-mail para os usuários "Tião" e "Maria".
 Dica use nomes de variáveis `tiao` e `maria` para os clientes de e-mail para facilitar.
 
@@ -289,7 +302,7 @@ Envie um e-mail da Maria para o João usando o método `enviarEmail`. Não leia 
 
 Depois do exercício, o servidor tem um e-mail armazenado para o Tião, esperando para ser buscado.
 
-- Você já sabe que o método `imprimirProximoEmail`, vai pegar esse e-mail e exibi-lo no terminal.
+- Você já sabe que o método `imprimirProximoEmail` vai pegar esse e-mail e exibi-lo no terminal.
 - Vamos entender como isso funciona exatamente, usando o depurador.
 
 ## Definindo pontos de parada (*breakpoints*) {.smaller}
@@ -299,16 +312,14 @@ Um [*breakpoint*]{.alert} é uma marcação ligada a uma linha de código na qua
 - No BlueJ você pode definir um *breakpoint* selecionando uma linha e teclando `Ctrl+B`.
   - Ou clicando na barra na margem esquerda da linha.
   - Aparece um marcador indicando que o *breakpoint* foi criado.
+    ![](imagens/breakpoint_bluej.png){width="50%"}    
   - Obs.: a classe precisa estar compilada para que você consiga fazer isso.
-- Você pode remover o *breakpoint* clicando novamente no número da linha.
+- Você pode remover o *breakpoint* clicando no marcador.
 
-. . .
-
-![](imagens/breakpoint_bluej.png){width="50%"}
 
 ## {.smaller}
 
-:::: {.callout-note title="Exercício" icon=false}
+:::: {.callout-tip title="Atividade em aula" icon=false}
 Crie um *breakpoint* na primeira linha do método `imprimirProximoEmail`.
 ::::
 
@@ -320,21 +331,21 @@ Agora chame o método `imprimirProximoEmail` do cliente de e-mail do Tião.
 
 . . .
 
-A janela do **depurador** do BlueJ é exibida.
+A **janela do depurador** do BlueJ é exibida.
 
 ![](imagens/depurador_bluej.png){width="70%"}
 
 ## {.smaller}
 
-Na janela do depurador podemos observar, do lado direito:
+Do lado direito da janela do depurador podemos observar que:
 
-- Não há variáveis estáticas.
-  - Vermos esse conceito mais adiante na disciplina.
-- Vemos as variáveis de instância.
-  - Ou seja, os atributos do objeto que teve o método chamado.
-  - O servidor: uma referência para o objeto do servidor.
-  - E o usuário, a string "Tião".
-- E ainda não há variáveis locais.
+- Não há [variáveis estáticas]{.alert}.
+  - Veremos esse conceito mais adiante na disciplina.
+- Vemos as [variáveis de instância]{.alert}.
+  - Ou seja, os **atributos** do objeto que teve o método chamado.
+    - O servidor: uma referência para o objeto do servidor.
+    - E o usuário: a string "Tião".
+- E ainda não há [variáveis locais]{.alert}.
   - Isso porque a linha do *breakpoint* ainda não foi executada.
   - O programa parou antes de executar essa linha.
 
@@ -342,26 +353,26 @@ Na janela do depurador podemos observar, do lado direito:
 
 Veja então que o depurador nos permite parar a execução do programa, ver os valores as variáveis
 
-- e, especialmente, agora executar o programa passo a passo.
+- e, especialmente, a partir de agora executar o programa passo a passo.
 
 ## Depuração passo a passo {.smaller}
 
 Na parte inferior da janela do depurador há botões que nos permitem controlar a execução do programa.
 
-:::: {.callout-note title="Exercício" icon=false}
-Use o botão **Avançar** para executar uma linha do método `imprimirProximoEmail`.
+:::: {.callout-tip title="Atividade em aula" icon=false}
+Use o botão **Avançar** uma vez para executar uma linha do método `imprimirProximoEmail`.
 ::::
 
 . . .
 
-Veja que no editor de código, a linha destacada agora é a próxima linha.
+Veja que, no editor de código, a linha destacada agora é a próxima linha.
 
-- E, na janela do depurador, vemos que a variável local `email` foi criadao.
+- E, na janela do depurador, vemos que a variável local `email` foi criada.
   - Você pode, inclusive, clicar duas vezes na variável para inspecionar o objeto.
 
 ## 
 
-:::: {.callout-note title="Exercício" icon=false}
+:::: {.callout-tip title="Atividade em aula" icon=false}
 Antes de continuar, advinhe qual será a próxima linha a ser executada.
 Depois, clique novamente em **Avançar** e veja se tinha acertado.
 Tente entender porque você acertou ou errou.
@@ -371,28 +382,28 @@ Tente entender porque você acertou ou errou.
 
 Podemos agora clicar em **Avançar** repetidamente até terminar o método.
 
-- Com isso conseguimos acompanhar o fluxo de execução do nosso programa.
-- Isso é especialmente interessante em comandos condiconais (blocos if-else).
+- Com isso conseguimos **acompanhar o fluxo de execução** do nosso programa.
+- Isso é especialmente interessante em comandos condicionais (blocos *if-else*).
   - Pois podemos entender e/ou confirmar qual bloco de código foi executado.
 
 ## 
 
-:::: {.callout-note title="Exercício" icon=false}
+:::: {.callout-tip title="Atividade em aula" icon=false}
 Chame novamente o método `imprimirProximoEmail` do cliente de e-mail do Tião.
-Avance a execução passo a passo e observe o que acontece desse vez.
-Explique porque dessa vez foi diferente.
+Avance a execução passo a passo e observe o que acontece dessa vez.
+Explique porque o fluxo de execução foi diferente.
 ::::
 
 ## Entrando em métodos {.smaller}
 
-Ao depurarmos as chamadas do método `imprimirProximoEmail`, você deve ter notado duas chamadas de métodos de objetos de nossas classes.
+Ao depurarmos as chamadas do método `imprimirProximoEmail`, você deve ter notado duas chamadas de métodos externos.
 
 . . .
 
 Na linha abaixo, é chamado um método do objeto `servidor`.
 
-- Na declaração dos atributos, vemos que ele é do tipo `ServidorDeEmail`.
-- Portanto, o objeto da classe cliente de e-mail chama o método `obterProximoEmail` do objeto servidor de e-mail.
+- Na declaração dos atributos, vemos que o objeto é do tipo `ServidorDeEmail`.
+- Portanto, o objeto da classe cliente de e-mail está chamando o método `obterProximoEmail` do objeto servidor de e-mail.
 
 
 ::: {.halfincfontsize}
@@ -406,6 +417,7 @@ Na linha abaixo, é chamado um método do objeto `servidor`.
 Já na linha abaixo, o método `imprimir` é chamado para o objeto `email`.
 
 - E na primeira linha do método `imprimirProximoEmail`, vemos que `email` é uma variável local do tipo `Email`.
+- Portanto, o objeto da classe cliente de e-mail está chamando o método `imprimir` do objeto e-mail.
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
@@ -415,14 +427,14 @@ Já na linha abaixo, o método `imprimir` é chamado para o objeto `email`.
 
 ## {.smaller}
 
-Veja que, ao usar o botão *Avançar*, estamos usando **abstração**.
+Veja que, ao usar o botão **Avançar**, estamos usando [abstração]{.alert}.
 
-- Isso porque estamos vendo o método `imprimir`, por exemplo, como um único comando.
-- E vimos que o efeito dele é imprir os detalhes da mensagem no terminal.
+- Isso porque estamos enxergando o método `imprimir`, por exemplo, como um único comando.
+- E vimos que o efeito dele é imprimir os detalhes da mensagem no terminal.
 
 . . .
 
-Mas se estivermos interessados em mais detalhes, podemos aprofundar a análise
+Mas se estivermos interessados em mais detalhes, podemos aprofundar a análise.
 
 - E ver a execução passo a passo do próprio método `imprimir`.
 - Podemos fazer isso no BlueJ usando o botão **Entrar em**.
@@ -430,11 +442,15 @@ Mas se estivermos interessados em mais detalhes, podemos aprofundar a análise
 
 ##
 
-:::: {.callout-note title="Exercício" icon=false}
-Refaça o cenário anterior, no qual uma mensagem foi enviada da Maria para o Tião e ainda não foi lida.
+:::: {.callout-tip title="Atividade em aula" icon=false}
+Refaça o cenário anterior, no qual Maria enviou uma mensagem para Tião e ele ainda não a leu.
+
 Chame o método `imprimirProximoEmail` para o cliente de e-mail do Tião novamente.
+
 Use o botão **Avançar** até chegar na linha: `email.imprimir()`.
+
 Chegando nela, use o botão **Entrar em** em vez de **Avançar**.
+
 O que você observa? Explique o que vê?
 ::::
 
@@ -450,52 +466,147 @@ Nos exercícios anteriores vimos um objeto chamando método de outro objeto.
 
 :::: {.callout-note title="Exercício" icon=false}
 Crie um *breakpoint* na primeira linha do método `enviarEmail` da classe `ClienteDeEmail` e, em seguida, chame o método.
+
 Use o botão **Entrar em** para entrar no construtor do objeto e-mail.
-Na janela do depurador observa que os atributos e os parâmetros têm os mesmos nomes.
-Execute o programa passo apassar para ver os atributos sendo inicializados.
+
+Na janela do depurador observe que os atributos e os parâmetros têm os mesmos nomes.
+Execute o programa passo apassar para ver os atributos sendo inicializados um a um.
 ::::
+
+. . .
 
 :::: {.callout-note title="Exercício" icon=false}
 Use o depurador para investigar o método `inserirDinheiro`do projeto `maquina-ingressos-melhor` que vimos anteriormente.
-Chame métodos de forma que tanto o bloco `if` quanto o bloco `else` sejam executados.
+
+Chame métodos de forma que consiga depurar a execução tanto do bloco `if` quanto do bloco `else`.
 ::::
 
 # Exercícios de fixação {background-color="#40666e"}
 
 ##
 
-:::: {.callout-note title="Exercício" icon=false}
-Adicione um assunto nas mensagens de e-mail do projeto `sistema-de-email`.
-Não se esqueça de garantir que as mensagens impressas exibem também o assunto do e-mail.
-Modifique a classe `ClienteDeEmail` conforme necessário.
+:::: {.callout-note title="Exercício 1.1" icon=false}
+Adicione um **assunto** (string) nas mensagens de e-mail do projeto `sistema-de-email`.
+
+Não se esqueça de garantir que o assunto do e-mail será exibido ao exibir um e-mail. E modifique a classe `ClienteDeEmail` conforme necessário.
+
+Teste suas alterações!
 ::::
 
-:::: {.callout-note title="Exercício" icon=false}
-COMPLETAR!!
-Trate anexos nos e-mails (poderia ser só o nome do arquivo).
-Crie uma sobrecarga do método `enviarEmail` para quando quiser enviar e-mails com anexo.
+##
+
+:::: {.callout-note title="Exercício 1.2" icon=false}
+Vamos agora simular o envio de **arquivos anexados** a um e-mail, aproveitando para reforçar o conceito de [sobrecarga de métodos e construtores]{.alert}.
+
+Para isso, siga cuidadosamente as instruções abaixo:
+
+- Adicione um atributo `anexo`, do tipo String, para as mensagens de e-mail.
+  - Vamos simular que existe um anexo guardando um nome de arquivo nesse atributo.
+- Crie um construtor sobrecarregado na classe `Email` que receba o anexo (além, é claro, de todas as informações do construtor original).
+- No construtor original, inicialize o anexo com string vazia.
+- Crie um método de acesso para o atributo `anexo`.
+- Altere o método `imprimir` para que o anexo seja exibido.
+- Na classe `ClienteDeEmail`, crie uma versão sobrecarregada do método `enviarEmail` que receba o anexo.
+
+Teste suas alterações!
 ::::
 
-:::: {.callout-note title="Exercício" icon=false}
-COMPLETAR!!
-Crie um método para imprimir todos os e-mails pendentes.
+##
+
+:::: {.callout-note title="Exercício 1.3" icon=false}
+Nossos sistema de e-mails permite imprimir um e-mail por vez, mas seria interessante se pudéssemos ver todos os nossos e-mails de uma vez.
+
+::: {.nonincremental}
+Crie então um método `imprimirTodosEmails` na classe `ClienteDeEmail` que permita fazer isso.
+
+- Você precisará usar a [palavra-chave `null`]{.alert} que é valor de uma variável que não referencia nenhum objeto.
+- Use alguma forma de separação entre um e-mail do outro.
+  - Ex.: imprimindo a string `"---------"` entre os e-mails.
+- Ao final exiba quantos e-mails foram impressos.
+
+Não se esqueça de testar suas alterações!
+:::
+
+::::
+
+##
+
+:::: {.callout-note title="Exercício 1.4" icon=false}
+Suponha que você tenha muitos e-mails para receber mas está interessado em ler apenas os e-mails de um remetente específico.
+
+::: {.nonincremental}
+Altere o método `imprimirTodosEmails` acrescentando um parâmetro `remetente`.
+
+Se o valor do parâmetro for `null` ou string vazia, o método deve continuar imprimindo todos os e-mails como já fazia antes.
+
+Caso contrário, apenas os e-mails do remetente recebido por parâmetro devem ser exibidos.
+
+- Veja que você precisará chamar um método do objeto `email` que permita obter o remetente do e-mail e compará-lo ao parâmetro recebido.
+- Para fazer a comparação, use o método `equals` da classe String, que permite comparar o conteúdo de duas strings.
+  - Ex.: `string1.equals(string2)` retorna `true` se as duas strings forem iguais.
+- **Atenção**: em Java não podemos comparar strings usando `==`, pois nem sempre funciona como se esperaria.
+:::
+
+Terminou? Se não tiver testado, ainda não terminou.
+
 ::::
 
 ## 
 
-:::: {.callout-note title="Exercício" icon=false}
-Altere a classe `VisorDeRelogio` do projeto `visor-relogio-melhor` para que o relógio exiba os segundos, além das horas e dos minutos.
+:::: {.callout-note title="Exercício 1.6" icon=false}
+Crie um método `imprimirTodosEmailsPorAssunto` que permita imprimir apenas os e-mails com determinado assunto.
+
+::: {.nonincremental}
+A ideia é parecida com o que fizemos antes, para os remetentes, mas agora, ao chamar o método, não precisaremos passar o assunto completo. Além disso, vamos mostrar os e-mails ignorando maiúsculas/minúsculas
+
+- Por ex.: se chamarmos o método passando "poo" como parâmetro, os dois primeiros e-mails abaixo seriam exibidos e o terceiro não.
+  - Assunto do e-mail 1: "Notas de POO".
+  - Assunto do e-mail 2: "Videoaulas de IPOO e outros avisos".
+  - Assunto do e-mail 3: "Rebobina"
+:::
+
+Para fazer esse exercício, pesquise na internet sobre os métodos `contains` e `toLowerCase` da classe String.
+
+Não se esqueça de testar suas alterações!
+
 ::::
 
-O que mais? Nos dois projetos, visor-de-relogio e sistema-de-emails
+##
 
-- Um método para obter todos os e-mails mas imprimir apenas alguns
-  - do remetente x?
-  - usando contains da classe String?
-  - Algum outro método da classe String?
+::: {.callout-important title="Entrega no Campus Virtual"}
+Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `sistema-de-emails` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
+:::
+
+## 
+
+:::: {.callout-note title="Exercício 2.1" icon=false}
+Altere a classe `VisorDeRelogio` do projeto `visor-relogio` para que o relógio exiba os segundos, além das horas e dos minutos.
+
+Obs.: com essa alteração o método `tiqueTaque` deveria ser chamado a cada segundo, em vez de a cada minuto.
+::::
+
+##
+
+:::: {.callout-note title="(Opcional) Exercício 2.2 [Desafio]{.alert}" icon=false}
+::: {.nonincremental}
+No design atual do `VisorDeRelogio`, um objeto `VisorDeRelogio` é responsável por detectar quando um objeto `VisorDeNumero`
+voltou para zero e, em seguida, informar outro objeto `VisorDeNumero` para incrementar. 
+Em outras palavras, não há ligação direta entre objetos `VisorDeNumero`.
+
+Seria possível que um objeto `VisorDeNumero` informasse outro que ele voltou para zero e que o outro objeto `VisorDeNumero` deveria então
+ser incrementado? 
+Por exemplo, fazer com que o objeto minutos informasse o objeto hora que outra hora se passou ou fazer com que o objeto segundos informasse ao objeto minutos que outros sessenta segundos se passaram.
+
+- O método `tiqueTaque` deveria interagir com quais objetos?
+- O que o objeto hora deveria fazer quando um dia inteiro tiver passado?
+
+Discuta os problemas envolvido neste design alternativo e, se você realmente sentir vontade de desafiar, tente implementá-lo!
+:::
+::::
 
 ## 
 
 ::: {.callout-important title="Entrega no Campus Virtual"}
-Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `???` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
+Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `visor-relogio-melhor` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
 :::
+
