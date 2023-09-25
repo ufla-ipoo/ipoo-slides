@@ -283,7 +283,7 @@ O que aconteceria se o construtor fosse implementado desse jeito?
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-    public Email(String remetente, String destinatario, String mensagem)
+    public Email(String remetente, String destinatario, String Mensagem)
     {
         remetente = this.remetente;
         destinatario = destinatario;
@@ -353,7 +353,7 @@ A **janela do depurador** do BlueJ é exibida.
 
 Do lado direito da janela do depurador podemos observar que:
 
-- Não há [variáveis estáticas]{.alert}.
+- Não há [variáveis de classe (estáticas)]{.alert}.
   - Veremos esse conceito mais adiante na disciplina.
 - Vemos as [variáveis de instância]{.alert}.
   - Ou seja, os **atributos** do objeto que teve o método chamado.
@@ -504,9 +504,7 @@ Chame métodos de forma que consiga depurar a execução tanto do bloco `if` qua
 
 # Exercícios de fixação {background-color="#40666e"}
 
-## {.smaller}
-
-
+## 
 
 :::: {.callout-note title="Exercício 1.1" icon=false}
 Adicione um **assunto** (string) nas mensagens de e-mail do projeto `sistema-de-email`.
