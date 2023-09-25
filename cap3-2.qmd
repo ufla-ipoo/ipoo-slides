@@ -24,7 +24,7 @@ Na aula teórica vimos um exemplo de interação entre objetos, no projeto `viso
 - Aprendemos isso usando **leitura de código**.
   - Ler e entender código é uma habilidade fundamental.
   - Um desenvolvedor de software faz isso durante toda a carreira.
-- Mas, às vezes, vale muito a pena usar ferramentas adicionais 
+- Mas, às vezes, vale muito a pena usar ferramentas adicionais.
   - Para entender mais profundamente como um programa funciona.
 
 . . .
@@ -43,7 +43,7 @@ Uma dessas ferramentas, que vamos aprender a usar agora, é o [depurador]{.alert
 
 ## {.smaller}
 
-Um **depurador** é um programa que permite que programadores possam executar seus programas um passo de cado vez.
+Um **depurador** é um programa que permite que programadores possam executar seus programas um passo de cada vez.
 
 - Geralmente ele tem uma função de **parar** e **continuar a execução de um programa** em um ponto específico do código.
   - E permite **examinar os valores das variáveis**.
@@ -101,7 +101,7 @@ Experimente a simulação do sistema de e-mails.
 Ao fazer o exercício anterior vimos que:
 
 - O projeto tem três classes: `ServidorDeEmail`, `ClienteDeEmail` e `Email`.
-- Um objeto servidor de email devem ser criado primeiro para ser usado pelos clientes de e-mail.
+- Um objeto servidor de email deve ser criado primeiro para ser usado pelos clientes de e-mail.
   - É ele quem cuida da troca de mensagens.
 - Vários clientes de e-mail podem ser criados.
   - Cada cliente de e-mail está associado a um nome de usuário.
@@ -488,7 +488,7 @@ Chame métodos de forma que consiga depurar a execução tanto do bloco `if` qua
 :::: {.callout-note title="Exercício 1.1" icon=false}
 Adicione um **assunto** (string) nas mensagens de e-mail do projeto `sistema-de-email`.
 
-Não se esqueça de garantir que o assunto do e-mail será exibido ao exibir um e-mail. E modifique a classe `ClienteDeEmail` conforme necessário.
+Não se esqueça de garantir que o assunto do e-mail seja exibido ao imprimir um e-mail. Modifique a classe `ClienteDeEmail` conforme necessário.
 
 Teste suas alterações!
 ::::
@@ -501,7 +501,7 @@ Vamos agora simular o envio de **arquivos anexados** a um e-mail, aproveitando p
 Para isso, siga cuidadosamente as instruções abaixo:
 
 - Adicione um atributo `anexo`, do tipo String, para as mensagens de e-mail.
-  - Vamos simular que existe um anexo guardando um nome de arquivo nesse atributo.
+  - Vamos simular que existe um arquivo anexo guardando apenas o nome do arquivo nesse atributo.
 - Crie um construtor sobrecarregado na classe `Email` que receba o anexo (além, é claro, de todas as informações do construtor original).
 - No construtor original, inicialize o anexo com string vazia.
 - Crie um método de acesso para o atributo `anexo`.
@@ -514,13 +514,13 @@ Teste suas alterações!
 ##
 
 :::: {.callout-note title="Exercício 1.3" icon=false}
-Nossos sistema de e-mails permite imprimir um e-mail por vez, mas seria interessante se pudéssemos ver todos os nossos e-mails de uma vez.
+Nosso sistema de e-mails permite imprimir um e-mail por vez, mas seria interessante se pudéssemos ver todos os nossos e-mails de uma vez.
 
 ::: {.nonincremental}
 Crie então um método `imprimirTodosEmails` na classe `ClienteDeEmail` que permita fazer isso.
 
-- Você precisará usar a [palavra-chave `null`]{.alert} que é valor de uma variável que não referencia nenhum objeto.
-- Use alguma forma de separação entre um e-mail do outro.
+- Você precisará usar a palavra-chave `null` que é o valor de uma variável que não referencia nenhum objeto.
+- Use alguma forma de separação entre um e-mail e outro.
   - Ex.: imprimindo a string `"---------"` entre os e-mails.
 - Ao final exiba quantos e-mails foram impressos.
 
@@ -537,35 +537,37 @@ Suponha que você tenha muitos e-mails para receber mas está interessado em ler
 ::: {.nonincremental}
 Altere o método `imprimirTodosEmails` acrescentando um parâmetro `remetente`.
 
-Se o valor do parâmetro for `null` ou string vazia, o método deve continuar imprimindo todos os e-mails como já fazia antes.
+- Se o valor do parâmetro for `null` ou string vazia, o método deve continuar imprimindo todos os e-mails como já fazia antes.
+- Caso contrário, exiba apenas os e-mails do remetente recebido por parâmetro.
 
-Caso contrário, apenas os e-mails do remetente recebido por parâmetro devem ser exibidos.
+Veja que você precisará chamar um método do objeto `email` que permita obter o remetente do e-mail e compará-lo ao parâmetro recebido.
 
-- Veja que você precisará chamar um método do objeto `email` que permita obter o remetente do e-mail e compará-lo ao parâmetro recebido.
 - Para fazer a comparação, use o método `equals` da classe String, que permite comparar o conteúdo de duas strings.
   - Ex.: `string1.equals(string2)` retorna `true` se as duas strings forem iguais.
-- **Atenção**: em Java não podemos comparar strings usando `==`, pois nem sempre funciona como se esperaria.
+  - **Atenção**: em Java não podemos comparar strings usando `==`, pois nem sempre funciona como se esperaria.
 :::
 
-Terminou? Se não tiver testado, ainda não terminou.
+Terminou? Se não tiver testado, ainda não terminou ;)
 
 ::::
 
 ## 
 
-:::: {.callout-note title="Exercício 1.6" icon=false}
+:::: {.callout-note title="Exercício 1.5" icon=false}
 Crie um método `imprimirTodosEmailsPorAssunto` que permita imprimir apenas os e-mails com determinado assunto.
 
 ::: {.nonincremental}
-A ideia é parecida com o que fizemos antes, para os remetentes, mas agora, ao chamar o método, não precisaremos passar o assunto completo. Além disso, vamos mostrar os e-mails ignorando maiúsculas/minúsculas
+A ideia é parecida com o que fizemos antes, para os remetentes, mas com as seguintes diferenças:
 
-- Por ex.: se chamarmos o método passando "poo" como parâmetro, os dois primeiros e-mails abaixo seriam exibidos e o terceiro não.
-  - Assunto do e-mail 1: "Notas de POO".
-  - Assunto do e-mail 2: "Videoaulas de IPOO e outros avisos".
-  - Assunto do e-mail 3: "Rebobina"
+- O método deve aceitar apenas parte do assunto a ser considerado.
+- O método deve ignorar maiúsculas/minúsculas.
+- Por ex.: se chamarmos o método passando `"poo"` como parâmetro, os dois primeiros e-mails abaixo seriam exibidos, mas o terceiro não.
+  - Assunto do e-mail 1: `"Notas de Poo"`
+  - Assunto do e-mail 2: `"IPOO: videoaulas"`
+  - Assunto do e-mail 3: `"Rebobina Aí!"`
 :::
 
-Para fazer esse exercício, pesquise na internet sobre os métodos `contains` e `toLowerCase` da classe String.
+Para fazer esse exercício, pesquise na internet sobre os métodos `contains` e `toLowerCase` da classe `String`.
 
 Não se esqueça de testar suas alterações!
 
@@ -589,24 +591,24 @@ Obs.: com essa alteração o método `tiqueTaque` deveria ser chamado a cada seg
 
 :::: {.callout-note title="(Opcional) Exercício 2.2 [Desafio]{.alert}" icon=false}
 ::: {.nonincremental}
-No design atual do `VisorDeRelogio`, um objeto `VisorDeRelogio` é responsável por detectar quando um objeto `VisorDeNumero`
+No design atual do projeto `visor-relogio`, um objeto `VisorDeRelogio` é responsável por detectar quando um objeto `VisorDeNumero`
 voltou para zero e, em seguida, informar outro objeto `VisorDeNumero` para incrementar. 
 Em outras palavras, não há ligação direta entre objetos `VisorDeNumero`.
 
-Seria possível que um objeto `VisorDeNumero` informasse outro que ele voltou para zero e que o outro objeto `VisorDeNumero` deveria então
-ser incrementado? 
-Por exemplo, fazer com que o objeto minutos informasse o objeto hora que outra hora se passou ou fazer com que o objeto segundos informasse ao objeto minutos que outros sessenta segundos se passaram.
+Seria possível que um objeto `VisorDeNumero` informasse outro que ele voltou para zero e que este, por sua vez, deveria ser incrementado?
+
+Por exemplo, seria possível que o objeto `minutos` informasse ao objeto `horas` que outra hora se passou ou fazer com que o objeto `segundos` informasse ao objeto `minutos` que outros sessenta segundos se passaram?
 
 - O método `tiqueTaque` deveria interagir com quais objetos?
-- O que o objeto hora deveria fazer quando um dia inteiro tiver passado?
+- O que o objeto `horas` deveria fazer quando um dia inteiro tivesse passado?
 
-Discuta os problemas envolvido neste design alternativo e, se você realmente sentir vontade de desafiar, tente implementá-lo!
+Explique os problemas envolvido neste design alternativo e, se você realmente sentir vontade de desafiar, tente implementá-lo!
 :::
 ::::
 
 ## 
 
 ::: {.callout-important title="Entrega no Campus Virtual"}
-Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `visor-relogio-melhor` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
+Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `visor-relogio` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
 :::
 
