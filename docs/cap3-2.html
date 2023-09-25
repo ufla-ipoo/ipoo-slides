@@ -414,8 +414,8 @@
 
   <p class="date">25/09/2023</p>
 </section>
-<section id="sobre-as-aulas-práticas" class="slide level2 smaller">
-<h2>Sobre as Aulas Práticas</h2>
+<section id="section" class="slide level2 smaller">
+<h2></h2>
 <div>
 <p>Algumas coisas <strong>para relembrar</strong> e pensar:</p>
 <ul>
@@ -424,12 +424,27 @@
 </ul>
 </div>
 </section>
+<section id="sobre-essa-aula" class="slide level2 smaller">
+<h2>Sobre essa aula</h2>
+<p>Na primeira parte da aula:</p>
+<ul>
+<li class="fragment">vamos aprender a usar uma ferramenta muito útil para todo programador.</li>
+<li class="fragment">Faremos isso sincronizando toda a turma.</li>
+</ul>
+<div class="fragment">
+<p>Na segunda parte:</p>
+<ul>
+<li class="fragment">Teremos exercícios práticos como de costume.</li>
+<li class="fragment">Cada um fazendo no seu próprio passo.</li>
+</ul>
+</div>
+</section>
 <section>
 <section id="um-outro-exemplo-de-interação-entre-objetos" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Um outro exemplo de interação entre objetos</h1>
 
 </section>
-<section id="section" class="slide level2 smaller">
+<section id="section-1" class="slide level2 smaller">
 <h2></h2>
 <p>Na aula teórica vimos um exemplo de interação entre objetos, no projeto <code>visor-relogio</code>.</p>
 <ul>
@@ -439,7 +454,7 @@
 <li class="fragment">Ler e entender código é uma habilidade fundamental.</li>
 <li class="fragment">Um desenvolvedor de software faz isso durante toda a carreira.</li>
 </ul></li>
-<li class="fragment">Mas, às vezes, vale muito a pena usar ferramentas adicionais
+<li class="fragment">Mas, às vezes, vale muito a pena usar ferramentas adicionais.
 <ul>
 <li class="fragment">Para entender mais profundamente como um programa funciona.</li>
 </ul></li>
@@ -454,9 +469,9 @@
 </div>
 </div>
 </section>
-<section id="section-1" class="slide level2 smaller">
+<section id="section-2" class="slide level2 smaller">
 <h2></h2>
-<p>Um <strong>depurador</strong> é um programa que permite que programadores possam executar seus programas um passo de cado vez.</p>
+<p>Um <strong>depurador</strong> é um programa que permite que programadores possam executar seus programas um passo de cada vez.</p>
 <ul>
 <li class="fragment">Geralmente ele tem uma função de <strong>parar</strong> e <strong>continuar a execução de um programa</strong> em um ponto específico do código.
 <ul>
@@ -498,7 +513,7 @@
 </ul>
 </div>
 </section>
-<section id="section-2" class="slide level2">
+<section id="section-3" class="slide level2">
 <h2></h2>
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -521,12 +536,12 @@
 </div>
 </div>
 </section>
-<section id="section-3" class="slide level2 smaller">
+<section id="section-4" class="slide level2 smaller">
 <h2></h2>
 <p>Ao fazer o exercício anterior vimos que:</p>
 <ul>
 <li class="fragment">O projeto tem três classes: <code>ServidorDeEmail</code>, <code>ClienteDeEmail</code> e <code>Email</code>.</li>
-<li class="fragment">Um objeto servidor de email devem ser criado primeiro para ser usado pelos clientes de e-mail.
+<li class="fragment">Um objeto servidor de email deve ser criado primeiro para ser usado pelos clientes de e-mail.
 <ul>
 <li class="fragment">É ele quem cuida da troca de mensagens.</li>
 </ul></li>
@@ -554,7 +569,7 @@
 </div>
 </div>
 </section>
-<section id="section-4" class="slide level2 smaller">
+<section id="section-5" class="slide level2 smaller">
 <h2></h2>
 <p>Não vamos analisar todo o código do projeto.</p>
 <ul>
@@ -574,7 +589,7 @@
 </ul>
 </div>
 </section>
-<section id="section-5" class="slide level2 smaller">
+<section id="section-6" class="slide level2 smaller">
 <h2></h2>
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb1" data-code-line-numbers="7-12"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">public</span> <span class="kw">class</span> Email</span>
@@ -594,7 +609,7 @@
 </div>
 <p>Vamos avaliar a primeira linha do construtor.</p>
 </section>
-<section id="section-6" class="slide level2 smaller">
+<section id="section-7" class="slide level2 smaller">
 <h2></h2>
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb2" data-code-line-numbers="9"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">public</span> <span class="kw">class</span> Email</span>
@@ -623,7 +638,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-7" class="slide level2 smaller">
+<section id="section-8" class="slide level2 smaller">
 <h2></h2>
 <p>Quantos atributos a classe tem?</p>
 <ul>
@@ -643,7 +658,7 @@
 </ul>
 </div>
 </section>
-<section id="section-8" class="slide level2 smaller">
+<section id="section-9" class="slide level2 smaller">
 <h2></h2>
 <p>Suponha que tivéssemos a seguinte linha de código no construtor:</p>
 <div class="halfincfontsize">
@@ -661,7 +676,7 @@
 </ul>
 </div>
 </section>
-<section id="section-9" class="slide level2 smaller">
+<section id="section-10" class="slide level2 smaller">
 <h2></h2>
 <p>Portanto, para inicializarmos o <strong>atributo <code>remetente</code></strong> precisamos de uma maneira de conseguir referenciá-lo.</p>
 <ul>
@@ -686,7 +701,7 @@
 </div>
 </div>
 </section>
-<section id="section-10" class="slide level2 smaller">
+<section id="section-11" class="slide level2 smaller">
 <h2></h2>
 <p><img data-src="imagens/duvida_this.png"></p>
 <p>O motivo de usarmos o mesmo nome é a <strong>legibilidade</strong>.</p>
@@ -702,7 +717,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-11" class="slide level2">
+<section id="section-12" class="slide level2">
 <h2></h2>
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -728,7 +743,7 @@
 <h1>Usando um depurador</h1>
 
 </section>
-<section id="section-12" class="slide level2 smaller">
+<section id="section-13" class="slide level2 smaller">
 <h2></h2>
 <p>A classe mais interessante do sistema de e-mails é a de cliente de email.</p>
 <ul>
@@ -736,7 +751,7 @@
 <li class="fragment">Para isso, vamos preparar um cenário de uso.</li>
 </ul>
 </section>
-<section id="section-13" class="slide level2">
+<section id="section-14" class="slide level2">
 <h2></h2>
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -750,7 +765,7 @@
 </div>
 </div>
 </section>
-<section id="section-14" class="slide level2 smaller">
+<section id="section-15" class="slide level2 smaller">
 <h2></h2>
 <p>Depois do exercício, o servidor tem um e-mail armazenado para o Tião, esperando para ser buscado.</p>
 <ul>
@@ -772,7 +787,7 @@
 <li class="fragment">Você pode remover o <em>breakpoint</em> clicando no marcador.</li>
 </ul>
 </section>
-<section id="section-15" class="slide level2 smaller">
+<section id="section-16" class="slide level2 smaller">
 <h2></h2>
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -795,7 +810,7 @@
 <p><img data-src="imagens/depurador_bluej.png" style="width:70.0%"></p>
 </div>
 </section>
-<section id="section-16" class="slide level2 smaller">
+<section id="section-17" class="slide level2 smaller">
 <h2></h2>
 <p>Do lado direito da janela do depurador podemos observar que:</p>
 <ul>
@@ -847,7 +862,7 @@
 </ul>
 </div>
 </section>
-<section id="section-17" class="slide level2">
+<section id="section-18" class="slide level2">
 <h2></h2>
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -860,7 +875,7 @@
 </div>
 </div>
 </section>
-<section id="section-18" class="slide level2 smaller">
+<section id="section-19" class="slide level2 smaller">
 <h2></h2>
 <p>Podemos agora clicar em <strong>Avançar</strong> repetidamente até terminar o método.</p>
 <ul>
@@ -871,7 +886,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-19" class="slide level2">
+<section id="section-20" class="slide level2">
 <h2></h2>
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -898,7 +913,7 @@
 </div>
 </div>
 </section>
-<section id="section-20" class="slide level2 smaller">
+<section id="section-21" class="slide level2 smaller">
 <h2></h2>
 <p>Já na linha abaixo, o método <code>imprimir</code> é chamado para o objeto <code>email</code>.</p>
 <ul>
@@ -909,7 +924,7 @@
 <div class="sourceCode" id="cb8" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>    email<span class="op">.</span><span class="fu">imprimir</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="section-21" class="slide level2 smaller">
+<section id="section-22" class="slide level2 smaller">
 <h2></h2>
 <p>Veja que, ao usar o botão <strong>Avançar</strong>, estamos usando <span class="alert">abstração</span>.</p>
 <ul>
@@ -927,7 +942,7 @@
 </ul>
 </div>
 </section>
-<section id="section-22" class="slide level2">
+<section id="section-23" class="slide level2">
 <h2></h2>
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -949,14 +964,14 @@
 <h1>Revisitando as chamadas de métodos</h1>
 
 </section>
-<section id="section-23" class="slide level2 smaller">
+<section id="section-24" class="slide level2 smaller">
 <h2></h2>
 <p>Nos exercícios anteriores vimos um objeto chamando método de outro objeto.</p>
 <ul>
 <li class="fragment">Nós podemos usar o depurador também para exarminarmos um objeto criando outro objeto.</li>
 </ul>
 </section>
-<section id="section-24" class="slide level2">
+<section id="section-25" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -985,11 +1000,23 @@
 </div>
 </section></section>
 <section>
+<section id="sobre-a-prova" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Sobre a prova</h1>
+
+</section>
+<section id="section-26" class="slide level2">
+<h2></h2>
+<ul>
+<li class="fragment">Dúvidas?</li>
+<li class="fragment">Programação das aulas.</li>
+</ul>
+</section></section>
+<section>
 <section id="exercícios-de-fixação" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Exercícios de fixação</h1>
 
 </section>
-<section id="section-25" class="slide level2">
+<section id="section-27" class="slide level2 smaller">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1004,7 +1031,7 @@
 </div>
 </div>
 </section>
-<section id="section-26" class="slide level2">
+<section id="section-28" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1030,7 +1057,7 @@
 </div>
 </div>
 </section>
-<section id="section-27" class="slide level2">
+<section id="section-29" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1055,7 +1082,7 @@
 </div>
 </div>
 </section>
-<section id="section-28" class="slide level2">
+<section id="section-30" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1084,7 +1111,7 @@
 </div>
 </div>
 </section>
-<section id="section-29" class="slide level2">
+<section id="section-31" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1112,7 +1139,7 @@
 </div>
 </div>
 </section>
-<section id="section-30" class="slide level2">
+<section id="section-32" class="slide level2">
 <h2></h2>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
@@ -1128,7 +1155,7 @@
 </div>
 </div>
 </section>
-<section id="section-31" class="slide level2">
+<section id="section-33" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1142,7 +1169,7 @@
 </div>
 </div>
 </section>
-<section id="section-32" class="slide level2">
+<section id="section-34" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1164,7 +1191,7 @@
 </div>
 </div>
 </section>
-<section id="section-33" class="slide level2">
+<section id="section-35" class="slide level2">
 <h2></h2>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
@@ -1175,7 +1202,7 @@
 <p><strong>Entrega no Campus Virtual</strong></p>
 </div>
 <div class="callout-content">
-<p>Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto <code>visor-relogio-melhor</code> da forma que ficou após as suas alterações (compacte a pasta em um arquivo <code>.zip</code> para enviar);</p>
+<p>Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto <code>visor-relogio</code> da forma que ficou após as suas alterações (compacte a pasta em um arquivo <code>.zip</code> para enviar);</p>
 </div>
 </div>
 </div>

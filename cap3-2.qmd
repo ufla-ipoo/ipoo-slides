@@ -3,7 +3,7 @@ title: IPOO - Cap. 3 Interação entre Objetos
 subtitle: Aula 3.2 - Prática
 ---
 
-## Sobre as Aulas Práticas {.smaller}
+##  {.smaller}
 
 ::: {.nonincremental}
 
@@ -13,6 +13,20 @@ Algumas coisas **para relembrar** e pensar:
 - E o que você precisa fazer para ter **presença** na aula prática?
 
 :::
+
+## Sobre essa aula {.smaller}
+
+Na primeira parte da aula:
+
+- vamos aprender a usar uma ferramenta muito útil para todo programador.
+- Faremos isso sincronizando toda a turma.
+
+. . .
+
+Na segunda parte:
+
+- Teremos exercícios práticos como de costume.
+- Cada um fazendo no seu próprio passo.
 
 # Um outro exemplo de interação entre objetos {background-color="#40666e"}
 
@@ -481,9 +495,18 @@ Use o depurador para investigar o método `inserirDinheiro`do projeto `maquina-i
 Chame métodos de forma que consiga depurar a execução tanto do bloco `if` quanto do bloco `else`.
 ::::
 
-# Exercícios de fixação {background-color="#40666e"}
+# Sobre a prova {background-color="#40666e"}
 
 ##
+
+- Dúvidas?
+- Programação das aulas.
+
+# Exercícios de fixação {background-color="#40666e"}
+
+## {.smaller}
+
+
 
 :::: {.callout-note title="Exercício 1.1" icon=false}
 Adicione um **assunto** (string) nas mensagens de e-mail do projeto `sistema-de-email`.
