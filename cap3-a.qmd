@@ -1,0 +1,61 @@
+---
+title: IPOO - Cap. 3 Interação entre Objetos
+subtitle: Criação de Projetos no BlueJ
+---
+
+##  {.smaller}
+
+Na prova da disciplina vocês poderão utilizar o BlueJ para implementar e/ou testar códigos em Java.
+
+Como todos os exercícios que vocês fizeram no BlueJ até o momento utilizaram projetos já criados,
+criei  esses slides para explicar como criar um novo projeto e uma nova classe no BlueJ.
+
+## {.smaller}
+
+Acesse o menu **Projeto** --> **Novo Projeto**.
+
+![](imagens/BlueJ_novo_projeto_1.png){.r-stretch}
+
+## {.smaller}
+
+Aparecerá uma caixa de diálogo na qual você informará o **nome do projeto**.
+
+- Você pode também mudar a pasta onde o projeto será colocado.
+  - Será criada uma subpasta dentro dela com o nome que escolheu para o projeto.
+- O projeto será criado, a princípio, sem nenhuma classe.
+
+![](imagens/BlueJ_novo_projeto_2.png)
+
+## {.smaller}
+
+Clique no botão **Nova Classe...**.
+
+- Na caixa diálogo que aparece digite um **nome para a classe** e clique em OK.
+
+![](imagens/BlueJ_nova_classe.png){.r-stretch}
+
+## {.smaller}
+
+A nova classe aparecerá no diagrama do BlueJ.
+
+- Na imagem abaixo, por exemplo, foi criada uma classe de nome Teste.
+
+![](imagens/BlueJ_nova_classe_2.png){.r-stretch}
+
+## {.smaller}
+
+Clique duas vezes na classe no diagrama para abrir o código-fonte.
+
+- Veja que a classe é criada com um código inicial de exemplo.
+- Apague e/ou altere o código de acordo com que precisar implementar na sua classe.
+
+![](imagens/BlueJ_nova_classe_3.png){.r-stretch}
+
+## Resumo
+
+- Acesse o menu **Projeto** --> **Novo Projeto**.
+  - Dê um nome para o projeto.
+- Clique no botão **Nova Classe...**.
+  - Digite um nome para a classe e clique em OK.
+- Clique duas vezes na classe no diagrama para abrir o código-fonte.
+  - Apague e/ou altere o código gerado para a classe de acordo com que precisar implementar na sua classe.
