@@ -186,6 +186,155 @@ Portanto, é muito mais prático se não precisarmos saber, antecipadamente, qua
 - Para isso, vamos utilizar a forma mais simples possível de agrupar objetos em Java: a classe `ArrayList`.
 - Vamos usar como exemplo um projeto que nos permite organizar uma playlist de músicas.
 
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+Um objeto **coleção** pode guardar um número arbitário de outros objetos.
+:::
+
 # Um organizador de *playlist* de músicas {background-color="#40666e"}
 
 ## {.smaller}
+
+Vamos criar uma classe para nos ajudar a organizar arquivos de músicas guardados no computador.
+
+- Nossa classe não vai guardar os detalhes das músicas.
+- Em vez disso, vamos usar a classe `ArrayList` da biblioteca de classes para nos poupar trabalho.
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+![](imagens/duvida_para_que_classe_ArrayList.png)
+
+:::
+
+::: {.column width="70%"}
+- A questão é que as classes da biblioteca de classes foram criadas para uso geral.
+- E não para necessidades específicas.
+- Um ArrayList pode ser usado para guardar dados de estudantes, ou de lembretes de eventos.
+- A nossa classe específica é que precisará tratar de operações específicas relacionadas a arquivos de músicas.
+:::
+
+::::
+
+## {.smaller}
+
+Por razões didáticas, ou seja, para ficar mais fácil assimilarmos os conceitos:
+
+- vamos começar com uma versão bem simples da classe,
+- que lida apenas com os nomes dos arquivos de música.
+  - Sem detalhes como título, artista, duração, etc.
+
+. . .
+
+Nesse cenário, precisaremos que o ArrayList guarde objetos String que representem os nomes dos arquivos.
+
+- A ideia é começar simples, para focarmos no conceito que vamos aprender agora, criação e uso de coleções.
+- Depois vamos incrementar um projeto para que ele pareça com um organizar e tocador de músicas de verdade.
+
+## {.smaller}
+
+A classe vai assumir que cada arquivo tem uma única música.
+
+- E o nome do arquivo tem o nome do artista e da música (usaremos isso mais adiante).
+
+. . .
+
+As **operações** básicas que queremos na primeira versão da classe são:
+
+- Adicionar músicas na coleção.
+- A coleção não deve ter limite de tamanho, exceto a memória do computador.
+- Retornar a quantidade de músicas na coleção.
+- Listar todas as músicas.
+
+. . .
+
+Veremos que a classe `ArrayList` torna bem fácil tratar essas operações.
+
+## {.smaller}
+
+Estamos adotando uma **abordagem incremental**.
+
+- Começamos com uma **versão básica** que mostra como criar e usar um ArrayList.
+- E depois vamos melhorá-la até chegar ao ponto de nosso programar **tocar a música de verdade**.
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+![](imagens/fica_a_dica.png)
+
+:::
+
+::: {.column width="70%"}
+Lembre-se que adotar uma abordagem incremental tem uma probabilidade de sucesso muito maior do que querer implementar tudo de uma vez.
+:::
+
+::::
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Antes de analisarmos o código-fonte, vamos entender o funcionamento do organizador de músicas.
+
+Abra o probjeto [organizador-musicas-v1](https://github.com/ufla-ipoo/organizador-musicas-v1) no BlueJ e crie um objeto `OrganizadorDeMusicas`.
+Guarde nomes de alguns arquivos de música nele (são simplesmente strings).
+Como não vamos tocar as músicas nesse ponto, qualquer nome de arquivo serve, mas há um repositório com [arquivos de músicas](https://github.com/ufla-ipoo/amostra-musicas) de verdade que você pode querer baixar e usar.
+
+Confira se o número de arquivos retornado pelo método `obterQuantidadeDeArquivos` bate com a quantidade que você armazenou.
+Ao usar o método `listarArquivo` você deve notar que você precisa passar o valor zero para imprimir o primeiro nome de arquivo, um para o segundo, e assim por diante.
+Você imagina, por que?
+:::
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+O que acontece se você criar um objeto `OrganizadorDeMusicas` e chamar `removerArquivo(0)` antes de ter adicionado qualquer música?
+
+Ocorre algum erro? Você esperava que ocorresse algum erro?
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Crie um `OrganizadorDeMusicas` e adicione dois nomes de arquivos a ele.
+Chame `listarArquivo(0)` e `listarArquivo(1)` para mostrar os dois arquivos.
+Agora chame `removerArquivo(0)` e depois `listarArquivo(0)`.
+
+O que aconteceu? Era o que você esperava?
+
+Você imagina alguma explicação para o que deve ter acontecido quando você removeu o primeiro arquivo da coleção?
+:::
+
+
+# Usando uma classe da biblioteca {background-color="#40666e"}
+
+Leia o código da classe `OrganizadorDeMusicas`.
+
+- Repare que ela usa a classe `ArrayList`.
+- Mas a classe `ArrayList` não aparece no diagrama de classes do BlueJ.
+
+. . .
+
+::: {.callout-note title="Bibliotecas de classes" appearance="simple" icon=false}
+Uma das coisas que torna as linguagens OO (Orientadas a Objetos) poderosas, é que elas geralmente vêm junto com bibliotecas de classes.
+
+- Essas bibliotecas geralmente têm centenas ou milhares de classes que são muito úteis para os desenvolvedores em diversos projetos.
+- Java chama essas bibliotecas de [pacotes]{.alert}.
+- Nós usamos as classes das bibliotecas exatamente do mesmo jeito que usamos nossas próprias classes.
+- Criamos objetos usando `new`, e as classes têm atributos, construtores e métodos.
+:::
+
+## {.smaller}
+
+
+
+
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+:::
