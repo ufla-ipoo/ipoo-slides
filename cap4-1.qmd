@@ -1,0 +1,191 @@
+---
+title: IPOO - Cap. 4 Agrupando Objetos
+subtitle: Aula 4.1 - Teórica
+---
+
+## {.smaller}
+
+Algumas perguntas **para refletir** antes de começar a aula:
+
+- Quantas **anotações** vocês fez no caderno ao estudar os três primeiros capítulos da disciplina?
+- Você estudou **todo o conteúdo** de todas as aulas teóricas ANP anteriores?
+- Você **leu** alguma parte do **livro** da disciplina?
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+![](imagens/meme_pense_sobre_isso.jpg)
+
+:::
+
+::: {.column width="70%"}
+**Lembre-se** que [você precisa ser a pessoa mais interessada no seu próprio sucesso!]{.alert}
+:::
+
+::::
+
+## Principais Conceitos do Capítulo {.smaller}
+
+::: {.nonincremental}
+- Coleções
+- Laços (*loops*)
+- Iteradores
+- Vetores (*arrays*)
+:::
+
+. . .
+
+Construções Java do capítulo
+
+::: {.nonincremental}
+- `ArrayList`, `Iterator`, *for-each*, `while`, `null`, objetos anônimos, vetor, `++`.
+:::
+
+## {.smaller}
+
+O principal objetivo deste capítulo é mostrar algumas formas que temos de **agrupar objetos** em [coleções]{.alert}.
+
+- Nesta aula vamos aprender sobre a classe `ArrayList`, que é um exempo de coleção de tamanho flexível.
+- Na aula seguinte, veremos como usar vetores em Java.
+
+. . .
+
+Ao usar coleções, precisamos percorrer (ou iterar) sobre seus elementos.
+
+- Para isso, utilizaremos estruturas de repetição: *for-each*, `while` e `for`.
+
+. . .
+
+Este capítulo tem mais conteúdo que os anteriores.
+
+- E, portanto, demandará maior dedicação e esforço.
+- Mas os conceitos aqui são fundamentais para que se torne um bom programador.
+- E para que entenda os conceitos dos capítulos seguintes.
+
+# Usando os conceitos do Cap. 3 como base {background-color="#40666e"}
+
+## {.smaller}
+
+Além de conhecermos os novos conceitos de [coleção]{.alert} e [iteradores]{.alert},
+
+- vamos revisitar os conceitos de [abstração]{.alert} e [interação entre objetos]{.alert} vistos anteriormente.
+
+. . .
+
+Vimos que abstração nos permite simplificar um problema:
+
+- identificando componentes como unidades completas, sem nos preocuparmos com seus detalhes.
+
+. . .
+
+Veremos esse princípio, na prática, ao utilizarmos uma classe da [Biblioteca de Classes]{.alert} do Java.
+
+- Ao implementar um programa, um bom desenvolvedor deve sempre procurar por classes disponíveis na biblioteca de classes da linguagem.
+- Com isso, evitamos *"reinventar a roda"*, evitando retrabalho com coisas que já estão prontas e testadas.
+- E, assim, podemos focar no que é a essência do problema que queremos resolver.
+
+## {.smaller}
+
+Portanto, **vale muito a pena**, se familizarizar com as classes mais comuns da biblioteca do Java.
+
+- O poder da [abstração]{.alert} nos permite usar essas classes sem precisarmos saber praticamente nada sobre como essas classes são implementadas internamente.
+
+. . .
+
+Usar essas classes se refere basicamente a:
+
+- **Criar objetos** delas e **chamar os métodos** desses objetos.
+- Portanto, teremos uma [interação entre os nossos objetos e os objetos das classes]{.alert} da biblioteca.
+
+## {.smaller}
+
+Como foi citado no início da disciplina, esse material tem uma **abordagem iterativa**.
+
+- O que significa que os conceitos são revisitados o tempo todo,
+- com o objetivo de aprofundarmos nosso entendimento sobre eles.
+
+. . .
+
+Neste capítulo veremos também que [abstação]{.alert} não se refere apenas a ignorar detalhes.
+
+- Mas também a identificar padrões que aparecem repetidamente no código.
+- O que nos permite reutilizar em uma nova situação métodos e classes que já havíamos implementado e usado antes.
+
+
+# A abstração de coleção {background-color="#40666e"}
+
+## {.smaller}
+
+O que é uma [coleção]{.alert}?
+
+- Segundo o dicionário Priberam, um dos significados é: 
+  
+  *"Reunião de  objetos da mesma natureza."*
+
+. . .
+
+Uma coleção pode ser:
+
+- Grande.
+  - Ex.: todos os alunos da universidade.
+- Pequena.
+  - Ex.: as disciplinas que um aluno está matriculado em um semestre.
+- Ou até mesmo vazia.
+  - Ex.: os prêmios Nobel que eu já ganhei.
+
+## {.smaller}
+
+Se você tem uma coleção de alguma coisa (moedas, autógrafos, o que seja),
+
+- há algumas [operações]{.alert} que você pode fazer com a sua coleção de tempos em tempos, como por ex.:
+  - [Adicionar]{.alert} um novo item à coleção.
+  - [Remover]{.alert} um item da coleção (por ter vendido, ou ser repetido, por ex.).
+  - [Organizar]{.alert} os itens de alguma forma (por tamanho ou valor, por ex.).
+  - [Listar um subconjunto]{.alert} dos itens para algum propósito (moedas do império romano, por ex.).
+
+. . .
+
+Repare que essas são **operações comuns** em uma coleção.
+
+- Independente dos objetos que ela guarda.
+
+## {.smaller}
+
+No contexto de POO, uma **coleção** pode ser **representada por uma** [classe]{.alert}. 
+
+- E as **operações** sobre a coleção por [métodos]{.alert} desta classe.
+- Uma **coleção particular** (minha coleção de músicas, por ex.) seria uma [instância da classe]{.alert}, ou seja, um objeto da classe.
+  - Note que os **itens** da coleção (as moedas, por ex.) seriam objetos **de outra classe**.
+
+. . .
+
+Alguns exemplos de coleção comuns no contexto de programação seriam:
+
+- O conjunto de estudantes da universidade no SIG:
+  - A cada semestre novos estudantes são adicionados, e alunos formados são removidos.
+- Filmes e séries no catálogo da Netflix:
+  - O catálogo é continuamente atualizado, acrescentando novos filmes e retirando outros.
+- Os comentários de uma publicação em uma rede social:
+  - Novos comentários são postados e comentários também podem ser removidos.
+
+## {.smaller}
+
+Veja que a quantidade de itens armazenada em uma coleção pode variar com o tempo.
+
+- Uma solução ingênua para tratar isso em um código Java seria criar um atributo para cada objeto da coleção.
+- Mas veja que precisaríamos adivinhar quantos objetos a coleção precisaria.
+- Ou acabar declarando vários atributos que não seriam usados.
+
+. . .
+
+Portanto, é muito mais prático se não precisarmos saber, antecipadamente, quantos objetos a coleção precisará ter.
+
+- Para isso, vamos utilizar a forma mais simples possível de agrupar objetos em Java: a classe `ArrayList`.
+- Vamos usar como exemplo um projeto que nos permite organizar uma playlist de músicas.
+
+# Um organizador de *playlist* de músicas {background-color="#40666e"}
+
+## {.smaller}
