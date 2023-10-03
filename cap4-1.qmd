@@ -320,7 +320,7 @@ Leia o código da classe `OrganizadorDeMusicas`.
 . . .
 
 ::: {.callout-note title="Bibliotecas de classes" appearance="simple" icon=false}
-Uma das coisas que torna as linguagens OO (Orientadas a Objetos) poderosas, é que elas geralmente vêm junto com bibliotecas de classes.
+Uma das coisas que torna as linguagens OO (Orientadas a Objetos) poderosas, é que elas geralmente trazem junto bibliotecas de classes.
 
 - Essas bibliotecas geralmente têm centenas ou milhares de classes que são muito úteis para os desenvolvedores em diversos projetos.
 - Java chama essas bibliotecas de [pacotes]{.alert}.
@@ -328,9 +328,98 @@ Uma das coisas que torna as linguagens OO (Orientadas a Objetos) poderosas, é q
 - Criamos objetos usando `new`, e as classes têm atributos, construtores e métodos.
 :::
 
+## Importando uma classe da biblioteca {.smaller}
+
+A primeira linha da classe `OrganizadorDeMusicas` mostra como acessar uma classe de biblioteca em Java.
+
+```{.java code-line-numbers="false"}
+  import java.util.ArrayList;
+```
+
+. . .
+
+Este comando disponibiliza a classe `ArrayList` do pacote `java.util` para ser usada em nossa classe.
+
+- Com isso, nós podemos então usar a classe `ArrayList` como se fosse uma classe do nosso projeto.
+- Nós usamos então para declarar o atributo `arquivos`.
+  ```{.java code-line-numbers="false"}
+    private ArrayList<String> arquivos;
+  ```
+
 ## {.smaller}
 
+Repare que a declaração do atributo `arquivos` traz algo de diferente: `<String>`
 
+- Isso é necessário porque, como vimos antes, a classe `ArrayList` foi criada para uso geral.
+  - Ou seja, ela não restringe que objetos ela guarda.
+- Mas, quando criamos um objeto `ArrayList`, precisamos dizer qual o tipo dos objetos que serão guardados nele.
+- Classes que são parametrizadas com um segundo tipo (como a `ArrayList`) são chamadas [classes genéricas]{.alert} em Java.
+  - Veremos mais sobre isso mais adiante.
+
+. . .
+
+Portanto, sempre que usamos uma coleção precisamos especificar dois tipos:
+
+- O tipo da coleção em si (nesse caso, `ArrayList`).
+- E o tipo dos elementos que queremos guardar na coleção (nesse caso, `String`).
+- Assim, uma declaração `ArrayList<String>` costuma ser lida como *ArrayList de strings*.
+
+## Notação diamante {.smaller}
+
+Da mesma forma vimos antes que o construor da classe `VisorDeRelogio` criava objetos da classe `VisorDeNumero`,
+
+- a classe `OrganizadorDeMusicas` cria um objeto do tipo `ArrayList` e o guarda no atributo `arquivos`.
+
+Fazemos isso com o comando:
+
+```{.java code-line-numbers="false"}
+  arquivos = new ArrayList<>();
+```
+
+- Nós chamamos essa sintaxe de **notação diamante** (por causa do sinais `<>` consecutivos).
+- Repare que poderíamos escrever `new ArrayList<String>()`
+  - Mas podemos omitir o tipo dos objetos, porque o compilador usa a declaração da variável `arquivos` para saber qual tipo deve ser usado.
+- Portanto, usar `<>` é só um atalho para escrever código mais rápido.
+
+## Principais métodos da classe `ArrayList` {.smaller}
+
+A classe `ArrayList` possui muitos métodos, mas, por enquanto, usaremos apenas quatro:
+
+- `add`: adiciona um elmento ao final da lista.
+- `size`: retorna a quantidade de elementos na coleção.
+- `get` e `remove`: veremos mais adiante, mas já dá para ter uma ideia vendo como são utilizados no código.
+
+# Estruturas de objetos com coleções {background-color="#40666e"}
+
+## {.smaller auto-animate=true}
+
+Para entendermos como uma coleção como a ArrayList funciona, é interessante analisarmos um diagrama de objetos.
+
+- Compare a figura abaixo que mostra um `OrganizadorDeMusicas` com duas strings de nomes de arquivos, com a próxima que mostra com três.
+
+. . .
+
+![](imagens/organizador_musicas_diagrama_objetos.png)
+
+## {.smaller auto-animate=true}
+
+::: {.nonincremental}
+
+Para entendermos como uma coleção como a ArrayList funciona, é interessante analisarmos um diagrama de objetos.
+
+- Compare a figura abaixo que mostra um `OrganizadorDeMusicas` com duas strings de nomes de arquivos, com a próxima que mostra com três.
+
+:::
+
+![](imagens/organizador_musicas_diagrama_objetos2.png)
+
+## {.smaller}
+
+Há três características importantes sobre o `ArrayList` que precisamos saber:
+
+- Podemos aumentar sua capacidade conforme a necessidade.
+- Ele mantém uma contagem privada da quantidade de itens armazenados (e o método `size` retorna essa informação).
+- Ele mantém a ordem dos elementos inseridos (e podemos obter os objetos na mesma ordem).
 
 
 
