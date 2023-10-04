@@ -557,6 +557,251 @@ Se fizer isso, o programa exibirá uma mensagem de índice fora da faixa (`Index
   - O próximo elemento vai passar da posição 3 para a posição 2.
   - E o último vai passar da posição 4 para a posição 3.
 
+. . .
+
+É importante nos acostumarmos a utilizar os índices de uma coleção.
+
+- Pois várias coleções têm essa mesma característica de começar em zero, e seguir sequencialmente, até `size()-1`.
+
+## {.smaller}
+
+Suponha, por exemplo, que uma variável `p` guarda a posição de um objeto na coleção.
+
+- Como podemos acessar o próximo objeto?
+  - Pela posição `p+1`.
+- E o objeto anterior?
+  - Pela posição `p-1`.
+- E como podemos acessar os três primeiros objetos?
+  - Pelas posições: `0`, `1` e `2`.
+- E os quatro últimos?
+  - Pelas posições: `size()-4`, `size()-3`, `size()-2` e `size()-1`.
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Crie um novo método na classe `OrganizadorDeMusicas` chamado `verificarIndice`.
+O método deve receber um parâmetro inteiro e verificar se ele é um índice válido para o estado atual da coleção.
+
+Se o parâmetro não for válido, uma mensagem de erro deve ser exibida no terminal, informando qual é a faixa válida de índices (ex.: de 0 a 3).
+Teste o método usando um objeto da bancada de objetos, experimentando situações com índice válidos e inválidos.
+
+O que acontece se o método for chamado para uma coleção vazia?
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Crie um método similar ao anterior, chamado `indiceEhValido`.
+O método deve receber um parâmetro inteiro e retornar um `boolean`.
+O método não deve exibir nada no terminal, apenas retornar `true` se o índice for válido e `false` em caso contrário.
+
+Teste o método usando a bancada de objetos para índices válidos e inválidos (incluindo coleção vazia).
+:::
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Modifique os métodos `listarArquivo` e `removerArquivo` da classe `OrganizadorDeMusicas` de forma que eles usem o método `indiceEhValido` para verificar seus parâmetros, em vez da expressão booleana atual.
+
+Os métodos `get` ou `remove` do `ArrayList` só devem ser chamados se o método `indiceEhValido` retornar `true`.
+:::
+
+# Tocando os arquivos de música {background-color="#40666e"}
+
+## {.smaller}
+
+Seria interessante se nosso organizador não só guardasse uma lista de arquivos de música,
+
+- Mas que pudéssemos tocar realmente as músicas.
+
+. . .
+
+Se tivermos uma classe implementada para tocar arquivos de aúdio, nossa classe organizadora não precisar saber nada sobre como fazer isso.
+
+- Poderia apenas lidar com o nome do arquivo e deixar a outra classe cuidar do resto.
+- Infelizmente, a biblioteca padrão do Java não te uma classe para tocar arquivos MP3.
+- Mas muitos programadores e empesas criam classes úteis o tempo todo
+  - E as disponibilizam para outras pessoas usarem.
+  - É o que chamamos de classes de terceiros (*third-party libraries*).
+  - Elas podem ser importadas e usadas da mesma forma que as classes da biblioteca padrão Java.
+
+## {.smaller}
+
+Em uma nova versão do projeto, usaremos classes da biblioteca `javazoom.net` para escrever a nossa própria classe tocadora de música.
+
+. . .
+
+Nós usaremos três métodos da nova classe `TocadorDeMusica`.
+
+- `tocarAmostra`, `comecarATocar` e `parar`.
+- Os dois primeiros métodos recebem o nome do arquivo de música por parâmetro.
+  - O primeiro toca alguns segundos do início do arquivo e retorna quando termina de tocar.
+  - Já o segundo começa a tocar a música em background e já retorna para o organizador.
+    - E, nesse caso, precisamos usar o método `parar` se quisermos parar de tocar a música.
+
+. . .
+
+Avalie as modificações na classe `OrganizadorDeMusica` no projeto [organizador-musicas-v2](https://github.com/ufla-ipoo/organizador-musicas-v2).
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Crie um objeto `OrganizadorDeMusica` da segunda versão do projeto. Experimente adicionar alguns arquivos de música a ele e tocá-los.
+
+Se quiser, você pode usar as músicas do repositório [organizador-musicas-v2](https://github.com/ufla-ipoo/amostras-musicas).
+Baixe o repositório, descompacte o arquivo e copie os arquivos de extensão `.mp3` para a pasta do projeto `organizador-musicas-v2`.
+Ao adicionar os arquivos no organizador de músicas, use exatamente o mesmo nome do arquivo, incluindo a extensão `.mp3` (ex.: `Mactonite-MorningMysteries.mp3`)
+
+Você pode usar seus próprios arquivos MP3 também se preferir. Lembre-se apenas de colocar na pasta do projeto e digitar corretamente o nome do arquivo.
+
+Experimente também com arquivos que não existem.
+O que acontece quando você tenta utilizá-los?
+:::
+
+## Resumo do organizador de músicas {.smaller}
+
+Nós sabemos como usar o básico de uma coleção em Java.
+
+- Fizemos isso com pouco esforço, porque estamos aproveitando o que está implementado na classe `ArrayList`.
+- Da mesma forma, nosso programa é capaz de tocar músicas, com pouco esforço.
+  - Aproveitando o que já está implementado em uma classe de biblioteca de terceiros.
+
+. . .
+
+Veja que, em ambos os casos, precisamos saber muito pouco sobre o funcionamento interno das classes.
+
+- Precisamos saber apenas os nomes, tipos de parâmetro e de retorno de alguns métodos importantes.
+
+. . .
+
+Ainda falta algumas coisas para nosso organizar ficar mais útil.
+
+- Especialmente, poder listar os nomes de todos os arquivos da coleção.
+- É o que veremos a seguir.
+
+# Processando uma coleção inteira {background-color="#40666e"}
+
+## {.smaller}
+
+A ideia agora é ter um método na classe `OrganizadorDeMusicas` que exiba no terminal todos os nomes de arquivos guardados na coleção.
+
+- Podemos pensar em um método `listarTodosOsArquivos` para fazer isso.
+  - Qual deve ser o tipo de retorno do método?
+  - Ele precisa ter algum parâmetro?
+  - Quantas chamadas ao método `System.out.println` precisamos para mostrar todos os nomes de arquivo?
+
+. . .
+
+Veja que, claramente, precisamos de uma estrutura de repetição para implementar o método.
+
+- Vamos começar utilizando o loop for-each.
+
+
+## O loop for-each {.smaller}
+
+Um [loop for-each]{.alert} (*para cada*) é uma forma de realizar ações **repetidamente nos itens de uma coleção**.
+
+- Sem precisar escrevê-las mais de uma vez.
+
+. . .
+
+A sintaxe do for-each é mostrada no pseudo-código a seguir:
+
+```
+  for (TipoDoElemento elemento : coleção) {
+    corpo do loop
+  }
+```
+
+. . .
+
+Esse código fica mais fácil de entender se o lermos assim:
+
+```
+  para cada elemento na coleção faça: {
+    corpo do loop
+  }
+```
+
+## {.smaller}
+
+```
+  for (TipoDoElemento elemento : coleção) {
+    corpo do loop
+  }
+```
+
+Repare que a variável `elemento` está sendo declarada no cabeçalho do loop.
+
+- Por isso, precisamos informar o tipo da variável.
+- Nós chamamos essa variável de **variável do loop**.
+  - E podemos usar o nome que quisermos para a variável.
+
+## {.smaller}
+
+Abaixo está uma implementação do método `listarTodosOsArquivos`:
+
+```{.java code-line-numbers="false"}
+  public void listarTodosOsArquivos() {
+      for(String nomeDoArquivo : arquivos) {
+          System.out.println(nomeDoArquivo);  
+      }
+  }
+```
+
+. . . 
+
+Repare que o método `println` é chamado para cada objeto presente no `ArrayList` arquivos.
+
+- Se houver quatro músicas na coleção, ele será executado quatro vezes.
+- Em cada execução, a variável `nomeDoArquivo` guarda um dos elementos da lista.
+  - Na primeira vez o elemento da posição 0, depois da posição 1, e assim por diante.
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Implemente o método `listarTodosOsArquivos` no seu projeto.
+
+Crie um objeto `OrganizadorDeMusicas`, adicione alguns arquivos a ele e teste o método que você implementou.
+
+Dica: use o depurador do BlueJ para reforçar o entendimento de como o loop for-each funciona.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Cria um `ArrayList` de Strings no bloco de códigos do BlueJ, digitando as duas linhas abaixo.
+
+```{.java code-line-numbers="false"}
+import java.util.ArrayList;
+new ArrayList<String>()
+```
+
+Repare que a segunda linha não tem ponto-e-vírgula e, por isso, aparecerá um ícone vermelho no bloco de códigos.
+Use-o para jogar o objeto `ArrayList` criado na bancada de objetos.
+
+Clique no objeto e verifique os métodos disponíveis.
+Tente usar alguns dos métodos: `add`, `remove`, `size` e `isEmpty`.
+Tente chamar os mesmos métodos também pelo Bloco de Códigos.
+:::
+
+## Processamento seletivo de uma coleção {.smaller}
+
+## {.smaller}
+
+
+Nós vimos que podemos usar um loop for-each para percorrer todos os elementos de uma coleção.
+
+- Mas nós não precisamos fazer a mesma coisa com todos os objetos, necessariamente.
+- Podemos, por exemplo, querer listar apenas as músicas de um determinado cantor.
+- Ou buscarmos todas as músicas que têm uma certa palavra no título.
+
+. . .
+
+O que você acha que precisamos acrescentar no corpo do loop para fazer esse tipo de coisa?
+
+- Basta usarmos um comando condicional (`if`) para selecionar os arquivos que queremos.
+
+## {.smaller}
+
+
+
 
 
 
