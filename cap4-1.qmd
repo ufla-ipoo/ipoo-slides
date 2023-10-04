@@ -421,6 +421,147 @@ Há três características importantes sobre o `ArrayList` que precisamos saber:
 - Ele mantém uma contagem privada da quantidade de itens armazenados (e o método `size` retorna essa informação).
 - Ele mantém a ordem dos elementos inseridos (e podemos obter os objetos na mesma ordem).
 
+. . .
+
+Veja que usando um `ArrayList` a classe `OrganizadorDeMusica` fica muito simples.
+
+- Todo trabalho "pesado" é tratado na `ArrayList`.
+  - Essa é a grande vantagem de usar uma classe da biblioteca de classes.
+  - Poupamos trabalho aproveitando algo que alguém já teve o trabalho de fazer e testar.
+
+## {.smaller}
+
+Veja que nós usamos a classe `ArrayList` **sem nos preocuparmos** exatamente **como** a classe funciona.
+
+- Basta sabermos o que ela faz e como utilizar seus métodos.
+- Veja que estamos mais uma vez usando o conceito de [abstração]{.alert}.
+  - Sem precisar conhecer os detalhes da classe, podemos usá-las em diversas situações diferentes.
+
+. . .
+
+Outra coisa importante é que o fato do `ArrayList` guardar o número de objetos que ele guarda, traz consequências importantes.
+
+- A classe `OrganizadorDeMusicas` não precisa guardar essa informação.
+  - Mesmo tendo um método `obterQuantidadeDeArquivos`.
+- Repare que o organizador de músicas **delega** a responsabilidade de manter essa informação para o objeto `ArrayList`.
+  - Isso significa que o organizador **não duplica** essa informação no programa. 
+
+## {.smaller}
+
+Duplicação de informações é algo que devemos nos esforçar para evitar.
+
+- Além de dar mais trabalho, por estarmos fazendo algo duas vezes,
+  - corremos o risco de, por algum erro, as duas informações (que deveriam ser iguais) estarem diferentes.
+
+. . .
+
+Falaremos bastante de duplicação nos próximos capítulos. 
+
+# Classes genéricas {background-color="#40666e"}
+
+## {.smaller}
+
+Vamos aprofundar um pouco a notação utilizada para declarar o tipo do atributo `arquivos`:
+
+- `ArrayList<String>`
+
+. . .
+
+Como já comentamos, classes que dependem de um segundo tipo são chamadas de [classes genéricas]{.alert}.
+
+- Uma classe genérica não define um único tipo, mas, na verdade, potencialmente vários tipos.
+- Podemos ter: *ArrayList de Strings*, *ArrayList de Pessoas*, *ArrayList de Retângulos*, enfim, de qualquer classe que precisarmos.
+  - Cada um deles é um tipo diferente.
+- Por enquanto, vamos usar apenas a classe `ArrayList`, mas existem diversas outras coleções também implementadas como classes genéricas.
+
+## {.smaller}
+
+Veja as declarações abaixo, por exemplo:
+
+```{.java code-line-numbers="false"}
+  private ArrayList<Pessoa> equipe;
+  private ArrayList<MaquinaIngressos> maquinas;  
+```
+
+- O atributo `equipe` pode armazenar obetos `Pessoa`.
+- Já o atributo `maquinas` guarda objetos `MaquinaIngressos`.
+- Portanto, `ArrayList<Pessoa>` e `ArrayList<MaquinaIngressos>` são tipos diferentes.
+
+. . . 
+
+Você acha que a linha de código abaixo seria válida?
+
+```{.java code-line-numbers="false"}
+  equipe = maquinas;  
+```
+
+- Não! Justamente porque as variáveis têm tipos diferentes.
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Escreva a declaração de um atributo privado chamado `biblioteca` que guarda um `ArrayList`.
+Os elementos do `ArrayList` são do tipo `Livro`.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Escreva a declaração de uma variável local chamada `ipoo` que guarda um `ArrayList` de `Estudante`.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Escreva a declaração de um atributo privado chamado `musicas` para guardar uma coleção de objetos `Musica`.
+::: 
+
+::: {.callout-note title="Exercício" icon=false}
+Escreva comandos para criar objetos `ArrayList` e atribuir às variáveis declaradas nos três exercícios anteriores.
+:::
+
+# Numeração dentro das coleções {background-color="#40666e"}
+
+## {.smaller}
+
+Ao usar o projeto `organizador-musicas-v1` você notou que, para listar e remover músicas, foi necessário passar parâmetros começando em zero.
+
+- Isso porque objetos armazenados em um `ArrayList` têm uma numeração implícita que começa em zero.
+- Geralmente chamamos a posição do objeto na coleção de **índice**.
+
+. . .
+
+Portanto, se um `ArrayList` tiver 20 objetos, qual é a posição do último elemento?
+
+- 19, certo?
+  - Já que o primeiro objeto fica na posição 0, o segundo na posição 1, e assim por diante.
+
+## {.smaller}
+
+Repare que os métodos `listarArquivo` e `removerArquivo` verificam o valor do índice antes de passá-lo para os métodos do `ArrayList`.
+
+- Eles conferem se o índice está no intervalo válido, entre `0` e `size()-1`.
+- É um bom hábito fazer isso para evitar erros nas chamadas de métodas de classes da biblioteca.
+
+. . .
+
+::: {.callout-note title="Cuidado" appearance="simple" icon=false}
+Se você não tomar cuidado, pode acabar tentando acessar uma posição inválida de um `ArrayList`.
+
+Se fizer isso, o programa exibirá uma mensagem de índice fora da faixa (`IndexOutOfBoundsException`) e o programa será terminado.
+:::
+
+
+## {.smaller}
+
+É importante se lembrar que, ao remover um objeto de um `ArrayList`, os objetos que estavam depois dele mudam de posição.
+
+- Suponha, por exemplo, um `ArrayList` com 5 elementos.
+- Se você remover o terceiro elemento (ou seja, o elemento da posição 2),
+  - O próximo elemento vai passar da posição 3 para a posição 2.
+  - E o último vai passar da posição 4 para a posição 3.
+
+
+
+
+
+
 
 
 ##
