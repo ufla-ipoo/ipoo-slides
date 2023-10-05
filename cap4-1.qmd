@@ -118,7 +118,7 @@ Como foi citado no início da disciplina, esse material tem uma **abordagem iter
 
 . . .
 
-Neste capítulo veremos também que [abstação]{.alert} não se refere apenas a ignorar detalhes.
+Neste capítulo veremos também que [abstr  ação]{.alert} não se refere apenas a ignorar detalhes.
 
 - Mas também a identificar padrões que aparecem repetidamente no código.
 - O que nos permite reutilizar em uma nova situação métodos e classes que já havíamos implementado e usado antes.
