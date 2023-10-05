@@ -1,17 +1,22 @@
-## Slides da Disciplina GAC125 - IPOO
+## GAC125 - Introdução à POO {.smaller}
 
-::: {.nonincremental}
+::: {.nonincremental .fontsize80}
 
 :::: {.columns}
 
+
 ::: {.column width="50%"}
 
-Capítulo 1
+[Playlist de **Videoaulas**](https://www.youtube.com/watch?v=Pn49AxSBQ7g&list=PLaPMgEYxCSWep1GK69nOMWPr20zPKRILC)
+
+[Repositório de **Projetos**](https://github.com/orgs/ufla-ipoo/repositories)
+
+**Slides Capítulo 1**
 
 - [Aula 1.1 - Teórica](cap1-1.html)
 - [Aula 1.2 - Prática](cap1-2.html)
 
-Capítulo 2
+**Slides Capítulo 2**
 
 - [Aula 2.1 - Teórica](cap2-1.html)
 - [Aula 2.2 - Prática](cap2-2.html)
@@ -21,12 +26,12 @@ Capítulo 2
 :::
 
 ::: {.column width="50%"}
-Capítulo 3
+**Slides Capítulo 3**
 
 - [Aula 3.1 - Teórica](cap3-1.html)
 - [Aula 3.2 - Prática](cap3-2.html)
 
-Capítulo 4
+**Slides Capítulo 4**
 
 - [Aula 4.1 - Teórica](cap4-1.html)
 :::
