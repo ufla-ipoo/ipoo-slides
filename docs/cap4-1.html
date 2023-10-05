@@ -16,7 +16,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2023-03-10">
+  <meta name="dcterms.date" content="2023-05-10">
   <title>IPOO - Cap. 4 Agrupando Objetos</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -413,7 +413,7 @@
     </div>
 </div>
 
-  <p class="date">03/10/2023</p>
+  <p class="date">05/10/2023</p>
 </section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
@@ -429,6 +429,23 @@
 <p><img data-src="imagens/meme_pense_sobre_isso.jpg"></p>
 </div><div class="column" style="width:70%;">
 <p><strong>Lembre-se</strong> que <span class="alert">você precisa ser a pessoa mais interessada no seu próprio sucesso!</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-1" class="slide level2 smaller">
+<h2></h2>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Entrega no Campus Virtual</strong></p>
+</div>
+<div class="callout-content">
+<p>Nesta aula não há quizes a responder.</p>
+<p>Você deverá entregar a versão final de um projeto que contenha todos os 7 exercícios marcados para a entrega. Eles estão identificados como: <strong>Exercício</strong> <span class="alert">(entrega)</span>.</p>
 </div>
 </div>
 </div>
@@ -452,7 +469,7 @@
 </div>
 </div>
 </section>
-<section id="section-1" class="slide level2 smaller">
+<section id="section-2" class="slide level2 smaller">
 <h2></h2>
 <p>O principal objetivo deste capítulo é mostrar algumas formas que temos de <strong>agrupar objetos</strong> em <span class="alert">coleções</span>.</p>
 <ul>
@@ -479,7 +496,7 @@
 <h1>Usando os conceitos do Cap. 3 como base</h1>
 
 </section>
-<section id="section-2" class="slide level2 smaller">
+<section id="section-3" class="slide level2 smaller">
 <h2></h2>
 <p>Além de conhecermos os novos conceitos de <span class="alert">coleção</span> e <span class="alert">iteradores</span>,</p>
 <ul>
@@ -500,11 +517,11 @@
 </ul>
 </div>
 </section>
-<section id="section-3" class="slide level2 smaller">
+<section id="section-4" class="slide level2 smaller">
 <h2></h2>
 <p>Portanto, <strong>vale muito a pena</strong>, se familizarizar com as classes mais comuns da biblioteca do Java.</p>
 <ul>
-<li class="fragment">O poder da <span class="alert">abstração</span> nos permite usar essas classes sem precisarmos saber praticamente nada sobre como essas classes são implementadas internamente.</li>
+<li class="fragment">O poder da <span class="alert">abstração</span> nos permite usar essas classes sem precisarmos saber praticamente nada sobre como elas são implementadas internamente.</li>
 </ul>
 <div class="fragment">
 <p>Usar essas classes se refere basicamente a:</p>
@@ -514,7 +531,7 @@
 </ul>
 </div>
 </section>
-<section id="section-4" class="slide level2 smaller">
+<section id="section-5" class="slide level2 smaller">
 <h2></h2>
 <p>Como foi citado no início da disciplina, esse material tem uma <strong>abordagem iterativa</strong>.</p>
 <ul>
@@ -534,7 +551,7 @@
 <h1>A abstração de coleção</h1>
 
 </section>
-<section id="section-5" class="slide level2 smaller">
+<section id="section-6" class="slide level2 smaller">
 <h2></h2>
 <p>O que é uma <span class="alert">coleção</span>?</p>
 <ul>
@@ -544,22 +561,22 @@
 <div class="fragment">
 <p>Uma coleção pode ser:</p>
 <ul>
-<li class="fragment">Grande.
+<li class="fragment"><strong>Grande</strong>.
 <ul>
 <li class="fragment">Ex.: todos os alunos da universidade.</li>
 </ul></li>
-<li class="fragment">Pequena.
+<li class="fragment"><strong>Pequena</strong>.
 <ul>
 <li class="fragment">Ex.: as disciplinas que um aluno está matriculado em um semestre.</li>
 </ul></li>
-<li class="fragment">Ou até mesmo vazia.
+<li class="fragment">Ou até mesmo <strong>vazia</strong>.
 <ul>
 <li class="fragment">Ex.: os prêmios Nobel que eu já ganhei.</li>
 </ul></li>
 </ul>
 </div>
 </section>
-<section id="section-6" class="slide level2 smaller">
+<section id="section-7" class="slide level2 smaller">
 <h2></h2>
 <p>Se você tem uma coleção de alguma coisa (moedas, autógrafos, o que seja),</p>
 <ul>
@@ -572,13 +589,13 @@
 </ul></li>
 </ul>
 <div class="fragment">
-<p>Repare que essas são <strong>operações comuns</strong> em uma coleção.</p>
+<p>Repare que essas são <strong>operações comuns</strong> em coleções.</p>
 <ul>
-<li class="fragment">Independente dos objetos que ela guarda.</li>
+<li class="fragment">Independente dos objetos que elas guardam.</li>
 </ul>
 </div>
 </section>
-<section id="section-7" class="slide level2 smaller">
+<section id="section-8" class="slide level2 smaller">
 <h2></h2>
 <p>No contexto de POO, uma <strong>coleção</strong> pode ser <strong>representada por uma</strong> <span class="alert">classe</span>.</p>
 <ul>
@@ -597,7 +614,7 @@
 </ul></li>
 <li class="fragment">Filmes e séries no catálogo da Netflix:
 <ul>
-<li class="fragment">O catálogo é continuamente atualizado, acrescentando novos filmes e retirando outros.</li>
+<li class="fragment">O catálogo é continuamente atualizado, acrescentando novos filmes e séries e retirando outros.</li>
 </ul></li>
 <li class="fragment">Os comentários de uma publicação em uma rede social:
 <ul>
@@ -606,9 +623,9 @@
 </ul>
 </div>
 </section>
-<section id="section-8" class="slide level2 smaller">
+<section id="section-9" class="slide level2 smaller">
 <h2></h2>
-<p>Veja que a quantidade de itens armazenada em uma coleção pode variar com o tempo.</p>
+<p>Veja que a <strong>quantidade de itens</strong> armazenada em uma coleção <strong>pode variar</strong> com o tempo.</p>
 <ul>
 <li class="fragment">Uma solução ingênua para tratar isso em um código Java seria criar um atributo para cada objeto da coleção.</li>
 <li class="fragment">Mas veja que precisaríamos adivinhar quantos objetos a coleção precisaria.</li>
@@ -635,51 +652,51 @@
 </div>
 </section></section>
 <section>
-<section id="um-organizador-de-playlist-de-músicas" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>Um organizador de <em>playlist</em> de músicas</h1>
+<section id="um-organizador-de-músicas" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Um organizador de músicas</h1>
 
 </section>
-<section id="section-9" class="slide level2 smaller">
+<section id="section-10" class="slide level2 smaller">
 <h2></h2>
-<p>Vamos criar uma classe para nos ajudar a organizar arquivos de músicas guardados no computador.</p>
+<p>Vamos criar uma classe para nos ajudar a <strong>organizar arquivos de músicas</strong> guardados no computador.</p>
 <ul>
 <li class="fragment">Nossa classe não vai guardar os detalhes das músicas.</li>
-<li class="fragment">Em vez disso, vamos usar a classe <code>ArrayList</code> da biblioteca de classes para nos poupar trabalho.</li>
+<li class="fragment">Em vez disso, vamos <strong>usar a classe <code>ArrayList</code></strong> da biblioteca de classes <strong>para nos poupar trabalho</strong>.</li>
 </ul>
 <div class="fragment">
 <div class="columns">
-<div class="column" style="width:30%;">
+<div class="column" style="width:50%;">
 <p><img data-src="imagens/duvida_para_que_classe_ArrayList.png"></p>
-</div><div class="column" style="width:70%;">
+</div><div class="column" style="width:50%;">
 <ul>
 <li class="fragment">A questão é que as classes da biblioteca de classes foram criadas para uso geral.</li>
 <li class="fragment">E não para necessidades específicas.</li>
-<li class="fragment">Um ArrayList pode ser usado para guardar dados de estudantes, ou de lembretes de eventos.</li>
+<li class="fragment">Um ArrayList pode ser usado para guardar dados de estudantes, ou de lembretes de eventos, por exemplo.</li>
 <li class="fragment">A nossa classe específica é que precisará tratar de operações específicas relacionadas a arquivos de músicas.</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
-<section id="section-10" class="slide level2 smaller">
+<section id="section-11" class="slide level2 smaller">
 <h2></h2>
 <p>Por razões didáticas, ou seja, para ficar mais fácil assimilarmos os conceitos:</p>
 <ul>
-<li class="fragment">vamos começar com uma versão bem simples da classe,</li>
+<li class="fragment">vamos <strong>começar</strong> com uma versão bem <strong>simples</strong> da classe,</li>
 <li class="fragment">que lida apenas com os nomes dos arquivos de música.
 <ul>
 <li class="fragment">Sem detalhes como título, artista, duração, etc.</li>
 </ul></li>
 </ul>
 <div class="fragment">
-<p>Nesse cenário, precisaremos que o ArrayList guarde objetos String que representem os nomes dos arquivos.</p>
+<p>Nesse cenário, precisaremos que o <strong><code>ArrayList</code> guarde objetos String</strong> que representem os nomes dos arquivos.</p>
 <ul>
 <li class="fragment">A ideia é começar simples, para focarmos no conceito que vamos aprender agora, criação e uso de coleções.</li>
 <li class="fragment">Depois vamos incrementar um projeto para que ele pareça com um organizar e tocador de músicas de verdade.</li>
 </ul>
 </div>
 </section>
-<section id="section-11" class="slide level2 smaller">
+<section id="section-12" class="slide level2 smaller">
 <h2></h2>
 <p>A classe vai assumir que cada arquivo tem uma única música.</p>
 <ul>
@@ -698,9 +715,9 @@
 <p>Veremos que a classe <code>ArrayList</code> torna bem fácil tratar essas operações.</p>
 </div>
 </section>
-<section id="section-12" class="slide level2 smaller">
+<section id="section-13" class="slide level2 smaller">
 <h2></h2>
-<p>Estamos adotando uma <strong>abordagem incremental</strong>.</p>
+<p>Estamos adotando uma <span class="alert">abordagem incremental</span>.</p>
 <ul>
 <li class="fragment">Começamos com uma <strong>versão básica</strong> que mostra como criar e usar um ArrayList.</li>
 <li class="fragment">E depois vamos melhorá-la até chegar ao ponto de nosso programar <strong>tocar a música de verdade</strong>.</li>
@@ -710,12 +727,14 @@
 <div class="column" style="width:30%;">
 <p><img data-src="imagens/fica_a_dica.png"></p>
 </div><div class="column" style="width:70%;">
-<p>Lembre-se que adotar uma abordagem incremental tem uma probabilidade de sucesso muito maior do que querer implementar tudo de uma vez.</p>
+<ul>
+<li class="fragment">Lembre-se que adotar uma abordagem incremental tem uma probabilidade de sucesso muito maior do que querer implementar tudo de uma vez.</li>
+</ul>
 </div>
 </div>
 </div>
 </section>
-<section id="section-13" class="slide level2">
+<section id="section-14" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -724,13 +743,13 @@
 </div>
 <div class="callout-content">
 <p>Antes de analisarmos o código-fonte, vamos entender o funcionamento do organizador de músicas.</p>
-<p>Abra o probjeto <a href="https://github.com/ufla-ipoo/organizador-musicas-v1">organizador-musicas-v1</a> no BlueJ e crie um objeto <code>OrganizadorDeMusicas</code>. Guarde nomes de alguns arquivos de música nele (são simplesmente strings). Como não vamos tocar as músicas nesse ponto, qualquer nome de arquivo serve, mas há um repositório com <a href="https://github.com/ufla-ipoo/amostra-musicas">arquivos de músicas</a> de verdade que você pode querer baixar e usar.</p>
-<p>Confira se o número de arquivos retornado pelo método <code>obterQuantidadeDeArquivos</code> bate com a quantidade que você armazenou. Ao usar o método <code>listarArquivo</code> você deve notar que você precisa passar o valor zero para imprimir o primeiro nome de arquivo, um para o segundo, e assim por diante. Você imagina, por que?</p>
+<p>Abra o probjeto <a href="https://github.com/ufla-ipoo/organizador-musicas-v1">organizador-musicas-v1</a> no BlueJ e crie um objeto <code>OrganizadorDeMusicas</code>. Guarde nomes de alguns arquivos de música nele (são simplesmente strings). Como não vamos tocar as músicas agora, qualquer nome de arquivo serve. Mas há um repositório com <a href="https://github.com/ufla-ipoo/amostra-musicas">arquivos de músicas</a> de verdade que você pode querer baixar e usar.</p>
+<p>Confira se o número de arquivos retornado pelo método <code>obterQuantidadeDeArquivos</code> bate com a quantidade que você armazenou. Ao usar o método <code>listarArquivo</code> você deve notar que você precisa passar o valor 0 para imprimir o primeiro nome de arquivo, 1 para o segundo, e assim por diante. Você imagina, por que?</p>
 </div>
 </div>
 </div>
 </section>
-<section id="section-14" class="slide level2">
+<section id="section-15" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -759,7 +778,11 @@
 <section>
 <section id="usando-uma-classe-da-biblioteca" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Usando uma classe da biblioteca</h1>
-<p>Leia o código da classe <code>OrganizadorDeMusicas</code>.</p>
+
+</section>
+<section id="section-16" class="slide level2 smaller">
+<h2></h2>
+<p><strong>Leia o código</strong> da classe <code>OrganizadorDeMusicas</code>.</p>
 <ul>
 <li class="fragment">Repare que ela usa a classe <code>ArrayList</code>.</li>
 <li class="fragment">Mas a classe <code>ArrayList</code> não aparece no diagrama de classes do BlueJ.</li>
@@ -786,30 +809,39 @@
 <section id="importando-uma-classe-da-biblioteca" class="slide level2 smaller">
 <h2>Importando uma classe da biblioteca</h2>
 <p>A primeira linha da classe <code>OrganizadorDeMusicas</code> mostra como acessar uma classe de biblioteca em Java.</p>
+<div class="halfincfontsize">
 <div class="sourceCode" id="cb1" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">ArrayList</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="fragment">
 <p>Este comando disponibiliza a classe <code>ArrayList</code> do pacote <code>java.util</code> para ser usada em nossa classe.</p>
 <ul>
-<li class="fragment"><p>Com isso, nós podemos então usar a classe <code>ArrayList</code> como se fosse uma classe do nosso projeto.</p></li>
-<li class="fragment"><p>Nós usamos então para declarar o atributo <code>arquivos</code>.</p>
-<div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">ArrayList</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> arquivos<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li class="fragment">Com isso, nós podemos usar a classe <code>ArrayList</code> como se fosse uma classe do nosso projeto.</li>
+<li class="fragment">Nós a usamos então para declarar o atributo <code>arquivos</code>.</li>
 </ul>
 </div>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">ArrayList</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> arquivos<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 </section>
-<section id="section-15" class="slide level2 smaller">
+<section id="section-17" class="slide level2 smaller">
 <h2></h2>
-<p>Repare que a declaração do atributo <code>arquivos</code> traz algo de diferente: <code>&lt;String&gt;</code></p>
+<p>Repare que a declaração do atributo <code>arquivos</code> traz algo de diferente:</p>
 <ul>
-<li class="fragment">Isso é necessário porque, como vimos antes, a classe <code>ArrayList</code> foi criada para uso geral.
+<li class="fragment"><code>&lt;String&gt;</code></li>
+</ul>
+<div class="fragment">
+<p>Isso é necessário porque, como vimos antes, a classe <code>ArrayList</code> foi criada para uso geral.</p>
 <ul>
 <li class="fragment">Ou seja, ela não restringe que objetos ela guarda.</li>
-</ul></li>
 <li class="fragment">Mas, quando criamos um objeto <code>ArrayList</code>, precisamos dizer qual o tipo dos objetos que serão guardados nele.</li>
 <li class="fragment">Classes que são parametrizadas com um segundo tipo (como a <code>ArrayList</code>) são chamadas <span class="alert">classes genéricas</span> em Java.
 <ul>
 <li class="fragment">Veremos mais sobre isso mais adiante.</li>
 </ul></li>
 </ul>
+</div>
 <div class="fragment">
 <p>Portanto, sempre que usamos uma coleção precisamos especificar dois tipos:</p>
 <ul>
@@ -821,12 +853,15 @@
 </section>
 <section id="notação-diamante" class="slide level2 smaller">
 <h2>Notação diamante</h2>
-<p>Da mesma forma vimos antes que o construor da classe <code>VisorDeRelogio</code> criava objetos da classe <code>VisorDeNumero</code>,</p>
+<p>Da mesma forma que vimos antes que o construtor da classe <code>VisorDeRelogio</code> criava objetos da classe <code>VisorDeNumero</code>,</p>
 <ul>
 <li class="fragment">a classe <code>OrganizadorDeMusicas</code> cria um objeto do tipo <code>ArrayList</code> e o guarda no atributo <code>arquivos</code>.</li>
 </ul>
+<div class="fragment">
 <p>Fazemos isso com o comando:</p>
+<div class="halfincfontsize">
 <div class="sourceCode" id="cb3" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>  arquivos <span class="op">=</span> <span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;&gt;();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ul>
 <li class="fragment">Nós chamamos essa sintaxe de <strong>notação diamante</strong> (por causa do sinais <code>&lt;&gt;</code> consecutivos).</li>
 <li class="fragment">Repare que poderíamos escrever <code>new ArrayList&lt;String&gt;()</code>
@@ -835,12 +870,13 @@
 </ul></li>
 <li class="fragment">Portanto, usar <code>&lt;&gt;</code> é só um atalho para escrever código mais rápido.</li>
 </ul>
+</div>
 </section>
 <section id="principais-métodos-da-classe-arraylist" class="slide level2 smaller">
 <h2>Principais métodos da classe <code>ArrayList</code></h2>
 <p>A classe <code>ArrayList</code> possui muitos métodos, mas, por enquanto, usaremos apenas quatro:</p>
 <ul>
-<li class="fragment"><code>add</code>: adiciona um elmento ao final da lista.</li>
+<li class="fragment"><code>add</code>: adiciona um elemento ao final da lista.</li>
 <li class="fragment"><code>size</code>: retorna a quantidade de elementos na coleção.</li>
 <li class="fragment"><code>get</code> e <code>remove</code>: veremos mais adiante, mas já dá para ter uma ideia vendo como são utilizados no código.</li>
 </ul>
@@ -850,9 +886,9 @@
 <h1>Estruturas de objetos com coleções</h1>
 
 </section>
-<section id="section-16" class="slide level2 smaller" data-auto-animate="true">
+<section id="section-18" class="slide level2 smaller" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
-<p>Para entendermos como uma coleção como a ArrayList funciona, é interessante analisarmos um diagrama de objetos.</p>
+<p>Para entendermos como uma coleção como a ArrayList funciona, é interessante analisarmos um <strong>diagrama de objetos</strong>.</p>
 <ul>
 <li class="fragment">Compare a figura abaixo que mostra um <code>OrganizadorDeMusicas</code> com duas strings de nomes de arquivos, com a próxima que mostra com três.</li>
 </ul>
@@ -860,17 +896,128 @@
 <p><img data-src="imagens/organizador_musicas_diagrama_objetos.png"></p>
 </div>
 </section>
-<section id="section-17" class="slide level2 smaller" data-auto-animate="true">
+<section id="section-19" class="slide level2 smaller" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
 <div>
-<p>Para entendermos como uma coleção como a ArrayList funciona, é interessante analisarmos um diagrama de objetos.</p>
+<p>Para entendermos como uma coleção como a ArrayList funciona, é interessante analisarmos um <strong>diagrama de objetos</strong>.</p>
 <ul>
 <li>Compare a figura abaixo que mostra um <code>OrganizadorDeMusicas</code> com duas strings de nomes de arquivos, com a próxima que mostra com três.</li>
 </ul>
 </div>
 <p><img data-src="imagens/organizador_musicas_diagrama_objetos2.png"></p>
 </section>
-<section id="section-18" class="slide level2">
+<section id="section-20" class="slide level2 smaller">
+<h2></h2>
+<p>Há três características importantes sobre o <code>ArrayList</code> que precisamos saber:</p>
+<ul>
+<li class="fragment">Podemos aumentar sua capacidade conforme a necessidade.</li>
+<li class="fragment">Ele mantém uma contagem privada da quantidade de itens armazenados (e o método <code>size</code> retorna essa informação).</li>
+<li class="fragment">Ele mantém a ordem dos elementos inseridos (e podemos obter os objetos na mesma ordem).</li>
+</ul>
+<div class="fragment">
+<p>Veja que, ao utilizar um <code>ArrayList</code>, a classe <code>OrganizadorDeMusica</code> fica muito simples.</p>
+<ul>
+<li class="fragment">Todo trabalho “pesado” é tratado na <code>ArrayList</code>.
+<ul>
+<li class="fragment">Essa é a grande vantagem de usar uma classe da biblioteca de classes.</li>
+<li class="fragment">Poupamos trabalho aproveitando algo que alguém já teve o trabalho de fazer e testar.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-21" class="slide level2 smaller">
+<h2></h2>
+<p>Veja que nós usamos a classe <code>ArrayList</code> <strong>sem nos preocuparmos</strong> exatamente <strong>como a classe funciona</strong>.</p>
+<ul>
+<li class="fragment">Basta sabermos o que ela faz e como utilizar seus métodos.</li>
+<li class="fragment">Veja que estamos mais uma vez usando o conceito de <span class="alert">abstração</span>.
+<ul>
+<li class="fragment">Sem precisar conhecer os detalhes da classe, podemos usá-las em diversas situações diferentes.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Outra coisa importante é que o fato do <code>ArrayList</code> guardar o número de objetos que ele armazena, traz consequências importantes.</p>
+<ul>
+<li class="fragment">A classe <code>OrganizadorDeMusicas</code> não precisa guardar essa informação.
+<ul>
+<li class="fragment">Mesmo tendo um método <code>obterQuantidadeDeArquivos</code>.</li>
+</ul></li>
+<li class="fragment">Repare que o organizador de músicas <strong>delega</strong> a responsabilidade de manter essa informação para o objeto <code>ArrayList</code>.
+<ul>
+<li class="fragment">Isso significa que o organizador <strong>não duplica</strong> essa informação no programa.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-22" class="slide level2 smaller">
+<h2></h2>
+<p><strong>Duplicação de informações</strong> é algo que <strong>devemos</strong> nos esforçar para <strong>evitar</strong>.</p>
+<ul>
+<li class="fragment">Além de dar mais trabalho, por estarmos fazendo algo duas vezes,
+<ul>
+<li class="fragment">corremos o risco de, por algum erro, as duas informações (que deveriam ser iguais) estarem diferentes.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Falaremos bastante de duplicação nos próximos capítulos.</p>
+</div>
+</section></section>
+<section>
+<section id="classes-genéricas" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Classes genéricas</h1>
+
+</section>
+<section id="section-23" class="slide level2 smaller">
+<h2></h2>
+<p>Vamos aprofundar um pouco a notação utilizada para declarar o tipo do atributo <code>arquivos</code>:</p>
+<ul>
+<li class="fragment"><code>ArrayList&lt;String&gt;</code></li>
+</ul>
+<div class="fragment">
+<p>Como já comentamos, classes que dependem de um segundo tipo são chamadas de <span class="alert">classes genéricas</span>.</p>
+<ul>
+<li class="fragment">Uma classe genérica não define um único tipo, mas, na verdade, potencialmente, vários tipos.</li>
+<li class="fragment">Podemos ter: <em>ArrayList de Strings</em>, <em>ArrayList de Pessoas</em>, <em>ArrayList de Retângulos</em>, enfim, de quaisquer objetos que precisarmos.
+<ul>
+<li class="fragment">Cada um deles é um tipo diferente.</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p>Por enquanto, vamos usar apenas a classe <code>ArrayList</code>,</p>
+<ul>
+<li class="fragment">mas existem diversas outras coleções também implementadas como classes genéricas.</li>
+</ul>
+</div>
+</section>
+<section id="section-24" class="slide level2 smaller">
+<h2></h2>
+<p>Veja as declarações abaixo, por exemplo:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb4" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">ArrayList</span><span class="op">&lt;</span>Pessoa<span class="op">&gt;</span> equipe<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">ArrayList</span><span class="op">&lt;</span>MaquinaIngressos<span class="op">&gt;</span> maquinas<span class="op">;</span>  </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>O atributo <code>equipe</code> pode armazenar obetos <code>Pessoa</code>.</p>
+<ul>
+<li class="fragment">Já o atributo <code>maquinas</code> guarda objetos <code>MaquinaIngressos</code>.</li>
+<li class="fragment">Portanto, <code>ArrayList&lt;Pessoa&gt;</code> e <code>ArrayList&lt;MaquinaIngressos&gt;</code> são tipos diferentes.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Você acha que a linha de código abaixo seria válida?</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb5" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>  equipe <span class="op">=</span> maquinas<span class="op">;</span>  </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li class="fragment">Não!
+<ul>
+<li class="fragment">Justamente porque as variáveis são de tipos diferentes.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-25" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -878,7 +1025,516 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
+<p>Escreva a declaração de um atributo privado chamado <code>biblioteca</code> que guarda um <code>ArrayList</code>. Os elementos do <code>ArrayList</code> são do tipo <code>Livro</code>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Escreva a declaração de uma variável local chamada <code>ipoo</code> que guarda um <code>ArrayList</code> de <code>Estudante</code>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Escreva a declaração de um atributo privado chamado <code>musicas</code> para guardar uma coleção de objetos <code>Musica</code>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Escreva comandos para criar objetos <code>ArrayList</code> e atribuir às variáveis declaradas nos três exercícios anteriores.</p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="numeração-dentro-das-coleções" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Numeração dentro das coleções</h1>
 
+</section>
+<section id="section-26" class="slide level2 smaller">
+<h2></h2>
+<p>Ao usar o projeto <code>organizador-musicas-v1</code> você notou que, para <strong>listar e remover músicas</strong>, foi necessário passar <strong>parâmetros começando em zero</strong>.</p>
+<ul>
+<li class="fragment">Isso porque objetos armazenados em um <code>ArrayList</code> têm uma numeração implícita que começa em zero.</li>
+<li class="fragment">Geralmente chamamos a <strong>posição do objeto</strong> na coleção de <span class="alert">índice</span>.</li>
+</ul>
+<div class="fragment">
+<p>Portanto, se um <code>ArrayList</code> tiver 20 objetos, qual é a posição do último elemento?</p>
+<ul>
+<li class="fragment">19, certo?
+<ul>
+<li class="fragment">Já que o primeiro objeto fica na posição 0, o segundo na posição 1, e assim por diante.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-27" class="slide level2 smaller">
+<h2></h2>
+<p>Repare que os métodos <code>listarArquivo</code> e <code>removerArquivo</code> verificam o valor do índice antes de passá-lo para os métodos do <code>ArrayList</code>.</p>
+<ul>
+<li class="fragment">Eles conferem se o índice está no intervalo válido, entre <code>0</code> e <code>size()-1</code>.</li>
+<li class="fragment">É um bom hábito fazer isso para evitar erros nas chamadas de métodas de classes da biblioteca.</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-note no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Cuidado</strong></p>
+</div>
+<div class="callout-content">
+<p>Se você não tomar cuidado, pode acabar tentando acessar uma posição inválida de um <code>ArrayList</code>.</p>
+<p>Se fizer isso, o programa exibirá uma mensagem de índice fora da faixa (<code>IndexOutOfBoundsException</code>) e o programa será terminado.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-28" class="slide level2 smaller">
+<h2></h2>
+<p>É importante se lembrar que, ao <strong>remover um objeto</strong> de um <code>ArrayList</code>, os <strong>objetos</strong> que estavam <strong>depois dele mudam de posição</strong>.</p>
+<div class="fragment">
+<p>Suponha, por exemplo, um <code>ArrayList</code> com 5 elementos.</p>
+<ul>
+<li class="fragment">Se você remover o terceiro elemento (ou seja, o elemento da posição 2),
+<ul>
+<li class="fragment">O próximo elemento vai passar da posição 3 para a posição 2.</li>
+<li class="fragment">E o último vai passar da posição 4 para a posição 3.</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p>É importante nos acostumarmos a utilizar os índices de uma coleção.</p>
+<ul>
+<li class="fragment">Pois várias coleções têm essa mesma característica de começar em zero, e seguir sequencialmente, até <code>size()-1</code>.</li>
+</ul>
+</div>
+</section>
+<section id="section-29" class="slide level2 smaller">
+<h2></h2>
+<p>Suponha, por exemplo, que uma variável <code>p</code> guarda a posição de um objeto na coleção.</p>
+<ul>
+<li class="fragment">Como podemos acessar o próximo objeto?
+<ul>
+<li class="fragment">Pela posição <code>p+1</code>.</li>
+</ul></li>
+<li class="fragment">E o objeto anterior?
+<ul>
+<li class="fragment">Pela posição <code>p-1</code>.</li>
+</ul></li>
+<li class="fragment">E como podemos acessar os três primeiros objetos?
+<ul>
+<li class="fragment">Pelas posições: <code>0</code>, <code>1</code> e <code>2</code>.</li>
+</ul></li>
+<li class="fragment">E os quatro últimos?
+<ul>
+<li class="fragment">Pelas posições: <code>size()-4</code>, <code>size()-3</code>, <code>size()-2</code> e <code>size()-1</code>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-30" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
+</div>
+<div class="callout-content">
+<p>Crie um novo método na classe <code>OrganizadorDeMusicas</code> chamado <code>verificarIndice</code>. O método deve receber um parâmetro inteiro e verificar se ele é um índice válido para o estado atual da coleção.</p>
+<p>Se o parâmetro não for válido, uma mensagem de erro deve ser exibida no terminal, informando qual é a faixa válida de índices (ex.: de 0 a 3). Teste o método usando um objeto da bancada de objetos, experimentando situações com índice válidos e inválidos.</p>
+<p>O que acontece se o método for chamado para uma coleção vazia?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
+</div>
+<div class="callout-content">
+<p>Crie um método similar ao anterior, chamado <code>indiceEhValido</code>. O método deve receber um parâmetro inteiro e retornar um <code>boolean</code>. O método não deve exibir nada no terminal, apenas retornar <code>true</code> se o índice for válido e <code>false</code> em caso contrário.</p>
+<p>Teste o método usando a bancada de objetos para índices válidos e inválidos (incluindo coleção vazia).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-31" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
+</div>
+<div class="callout-content">
+<p>Modifique os métodos <code>listarArquivo</code> e <code>removerArquivo</code> da classe <code>OrganizadorDeMusicas</code> de forma que eles usem o método <code>indiceEhValido</code> para verificar seus parâmetros, em vez da expressão booleana atual.</p>
+<p>Os métodos <code>get</code> ou <code>remove</code> do <code>ArrayList</code> só devem ser chamados se o método <code>indiceEhValido</code> retornar <code>true</code>.</p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="tocando-os-arquivos-de-música" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Tocando os arquivos de música</h1>
+
+</section>
+<section id="section-32" class="slide level2 smaller">
+<h2></h2>
+<p>Seria interessante se nosso organizador não só guardasse uma lista de arquivos de música,</p>
+<ul>
+<li class="fragment">Mas se também <strong>tocasse realmente as músicas</strong>.</li>
+</ul>
+<div class="fragment">
+<p>Se tivermos uma <strong>classe</strong> implementada <strong>para tocar arquivos de aúdio</strong>, nossa classe organizadora não precisar saber nada sobre como fazer isso.</p>
+<ul>
+<li class="fragment">Poderia apenas lidar com o nome do arquivo e deixar a outra classe cuidar do resto.</li>
+<li class="fragment">Infelizmente, a biblioteca padrão do Java não te uma classe para tocar arquivos MP3.</li>
+<li class="fragment">Mas muitos programadores e empesas criam classes úteis o tempo todo.
+<ul>
+<li class="fragment">E as disponibilizam para outras pessoas usarem.</li>
+<li class="fragment">É o que chamamos de <strong>classes de terceiros</strong> (<span class="alert">third-party libraries</span>).</li>
+<li class="fragment">Elas podem ser importadas e usadas da mesma forma que as classes da biblioteca padrão Java.
+<ul>
+<li class="fragment">Precisamos apenas ter o arquivo da biblioteca em nossa projeto (veremos mais sobre isso no futuro).</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-33" class="slide level2 smaller">
+<h2></h2>
+<p>Em uma nova versão do projeto, usaremos classes da biblioteca <code>javazoom.net</code> para escrever a nossa própria classe tocadora de música.</p>
+<div class="fragment">
+<p>Nós usaremos três métodos da nova classe <code>TocadorDeMusica</code>.</p>
+<ul>
+<li class="fragment"><code>tocarAmostra</code>, <code>comecarATocar</code> e <code>parar</code>.</li>
+<li class="fragment">Os dois primeiros métodos recebem o nome do arquivo de música por parâmetro.
+<ul>
+<li class="fragment">O primeiro toca alguns segundos do início do arquivo e retorna quando termina de tocar.</li>
+<li class="fragment">Já o segundo começa a tocar a música em segundo plano (<em>background</em>) e já retorna para o organizador.</li>
+<li class="fragment">E, nesse caso, precisamos usar o método <code>parar</code> se quisermos parar de tocar a música.</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p>Avalie as modificações na classe <code>OrganizadorDeMusica</code> no projeto <a href="https://github.com/ufla-ipoo/organizador-musicas-v2">organizador-musicas-v2</a>.</p>
+</div>
+</section>
+<section id="section-34" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Crie um objeto <code>OrganizadorDeMusica</code> da segunda versão do projeto. Experimente adicionar alguns arquivos de música a ele e tocá-los.</p>
+<p>Se quiser, você pode usar as músicas do repositório <a href="https://github.com/ufla-ipoo/amostras-musicas">amostras-musicas</a>. Baixe o repositório, descompacte o arquivo e copie os arquivos de extensão <code>.mp3</code> para a pasta do projeto <code>organizador-musicas-v2</code>. Ao adicionar os arquivos no organizador de músicas, use exatamente o mesmo nome do arquivo, incluindo a extensão <code>.mp3</code> (ex.: <code>Mactonite-MorningMysteries.mp3</code>)</p>
+<p>Você pode usar seus próprios arquivos MP3 também se preferir. Lembre-se apenas de colocar na pasta do projeto e digitar corretamente o nome do arquivo.</p>
+<p>Experimente também com arquivos que não existem. O que acontece quando você tenta utilizá-los?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="resumo-do-organizador-de-músicas" class="slide level2 smaller">
+<h2>Resumo do organizador de músicas</h2>
+<div class="fragment">
+<p>Agora nós sabemos como usar o básico de uma coleção em Java.</p>
+<ul>
+<li class="fragment">Fizemos isso com pouco esforço, porque estamos aproveitando o que está implementado na classe <code>ArrayList</code>.</li>
+<li class="fragment">Da mesma forma, nosso programa é capaz de tocar músicas, com pouco esforço.
+<ul>
+<li class="fragment">Aproveitando o que já está implementado em uma classe de biblioteca de terceiros.</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p>Veja que, em ambos os casos, <strong>precisamos saber</strong> muito <strong>pouco sobre o funcionamento interno das classes</strong>.</p>
+<ul>
+<li class="fragment">Precisamos <strong>saber apenas</strong> informações sobre <strong>alguns métodos importantes</strong>.
+<ul>
+<li class="fragment">Basicamente seus nomes, tipos de parâmetro e tipo de retorno.</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p>Ainda falta algumas coisas para nosso organizar ficar mais útil.</p>
+<ul>
+<li class="fragment">Especialmente, poder listar os nomes de todos os arquivos da coleção.</li>
+<li class="fragment">É o que veremos a seguir.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="processando-uma-coleção-inteira" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Processando uma coleção inteira</h1>
+
+</section>
+<section id="section-35" class="slide level2 smaller">
+<h2></h2>
+<p>A ideia agora é ter um método na classe <code>OrganizadorDeMusicas</code> que exiba no terminal todos os nomes de arquivos guardados na coleção.</p>
+<ul>
+<li class="fragment">Podemos pensar em um método <code>listarTodosOsArquivos</code> para fazer isso.
+<ul>
+<li class="fragment">Qual deve ser o tipo de retorno do método?</li>
+<li class="fragment">Ele precisa ter algum parâmetro?</li>
+<li class="fragment">Quantas chamadas ao método <code>System.out.println</code> precisamos para mostrar todos os nomes de arquivo?</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Veja que, claramente, precisamos de uma <strong>estrutura de repetição</strong> para implementar o método.</p>
+<ul>
+<li class="fragment">Vamos começar utilizando o loop <span class="alert">for-each</span>.</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p>Um <strong>loop</strong> (ou laço) pode ser usado para executar repetidamente um bloco de comandos sem precisarmos escrevê-los várias vezes.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="o-loop-for-each" class="slide level2 smaller">
+<h2>O loop for-each</h2>
+<p>Um <span class="alert">loop for-each</span> (<em>para cada</em>) é uma forma de realizar ações <strong>repetidamente nos itens de uma coleção</strong>.</p>
+<ul>
+<li class="fragment">Sem precisar escrevê-las mais de uma vez.</li>
+</ul>
+<div class="fragment">
+<p>A sintaxe do for-each é mostrada no pseudo-código a seguir:</p>
+<div class="halfincfontsize">
+<pre><code>  for (TipoDoElemento elemento : coleção) {
+    corpo do loop
+  }</code></pre>
+</div>
+</div>
+<div class="fragment">
+<p>Esse código fica mais fácil de entender se o lermos assim:</p>
+<div class="halfincfontsize">
+<pre><code>  Para cada elemento na coleção faça: {
+    corpo do loop
+  }</code></pre>
+</div>
+</div>
+</section>
+<section id="section-36" class="slide level2 smaller">
+<h2></h2>
+<div class="halfincfontsize">
+<pre><code>  for (TipoDoElemento elemento : coleção) {
+    corpo do loop
+  }</code></pre>
+</div>
+<p>Repare que a <strong>variável <code>elemento</code></strong> está sendo declarada no cabeçalho do loop.</p>
+<ul>
+<li class="fragment">Por isso, precisamos <strong>informar o tipo</strong> da variável.</li>
+<li class="fragment">Nós chamamos essa variável de <strong>variável do loop</strong>.
+<ul>
+<li class="fragment">E podemos usar o nome que quisermos para a variável.</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-37" class="slide level2 smaller">
+<h2></h2>
+<p>Abaixo está uma implementação do método <code>listarTodosOsArquivos</code>:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb9" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">listarTodosOsArquivos</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span><span class="op">(</span><span class="bu">String</span> nomeDoArquivo <span class="op">:</span> arquivos<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>          <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>nomeDoArquivo<span class="op">);</span>  </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Repare que o método <code>println</code> é chamado para cada objeto presente no <code>ArrayList</code> arquivos.</p>
+<ul>
+<li class="fragment">Se houver quatro músicas na coleção, ele será executado quatro vezes.</li>
+<li class="fragment">Em cada execução, a variável <code>nomeDoArquivo</code> guarda um dos elementos da lista.
+<ul>
+<li class="fragment">Na primeira vez o elemento da posição 0, depois da posição 1, e assim por diante.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-38" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
+</div>
+<div class="callout-content">
+<p>Implemente o método <code>listarTodosOsArquivos</code> no seu projeto.</p>
+<p>Crie um objeto <code>OrganizadorDeMusicas</code>, adicione alguns arquivos a ele e teste o método que você implementou.</p>
+<p>Dica: use o depurador do BlueJ para reforçar o entendimento de como o loop for-each funciona.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-39" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Crie um <code>ArrayList</code> de Strings no bloco de códigos do BlueJ, digitando as duas linhas abaixo.</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb10" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">ArrayList</span><span class="op">;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Repare que a segunda linha não tem ponto-e-vírgula e, por isso, aparecerá um ícone vermelho no bloco de códigos. Use-o para jogar o objeto <code>ArrayList</code> criado na bancada de objetos.</p>
+<p>Clique no objeto e verifique os métodos disponíveis. Tente usar alguns dos métodos: <code>add</code>, <code>remove</code>, <code>size</code> e <code>isEmpty</code>. Tente chamar os mesmos métodos também pelo Bloco de Códigos.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="processamento-seletivo-de-uma-coleção" class="slide level2 smaller">
+<h2>Processamento seletivo de uma coleção</h2>
+<div class="fragment">
+<p>Nós vimos que podemos usar um <strong>loop for-each</strong> para <strong>percorrer todos os elementos</strong> de uma coleção.</p>
+<ul>
+<li class="fragment">Mas nós não somos obrigados a fazer a mesma coisa com todos os objetos.</li>
+<li class="fragment">Podemos, por exemplo, <strong>querer listar apenas</strong> as músicas de um determinado cantor.</li>
+<li class="fragment">Ou buscarmos todas as músicas que têm uma certa palavra no título.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>O que você acha que precisamos acrescentar no corpo do loop para fazer esse tipo de coisa?</p>
+<ul>
+<li class="fragment">Basta usarmos um <strong>comando condicional</strong> (<code>if</code>) para selecionar os arquivos que queremos.</li>
+</ul>
+</div>
+</section>
+<section id="section-40" class="slide level2 smaller">
+<h2></h2>
+<p>O código abaixo mostra um exemplo de processamento seletivo.</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb11" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> Lista os nomes dos arquivos que batem com a string de busca passada</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"> * @</span>param stringDeBusca A string a ser procurada<span class="co">.</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a> <span class="co">*/</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">void</span> <span class="fu">buscarMusicas</span><span class="op">(</span><span class="bu">String</span> stringDeBusca<span class="op">)</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="bu">String</span> nomeDoArquivo <span class="op">:</span> arquivos<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Se a string de busca existe no nome do arquivo</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>nomeDoArquivo<span class="op">.</span><span class="fu">contains</span><span class="op">(</span>stringDeBusca<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>            <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>nomeDoArquivo<span class="op">);</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li class="fragment">Usando o método <code>contains</code> da classe String, podemos filtrar os arquivos.
+<ul>
+<li class="fragment">E exibir apenas aqueles que têm a string de busca passada.</li>
+</ul></li>
+<li class="fragment">Se o nome do arquivo não tem a string de busca, nós simplesmente o ignoramos.
+<ul>
+<li class="fragment">E, por isso, não há um bloco <code>else</code> no código.</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-41" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
+</div>
+<div class="callout-content">
+<p>Adicione o método <code>buscarMusicas</code> à sua última versão da classe <code>OrganizadorDeMusicas</code>.</p>
+<p>Confira se o método exibe apenas os nomes de arquivo que possuem a string de busca. Experimente também usar uma string de busca que não exista em nenhum arquivo.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
+</div>
+<div class="callout-content">
+<p>Altere o método <code>buscarMusicas</code> de forma que seja exibida uma mensagem caso nenhum arquivo tenha a string de busca passada.</p>
+<p><strong>Dica</strong>: você precisará declarar uma variável local do tipo <code>boolean</code>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-42" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
+</div>
+<div class="callout-content">
+<p>Crie um novo método <code>buscarETocarMusicas</code> que toque uma amostra das músicas de um determinado artista. Para isso, os nomes dos arquivos precisam conter o nome do artista.</p>
+<p>O método é similar ao do exercício anterior mas, ao encontrar um arquivo que possui a string de busca (nome do artista, no caso), em vez de exibir o nome do arquivo, ele deve tocar uma amostra da música. Você precisará utilizar o método <code>tocarAmostra</code> do atributo <code>tocador</code> para fazer isso.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="limitação-do-uso-de-strings" class="slide level2 smaller">
+<h2>Limitação do uso de strings</h2>
+<p>Quando começamos a fazer buscas nos nomes dos arquivos, começamos a perceber que tratar tudo como string não é ideal.</p>
+<ul>
+<li class="fragment">Ex.: podemos querer buscar todas as músicas que tenham a palavra <code>love</code> no título.
+<ul>
+<li class="fragment">Mas isso pode retornar músicas de um cantor chamado <code>Glover</code>.</li>
+</ul></li>
+<li class="fragment">Veja que, pensando em termos de orientação a objetos, o ideal era que tivéssemos uma classe para representar músicas.
+<ul>
+<li class="fragment">E essa classe poderia, por exemplo, guardar separadamente o nome do artista e o nome da música.</li>
+<li class="fragment">E, assim, seria mais fácil buscar músicas por artista ou pelo nome.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Supondo então que fosse criada uma classe <code>Musica</code>, qual deveria ser o tipo do nosso atributo <code>arquivos</code>?</p>
+<ul>
+<li class="fragment">Em vez de <code>ArrayList&lt;String&gt;</code>, ele passaria a ser <code>ArrayList&lt;Musica&gt;</code>.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Faremos essa melhoria na próxima aula!</p>
+</div>
+</section></section>
+<section>
+<section id="entregas-dessa-aula" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Entregas dessa Aula</h1>
+
+</section>
+<section id="section-43" class="slide level2 smaller">
+<h2></h2>
+<div>
+<p>Para ter <strong>presença</strong> nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Entregas no Campus Virtual</strong></p>
+</div>
+<div class="callout-content">
+<p>Responda a tarefa no Campus Virtual enviando o seu projeto do organizador de músicas com o arquivo <code>OrganizadorDeMusicas.java</code> contendo as 7 alterações solicitadas nos exercícios ao longo dos slides.</p>
+</div>
 </div>
 </div>
 </div>
