@@ -1,4 +1,4 @@
-## Slides da Disciplina GAC15 - IPOO
+## Slides da Disciplina GAC125 - IPOO
 
 ::: {.nonincremental}
 
@@ -8,27 +8,27 @@
 
 Capítulo 1
 
-- [Aula 1.1](cap1-1.html)
-- [Aula 1.2](cap1-2.html)
+- [Aula 1.1 - Teórica](cap1-1.html)
+- [Aula 1.2 - Prática](cap1-2.html)
 
 Capítulo 2
 
-- [Aula 2.1](cap2-1.html)
-- [Aula 2.2](cap2-2.html)
-- [Aula 2.3](cap2-3.html)
-- [Aula 2.4](cap2-4.html)
+- [Aula 2.1 - Teórica](cap2-1.html)
+- [Aula 2.2 - Prática](cap2-2.html)
+- [Aula 2.3 - Teórica](cap2-3.html)
+- [Aula 2.4 - Prática](cap2-4.html)
 
 :::
 
 ::: {.column width="50%"}
 Capítulo 3
 
-- [Aula 3.1](cap3-1.html)
-- [Aula 3.2](cap3-2.html)
+- [Aula 3.1 - Teórica](cap3-1.html)
+- [Aula 3.2 - Prática](cap3-2.html)
 
 Capítulo 4
 
-- [Aula 4.1](cap4-1.html)
+- [Aula 4.1 - Teórica](cap4-1.html)
 :::
 
 ::::
