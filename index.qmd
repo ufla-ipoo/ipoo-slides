@@ -7,33 +7,35 @@
 
 ::: {.column width="50%"}
 
-[Playlist de **Videoaulas**](https://www.youtube.com/watch?v=Pn49AxSBQ7g&list=PLaPMgEYxCSWep1GK69nOMWPr20zPKRILC)
+[Videoaulas]{.alert}
 
-[Repositório de **Projetos**](https://github.com/orgs/ufla-ipoo/repositories)
+- [Playlist no Youtube](https://www.youtube.com/watch?v=Pn49AxSBQ7g&list=PLaPMgEYxCSWep1GK69nOMWPr20zPKRILC)
 
-**Slides Capítulo 1**
+[Projetos de exemplo]{.alert}
 
-- [Aula 1.1 - Teórica](cap1-1.html)
-- [Aula 1.2 - Prática](cap1-2.html)
+- [Repositório no GitHub](https://github.com/orgs/ufla-ipoo/repositories)
 
-**Slides Capítulo 2**
+[Slides]{.alert} 
 
-- [Aula 2.1 - Teórica](cap2-1.html)
-- [Aula 2.2 - Prática](cap2-2.html)
-- [Aula 2.3 - Teórica](cap2-3.html)
-- [Aula 2.4 - Prática](cap2-4.html)
+- **Capítulo 1**
+  - [Aula 1.1 - Teórica](cap1-1.html)
+  - [Aula 1.2 - Prática](cap1-2.html)
+- **Capítulo 2**
+  - [Aula 2.1 - Teórica](cap2-1.html)
+  - [Aula 2.2 - Prática](cap2-2.html)
+  - [Aula 2.3 - Teórica](cap2-3.html)
+  - [Aula 2.4 - Prática](cap2-4.html)
 
 :::
 
 ::: {.column width="50%"}
-**Slides Capítulo 3**
 
-- [Aula 3.1 - Teórica](cap3-1.html)
-- [Aula 3.2 - Prática](cap3-2.html)
+- **Capítulo 3**
+  - [Aula 3.1 - Teórica](cap3-1.html)
+  - [Aula 3.2 - Prática](cap3-2.html)
+- **Capítulo 4**
+  - [Aula 4.1 - Teórica](cap4-1.html)
 
-**Slides Capítulo 4**
-
-- [Aula 4.1 - Teórica](cap4-1.html)
 :::
 
 ::::
