@@ -429,12 +429,677 @@ Implemente um método na classe `OrganizadorDeMusicas` que receba uma string por
 :::
 
 
+# Coleções de tamanho fixo {background-color="#40666e"}
+
+## {.smaller}
+
+Apesar de coleções de tamanho flexível serem úteis na maioria dos casos,
+
+- Há situações nas quais sabemos quantos elementos uma coleção terá durante todo o tempo de execução de um programa.
+- Nesses casos, é melhor utilizar uma **coleção de tamanho fixo**: [um vetor]{.alert} (ou *array*).
+
+. . .
+
+Mas qual a **vantagem de usarmos vetores**?
+
+- É que o acesso por índice (posição) é geralmente mais eficiente do que em uma coleção de tamanho flexível, como a `ArrayList`.
+- Outra vantagem é que, em Java, podemos ter vetores de elementos que são tipos primitivos.
+  - Enquanto `ArrayList`, por exemplo, permite guardar apenas objetos.
+  - Apesar de que, como veremos no próximo capítulo, há uma forma de lidarmos comn isso usando *wrappers*.
+
+## {.smaller}
+
+Um **vetor** é um grupo de variáveis que contém **elementos de um mesmo tipo**.
+
+- Em Java, vetores são considerados objetos, portanto, são considerados tipos por referência.
+- Como mencionado, os elementos de um vetor podem ser de tipos primitivos (`int`, `double`, `boolean`, etc.) ou de tipos por referência (objetos).
+
+. . .
+
+Exemplo de um vetor:
+
+![](imagens/exemplo_vetor.png)
+
+## {.smaller}
+
+Podemos **declarar um vetor** em Java, utilizando uma das seguintes formas:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+TipoDosElementos[] nomeDoVetor;
+TipoDosElementos nomeDoVetor[];
+```
+:::
+
+. . .
+
+Exemplos:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+double[] notas;
+int meuVetorDeInteiros[];
+```
+:::
+
+## {.smaller}
+
+Como os demais objetos, os **vetores são criados** por meio da palavra-chave `new`:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+nomeDoVetor = new TipoDosElementos[capacidade];
+```
+:::
+
+. . .
+
+Exemplos:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+double[] notas;
+notas = new double[3];
+
+int meuVetorDeInteiros[];
+meuVetorDeInteiros = new int[10];
+```
+:::
+
+## {.smaller}
+
+Há ainda outras duas formas alternativas de se instanciar um vetor.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+// Declara e instancia em uma única linha
+int meuVetorDeInteiros[] = new int[10];
+
+// Declara, instancia um vetor com 3 posições e já inicializa os seus valores
+double notas[] = {7.5, 8.0, 9.0};
+```
+:::
+
+. . .
+
+Em C++ um vetor criado, mas não inicializado, pode conter lixo de memória.
+
+- Mas em Java, vale a regra de inicialização igual a dos atributos.
+  - **Vetor de tipos numéricos** tem todos os elementos **inicializados com zero**.
+  - **Vetor de booleanos** tem todos os elementos **inicializados com `false`**.
+  - **Vetor de objetos** tem todos os elementos **inicializados com `null`**.
+
+## O loop `for` {.smaller}
+
+Geralmente utilizamos um [loop `for`]{.alert} para percorrer os elementos de um vetor.
+
+- A **sintaxe** do loop `for` em Java é **igual à do C++**.
+- Usamos o atributo `length`, que é constante e público, e retorna o tamanho do vetor.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+for(int i = 0; i < vetor.length; i++) {
+    // Usando vetor[i], estamos acessando a posição i do vetor.
+	vetor[i] = i;
+}
+```
+:::
+
+## O loop `for` {.smaller}
+
+Como podemos então exibir todos os elementos de um vetor de inteiros chamado `vet`?
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+for(int i = 0; i < vet.length; i++) {
+	System.out.println(vet[i]);
+}
+```
+:::
+
+## Usando vetores em métodos {.smaller}
+
+Podemos passar vetores como parâmetro de métodos. 
+
+- A passagem é por referência, ou seja, estamos passando o ponteiro para o vetor.
+- Portanto, se o método alterar o vetor, ele estará alterando o vetor original passado por parâmetro
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public void preencherVetor(int vet[]) {
+	for (int i = 0; i < vet.length; i++) {
+    	vet[i] = i;
+	}
+}
+```
+:::
+
+## Usando vetores em métodos {.smaller}
+
+Podemos também criar métodos que retornam vetores.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public int[] criarVetor() {
+	int v[] = new int[10];
+	return v;
+}
+```
+:::
+
+## Vetores de objetos {.smaller}
+
+Nós podemos também criar vetores para guardar objetos.
+
+- Suponha, por exemplo, que queiramos poder criar e trabalhar com vários objetos de uma classe `Carro`.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+// Estamos declarando um vetor de carros, com capacidade de
+// guardar 10 objetos Carro
+Carro[] carros = new Carro[10];
+
+// Em cada posição do vetor, podemos colocar um objeto do tipo Carro.
+carros[0] = new Carro("Gol");
+carros[1] = new Carro("Onix");
+```
+:::
+
+## Vetores de objetos {.smaller}
+
+Nós podemos então acessar cada objeto `Carro` no vetor, a partir de sua posição.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java}
+for(int i = 0; i < carros.length; i++) {
+	if (carros[i] != null) {
+        // Estamos exibindo nome do carro chamando o método obterNome
+	    System.out.println(carros[i].obterNome());
+    }
+}
+```
+:::
+
+. . .
+
+Repare que a condição (`if`) da linha 2 é muito importante:
+
+- pois caso alguma posição do vetor não tenha sido inicializada, seu valor é `null`.
+- E poderia então ocorrer um erro (`NullPointerException`) ao tentar chamar o método `obterNome`.
 
 
+## Usando for-each com vetores {.smaller}
 
+Nós também podemos usar um **lopp *for-each*** para percorrer os elementos de um vetor.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+for(Carro carro : carros) {
+	if (carro != null) {
+        // Estamos exibindo nome do carro chamando o método obterNome
+	    System.out.println(carro.obterNome());
+    }
+}
+```
+:::
+
+. . .
+
+Este exemplo nos permite enfatizar uma das vantagens do loop *for-each*:
+
+- Repare que esse código seria exatamente igual se a variável `carros` fosse um `ArrayList` em vez de um vetor.
+- Já na opção anterior, usando loop for, os códigos seriam diferentes.
+  - Primeiro porque consultamos o tamanho de um vetor usando o atributo `length` e de um `ArrayList` usando o método `size`.
+  - E segundo que acessamos um elemento por posição em um vetor usando `[i]` e em um `ArrayList` usando `get(i)`.
+
+## Vetores vs. ArrayList {.smaller}
+
+Agora que conhecemos tanto **vetores** quanto `ArrayList`, qual deles devemos utilizar?
+
+- É melhor usar `ArrayList` se o número de elementos pode ser alterado durante a execução do programa.
+  - Ou se você não sabe, antes de criar a coleção, quantos elementos serão usados.
+- Seria melhor usar um vetor quando o número de elementos é pré-determinado.
+  - E a eficiência de acesso por posição é muito importante.
+
+. . .
+
+Na prática acabamos usando `ArrayList` em muitas situações mesmo quando temos uma quantidade fixa de elementos.
+
+- Mas, de toda forma, precisamos saber utilizar vetores pois é comum precisarmos usar métodos de classes da biblioteca do Java (ou de terceiros) que trabalham com vetores.
+
+
+# Exemplo de vetores usando o Greenfoot {background-color="#40666e"}
+
+## {.smaller}
+
+Para **ilustrar o uso de vetores**, vamos aproveitar para conhecer um recurso que pode ser interessante no trabalho da disciplina.
+
+- Em **jogos com gráficos 2D**, podemos criar **animações** dos personagens usando **sprites**.
+- Sprites nada mais são que imagens que, quando exibidas seguidamente, dão a ilusão de movimento.
+
+. . .
+
+Vamos criar um projeto no Greenfoot para vermos isso na prática.
+
+- **Atenção**: leia as instruções do trabalho prático para saber do que se trata o Greenfoot!
+  - E, claro, você precisa ter o Greenfoot instalado para conseguir fazer os exercícios da aula.
+
+## {.smaller}
+
+Vamos criar uma classe `MeuMundo` e nela definir um mundo de 800x600 pixels com fundo preto.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public class MeuMundo extends World
+{
+    public MeuMundo()
+    {    
+        // Cria um novo mundo com 800x600 células,
+        // com células de tamanho 1x1 pixels.
+        super(800, 600, 1); 
+        // Cria uma imagem do tamanho do mundo
+        GreenfootImage imagemFundoPreto = new GreenfootImage(800, 600);
+        // Desenha um retângulo preto em toda a imagem
+        imagemFundoPreto.setColor(Color.BLACK);
+        imagemFundoPreto.fillRect(0, 0, 800, 600);
+        // Define a imagem com o plano de fundo do mundo
+        setBackground(imagemFundoPreto);
+    }
+}
+```
+::: 
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Crie o projeto no Greenfoot e use o código do slide anterior para definir o mundo (altere a classe inicial `MyWorld`).
+
+Crie então um objeto da classe `MeuMundo`, clicando na caixa da classe e acessando a opção `new MeuMundo()`.
+Você verá que o jogo exibirá uma tela preta.
+:::
+
+## {.smaller}
+
+Vamos agora criar uma classe `Cavaleiro`.
+
+- Para ficar claro o conceito das animações, vamos começar com uma imagem estática.
+
+. . .
+
+As imagens que vamos utilizar foram baixadas do site:
+
+- [https://www.gameart2d.com/the-knight-free-sprites.html](https://www.gameart2d.com/the-knight-free-sprites.html)
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Baixe as imagens do site citado, encontre a imagem `Idle (1).png` e copie-a para a pasta `images` do projeto do Greenfoot.
+Renomeie a imagem para `knight.png`.
+:::
+
+
+## {.smaller}
+
+O código abaixo utiliza a imagem que copiamos como a imagem do cavaleiro.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public class Cavaleiro extends Actor
+{
+    public Cavaleiro()
+    {
+        // cria a imagem do cavaleiro
+        GreenfootImage imagem = new GreenfootImage("knight.png");
+        // como a imagem é muito grande, vamos redimensioná-la para 120x140 pixels
+        imagem.scale(120,140);
+        // usamos a imagem como a imagem do cavaleiro
+        setImage(imagem);
+    }
+    
+    public void act() 
+    { 
+        // não faz nada, por enquanto
+    }
+}
+```
+:::
 
 ##
 
 ::: {.callout-note title="Exercício" icon=false}
+Crie uma classe `Cavaleiro` no seu projeto. Para isso, clique em `Actor` e acesse a opção `Nova subclasse...`.
+Use o nome `Cavaleiro` na janela que aparece e clique em OK.
+
+Em seguida, implemente o construtor da classe conforme apresentado no slide anterior.
+
+Para testar, crie um objeto da classe `Cavaleiro` e o coloque no mundo.
+:::
+
+## {.smaller}
+
+Vamos agora adicionar código para que o cavaleiro possa caminhar na horizontal.
+
+- Para isso, vamos alterar o método `act` do `Cavaleiro`.
+- O método, basicamente, aumenta ou diminui o valor da posição do cavaleiro no eixo X (horizontal),
+  - dependendo da tecla que está sendo pressionada (seta para a esquerda ou para a direita).
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    public void act()
+    {
+        // se a tecla seta para a ESQUERDA estiver pressionada
+        if (Greenfoot.isKeyDown("left")) {
+            // posição do cavaleiro DIMINUI 4 no eixo X e se mantém no eixo Y
+            setLocation(getX()-4, getY());            
+        }
+        // se a tecla seta para a DIREITA estiver pressionada
+        if (Greenfoot.isKeyDown("right")) {
+            // posição do cavaleiro AUMENTA 4 no eixo X e se mantém no eixo Y
+            setLocation(getX()+4, getY());            
+        }
+    }
+```
+::: 
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Altere o método `act` da classe `Cavaleiro` de acordo com o slide anterior.
+
+Crie um objeto da classe, coloque-o no mundo e então clique no botão `Executar`.
+
+Experimente movimentar o cavaleiro usando as setas para a direita e para a esquerda.
+
+O que achou do movimento?
+:::
+
+## {.smaller}
+
+Repare que o movimento funciona, mas não é muito realista.
+
+- Parece que o cavaleiro está deslizando no chão sem mexer o corpo.
+
+. . .
+
+Mas você deve ter notado, nos arquivos que baixou, que há várias imagens do cavaleiro.
+
+- As imagens têm um nome seguido de um número.
+- Cada nome indica uma *ação* do personagem.
+  - Ex.: idle (parado), walk (caminhando), run (correndo), etc.
+- E o número é a sequência de imagens que fazem acontecer a animação.
+  - Por ex.: se exibirmos repetidamente, e em sequência, todas as imagens que começam com *idle*:
+  - teremos uma ilusão de movimento do personagem.
+
+## {.smaller}
+
+Para fazer isso, vamos primeiro copiar todas as imagens que baixamos do cavaleiro para a pasta `images` do projeto no Greenfoot.
+
+- Vamos começar tratando a imagem do cavaleiro parado (*idle*).
+- Repare que as imagens se chamam: `Idle (1).png`, `Idle (2).png`, ..., até `Idle (10).png`.
+
+. . .
+
+Para usar essas imagens, vamos **declarar um vetor de imagens como atributo da classe `Cavaleiro`**.
+
+- E, no construtor da classe, vamos carregar as 10 imagens e guardá-las no vetor.
+
+## {.smaller}
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public class Cavaleiro extends Actor
+{
+    // declaramos um vetor de imagens
+    private GreenfootImage[] imagens;
+    public Cavaleiro() {
+        // criamos o vetor com 10 posições, pois temos 10 imagens
+        imagens = new GreenfootImage[10];
+        // usamos um loop for que rodará 10 vezes
+        for (int i = 0; i < imagens.length; i++) {
+            // em cada iteração, carregamos uma imagem usando o
+            // valor i+1 para montar o nome da imagem.
+            // e a guardamos na posição i do vetor.
+            imagens[i] = new GreenfootImage("Idle (" + (i+1) + ").png");
+            // redimensionamos a imagem porque ela é muito grande.
+            imagens[i].scale(120,140);
+        }
+        // definimos a primeira imagem como a imagem inicial do cavaleiro
+        setImage(imagens[0]);
+    }
+    // restante da classe omitido
+}
+```
+::: 
+
+
+## {.smaller}
+
+A alteração no slide anterior apenas carregou as imagens para a memória, mas ainda não faz nenhuma animação.
+
+- Para criar a animação, precisamos que seja exibida uma das imagens de cada vez.
+- Podemos então usar o método `act` que é chamado várias vezes por segundo na execução do jogo.
+  - A princípio, parece que basta mudarmos para a imagem seguinte a cada chamada.
+  - E quando chegarmos na última imagem, voltamos para a primeira.
+
+. . .
+
+Repare que para que consigamos mudar para a próxima imagem, precisaremos de um atributo que indique qual é a imagem atual.
+
+- Vamos então criar um atributo inteiro `indiceImagemAtual`, e inicializá-lo com `0` no construtor.
+- Feito isso, podemos utilizá-lo no método `act`, como mostrado no slide a seguir.
+
+## {.smaller}
+
+Toda vez que o método `act` é chamado, a próxima imagem do vetor é exibida.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    public void act()
+    {        
+        // início do método que trata eventos de teclado omitido
+        
+        // incrementamos o índice da imagem atual para que
+        // possamos usar a próxima imagem.
+        indiceImagemAtual++;
+        // mas se o índice chegou ao final do vetor, voltamos para a primeira posição
+        if (indiceImagemAtual >= imagens.length) {
+            indiceImagemAtual = 0;
+        }
+        // usamos então a próxima imagem, como imagem do cavaleiro
+        setImage(imagens[indiceImagemAtual]);
+    }
+```
+::: 
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Implemente as últimas alterações apresentadas da classe `Cavaleiro`: a criação do atributo `indiceImagemAtual` e alterações no construtor e no método `act`.
+
+Agora crie um objeto `Cavaleiro` e execute o jogo.
+
+O que achou da animação?
+:::
+
+
+## {.smaller}
+
+Veja que a animação ficou muito acelerada.
+
+- Isso porque a quantidade de vezes por segundo que o método `act` está sendo chamado é muito alta para as imagens que estamos usando.
+
+. . .
+
+Como podemos resolver?
+
+- Podemos fazer com que cada imagem seja usada por mais de uma execução do método `act`.
+- Ou dizendo, de outra forma, podemos fazer a atualização a cada X vezes que o método é chamado.
+  - Em vez de atualizar em toda chamada.
+
+. . .
+
+E como podemos fazer isso?
+
+## {.smaller}
+
+Repare que podemos definir de quantos em quantos passos precisamos atualizar as imagens.
+
+- E usarmos essa informação para saber se é hora de atualizar a imagem ou não.
+  - Mas, para usá-lo, precisamos contar quantos passos foram dados desde a última atualização.
+
+. . .
+
+Vamos então definir esses dois atributos na classe `Cavaleiro`.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    private int passosParaAtualizarImagem;
+    private int passosDesdeUltimaAtualizacaoImagem;
+```
+:::
+
+. . . 
+
+E inicializá-los no construtor da classe.
+
+- Inicializamos `passosDesdeUltimaAtualizacaoImagem` com zero.
+- Mas qual valor devemos usar para `passosDesdeUltimaAtualizacaoImagem`?
+  - Aqui vai um processo de tentativa e erro.
+  - Vamos experimentando até achar um valor que a animação pareça razoável.
+
+## {.smaller}
+
+Por fim, vamos alterar o método `act` para usar os atributos que criamos
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    public void act()
+    {        
+        // início do método que trata eventos de teclado omitido
+
+        // contamos mais um passo desde a última atualização da imagem
+        passosDesdeUltimaAtualizacaoImagem++;
+        
+        // se já se passaram os passos necessários para atualizar a imagem
+        if (passosDesdeUltimaAtualizacaoImagem >= passosParaAtualizarImagem) {
+            // a imagem será atualizada, então voltamos o valor da variável para zero
+            passosDesdeUltimaAtualizacaoImagem = 0;
+            
+            // e atualizamos a imagem (é o código que já tínhamos feito antes)
+            indiceImagemAtual++;
+            if (indiceImagemAtual >= imagens.length) {
+                indiceImagemAtual = 0;
+            }
+            setImage(imagens[indiceImagemAtual]);
+        }
+    }
+```
+::: 
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Implemente as últimas alterações para uso dos atributos `passosParaAtualizarImagem` e `passosDesdeUltimaAtualizacaoImagem` na classe `Cavaleiro`.
+
+Execute o jogo e veja o resultado.
+Altere o valor do atributo `passosParaAtualizarImagem` até encontrar um valor interessante.
+Qual valor achou melhor?
+:::
+
+## {.smaller}
+
+Repare que usamos um vetor para guardar as imagens porque sabemos que usaremos 10 imagens e isso não vai mudar durante a execução do jogo.
+
+- Esse, portanto, é um exemplo prático da utilidade de vetores em Java.
+
+. . .
+
+## {.smaller}
+
+Mas, pensando no jogo, repare que fizemos todo esse trabalho só para tratar o personagem parado.
+
+- Já que quando ele se movimenta, ele continua deslizando pela tela.
+- Como podemos tratar isso?
+
+. . .
+
+Veja que, nas imagens que baixamos, há imagens para a ação de caminhar (*walk*).
+
+- Basta, portanto, seguirmos a mesma ideia:
+  - Criarmos um novo vetor de imagens.
+  - Fazermos com o que a imagem seja alterada a cada X passos (usando `passosParaAtualizarImagem`).
+
+. . .
+
+Mas há um "detalhe" importante:
+
+- Precisamos agora saber quando o cavaleiro está parado e quando está se movimentando.
+- Para saber qual vetor de imagens usarmos.
+
+
+##
+
+::: {.callout-note title="Exercício - **DESAFIO**" icon=false}
+Altere a classe `Cavaleiro` de forma que ela use as imagens com prefixo `Walk`, quando o cavaleiro estiver se movimentando.
+
+Você precisará criar outro atributo vetor de imagens e carregar nele as imagens.
+
+Além disso, precisará de um atributo para indicar a ação atual do cavaleiro (se ele está parado ou caminhando).
+O atributo deve ser atualizado ao tratar os eventos do teclado, e deve ser usado para saber qual vetor de imagens utilizar.
+
+Por enquanto, não se preocupe com a movimentação para a esquerda.
+:::
+
+##
+
+::: {.callout-note title="Exercício - **DESAFIO**" icon=false}
+A ideia agora é tratar a movimentação para a esquerda.
+
+Repare que, nesse caso, o ideal seria mostrar o cavaleiro olhando para a esquerda.
+Uma forma de fazer isso é invertermos a imagem horizontalmente.
+A classe `GreenfootImage` tem um método chamado `mirrorHorizontally` que faz exatamente isso.
+
+Para tratar a movimentação para a esquerda, precisaremos ter agora quatro vetores de imagens: parado olhando para a direita, parado olhando para a esquerda, caminhando para a direita e caminhando para a esquerda.
+Os dois vetores para a direita você já tratou no exercício anterior.
+Já os outros dois você pode carregar as mesmas imagens e usar o método `mirrorHorizontally` para invertê-las.
+
+Além disso, é necessário que o atributo que indica a ação do cavaleiro tenha quatro estados, assim como os vetores.
+
+E aí? Vai encarar o desafio?
+:::
+
+# Entregas dessa Aula {background-color="#40666e"}
+
+## {.smaller}
+
+::: {.nonincremental}
+
+Para ter **presença** nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.
+
+::: {.callout-important title="Entregas no Campus Virtual"}
+Responda a tarefa no Campus Virtual enviando o seu projeto do `organizador-musicas-v5` com as alterações solicitadas nos exercícios ao longo dos slides.
+:::
 
 :::

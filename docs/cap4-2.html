@@ -877,8 +877,284 @@
 </div>
 </div>
 </div>
+</section></section>
+<section>
+<section id="coleções-de-tamanho-fixo" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Coleções de tamanho fixo</h1>
+
 </section>
-<section id="section-16" class="slide level2">
+<section id="section-16" class="slide level2 smaller">
+<h2></h2>
+<p>Apesar de coleções de tamanho flexível serem úteis na maioria dos casos,</p>
+<ul>
+<li class="fragment">Há situações nas quais sabemos quantos elementos uma coleção terá durante todo o tempo de execução de um programa.</li>
+<li class="fragment">Nesses casos, é melhor utilizar uma <strong>coleção de tamanho fixo</strong>: <span class="alert">um vetor</span> (ou <em>array</em>).</li>
+</ul>
+<div class="fragment">
+<p>Mas qual a <strong>vantagem de usarmos vetores</strong>?</p>
+<ul>
+<li class="fragment">É que o acesso por índice (posição) é geralmente mais eficiente do que em uma coleção de tamanho flexível, como a <code>ArrayList</code>.</li>
+<li class="fragment">Outra vantagem é que, em Java, podemos ter vetores de elementos que são tipos primitivos.
+<ul>
+<li class="fragment">Enquanto <code>ArrayList</code>, por exemplo, permite guardar apenas objetos.</li>
+<li class="fragment">Apesar de que, como veremos no próximo capítulo, há uma forma de lidarmos comn isso usando <em>wrappers</em>.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-17" class="slide level2 smaller">
+<h2></h2>
+<p>Um <strong>vetor</strong> é um grupo de variáveis que contém <strong>elementos de um mesmo tipo</strong>.</p>
+<ul>
+<li class="fragment">Em Java, vetores são considerados objetos, portanto, são considerados tipos por referência.</li>
+<li class="fragment">Como mencionado, os elementos de um vetor podem ser de tipos primitivos (<code>int</code>, <code>double</code>, <code>boolean</code>, etc.) ou de tipos por referência (objetos).</li>
+</ul>
+<div class="fragment">
+<p>Exemplo de um vetor:</p>
+<p><img data-src="imagens/exemplo_vetor.png"></p>
+</div>
+</section>
+<section id="section-18" class="slide level2 smaller">
+<h2></h2>
+<p>Podemos <strong>declarar um vetor</strong> em Java, utilizando uma das seguintes formas:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb11" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>TipoDosElementos<span class="op">[]</span> nomeDoVetor<span class="op">;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>TipoDosElementos nomeDoVetor<span class="op">[];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Exemplos:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb12" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span><span class="op">[]</span> notas<span class="op">;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-19" class="slide level2 smaller">
+<h2></h2>
+<p>Como os demais objetos, os <strong>vetores são criados</strong> por meio da palavra-chave <code>new</code>:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb13" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>nomeDoVetor <span class="op">=</span> <span class="kw">new</span> TipoDosElementos<span class="op">[</span>capacidade<span class="op">];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Exemplos:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb14" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span><span class="op">[]</span> notas<span class="op">;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>notas <span class="op">=</span> <span class="kw">new</span> <span class="dt">double</span><span class="op">[</span><span class="dv">3</span><span class="op">];</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[];</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>meuVetorDeInteiros <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">10</span><span class="op">];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-20" class="slide level2 smaller">
+<h2></h2>
+<p>Há ainda outras duas formas alternativas de se instanciar um vetor.</p>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb15" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Declara e instancia em uma única linha</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[]</span> <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Declara, instancia um vetor com 3 posições e já inicializa os seus valores</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> notas<span class="op">[]</span> <span class="op">=</span> <span class="op">{</span><span class="fl">7.5</span><span class="op">,</span> <span class="fl">8.0</span><span class="op">,</span> <span class="fl">9.0</span><span class="op">};</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p>Em C++ um vetor criado, mas não inicializado, pode conter lixo de memória.</p>
+<ul>
+<li class="fragment">Mas em Java, vale a regra de inicialização igual a dos atributos.
+<ul>
+<li class="fragment"><strong>Vetor de tipos numéricos</strong> tem todos os elementos <strong>inicializados com zero</strong>.</li>
+<li class="fragment"><strong>Vetor de booleanos</strong> tem todos os elementos <strong>inicializados com <code>false</code></strong>.</li>
+<li class="fragment"><strong>Vetor de objetos</strong> tem todos os elementos <strong>inicializados com <code>null</code></strong>.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="o-loop-for" class="slide level2 smaller">
+<h2>O loop <code>for</code></h2>
+<p>Geralmente utilizamos um <span class="alert">loop <code>for</code></span> para percorrer os elementos de um vetor.</p>
+<ul>
+<li class="fragment">A <strong>sintaxe</strong> do loop <code>for</code> em Java é <strong>igual à do C++</strong>.</li>
+<li class="fragment">Usamos o atributo <code>length</code>, que é constante e público, e retorna o tamanho do vetor.</li>
+</ul>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb16" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vetor<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Usando vetor[i], estamos acessando a posição i do vetor.</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    vetor<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> i<span class="op">;</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="o-loop-for-1" class="slide level2 smaller">
+<h2>O loop <code>for</code></h2>
+<p>Como podemos então exibir todos os elementos de um vetor de inteiros chamado <code>vet</code>?</p>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb17" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vet<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>vet<span class="op">[</span>i<span class="op">]);</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="usando-vetores-em-métodos" class="slide level2 smaller">
+<h2>Usando vetores em métodos</h2>
+<p>Podemos passar vetores como parâmetro de métodos.</p>
+<ul>
+<li class="fragment">A passagem é por referência, ou seja, estamos passando o ponteiro para o vetor.</li>
+<li class="fragment">Portanto, se o método alterar o vetor, ele estará alterando o vetor original passado por parâmetro</li>
+</ul>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb18" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">void</span> <span class="fu">preencherVetor</span><span class="op">(</span><span class="dt">int</span> vet<span class="op">[])</span> <span class="op">{</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vet<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>        vet<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> i<span class="op">;</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="usando-vetores-em-métodos-1" class="slide level2 smaller">
+<h2>Usando vetores em métodos</h2>
+<p>Podemos também criar métodos que retornam vetores.</p>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb19" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span><span class="op">[]</span> <span class="fu">criarVetor</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> v<span class="op">[]</span> <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> v<span class="op">;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="vetores-de-objetos" class="slide level2 smaller">
+<h2>Vetores de objetos</h2>
+<p>Nós podemos também criar vetores para guardar objetos.</p>
+<ul>
+<li class="fragment">Suponha, por exemplo, que queiramos poder criar e trabalhar com vários objetos de uma classe <code>Carro</code>.</li>
+</ul>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb20" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Estamos declarando um vetor de carros, com capacidade de</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co">// guardar 10 objetos Carro</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>Carro<span class="op">[]</span> carros <span class="op">=</span> <span class="kw">new</span> Carro<span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co">// Em cada posição do vetor, podemos colocar um objeto do tipo Carro.</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>carros<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Carro</span><span class="op">(</span><span class="st">"Gol"</span><span class="op">);</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>carros<span class="op">[</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Carro</span><span class="op">(</span><span class="st">"Onix"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="vetores-de-objetos-1" class="slide level2 smaller">
+<h2>Vetores de objetos</h2>
+<p>Nós podemos então acessar cada objeto <code>Carro</code> no vetor, a partir de sua posição.</p>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb21-1"><a href="#cb21-1"></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> carros<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a>    <span class="cf">if</span> <span class="op">(</span>carros<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb21-3"><a href="#cb21-3"></a>        <span class="co">// Estamos exibindo nome do carro chamando o método obterNome</span></span>
+<span id="cb21-4"><a href="#cb21-4"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carros<span class="op">[</span>i<span class="op">].</span><span class="fu">obterNome</span><span class="op">());</span></span>
+<span id="cb21-5"><a href="#cb21-5"></a>    <span class="op">}</span></span>
+<span id="cb21-6"><a href="#cb21-6"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p>Repare que a condição (<code>if</code>) da linha 2 é muito importante:</p>
+<ul>
+<li class="fragment">pois caso alguma posição do vetor não tenha sido inicializada, seu valor é <code>null</code>.</li>
+<li class="fragment">E poderia então ocorrer um erro (<code>NullPointerException</code>) ao tentar chamar o método <code>obterNome</code>.</li>
+</ul>
+</div>
+</section>
+<section id="usando-for-each-com-vetores" class="slide level2 smaller">
+<h2>Usando for-each com vetores</h2>
+<p>Nós também podemos usar um <strong>lopp <em>for-each</em></strong> para percorrer os elementos de um vetor.</p>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb22" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span>Carro carro <span class="op">:</span> carros<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>carro <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Estamos exibindo nome do carro chamando o método obterNome</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carro<span class="op">.</span><span class="fu">obterNome</span><span class="op">());</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p>Este exemplo nos permite enfatizar uma das vantagens do loop <em>for-each</em>:</p>
+<ul>
+<li class="fragment">Repare que esse código seria exatamente igual se a variável <code>carros</code> fosse um <code>ArrayList</code> em vez de um vetor.</li>
+<li class="fragment">Já na opção anterior, usando loop for, os códigos seriam diferentes.
+<ul>
+<li class="fragment">Primeiro porque consultamos o tamanho de um vetor usando o atributo <code>length</code> e de um <code>ArrayList</code> usando o método <code>size</code>.</li>
+<li class="fragment">E segundo que acessamos um elemento por posição em um vetor usando <code>[i]</code> e em um <code>ArrayList</code> usando <code>get(i)</code>.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="vetores-vs.-arraylist" class="slide level2 smaller">
+<h2>Vetores vs.&nbsp;ArrayList</h2>
+<p>Agora que conhecemos tanto <strong>vetores</strong> quanto <code>ArrayList</code>, qual deles devemos utilizar?</p>
+<ul>
+<li class="fragment">É melhor usar <code>ArrayList</code> se o número de elementos pode ser alterado durante a execução do programa.
+<ul>
+<li class="fragment">Ou se você não sabe, antes de criar a coleção, quantos elementos serão usados.</li>
+</ul></li>
+<li class="fragment">Seria melhor usar um vetor quando o número de elementos é pré-determinado.
+<ul>
+<li class="fragment">E a eficiência de acesso por posição é muito importante.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Na prática acabamos usando <code>ArrayList</code> em muitas situações mesmo quando temos uma quantidade fixa de elementos.</p>
+<ul>
+<li class="fragment">Mas, de toda forma, precisamos saber utilizar vetores pois é comum precisarmos usar métodos de classes da biblioteca do Java (ou de terceiros) que trabalham com vetores.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="exemplo-de-vetores-usando-o-greenfoot" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Exemplo de vetores usando o Greenfoot</h1>
+
+</section>
+<section id="section-21" class="slide level2 smaller">
+<h2></h2>
+<p>Para <strong>ilustrar o uso de vetores</strong>, vamos aproveitar para conhecer um recurso que pode ser interessante no trabalho da disciplina.</p>
+<ul>
+<li class="fragment">Em <strong>jogos com gráficos 2D</strong>, podemos criar <strong>animações</strong> dos personagens usando <strong>sprites</strong>.</li>
+<li class="fragment">Sprites nada mais são que imagens que, quando exibidas seguidamente, dão a ilusão de movimento.</li>
+</ul>
+<div class="fragment">
+<p>Vamos criar um projeto no Greenfoot para vermos isso na prática.</p>
+<ul>
+<li class="fragment"><strong>Atenção</strong>: leia as instruções do trabalho prático para saber do que se trata o Greenfoot!
+<ul>
+<li class="fragment">E, claro, você precisa ter o Greenfoot instalado para conseguir fazer os exercícios da aula.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-22" class="slide level2 smaller">
+<h2></h2>
+<p>Vamos criar uma classe <code>MeuMundo</code> e nela definir um mundo de 800x600 pixels com fundo preto.</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb23" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MeuMundo <span class="kw">extends</span> World</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">MeuMundo</span><span class="op">()</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span>    </span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Cria um novo mundo com 800x600 células,</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">// com células de tamanho 1x1 pixels.</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">super</span><span class="op">(</span><span class="dv">800</span><span class="op">,</span> <span class="dv">600</span><span class="op">,</span> <span class="dv">1</span><span class="op">);</span> </span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Cria uma imagem do tamanho do mundo</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>        GreenfootImage imagemFundoPreto <span class="op">=</span> <span class="kw">new</span> <span class="fu">GreenfootImage</span><span class="op">(</span><span class="dv">800</span><span class="op">,</span> <span class="dv">600</span><span class="op">);</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Desenha um retângulo preto em toda a imagem</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>        imagemFundoPreto<span class="op">.</span><span class="fu">setColor</span><span class="op">(</span><span class="bu">Color</span><span class="op">.</span><span class="fu">BLACK</span><span class="op">);</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>        imagemFundoPreto<span class="op">.</span><span class="fu">fillRect</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">800</span><span class="op">,</span> <span class="dv">600</span><span class="op">);</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Define a imagem com o plano de fundo do mundo</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>        <span class="fu">setBackground</span><span class="op">(</span>imagemFundoPreto<span class="op">);</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="section-23" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -886,7 +1162,412 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
+<p>Crie o projeto no Greenfoot e use o código do slide anterior para definir o mundo (altere a classe inicial <code>MyWorld</code>).</p>
+<p>Crie então um objeto da classe <code>MeuMundo</code>, clicando na caixa da classe e acessando a opção <code>new MeuMundo()</code>. Você verá que o jogo exibirá uma tela preta.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-24" class="slide level2 smaller">
+<h2></h2>
+<p>Vamos agora criar uma classe <code>Cavaleiro</code>.</p>
+<ul>
+<li class="fragment">Para ficar claro o conceito das animações, vamos começar com uma imagem estática.</li>
+</ul>
+<div class="fragment">
+<p>As imagens que vamos utilizar foram baixadas do site:</p>
+<ul>
+<li class="fragment"><a href="https://www.gameart2d.com/the-knight-free-sprites.html">https://www.gameart2d.com/the-knight-free-sprites.html</a></li>
+</ul>
+</div>
+<div class="fragment">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Baixe as imagens do site citado, encontre a imagem <code>Idle (1).png</code> e copie-a para a pasta <code>images</code> do projeto do Greenfoot. Renomeie a imagem para <code>knight.png</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-25" class="slide level2 smaller">
+<h2></h2>
+<p>O código abaixo utiliza a imagem que copiamos como a imagem do cavaleiro.</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb24" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Cavaleiro <span class="kw">extends</span> Actor</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">Cavaleiro</span><span class="op">()</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>        <span class="co">// cria a imagem do cavaleiro</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>        GreenfootImage imagem <span class="op">=</span> <span class="kw">new</span> <span class="fu">GreenfootImage</span><span class="op">(</span><span class="st">"knight.png"</span><span class="op">);</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>        <span class="co">// como a imagem é muito grande, vamos redimensioná-la para 120x140 pixels</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>        imagem<span class="op">.</span><span class="fu">scale</span><span class="op">(</span><span class="dv">120</span><span class="op">,</span><span class="dv">140</span><span class="op">);</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>        <span class="co">// usamos a imagem como a imagem do cavaleiro</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>        <span class="fu">setImage</span><span class="op">(</span>imagem<span class="op">);</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">act</span><span class="op">()</span> </span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span> </span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>        <span class="co">// não faz nada, por enquanto</span></span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="section-26" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Crie uma classe <code>Cavaleiro</code> no seu projeto. Para isso, clique em <code>Actor</code> e acesse a opção <code>Nova subclasse...</code>. Use o nome <code>Cavaleiro</code> na janela que aparece e clique em OK.</p>
+<p>Em seguida, implemente o construtor da classe conforme apresentado no slide anterior.</p>
+<p>Para testar, crie um objeto da classe <code>Cavaleiro</code> e o coloque no mundo.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-27" class="slide level2 smaller">
+<h2></h2>
+<p>Vamos agora adicionar código para que o cavaleiro possa caminhar na horizontal.</p>
+<ul>
+<li class="fragment">Para isso, vamos alterar o método <code>act</code> do <code>Cavaleiro</code>.</li>
+<li class="fragment">O método, basicamente, aumenta ou diminui o valor da posição do cavaleiro no eixo X (horizontal),
+<ul>
+<li class="fragment">dependendo da tecla que está sendo pressionada (seta para a esquerda ou para a direita).</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb25" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">act</span><span class="op">()</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>        <span class="co">// se a tecla seta para a ESQUERDA estiver pressionada</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>Greenfoot<span class="op">.</span><span class="fu">isKeyDown</span><span class="op">(</span><span class="st">"left"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>            <span class="co">// posição do cavaleiro DIMINUI 4 no eixo X e se mantém no eixo Y</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>            <span class="fu">setLocation</span><span class="op">(</span><span class="fu">getX</span><span class="op">()-</span><span class="dv">4</span><span class="op">,</span> <span class="fu">getY</span><span class="op">());</span>            </span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">// se a tecla seta para a DIREITA estiver pressionada</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>Greenfoot<span class="op">.</span><span class="fu">isKeyDown</span><span class="op">(</span><span class="st">"right"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>            <span class="co">// posição do cavaleiro AUMENTA 4 no eixo X e se mantém no eixo Y</span></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>            <span class="fu">setLocation</span><span class="op">(</span><span class="fu">getX</span><span class="op">()+</span><span class="dv">4</span><span class="op">,</span> <span class="fu">getY</span><span class="op">());</span>            </span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-28" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Altere o método <code>act</code> da classe <code>Cavaleiro</code> de acordo com o slide anterior.</p>
+<p>Crie um objeto da classe, coloque-o no mundo e então clique no botão <code>Executar</code>.</p>
+<p>Experimente movimentar o cavaleiro usando as setas para a direita e para a esquerda.</p>
+<p>O que achou do movimento?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-29" class="slide level2 smaller">
+<h2></h2>
+<p>Repare que o movimento funciona, mas não é muito realista.</p>
+<ul>
+<li class="fragment">Parece que o cavaleiro está deslizando no chão sem mexer o corpo.</li>
+</ul>
+<div class="fragment">
+<p>Mas você deve ter notado, nos arquivos que baixou, que há várias imagens do cavaleiro.</p>
+<ul>
+<li class="fragment">As imagens têm um nome seguido de um número.</li>
+<li class="fragment">Cada nome indica uma <em>ação</em> do personagem.
+<ul>
+<li class="fragment">Ex.: idle (parado), walk (caminhando), run (correndo), etc.</li>
+</ul></li>
+<li class="fragment">E o número é a sequência de imagens que fazem acontecer a animação.
+<ul>
+<li class="fragment">Por ex.: se exibirmos repetidamente, e em sequência, todas as imagens que começam com <em>idle</em>:</li>
+<li class="fragment">teremos uma ilusão de movimento do personagem.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-30" class="slide level2 smaller">
+<h2></h2>
+<p>Para fazer isso, vamos primeiro copiar todas as imagens que baixamos do cavaleiro para a pasta <code>images</code> do projeto no Greenfoot.</p>
+<ul>
+<li class="fragment">Vamos começar tratando a imagem do cavaleiro parado (<em>idle</em>).</li>
+<li class="fragment">Repare que as imagens se chamam: <code>Idle (1).png</code>, <code>Idle (2).png</code>, …, até <code>Idle (10).png</code>.</li>
+</ul>
+<div class="fragment">
+<p>Para usar essas imagens, vamos <strong>declarar um vetor de imagens como atributo da classe <code>Cavaleiro</code></strong>.</p>
+<ul>
+<li class="fragment">E, no construtor da classe, vamos carregar as 10 imagens e guardá-las no vetor.</li>
+</ul>
+</div>
+</section>
+<section id="section-31" class="slide level2 smaller">
+<h2></h2>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb26" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Cavaleiro <span class="kw">extends</span> Actor</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// declaramos um vetor de imagens</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> GreenfootImage<span class="op">[]</span> imagens<span class="op">;</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">Cavaleiro</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">// criamos o vetor com 10 posições, pois temos 10 imagens</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>        imagens <span class="op">=</span> <span class="kw">new</span> GreenfootImage<span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">// usamos um loop for que rodará 10 vezes</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> imagens<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>            <span class="co">// em cada iteração, carregamos uma imagem usando o</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>            <span class="co">// valor i+1 para montar o nome da imagem.</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>            <span class="co">// e a guardamos na posição i do vetor.</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>            imagens<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">GreenfootImage</span><span class="op">(</span><span class="st">"Idle ("</span> <span class="op">+</span> <span class="op">(</span>i<span class="op">+</span><span class="dv">1</span><span class="op">)</span> <span class="op">+</span> <span class="st">").png"</span><span class="op">);</span></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>            <span class="co">// redimensionamos a imagem porque ela é muito grande.</span></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>            imagens<span class="op">[</span>i<span class="op">].</span><span class="fu">scale</span><span class="op">(</span><span class="dv">120</span><span class="op">,</span><span class="dv">140</span><span class="op">);</span></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>        <span class="co">// definimos a primeira imagem como a imagem inicial do cavaleiro</span></span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>        <span class="fu">setImage</span><span class="op">(</span>imagens<span class="op">[</span><span class="dv">0</span><span class="op">]);</span></span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">// restante da classe omitido</span></span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="section-32" class="slide level2 smaller">
+<h2></h2>
+<p>A alteração no slide anterior apenas carregou as imagens para a memória, mas ainda não faz nenhuma animação.</p>
+<ul>
+<li class="fragment">Para criar a animação, precisamos que seja exibida uma das imagens de cada vez.</li>
+<li class="fragment">Podemos então usar o método <code>act</code> que é chamado várias vezes por segundo na execução do jogo.
+<ul>
+<li class="fragment">A princípio, parece que basta mudarmos para a imagem seguinte a cada chamada.</li>
+<li class="fragment">E quando chegarmos na última imagem, voltamos para a primeira.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Repare que para que consigamos mudar para a próxima imagem, precisaremos de um atributo que indique qual é a imagem atual.</p>
+<ul>
+<li class="fragment">Vamos então criar um atributo inteiro <code>indiceImagemAtual</code>, e inicializá-lo com <code>0</code> no construtor.</li>
+<li class="fragment">Feito isso, podemos utilizá-lo no método <code>act</code>, como mostrado no slide a seguir.</li>
+</ul>
+</div>
+</section>
+<section id="section-33" class="slide level2 smaller">
+<h2></h2>
+<p>Toda vez que o método <code>act</code> é chamado, a próxima imagem do vetor é exibida.</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb27" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">act</span><span class="op">()</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span>        </span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>        <span class="co">// início do método que trata eventos de teclado omitido</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>        <span class="co">// incrementamos o índice da imagem atual para que</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">// possamos usar a próxima imagem.</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>        indiceImagemAtual<span class="op">++;</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">// mas se o índice chegou ao final do vetor, voltamos para a primeira posição</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>indiceImagemAtual <span class="op">&gt;=</span> imagens<span class="op">.</span><span class="fu">length</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>            indiceImagemAtual <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>        <span class="co">// usamos então a próxima imagem, como imagem do cavaleiro</span></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">setImage</span><span class="op">(</span>imagens<span class="op">[</span>indiceImagemAtual<span class="op">]);</span></span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="section-34" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Implemente as últimas alterações apresentadas da classe <code>Cavaleiro</code>: a criação do atributo <code>indiceImagemAtual</code> e alterações no construtor e no método <code>act</code>.</p>
+<p>Agora crie um objeto <code>Cavaleiro</code> e execute o jogo.</p>
+<p>O que achou da animação?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-35" class="slide level2 smaller">
+<h2></h2>
+<p>Veja que a animação ficou muito acelerada.</p>
+<ul>
+<li class="fragment">Isso porque a quantidade de vezes por segundo que o método <code>act</code> está sendo chamado é muito alta para as imagens que estamos usando.</li>
+</ul>
+<div class="fragment">
+<p>Como podemos resolver?</p>
+<ul>
+<li class="fragment">Podemos fazer com que cada imagem seja usada por mais de uma execução do método <code>act</code>.</li>
+<li class="fragment">Ou dizendo, de outra forma, podemos fazer a atualização a cada X vezes que o método é chamado.
+<ul>
+<li class="fragment">Em vez de atualizar em toda chamada.</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p>E como podemos fazer isso?</p>
+</div>
+</section>
+<section id="section-36" class="slide level2 smaller">
+<h2></h2>
+<p>Repare que podemos definir de quantos em quantos passos precisamos atualizar as imagens.</p>
+<ul>
+<li class="fragment">E usarmos essa informação para saber se é hora de atualizar a imagem ou não.
+<ul>
+<li class="fragment">Mas, para usá-lo, precisamos contar quantos passos foram dados desde a última atualização.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Vamos então definir esses dois atributos na classe <code>Cavaleiro</code>.</p>
+</div>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb28" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> passosParaAtualizarImagem<span class="op">;</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> passosDesdeUltimaAtualizacaoImagem<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p>E inicializá-los no construtor da classe.</p>
+<ul>
+<li class="fragment">Inicializamos <code>passosDesdeUltimaAtualizacaoImagem</code> com zero.</li>
+<li class="fragment">Mas qual valor devemos usar para <code>passosDesdeUltimaAtualizacaoImagem</code>?
+<ul>
+<li class="fragment">Aqui vai um processo de tentativa e erro.</li>
+<li class="fragment">Vamos experimentando até achar um valor que a animação pareça razoável.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-37" class="slide level2 smaller">
+<h2></h2>
+<p>Por fim, vamos alterar o método <code>act</code> para usar os atributos que criamos</p>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb29" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">act</span><span class="op">()</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span>        </span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>        <span class="co">// início do método que trata eventos de teclado omitido</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>        <span class="co">// contamos mais um passo desde a última atualização da imagem</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>        passosDesdeUltimaAtualizacaoImagem<span class="op">++;</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">// se já se passaram os passos necessários para atualizar a imagem</span></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>passosDesdeUltimaAtualizacaoImagem <span class="op">&gt;=</span> passosParaAtualizarImagem<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>            <span class="co">// a imagem será atualizada, então voltamos o valor da variável para zero</span></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>            passosDesdeUltimaAtualizacaoImagem <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>            <span class="co">// e atualizamos a imagem (é o código que já tínhamos feito antes)</span></span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>            indiceImagemAtual<span class="op">++;</span></span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(</span>indiceImagemAtual <span class="op">&gt;=</span> imagens<span class="op">.</span><span class="fu">length</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a>                indiceImagemAtual <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>            <span class="fu">setImage</span><span class="op">(</span>imagens<span class="op">[</span>indiceImagemAtual<span class="op">]);</span></span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-38" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Implemente as últimas alterações para uso dos atributos <code>passosParaAtualizarImagem</code> e <code>passosDesdeUltimaAtualizacaoImagem</code> na classe <code>Cavaleiro</code>.</p>
+<p>Execute o jogo e veja o resultado. Altere o valor do atributo <code>passosParaAtualizarImagem</code> até encontrar um valor interessante. Qual valor achou melhor?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-39" class="slide level2 smaller">
+<h2></h2>
+<p>Repare que usamos um vetor para guardar as imagens porque sabemos que usaremos 10 imagens e isso não vai mudar durante a execução do jogo.</p>
+<ul>
+<li class="fragment">Esse, portanto, é um exemplo prático da utilidade de vetores em Java.</li>
+</ul>
+</section>
+<section id="section-40" class="slide level2 smaller">
+<h2></h2>
+<p>Mas, pensando no jogo, repare que fizemos todo esse trabalho só para tratar o personagem parado.</p>
+<ul>
+<li class="fragment">Já que quando ele se movimenta, ele continua deslizando pela tela.</li>
+<li class="fragment">Como podemos tratar isso?</li>
+</ul>
+<div class="fragment">
+<p>Veja que, nas imagens que baixamos, há imagens para a ação de caminhar (<em>walk</em>).</p>
+<ul>
+<li class="fragment">Basta, portanto, seguirmos a mesma ideia:
+<ul>
+<li class="fragment">Criarmos um novo vetor de imagens.</li>
+<li class="fragment">Fazermos com o que a imagem seja alterada a cada X passos (usando <code>passosParaAtualizarImagem</code>).</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p>Mas há um “detalhe” importante:</p>
+<ul>
+<li class="fragment">Precisamos agora saber quando o cavaleiro está parado e quando está se movimentando.</li>
+<li class="fragment">Para saber qual vetor de imagens usarmos.</li>
+</ul>
+</div>
+</section>
+<section id="section-41" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício - <strong>DESAFIO</strong></strong></p>
+</div>
+<div class="callout-content">
+<p>Altere a classe <code>Cavaleiro</code> de forma que ela use as imagens com prefixo <code>Walk</code>, quando o cavaleiro estiver se movimentando.</p>
+<p>Você precisará criar outro atributo vetor de imagens e carregar nele as imagens.</p>
+<p>Além disso, precisará de um atributo para indicar a ação atual do cavaleiro (se ele está parado ou caminhando). O atributo deve ser atualizado ao tratar os eventos do teclado, e deve ser usado para saber qual vetor de imagens utilizar.</p>
+<p>Por enquanto, não se preocupe com a movimentação para a esquerda.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-42" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício - <strong>DESAFIO</strong></strong></p>
+</div>
+<div class="callout-content">
+<p>A ideia agora é tratar a movimentação para a esquerda.</p>
+<p>Repare que, nesse caso, o ideal seria mostrar o cavaleiro olhando para a esquerda. Uma forma de fazer isso é invertermos a imagem horizontalmente. A classe <code>GreenfootImage</code> tem um método chamado <code>mirrorHorizontally</code> que faz exatamente isso.</p>
+<p>Para tratar a movimentação para a esquerda, precisaremos ter agora quatro vetores de imagens: parado olhando para a direita, parado olhando para a esquerda, caminhando para a direita e caminhando para a esquerda. Os dois vetores para a direita você já tratou no exercício anterior. Já os outros dois você pode carregar as mesmas imagens e usar o método <code>mirrorHorizontally</code> para invertê-las.</p>
+<p>Além disso, é necessário que o atributo que indica a ação do cavaleiro tenha quatro estados, assim como os vetores.</p>
+<p>E aí? Vai encarar o desafio?</p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="entregas-dessa-aula" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Entregas dessa Aula</h1>
 
+</section>
+<section id="section-43" class="slide level2 smaller">
+<h2></h2>
+<div>
+<p>Para ter <strong>presença</strong> nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Entregas no Campus Virtual</strong></p>
+</div>
+<div class="callout-content">
+<p>Responda a tarefa no Campus Virtual enviando o seu projeto do <code>organizador-musicas-v5</code> com as alterações solicitadas nos exercícios ao longo dos slides.</p>
+</div>
 </div>
 </div>
 </div>

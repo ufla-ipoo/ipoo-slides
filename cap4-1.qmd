@@ -50,7 +50,7 @@ Eles estão identificados como: **Exercício** [(entrega)]{.alert}.
 Construções Java do capítulo
 
 ::: {.nonincremental}
-- `ArrayList`, `Iterator`, *for-each*, `while`, `null`, objetos anônimos, vetor, `++`.
+- `ArrayList`, `Iterator`, *for-each*, `while`,  `for`, `null`, objetos anônimos, vetor, `++`.
 :::
 
 ## {.smaller}
