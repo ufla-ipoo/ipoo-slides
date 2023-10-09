@@ -1,0 +1,440 @@
+---
+title: IPOO - Cap. 4 Agrupando Objetos
+subtitle: Aula 4.2 - Teórica
+---
+
+## {.smaller}
+
+Este material é baseado no livro-texto da disciplina:
+
+![](imagens/livro_bluej.png).
+
+. . .
+
+Dessa vez não vou colocar os lembretes antes de começar a aula.
+
+- A essa altura você já sabe né? Não preciso repetir.
+
+# Buscando em uma coleção {background-color="#40666e"}
+
+## {.smaller}
+
+Na aula anterior nós aprendemos sobre o loop **for-each** que é usado para **processar uma coleção inteira**.
+
+- Mas há situações na quais queremos percorrer uma coleção, mas sem necessariamente precisar passar por todos os elementos dela.
+- É o que chamamos de **interação indefinida**.
+
+. . .
+
+Suponha, por exemplo, que queremos encontrar a primeira música que tenha uma determinada string.
+
+- Nesses casos, o loop *for-each* não é a melhor opção, pois ele é projetado para iterar por todos os elemento da coleção.
+  - Mas, ao encontrarmos a primeira música, não precisaríamos percorrer o restante da coleção.
+- Nós podemos então utilizar outro tipo de loop, com o comando `while`.
+
+## O loop `while` {.smaller}
+
+Antes de entrarmos no exemplo da busca da primeira música, vamos detalhar um pouco mais o [comando `while`]{.alert}.
+
+- A **sintaxe** do `while` é **igual à do C++** que vocês viram na disciplina IALG.
+
+## O loop `while` {.smaller}
+
+Como exemplo, os trechos de código abaixo fazem a mesma coisa, mas um usando **for-each** e outro `while`.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  public void listarTodosOsArquivos() {
+      for(String nomeDoArquivo : arquivos) {
+          System.out.println(nomeDoArquivo);  
+      }
+  }
+```
+:::
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  public void listarTodosOsArquivos() {
+      int indice = 0;
+      while (indice < arquivos.size()) {
+          String nomeDoArquivo = arquivos.get(indice);
+          System.out.println(nomeDoArquivo);
+          indice++;
+      }
+  }
+```
+::: 
+
+## O loop `while` {.smaller .autoanimate}
+
+Repare que, **neste caso**, como estamos processando a coleção inteira, a opção **com *for-each* é melhor**:
+
+- Primeiro porque o código é mais simples de implementar.
+- Segundo porque não corremos o risco de cometer algum erro e provocar um loop infinito.
+- Além disso, o código do *for-each* é o mesmo para diversas coleções diferentes.
+  - Há coleções nas quais o acesso não é por índice ou não é com um método chamado `get`, por exemplo.
+
+## O loop `while` {.smaller}
+
+Assim, você pode estar se perguntando, mas então para que usar o comando `while`?
+
+- Primeiro, porque podemos usar `while` para outras situações, que não sejam percorrer uma coleção.
+- E, no caso de coleções, porque podemos precisar parar as iterações antes de processar a coleção inteira.
+- Por fim, pode ser que precisemos do índice do elemento na coleção.
+
+## O loop `while` {.smaller}
+
+O código abaixo, por exemplo, exibe o índice das músicas
+
+- o que pode ajudar na hora de chamar os métodos de tocar ou remover uma música.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public void listarTodosOsArquivos() {
+    int indice = 0;
+    while (indice < arquivos.size()) {
+        String nomeDoArquivo = arquivos.get(indice);
+        // inclui o índice da música na impressão
+        System.out.println(indice + ": " + nomeDoArquivo); 
+        indice++;
+    }
+}
+```
+::: 
+
+## Exemplo de busca com `while` {.smaller}
+
+Na aula passada, vimos o método `buscarMusicas` que listava os nomes de todas as músicas que tinham uma string de busca.
+
+- Mas suponha que queiramos um método para encontrar a primeira música que tenha a string.
+- Este é um exemplo de situação na qual podemos interromper a interação sem precisar processar a coleção inteira.
+  - *Obs.: apesar de existir uma forma de parar a iteração de um _for-each_ ela é considerada um mal estilo de programação.*
+
+## Exemplo de busca com `while` {.smaller}
+
+```{.java code-line-numbers="false"}
+/**
+ * Busca o índice da primeira música que bate com a string passada.
+ * @param stringDeBusca A string a ser procurada.
+ * @return O índice da primeira ocorrência, ou -1 se nenhuma música tem a string passada.
+ */
+public int buscarPrimeiraMusica(String stringDeBusca)
+{
+    int indice = 0;
+    // Indica se a primeira música foi encontrada
+    boolean encontrou = false;
+    // A busca continua enquanto a coleção não terminar e nenhuma música foi encontrada
+    while (indice < arquivos.size() && !encontrou) {
+        String nomeDoArquivo = arquivos.get(indice);
+        if (nomeDoArquivo.contains(stringDeBusca)) {
+            // Uma música foi encontrada, podemos parar a busca
+            encontrou = true;
+        }
+        else {
+            // Não encontramos a música ainda, podemos continuar a busca
+            indice++;
+        }
+    }
+    if (encontrou) {
+        // Retorna a posição onde a música foi encontrada
+        return indice;
+    }
+    else {
+        // Não encontramos nenhuma música
+        return -1;
+    }
+}
+```
+
+# Melhorando a estrutura: a classe `Musica` {background-color="#40666e"}
+
+## {.smaller}
+
+Como vimos no final da aula passada, **usar String para representar as músicas não é o ideal**.
+
+- Qualquer tocador de música comercial permite, por exemplo, buscar por título, artista, álbum, gênero, etc.
+  - Além de ter informações adicionais como a duração da música, por ex..
+
+. . .
+
+Um dos poderes da Orientação a Objetos é justamente permitir que **entidades do mundo real possam ser representadas como objetos** em nossos programas.
+
+- Como já sabemos como criar classes, com construtores, atributos e métodos, podemos **criar uma classe `Musica`** que represente as músicas.
+
+## {.smaller}
+
+Mas repare que, se quisermos ter todos os atributos mencionados para cada música (artista, título, gênero, álbum, etc.), 
+
+- precisaríamos pedir ao usuário para fornecer todas essas informações.
+
+. . .
+
+Para evitar esse trabalho, vamos ilustrar essa questão com um **exemplo bem simples**.
+
+- Vamos aproveitar o fato de que os arquivos de música fornecidos têm o nome do artista e da música no nome,
+  - e usar uma classe auxiliar, chamada `LeitorDeMusica`,
+  - que vai procurar todas as músicas .mp3 que estão em uma pasta, e usar os nomes dos arquivos para criar objetos da classe `Musica`.
+
+## {.smaller}
+
+O projeto [organizador-musicas-v5](https://github.com/ufla-ipoo/organizador-musicas-v5) tem a implementação proposta, com a classe `Musica`.
+
+- Obs.: não vamos avaliar a classe `LeitorDeMusica` pois ela conceitos que ainda não vimos.
+
+. . .
+
+**Leia o código da classe `OrganizadorDeMusica`**. Você notará que as principais alterações são:
+
+- A classe `OrganizadorDeMusicas` tem agora um `ArrayList` de `Musica`s em vez de um `ArrayList` de Strings.
+  - Isso afeta diversos métodos que tínhamos implementado.
+- No método `listarTodasAsMusicas`, pedimos ao objeto `Musica` que retorna uma String contendo seus detalhes.
+  - Isso indica que estamos deixando a classe `Musica` responsável por fornecer os detalhes a serem exibidos, como o título e o artista.
+  - Este é um exemplo de **design baseado em responsabilidade** que veremos em mais detalhes no Cap. 7.
+- No método `tocarMusica`, precisamos agora obter o nome do arquivo do objeto `Musica` para passá-lo para o tocador.
+- Foram adicionados também códigos para buscar todas as músicas que estão na pasta principal do projeto.
+
+## {.smaller}
+
+Repare que ao utilizarmos a classe `Musica` alguns métodos ficaram um pouco mais complicados.
+
+- Mas a estrutura do programa é agora muito melhor.
+- A classe `Musica` é mais bem estruturada que uma simples String 
+  - e ainda nos permite guardar informações mais interessantes, como, por exemplo, uma imagem do artista ou do álbum de música, por exemplo.
+
+. . .
+
+Além disso, agora conseguimos evitar o problema mencionado no final da aula anterior,
+
+- De querermos buscar todas as músicas que tenham a palavra `love` no título, mas isso acabar retornando músicas de um cantor chamado `Glover`.
+
+## {.smaller}
+
+Veja no método abaixo que resolvemos essa questão usando o fato de que a classe `Musica` tem a informação do título separada do nome do arquivo.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+/**
+ * Lista todas as músicas que tenham uma string passada em seu título
+ * @param stringDeBusca A string a ser procurada.
+ */
+public void buscarNoTitulo(String stringDeBusca)
+{
+    for (Musica musica : musicas) {
+        String titulo = musica.obterTitulo();
+        if (titulo.contains(stringDeBusca)) {
+            System.out.println(musica.obterDetalhes());
+        }
+    }
+}
+```
+:::
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Adicione um atributo `numeroDeExecucoes` à classe `Musica`.
+Implemente métodos para reiniciar a contagem (voltando para zero) e para incrementá-la em um.
+Altere também o método `obterDetalhes` para que inclua essa informação.
+
+Em seguida, altere a classe `OrganizadorDeMusicas` de forma que toda vez que uma música for tocada, seja contabilizada mais uma execução dela.
+:::
+
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+Você deve ter notado que se você tocar duas músicas sem parar a primeira, elas ficam tocando simultaneamente.
+E, claro, isso não é muito útil.
+Implemente as alterações necessárias para que uma música pare de tocar automaticamente quando uma outra música começa a tocar.
+:::
+
+# O tipo `Iterator` {background-color="#40666e"}
+
+## {.smaller}
+
+Existe uma **terceira forma de iterar sobre uma coleção** que é uma espécie de um meio-termo entre **for-each** e `while`.
+
+- Ela usa um loop `while`, mas com um [objeto iterador]{.alert} em vez de uma variável inteira índice para guardar a posição na lista.
+- A seguir usaremos `Iterator`, uma classe, e `iterator` um método. Repare a diferença pela letra `i` maiúscula e minúscula, respectivamente.
+
+. . .
+
+A classe `ArrayList` tem um método `iterator` que retorna um objeto `Iterator`.
+
+- Para usar a classe, precisamos importá-la do pacote `java.util`.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+import java.util.ArrayList;
+import java.util.Iterator;
+```
+:::
+
+## {.smaller}
+
+Um iterador tem apenas quatro métodos, e usamos dois deles para iterar sobre uma coleção.
+
+- O **método `hasNext`** (*temProximo*) indica se há mais elementos na coleção.
+- E **o método `next`** (*proximo*) retorna o próximo elemento.
+
+. . .
+
+O pseudocódigo abaixo mostra como geralmente utilizamos iteradores para percorrer uma coleção
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  // Obtemos o iterador da coleção
+  // - Como Iterator é uma classe genérica, precisamos informar um segundo tipo 
+  //   (que é o tipo dos elementos da coleção)
+  Iterator<TipoDoElemento> it = minhaColecao.iterator();
+  // Enquanto há elementos a processar
+  while (it.hasNext()) {      
+      // Chamamos it.next() para obter o próximo elemento
+      // Fazemos alguma coisa com o elemento
+  }
+```
+:::
+
+## {.smaller}
+
+Podemos fazer então uma terceira versão do método que lista todas as músicas, agora usando um `Iterator`.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  public void listarTodasAsMusicas() {
+      Iterator<Musica> it = musicas.iterator();
+      while (it.hasNext()) {
+          Musica musica = it.next();
+          System.out.println(musica.obterDetalhes);
+      }
+  }
+```
+::: 
+
+. . .
+
+Quais são as diferenças para as versões anteriores do método `listarTodosOsArquivos`?
+
+- Nós usamos um loop `while`, mas não precisamos nos preocupar com uma variável de índice.
+- Repare que o principal ponto a entender é que o método `next`, além de retornar o próximo elemento, passa o iterador para frente.
+- Portanto, chamadas sucessivas do método `next` retornam sempre elementos diferentes.
+  - Mas cuidado, se terminarem os elementos, e o método `next` for chamado sem antes verificar se `hasNext` retorna `true`, ocorrerá um erro no programa.
+
+## {.smaller}
+
+::: {.callout-tip title="Conceito" icon=false}
+Um **iterador** é um objeto que permite iterar sobre todos os elementos de uma coleção.
+:::
+
+. . .
+
+![](imagens/duvida-utilidade-iterator.png)
+
+. . .
+
+Realmente, o que fizemos até agora não traz vantagens. Mas há duas situações nas quais um `Iterator` é muito útil:
+
+1. Para coleções cujo acesso por posição não é possível, ou muito lento.
+2. Para a remoção de elementos de uma coleção
+
+## Acesso por índice vs. iteradores {.smaller}
+
+Quando estamos usando um `ArrayList`, não faz nenhuma diferença utilizar `while` acessando por índice ou com iteradores.
+
+- Mas nem toda coleção funciona assim.
+- Veremos coleções mais adiante que não permitem acesso por posição.
+  - Ou esse acesso seria muito lento.
+  - E, portanto, seria inviável utilizar `while` acessando por índice.
+
+. . .
+
+A solução de **utilizar `while` com um `Iterator` funciona para todas as coleções da biblioteca** de classes do Java.
+
+- E, portanto, é um **padrão de código** que usaremos novamente mais adiante.
+
+# Removendo elementos de uma coleção {background-color="#40666e"}
+
+## {.smaller}
+
+Remover elementos traz consequências importantes quando estamos iterando uma coleção.
+
+- Suponha, por exemplo, que não estamos mais interessados em um artista e queremos remover todas as suas músicas.
+- Pode parecer bem simples implementar um método para isso, seguindo pseudocódigo abaixo.
+  ```{.java code-line-numbers="false"}
+  para cada música na colecao {
+      se musica.obterArtista() é o artista que não queremos mais {
+          colecao.remove(musica);
+      }
+  }
+  ```
+
+. . .
+
+Apesar dessa forma parecer perfeitamente razoável, não é possível remover elementos usando um loop **for-each**.
+
+- Se você tentar fazer isso, ocorrerá um erro no programa (`ConcurrentModificationException`).
+- Isso ocorre porque causa uma confusão sobre qual seria o próximo elemento nesta situação.
+
+## {.smaller}
+
+A solução para usar isso é **usar um `Iterator` para remover elementos** de uma coleção.
+
+- Além dos métodos `hasNext` e `next`, a classe tem um método `remove`.
+- O método remove o elemento que foi retornado pela última chamada do método `next`.
+
+. . .
+
+O trecho de código abaixo mostra remover as músicas de um artista da coleção de músicas.
+
+- Repare que **chamamos o método `remove` do iterador e não do `ArrayList`**.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  Iterator<Musica> it = musicas.iterator();
+  while (it.hasNext()) {
+      Musica musica = it.next();
+      String artista = musica.obterArtista();
+      if (artista.equals(artistaARemover)) {
+          it.remove();
+      }
+  }
+```
+:::
+
+## {.smaller}
+
+Há outras formas de remover elementos de uma coleção.
+
+- Por ex.: fazer um loop para encontrar a posição de um elemento.
+- E depois do loop remover o elemento daquela posição.
+
+. . .
+
+Mas veja que há desvantagens:
+
+- Como já mencionamos, nem toda coleção permite acessar elementos por posição, ou esse acesso é lento.
+- Além disso, com iterador podemos fazer a remoção já dentro do loop, sem precisar fazer uma operação separada.
+
+. . .
+
+Portanto, é uma boa ideia saber como remover elementos de uma coleção usando um objeto `Iterator`. :)
+
+##
+
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+Implemente um método na classe `OrganizadorDeMusicas` que receba uma string por parâmetro e remova todas as músicas cujos títulos tenham aquela string.
+:::
+
+
+
+
+
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+
+:::
