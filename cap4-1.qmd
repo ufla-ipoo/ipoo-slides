@@ -943,7 +943,9 @@ Faremos essa melhoria na próxima aula!
 Para ter **presença** nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.
 
 ::: {.callout-important title="Entregas no Campus Virtual"}
-Responda a tarefa no Campus Virtual enviando o seu projeto do organizador de músicas com o arquivo `OrganizadorDeMusicas.java` contendo as 7 alterações solicitadas nos exercícios ao longo dos slides.
+Responda a tarefa no Campus Virtual enviando o seu projeto `organizador-musicas-v2` com o arquivo `OrganizadorDeMusicas.java` contendo as 7 alterações solicitadas nos exercícios ao longo dos slides.
+
+Obs.: copie os métodos dos primeiros exercícios feitos no projeto `organizador-musicas-v1` para o projeto `organizador-musicas-v2` e faça a entrega apenas do segundo projeto.
 :::
 
 :::
