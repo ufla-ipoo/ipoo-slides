@@ -36,7 +36,7 @@ Suponha, por exemplo, que queremos encontrar a primeira música que tenha uma de
 
 Antes de entrarmos no exemplo da busca da primeira música, vamos detalhar um pouco mais o [comando `while`]{.alert}.
 
-- A **sintaxe** do `while` é **igual à do C++** que vocês viram na disciplina IALG.
+- A **sintaxe** do `while` em Java é **igual à do C++** que vocês viram na disciplina IALG.
 
 ## O loop `while` {.smaller}
 
@@ -181,11 +181,17 @@ Para evitar esse trabalho, vamos ilustrar essa questão com um **exemplo bem sim
 
 O projeto [organizador-musicas-v5](https://github.com/ufla-ipoo/organizador-musicas-v5) tem a implementação proposta, com a classe `Musica`.
 
-- Obs.: não vamos avaliar a classe `LeitorDeMusica` pois ela conceitos que ainda não vimos.
+- Obs.: não vamos avaliar a classe `LeitorDeMusica` pois ela usa conceitos que ainda não vimos.
 
 . . .
 
-**Leia o código da classe `OrganizadorDeMusica`**. Você notará que as principais alterações são:
+**Leia o código da classe `OrganizadorDeMusica`**. 
+
+- Quais são as principais alterações?
+
+## {.smaller}
+
+Você deve ter notado que as principais alterações são:
 
 - A classe `OrganizadorDeMusicas` tem agora um `ArrayList` de `Musica`s em vez de um `ArrayList` de Strings.
   - Isso afeta diversos métodos que tínhamos implementado.
@@ -211,7 +217,7 @@ Além disso, agora conseguimos evitar o problema mencionado no final da aula ant
 
 ## {.smaller}
 
-Veja no método abaixo que resolvemos essa questão usando o fato de que a classe `Musica` tem a informação do título separada do nome do arquivo.
+No método abaixo resolvemos essa questão usando o fato de que a classe `Musica` tem a informação do título separada do nome do arquivo.
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
@@ -308,7 +314,7 @@ Podemos fazer então uma terceira versão do método que lista todas as músicas
       Iterator<Musica> it = musicas.iterator();
       while (it.hasNext()) {
           Musica musica = it.next();
-          System.out.println(musica.obterDetalhes);
+          System.out.println(musica.obterDetalhes());
       }
   }
 ```
@@ -387,7 +393,7 @@ A solução para usar isso é **usar um `Iterator` para remover elementos** de u
 
 . . .
 
-O trecho de código abaixo mostra remover as músicas de um artista da coleção de músicas.
+O trecho de código abaixo mostra como remover as músicas de um artista da coleção de músicas.
 
 - Repare que **chamamos o método `remove` do iterador e não do `ArrayList`**.
 
@@ -644,7 +650,7 @@ Repare que a condição (`if`) da linha 2 é muito importante:
 
 ## Usando for-each com vetores {.smaller}
 
-Nós também podemos usar um **lopp *for-each*** para percorrer os elementos de um vetor.
+Nós também podemos usar um **loop *for-each*** para percorrer os elementos de um vetor.
 
 . . .
 
@@ -664,7 +670,7 @@ for(Carro carro : carros) {
 Este exemplo nos permite enfatizar uma das vantagens do loop *for-each*:
 
 - Repare que esse código seria exatamente igual se a variável `carros` fosse um `ArrayList` em vez de um vetor.
-- Já na opção anterior, usando loop for, os códigos seriam diferentes.
+- Já na opção anterior, usando loop for tradicional, os códigos seriam diferentes.
   - Primeiro porque consultamos o tamanho de um vetor usando o atributo `length` e de um `ArrayList` usando o método `size`.
   - E segundo que acessamos um elemento por posição em um vetor usando `[i]` e em um `ArrayList` usando `get(i)`.
 
@@ -843,9 +849,9 @@ Mas você deve ter notado, nos arquivos que baixou, que há várias imagens do c
 
 - As imagens têm um nome seguido de um número.
 - Cada nome indica uma *ação* do personagem.
-  - Ex.: idle (parado), walk (caminhando), run (correndo), etc.
+  - Ex.: *idle* (parado), *walk* (caminhando), *run* (correndo), etc.
 - E o número é a sequência de imagens que fazem acontecer a animação.
-  - Por ex.: se exibirmos repetidamente, e em sequência, todas as imagens que começam com *idle*:
+  - Por ex.: se exibirmos repetidamente, e em sequência, todas as imagens que começam com *walk*:
   - teremos uma ilusão de movimento do personagem.
 
 ## {.smaller}
@@ -951,7 +957,7 @@ Veja que a animação ficou muito acelerada.
 Como podemos resolver?
 
 - Podemos fazer com que cada imagem seja usada por mais de uma execução do método `act`.
-- Ou dizendo, de outra forma, podemos fazer a atualização a cada X vezes que o método é chamado.
+  - Ou dizendo, de outra forma, podemos fazer a atualização a cada X vezes que o método é chamado.
   - Em vez de atualizar em toda chamada.
 
 . . .
@@ -1038,7 +1044,7 @@ Repare que usamos um vetor para guardar as imagens porque sabemos que usaremos 1
 
 ## {.smaller}
 
-Mas, pensando no jogo, repare que fizemos todo esse trabalho só para tratar o personagem parado.
+Mas, pensando no jogo, repare que fizemos todo esse trabalho só para tratar o movimento de corpo do personagem parado.
 
 - Já que quando ele se movimenta, ele continua deslizando pela tela.
 - Como podemos tratar isso?

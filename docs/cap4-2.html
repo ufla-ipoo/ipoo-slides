@@ -16,7 +16,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2023-09-10">
+  <meta name="dcterms.date" content="2023-10-10">
   <title>IPOO - Cap. 4 Agrupando Objetos</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -413,7 +413,7 @@
     </div>
 </div>
 
-  <p class="date">09/10/2023</p>
+  <p class="date">10/10/2023</p>
 </section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
@@ -453,7 +453,7 @@
 <h2>O loop <code>while</code></h2>
 <p>Antes de entrarmos no exemplo da busca da primeira música, vamos detalhar um pouco mais o <span class="alert">comando <code>while</code></span>.</p>
 <ul>
-<li class="fragment">A <strong>sintaxe</strong> do <code>while</code> é <strong>igual à do C++</strong> que vocês viram na disciplina IALG.</li>
+<li class="fragment">A <strong>sintaxe</strong> do <code>while</code> em Java é <strong>igual à do C++</strong> que vocês viram na disciplina IALG.</li>
 </ul>
 </section>
 <section id="o-loop-while-1" class="slide level2 smaller">
@@ -605,10 +605,18 @@
 <h2></h2>
 <p>O projeto <a href="https://github.com/ufla-ipoo/organizador-musicas-v5">organizador-musicas-v5</a> tem a implementação proposta, com a classe <code>Musica</code>.</p>
 <ul>
-<li class="fragment">Obs.: não vamos avaliar a classe <code>LeitorDeMusica</code> pois ela conceitos que ainda não vimos.</li>
+<li class="fragment">Obs.: não vamos avaliar a classe <code>LeitorDeMusica</code> pois ela usa conceitos que ainda não vimos.</li>
 </ul>
 <div class="fragment">
-<p><strong>Leia o código da classe <code>OrganizadorDeMusica</code></strong>. Você notará que as principais alterações são:</p>
+<p><strong>Leia o código da classe <code>OrganizadorDeMusica</code></strong>.</p>
+<ul>
+<li class="fragment">Quais são as principais alterações?</li>
+</ul>
+</div>
+</section>
+<section id="section-5" class="slide level2 smaller">
+<h2></h2>
+<p>Você deve ter notado que as principais alterações são:</p>
 <ul>
 <li class="fragment">A classe <code>OrganizadorDeMusicas</code> tem agora um <code>ArrayList</code> de <code>Musica</code>s em vez de um <code>ArrayList</code> de Strings.
 <ul>
@@ -622,9 +630,8 @@
 <li class="fragment">No método <code>tocarMusica</code>, precisamos agora obter o nome do arquivo do objeto <code>Musica</code> para passá-lo para o tocador.</li>
 <li class="fragment">Foram adicionados também códigos para buscar todas as músicas que estão na pasta principal do projeto.</li>
 </ul>
-</div>
 </section>
-<section id="section-5" class="slide level2 smaller">
+<section id="section-6" class="slide level2 smaller">
 <h2></h2>
 <p>Repare que ao utilizarmos a classe <code>Musica</code> alguns métodos ficaram um pouco mais complicados.</p>
 <ul>
@@ -641,9 +648,9 @@
 </ul>
 </div>
 </section>
-<section id="section-6" class="slide level2 smaller">
+<section id="section-7" class="slide level2 smaller">
 <h2></h2>
-<p>Veja no método abaixo que resolvemos essa questão usando o fato de que a classe <code>Musica</code> tem a informação do título separada do nome do arquivo.</p>
+<p>No método abaixo resolvemos essa questão usando o fato de que a classe <code>Musica</code> tem a informação do título separada do nome do arquivo.</p>
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb5" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> Lista todas as m<span class="co">ú</span>sicas que tenham uma string passada em seu t<span class="co">í</span>tulo</span>
@@ -660,7 +667,7 @@
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="section-7" class="slide level2">
+<section id="section-8" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -689,7 +696,7 @@
 <h1>O tipo <code>Iterator</code></h1>
 
 </section>
-<section id="section-8" class="slide level2 smaller">
+<section id="section-9" class="slide level2 smaller">
 <h2></h2>
 <p>Existe uma <strong>terceira forma de iterar sobre uma coleção</strong> que é uma espécie de um meio-termo entre <strong>for-each</strong> e <code>while</code>.</p>
 <ul>
@@ -709,7 +716,7 @@
 </div>
 </div>
 </section>
-<section id="section-9" class="slide level2 smaller">
+<section id="section-10" class="slide level2 smaller">
 <h2></h2>
 <p>Um iterador tem apenas quatro métodos, e usamos dois deles para iterar sobre uma coleção.</p>
 <ul>
@@ -731,7 +738,7 @@
 </div>
 </div>
 </section>
-<section id="section-10" class="slide level2 smaller">
+<section id="section-11" class="slide level2 smaller">
 <h2></h2>
 <p>Podemos fazer então uma terceira versão do método que lista todas as músicas, agora usando um <code>Iterator</code>.</p>
 <div class="fragment">
@@ -740,7 +747,7 @@
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>      <span class="bu">Iterator</span><span class="op">&lt;</span>Musica<span class="op">&gt;</span> it <span class="op">=</span> musicas<span class="op">.</span><span class="fu">iterator</span><span class="op">();</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>      <span class="cf">while</span> <span class="op">(</span>it<span class="op">.</span><span class="fu">hasNext</span><span class="op">())</span> <span class="op">{</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>          Musica musica <span class="op">=</span> it<span class="op">.</span><span class="fu">next</span><span class="op">();</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>          <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>musica<span class="op">.</span><span class="fu">obterDetalhes</span><span class="op">);</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>          <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>musica<span class="op">.</span><span class="fu">obterDetalhes</span><span class="op">());</span></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -757,7 +764,7 @@
 </ul>
 </div>
 </section>
-<section id="section-11" class="slide level2 smaller">
+<section id="section-12" class="slide level2 smaller">
 <h2></h2>
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -803,7 +810,7 @@
 <h1>Removendo elementos de uma coleção</h1>
 
 </section>
-<section id="section-12" class="slide level2 smaller">
+<section id="section-13" class="slide level2 smaller">
 <h2></h2>
 <p>Remover elementos traz consequências importantes quando estamos iterando uma coleção.</p>
 <ul>
@@ -823,7 +830,7 @@
 </ul>
 </div>
 </section>
-<section id="section-13" class="slide level2 smaller">
+<section id="section-14" class="slide level2 smaller">
 <h2></h2>
 <p>A solução para usar isso é <strong>usar um <code>Iterator</code> para remover elementos</strong> de uma coleção.</p>
 <ul>
@@ -831,7 +838,7 @@
 <li class="fragment">O método remove o elemento que foi retornado pela última chamada do método <code>next</code>.</li>
 </ul>
 <div class="fragment">
-<p>O trecho de código abaixo mostra remover as músicas de um artista da coleção de músicas.</p>
+<p>O trecho de código abaixo mostra como remover as músicas de um artista da coleção de músicas.</p>
 <ul>
 <li class="fragment">Repare que <strong>chamamos o método <code>remove</code> do iterador e não do <code>ArrayList</code></strong>.</li>
 </ul>
@@ -847,7 +854,7 @@
 </div>
 </div>
 </section>
-<section id="section-14" class="slide level2 smaller">
+<section id="section-15" class="slide level2 smaller">
 <h2></h2>
 <p>Há outras formas de remover elementos de uma coleção.</p>
 <ul>
@@ -865,7 +872,7 @@
 <p>Portanto, é uma boa ideia saber como remover elementos de uma coleção usando um objeto <code>Iterator</code>. :)</p>
 </div>
 </section>
-<section id="section-15" class="slide level2">
+<section id="section-16" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -883,7 +890,7 @@
 <h1>Coleções de tamanho fixo</h1>
 
 </section>
-<section id="section-16" class="slide level2 smaller">
+<section id="section-17" class="slide level2 smaller">
 <h2></h2>
 <p>Apesar de coleções de tamanho flexível serem úteis na maioria dos casos,</p>
 <ul>
@@ -902,7 +909,7 @@
 </ul>
 </div>
 </section>
-<section id="section-17" class="slide level2 smaller">
+<section id="section-18" class="slide level2 smaller">
 <h2></h2>
 <p>Um <strong>vetor</strong> é um grupo de variáveis que contém <strong>elementos de um mesmo tipo</strong>.</p>
 <ul>
@@ -914,7 +921,7 @@
 <p><img data-src="imagens/exemplo_vetor.png"></p>
 </div>
 </section>
-<section id="section-18" class="slide level2 smaller">
+<section id="section-19" class="slide level2 smaller">
 <h2></h2>
 <p>Podemos <strong>declarar um vetor</strong> em Java, utilizando uma das seguintes formas:</p>
 <div class="halfincfontsize">
@@ -929,7 +936,7 @@
 </div>
 </div>
 </section>
-<section id="section-19" class="slide level2 smaller">
+<section id="section-20" class="slide level2 smaller">
 <h2></h2>
 <p>Como os demais objetos, os <strong>vetores são criados</strong> por meio da palavra-chave <code>new</code>:</p>
 <div class="halfincfontsize">
@@ -946,7 +953,7 @@
 </div>
 </div>
 </section>
-<section id="section-20" class="slide level2 smaller">
+<section id="section-21" class="slide level2 smaller">
 <h2></h2>
 <p>Há ainda outras duas formas alternativas de se instanciar um vetor.</p>
 <div class="fragment">
@@ -1067,7 +1074,7 @@
 </section>
 <section id="usando-for-each-com-vetores" class="slide level2 smaller">
 <h2>Usando for-each com vetores</h2>
-<p>Nós também podemos usar um <strong>lopp <em>for-each</em></strong> para percorrer os elementos de um vetor.</p>
+<p>Nós também podemos usar um <strong>loop <em>for-each</em></strong> para percorrer os elementos de um vetor.</p>
 <div class="fragment">
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb22" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span>Carro carro <span class="op">:</span> carros<span class="op">)</span> <span class="op">{</span></span>
@@ -1082,7 +1089,7 @@
 <p>Este exemplo nos permite enfatizar uma das vantagens do loop <em>for-each</em>:</p>
 <ul>
 <li class="fragment">Repare que esse código seria exatamente igual se a variável <code>carros</code> fosse um <code>ArrayList</code> em vez de um vetor.</li>
-<li class="fragment">Já na opção anterior, usando loop for, os códigos seriam diferentes.
+<li class="fragment">Já na opção anterior, usando loop for tradicional, os códigos seriam diferentes.
 <ul>
 <li class="fragment">Primeiro porque consultamos o tamanho de um vetor usando o atributo <code>length</code> e de um <code>ArrayList</code> usando o método <code>size</code>.</li>
 <li class="fragment">E segundo que acessamos um elemento por posição em um vetor usando <code>[i]</code> e em um <code>ArrayList</code> usando <code>get(i)</code>.</li>
@@ -1115,7 +1122,7 @@
 <h1>Exemplo de vetores usando o Greenfoot</h1>
 
 </section>
-<section id="section-21" class="slide level2 smaller">
+<section id="section-22" class="slide level2 smaller">
 <h2></h2>
 <p>Para <strong>ilustrar o uso de vetores</strong>, vamos aproveitar para conhecer um recurso que pode ser interessante no trabalho da disciplina.</p>
 <ul>
@@ -1132,7 +1139,7 @@
 </ul>
 </div>
 </section>
-<section id="section-22" class="slide level2 smaller">
+<section id="section-23" class="slide level2 smaller">
 <h2></h2>
 <p>Vamos criar uma classe <code>MeuMundo</code> e nela definir um mundo de 800x600 pixels com fundo preto.</p>
 <div class="halfincfontsize">
@@ -1154,7 +1161,7 @@
 <span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="section-23" class="slide level2">
+<section id="section-24" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1168,7 +1175,7 @@
 </div>
 </div>
 </section>
-<section id="section-24" class="slide level2 smaller">
+<section id="section-25" class="slide level2 smaller">
 <h2></h2>
 <p>Vamos agora criar uma classe <code>Cavaleiro</code>.</p>
 <ul>
@@ -1193,7 +1200,7 @@
 </div>
 </div>
 </section>
-<section id="section-25" class="slide level2 smaller">
+<section id="section-26" class="slide level2 smaller">
 <h2></h2>
 <p>O código abaixo utiliza a imagem que copiamos como a imagem do cavaleiro.</p>
 <div class="halfincfontsize">
@@ -1216,7 +1223,7 @@
 <span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="section-26" class="slide level2">
+<section id="section-27" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1231,7 +1238,7 @@
 </div>
 </div>
 </section>
-<section id="section-27" class="slide level2 smaller">
+<section id="section-28" class="slide level2 smaller">
 <h2></h2>
 <p>Vamos agora adicionar código para que o cavaleiro possa caminhar na horizontal.</p>
 <ul>
@@ -1259,7 +1266,7 @@
 </div>
 </div>
 </section>
-<section id="section-28" class="slide level2">
+<section id="section-29" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1275,7 +1282,7 @@
 </div>
 </div>
 </section>
-<section id="section-29" class="slide level2 smaller">
+<section id="section-30" class="slide level2 smaller">
 <h2></h2>
 <p>Repare que o movimento funciona, mas não é muito realista.</p>
 <ul>
@@ -1287,17 +1294,17 @@
 <li class="fragment">As imagens têm um nome seguido de um número.</li>
 <li class="fragment">Cada nome indica uma <em>ação</em> do personagem.
 <ul>
-<li class="fragment">Ex.: idle (parado), walk (caminhando), run (correndo), etc.</li>
+<li class="fragment">Ex.: <em>idle</em> (parado), <em>walk</em> (caminhando), <em>run</em> (correndo), etc.</li>
 </ul></li>
 <li class="fragment">E o número é a sequência de imagens que fazem acontecer a animação.
 <ul>
-<li class="fragment">Por ex.: se exibirmos repetidamente, e em sequência, todas as imagens que começam com <em>idle</em>:</li>
+<li class="fragment">Por ex.: se exibirmos repetidamente, e em sequência, todas as imagens que começam com <em>walk</em>:</li>
 <li class="fragment">teremos uma ilusão de movimento do personagem.</li>
 </ul></li>
 </ul>
 </div>
 </section>
-<section id="section-30" class="slide level2 smaller">
+<section id="section-31" class="slide level2 smaller">
 <h2></h2>
 <p>Para fazer isso, vamos primeiro copiar todas as imagens que baixamos do cavaleiro para a pasta <code>images</code> do projeto no Greenfoot.</p>
 <ul>
@@ -1311,7 +1318,7 @@
 </ul>
 </div>
 </section>
-<section id="section-31" class="slide level2 smaller">
+<section id="section-32" class="slide level2 smaller">
 <h2></h2>
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb26" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Cavaleiro <span class="kw">extends</span> Actor</span>
@@ -1337,7 +1344,7 @@
 <span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="section-32" class="slide level2 smaller">
+<section id="section-33" class="slide level2 smaller">
 <h2></h2>
 <p>A alteração no slide anterior apenas carregou as imagens para a memória, mas ainda não faz nenhuma animação.</p>
 <ul>
@@ -1356,7 +1363,7 @@
 </ul>
 </div>
 </section>
-<section id="section-33" class="slide level2 smaller">
+<section id="section-34" class="slide level2 smaller">
 <h2></h2>
 <p>Toda vez que o método <code>act</code> é chamado, a próxima imagem do vetor é exibida.</p>
 <div class="halfincfontsize">
@@ -1376,7 +1383,7 @@
 <span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="section-34" class="slide level2">
+<section id="section-35" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1391,7 +1398,7 @@
 </div>
 </div>
 </section>
-<section id="section-35" class="slide level2 smaller">
+<section id="section-36" class="slide level2 smaller">
 <h2></h2>
 <p>Veja que a animação ficou muito acelerada.</p>
 <ul>
@@ -1400,9 +1407,9 @@
 <div class="fragment">
 <p>Como podemos resolver?</p>
 <ul>
-<li class="fragment">Podemos fazer com que cada imagem seja usada por mais de uma execução do método <code>act</code>.</li>
-<li class="fragment">Ou dizendo, de outra forma, podemos fazer a atualização a cada X vezes que o método é chamado.
+<li class="fragment">Podemos fazer com que cada imagem seja usada por mais de uma execução do método <code>act</code>.
 <ul>
+<li class="fragment">Ou dizendo, de outra forma, podemos fazer a atualização a cada X vezes que o método é chamado.</li>
 <li class="fragment">Em vez de atualizar em toda chamada.</li>
 </ul></li>
 </ul>
@@ -1411,7 +1418,7 @@
 <p>E como podemos fazer isso?</p>
 </div>
 </section>
-<section id="section-36" class="slide level2 smaller">
+<section id="section-37" class="slide level2 smaller">
 <h2></h2>
 <p>Repare que podemos definir de quantos em quantos passos precisamos atualizar as imagens.</p>
 <ul>
@@ -1441,7 +1448,7 @@
 </ul>
 </div>
 </section>
-<section id="section-37" class="slide level2 smaller">
+<section id="section-38" class="slide level2 smaller">
 <h2></h2>
 <p>Por fim, vamos alterar o método <code>act</code> para usar os atributos que criamos</p>
 <div class="fragment">
@@ -1469,7 +1476,7 @@
 </div>
 </div>
 </section>
-<section id="section-38" class="slide level2">
+<section id="section-39" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1483,16 +1490,16 @@
 </div>
 </div>
 </section>
-<section id="section-39" class="slide level2 smaller">
+<section id="section-40" class="slide level2 smaller">
 <h2></h2>
 <p>Repare que usamos um vetor para guardar as imagens porque sabemos que usaremos 10 imagens e isso não vai mudar durante a execução do jogo.</p>
 <ul>
 <li class="fragment">Esse, portanto, é um exemplo prático da utilidade de vetores em Java.</li>
 </ul>
 </section>
-<section id="section-40" class="slide level2 smaller">
+<section id="section-41" class="slide level2 smaller">
 <h2></h2>
-<p>Mas, pensando no jogo, repare que fizemos todo esse trabalho só para tratar o personagem parado.</p>
+<p>Mas, pensando no jogo, repare que fizemos todo esse trabalho só para tratar o movimento de corpo do personagem parado.</p>
 <ul>
 <li class="fragment">Já que quando ele se movimenta, ele continua deslizando pela tela.</li>
 <li class="fragment">Como podemos tratar isso?</li>
@@ -1515,7 +1522,7 @@
 </ul>
 </div>
 </section>
-<section id="section-41" class="slide level2">
+<section id="section-42" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1531,7 +1538,7 @@
 </div>
 </div>
 </section>
-<section id="section-42" class="slide level2">
+<section id="section-43" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1553,7 +1560,7 @@
 <h1>Entregas dessa Aula</h1>
 
 </section>
-<section id="section-43" class="slide level2 smaller">
+<section id="section-44" class="slide level2 smaller">
 <h2></h2>
 <div>
 <p>Para ter <strong>presença</strong> nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.</p>
