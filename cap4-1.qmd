@@ -294,7 +294,7 @@ Antes de analisarmos o código-fonte, vamos entender o funcionamento do organiza
 Abra o probjeto [organizador-musicas-v1](https://github.com/ufla-ipoo/organizador-musicas-v1) no BlueJ e crie um objeto `OrganizadorDeMusicas`.
 Guarde nomes de alguns arquivos de música nele (são simplesmente strings).
 Como não vamos tocar as músicas agora, qualquer nome de arquivo serve.
-Mas há um repositório com [arquivos de músicas](https://github.com/ufla-ipoo/amostra-musicas) de verdade que você pode querer baixar e usar.
+Mas há um repositório com [arquivos de músicas](https://github.com/ufla-ipoo/amostras-musicas) de verdade que você pode querer baixar e usar.
 
 Confira se o número de arquivos retornado pelo método `obterQuantidadeDeArquivos` bate com a quantidade que você armazenou.
 Ao usar o método `listarArquivo` você deve notar que você precisa passar o valor 0 para imprimir o primeiro nome de arquivo, 1 para o segundo, e assim por diante.
