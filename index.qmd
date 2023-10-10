@@ -35,6 +35,7 @@
   - [Aula 3.2 - Prática](cap3-2.html)
 - **Capítulo 4**
   - [Aula 4.1 - Teórica](cap4-1.html)
+  - [Aula 4.2 - Teórica](cap4-2.html)
 
 :::
 
