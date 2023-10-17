@@ -44,3 +44,355 @@ Construções Java do capítulo
 :::
 
 ## {.smaller}
+
+No capítulo anterior conhecemos a classe `ArrayList` da biblioteca de classes do Java.
+
+- Com ela, ficou mais fácil fazer programas para guardar uma quantidade qualquer de objetos.
+- O que sem ela seria bem mais complicado.
+
+. . .
+
+Mas ela é apenas um exemplo da biblioteca de classes.
+
+- Existem muitas que serão muito úteis em nossos softwares.
+- E outras que, possivelmente, nunca usaremos.
+
+. . .
+
+Um bom programador Java precisa conseguir trabalhar com as classes da biblioteca.
+
+- E saber quando utilizar cada uma.
+- De forma a tornar a implementação de um programa mais fácil.
+
+## {.smaller}
+
+Muitas classes da biblioteca têm certas características comuns entre si.
+
+- Especialmente, as coleções são classes que compartilham muitos atributos.
+- E, usando a abstração, podemos tratar de classes de coleções de uma maneira mais geral.
+
+. . .
+
+Neste capítulo, vamos trabalhar com um sistema de Suporte Técnico.
+
+- Começaremos com uma versão rudimentar.
+- E ela será melhorada, incrementalmente, utilizando diferentes classes da biblioteca Java.
+  - Obs.: parte do conteúdo será tratada como Material de Estudo Autônomo, como previsto no Plano de Ensino.
+
+## {.smaller}
+
+# Documentação das classes de biblioteca {background-color="#40666e"}
+
+## {.smaller}
+
+A biblioteca de classes do Java tem centenas de classes, com muitas opções de métodos.
+
+- Será que um bom programador precisa conhecer todas elas de cor?
+
+. . .
+
+Na verdade, um bom programador deveria:
+
+- Conhecer pelo nome as classes mais importantes e seus métodos (`ArrayList` é uma delas).
+- Saber encontrar informações sobre outras classes e pesquisar seus detalhes (tais como métodos e parâmetros).
+
+. . .
+
+O livro da disciplina recomenda que um programador conheça da documentação do Java para essas classes.
+
+- A linguagem tem páginas HTML bem detalhadas sobre todas as classes da biblioteca.
+- Para quem não é fluente em inglês, isso pode gerar uma barreira inicial.
+  - Portanto, uma sugestão é usar outras fontes para saber como usar as classes (como buscas no Google ou o ChatGPT).
+- Mas, à medida que se tornarem mais experientes, saber usar a documentação pode ser muito útil.
+
+## {.smaller}
+
+Um ponto importante sobre o uso da classe `ArrayList` é que nós a utilizamos sem nunca termos visto o código da classe.
+
+- Nós não verificamos como ela foi implementada.
+- E isso não foi necessário para utilizarmos suas funcionalidades.
+
+Tudo o que precisamos saber é:
+
+- O nome da classe.
+- As assinaturas dos seus métodos (nomes, parâmetros e tipos de retorno).
+- E o que exatamente esses métodos fazem.
+
+## {.smaller}
+
+A mesma coisa acontece em projetos de software grandes.
+
+- Geralmente, várias pessoas trabalham em diferentes partes do sistema.
+- Cada programador deveria se concentrar em sua parte, e não ter que entender detalhes das outras partes.
+  - Como discutimos ao falar sobre abstração e modularização.
+
+. . .
+
+Na verdade, cada programador deveria conseguir usar as classes das outras equipes,
+
+- Como se elas fossem classes de biblioteca.
+- Sabendo o que elas fazem, mas sem precisar saber como elas funcionam internamente.
+
+. . .
+
+Mas, para isso funcionar, cada membro de equipe deveria documentar sua classe assim como é feito para as classes da biblioteca
+
+- Permitindo que outros programadores usem a classe sem precisar ler o código.
+- Veremos como fazer isso nos materiais de estudo autônomo.
+
+# O sistema de Suporte Técnico {background-color="#40666e"}
+
+## {.smaller}
+
+A ideia do sistema de Suporte Técnico é que ele seja um chat para atendimento de clientes
+
+- de uma empresa fictícia, chamada DesonestosSistemas.
+- Antigamente a empresa tinha funcionários que faziam atendimento por telefone.
+- Mas ela passou por problemas financeiros e demitiu a equipe.
+- E agora ela quer criar um sistema de suporte para dar a impressão que ela atende os clientes.
+- A ideia é que o sistema imite o atendimento que uma pessoa faria ao telefone.
+
+## {.smaller}
+
+Vamos começar com uma versão bem rudimentar do sistema, disponível no projeto [suporte-tecnico1](https://github.com/ufla-ipoo/suporte-tecnico1).
+
+- A ideia é que, ao longo da aula, possamos melhorar o sistema.
+- E, ao longo do processo, vamos aprender diversos conceitos.
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Experimente a versão rudimentar do sistema de suporte técnico.
+
+Crie um objeto da classe `SistemaDeSuporte` e chame o método `iniciar`.
+Experimente conversar com o sistema e repare como é atendido.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Para conhecermos melhor o projeto, agora crie um objeto da classe `LeitorDeEntrada` e experimente seu(s) método(s).
+
+Faça o mesmo com um objeto da classe `Respondedor`.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Agora leia o código da classe `SistemaDeSuporte` e tente entender como ele funciona.
+:::
+
+## {.smaller}
+
+Você deve ter notado que o sistema é realmente muito rudimentar.
+
+- A classe `LeitorDeEntrada` basicamente retorna uma string digitada pelo usuário no terminal.
+- A classe `Respondedor` tem um método que sempre retorna a mesma resposta.
+- Já a classe `SistemaDeSuporte`, tem um objeto de cada uma das duas classes anteriores.
+  - E um loop `while` que, repetidamente, obtém um texto do usuário e exibe uma resposta.
+  - Isso é repetido até que o usuário digite qualquer string que comece com `tchau`.
+
+
+# Lendo documentação de classes {background-color="#40666e"}
+
+## {.smaller}
+
+Experimente usar o sistema de suporte técnico e digitar `Tchau` ou ` tchau` (com espaço) para sair.
+
+- O que acontece?
+- Para o usuário isso é muito chato, certo?
+  - Mas nós podemos usar a documentação da classe String para melhorar isso.
+
+. . .
+
+A classe String é uma das classes da biblioteca padrão do Java.
+
+- Nós podemos acessar a documentação da classe, no BlueJ, no menu `Ajuda` --> `Biblioteca de classes do Java`.
+- Será aberta a documentação online do Java no seu navegador web.
+  - Na parte superior direita há uma caixa de busca.
+  - Digite string e escolha primeira opção (`java.lang.String`).    
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Abra a documentação de alguma outra classe do Java e compare a estrutura da documentação das duas classes.
+O que as páginas têm em comum?
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Procure pelo método `startsWith` na documentação da classe String.
+Veja que o método é sobrecarregado, há duas versões.
+
+Escreva com suas palavras o que eles fazem e a diferença entre eles.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Procure se existe algum método na classe String que verifica se uma string termina com um dado sufixo.
+Se existir, como o método se chama, e quais são seus parâmetros e tipo de retorno?
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Há algum método na classe String que retorna quantos caracteres ela tem?
+Como o método se chama e quais são seus parâmetros?
+:::
+
+## Interface vs. Implementação {.smaller}
+
+Você deve ter notado que a documentação tem diferentes tipos de informação:
+
+- o nome da classe;
+- uma descrição geral do objetivo da classe;
+- uma lista dos construtores e métodos da classe;
+- os parâmetros e tipos de retorno de cada construtor e cada método;
+- e uma descrição do objetivo de cada construtor e cada método.
+
+. . .
+
+Todas essas informações formam o que chamamos de [interface de uma classe]{.alert}.
+
+- Repare que que a interface **não** mostra o código que implementa a classe.
+- Se uma classe é bem descrita (ou seja, sua interface é bem escrita),
+  - um programador não precisa ver o código da classe para conseguir utilizá-la.
+- A interface já tem toda a informação que ele precisa.
+  - (olha a abstração aí de novo!)
+
+## {.smaller}
+
+O código que não vemos, que é o que faz a classe funcionar, é chamado de [implementação da classe]{.alert}.
+
+- Geralmente um programador trabalha na implementação de uma classe de cada vez,
+  - e, para isso, usa várias outras classes através de suas interfaces.
+
+. . .
+
+Essa diferenciação entre **interface** e **implementação** é um conceito muito importante.
+
+- E vamos ver isso repetidamente nessa disciplina (e em disciplinas avançadas de POO).
+
+. . .
+
+::: {.callout-note title="Nota" appearance="simple" icon=false}
+A palavra **interface** tem diferentes significados em POO.
+Pode se referir a parte pública visível de uma classe (que é o que acabamos de aprender).
+Mas pode também se referir a interface gráfica de usuário ou a um tipo especial de classe que você conhecerá se puxar PPOO como eletiva :)
+:::
+
+## {.smaller}
+
+Nós também podemos falar de interface de um método específico.
+
+- Veja, por exemplo, a documentação do método `length` da classe `String`.
+
+. . .
+
+![](imagens/java-doc-String-length.png)
+
+. . .
+
+A interface de um método consiste em sua **assinatura** e um comentário. A assinatura contém:
+
+- Um modificador de acesso (`public`, nesse caso).
+- O tipo de retorno do método (`int`, nesse caso).
+- O nome do método.
+- Uma lista de parâmetros (vazia, nesse caso).
+
+. . .
+
+Repare que a interface do método tem tudo que precisamos saber para conseguirmos usá-lo. 
+
+## Usando métodos de classes da biblioteca {.smaller}
+
+Em nosso sistema de suporte, já vimos que o sistema não aceita que o usuário digite `"Tchau"` ou `" tchau"`.
+
+- Vamos melhrar isso de forma que todas essas variações sejam reconhecidas como `"tchau"`.
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Encontre o método `trim` na documentação da classe `String`.
+Escreva com suas palavras o que ele faz, e como ele poderia ser chamado usando uma variável `String` chamada `texto`.
+:::
+
+## {.smaller}
+
+Um importante detalhe sobre objetos String em Java, é que eles são **imutáveis**.
+
+- Isso significa que esses objetos não podem ser alterados depois de criados.
+- Repare que o método `trim`, por exemplo, retorna uma nova String.
+  - Ele não modifica a String original.
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+![](imagens/fica_a_dica.png)
+
+:::
+
+::: {.column width="70%"}
+É um erro comum em Java, tentar alterar uma String usando chamadas commo:
+
+  `texto.toUpperCase();`
+
+Essa chamada não provoca nenhum erro, mas também não causa nenhum efeito.
+Isso porque o método retorna uma nova String, ele não altera a original.
+
+Portanto, se queremos alterar a variável `texto`, precisamos descartar o objeto String original, atribuindo à variável `texto` a nova String gerada:
+
+  `texto = texto.toUpperCase();`
+:::
+
+::::
+
+## {.smaller}
+
+Pelo que você leu sobre o método `trim` na documentação, como podemos usá-lo no sistema de suporte?
+
+- Você deve ter visto que podemos usá-lo para remover espaços no início e no final da string.
+
+. . .
+
+O código da classe `SistemaDeSuporte` poderia ser então alterado da seguinte forma:
+
+```{.java code-line-numbers="false"}
+    String entrada = leitor.obterEntrada();
+    entrada = entrada.trim();
+    if(entrada.startsWith("tchau")) {
+        terminou = true;
+    }
+    else {
+        String resposta = respondedor.generateResponse();
+        System.out.println(resposta);
+    }
+```
+
+## {.smaller}
+
+Você acha que haveria diferença entre escrever essas duas linhas de código:
+
+
+```{.java code-line-numbers="false"}
+    String entrada = leitor.obterEntrada();
+    entrada = entrada.trim();
+```
+
+ou escrever assim:
+
+```{.java code-line-numbers="false"}
+    String entrada = leitor.obterEntrada().trim();
+```
+
+. . .
+
+O efeito é exatamente o mesmo.
+
+- Você pode escolher a forma que acha mais fácil de entender.
+
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+
+:::
