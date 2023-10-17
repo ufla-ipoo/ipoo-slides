@@ -197,7 +197,7 @@ Você deve ter notado que o sistema é realmente muito rudimentar.
 
 ## {.smaller}
 
-Experimente usar o sistema de suporte técnico e digitar `Tchau` ou ` tchau` (com espaço) para sair.
+Experimente usar o sistema de suporte técnico e digitar `"Tchau"` ou `" tchau"` (com espaço) para sair.
 
 - O que acontece?
 - Para o usuário isso é muito chato, certo?
@@ -356,6 +356,7 @@ Pelo que você leu sobre o método `trim` na documentação, como podemos usá-l
 
 O código da classe `SistemaDeSuporte` poderia ser então alterado da seguinte forma:
 
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
     String entrada = leitor.obterEntrada();
     entrada = entrada.trim();
@@ -365,30 +366,166 @@ O código da classe `SistemaDeSuporte` poderia ser então alterado da seguinte f
     else {
         String resposta = respondedor.generateResponse();
         System.out.println(resposta);
-    }
+    }4
 ```
+:::
 
 ## {.smaller}
 
 Você acha que haveria diferença entre escrever essas duas linhas de código:
 
-
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
     String entrada = leitor.obterEntrada();
     entrada = entrada.trim();
 ```
+:::
 
 ou escrever assim:
 
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
     String entrada = leitor.obterEntrada().trim();
 ```
+:::
 
 . . .
 
 O efeito é exatamente o mesmo.
 
 - Você pode escolher a forma que acha mais fácil de entender.
+- Veja que na segunda opção, a ordem de execução é como se existissem os parênteses como mostrado abaixo.
+  ```{.java code-line-numbers="false"}
+    String entrada = (leitor.obterEntrada()).trim();
+  ```
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Implemente a alteração usando o método `trim` da classe String.
+Teste a alteração digitando espaço antes da palavra tchau.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Isso ainda não resolveu o problema do usuário digitar `"Tchau"` com letra maiúscula.
+
+Veja na documentação da classe String como funciona o método `toLowerCase` e o utilize de forma que o programa saia independente do usuário digitar tchau com letras maiúsculas ou minúsculas.
+:::
+
+## 
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+![](imagens/fica_a_dica.png)
+
+:::
+
+::: {.column width="70%"}
+Lembre-se que, como já foi dito em aulas práticas anteriores, não podemos comparar objetos String em Java utilizando o operador `==`.
+Usando o operador estamos verificando se é o mesmo objeto, e não se os dois objetos têm o mesmo conteúdo.
+
+Para comparar se dois objetos String têm o mesmo conteúdo, devemos utilizar o método `equals`.
+:::
+
+::::
+
+::: {.callout-note title="Exercício" icon=false}
+Encontre o método `equals` na documentação da classe String.
+Utilize o método `equals` em vez do método `startsWith` na implementação da classe `SuporteTecnico`
+:::
+
+
+# Adicionando comportamento aleatório {background-color="#40666e"}
+
+## {.smaller}
+
+No início da disciplina, nós utilizamos um objeto da classe `Random` no exercício da Nave para acrescentar aleatoriedade em nosso jogo.
+
+- Nós podemos agora utilizar a mesma classe para mudar o comportamento do `Respondedor` do nosso sistema de suporte.
+- A ideia é que o sistema agora exiba respostas aleatórias, em vez de sempre responder a mesma coisa.
+
+. . .
+
+Nós podemos fazer isso, alterando a classe `Respondedor` seguindo os passos abaixo:
+
+- declarando um atributo do tipo `Random` para guardar um gerador de números aleatórios;
+- declarando um atributo do tipo `ArrayList` para guardar nossas possíveis respostas;
+- crinado os objetos `Random` e `ArrayList` no construtor da classe `Respondedor`;
+- preenchendo a lista com algumas frases de resposta;
+- selecionando e retornando uma frase aleatória quando o método `gerarResposta` é chamado.
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Melhore a classe `Respondedor` de forma que ela gere respostas aleatórias como descrito no slide anterior.
+
+Veja que, para gerar respostas aleatórias, basta sortearmos uma posição do `ArrayList` e usarmos essa posição para obter uma mensagem.
+Podemos sortear uma posição usando o método `nextInt` da classe `Random`, e o método `size` da classe `ArrayList`.
+
+::: {.nonincremental}
+Dicas:
+- Veja no próximo slide alguns exemplos de frase de resposta, mas não precisam ser exatamente essas, use sua criatividade!
+- Reveja o uso da classe `Random` no exercício da nave.
+- Leia seção 5.4 do livro da disciplina.
+:::
+:::
+
+## {.smaller}
+
+Exemplos de frases de resposta do sistema de suporte técnico:
+
+- Isso parece estranho. Você poderia descrever com mais detalhes?
+- Nenhum outro cliente reclamou disso antes. Qual é a configuração do seu sistema?
+- Poderia me dar mais informações sobre o problema?
+- Isso é abordado no manual. Você já leu o manual?
+- Sua descrição é um pouco ruim. Você tem um especialista com você que poderia descrever isso melhor?
+- Isso não é um bug, é uma funcionalidade!
+- Você poderia detalhar melhor isso?
+- Você já tentou executar o aplicativo no seu telefone?
+- Já verifiquei no StatckOverflow e ChatGPT e nem eles sabem como responder :(
+
+
+# Melhorando o sistema de suporte {background-color="#40666e"}
+
+## {.smaller}
+
+Nosso sistema ficou mais dinâmico, mas ainda é muito ruim, pois as respostas são independentes do que o usuário escreve.
+
+- Nós podemos melhorar um pouco isso, fazendo algo pelo menos próximo do que o usuário perguntou.
+- O livro já parte para uma solução usando a classe `HashMap`.
+  - Mas aqui, vamos tratar essa classe como material de Estudo Autônomo.
+  - Então vamos implementar aqui primeiro uma solução com blocos `if` e `else` para ter um resultado similar.
+
+## {.smaller}
+
+A ideia é identificar alguma palavra-chave na pergunta feita pelo usuário
+
+- e fornecer uma resposta que tenha algo a ver com essa palavra-chave.
+
+. . .
+
+Por exemplo, suponha que na pergunta do usuário apareça a palavra `"lento"`.
+
+- A resposta poderia ser então: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## 
