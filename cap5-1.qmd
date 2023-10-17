@@ -1,0 +1,46 @@
+---
+title: IPOO - Cap. 5 Comportamento Mais Sofisticado
+subtitle: Aula 5.1 - Teórica
+---
+
+## {.smaller}
+
+Os tópicos abaixo te lembram alguma coisa? :)
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+- **Praticar enquanto estuda**.
+- **Ler o capítulo do livro**.
+- **Anotar conceitos dúvidas**.
+
+:::
+
+::: {.column width="30%"}
+![](imagens/livro_bluej.png){fig-alt="Capa do livro do Barnes e Kolling." fig-align="left" width=50%}
+:::
+
+::::
+
+## {.smaller}
+
+## Principais Conceitos do Capítulo {.smaller}
+
+::: {.nonincremental}
+- Encapsulamento
+- Atributos e métodos estáticos
+- Constantes
+- Uso de classes de biblioteca
+- Documentação de classes
+:::
+
+. . .
+
+Construções Java do capítulo
+
+::: {.nonincremental}
+- `String`, `Random`, `static`, `final`,  autoboxing, classes empacotadoras.
+:::
+
+## {.smaller}
