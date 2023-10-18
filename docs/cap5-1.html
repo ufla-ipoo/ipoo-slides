@@ -412,7 +412,7 @@
     </div>
 </div>
 
-  <p class="date">17/10/2023</p>
+  <p class="date">18/10/2023</p>
 </section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
@@ -806,6 +806,29 @@
 <p>Repare que a interface do método tem tudo que precisamos saber para conseguirmos usá-lo.</p>
 </div>
 </section>
+<section id="section-18" class="slide level2">
+<h2></h2>
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p>A <strong>interface</strong> de uma classe descreve o que a classe faz e como ela pode ser usada sem mostrar a implementação.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p>O código-fonte completo que define uma classe é chamado de <strong>implementação</strong> da classe.</p>
+</div>
+</div>
+</div>
+</section>
 <section id="usando-métodos-de-classes-da-biblioteca" class="slide level2 smaller">
 <h2>Usando métodos de classes da biblioteca</h2>
 <p>Em nosso sistema de suporte, já vimos que o sistema não aceita que o usuário digite <code>"Tchau"</code> ou <code>" tchau"</code>.</p>
@@ -825,7 +848,7 @@
 </div>
 </div>
 </section>
-<section id="section-18" class="slide level2 smaller">
+<section id="section-19" class="slide level2 smaller">
 <h2></h2>
 <p>Um importante detalhe sobre objetos String em Java, é que eles são <strong>imutáveis</strong>.</p>
 <ul>
@@ -849,7 +872,7 @@
 </div>
 </div>
 </section>
-<section id="section-19" class="slide level2 smaller">
+<section id="section-20" class="slide level2 smaller">
 <h2></h2>
 <p>Pelo que você leu sobre o método <code>trim</code> na documentação, como podemos usá-lo no sistema de suporte?</p>
 <ul>
@@ -870,7 +893,7 @@
 </div>
 </div>
 </section>
-<section id="section-20" class="slide level2 smaller">
+<section id="section-21" class="slide level2 smaller">
 <h2></h2>
 <p>Você acha que haveria diferença entre escrever essas duas linhas de código:</p>
 <div class="halfincfontsize">
@@ -894,8 +917,18 @@
 </div>
 </div>
 </section>
-<section id="section-21" class="slide level2">
+<section id="section-22" class="slide level2">
 <h2></h2>
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p>Um objeto é chamado <strong>imutável</strong> se seu conteúdo ou estado não pode ser alterado depois que ele foi criado. Strings são exemplos de objetos imutáveis.</p>
+</div>
+</div>
+</div>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -906,20 +939,20 @@
 </div>
 </div>
 </div>
+</section>
+<section id="section-23" class="slide level2 smaller">
+<h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>Isso ainda não resolveu o problema do usuário digitar <code>"Tchau"</code> com letra maiúscula.</p>
+<p>O exercício anterior ainda não resolveu o problema do usuário digitar <code>"Tchau"</code> com letra maiúscula.</p>
 <p>Veja na documentação da classe String como funciona o método <code>toLowerCase</code> e o utilize de forma que o programa saia independente do usuário digitar tchau com letras maiúsculas ou minúsculas.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="section-22" class="slide level2 smaller">
-<h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -949,25 +982,25 @@
 <h1>Adicionando comportamento aleatório</h1>
 
 </section>
-<section id="section-23" class="slide level2 smaller">
+<section id="section-24" class="slide level2 smaller">
 <h2></h2>
 <p>No início da disciplina, nós utilizamos um objeto da classe <code>Random</code> no exercício da Nave para acrescentar aleatoriedade em nosso jogo.</p>
 <ul>
 <li class="fragment">Nós podemos agora utilizar a mesma classe para mudar o comportamento do <code>Respondedor</code> do nosso sistema de suporte.</li>
-<li class="fragment">A ideia é que o sistema agora exiba respostas aleatórias, em vez de sempre responder a mesma coisa.</li>
+<li class="fragment">A ideia é que o sistema exiba respostas aleatórias, em vez de sempre responder a mesma coisa.</li>
 </ul>
 <div class="fragment">
 <p>Nós podemos fazer isso, alterando a classe <code>Respondedor</code> seguindo os passos abaixo:</p>
 <ul>
 <li class="fragment">declarando um atributo do tipo <code>Random</code> para guardar um gerador de números aleatórios;</li>
 <li class="fragment">declarando um atributo do tipo <code>ArrayList</code> para guardar nossas possíveis respostas;</li>
-<li class="fragment">crinado os objetos <code>Random</code> e <code>ArrayList</code> no construtor da classe <code>Respondedor</code>;</li>
+<li class="fragment">criando os objetos <code>Random</code> e <code>ArrayList</code> no construtor da classe <code>Respondedor</code>;</li>
 <li class="fragment">preenchendo a lista com algumas frases de resposta;</li>
 <li class="fragment">selecionando e retornando uma frase aleatória quando o método <code>gerarResposta</code> é chamado.</li>
 </ul>
 </div>
 </section>
-<section id="section-24" class="slide level2">
+<section id="section-25" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -978,38 +1011,43 @@
 <p>Melhore a classe <code>Respondedor</code> de forma que ela gere respostas aleatórias como descrito no slide anterior.</p>
 <p>Veja que, para gerar respostas aleatórias, basta sortearmos uma posição do <code>ArrayList</code> e usarmos essa posição para obter uma mensagem. Podemos sortear uma posição usando o método <code>nextInt</code> da classe <code>Random</code>, e o método <code>size</code> da classe <code>ArrayList</code>.</p>
 <div>
-<p>Dicas: - Veja no próximo slide alguns exemplos de frase de resposta, mas não precisam ser exatamente essas, use sua criatividade! - Reveja o uso da classe <code>Random</code> no exercício da nave. - Leia seção 5.4 do livro da disciplina.</p>
+<p>Dicas:</p>
+<ul>
+<li>Veja no próximo slide alguns exemplos de frase de resposta (mas não precisam ser exatamente essas, use sua criatividade!).</li>
+<li>Reveja o uso da classe <code>Random</code> no exercício da nave.</li>
+<li>Leia a seção 5.4 do livro da disciplina.</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="section-25" class="slide level2 smaller">
+<section id="section-26" class="slide level2 smaller">
 <h2></h2>
 <p>Exemplos de frases de resposta do sistema de suporte técnico:</p>
-<ul>
-<li class="fragment">Isso parece estranho. Você poderia descrever com mais detalhes?</li>
-<li class="fragment">Nenhum outro cliente reclamou disso antes. Qual é a configuração do seu sistema?</li>
-<li class="fragment">Poderia me dar mais informações sobre o problema?</li>
-<li class="fragment">Isso é abordado no manual. Você já leu o manual?</li>
-<li class="fragment">Sua descrição é um pouco ruim. Você tem um especialista com você que poderia descrever isso melhor?</li>
-<li class="fragment">Isso não é um bug, é uma funcionalidade!</li>
-<li class="fragment">Você poderia detalhar melhor isso?</li>
-<li class="fragment">Você já tentou executar o aplicativo no seu telefone?</li>
-<li class="fragment">Já verifiquei no StatckOverflow e ChatGPT e nem eles sabem como responder :(</li>
-</ul>
+<div class="halfincfontsize">
+<pre><code>Isso parece estranho. Você poderia descrever com mais detalhes?
+Nenhum outro cliente reclamou disso antes. Qual é a configuração do seu sistema?
+Poderia me dar mais informações sobre o problema?
+Isso é abordado no manual. Você já leu o manual?
+Sua descrição é um pouco ruim. Você tem um especialista com você que poderia descrever isso melhor?
+Isso não é um bug, é uma funcionalidade!
+Você poderia detalhar melhor isso?
+Você já tentou executar o aplicativo no seu telefone?
+Já verifiquei no StatckOverflow e ChatGPT e nem eles sabem como responder :(</code></pre>
+</div>
 </section></section>
 <section>
 <section id="melhorando-o-sistema-de-suporte" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Melhorando o sistema de suporte</h1>
 
 </section>
-<section id="section-26" class="slide level2 smaller">
+<section id="section-27" class="slide level2 smaller">
 <h2></h2>
 <p>Nosso sistema ficou mais dinâmico, mas ainda é muito ruim, pois as respostas são independentes do que o usuário escreve.</p>
 <ul>
 <li class="fragment">Nós podemos melhorar um pouco isso, fazendo algo pelo menos próximo do que o usuário perguntou.</li>
-<li class="fragment">O livro já parte para uma solução usando a classe <code>HashMap</code>.
+<li class="fragment">O livro apresenta uma solução usando a classe <code>HashMap</code>.
 <ul>
 <li class="fragment">Mas vamos tratar essa classe como material de Estudo Autônomo.</li>
 <li class="fragment">Então vamos implementar aqui primeiro uma solução com blocos <code>if</code> e <code>else</code> para ter um resultado similar.</li>
@@ -1022,23 +1060,41 @@
 </ul>
 </div>
 </section>
-<section id="section-27" class="slide level2 smaller">
+<section id="section-28" class="slide level2 smaller">
 <h2></h2>
 <p>Por exemplo, suponha que na pergunta do usuário apareça a palavra <code>"lento"</code>.</p>
 <ul>
-<li class="fragment">A resposta poderia ser então algo como: &gt; Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?</li>
+<li class="fragment">A resposta poderia ser então algo como:</li>
 </ul>
 <div class="fragment">
+<div class="halfincfontsize">
+<pre><code>Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?</code></pre>
+</div>
+</div>
+<div class="fragment">
 <p>Já se na pergunta do usuário aparecer a palava <code>"bug"</code>, a resposta poderia ser:</p>
-<blockquote>
-<p>Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?</p>
-</blockquote>
+</div>
+<div class="fragment">
+<div class="halfincfontsize">
+<pre><code>Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?</code></pre>
+</div>
 </div>
 <div class="fragment">
 <p>Como podemos implementar isso?</p>
 </div>
 </section>
-<section id="section-28" class="slide level2">
+<section id="section-29" class="slide level2 smaller">
+<h2></h2>
+<p><strong>Atenção</strong>:</p>
+<ul>
+<li class="fragment">O próximo exercício pede para alterar o método <code>gerarResposta</code> da classe <code>Respondedor</code>.</li>
+<li class="fragment">Mas para que o professor consiga corrigir seu exercício anterior (de respostas aleatórias) você não pode apagar o código que tinha feito antes.
+<ul>
+<li class="fragment">Então coloque o código que você tinha feito em um método chamado <code>gerarRespostaAleatoria</code>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-30" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1047,9 +1103,7 @@
 </div>
 <div class="callout-content">
 <div>
-<p>Vamos implementar a ideia discutida no slide anterior.</p>
-<p>Obs.: para que o professor consiga corrigir seu exercício anterior (de respostas aleatórias) você não pode apagar o código que tinha feito antes. Então coloque o código que você tinha feito em um método chamado <code>gerarRespostaAleatoria</code>.</p>
-<p>Neste exercício, faça o seguinte:</p>
+<p>Vamos implementar a ideia discutida nos slides anteriores. Neste exercício, faça o seguinte:</p>
 <ul>
 <li>Altere o método <code>gerarResposta</code> da classe <code>Respondedor</code> para que ele receba por parâmetro a pergunta feita pelo usuário.
 <ul>
@@ -1058,24 +1112,392 @@
 <li>No método <code>gerarResposta</code>, faça uma sequência de <code>if</code>/<code>else if</code> para verificar se as palavras-chave existem na pergunta do usuário.
 <ul>
 <li>Para isso, você pode usar o método <code>contains</code> da classe String.</li>
-<li>E no bloco de cada <code>if</code>, retorne um texto correspondente àquela palavra-chave.</li>
+<li>E no bloco de cada <code>if</code>, retornar um texto correspondente àquela palavra-chave (veja sugestões no próximo slide).</li>
 <li>Exemplo:</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb5" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(</span>entrada<span class="op">.</span><span class="fu">contains</span><span class="op">(</span><span class="st">"lento"</span><span class="op">))</span> <span class="op">{</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Acredito que isso tem a ver com o seu hardware. "</span> <span class="op">+</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Atualizar seu processador deve resolver todos os "</span> <span class="op">+</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>           <span class="st">"problemas de desempenho. Você tem algum problema "</span> <span class="op">+</span> </span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>           <span class="st">"com nosso software?"</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>entrada<span class="op">.</span><span class="fu">contains</span><span class="op">(</span><span class="st">"bug"</span><span class="op">))</span> <span class="op">{</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">...</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>entrada<span class="op">.</span><span class="fu">contains</span><span class="op">(</span><span class="st">"lento"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Acredito que isso tem a ver com o seu hardware. "</span> <span class="op">+</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Atualizar seu processador deve resolver todos os "</span> <span class="op">+</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>               <span class="st">"problemas de desempenho. Você tem algum problema "</span> <span class="op">+</span> </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>               <span class="st">"com nosso software?"</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>entrada<span class="op">.</span><span class="fu">contains</span><span class="op">(</span><span class="st">"bug"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">...</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="section-29" class="slide level2">
+<section id="section-31" class="slide level2 smaller">
+<h2></h2>
+<div class="fontsize70">
+<table>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 89%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Palavra-chave</th>
+<th>Resposta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>travou</td>
+<td>Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração.</td>
+</tr>
+<tr class="even">
+<td>travando</td>
+<td>Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração.</td>
+</tr>
+<tr class="odd">
+<td>lento</td>
+<td>Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?</td>
+</tr>
+<tr class="even">
+<td>desempenho</td>
+<td>O desempenho foi bastante adequado em todos os nossos testes. Você está executando outros processos em segundo plano?</td>
+</tr>
+<tr class="odd">
+<td>bug</td>
+<td>Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?</td>
+</tr>
+<tr class="even">
+<td>erro</td>
+<td>Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?</td>
+</tr>
+<tr class="odd">
+<td>windows</td>
+<td>Este é um bug conhecido relacionado ao sistema operacional Windows. Por favor, informe à Microsoft. Não há nada que possamos fazer a respeito.</td>
+</tr>
+<tr class="even">
+<td>mac</td>
+<td>Este é um bug conhecido relacionado ao sistema operacional Mac. Por favor, informe à Apple. Não há nada que possamos fazer a respeito.</td>
+</tr>
+<tr class="odd">
+<td>caro</td>
+<td>O custo de nosso produto é bastante competitivo. Você deu uma olhada e realmente comparou nossos recursos?</td>
+</tr>
+<tr class="even">
+<td>instalação</td>
+<td>A instalação é realmente bastante simples. Temos muitos assistentes que fazem todo o trabalho para você. Você leu as instruções de instalação?</td>
+</tr>
+<tr class="odd">
+<td>memória</td>
+<td>Se você ler atentamente os requisitos do sistema, verá que os requisitos de memória especificados são de 1,5 gigabyte. Você realmente deve atualizar sua memória. Mais alguma coisa que você gostaria de saber?</td>
+</tr>
+<tr class="even">
+<td>linux</td>
+<td>Levamos o suporte ao Linux muito a sério. Mas há alguns problemas. A maioria está relacionada a versões incompatíveis do glibc. Você pode ser um pouco mais preciso?</td>
+</tr>
+<tr class="odd">
+<td>bluej</td>
+<td>Ah, o BlueJ, sim. Tentamos comprá-los há muito tempo, mas eles simplesmente não vendem… São pessoas teimosas. Não há nada que possamos fazer a respeito, desculpe.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section></section>
+<section>
+<section id="estudo-autônomo-a-classe-hashmap" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Estudo Autônomo: a classe <code>HashMap</code></h1>
+
+</section>
+<section id="section-32" class="slide level2 smaller">
+<h2></h2>
+<p>Conforme descrito no Plano de Ensino da disciplina, esse semestre tem 15 semanas letivas</p>
+<ul>
+<li class="fragment">e, para completar as 17 semanas previstas de carga horária, parte dos conteúdos da disciplina é tratada como Estudo Autônomo.</li>
+</ul>
+<div class="fragment">
+<p>Uma dessas partes é sobre a classe <code>HashMap</code>.</p>
+<ul>
+<li class="fragment">Você pode estudar sobre isso nos slides disponibilizados no Campus Virtual.</li>
+<li class="fragment">E na seção 5.6 do livro da disciplina.
+<ul>
+<li class="fragment">E, se você estudar também as seções 5.7 a 5.9, fazendo os exercícios, você terminará com um Sistema de Suporte bem mais interessante.</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Atenção</strong>:</p>
+<ul>
+<li class="fragment">Você pode estudar o conteúdo do Estudo Autônomo a qualquer momento.</li>
+<li class="fragment">Mas é importante que seja antes do Capítulo 7, pois nele utilizaremos a classe <code>HashMap</code>.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="autoboxing-e-classes-empacotadoras" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Autoboxing e classes empacotadoras</h1>
+
+</section>
+<section id="section-33" class="slide level2 smaller">
+<h2></h2>
+<p>Nós vimos que um <code>ArrayList</code> consegue guardar qualquer tipo de objeto.</p>
+<ul>
+<li class="fragment">Mas como <code>int</code> não é um objeto, não é possível usar um <code>ArrayList</code> para guardar uma lista de números inteiros?</li>
+</ul>
+<div class="fragment">
+<p>Isso é possível através das <span class="alert">classes empacotadoras (<em>wrapper classes</em>)</span>.</p>
+<ul>
+<li class="fragment">Cada tipo primitivo em Java tem uma classe empacotadora que representa o mesmo tipo,
+<ul>
+<li class="fragment">Mas que é um objeto de verdade.</li>
+</ul></li>
+<li class="fragment">A classe empacotadora para <code>int</code>, por exemplo, se chama <code>Integer</code>.</li>
+</ul>
+</div>
+</section>
+<section id="section-34" class="slide level2 smaller">
+<h2></h2>
+<p>Nós poderíamos criar um objeto do tipo <code>Integer</code> explicitamente:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb9" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> n <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Integer</span> objetoInt <span class="op">=</span> <span class="kw">new</span> <span class="bu">Integer</span><span class="op">(</span>n<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>E poderíamos então declarar um <code>ArrayList&lt;Integer&gt;</code> e guardar o <code>objetoInt</code>.</p>
+<ul>
+<li class="fragment">Mas, na verdade, nós nunca fazemos isso, pois podemos guardar valores de tipo primitivo no <code>ArrayList</code>!</li>
+<li class="fragment">Isso porque sempre que um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (<em>wrapper</em>),
+<ul>
+<li class="fragment">o compilador converte o valor automaticamente objeto empacotador correspondente.</li>
+<li class="fragment">Essa funcionalidade se chama <span class="alert"><em>autoboxing</em></span> (algo como, auto-empacotamento).</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-35" class="slide level2 smaller">
+<h2></h2>
+<p>Portanto, na prática, podemos escrever códigos como os abaixo:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb10" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">ArrayList</span><span class="op">&lt;</span><span class="bu">Integer</span><span class="op">&gt;</span> notas<span class="op">;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">...</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">guardarNotasNaLista</span><span class="op">(</span><span class="dt">int</span> nota<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>        notas<span class="op">.</span><span class="fu">add</span><span class="op">(</span>nota<span class="op">);</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Repare que estamos guardando o valor da variável <code>nota</code>, do tipo <code>int</code>, em um <code>ArrayList&lt;Integer&gt;</code>.</p>
+</div>
+</section>
+<section id="section-36" class="slide level2 smaller">
+<h2></h2>
+<p>Seguindo a mesma ideia, o compilador realiza o <span class="alert">unboxing</span> quando obtemos um valor da coleção:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb11" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> primeiraNota <span class="op">=</span> notas<span class="op">.</span><span class="fu">get</span><span class="op">(</span><span class="dv">0</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Veja portanto que, em termos práticos, a única coisa que precisamos lembrar é de declarar o <code>ArrayList</code> usando a classe empacotadora (como a <code>Integer</code>).</p>
+<ul>
+<li class="fragment">Mas na hora de usar o <code>ArrayList</code> podemos tratar todos os dados como <code>int</code> normalmente.</li>
+</ul>
+</div>
+</section>
+<section id="section-37" class="slide level2 smaller">
+<h2></h2>
+<p>Veja no Apêndice B do livro uma lista completa dos tipos primitivos e suas classes empacotadoras.</p>
+<ul>
+<li class="fragment">Vale ressaltar também que o mesmo conceito é aplicado para as demais coleções, como a classe <code>HashMap</code>.</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Autoboxing</strong> é realizado automaticamente quando um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (<em>wrapper</em>).</p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="estudo-autônomo-escrevendo-a-documentação-de-classes" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Estudo Autônomo: escrevendo a documentação de classes</h1>
+
+</section>
+<section id="section-38" class="slide level2 smaller">
+<h2></h2>
+<p>Em grandes empresas, é muito comum precisarmos utilizar uma classe que foi desenvolvida há muito tempo,</p>
+<ul>
+<li class="fragment">e, possivelmente, quem criou a classe nem trabalha mais na empresa.</li>
+</ul>
+<div class="fragment">
+<p>Nesses casos, é muito importante que a classe tenha uma documentação, assim com as classes da biblioteca do Java.</p>
+<ul>
+<li class="fragment">Pois, com ela, podemos utilizar a classe sem precisar entender sua implementação.</li>
+<li class="fragment">Portanto, é muito importante que saibamos gerar a documentação de nossas classes.</li>
+</ul>
+</div>
+</section>
+<section id="section-39" class="slide level2 smaller">
+<h2></h2>
+<p>O Java possui uma ferramenta (<span class="alert"><code>javadoc</code></span>) para geração de documentação a partir de comentários do código.</p>
+<ul>
+<li class="fragment">E o BlueJ possui uma integração bem fácil com essa ferramenta.</li>
+</ul>
+<div class="fragment">
+<p>Como material de estudo autônomo, estude a seção 5.10 do livro da disciplina.</p>
+<ul>
+<li class="fragment">Você verá que podemos gerar e visualizar a documentação de nossas classes, facilmente, no próprio BlueJ.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="encapsulamento" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Encapsulamento</h1>
+
+</section>
+<section id="público-vs.-privado" class="slide level2 smaller">
+<h2>Público vs.&nbsp;Privado</h2>
+<p>Vocês já notaram que usamos a todo momento as palavras-chave <code>public</code> e <code>private</code> em nossos programas em Java, como mostrado no exemplo abaixo:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb12" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>    <span class="co">// declaração de atributos</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> numeroDeAssentos<span class="op">;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// métodos</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">definirIdade</span><span class="op">(</span><span class="dt">int</span> novaIdade<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>      <span class="kw">...</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> <span class="fu">calcularMedia</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>      <span class="kw">...</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Chegou a hora de entendermos para que essas palavras-chaves servem.</p>
+</div>
+</section>
+<section id="section-40" class="slide level2 smaller">
+<h2></h2>
+<p>Nós chamamos essas palavras-chave de <span class="alert">modificadores de acesso</span>.</p>
+<ul>
+<li class="fragment">elas definem a visibilidade de atributos, construtores e métodos.</li>
+</ul>
+<div class="fragment">
+<p>Se um método, por exemplo, é <strong>público</strong>:</p>
+<ul>
+<li class="fragment">Ele pode ser chamado de dentro da mesma classe e também a partir de outra classe.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Já métodos <strong>privados</strong>, por outro lado,</p>
+<ul>
+<li class="fragment">Só podem ser chamados de dentro da mesma classe onde foram declarados.</li>
+<li class="fragment">Eles não são visíveis para as outras classes.</li>
+</ul>
+</div>
+</section>
+<section id="section-41" class="slide level2 smaller">
+<h2></h2>
+<p>Como agora já conhecemos os conceitos de <strong>interface</strong> e <strong>implementação</strong> fica mais fácil entendermos o objetivo dessas palavras-chave.</p>
+<div class="fragment">
+<p>Lembre-se que a <strong>interface de uma classe</strong> é o conjunto de detalhes que um programador que vai usar a classe precisa ver.</p>
+<ul>
+<li class="fragment">Ela fornece informações sobre como usar a classe.
+<ul>
+<li class="fragment">E inclui assinaturas e comentários de construtores e métodos.</li>
+</ul></li>
+<li class="fragment">Nós também a chamamos de a parte <strong>pública</strong> da classe.</li>
+<li class="fragment">Seu objetivo é definir <strong>o que</strong> a classe faz.</li>
+</ul>
+</div>
+</section>
+<section id="section-42" class="slide level2 smaller">
+<h2></h2>
+<p>Já a <strong>implementação</strong> é a parte da classe que define precisamente <strong>como</strong> a classe funciona.</p>
+<ul>
+<li class="fragment">Os corpos dos métodos, contendo comandos Java, e muitos atributos são parte da implementação.</li>
+<li class="fragment">Ela também é chamada de parte <strong>privada</strong> da classe.</li>
+<li class="fragment">Quem usa a classe não precisa conhecer a implementação.</li>
+<li class="fragment">Inclusive, há boas razões para que o programador não possa fazer uso desse conhecimento (como veremos mais adiante).</li>
+</ul>
+</section>
+<section id="section-43" class="slide level2 smaller">
+<h2></h2>
+<p>Portanto, podemos dizer que:</p>
+<ul>
+<li class="fragment">A palavra-chave <code>public</code> declara que um elemento de uma classe (atributo ou método) faz parte de sua <strong>interface</strong>.
+<ul>
+<li class="fragment">Ou seja, é visível publicamente.</li>
+</ul></li>
+<li class="fragment">Já a palavra-chave <code>private</code> declara que um elemento é parte da implementação.
+<ul>
+<li class="fragment">Ou seja, está escondida de acesso externo.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Modificadores de acesso</strong> definem a visibilidade de um atributo, construtor ou método. Elementos públicos são acessíveis de dentro da classe e a partir de outras classes; já elementos privados são acessíveis somente de dentro da mesma classe.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="encapsulamento-1" class="slide level2 smaller">
+<h2>Encapsulamento</h2>
+<p>Em muitas linguagens OO, a implementação de uma classe (seus detalhes internos) é ocultada de outras classes.</p>
+<div class="fragment">
+<p>Isso tem a ver com duas questões.</p>
+<ol type="1">
+<li class="fragment">Um programador que usa uma classe <strong>não deveria <span class="alert">precisar conhecer</span></strong> seus detalhes internos.</li>
+</ol>
+<ul>
+<li class="fragment">Isso tem a ver com a <strong>modularização</strong> e <strong>abstração</strong> que já discutimos antes.</li>
+<li class="fragment">Se fosse necessário saber os detalhes de todas as classes, seria impossível desenvolver grandes sistemas.</li>
+</ul>
+<ol start="2" type="1">
+<li class="fragment">Outra questão é que um programador que usa uma classe <strong>não deveria <span class="alert">ter permissão de conhecer</span></strong> seus detalhes internos</li>
+</ol>
+<ul>
+<li class="fragment">Apesar de também ter a ver com modularização, a ideia aqui é que a linguagem não deveria permitir o acesso à parte privada de uma classe a partir de comandos em outras classes.</li>
+<li class="fragment">Isso garante que uma classe não depende de <strong>como</strong> exatamente uma outra classe está implementada.</li>
+</ul>
+</div>
+</section>
+<section id="section-44" class="slide level2 smaller">
+<h2></h2>
+<p>Esta última questão é muito importante para a manutenção de sistemas.</p>
+<ul>
+<li class="fragment">Quando precisamos incluir novas funcionalides ou corrigir bugs é muito comum precisarmos alterar ou aumentar uma classe.</li>
+<li class="fragment">O ideal é que a alteração de uma classe não provoque alterações em outras classes.
+<ul>
+<li class="fragment">Isso tem a ver com o que chamamos de <strong>acoplamento</strong>.</li>
+<li class="fragment">Se a alteração em uma classe não provoca alerações em outras classes, temos um baixo acoplamento.</li>
+<li class="fragment">E isso é muito bom, porque torna o trabalho de manutenção muito mais fácil.</li>
+<li class="fragment">Já que em vez de entender e alterar várias classes, o programador precisa trabalhar apenas em uma.</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-45" class="slide level2 smaller">
+<h2></h2>
+<p>Suponha, por exemplo, que a equipe que mantém a linguagem Java faça uma melhoria na implementação da classe <code>ArrayList</code>.</p>
+<ul>
+<li class="fragment">Nós esperaríamos que nosso código não precisasse ser alterado por causa dessa alteração da <code>ArrayList</code>.</li>
+<li class="fragment">Repare que isso é possível porque nosso código não faz referência à implementação da classe <code>ArrayList</code>.</li>
+</ul>
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Encapsulamento</strong> (ou <em>ocultamento de informações</em>) é um princípio que define que os detalhes internos da implementação de uma classe deveriam ser ocultados das outras classes. Isso permite uma melhor modularização de uma aplicação.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-46" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
