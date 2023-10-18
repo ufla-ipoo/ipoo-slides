@@ -52,7 +52,7 @@ No capítulo anterior conhecemos a classe `ArrayList` da biblioteca de classes d
 
 . . .
 
-Mas ela é apenas um exemplo da biblioteca de classes.
+Mas ela é apenas um exemplo da classe de biblioteca.
 
 - Existem muitas que serão muito úteis em nossos softwares.
 - E outras que, possivelmente, nunca usaremos.
@@ -68,7 +68,7 @@ Um bom programador Java precisa conseguir trabalhar com as classes da biblioteca
 
 Muitas classes da biblioteca têm certas características comuns entre si.
 
-- Especialmente, as coleções são classes que compartilham muitos atributos.
+- Especialmente as coleções, são classes que compartilham muitos atributos.
 - E, usando a abstração, podemos tratar de classes de coleções de uma maneira mais geral.
 
 . . .
@@ -76,7 +76,7 @@ Muitas classes da biblioteca têm certas características comuns entre si.
 Neste capítulo, vamos trabalhar com um sistema de Suporte Técnico.
 
 - Começaremos com uma versão rudimentar.
-- E ela será melhorada, incrementalmente, utilizando diferentes classes da biblioteca Java.
+- E ela será melhorado, incrementalmente, utilizando diferentes classes da biblioteca Java.
   - Obs.: parte do conteúdo será tratada como Material de Estudo Autônomo, como previsto no Plano de Ensino.
 
 ## {.smaller}
@@ -98,19 +98,21 @@ Na verdade, um bom programador deveria:
 
 . . .
 
-O livro da disciplina recomenda que um programador conheça da documentação do Java para essas classes.
+O livro da disciplina recomenda que um programador conheça a documentação do Java para essas classes.
 
-- A linguagem tem páginas HTML bem detalhadas sobre todas as classes da biblioteca.
-- Para quem não é fluente em inglês, isso pode gerar uma barreira inicial.
-  - Portanto, uma sugestão é usar outras fontes para saber como usar as classes (como buscas no Google ou o ChatGPT).
-- Mas, à medida que se tornarem mais experientes, saber usar a documentação pode ser muito útil.
+- A documentação é formada por páginas HTML bem detalhadas sobre todas as classes da biblioteca.
+- Mas para quem não é fluente em inglês, isso pode gerar uma barreira inicial.
+  - Portanto, uma sugestão é usar também outras fontes para saber como usar as classes (como buscas no Google ou o ChatGPT).
+- Mas, à medida que você fique mais experiente, saber usar a documentação pode ser muito útil.
 
 ## {.smaller}
 
-Um ponto importante sobre o uso da classe `ArrayList` é que nós a utilizamos sem nunca termos visto o código da classe.
+Um ponto importante sobre o uso da classe `ArrayList` é que nós já a utilizamos sem nunca termos visto o código da classe.
 
-- Nós não verificamos como ela foi implementada.
+- Nós não conferimos como ela foi implementada.
 - E isso não foi necessário para utilizarmos suas funcionalidades.
+
+. . .
 
 Tudo o que precisamos saber é:
 
@@ -120,7 +122,7 @@ Tudo o que precisamos saber é:
 
 ## {.smaller}
 
-A mesma coisa acontece em projetos de software grandes.
+A mesma coisa acontece em projetos de software grandes de uma empresa.
 
 - Geralmente, várias pessoas trabalham em diferentes partes do sistema.
 - Cada programador deveria se concentrar em sua parte, e não ter que entender detalhes das outras partes.
@@ -128,9 +130,9 @@ A mesma coisa acontece em projetos de software grandes.
 
 . . .
 
-Na verdade, cada programador deveria conseguir usar as classes das outras equipes,
+Na verdade, cada programador deveria:
 
-- Como se elas fossem classes de biblioteca.
+- Conseguir usar as classes das outras equipes como se elas fossem classes de biblioteca.
 - Sabendo o que elas fazem, mas sem precisar saber como elas funcionam internamente.
 
 . . .
@@ -140,14 +142,16 @@ Mas, para isso funcionar, cada membro de equipe deveria documentar sua classe as
 - Permitindo que outros programadores usem a classe sem precisar ler o código.
 - Veremos como fazer isso nos materiais de estudo autônomo.
 
-# O sistema de Suporte Técnico {background-color="#40666e"}
+# O sistema de suporte técnico {background-color="#40666e"}
 
 ## {.smaller}
 
 A ideia do sistema de Suporte Técnico é que ele seja um chat para atendimento de clientes
 
-- de uma empresa fictícia, chamada DesonestosSistemas.
-- Antigamente a empresa tinha funcionários que faziam atendimento por telefone.
+- de uma empresa fictícia, chamada *DesonestosSistemas*.
+
+Antigamente a empresa tinha funcionários que faziam atendimento por telefone.
+
 - Mas ela passou por problemas financeiros e demitiu a equipe.
 - E agora ela quer criar um sistema de suporte para dar a impressão que ela atende os clientes.
 - A ideia é que o sistema imite o atendimento que uma pessoa faria ao telefone.
@@ -165,13 +169,13 @@ Vamos começar com uma versão bem rudimentar do sistema, disponível no projeto
 Experimente a versão rudimentar do sistema de suporte técnico.
 
 Crie um objeto da classe `SistemaDeSuporte` e chame o método `iniciar`.
-Experimente conversar com o sistema e repare como é atendido.
+Experimente conversar com o sistema pelo terminal e repare como é atendido.
 :::
 
 . . .
 
 ::: {.callout-note title="Exercício" icon=false}
-Para conhecermos melhor o projeto, agora crie um objeto da classe `LeitorDeEntrada` e experimente seu(s) método(s).
+Para conhecermos melhor o projeto, crie um objeto da classe `LeitorDeEntrada` e experimente seu(s) método(s).
 
 Faça o mesmo com um objeto da classe `Respondedor`.
 :::
@@ -179,7 +183,7 @@ Faça o mesmo com um objeto da classe `Respondedor`.
 . . .
 
 ::: {.callout-note title="Exercício" icon=false}
-Agora leia o código da classe `SistemaDeSuporte` e tente entender como ele funciona.
+Agora leia o código da classe `SistemaDeSuporte` e tente entender como ela funciona.
 :::
 
 ## {.smaller}
@@ -188,7 +192,7 @@ Você deve ter notado que o sistema é realmente muito rudimentar.
 
 - A classe `LeitorDeEntrada` basicamente retorna uma string digitada pelo usuário no terminal.
 - A classe `Respondedor` tem um método que sempre retorna a mesma resposta.
-- Já a classe `SistemaDeSuporte`, tem um objeto de cada uma das duas classes anteriores.
+- Já a classe `SistemaDeSuporte` tem um objeto de cada uma das duas classes anteriores.
   - E um loop `while` que, repetidamente, obtém um texto do usuário e exibe uma resposta.
   - Isso é repetido até que o usuário digite qualquer string que comece com `tchau`.
 
@@ -219,21 +223,27 @@ Abra a documentação de alguma outra classe do Java e compare a estrutura da do
 O que as páginas têm em comum?
 :::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
-Procure pelo método `startsWith` na documentação da classe String.
+Procure pelo método `startsWith` na documentação da classe `String`.
 Veja que o método é sobrecarregado, há duas versões.
 
-Escreva com suas palavras o que eles fazem e a diferença entre eles.
+Escreva com suas palavras o que as duas versões fazem e a diferença entre eles.
 :::
 
-::: {.callout-note title="Exercício" icon=false}
-Procure se existe algum método na classe String que verifica se uma string termina com um dado sufixo.
-Se existir, como o método se chama, e quais são seus parâmetros e tipo de retorno?
-:::
+. . .
 
 ::: {.callout-note title="Exercício" icon=false}
 Há algum método na classe String que retorna quantos caracteres ela tem?
 Como o método se chama e quais são seus parâmetros?
+:::
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Procure se existe algum método na classe String que verifica se uma string termina com um dado sufixo.
+Se existir, como o método se chama, e quais são seus parâmetros e tipo de retorno?
 :::
 
 ## Interface vs. Implementação {.smaller}
@@ -254,7 +264,7 @@ Todas essas informações formam o que chamamos de [interface de uma classe]{.al
 - Se uma classe é bem descrita (ou seja, sua interface é bem escrita),
   - um programador não precisa ver o código da classe para conseguir utilizá-la.
 - A interface já tem toda a informação que ele precisa.
-  - (olha a abstração aí de novo!)
+  - (olha a **abstração** aí de novo!)
 
 ## {.smaller}
 
@@ -287,9 +297,16 @@ Nós também podemos falar de interface de um método específico.
 
 ![](imagens/java-doc-String-length.png)
 
+
+## {.smaller}
+
+![](imagens/java-doc-String-length.png)
+
+A interface de um método consiste em sua **assinatura** e um comentário. 
+
 . . .
 
-A interface de um método consiste em sua **assinatura** e um comentário. A assinatura contém:
+E a assinatura de um método contém:
 
 - Um modificador de acesso (`public`, nesse caso).
 - O tipo de retorno do método (`int`, nesse caso).
@@ -304,7 +321,7 @@ Repare que a interface do método tem tudo que precisamos saber para conseguirmo
 
 Em nosso sistema de suporte, já vimos que o sistema não aceita que o usuário digite `"Tchau"` ou `" tchau"`.
 
-- Vamos melhrar isso de forma que todas essas variações sejam reconhecidas como `"tchau"`.
+- Vamos melhorar isso de forma que todas essas variações sejam reconhecidas como `"tchau"`.
 
 . . .
 
@@ -332,7 +349,7 @@ Um importante detalhe sobre objetos String em Java, é que eles são **imutávei
 :::
 
 ::: {.column width="70%"}
-É um erro comum em Java, tentar alterar uma String usando chamadas commo:
+É um erro comum em Java, tentar alterar uma String usando chamadas como:
 
   `texto.toUpperCase();`
 
@@ -366,7 +383,7 @@ O código da classe `SistemaDeSuporte` poderia ser então alterado da seguinte f
     else {
         String resposta = respondedor.generateResponse();
         System.out.println(resposta);
-    }4
+    }
 ```
 :::
 
@@ -381,7 +398,7 @@ Você acha que haveria diferença entre escrever essas duas linhas de código:
 ```
 :::
 
-ou escrever assim:
+ou escrever assim?
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
@@ -395,9 +412,14 @@ O efeito é exatamente o mesmo.
 
 - Você pode escolher a forma que acha mais fácil de entender.
 - Veja que na segunda opção, a ordem de execução é como se existissem os parênteses como mostrado abaixo.
-  ```{.java code-line-numbers="false"}
-    String entrada = (leitor.obterEntrada()).trim();
-  ```
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  String entrada = (leitor.obterEntrada()).trim();
+```
+:::
 
 ## 
 
@@ -412,7 +434,14 @@ Isso ainda não resolveu o problema do usuário digitar `"Tchau"` com letra mai�
 Veja na documentação da classe String como funciona o método `toLowerCase` e o utilize de forma que o programa saia independente do usuário digitar tchau com letras maiúsculas ou minúsculas.
 :::
 
-## 
+## {.smaller} 
+
+::: {.callout-note title="Exercício" icon=false}
+Encontre o método `equals` na documentação da classe String.
+Utilize o método `equals` em vez do método `startsWith` na implementação da classe `SuporteTecnico`
+:::
+
+::: {.nonincremental}
 
 :::: {.columns}
 
@@ -424,16 +453,13 @@ Veja na documentação da classe String como funciona o método `toLowerCase` e 
 
 ::: {.column width="70%"}
 Lembre-se que, como já foi dito em aulas práticas anteriores, não podemos comparar objetos String em Java utilizando o operador `==`.
-Usando o operador estamos verificando se é o mesmo objeto, e não se os dois objetos têm o mesmo conteúdo.
 
-Para comparar se dois objetos String têm o mesmo conteúdo, devemos utilizar o método `equals`.
+- Usando o operador estamos verificando se é o mesmo objeto, e não se os dois objetos têm o mesmo conteúdo.
+- Para comparar se dois objetos String têm o mesmo conteúdo, devemos utilizar o método `equals`.
 :::
 
 ::::
 
-::: {.callout-note title="Exercício" icon=false}
-Encontre o método `equals` na documentação da classe String.
-Utilize o método `equals` em vez do método `startsWith` na implementação da classe `SuporteTecnico`
 :::
 
 
@@ -495,20 +521,61 @@ Nosso sistema ficou mais dinâmico, mas ainda é muito ruim, pois as respostas s
 
 - Nós podemos melhorar um pouco isso, fazendo algo pelo menos próximo do que o usuário perguntou.
 - O livro já parte para uma solução usando a classe `HashMap`.
-  - Mas aqui, vamos tratar essa classe como material de Estudo Autônomo.
+  - Mas vamos tratar essa classe como material de Estudo Autônomo.
   - Então vamos implementar aqui primeiro uma solução com blocos `if` e `else` para ter um resultado similar.
-
-## {.smaller}
-
-A ideia é identificar alguma palavra-chave na pergunta feita pelo usuário
-
-- e fornecer uma resposta que tenha algo a ver com essa palavra-chave.
 
 . . .
 
+A ideia é identificar alguma palavra-chave na pergunta feita pelo usuário.
+
+- e fornecer uma resposta que tenha algo a ver com essa palavra-chave.
+
+## {.smaller}
+
 Por exemplo, suponha que na pergunta do usuário apareça a palavra `"lento"`.
 
-- A resposta poderia ser então: 
+- A resposta poderia ser então algo como:
+ > Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?
+
+. . .
+
+Já se na pergunta do usuário aparecer a palava `"bug"`, a resposta poderia ser:
+
+ > Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?
+
+. . .
+
+Como podemos implementar isso?
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+::: {.nonincremental}
+Vamos implementar a ideia discutida no slide anterior. 
+
+Obs.: para que o professor consiga corrigir seu exercício anterior (de respostas aleatórias) você não pode apagar o código que tinha feito antes. Então coloque o código que você tinha feito em um método chamado `gerarRespostaAleatoria`.
+
+Neste exercício, faça o seguinte:
+
+- Altere o método `gerarResposta` da classe `Respondedor` para que ele receba por parâmetro a pergunta feita pelo usuário.
+  - Você precisará, claro, alterar a chamada do método na classe `SistemaDeSuporte` para passar a entrada do usuário.
+- No método `gerarResposta`, faça uma sequência de `if`/`else if` para verificar se as palavras-chave existem na pergunta do usuário.
+  - Para isso, você pode usar o método `contains` da classe String.
+  - E no bloco de cada `if`, retorne um texto correspondente àquela palavra-chave.
+  - Exemplo:
+
+```{.java code-line-numbers="false"}
+  if (entrada.contains("lento")) {
+    return "Acredito que isso tem a ver com o seu hardware. " +
+           "Atualizar seu processador deve resolver todos os " +
+           "problemas de desempenho. Você tem algum problema " + 
+           "com nosso software?"
+  }
+  else if (entrada.contains("bug")) {
+    ...
+``` 
+:::
+:::
 
 
 

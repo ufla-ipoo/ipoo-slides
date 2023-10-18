@@ -464,7 +464,7 @@
 <li class="fragment">O que sem ela seria bem mais complicado.</li>
 </ul>
 <div class="fragment">
-<p>Mas ela é apenas um exemplo da biblioteca de classes.</p>
+<p>Mas ela é apenas um exemplo da classe de biblioteca.</p>
 <ul>
 <li class="fragment">Existem muitas que serão muito úteis em nossos softwares.</li>
 <li class="fragment">E outras que, possivelmente, nunca usaremos.</li>
@@ -482,14 +482,14 @@
 <h2></h2>
 <p>Muitas classes da biblioteca têm certas características comuns entre si.</p>
 <ul>
-<li class="fragment">Especialmente, as coleções são classes que compartilham muitos atributos.</li>
+<li class="fragment">Especialmente as coleções, são classes que compartilham muitos atributos.</li>
 <li class="fragment">E, usando a abstração, podemos tratar de classes de coleções de uma maneira mais geral.</li>
 </ul>
 <div class="fragment">
 <p>Neste capítulo, vamos trabalhar com um sistema de Suporte Técnico.</p>
 <ul>
 <li class="fragment">Começaremos com uma versão rudimentar.</li>
-<li class="fragment">E ela será melhorada, incrementalmente, utilizando diferentes classes da biblioteca Java.
+<li class="fragment">E ela será melhorado, incrementalmente, utilizando diferentes classes da biblioteca Java.
 <ul>
 <li class="fragment">Obs.: parte do conteúdo será tratada como Material de Estudo Autônomo, como previsto no Plano de Ensino.</li>
 </ul></li>
@@ -518,34 +518,36 @@
 </ul>
 </div>
 <div class="fragment">
-<p>O livro da disciplina recomenda que um programador conheça da documentação do Java para essas classes.</p>
+<p>O livro da disciplina recomenda que um programador conheça a documentação do Java para essas classes.</p>
 <ul>
-<li class="fragment">A linguagem tem páginas HTML bem detalhadas sobre todas as classes da biblioteca.</li>
-<li class="fragment">Para quem não é fluente em inglês, isso pode gerar uma barreira inicial.
+<li class="fragment">A documentação é formada por páginas HTML bem detalhadas sobre todas as classes da biblioteca.</li>
+<li class="fragment">Mas para quem não é fluente em inglês, isso pode gerar uma barreira inicial.
 <ul>
-<li class="fragment">Portanto, uma sugestão é usar outras fontes para saber como usar as classes (como buscas no Google ou o ChatGPT).</li>
+<li class="fragment">Portanto, uma sugestão é usar também outras fontes para saber como usar as classes (como buscas no Google ou o ChatGPT).</li>
 </ul></li>
-<li class="fragment">Mas, à medida que se tornarem mais experientes, saber usar a documentação pode ser muito útil.</li>
+<li class="fragment">Mas, à medida que você fique mais experiente, saber usar a documentação pode ser muito útil.</li>
 </ul>
 </div>
 </section>
 <section id="section-6" class="slide level2 smaller">
 <h2></h2>
-<p>Um ponto importante sobre o uso da classe <code>ArrayList</code> é que nós a utilizamos sem nunca termos visto o código da classe.</p>
+<p>Um ponto importante sobre o uso da classe <code>ArrayList</code> é que nós já a utilizamos sem nunca termos visto o código da classe.</p>
 <ul>
-<li class="fragment">Nós não verificamos como ela foi implementada.</li>
+<li class="fragment">Nós não conferimos como ela foi implementada.</li>
 <li class="fragment">E isso não foi necessário para utilizarmos suas funcionalidades.</li>
 </ul>
+<div class="fragment">
 <p>Tudo o que precisamos saber é:</p>
 <ul>
 <li class="fragment">O nome da classe.</li>
 <li class="fragment">As assinaturas dos seus métodos (nomes, parâmetros e tipos de retorno).</li>
 <li class="fragment">E o que exatamente esses métodos fazem.</li>
 </ul>
+</div>
 </section>
 <section id="section-7" class="slide level2 smaller">
 <h2></h2>
-<p>A mesma coisa acontece em projetos de software grandes.</p>
+<p>A mesma coisa acontece em projetos de software grandes de uma empresa.</p>
 <ul>
 <li class="fragment">Geralmente, várias pessoas trabalham em diferentes partes do sistema.</li>
 <li class="fragment">Cada programador deveria se concentrar em sua parte, e não ter que entender detalhes das outras partes.
@@ -554,9 +556,9 @@
 </ul></li>
 </ul>
 <div class="fragment">
-<p>Na verdade, cada programador deveria conseguir usar as classes das outras equipes,</p>
+<p>Na verdade, cada programador deveria:</p>
 <ul>
-<li class="fragment">Como se elas fossem classes de biblioteca.</li>
+<li class="fragment">Conseguir usar as classes das outras equipes como se elas fossem classes de biblioteca.</li>
 <li class="fragment">Sabendo o que elas fazem, mas sem precisar saber como elas funcionam internamente.</li>
 </ul>
 </div>
@@ -570,15 +572,17 @@
 </section></section>
 <section>
 <section id="o-sistema-de-suporte-técnico" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>O sistema de Suporte Técnico</h1>
+<h1>O sistema de suporte técnico</h1>
 
 </section>
 <section id="section-8" class="slide level2 smaller">
 <h2></h2>
 <p>A ideia do sistema de Suporte Técnico é que ele seja um chat para atendimento de clientes</p>
 <ul>
-<li class="fragment">de uma empresa fictícia, chamada DesonestosSistemas.</li>
-<li class="fragment">Antigamente a empresa tinha funcionários que faziam atendimento por telefone.</li>
+<li class="fragment">de uma empresa fictícia, chamada <em>DesonestosSistemas</em>.</li>
+</ul>
+<p>Antigamente a empresa tinha funcionários que faziam atendimento por telefone.</p>
+<ul>
 <li class="fragment">Mas ela passou por problemas financeiros e demitiu a equipe.</li>
 <li class="fragment">E agora ela quer criar um sistema de suporte para dar a impressão que ela atende os clientes.</li>
 <li class="fragment">A ideia é que o sistema imite o atendimento que uma pessoa faria ao telefone.</li>
@@ -601,7 +605,7 @@
 </div>
 <div class="callout-content">
 <p>Experimente a versão rudimentar do sistema de suporte técnico.</p>
-<p>Crie um objeto da classe <code>SistemaDeSuporte</code> e chame o método <code>iniciar</code>. Experimente conversar com o sistema e repare como é atendido.</p>
+<p>Crie um objeto da classe <code>SistemaDeSuporte</code> e chame o método <code>iniciar</code>. Experimente conversar com o sistema pelo terminal e repare como é atendido.</p>
 </div>
 </div>
 </div>
@@ -612,7 +616,7 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>Para conhecermos melhor o projeto, agora crie um objeto da classe <code>LeitorDeEntrada</code> e experimente seu(s) método(s).</p>
+<p>Para conhecermos melhor o projeto, crie um objeto da classe <code>LeitorDeEntrada</code> e experimente seu(s) método(s).</p>
 <p>Faça o mesmo com um objeto da classe <code>Respondedor</code>.</p>
 </div>
 </div>
@@ -625,7 +629,7 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>Agora leia o código da classe <code>SistemaDeSuporte</code> e tente entender como ele funciona.</p>
+<p>Agora leia o código da classe <code>SistemaDeSuporte</code> e tente entender como ela funciona.</p>
 </div>
 </div>
 </div>
@@ -637,7 +641,7 @@
 <ul>
 <li class="fragment">A classe <code>LeitorDeEntrada</code> basicamente retorna uma string digitada pelo usuário no terminal.</li>
 <li class="fragment">A classe <code>Respondedor</code> tem um método que sempre retorna a mesma resposta.</li>
-<li class="fragment">Já a classe <code>SistemaDeSuporte</code>, tem um objeto de cada uma das duas classes anteriores.
+<li class="fragment">Já a classe <code>SistemaDeSuporte</code> tem um objeto de cada uma das duas classes anteriores.
 <ul>
 <li class="fragment">E um loop <code>while</code> que, repetidamente, obtém um texto do usuário e exibe uma resposta.</li>
 <li class="fragment">Isso é repetido até que o usuário digite qualquer string que comece com <code>tchau</code>.</li>
@@ -651,7 +655,7 @@
 </section>
 <section id="section-12" class="slide level2 smaller">
 <h2></h2>
-<p>Experimente usar o sistema de suporte técnico e digitar <code>Tchau</code> ou <code>tchau</code> (com espaço) para sair.</p>
+<p>Experimente usar o sistema de suporte técnico e digitar <code>"Tchau"</code> ou <code>" tchau"</code> (com espaço) para sair.</p>
 <ul>
 <li class="fragment">O que acontece?</li>
 <li class="fragment">Para o usuário isso é muito chato, certo?
@@ -683,27 +687,20 @@
 </div>
 </div>
 </div>
+<div class="fragment">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>Procure pelo método <code>startsWith</code> na documentação da classe String. Veja que o método é sobrecarregado, há duas versões.</p>
-<p>Escreva com suas palavras o que eles fazem e a diferença entre eles.</p>
+<p>Procure pelo método <code>startsWith</code> na documentação da classe <code>String</code>. Veja que o método é sobrecarregado, há duas versões.</p>
+<p>Escreva com suas palavras o que as duas versões fazem e a diferença entre eles.</p>
 </div>
 </div>
 </div>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício</strong></p>
 </div>
-<div class="callout-content">
-<p>Procure se existe algum método na classe String que verifica se uma string termina com um dado sufixo. Se existir, como o método se chama, e quais são seus parâmetros e tipo de retorno?</p>
-</div>
-</div>
-</div>
+<div class="fragment">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -711,6 +708,20 @@
 </div>
 <div class="callout-content">
 <p>Há algum método na classe String que retorna quantos caracteres ela tem? Como o método se chama e quais são seus parâmetros?</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-14" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Procure se existe algum método na classe String que verifica se uma string termina com um dado sufixo. Se existir, como o método se chama, e quais são seus parâmetros e tipo de retorno?</p>
 </div>
 </div>
 </div>
@@ -735,12 +746,12 @@
 </ul></li>
 <li class="fragment">A interface já tem toda a informação que ele precisa.
 <ul>
-<li class="fragment">(olha a abstração aí de novo!)</li>
+<li class="fragment">(olha a <strong>abstração</strong> aí de novo!)</li>
 </ul></li>
 </ul>
 </div>
 </section>
-<section id="section-14" class="slide level2 smaller">
+<section id="section-15" class="slide level2 smaller">
 <h2></h2>
 <p>O código que não vemos, que é o que faz a classe funcionar, é chamado de <span class="alert">implementação da classe</span>.</p>
 <ul>
@@ -768,7 +779,7 @@
 </div>
 </div>
 </section>
-<section id="section-15" class="slide level2 smaller">
+<section id="section-16" class="slide level2 smaller">
 <h2></h2>
 <p>Nós também podemos falar de interface de um método específico.</p>
 <ul>
@@ -777,8 +788,13 @@
 <div class="fragment">
 <p><img data-src="imagens/java-doc-String-length.png"></p>
 </div>
+</section>
+<section id="section-17" class="slide level2 smaller">
+<h2></h2>
+<p><img data-src="imagens/java-doc-String-length.png"></p>
+<p>A interface de um método consiste em sua <strong>assinatura</strong> e um comentário.</p>
 <div class="fragment">
-<p>A interface de um método consiste em sua <strong>assinatura</strong> e um comentário. A assinatura contém:</p>
+<p>E a assinatura de um método contém:</p>
 <ul>
 <li class="fragment">Um modificador de acesso (<code>public</code>, nesse caso).</li>
 <li class="fragment">O tipo de retorno do método (<code>int</code>, nesse caso).</li>
@@ -794,7 +810,7 @@
 <h2>Usando métodos de classes da biblioteca</h2>
 <p>Em nosso sistema de suporte, já vimos que o sistema não aceita que o usuário digite <code>"Tchau"</code> ou <code>" tchau"</code>.</p>
 <ul>
-<li class="fragment">Vamos melhrar isso de forma que todas essas variações sejam reconhecidas como <code>"tchau"</code>.</li>
+<li class="fragment">Vamos melhorar isso de forma que todas essas variações sejam reconhecidas como <code>"tchau"</code>.</li>
 </ul>
 <div class="fragment">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -809,7 +825,7 @@
 </div>
 </div>
 </section>
-<section id="section-16" class="slide level2 smaller">
+<section id="section-18" class="slide level2 smaller">
 <h2></h2>
 <p>Um importante detalhe sobre objetos String em Java, é que eles são <strong>imutáveis</strong>.</p>
 <ul>
@@ -824,7 +840,7 @@
 <div class="column" style="width:30%;">
 <p><img data-src="imagens/fica_a_dica.png"></p>
 </div><div class="column" style="width:70%;">
-<p>É um erro comum em Java, tentar alterar uma String usando chamadas commo:</p>
+<p>É um erro comum em Java, tentar alterar uma String usando chamadas como:</p>
 <p><code>texto.toUpperCase();</code></p>
 <p>Essa chamada não provoca nenhum erro, mas também não causa nenhum efeito. Isso porque o método retorna uma nova String, ele não altera a original.</p>
 <p>Portanto, se queremos alterar a variável <code>texto</code>, precisamos descartar o objeto String original, atribuindo à variável <code>texto</code> a nova String gerada:</p>
@@ -833,7 +849,7 @@
 </div>
 </div>
 </section>
-<section id="section-17" class="slide level2 smaller">
+<section id="section-19" class="slide level2 smaller">
 <h2></h2>
 <p>Pelo que você leu sobre o método <code>trim</code> na documentação, como podemos usá-lo no sistema de suporte?</p>
 <ul>
@@ -841,6 +857,7 @@
 </ul>
 <div class="fragment">
 <p>O código da classe <code>SistemaDeSuporte</code> poderia ser então alterado da seguinte forma:</p>
+<div class="halfincfontsize">
 <div class="sourceCode" id="cb1" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> entrada <span class="op">=</span> leitor<span class="op">.</span><span class="fu">obterEntrada</span><span class="op">();</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    entrada <span class="op">=</span> entrada<span class="op">.</span><span class="fu">trim</span><span class="op">();</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span><span class="op">(</span>entrada<span class="op">.</span><span class="fu">startsWith</span><span class="op">(</span><span class="st">"tchau"</span><span class="op">))</span> <span class="op">{</span></span>
@@ -851,22 +868,214 @@
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>resposta<span class="op">);</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
 </section>
-<section id="section-18" class="slide level2 smaller">
+<section id="section-20" class="slide level2 smaller">
 <h2></h2>
 <p>Você acha que haveria diferença entre escrever essas duas linhas de código:</p>
+<div class="halfincfontsize">
 <div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> entrada <span class="op">=</span> leitor<span class="op">.</span><span class="fu">obterEntrada</span><span class="op">();</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    entrada <span class="op">=</span> entrada<span class="op">.</span><span class="fu">trim</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>ou escrever assim:</p>
+</div>
+<p>ou escrever assim?</p>
+<div class="halfincfontsize">
 <div class="sourceCode" id="cb3" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> entrada <span class="op">=</span> leitor<span class="op">.</span><span class="fu">obterEntrada</span><span class="op">().</span><span class="fu">trim</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="fragment">
 <p>O efeito é exatamente o mesmo.</p>
 <ul>
 <li class="fragment">Você pode escolher a forma que acha mais fácil de entender.</li>
+<li class="fragment">Veja que na segunda opção, a ordem de execução é como se existissem os parênteses como mostrado abaixo.</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb4" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>  <span class="bu">String</span> entrada <span class="op">=</span> <span class="op">(</span>leitor<span class="op">.</span><span class="fu">obterEntrada</span><span class="op">()).</span><span class="fu">trim</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-21" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Implemente a alteração usando o método <code>trim</code> da classe String. Teste a alteração digitando espaço antes da palavra tchau.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Isso ainda não resolveu o problema do usuário digitar <code>"Tchau"</code> com letra maiúscula.</p>
+<p>Veja na documentação da classe String como funciona o método <code>toLowerCase</code> e o utilize de forma que o programa saia independente do usuário digitar tchau com letras maiúsculas ou minúsculas.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-22" class="slide level2 smaller">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Encontre o método <code>equals</code> na documentação da classe String. Utilize o método <code>equals</code> em vez do método <code>startsWith</code> na implementação da classe <code>SuporteTecnico</code></p>
+</div>
+</div>
+</div>
+<div>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="imagens/fica_a_dica.png"></p>
+</div><div class="column" style="width:70%;">
+<p>Lembre-se que, como já foi dito em aulas práticas anteriores, não podemos comparar objetos String em Java utilizando o operador <code>==</code>.</p>
+<ul>
+<li>Usando o operador estamos verificando se é o mesmo objeto, e não se os dois objetos têm o mesmo conteúdo.</li>
+<li>Para comparar se dois objetos String têm o mesmo conteúdo, devemos utilizar o método <code>equals</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="adicionando-comportamento-aleatório" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Adicionando comportamento aleatório</h1>
+
+</section>
+<section id="section-23" class="slide level2 smaller">
+<h2></h2>
+<p>No início da disciplina, nós utilizamos um objeto da classe <code>Random</code> no exercício da Nave para acrescentar aleatoriedade em nosso jogo.</p>
+<ul>
+<li class="fragment">Nós podemos agora utilizar a mesma classe para mudar o comportamento do <code>Respondedor</code> do nosso sistema de suporte.</li>
+<li class="fragment">A ideia é que o sistema agora exiba respostas aleatórias, em vez de sempre responder a mesma coisa.</li>
+</ul>
+<div class="fragment">
+<p>Nós podemos fazer isso, alterando a classe <code>Respondedor</code> seguindo os passos abaixo:</p>
+<ul>
+<li class="fragment">declarando um atributo do tipo <code>Random</code> para guardar um gerador de números aleatórios;</li>
+<li class="fragment">declarando um atributo do tipo <code>ArrayList</code> para guardar nossas possíveis respostas;</li>
+<li class="fragment">crinado os objetos <code>Random</code> e <code>ArrayList</code> no construtor da classe <code>Respondedor</code>;</li>
+<li class="fragment">preenchendo a lista com algumas frases de resposta;</li>
+<li class="fragment">selecionando e retornando uma frase aleatória quando o método <code>gerarResposta</code> é chamado.</li>
 </ul>
 </div>
 </section>
-<section id="section-19" class="slide level2">
+<section id="section-24" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Melhore a classe <code>Respondedor</code> de forma que ela gere respostas aleatórias como descrito no slide anterior.</p>
+<p>Veja que, para gerar respostas aleatórias, basta sortearmos uma posição do <code>ArrayList</code> e usarmos essa posição para obter uma mensagem. Podemos sortear uma posição usando o método <code>nextInt</code> da classe <code>Random</code>, e o método <code>size</code> da classe <code>ArrayList</code>.</p>
+<div>
+<p>Dicas: - Veja no próximo slide alguns exemplos de frase de resposta, mas não precisam ser exatamente essas, use sua criatividade! - Reveja o uso da classe <code>Random</code> no exercício da nave. - Leia seção 5.4 do livro da disciplina.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-25" class="slide level2 smaller">
+<h2></h2>
+<p>Exemplos de frases de resposta do sistema de suporte técnico:</p>
+<ul>
+<li class="fragment">Isso parece estranho. Você poderia descrever com mais detalhes?</li>
+<li class="fragment">Nenhum outro cliente reclamou disso antes. Qual é a configuração do seu sistema?</li>
+<li class="fragment">Poderia me dar mais informações sobre o problema?</li>
+<li class="fragment">Isso é abordado no manual. Você já leu o manual?</li>
+<li class="fragment">Sua descrição é um pouco ruim. Você tem um especialista com você que poderia descrever isso melhor?</li>
+<li class="fragment">Isso não é um bug, é uma funcionalidade!</li>
+<li class="fragment">Você poderia detalhar melhor isso?</li>
+<li class="fragment">Você já tentou executar o aplicativo no seu telefone?</li>
+<li class="fragment">Já verifiquei no StatckOverflow e ChatGPT e nem eles sabem como responder :(</li>
+</ul>
+</section></section>
+<section>
+<section id="melhorando-o-sistema-de-suporte" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Melhorando o sistema de suporte</h1>
+
+</section>
+<section id="section-26" class="slide level2 smaller">
+<h2></h2>
+<p>Nosso sistema ficou mais dinâmico, mas ainda é muito ruim, pois as respostas são independentes do que o usuário escreve.</p>
+<ul>
+<li class="fragment">Nós podemos melhorar um pouco isso, fazendo algo pelo menos próximo do que o usuário perguntou.</li>
+<li class="fragment">O livro já parte para uma solução usando a classe <code>HashMap</code>.
+<ul>
+<li class="fragment">Mas vamos tratar essa classe como material de Estudo Autônomo.</li>
+<li class="fragment">Então vamos implementar aqui primeiro uma solução com blocos <code>if</code> e <code>else</code> para ter um resultado similar.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>A ideia é identificar alguma palavra-chave na pergunta feita pelo usuário.</p>
+<ul>
+<li class="fragment">e fornecer uma resposta que tenha algo a ver com essa palavra-chave.</li>
+</ul>
+</div>
+</section>
+<section id="section-27" class="slide level2 smaller">
+<h2></h2>
+<p>Por exemplo, suponha que na pergunta do usuário apareça a palavra <code>"lento"</code>.</p>
+<ul>
+<li class="fragment">A resposta poderia ser então algo como: &gt; Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?</li>
+</ul>
+<div class="fragment">
+<p>Já se na pergunta do usuário aparecer a palava <code>"bug"</code>, a resposta poderia ser:</p>
+<blockquote>
+<p>Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?</p>
+</blockquote>
+</div>
+<div class="fragment">
+<p>Como podemos implementar isso?</p>
+</div>
+</section>
+<section id="section-28" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<div>
+<p>Vamos implementar a ideia discutida no slide anterior.</p>
+<p>Obs.: para que o professor consiga corrigir seu exercício anterior (de respostas aleatórias) você não pode apagar o código que tinha feito antes. Então coloque o código que você tinha feito em um método chamado <code>gerarRespostaAleatoria</code>.</p>
+<p>Neste exercício, faça o seguinte:</p>
+<ul>
+<li>Altere o método <code>gerarResposta</code> da classe <code>Respondedor</code> para que ele receba por parâmetro a pergunta feita pelo usuário.
+<ul>
+<li>Você precisará, claro, alterar a chamada do método na classe <code>SistemaDeSuporte</code> para passar a entrada do usuário.</li>
+</ul></li>
+<li>No método <code>gerarResposta</code>, faça uma sequência de <code>if</code>/<code>else if</code> para verificar se as palavras-chave existem na pergunta do usuário.
+<ul>
+<li>Para isso, você pode usar o método <code>contains</code> da classe String.</li>
+<li>E no bloco de cada <code>if</code>, retorne um texto correspondente àquela palavra-chave.</li>
+<li>Exemplo:</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb5" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(</span>entrada<span class="op">.</span><span class="fu">contains</span><span class="op">(</span><span class="st">"lento"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Acredito que isso tem a ver com o seu hardware. "</span> <span class="op">+</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>           <span class="st">"Atualizar seu processador deve resolver todos os "</span> <span class="op">+</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>           <span class="st">"problemas de desempenho. Você tem algum problema "</span> <span class="op">+</span> </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>           <span class="st">"com nosso software?"</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>entrada<span class="op">.</span><span class="fu">contains</span><span class="op">(</span><span class="st">"bug"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">...</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-29" class="slide level2">
 <h2></h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
