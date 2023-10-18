@@ -7,21 +7,14 @@ subtitle: Aula 5.1 - Teórica
 
 Os tópicos abaixo te lembram alguma coisa? :)
 
-:::: {.columns}
-
-::: {.column width="70%"}
-
 - **Praticar enquanto estuda**.
 - **Ler o capítulo do livro**.
 - **Anotar conceitos dúvidas**.
 
-:::
+. . .
 
-::: {.column width="30%"}
-![](imagens/livro_bluej.png){fig-alt="Capa do livro do Barnes e Kolling." fig-align="left" width=50%}
-:::
+![](imagens/livro_bluej.png){.r-stretch}
 
-::::
 
 ## {.smaller}
 
@@ -45,6 +38,17 @@ Construções Java do capítulo
 
 ## {.smaller}
 
+![](imagens/aviso_importante.png)
+
+. . .
+
+O conceito de **encapsulamento** é fundamental na Programação Orientada a Objetos.
+
+- E será apresentado no final do capítulo.
+- Não deixe de estudar esse conteúdo!!!
+
+## {.smaller}
+
 No capítulo anterior conhecemos a classe `ArrayList` da biblioteca de classes do Java.
 
 - Com ela, ficou mais fácil fazer programas para guardar uma quantidade qualquer de objetos.
@@ -59,7 +63,7 @@ Mas ela é apenas um exemplo da classe de biblioteca.
 
 . . .
 
-Um bom programador Java precisa conseguir trabalhar com as classes da biblioteca.
+Um **bom programador** Java precisa **conseguir trabalhar com as classes da biblioteca**.
 
 - E saber quando utilizar cada uma.
 - De forma a tornar a implementação de um programa mais fácil.
@@ -73,7 +77,7 @@ Muitas classes da biblioteca têm certas características comuns entre si.
 
 . . .
 
-Neste capítulo, vamos trabalhar com um sistema de Suporte Técnico.
+Neste capítulo, vamos trabalhar com um **sistema de Suporte Técnico**.
 
 - Começaremos com uma versão rudimentar.
 - E ela será melhorado, incrementalmente, utilizando diferentes classes da biblioteca Java.
@@ -93,17 +97,22 @@ A biblioteca de classes do Java tem centenas de classes, com muitas opções de 
 
 Na verdade, um bom programador deveria:
 
-- Conhecer pelo nome as classes mais importantes e seus métodos (`ArrayList` é uma delas).
-- Saber encontrar informações sobre outras classes e pesquisar seus detalhes (tais como métodos e parâmetros).
+- Conhecer **pelo nome as classes mais importantes e seus métodos** (`ArrayList` é uma delas).
+- Saber **como encontrar informações das demais classes** (tais como métodos e parâmetros).
 
-. . .
+## {.smaller}
 
-O livro da disciplina recomenda que um programador conheça a documentação do Java para essas classes.
+O livro da disciplina recomenda que um programador conheça a **documentação do Java** para essas classes.
 
 - A documentação é formada por páginas HTML bem detalhadas sobre todas as classes da biblioteca.
 - Mas para quem não é fluente em inglês, isso pode gerar uma barreira inicial.
   - Portanto, uma sugestão é usar também outras fontes para saber como usar as classes (como buscas no Google ou o ChatGPT).
-- Mas, à medida que você fique mais experiente, saber usar a documentação pode ser muito útil.
+
+. . .
+
+De toda forma, à medida que você fique mais experiente, saber usar a documentação pode ser muito útil.
+
+- Essa é uma das coisas que separam o programador juninho do bom programador.
 
 ## {.smaller}
 
@@ -125,8 +134,8 @@ Tudo o que precisamos saber é:
 A mesma coisa acontece em projetos de software grandes de uma empresa.
 
 - Geralmente, várias pessoas trabalham em diferentes partes do sistema.
-- Cada programador deveria se concentrar em sua parte, e não ter que entender detalhes das outras partes.
-  - Como discutimos ao falar sobre abstração e modularização.
+- Cada programador deveria se concentrar em sua parte, sem ter que entender detalhes das outras partes.
+  - Como discutimos ao falar sobre *abstração* e *modularização*.
 
 . . .
 
@@ -146,13 +155,16 @@ Mas, para isso funcionar, cada membro de equipe deveria documentar sua classe as
 
 ## {.smaller}
 
-A ideia do sistema de Suporte Técnico é que ele seja um chat para atendimento de clientes
+A ideia do **sistema de Suporte Técnico** é que ele seja um **chat de atendimento** aos clientes.
 
 - de uma empresa fictícia, chamada *DesonestosSistemas*.
+
+. . . 
 
 Antigamente a empresa tinha funcionários que faziam atendimento por telefone.
 
 - Mas ela passou por problemas financeiros e demitiu a equipe.
+  - E não tem dinheiro para criar um chatbot de verdade.
 - E agora ela quer criar um sistema de suporte para dar a impressão que ela atende os clientes.
 - A ideia é que o sistema imite o atendimento que uma pessoa faria ao telefone.
 
@@ -302,7 +314,7 @@ Nós também podemos falar de interface de um método específico.
 
 ![](imagens/java-doc-String-length.png)
 
-A interface de um método consiste em sua **assinatura** e um comentário. 
+A interface de um método consiste em sua **assinatura e um comentário**. 
 
 . . .
 
@@ -438,24 +450,28 @@ O efeito é exatamente o mesmo.
 Um objeto é chamado **imutável** se seu conteúdo ou estado não pode ser alterado depois que ele foi criado. Strings são exemplos de objetos imutáveis.
 :::
 
-::: {.callout-note title="Exercício" icon=false}
-Implemente a alteração usando o método `trim` da classe String.
+. . .
+
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+Implemente a alteração na classe `SistemaDeSuporte` usando o método `trim` da classe String.
 Teste a alteração digitando espaço antes da palavra tchau.
 :::
 
-## {.smaller} 
+##
 
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
 O exercício anterior ainda não resolveu o problema do usuário digitar `"Tchau"` com letra maiúscula.
 
 Veja na documentação da classe String como funciona o método `toLowerCase` e o utilize de forma que o programa saia independente do usuário digitar tchau com letras maiúsculas ou minúsculas.
 :::
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
 Encontre o método `equals` na documentação da classe String.
 Utilize o método `equals` em vez do método `startsWith` na implementação da classe `SuporteTecnico`
 :::
+
+## {.smaller} 
 
 ::: {.nonincremental}
 
@@ -500,18 +516,18 @@ Nós podemos fazer isso, alterando a classe `Respondedor` seguindo os passos aba
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
 Melhore a classe `Respondedor` de forma que ela gere respostas aleatórias como descrito no slide anterior.
 
 Veja que, para gerar respostas aleatórias, basta sortearmos uma posição do `ArrayList` e usarmos essa posição para obter uma mensagem.
 Podemos sortear uma posição usando o método `nextInt` da classe `Random`, e o método `size` da classe `ArrayList`.
 
 ::: {.nonincremental}
-Dicas:
+**Dicas**:
 
 - Veja no próximo slide alguns exemplos de frase de resposta (mas não precisam ser exatamente essas, use sua criatividade!).
-- Reveja o uso da classe `Random` no exercício da nave.
-- Leia a    seção 5.4 do livro da disciplina.
+- Reveja o exercício da Nave para se lembrar como usar a classe `Random`.
+- Leia a seção 5.4 do livro da disciplina.
 :::
 :::
 
@@ -586,11 +602,11 @@ Como podemos implementar isso?
 
 - O próximo exercício pede para alterar o método `gerarResposta` da classe `Respondedor`.
 - Mas para que o professor consiga corrigir seu exercício anterior (de respostas aleatórias) você não pode apagar o código que tinha feito antes.
-  - Então coloque o código que você tinha feito em um método chamado `gerarRespostaAleatoria`.
+  - Portanto, ao fazer o próximo exercício deixe o código anterior comentado em vez de apagá-lo.
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
 ::: {.nonincremental}
 Vamos implementar a ideia discutida nos slides anteriores.  Neste exercício, faça o seguinte:
 
@@ -618,7 +634,7 @@ Vamos implementar a ideia discutida nos slides anteriores.  Neste exercício, fa
 
 ::: {.fontsize70}
 
-| Palavra-chave| Resposta                                                                                                           |
+| Palavra-chave| Sugestão de resposta                                                                                               |
 |--------------|--------------------------------------------------------------------------------------------------------------------|
 | travou       | Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração. |
 | travando     | Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração. |
@@ -642,15 +658,15 @@ Vamos implementar a ideia discutida nos slides anteriores.  Neste exercício, fa
 
 Conforme descrito no Plano de Ensino da disciplina, esse semestre tem 15 semanas letivas
 
--  e, para completar as 17 semanas previstas de carga horária, parte dos conteúdos da disciplina é tratada como Estudo Autônomo.
+-  e, para completar as 17 semanas previstas de carga horária, parte dos conteúdos da disciplina é tratada como **Estudo Autônomo**.
 
 . . .
 
-Uma dessas partes é sobre a classe `HashMap`.
+Uma dessas partes é sobre **a classe `HashMap`**.
 
-- Você pode estudar sobre isso nos slides disponibilizados no Campus Virtual.
-- E na seção 5.6 do livro da disciplina.
-  - E, se você estudar também as seções 5.7 a 5.9, fazendo os exercícios, você terminará com um Sistema de Suporte bem mais interessante.
+- Você pode estudar sobre isso nos **slides disponibilizados no Campus Virtual**.
+- E na **seção 5.6 do livro** da disciplina.
+  - E, se você estudar também as seções 5.7 a 5.9, fazendo os exercícios, você terminará com um **sistema de Suporte bem mais interessante**.
 
 . . .
 
@@ -671,13 +687,13 @@ Nós vimos que um `ArrayList` consegue guardar qualquer tipo de objeto.
 
 Isso é possível através das [classes empacotadoras (*wrapper classes*)]{.alert}.
 
-- Cada tipo primitivo em Java tem uma classe empacotadora que representa o mesmo tipo,
+- Cada tipo primitivo em Java tem uma **classe empacotadora** que representa o mesmo tipo,
   - Mas que é um objeto de verdade.
 - A classe empacotadora para `int`, por exemplo, se chama `Integer`.
 
 ## {.smaller}
 
-Nós poderíamos criar um objeto do tipo `Integer` explicitamente:
+Nós poderíamos criar explicitamente um objeto do tipo `Integer`:
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
@@ -688,16 +704,16 @@ Nós poderíamos criar um objeto do tipo `Integer` explicitamente:
 
 . . .
 
-E poderíamos então declarar um `ArrayList<Integer>` e guardar o `objetoInt`.
+E poderíamos então declarar um `ArrayList<Integer>` e guardar nele o `objetoInt`.
 
 - Mas, na verdade, nós nunca fazemos isso, pois podemos guardar valores de tipo primitivo no `ArrayList`!
 - Isso porque sempre que um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (*wrapper*),
-  - o compilador converte o valor automaticamente    objeto empacotador correspondente.
+  - o compilador converte o valor automaticamente em um objeto empacotador correspondente.
   - Essa funcionalidade se chama [*autoboxing*]{.alert} (algo como, auto-empacotamento).
 
 ## {.smaller}
 
-Portanto, na prática, podemos escrever códigos como os abaixo:
+Portanto, na prática, podemos escrever código como mostrado abaixo:
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
@@ -727,7 +743,7 @@ Seguindo a mesma ideia, o compilador realiza o [unboxing]{.alert} quando obtemos
 
 Veja portanto que, em termos práticos, a única coisa que precisamos lembrar é de declarar o `ArrayList` usando a classe empacotadora (como a `Integer`).
 
-- Mas na hora de usar o `ArrayList` podemos tratar todos os dados como `int` normalmente.
+- Mas na hora de usar o `ArrayList` podemos tratar todos os dados como se fossem do tipo `int`.
 
 
 ## {.smaller}
@@ -756,11 +772,11 @@ Em grandes empresas, é muito comum precisarmos utilizar uma classe que foi dese
 Nesses casos, é muito importante que a classe tenha uma documentação, assim com as classes da biblioteca do Java.
 
 - Pois, com ela, podemos utilizar a classe sem precisar entender sua implementação.
-- Portanto, é muito importante que saibamos gerar a documentação de nossas classes.
+- Portanto, é muito **importante** que saibamos como **gerar a documentação de nossas classes**.
 
 ## {.smaller}
 
-O Java possui uma ferramenta ([`javadoc`]{.alert}) para geração de documentação a partir de comentários do código.
+O Java possui uma ferramenta ([`javadoc`]{.alert}) para geração de **documentação a partir de comentários do código**.
 
 - E o BlueJ possui uma integração bem fácil com essa ferramenta.
 
@@ -806,13 +822,13 @@ Nós chamamos essas palavras-chave de [modificadores de acesso]{.alert}.
 
 Se um método, por exemplo, é **público**:
 
-- Ele pode ser chamado de dentro da mesma classe e também a partir de outra classe.
+- Ele pode ser chamado de dentro da mesma classe **e também** a partir de outra classe.
 
 . . .
 
 Já métodos **privados**, por outro lado,
 
-- Só podem ser chamados de dentro da mesma classe onde foram declarados.
+- **Só** podem ser chamados de **dentro** da mesma classe onde foram declarados.
 - Eles não são visíveis para as outras classes.
 
 ## {.smaller}
@@ -825,15 +841,15 @@ Lembre-se que a **interface de uma classe** é o conjunto de detalhes que um pro
 
 - Ela fornece informações sobre como usar a classe.
   - E inclui assinaturas e comentários de construtores e métodos.
-- Nós também a chamamos de a parte **pública** da classe.
-- Seu objetivo é definir **o que** a classe faz.
+- Nós também dizemos que a **interface** é a [parte pública]{.alert} da classe.
+- Seu objetivo é definir [o que]{.alert} **a classe faz**.
 
 ## {.smaller}
 
-Já a **implementação** é a parte da classe que define precisamente **como** a classe funciona.
+Já a **implementação** é a parte da classe que define precisamente [como]{.alert} **a classe funciona**.
 
 - Os corpos dos métodos, contendo comandos Java, e muitos atributos são parte da implementação.
-- Ela também é chamada de parte **privada** da classe.
+- Nós também podemos dizer que ela é a [parte privada]{.alert} da classe.
 - Quem usa a classe não precisa conhecer a implementação.
 - Inclusive, há boas razões para que o programador não possa fazer uso desse conhecimento (como veremos mais adiante).
 
@@ -862,11 +878,11 @@ Em muitas linguagens OO, a implementação de uma classe (seus detalhes internos
 
 Isso tem a ver com duas questões.
 
-1. Um programador que usa uma classe **não deveria [precisar conhecer]{.alert}** seus detalhes internos.
+1. Ao **usar uma classe** um programador **não deveria [precisar conhecer]{.alert}** seus detalhes internos.
   - Isso tem a ver com a **modularização** e **abstração** que já discutimos antes.
   - Se fosse necessário saber os detalhes de todas as classes, seria impossível desenvolver grandes sistemas.
 
-2. Outra questão é que um programador que usa uma classe **não deveria [ter permissão de conhecer]{.alert}** seus detalhes internos
+2. Outra questão é que, ao **usar uma classe**, um programador **não deveria [ter permissão de conhecer]{.alert}** seus detalhes internos.
 
 - Apesar de também ter a ver com modularização, a ideia aqui é que a linguagem não deveria permitir o acesso à parte privada de uma classe a partir de comandos em outras classes.
 - Isso garante que uma classe não depende de **como** exatamente uma outra classe está implementada.
@@ -880,36 +896,249 @@ Esta última questão é muito importante para a manutenção de sistemas.
   - Isso tem a ver com o que chamamos de **acoplamento**.
   - Se a alteração em uma classe não provoca alterações em outras classes, temos um baixo acoplamento.
   - E isso é muito bom, porque torna o trabalho de manutenção muito mais fácil.
-  - Já que em vez de entender e alterar várias classes, o programador precisa trabalhar apenas em uma.
+  - Já que em vez de entender e alterar várias classes, o programador precisa trabalhar em apenas em uma.
 
 ## {.smaller}
 
 Suponha, por exemplo, que a equipe que mantém a linguagem Java faça uma melhoria na implementação da classe `ArrayList`.
 
-- Nós esperaríamos que nosso código não precisasse ser alterado por causa dessa alteração da `ArrayList`.
-- Repare que isso é possível porque nosso código não faz referência à implementação da classe `ArrayList`.
+- O ideal é que essa melhoria não afete os nossos códigos que usam a classe `ArrayList`.
+- Repare que isso só é possível porque nosso código não faz referência à implementação da classe `ArrayList`.
+
+. . .
+
+Para ficar mais claro, quando uma classe A utiliza um objeto de uma classe B.
+
+- Não é bem o programador que não pode conhecer a parte interna (implementação) da classe B.
+- Na verdade é a classe A que não pode conhecer (ou seja, depender) dos detalhes internos da classe B.
+- Repare que pode acontecer do mesmo programador implementar tanto a classe A quanto a classe B.
+  - Mas de toda forma, as classes ainda deveriam ter **baixo acoplamento**.
 
 
+## {.smaller}
+
+Esta questão de **acoplamento** é tão importante que vamos discuti-la, em detalhes, no Capítulo 7.
+
+- Por enquanto, o mais importante é entender que a palavra-chave `private` garante o [*princípio da ocultação de informações*]{.alert}
+  - ao impedir que outras classes acessem a parte privada da classe.
+- Isso garante o baixo acoplamento, tornando a aplicação mais modular e facilitando a manutenção.
+
+. . .
+
+Nós também podemos chamar o *princípio da ocultação de informações* de [encapsulamento]{.alert}.
+
+- Esse **conceito** é **fundamental na Programação Orientada a Objetos**.
+- E talvez seja a única parte do livro que não gosto muito, pois acho que ele não dá a ênfase necessária a esse conceito.
+
+## {.smaller}
+
+O termo **encapsulamento** vem da palavra *cápsula*, que é definida no dicionário como:
+
+![](imagens/capsula_significado.png)
+
+. . .
+
+A ideia é que a implementação da classe (seus detalhes internos) sejam encapsulados (protegidos)
+
+- E a classe exponha apenas sua interface.
+
+## {.smaller}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+Um bom exemplo que ilustra o encapsulamento é um telefone fixo comum.
+
+- Você usa o telefone através de sua interface (os botões) e não precisa saber como é o funcionamento interno.
+:::
+
+::: {.column width="30%"}
+![](imagens/telefone_fixo.png)
+:::
+
+::::
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](imagens/caixa_eletronico_charge.png)
+:::
+
+::: {.column width="70%"}
+A mesma analogia pode ser feita com um caixa eletrônico.
+
+- Você usa as opções que aparecem pra você (interface) mas não precisa saber como isso funciona internamente.
+- E você só tem acesso aos dados que a interface disponibiliza.
+:::
+
+::::
+
+
+## Métodos privados {.smaller}
+
+Muitos dos métodos que vimos até agora eram públicos.
+
+- Isso garante que eles podem ser chamados a partir de outras classes.
+- Mas **podemos** também **ter métodos privados**.
+  - Como os métodos `imprimirBoasVindas` e `imprimirDespedida` da classe `SistemaDeSuporte`.
+
+. . .
+
+Nós declaramos um método como **público** para fornecer operações para quem usa a classe.
+
+- E declaramos como **privado** para dividir o código em trechos menores, facilitando o entendimento e a leitura.
+  - Veja que não faria sentido chamar o método `imprimirBoasVindas` de fora da classe `SistemaDeSuporte`.
+  - Mas o código do método `iniciar` fica mais claro quando separamos sua tarefa em subtarefas.
+
+## Métodos privados {.smaller}
+
+Nós também usamos métodos privados quando um trecho de código é usado em mais de um lugar na classe.
+
+- Pois, dessa forma, evitamos escrever o mesmo trecho de código mais de uma vez.
+- E, em vez disso, chamamos o método privado em mais de um lugar.
+
+
+## Atributos privados! {.smaller}
+
+A linguagem Java permite que atributos sejam declarados como privados ou públicos.
+
+- Mas você deve ter notado que nos exemplos **sempre declaramos os atributos como privados**.
+- Isso é fundamental para respeitar o conceito de **encapsulamento**.
+
+. . .
+
+Declarar atributos públicos quebra o *princípio da ocultação das informações*.
+
+- Portanto, mesmo que a linguagem Java permita atributos públicos, isso é considerado um mal estilo de programação.
+- Há linguagens que nem permitem a existência de atributos públicos.
+  - Enquanto outras não implementam o completamente o conceito de encapsulamento, o que viola a teoria de POO.
+  - Esse é o principal motivo para eu não adotar a linguagem Python na disciplina :)
+
+## Atributos privados! {.smaller}
+
+Outro motivo para manter os atributos privados é permitir que a **classe tenha** um maior **controle sobre o estado** dos seus objetos.
+
+- Se o atributo é encapsulado e só é acessível através de métodos de acesso (obter/get) e modificadores (definir/set),
+- A classe pode garantir que o atributo nunca tenha um valor inválido ou inconsistente.
+
+. . .
+
+Para deixar o conceito mais claro, suponha que uma classe `Circulo` tenha um atributo chamado `diametro`.
+
+- E, como o programador faltou às aulas de POO, ele definiu o atributo como público.
+- Com isso, qualquer classe consegue acessar e alterar o valor do diâmetro de um círculo.
+  - Fazendo, por exemplo:
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+Circulo circulo = new Circulo(10);
+circulo.diametro = 30;
+```
+:::
+
+## Atributos privados! {.smaller}
+
+Mas repare que isso abre brecha para a seguinte situação:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+int d = calcularNovoDiametro();
+circulo.diametro = d;
+```
+:::
+
+. . .
+
+O que aconteceria se, por algum erro, o método `calcularNovoDiametro` retornasse um valor negativo?
+
+- O círculo acabaria ficando com um diâmetro negativo, mas isso não faz sentido.
+
+. . .
+
+E como isso poderia ser corrigido?
+
+## Atributos privados! {.smaller}
+
+Além, é claro, de corrigir o método de cálculo, seria uma boa ideia colocar um `if` antes de alterar o diâmetro:
+
+- Para garantir que o círculo nunca ficasse com valor negativo por algum outro erro.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+int d = calcularNovoDiametro();
+if (d > 0) {
+    circulo.diametro = d;
+}
+```
+:::
+
+Mas repare que podem existir diversos trechos de código no programa que alteram o valor do diâmetro.
+
+- E seria necessário colocar essa verificação em todos esses lugares.
+- Outro problema é que tudo isso está acontecendo sem o conhecimento da classe `Circulo`.
+  - Mas ela deveria ser responsável por garantir que o estado dos objetos é sempre válido.
+
+## Atributos privados! {.smaller}
+
+Vamos comparar com uma versão bem implementada da classe `Circulo`:
+
+- ela teria o atributo `diametro` privado;
+- e um método modificador para alterar o diâmetro.
 
 
 . . .
 
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public class Circulo {
+    private int diametro;
+    ...
+    public void definirDiametro(int diametro) {
+        this.diametro = diametro;
+    }
+}
+```
+:::
+
+. . .
+
+Repare que, com isso, o diâmetro só pode ser alterado através da chamada do método `mudarDiametro`.
+
+- E agora fica mais fácil evitar o problema anterior.
+- Pois basta colocarmos a verificação (`if`) no método `definirDiametro`.
+- Não é necessário tratar todos os lugares que chamam o método `mudarDiametro`.
+
+## 
+
+Em resumo:
+
+- [Atributos deveriam ser sempre privados!]{.alert}
+
+. . .
 
 ::: {.callout-tip title="Conceito" icon=false}
 **Encapsulamento** (ou *ocultamento de informações*) é um princípio que define que os detalhes internos da implementação de uma classe deveriam ser ocultados das outras classes.
 Isso permite uma melhor modularização de uma aplicação.
 :::
 
+# Entregas dessa Aula {background-color="#40666e"}
 
+## {.smaller}
 
+::: {.nonincremental}
 
+Para ter **presença** nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.
 
+::: {.callout-important title="Entregas no Campus Virtual"}
+Responda a tarefa no Campus Virtual enviando o seu projeto `suporte-tecnico1` com as alterações dos 5 exercícios solicitados ao longo dos slides.
 
-
-
-
-## 
-
-::: {.callout-note title="Exercício" icon=false}
+**Atenção**: não se esqueça do aviso dado nos slides sobre o professor ter como corrigir a geração de reposta aleatória!
+:::
 
 :::
