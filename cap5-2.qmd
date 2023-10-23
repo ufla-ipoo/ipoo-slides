@@ -1,0 +1,349 @@
+---
+title: IPOO - Cap. 5 Comportamento Mais Sofisticado
+subtitle: Aula 5.2 - Prática
+---
+
+# Projeto no Greenfoot {background-color="#40666e"}
+
+## {.smaller}
+
+Nesta aula, vamos usar o Greenfoot em vez do BlueJ.
+
+- Aproveitando o fato de que estamos usando o Greenfoot para o trabalho prático da disciplina.
+
+. . .
+
+Nós usaremos o projeto no Greenfoot para aprender conceitos que não foram vistos na aula teórica:
+
+- Atributos estáticos.
+- Métodos estáticos.
+- Constantes.
+
+## {.smaller}
+
+Para começar, baixe o projeto [bolas-quicando](https://github.com/ufla-ipoo/bolas-quicando).
+
+- Abra o projeto no Greenfoot.
+- Execute o programa e veja o que acontece.
+
+. . .
+
+Vamos aproveitar esse projeto para conhecer um pouco mais sobre o Greenfoot.
+
+# 
+
+::: {.callout-note title="Exercício" icon=false}
+::: {.nonincremental}
+**Execute** o projeto e em seguida **pause o programa** antes das bolas pararem de quicar.
+Em seguida, **clique com o botão direito** em uma das bolas.
+
+- Veja que as opções são as mesmas do BlueJ quando clicamos em um objeto na bancada de objetos.
+- Você pode clicar em **Inspecionar** para ver os valores dos atributos.
+- E você pode também **chamar métodos** do objeto.
+:::
+::: 
+
+::: {.callout-note title="Exercício" icon=false}
+Abra a classe `Mundo` e veja o código do método `prepare`.
+Repare que ele cria duas bolas e depois cria 10 objetos da classe `Chao`.
+
+::: {.nonincremental}
+Altere o método para que o programa tenha uma terceira bola.
+
+- Crie a bola com diâmetro igual a 30 e posição vertical (y) 150.
+- Posicione a bola na posição (300, 150).
+:::
+:::
+
+## {.smaller}
+
+Vamos agora avaliar o código da classe `Bola`.
+
+- Vamos tentar entender como a classe funciona.
+
+. . .
+
+Para isso, é útil conhecermos alguns métodos diponíveis do Greenfoot:
+ 
+- `getImage`: retorna a imagem usada para o objeto (definida na hora que criamos a classe).
+- `getImage().scale`: permite mudar a dimensão da imagem do objeto.
+- `setLocation`: muda a posição do ator no mundo (coordenadas X e Y).
+- `isTouching`: indica se o ator está colidindo com algum objeto da classe passada.
+
+. . .
+
+Leia o código da classe `Bola` e tente entender como ela funciona.
+
+# Atributos estáticos e constantes {background-color="#40666e"}
+
+## {.smaller}
+
+Ao avaliar o código da classe `Bola` você viu alguma palavra-chave nova do Java?
+
+- Repare a declaração do atributo `GRAVIDADE`.
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Experimente alterar o valor do atributo `GRAVIDADE` (aumentando e diminuindo seu valor).
+
+Execute o programa e veja o que acontece de diferente.
+:::
+
+. . .
+
+O atributi `GRAVIDADE` é declarado da seguinte forma:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    private static final double GRAVIDADE = 0.7;
+```
+:::
+
+. . .
+
+Há duas palavras-chave novas nessa declaração: `static` e `final`
+
+## Atributos estáticos {.smaller}
+
+A palalavra-chave `static` do Java serve para declarar [atributos estáticos]{.alert}.
+
+- Atributos desse tipo são guardados na própria classe, não nos objetos.
+  - Ele são também chamados de [variáveis de classe]{.alert}.
+- Isso torna esses atributos muito diferentes dos atributos comuns que vimos até agora.
+  - Lembrando que os atributos comuns são também chamados de **variáveis de instância**.
+
+## {.smaller}
+
+O diagrama abaixo ilustra bem a diferença entre os atributos comuns e estáticos.
+
+![](imagens/atributo-estatico-diagrama-objetos.png){.r-stretch}
+
+## {.smaller}
+
+![](imagens/atributo-estatico-diagrama-objetos.png){.r-stretch}
+
+Os **atributos comuns** (`velocidadeVertical`, `posY` e `amortecimento`) são guardados nos objetos:
+
+- Como criamos três objetos, há **três espaços na memória** para cada um desses atributos.
+
+. . .
+
+Já o **atributo estático** `GRAVIDADE` é guardado na classe:
+
+- Com isso, existe sempre **um único espaço na memória** para ele, independente da quantidade de objetos criados.
+
+## {.smaller}
+
+Os **atributos estáticos** podem ser acessados normalmente dentro de qualquer método da classe.
+
+- Isso significa que todos os objetos compartilham o mesmo atributo.
+- Se um objeto alterar o valor do atributo estático, esse valor será usado para todos os objetos.
+  - Já que existe um único valor na memória.
+
+. . .
+
+Geralmente usamos atributos estáticos quando todos os objetos da classe devem ter o mesmo valor para o atributo.
+
+- Com isso, evitamos desperdiçar memória guardando o mesmo valor repetidas vezes para cada objeto.
+
+# 
+
+::: {.callout-note title="Exercício" icon=false}
+Como um atributo estático poderia ser usado para contabilizar a quantidade de objetos criados em uma classe?
+
+Por exemplo, como a própria classe `Bola` poderia contar quantas bolas foram criadas durante o programa?
+::: 
+
+# Constantes {.smaller}
+
+[Constantes]{.alert} são parecidas com variáveis,
+
+- mas a diferença é que seus valores não podem ser alterados depois de inicializados.
+- Definimos constantes em Java usando a **palavra-chave** `final`.
+
+. . .
+
+Suponha, por exemplo, a seguinte declaração de constante:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    private final int TAMANHO = 30;
+```
+:::
+
+- Veja que é uma declaração de atributo.
+- Mas tem a palavra-chave `final` antes do tipo do atributo.
+- Por convenção, escrevemos os nomes das constantes com letras maiúsculas.
+
+# Constantes {.smaller}
+
+Constantes podem ser inicializadas na própria linha da declaração, como no exemplo dado:
+
+- Neste caso, todos os objetos teriam o mesmo valor.
+- E, portanto, seria mais intessante que o atributo `TAMANHO` fosse estático.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    private final int TAMANHO = 30;
+```
+:::
+
+. . .
+
+Mas constantes podem ser inicializadas nos construtores em vez de ser na declaração.
+
+- Como isso, cada objeto poderia ter um valor diferente para o atributo `TAMANHO`.
+  - Inicializado, por exemplo, a partir de um valor recebido por parâmetro no construtor.
+  - A ideia seria que o objeto não poderia ter seu tamanho alterado depois de sua criação.
+- Nesse caso, não faria sentido declarar o atributo como estático.
+
+## {.smaller}
+
+É mais comum usarmos constantes quando elas têm o mesmo valor para todos os objetos.
+
+- Portanto, é mais comum ter constantes estáticas, do que como atributos comuns.
+- Como é o caso do atributo `GRAVIDADE` da classe `Bola`.
+
+#
+
+::: {.callout-note title="Exercício" icon=false}
+Repare que o atributo `amortecimento` da classe `Bola` é constante, mas não é estático.
+Com isso, as bolas poderiam ter valores diferentes de amortecimento.
+
+Altere então a classe `Bola` de forma que o valor do atributo `amortecimento` 
+seja recebido por parâmetro no construtor.
+Você precisará, é claro, alterar a criação das bolas na classe `Mundo`.
+
+Experimente usar valores diferentes para cada bola (ex: 2, 3 e 4).
+Execute o programa para testar.
+
+O que acontece com bolas que têm maior amortecimento?
+:::
+
+## Métodos estáticos {.smaller}
+
+Todos os métodos que vimos até agora são **métodos de instância** (de objetos).
+
+- Pois eles são chamados usando objetos.
+
+. . .
+
+Mas nós podemos também ter métodos que são chamados usando a classe, em vez de objetos.
+
+- São os [métodos estáticos]{.alert}.
+- Assim como os atributos estáticos, os métodos estáticos pertencem à classe e não aos objetos.
+
+## Métodos estáticos {.smaller}
+
+Nós podemos definir **métodos estáticos** usando a palavra-chave `static` na assinatura do método.
+
+. . .
+
+Suponha, por exemplo, que uma classe `Calendario` tenha o método estático abaixo: 
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    public static int obterNumeroDeDiasDoMesAtual() {
+        . . .
+    }
+```
+:::
+
+. . .
+
+Nós poderíamos chamar esse método usando o comando abaixo:
+
+- Repare que usamos o nome da classe antes do `.` para chamar o método, em vez de usar um objeto.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    int dias = Calendario.obterNumeroDeDiasDoMesAtual();
+```
+:::
+
+## Métodos estáticos {.smaller}
+
+Podemos encontrar vários exemplos de métodos estáticos na classe `Math` do Java.
+
+- Ela possui métodos, por exemplo, para encontrar o máximo ou o mínimo entre dois números.
+  - Ou ainda calcular seno e cosseno, por exemplo.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    int maximo = Math.max(numeroA, numeroB);
+    double valor = Math.cos(angulo);
+```
+:::
+
+. . .
+
+Repare que esses métodos dependem apenas dos parâmetros passados.
+
+- Eles não dependem de atributos de um possível objeto `Math`, ou seja, não dependem do estado de um objeto.
+- Geralmente é nesses casos que usamos métodos estáticos.
+
+## {.smaller}
+
+A classe `Math` do Java possui também exemplos de uso de constantes.
+
+- O valor de `PI`, por exemplo, pode ser acessado com o comando `Math.PI`.
+- Repare que estamos acessando o atributo diretamente, usando o nome da classe, em vez de um objeto.
+  - Da mesma forma que usamos para chamar métodos estáticos.
+- Nós conseguimos fazer isso porque PI é declarado como uma constante pública.
+
+. . .
+
+Mas não seria uma falha de encapsulamento declarar um atributo público?
+
+- Note que não há falha de encapsulamento em declarar um atributo público, se ele for uma constante.
+- Já que não seria possível alterar seu valor de fora da classe.
+
+# 
+
+::: {.callout-note title="Exercício" icon=false}
+Altere a declaração do atributo `GRAVIDADE` da classe `Bola` de forma que ele não seja mais uma constante.
+Mas, mantenha a inicialização do atributo na declaração.
+
+Crie um **método modificador** que permita alterar o valor do atributo.
+
+Execute o programa e pause-o antes das bolas pararem de quicar.
+Clique em uma das bolas e chame o método que você criou, informando um novo valor para a gravidade.
+
+Continue a execução do programa e repare que acontece. 
+A gravidade foi alterada só para a bola que você chamou o método, ou para todas elas?
+
+Depois que as bolas pararem, pause o programa novamente, e use a opção *Inspecionar* em cada bola para conferir
+o valor do atributo `GRAVIDADE`.
+(Obs.: na janela de inspeção, use o botão *mostrar campos estáticos*).
+::: 
+
+## Limitações dos métodos estáticos {.smaller}
+
+É importante sabermos que os **métodos estáticos** (métodos de classe) têm **limitações**.
+
+- Como eles pertencem à classe e não aos objetos, eles não podem acessar atributos comuns (variáveis de instância).
+- Eles podem acessar apenas **atributos estáticos** (variáveis de classe).
+
+. . .
+
+Da mesma forma, métodos estáticos não podem chamar métodos de instância da mesma classe.
+
+- Podem chamar apenas outros métodos estáticos.
+
+## Limitações dos métodos estáticos {.smaller}
+
+Por que você acha que essas limitações existem?
+
+- Imagine que um método estático qualquer (vamos chamar de `metodoA`), de uma classe `ClasseX` acessasse um atributo comum.
+- Tente imaginar o que aconteceria se você fizesse uma chamada `ClasseX.metodoA()` sem ter criado nenhum objeto da classe.
+  - E se existissem vários objetos da classe?
+
+. . .
+
+E o que isso tem a ver com um método estático não poder chamar um método de instância?
+
+
+  

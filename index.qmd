@@ -39,6 +39,9 @@
   - [Aula 4.3 - Prática](https://github.com/ufla-ipoo/produtos)
 - **Capítulo 5**
   - [Aula 5.1 - Teórica](cap5-1.html)
+  - [Aula 5.2 - Prática](cap5-2.html)
+- **Capítulo 7**
+  - [Aula 7.1 - Teórica](https://docs.google.com/presentation/d/1DZTU_jEUavfASD8cIGk_YzywxBkGDEHsn8lAQxtxycw/edit?usp=sharing)
 
 :::
 
