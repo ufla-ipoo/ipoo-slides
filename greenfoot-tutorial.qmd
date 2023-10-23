@@ -1,6 +1,6 @@
 ---
-title: IPOO - Usando o Greenfoot
-subtitle: Tutorial
+title: Tutorial do Greenfoot
+subtitle: GAC125 - IPOO
 ---
 
 # Sobre o Tutorial {background-color="#40666e"}
