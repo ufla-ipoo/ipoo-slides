@@ -1,0 +1,337 @@
+---
+title: IPOO - Relacionamentos de Classes
+subtitle: Aula 6.1 - Teórica
+---
+
+## {.smaller}
+
+Vai aí um conselho:
+
+- Seu [desempenho]{.alert} como profissional **no futuro** *depende* de seu [empenho]{.alert} **agora**.
+- Tome nota durante as aulas.
+  - Foque no conteúdo e não no WhatsApp, TikTok, etc.
+
+
+![](imagens/tomando_nota.png){.r-stretch}
+
+## Principais Conceitos da Aula {.smaller}
+
+Este é o único conteúdo da disciplina que não se encontra no livro-texto que estamos utilizando.
+
+. . .
+
+Nesta aula aprenderemos sobre [relacionamentos de classes]{.alert}.
+
+- Veremos que podemos classificar a forma como os objetos de duas classes se relacionam.
+  - Os relacionamentos podem ser de **composição**, **agregação** ou **associação**.
+- Aprenderemos como esses relacionamentos podem ser tratados e/ou verificados no código-fonte dos nossos programas.
+
+
+## {.smaller}
+
+Nós já vimos que sistemas orientados a objetos se baseiam em **envio de mensagens**:
+
+- Ou seja, um objeto pode **chamar métodos públicos** de objetos de outras classes.
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Nós dizemos que os **objetos se relacionam quando enviam mensagens** uns aos outros.
+
+- Sistemas orientados a objetos dependem muito de como os objetos se relacionam.
+- O planejamento/modelagem das classes se baseiam nesses relacionamentos.
+
+:::
+
+::: {.column width="50%"}
+![](imagens/objetos-gostamos-de-comunicar.png){.r-stretch}
+:::
+
+::::
+
+# Exemplos de relacionamentos {background-color="#40666e"}
+
+## Caixa de Supermercado {.smaller}
+
+Quais objetos vocês acham que podem existir em um software de um caixa de supermercado?
+
+- Como você acha que esses objetos se relacionam?
+- O que cada um tem a ver com o outro? Quem envia mensagem pra quem?
+
+![](imagens/caixa_de_supermercado.png){.r-stretch}
+
+. . .
+
+Podemos pensar que existiriam, por exemplo, as classes:
+
+- Produto, Vendedor e Compra.
+- Uma compra pode ser formada por um conjunto de produtos e estar relacionada a um vendedor.
+
+## Sistema de Gestão Escolar {.smaller}
+
+E quais objetos vocês acham que podem existir em um software como o SIG?
+
+- Pense mais uma vez em como os objetos se relacionam. O que cada um tem a ver com o outro.
+
+![](imagens/SIG_print.png){.r-stretch}
+
+. . .
+
+Podemos pensar que existiriam, por exemplo, as classes:
+
+- Aluno, Disciplina, Turma, Curso, Professor, etc.
+- Como cada objeto se relaciona com o outro?
+
+## Plataforma de Streaming {.smaller}
+
+Vamos a um último exemplo. Quais objetos poderiam existir em uma plataforma como a Netflix?
+
+![](imagens/netflix.jpg){.r-stretch}
+
+. . .
+
+Posso pensar em classes como:
+
+- Usuário, PerfilDeUsuário, Filmes, etc.
+- Podemos pensar que um usuário possui vários perfis.
+- Cada perfil possui um conjunto de filmes já vistos.
+- E por aí vai...
+
+## {.smaller}
+
+Podemos perceber, portanto, que a grande maioria dos softwares orientados a  objetos dependem em grande parte de como os objetos se relacionam.
+
+. . .
+
+![](imagens/objetos_sem_problemas_relacionamento.png){.r-stretch}
+
+## Classificação dos relacionamentos {.smaller}
+
+![](imagens/balao_conhecer_tipos_relacionamentos.png){.r-stretch}
+
+# Relacionamentos de Composição {background-color="#40666e"}
+
+## {.smaller}
+
+Vamos começar com um exemplo de classes `Carro` e `Motor`.
+
+- Como podemos dizer que é o relacionamento entre os objetos das classes `Carro` e `Motor`?
+  ![](imagens/partes_carro.jpg){.r-stretch}
+
+. . .
+
+Podemos dizer que **um carro** [tem um]{.alert} **motor**.
+
+. . .
+
+E quanto aos pneus? 
+
+- De forma similar, podemos dizer que **um carro** [tem vários]{.alert} **pneus**.
+
+## {.smaller}
+
+Agora um novo exemplo, qual é o relacionamento entre os objetos de uma classe `Banco` e uma classe `Agencia`?
+
+![](imagens/banco_do_brasil.png){.r-stretch}
+
+. . .
+
+Veja que  também podemos dizer que **um banco** [tem várias]{.alert} **agências**.
+
+## {.smaller}
+
+Por fim, qual o relacionamento entre os objetos de uma nota fiscal e os itens de compra que compõem a nota fiscal?
+
+:::: {.columns}
+
+::: {.column width="60%"}
+![](imagens/nota_fiscal.png){.r-stretch}
+:::
+
+::: {.column width="40%"}
+Mais uma vez, uma **nota fiscal** [tem vários]{.alerts} **itens de compra**.
+:::
+
+::::
+
+## Relacionamento do tipo **tem um** {.smaller}
+
+:::: {.columns}
+
+::: {.column width="33%"}
+![](imagens/partes_carro.jpg){.r-stretch}
+:::
+
+::: {.column width="33%"}
+![](imagens/banco_do_brasil.png.r-stretch}
+:::
+
+::: {.column width="33%"}
+![](imagens/nota_fiscal.png){.r-stretch}
+:::
+
+::::
+
+. . .
+
+Repare que os três exemplos têm em comum o fato de que **um objeto** [tem]{.alerts} (um ou mais) **objetos de outra classe**.
+
+. . .
+
+Nós também podemos dizer que este é um relacionamento do tipo [todo/parte]{.alert}.
+
+- A classe que representa o todo [tem]{.alert} objetos da classe que represent a parte.
+
+## Relacionamento do tipo **tem um** {.smaller}
+
+:::: {.columns}
+
+::: {.column width="33%"}
+![](imagens/partes_carro.jpg){.r-stretch}
+:::
+
+::: {.column width="33%"}
+![](imagens/banco_do_brasil.png.r-stretch}
+:::
+
+::: {.column width="33%"}
+![](imagens/nota_fiscal.png){.r-stretch}
+:::
+
+::::
+
+. . .
+
+Mas além disso, há outro fator importante. Repare que:
+
+- Se não tenho um carro, não faz sentido criar as rodas.
+- Se um banco faliu, não preciso mais de agências.
+- Sem um pedido não tenho itens de pedido.
+
+. . .
+
+Nós dizemos então que, nestes casos, **o todo [controla o tempo de vida]{.alert} das partes**.
+
+## {.smaller}
+
+Nós chamamos esses casos de [Relacionamentos de Composição]{.alert}.
+
+. . .
+
+![](imagens/balao_composicao.png){.r-stretch}
+
+## Composição - Exemplo de Código {.smaller}
+
+Suponha que vamos implementar em Java um sistema que tenha as classes `Carro`, `Motor` e `Porta`.
+
+- Nós vimos que esse é um exemplo de composição.
+- Mas como isso pode ser implementado?
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public class Carro {
+    private Motor motor;
+    private Porta[] portas;
+    
+    public Carro() {
+        motor = new Motor();
+        portas = new Porta[4];
+        for (int i = 0; i < 4; i++) {
+        	portas[i] = new Porta();
+        }
+    }
+}
+```
+:::
+
+## Composição - Exemplo de Código {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{.java code-line-numbers="false"}
+public class Carro {
+    private Motor motor;
+    private Porta[] portas;
+    
+    public Carro() {
+        motor = new Motor();
+        portas = new Porta[4];
+        for (int i = 0; i < 4; i++) {
+        	portas[i] = new Porta();
+        }
+    }
+}
+```
+:::
+
+::: {.column width="50%"}
+Como o motor e as portas são partes do carro, eles devem ser atributos do carro.
+
+- E como qualquer atributo devem ser privados.
+
+. . .
+
+O carro controla o tempo de vida do motor e das portas, portanto é ele quem cria os objetos do motor e das portas.
+
+:::
+
+::::
+
+## Composição - Exemplo de Código {.smaller}
+
+[Atenção!]{.alert}:
+
+É importante que a classe que representa o todo **não tenha** um método de acesso que retorne a referência do objeto da parte.
+
+- Pois, fazendo isso, quebrará o encapsulamento.
+
+. . .
+
+Repare que, como nenhum outro objeto tem referência para os objetos motor e portas, esses objetos só podem ser destruídos juntos com o carro. 
+
+- Portanto o tempo de vida deles está completamente controlado pelo carro.
+
+## Composição - Resumo {.smaller}
+
+![](imagens/balao_resumo_composicao.png){.r-stretch}
+
+# Relacionamentos de Agregação {background-color="#40666e"}
+
+## {.smaller}
+
+Vamos ver agora um outro tipo de relacionamento.
+
+- Ele é parecido, mas é diferente ☺
+
+## {.smaller}
+
+Voltando nesse exemplo, qual seria o relacionamento entre os produtos e o depósito?
+
+![](imagens/caixa_de_supermercado.png){.r-stretch}
+
+. . .
+
+- Um depósito [tem vários]{.alert} produtos.
+- E um produto [é parte]{.alert} de um depósito.
+
+. . 
+
+Então, à primeira, vista parece uma composição, certo? 
+
+## {.smaller}
+
+Mas imagine essa situação:
+
+![](imagens/balao_queima_de_estoque.png){.r-stretch}
+
+. . .
+
+Mas repare que os produtos **continuam existindo** ao deixarem o depósito, certo?
+
+- Ou seja, as partes continuam existindo mesmo fora do todo.
