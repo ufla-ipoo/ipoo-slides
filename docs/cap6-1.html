@@ -465,9 +465,9 @@
 <h1>Exemplos de relacionamentos</h1>
 
 </section>
-<section id="caixa-de-supermercado" class="slide level2 smaller">
-<h2>Caixa de Supermercado</h2>
-<p>Quais objetos vocês acham que podem existir em um software de um caixa de supermercado?</p>
+<section id="section-2" class="slide level2 smaller">
+<h2></h2>
+<p>Quais objetos vocês acham que podem existir em um software de um <strong>caixa de supermercado</strong>?</p>
 <ul>
 <li class="fragment">Como você acha que esses objetos se relacionam?</li>
 <li class="fragment">O que cada um tem a ver com o outro? Quem envia mensagem pra quem?</li>
@@ -481,9 +481,9 @@
 </ul>
 </div>
 </section>
-<section id="sistema-de-gestão-escolar" class="slide level2 smaller">
-<h2>Sistema de Gestão Escolar</h2>
-<p>E quais objetos vocês acham que podem existir em um software como o SIG?</p>
+<section id="section-3" class="slide level2 smaller">
+<h2></h2>
+<p>E quais objetos vocês acham que podem existir em um software como o <strong>SIG</strong>?</p>
 <ul>
 <li class="fragment">Pense mais uma vez em como os objetos se relacionam. O que cada um tem a ver com o outro.</li>
 </ul>
@@ -496,9 +496,9 @@
 </ul>
 </div>
 </section>
-<section id="plataforma-de-streaming" class="slide level2 smaller">
-<h2>Plataforma de Streaming</h2>
-<p>Vamos a um último exemplo. Quais objetos poderiam existir em uma plataforma como a Netflix?</p>
+<section id="section-4" class="slide level2 smaller">
+<h2></h2>
+<p>Vamos a um último exemplo. Quais objetos poderiam existir em uma <strong>plataforma de streaming</strong> como a Netflix?</p>
 <img data-src="imagens/netflix.jpg" class="r-stretch">
 <div class="fragment">
 <p>Posso pensar em classes como:</p>
@@ -510,15 +510,15 @@
 </ul>
 </div>
 </section>
-<section id="section-2" class="slide level2 smaller">
+<section id="section-5" class="slide level2 smaller">
 <h2></h2>
 <p>Podemos perceber, portanto, que a grande maioria dos softwares orientados a objetos dependem em grande parte de como os objetos se relacionam.</p>
 <div class="fragment">
 <img data-src="imagens/objetos_sem_problemas_relacionamento.png" class="r-stretch">
 </div>
 </section>
-<section id="classificação-dos-relacionamentos" class="slide level2 smaller">
-<h2>Classificação dos relacionamentos</h2>
+<section id="section-6" class="slide level2 smaller">
+<h2></h2>
 <img data-src="imagens/balao_conhecer_tipos_relacionamentos.png" class="r-stretch">
 </section></section>
 <section>
@@ -526,7 +526,7 @@
 <h1>Relacionamentos de Composição</h1>
 
 </section>
-<section id="section-3" class="slide level2 smaller">
+<section id="section-7" class="slide level2 smaller">
 <h2></h2>
 <p>Vamos começar com um exemplo de classes <code>Carro</code> e <code>Motor</code>.</p>
 <ul>
@@ -542,7 +542,7 @@
 </ul>
 </div>
 </section>
-<section id="section-4" class="slide level2 smaller">
+<section id="section-8" class="slide level2 smaller">
 <h2></h2>
 <p>Agora um novo exemplo, qual é o relacionamento entre os objetos de uma classe <code>Banco</code> e uma classe <code>Agencia</code>?</p>
 <img data-src="imagens/banco_do_brasil.png" class="r-stretch">
@@ -550,47 +550,49 @@
 <p>Veja que também podemos dizer que <strong>um banco</strong> <span class="alert">tem várias</span> <strong>agências</strong>.</p>
 </div>
 </section>
-<section id="section-5" class="slide level2 smaller">
+<section id="section-9" class="slide level2 smaller">
 <h2></h2>
 <p>Por fim, qual o relacionamento entre os objetos de uma nota fiscal e os itens de compra que compõem a nota fiscal?</p>
+<div class="fragment">
 <div class="columns">
 <div class="column" style="width:60%;">
 <img data-src="imagens/nota_fiscal.png" class="r-stretch">
 </div><div class="column" style="width:40%;">
-<p>Mais uma vez, uma <strong>nota fiscal</strong> <span class="alerts">tem vários</span> <strong>itens de compra</strong>.</p>
+<p>Mais uma vez, uma <strong>nota fiscal</strong> <span class="alert">tem vários</span> <strong>itens de compra</strong>.</p>
+</div>
 </div>
 </div>
 </section>
-<section id="relacionamento-do-tipo-tem-um" class="slide level2 smaller">
-<h2>Relacionamento do tipo <strong>tem um</strong></h2>
+<section id="section-10" class="slide level2 smaller">
+<h2></h2>
 <div class="columns">
 <div class="column" style="width:33%;">
-<img data-src="imagens/partes_carro.jpg" class="r-stretch">
+<p><img data-src="imagens/partes_carro.jpg"></p>
 </div><div class="column" style="width:33%;">
-<p>[](imagens/banco_do_brasil.png.r-stretch}</p>
+<p><img data-src="imagens/banco_do_brasil.png"></p>
 </div><div class="column" style="width:33%;">
-<img data-src="imagens/nota_fiscal.png" class="r-stretch">
+<p><img data-src="imagens/nota_fiscal.png"></p>
 </div>
 </div>
 <div class="fragment">
-<p>Repare que os três exemplos têm em comum o fato de que <strong>um objeto</strong> <span class="alerts">tem</span> (um ou mais) <strong>objetos de outra classe</strong>.</p>
+<p>Repare que os três exemplos têm em comum o fato de que <strong>um objeto</strong> <span class="alert">tem</span> (um ou mais) <strong>objetos de outra classe</strong>.</p>
 </div>
 <div class="fragment">
-<p>Nós também podemos dizer que este é um relacionamento do tipo <span class="alert">todo/parte</span>.</p>
+<p>Nós também podemos dizer que estes são relacionamentos do tipo <span class="alert">todo/parte</span>.</p>
 <ul>
-<li class="fragment">A classe que representa o todo <span class="alert">tem</span> objetos da classe que represent a parte.</li>
+<li class="fragment">A classe que representa o todo <span class="alert">tem</span> objetos da classe que representa a parte.</li>
 </ul>
 </div>
 </section>
-<section id="relacionamento-do-tipo-tem-um-1" class="slide level2 smaller">
-<h2>Relacionamento do tipo <strong>tem um</strong></h2>
+<section id="section-11" class="slide level2 smaller">
+<h2></h2>
 <div class="columns">
 <div class="column" style="width:33%;">
-<img data-src="imagens/partes_carro.jpg" class="r-stretch">
+<p><img data-src="imagens/partes_carro.jpg"></p>
 </div><div class="column" style="width:33%;">
-<p>[](imagens/banco_do_brasil.png.r-stretch}</p>
+<p><img data-src="imagens/banco_do_brasil.png"></p>
 </div><div class="column" style="width:33%;">
-<img data-src="imagens/nota_fiscal.png" class="r-stretch">
+<p><img data-src="imagens/nota_fiscal.png"></p>
 </div>
 </div>
 <div class="fragment">
@@ -605,7 +607,7 @@
 <p>Nós dizemos então que, nestes casos, <strong>o todo <span class="alert">controla o tempo de vida</span> das partes</strong>.</p>
 </div>
 </section>
-<section id="section-6" class="slide level2 smaller">
+<section id="section-12" class="slide level2 smaller">
 <h2></h2>
 <p>Nós chamamos esses casos de <span class="alert">Relacionamentos de Composição</span>.</p>
 <div class="fragment">
@@ -632,14 +634,14 @@
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            portas<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Porta</span><span class="op">();</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">// restante do código omitido</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
 <section id="composição---exemplo-de-código-1" class="slide level2 smaller">
 <h2>Composição - Exemplo de Código</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<div class="halfincfontsize">
 <div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Carro <span class="op">{</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> Motor motor<span class="op">;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> Porta<span class="op">[]</span> portas<span class="op">;</span></span>
@@ -651,28 +653,30 @@
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>            portas<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Porta</span><span class="op">();</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:50%;">
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">// restante do código omitido</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Como o motor e as portas são partes do carro, eles devem ser atributos do carro.</p>
 <ul>
 <li class="fragment">E como qualquer atributo devem ser privados.</li>
 </ul>
-<p>. . .</p>
+<div class="fragment">
 <p>O carro controla o tempo de vida do motor e das portas, portanto é ele quem cria os objetos do motor e das portas.</p>
 </div>
-</div>
 </section>
-<section id="composição---exemplo-de-código-2" class="slide level2 smaller">
-<h2>Composição - Exemplo de Código</h2>
-<p><span class="alert">Atenção!</span>:</p>
-<p>É importante que a classe que representa o todo <strong>não tenha</strong> um método de acesso que retorne a referência do objeto da parte.</p>
+<section id="section-13" class="slide level2 smaller">
+<h2></h2>
+<p><span class="alert">Atenção!</span></p>
+<p>É importante que a classe que representa o todo <strong>não tenha</strong> um método de acesso que retorne uma <strong>referência</strong> para o(s) objeto(s) da(s) parte(s).</p>
 <ul>
-<li class="fragment">Pois, fazendo isso, quebrará o encapsulamento.</li>
+<li class="fragment">Repare que, como nenhum outro objeto consegue ter uma referência para os objetos motor e portas, esses objetos só podem ser destruídos juntos com o carro.</li>
+<li class="fragment">Portanto o tempo de vida deles está completamente controlado pelo carro.</li>
 </ul>
 <div class="fragment">
-<p>Repare que, como nenhum outro objeto tem referência para os objetos motor e portas, esses objetos só podem ser destruídos juntos com o carro.</p>
+<p>Caso essa regra não seja seguida haverá uma <strong>quebra do encapsulamento</strong>.</p>
 <ul>
-<li class="fragment">Portanto o tempo de vida deles está completamente controlado pelo carro.</li>
+<li class="fragment">Não adianta o motor ser declarado com visibilidade privada, se houver um método de acesso que retorne o motor.</li>
+<li class="fragment">Por que, outra classe poderia usar esse método para ter acesso ao motor e chamar métodos modificadores do motor sem que a classe <code>Carro</code> tomasse conhecimento.</li>
 </ul>
 </div>
 </section>
@@ -685,35 +689,127 @@
 <h1>Relacionamentos de Agregação</h1>
 
 </section>
-<section id="section-7" class="slide level2 smaller">
+<section id="section-14" class="slide level2 smaller">
 <h2></h2>
 <p>Vamos ver agora um outro tipo de relacionamento.</p>
 <ul>
 <li class="fragment">Ele é parecido, mas é diferente ☺</li>
 </ul>
 </section>
-<section id="section-8" class="slide level2 smaller">
+<section id="section-15" class="slide level2 smaller">
 <h2></h2>
-<p>Voltando nesse exemplo, qual seria o relacionamento entre os produtos e o depósito?</p>
+<p>Voltando nesse exemplo, qual seria o relacionamento entre os <strong>produtos</strong> e o <strong>depósito</strong>?</p>
 <img data-src="imagens/caixa_de_supermercado.png" class="r-stretch">
 <div class="fragment">
 <ul>
 <li class="fragment">Um depósito <span class="alert">tem vários</span> produtos.</li>
 <li class="fragment">E um produto <span class="alert">é parte</span> de um depósito.</li>
 </ul>
-<p>. .</p>
+</div>
+<div class="fragment">
 <p>Então, à primeira, vista parece uma composição, certo?</p>
 </div>
 </section>
-<section id="section-9" class="slide level2 smaller">
+<section id="section-16" class="slide level2 smaller">
 <h2></h2>
 <p>Mas imagine essa situação:</p>
 <img data-src="imagens/balao_queima_de_estoque.png" class="r-stretch">
 <div class="fragment">
-<p>Mas repare que os produtos <strong>continuam existindo</strong> ao deixarem o depósito, certo?</p>
+<p>Repare que os produtos <strong>continuam existindo</strong> ao deixarem o depósito, certo?</p>
+</div>
+</section>
+<section id="section-17" class="slide level2 smaller">
+<h2></h2>
+<p>O fato é que os produtos podem sair do estoque e ir para as gôndolas.</p>
 <ul>
-<li class="fragment">Ou seja, as partes continuam existindo mesmo fora do todo.</li>
+<li class="fragment">Além disso, podem existir produtos que vão direto para as gôndolas em alguma ocasião.</li>
+<li class="fragment">Ou seja, o depósito <strong>não controla</strong> o tempo de vida dos produtos.</li>
 </ul>
+<div class="fragment">
+<p>Dizendo de outra forma, <span class="alert">não é</span> o todo <strong>quem controla o tempo de vida</strong> das partes.</p>
+</div>
+<div class="fragment">
+<p>Nós chamamos esse tipo de relacionamento de <span class="alert">agregação</span>.</p>
+</div>
+</section>
+<section id="agregação---exemplo-de-código" class="slide level2 smaller">
+<h2>Agregação - Exemplo de Código</h2>
+<p>Em um sistema de gestão escolar, podemos ter as classes <code>Departamento</code> e <code>Professor</code>.</p>
+<ul>
+<li class="fragment">Como o departamento tem professores, os professores devem ser atributos do departamento.</li>
+<li class="fragment">Mas se o departamento deixar de existir os professores continuam existindo. Ufa!!! ☺</li>
+<li class="fragment">Portanto essa é uma relação de <span class="alert">agregação</span>.</li>
+</ul>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb3" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Departamento <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">ArrayList</span><span class="op">&lt;</span>Professor<span class="op">&gt;</span> professores<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">Departamento</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        professores <span class="op">=</span> <span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;&gt;();</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">contratarProfessor</span><span class="op">(</span>Professor professor<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        professores<span class="op">.</span><span class="fu">add</span><span class="op">(</span>professor<span class="op">);</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">// restante do código omitido</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-18" class="slide level2 smaller">
+<h2></h2>
+<p>Lembre-se que, em uma agregação, o todo <strong>não controla o tempo de vida</strong> das partes.</p>
+<div class="fragment">
+<p>Isso pode ficar explícito no código de duas formas:</p>
+<ul>
+<li class="fragment">Não é a classe que representa o todo que cria o objeto da parte (como é o caso do exemplo anterior).</li>
+<li class="fragment">E/ou, a classe do todo pode até criar a parte, mas ela tem algum método de acesso que retorna (o endereço da) a parte.
+<ul>
+<li class="fragment">Permitindo que outras classes mantenham o objeto da parte, sem o conhecimento da classe que representa o todo.s</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-19" class="slide level2 smaller">
+<h2></h2>
+<img data-src="imagens/balao_diferenca_composicao_agregacao.png" class="r-stretch">
+</section>
+<section id="agregação---resumo" class="slide level2 smaller">
+<h2>Agregação - Resumo</h2>
+<img data-src="imagens/balao_resumo_associacao.png" class="r-stretch">
+</section></section>
+<section>
+<section id="relacionamentos-de-associação" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Relacionamentos de Associação</h1>
+
+</section>
+<section id="section-20" class="slide level2 smaller">
+<h2></h2>
+<p>Veremos agora o terceiro tipo de relacionamento:</p>
+<ul>
+<li class="fragment">Suponha, por exemplo, que um professor que dá aulas particulares, resolva fazer um sistema para controlar suas atividades.</li>
+<li class="fragment">Ele criou uma classe <code>Professor</code> e uma classe <code>Aluno</code>.
+<ul>
+<li class="fragment">Qual é o relacionamento entre essas classes?</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:65%;">
+<ul>
+<li class="fragment">O professor dá aulas para o aluno e o aluno tem aulas com o professor.</li>
+<li class="fragment">Mas não faz sentido dizer que o aluno é parte do professor ou que o professor é formado por alunos.</li>
+<li class="fragment">Portanto, <strong>não é um relacionamento todo / parte</strong>.</li>
+</ul>
+</div><div class="column" style="width:35%;">
+<p><img data-src="imagens/professor_particular.jpg"></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Nós chamamos esse tipo de relacionamento de <span class="alert">associação</span>.</p>
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
 <div class="footer footer-default">
 

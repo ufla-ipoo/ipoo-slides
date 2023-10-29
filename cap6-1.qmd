@@ -54,9 +54,9 @@ Nós dizemos que os **objetos se relacionam quando enviam mensagens** uns aos ou
 
 # Exemplos de relacionamentos {background-color="#40666e"}
 
-## Caixa de Supermercado {.smaller}
+## {.smaller}
 
-Quais objetos vocês acham que podem existir em um software de um caixa de supermercado?
+Quais objetos vocês acham que podem existir em um software de um **caixa de supermercado**?
 
 - Como você acha que esses objetos se relacionam?
 - O que cada um tem a ver com o outro? Quem envia mensagem pra quem?
@@ -70,9 +70,9 @@ Podemos pensar que existiriam, por exemplo, as classes:
 - Produto, Vendedor e Compra.
 - Uma compra pode ser formada por um conjunto de produtos e estar relacionada a um vendedor.
 
-## Sistema de Gestão Escolar {.smaller}
+## {.smaller}
 
-E quais objetos vocês acham que podem existir em um software como o SIG?
+E quais objetos vocês acham que podem existir em um software como o **SIG**?
 
 - Pense mais uma vez em como os objetos se relacionam. O que cada um tem a ver com o outro.
 
@@ -85,9 +85,9 @@ Podemos pensar que existiriam, por exemplo, as classes:
 - Aluno, Disciplina, Turma, Curso, Professor, etc.
 - Como cada objeto se relaciona com o outro?
 
-## Plataforma de Streaming {.smaller}
+## {.smaller}
 
-Vamos a um último exemplo. Quais objetos poderiam existir em uma plataforma como a Netflix?
+Vamos a um último exemplo. Quais objetos poderiam existir em uma **plataforma de streaming** como a Netflix?
 
 ![](imagens/netflix.jpg){.r-stretch}
 
@@ -108,7 +108,7 @@ Podemos perceber, portanto, que a grande maioria dos softwares orientados a  obj
 
 ![](imagens/objetos_sem_problemas_relacionamento.png){.r-stretch}
 
-## Classificação dos relacionamentos {.smaller}
+## {.smaller}
 
 ![](imagens/balao_conhecer_tipos_relacionamentos.png){.r-stretch}
 
@@ -145,6 +145,8 @@ Veja que  também podemos dizer que **um banco** [tem várias]{.alert} **agênci
 
 Por fim, qual o relacionamento entre os objetos de uma nota fiscal e os itens de compra que compõem a nota fiscal?
 
+. . .
+
 :::: {.columns}
 
 ::: {.column width="60%"}
@@ -152,53 +154,53 @@ Por fim, qual o relacionamento entre os objetos de uma nota fiscal e os itens de
 :::
 
 ::: {.column width="40%"}
-Mais uma vez, uma **nota fiscal** [tem vários]{.alerts} **itens de compra**.
+Mais uma vez, uma **nota fiscal** [tem vários]{.alert} **itens de compra**.
 :::
 
 ::::
 
-## Relacionamento do tipo **tem um** {.smaller}
+## {.smaller}
 
 :::: {.columns}
 
 ::: {.column width="33%"}
-![](imagens/partes_carro.jpg){.r-stretch}
+![](imagens/partes_carro.jpg)
 :::
 
 ::: {.column width="33%"}
-![](imagens/banco_do_brasil.png.r-stretch}
+![](imagens/banco_do_brasil.png)
 :::
 
 ::: {.column width="33%"}
-![](imagens/nota_fiscal.png){.r-stretch}
+![](imagens/nota_fiscal.png)
 :::
 
 ::::
 
 . . .
 
-Repare que os três exemplos têm em comum o fato de que **um objeto** [tem]{.alerts} (um ou mais) **objetos de outra classe**.
+Repare que os três exemplos têm em comum o fato de que **um objeto** [tem]{.alert} (um ou mais) **objetos de outra classe**.
 
 . . .
 
-Nós também podemos dizer que este é um relacionamento do tipo [todo/parte]{.alert}.
+Nós também podemos dizer que estes são relacionamentos do tipo [todo/parte]{.alert}.
 
-- A classe que representa o todo [tem]{.alert} objetos da classe que represent a parte.
+- A classe que representa o todo [tem]{.alert} objetos da classe que representa a parte.
 
-## Relacionamento do tipo **tem um** {.smaller}
+## {.smaller}
 
 :::: {.columns}
 
 ::: {.column width="33%"}
-![](imagens/partes_carro.jpg){.r-stretch}
+![](imagens/partes_carro.jpg)
 :::
 
 ::: {.column width="33%"}
-![](imagens/banco_do_brasil.png.r-stretch}
+![](imagens/banco_do_brasil.png)
 :::
 
 ::: {.column width="33%"}
-![](imagens/nota_fiscal.png){.r-stretch}
+![](imagens/nota_fiscal.png)
 :::
 
 ::::
@@ -245,15 +247,14 @@ public class Carro {
         	portas[i] = new Porta();
         }
     }
+    // restante do código omitido
 }
 ```
 :::
 
 ## Composição - Exemplo de Código {.smaller}
 
-:::: {.columns}
-
-::: {.column width="50%"}
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
 public class Carro {
     private Motor motor;
@@ -266,11 +267,11 @@ public class Carro {
         	portas[i] = new Porta();
         }
     }
+    // restante do código omitido
 }
 ```
 :::
 
-::: {.column width="50%"}
 Como o motor e as portas são partes do carro, eles devem ser atributos do carro.
 
 - E como qualquer atributo devem ser privados.
@@ -279,23 +280,21 @@ Como o motor e as portas são partes do carro, eles devem ser atributos do carro
 
 O carro controla o tempo de vida do motor e das portas, portanto é ele quem cria os objetos do motor e das portas.
 
-:::
+## {.smaller}
 
-::::
+[Atenção!]{.alert}
 
-## Composição - Exemplo de Código {.smaller}
+É importante que a classe que representa o todo **não tenha** um método de acesso que retorne uma **referência** para o(s) objeto(s) da(s) parte(s).
 
-[Atenção!]{.alert}:
-
-É importante que a classe que representa o todo **não tenha** um método de acesso que retorne a referência do objeto da parte.
-
-- Pois, fazendo isso, quebrará o encapsulamento.
+- Repare que, como nenhum outro objeto consegue ter uma referência para os objetos motor e portas, esses objetos só podem ser destruídos juntos com o carro. 
+- Portanto o tempo de vida deles está completamente controlado pelo carro.
 
 . . .
 
-Repare que, como nenhum outro objeto tem referência para os objetos motor e portas, esses objetos só podem ser destruídos juntos com o carro. 
+Caso essa regra não seja seguida haverá uma **quebra do encapsulamento**.
 
-- Portanto o tempo de vida deles está completamente controlado pelo carro.
+- Não adianta o motor ser declarado com visibilidade privada, se houver um método de acesso que retorne o motor.
+- Por que, outra classe poderia usar esse método para ter acesso ao motor e chamar métodos modificadores do motor sem que a classe `Carro` tomasse conhecimento.
 
 ## Composição - Resumo {.smaller}
 
@@ -311,7 +310,7 @@ Vamos ver agora um outro tipo de relacionamento.
 
 ## {.smaller}
 
-Voltando nesse exemplo, qual seria o relacionamento entre os produtos e o depósito?
+Voltando nesse exemplo, qual seria o relacionamento entre os **produtos** e o **depósito**?
 
 ![](imagens/caixa_de_supermercado.png){.r-stretch}
 
@@ -320,7 +319,7 @@ Voltando nesse exemplo, qual seria o relacionamento entre os produtos e o depós
 - Um depósito [tem vários]{.alert} produtos.
 - E um produto [é parte]{.alert} de um depósito.
 
-. . 
+. . .
 
 Então, à primeira, vista parece uma composição, certo? 
 
@@ -332,6 +331,163 @@ Mas imagine essa situação:
 
 . . .
 
-Mas repare que os produtos **continuam existindo** ao deixarem o depósito, certo?
+Repare que os produtos **continuam existindo** ao deixarem o depósito, certo?
 
-- Ou seja, as partes continuam existindo mesmo fora do todo.
+## {.smaller}
+
+O fato é que os produtos podem sair do estoque e ir para as gôndolas.
+
+- Além disso, podem existir produtos que vão direto para as gôndolas em alguma ocasião.
+- Ou seja, o depósito **não controla** o tempo de vida dos produtos.
+
+. . .
+
+Dizendo de outra forma, [não é]{.alert} o todo **quem controla o tempo de vida** das partes.
+
+. . .
+
+Nós chamamos esse tipo de relacionamento de [agregação]{.alert}.
+
+## Agregação - Exemplo de Código {.smaller}
+
+Em um sistema de gestão escolar, podemos ter as classes `Departamento` e `Professor`.
+
+- Como o departamento tem professores, os professores devem ser atributos do departamento.
+- Mas se o departamento deixar de existir os professores continuam existindo. Ufa!!! ☺
+- Portanto essa é uma relação de [agregação]{.alert}.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public class Departamento {
+    private ArrayList<Professor> professores;
+
+    public Departamento() {
+        professores = new ArrayList<>();
+    }
+    
+    public void contratarProfessor(Professor professor) {
+        professores.add(professor);
+    }
+
+    // restante do código omitido
+}
+```
+:::
+
+## {.smaller}
+
+Lembre-se que, em uma agregação, o todo **não controla o tempo de vida** das partes. 
+
+. . .
+
+Isso pode ficar explícito no código de duas formas:
+
+- Não é a classe que representa o todo que cria o objeto da parte (como é o caso do exemplo anterior).
+- E/ou, a classe do todo pode até criar a parte, mas ela tem algum método de acesso que retorna (o endereço da) a parte.
+  - Permitindo que outras classes mantenham o objeto da parte, sem o conhecimento da classe que representa o todo.s
+
+## {.smaller}
+
+![](imagens/balao_diferenca_composicao_agregacao.png){.r-stretch}
+
+## Agregação - Resumo {.smaller}
+
+![](imagens/balao_resumo_associacao.png){.r-stretch}
+
+# Relacionamentos de Associação {background-color="#40666e"}
+
+## {.smaller}
+
+Veremos agora o terceiro tipo de relacionamento:
+
+- Suponha, por exemplo, que um professor que dá aulas particulares, resolva fazer um sistema para controlar suas atividades.
+- Ele criou uma classe `Professor` e uma classe `Aluno`.
+  - Qual é o relacionamento entre essas classes?
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="65%"}
+- O professor dá aulas para o aluno e o aluno tem aulas com o professor.
+- Mas não faz sentido dizer que o aluno é parte do professor ou que o professor é formado por alunos. 
+- Portanto, **não é um relacionamento todo / parte**.
+:::
+
+::: {.column width="35%"}
+![](imagens/professor_particular.jpg)
+:::
+
+::::
+
+. . .
+
+Nós chamamos esse tipo de relacionamento de [associação]{.alert}.
+
+## Associação - Exemplo de Código {.smaller}
+
+Vamos pensar no relacionamento entre as classes `Motorista`, `CarteiraDeMotorista` e `Carro`.
+
+- Carteira de Motorista  não é parte de um motorista e nem o contrário. Portanto, é uma associação.
+  - Mas elas têm um relacionamento baseado em propriedade. Um motorista possui uma CNH.
+- Da mesma forma um carro não é parte de um motorista e nem o contrário. Portanto, também é uma associação.
+  - Mas elas têm um relacionamento: um motorista viaja em um carro.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public class Motorista {
+    private CarteiraMotorista cnh;
+	
+    public void tirarCarteira(CarteiraMotorista cnh) 	
+		this.cnh = cnh;
+    }
+
+    public void viajar(Carro carro, int distancia){
+        ...
+        carro.acelerar();
+        ...
+        carro.parar();
+    }
+
+    // restante do código omitido
+}
+```
+:::
+
+## {.smaller}
+
+Repare que, no exemplo anterior, existem duas formas de implementação de associação.
+
+- Uma através de atributo e outra não.
+- O que importa no final das contas é que na associação um objeto chama métodos de outro.
+  - Mas o relacionamento **não é todo/parte**.
+
+## Resumo: Composição, Agregação e Associação {.smaller}
+
+![](imagens/balao_resumo_relacionamentos.png){.r-stretch}
+
+# Cuidado: relacionamentos dependem do contexto {background-color="#40666e"}
+
+## {.smaller}
+
+:::: {.columns}
+
+::: {.column width="65%"}
+![](imagens/game_of_thrones.jpeg)
+:::
+
+::: {.column width="35%"}
+Em séries, como *Game of Thrones*, vemos que não é possível separar completamente os personagens em bons e maus, mocinhos e bandidos.
+
+- Ou seja, ninguém é 100% bom ou 100% mau.
+:::
+
+::::
+
+. . .
+
+Da mesma forma, a **classificação** da relação (se é associação, agregação ou composição) **é relativa**.
+
+- **Depende do contexto**.
