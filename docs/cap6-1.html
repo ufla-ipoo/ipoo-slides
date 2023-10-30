@@ -412,7 +412,7 @@
     </div>
 </div>
 
-  <p class="date">29/10/2023</p>
+  <p class="date">30/10/2023</p>
 </section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
@@ -767,7 +767,7 @@
 <li class="fragment">Não é a classe que representa o todo que cria o objeto da parte (como é o caso do exemplo anterior).</li>
 <li class="fragment">E/ou, a classe do todo pode até criar a parte, mas ela tem algum método de acesso que retorna (o endereço da) a parte.
 <ul>
-<li class="fragment">Permitindo que outras classes mantenham o objeto da parte, sem o conhecimento da classe que representa o todo.s</li>
+<li class="fragment">Permitindo que outras classes mantenham o objeto da parte, sem o conhecimento da classe que representa o todo.</li>
 </ul></li>
 </ul>
 </div>
@@ -775,6 +775,13 @@
 <section id="section-19" class="slide level2 smaller">
 <h2></h2>
 <img data-src="imagens/balao_diferenca_composicao_agregacao.png" class="r-stretch">
+<div class="fragment">
+<p>Uma outra forma de <strong>diferenciar Composição de Agregação</strong> é pensar que:</p>
+<ul>
+<li class="fragment">Na composição, as partes estão totalmente encapsuladas no todo.</li>
+<li class="fragment">De fora da classe do todo, nem precisamos saber <strong>como</strong> a parte é tratada.</li>
+</ul>
+</div>
 </section>
 <section id="agregação---resumo" class="slide level2 smaller">
 <h2>Agregação - Resumo</h2>
@@ -798,8 +805,8 @@
 <div class="fragment">
 <div class="columns">
 <div class="column" style="width:65%;">
+<p>O professor dá aulas para o aluno e o aluno tem aulas com o professor.</p>
 <ul>
-<li class="fragment">O professor dá aulas para o aluno e o aluno tem aulas com o professor.</li>
 <li class="fragment">Mas não faz sentido dizer que o aluno é parte do professor ou que o professor é formado por alunos.</li>
 <li class="fragment">Portanto, <strong>não é um relacionamento todo / parte</strong>.</li>
 </ul>
@@ -810,10 +817,285 @@
 </div>
 <div class="fragment">
 <p>Nós chamamos esse tipo de relacionamento de <span class="alert">associação</span>.</p>
+</div>
+</section>
+<section id="associação---exemplo-de-código" class="slide level2 smaller">
+<h2>Associação - Exemplo de Código</h2>
+<p>Vamos pensar no relacionamento entre as classes <code>Motorista</code>, <code>CarteiraDeMotorista</code> e <code>Carro</code>.</p>
+<ul>
+<li class="fragment">Carteira de Motorista não é parte de um motorista e nem o contrário. Portanto, é uma associação.
+<ul>
+<li class="fragment">Mas elas têm um relacionamento baseado em propriedade. Um motorista possui uma CNH.</li>
+</ul></li>
+<li class="fragment">Da mesma forma um carro não é parte de um motorista e nem o contrário. Portanto, também é uma associação.
+<ul>
+<li class="fragment">Mas elas têm um relacionamento: um motorista viaja em um carro.</li>
+</ul></li>
+</ul>
+</section>
+<section id="associação---exemplo-de-código-1" class="slide level2 smaller">
+<h2>Associação - Exemplo de Código</h2>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb4" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Motorista <span class="op">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> CarteiraMotorista cnh<span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tirarCarteira</span><span class="op">(</span>CarteiraMotorista cnh<span class="op">)</span>    </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">cnh</span> <span class="op">=</span> cnh<span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">viajar</span><span class="op">(</span>Carro carro<span class="op">,</span> <span class="dt">int</span> distancia<span class="op">){</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">...</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        carro<span class="op">.</span><span class="fu">acelerar</span><span class="op">();</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">...</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        carro<span class="op">.</span><span class="fu">parar</span><span class="op">();</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">// restante do código omitido</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="section-21" class="slide level2 smaller">
+<h2></h2>
+<p>Repare que, no exemplo anterior, existem duas formas de implementação de associação.</p>
+<ul>
+<li class="fragment">Uma através de atributo e outra não.</li>
+<li class="fragment">O que importa no final das contas é que na associação um objeto chama métodos de outro.
+<ul>
+<li class="fragment">Mas o relacionamento <strong>não é todo/parte</strong>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="resumo-composição-agregação-e-associação" class="slide level2 smaller">
+<h2>Resumo: Composição, Agregação e Associação</h2>
+<img data-src="imagens/balao_resumo_relacionamentos.png" class="r-stretch">
+</section></section>
+<section>
+<section id="cuidado-relacionamentos-dependem-do-contexto" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Cuidado: relacionamentos dependem do contexto</h1>
+
+</section>
+<section id="section-22" class="slide level2 smaller">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p><img data-src="imagens/game_of_thrones.jpeg"></p>
+</div><div class="column" style="width:35%;">
+<p>Em séries, como <em>Game of Thrones</em>, vemos que não é possível separar completamente os personagens em bons e maus, mocinhos e bandidos.</p>
+<ul>
+<li class="fragment">Ou seja, ninguém é 100% bom ou 100% mau.</li>
+</ul>
+</div>
+</div>
+<div class="fragment">
+<p>Da mesma forma, a <strong>classificação</strong> da relação (se é associação, agregação ou composição) <strong>é relativa</strong>.</p>
+<ul>
+<li class="fragment"><strong>Depende do contexto</strong>.</li>
+</ul>
+</div>
+</section>
+<section id="section-23" class="slide level2 smaller">
+<h2></h2>
+<p>Voltemos ao exemplo das classes <code>Carro</code> e <code>Motor</code>.</p>
+<ul>
+<li class="fragment">Nós vimos que a relação entre essas classes foi classificada como Composição.</li>
+</ul>
+<img data-src="imagens/partes_carro.jpg" class="r-stretch">
+<div class="fragment">
+<p>Mas o que vocês pensam sobre esse caso?</p>
+</div>
+<div class="fragment">
+<img data-src="imagens/print_manchete_troca_de_motor.png" class="r-stretch">
+</div>
+</section>
+<section id="section-24" class="slide level2 smaller">
+<h2></h2>
+<p><img data-src="imagens/print_manchete_troca_de_motor.png"></p>
+<p>Nesse caso, um motor existe independentemente do carro.</p>
+<ul>
+<li class="fragment">Portanto, não é o carro quem controla o tempo de vida do motor.</li>
+<li class="fragment">E, por isso, o relacionamento não pode mais ser classificado como composição.</li>
+</ul>
+<div class="fragment">
+<p>Qual seria o relacionamento nesse caso então?</p>
+<ul>
+<li class="fragment">Como continua sendo um relacionamento todo/parte,</li>
+<li class="fragment">É um relacionamento de <strong>agregação</strong>.</li>
+</ul>
+</div>
+</section>
+<section id="section-25" class="slide level2 smaller">
+<h2></h2>
+<p>Podemos então concluir que:</p>
+<ul>
+<li class="fragment">Não basta simplesmente decorar pares de classes com suas respectivas relações.</li>
+<li class="fragment">O relacionamento entre as classes sempre dependerá do contexto, do problema que está sendo tratado.</li>
+</ul>
+</section>
+<section id="section-26" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Defina o relacionamento entre as classes representadas pelas palavras destacadas nas situações abaixo:</p>
+<ol type="1">
+<li class="fragment">Estamos trabalhando em um sistema para controlar um aeroporto. Precisaremos modelar a <strong>pista de pouso</strong> e os <strong>aviões</strong> para simular os pousos e decolagens.</li>
+<li class="fragment">O jogo vai ser muito bacana. Vai ter um <strong>helicóptero</strong> que voa baixo e rápido e que possui <strong>metralhadoras</strong> acopladas. Mas tem que treinar bastante pra conseguir ser um bom piloto e fazer um ataque de verdade.</li>
+<li class="fragment">A Câmara de Vereadores está informatizando todo seu processo legislativo. Como forma de divulgação, eles farão um jogo educativo no qual os <strong>cidadãos</strong> poderão propor leis que melhorem a vida na <strong>cidade</strong>.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="section-27" class="slide level2">
+<h2></h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
+</div>
+<div class="callout-content">
+<div>
+<p>Crie classes em Java para as situações apresentadas no exerício anterior.</p>
+<ul>
+<li>No comentário do cabeçalho de cada classe coloque o tipo de relacionamento que a classe possui com a outra classe e justifique sua resposta.
+<ul>
+<li>Ex.: Esta classe <code>PistaDePouso</code> possui um relacionamento de __________ com a classe <code>Avião</code>, pois ______.</li>
+</ul></li>
+</ul>
+<p>Obs.: você não precisa criar um programa completo, mas precisa fazer um código que demonstre completamente que ele implementa os tipos de relacionamento que você respondeu no exercício.</p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="composição-e-falha-de-encapsulamento" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Composição e falha de encapsulamento</h1>
+
+</section>
+<section id="section-28" class="slide level2 smaller">
+<h2></h2>
+<p>Vale a pena reforçar um ponto que foi discutido ao apresentar o <strong>Relacionamento de Composição</strong>.</p>
+<ul>
+<li class="fragment">Vamos fazer isso através de um exemplo.</li>
+</ul>
+<div class="fragment">
+<p>No início da disciplina, usamos o projeto <a href="https://github.com/ufla-ipoo/casa">casa</a>, que tinha uma classe <code>Figura</code>.</p>
+<ul>
+<li class="fragment">A classe <code>Figura</code> desenhava uma casa formada por uma parede, uma janela e um telhado, sendo estes objetos das classes <code>Quadrado</code> e <code>Triangulo</code>.</li>
+<li class="fragment">Seguindo o conceito de <strong>encapsulamento</strong>, os atributos da classe são privados.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Repare que o relacionamento entre a classe <code>Figura</code> e as classes <code>Quadrado</code> e <code>Triangulo</code> é de <strong>composição</strong>.</p>
+<ul>
+<li class="fragment">Pois a figura <span class="alert">tem</span> paredes (quadrado) e telhado (triângulo), eles são <span class="alert">partes</span> da figura.</li>
+<li class="fragment">E a figura <span class="alert">controla o tempo de vida</span> das partes.</li>
+</ul>
+</div>
+</section>
+<section id="section-29" class="slide level2 smaller">
+<h2></h2>
+<p>Mas suponha que a classe <code>Figura</code> tivesse um <strong>método de acesso</strong> que retornasse o telhado.</p>
+<ul>
+<li class="fragment">O relacionamento continuaria sendo de <strong>composição</strong>?</li>
+<li class="fragment">E, principalmente, o <strong>encapsulamento</strong> continuaria sendo respeitado?</li>
+</ul>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb5" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> Triangulo <span class="fu">obterTelhado</span><span class="op">(){</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> telhado<span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="section-30" class="slide level2 smaller">
+<h2></h2>
+<p>Suponha, por exemplo, que tenhamos um objeto <code>figura1</code> como mostrado na figura abaixo.</p>
+<ul>
+<li class="fragment">Repare que podemos, de fora da classe <code>Figura</code>, obter uma referência para o objeto telhado.</li>
+</ul>
+<img data-src="imagens/falha_encapsulamento_get_1.png" class="r-stretch">
+</section>
+<section id="section-31" class="slide level2 smaller">
+<h2></h2>
+<p>E, com isso, podemos alterar a cor do telhado sem que a classe <code>Figura</code> tome conhecimento.</p>
+<ul>
+<li class="fragment">O que é uma <strong>falha de encapsulamento</strong>!</li>
+</ul>
+<img data-src="imagens/falha_encapsulamento_get_2.png" class="r-stretch">
+</section>
+<section id="section-32" class="slide level2 smaller">
+<h2></h2>
+<p>Veja que um método de acesso que retorne um atributo que é um objeto:</p>
+<ul>
+<li class="fragment">tem o mesmo efeito de deixar o atributo público.</li>
+</ul>
+<div class="fragment">
+<p>Mas, <strong>se</strong> o relacionamento desejado era de <strong>composição</strong>,</p>
+<ul>
+<li class="fragment">Isto é uma <strong>falha de encapsulamento</strong>.</li>
+<li class="fragment">Além de, tecnicamente, no código, o relacionamento se tornar uma agregação.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Por isso, é muito importante, ao criar uma classe, <strong>documentar</strong> o seu relacionamento com as classes dos atributos.</p>
+<ul>
+<li class="fragment">Podemos fazer isso nos comentários da classe.</li>
+<li class="fragment">Ou, usando <strong>Diagramas de Classes UML</strong> (assunto visto na disciplina PPOO).</li>
+</ul>
+</div>
+</section>
+<section id="section-33" class="slide level2 smaller">
+<h2></h2>
+<p>Por outro lado, veja que nos casos onde o relacionamento desejado é de <strong>agregação</strong>,</p>
+<ul>
+<li class="fragment">não há problema em ter um método de acesso que retorne o atributo.</li>
+<li class="fragment">Pois, nestes casos, o todo não controla o tempo de vida das partes.
+<ul>
+<li class="fragment">E se houver alguma modificação no atributo, isso não é um problema para o todo.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Veja, por exemplo, o caso do relacionamento entre as classes <code>Local</code> e <code>Item</code> no jogo <strong>World of Zuul</strong>.</p>
+<ul>
+<li class="fragment">Um local tem um item, e um item faz parte do local.</li>
+<li class="fragment">Mas não é o local quem controla o tempo de vida dos itens.
+<ul>
+<li class="fragment">Pois os itens são criados fora do local e podem ser removidos do local.</li>
+</ul></li>
+<li class="fragment">Portanto, o relacionamento entre as classes é de <strong>agregação</strong>.</li>
+<li class="fragment">Neste caso, a classe <code>Local</code> pode ter um método que retorne o item, e isso não é uma falha de encapsulamento!</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="entregas-dessa-aula" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Entregas dessa Aula</h1>
+
+</section>
+<section id="section-34" class="slide level2 smaller">
+<h2></h2>
+<div>
+<p>Para ter <strong>presença</strong> nessa aula teórica ANP, você deve fazer a atividade abaixo.</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Entregas no Campus Virtual</strong></p>
+</div>
+<div class="callout-content">
+<p>Responda a tarefa no Campus Virtual enviando os trechos de código em Java que você fez no exercício marcado para entrega.</p>
+</div>
+</div>
+</div>
+</div>
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
-</div>
 </div>
 </section></section>
     </div>

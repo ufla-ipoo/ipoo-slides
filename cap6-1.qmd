@@ -386,11 +386,18 @@ Isso pode ficar explícito no código de duas formas:
 
 - Não é a classe que representa o todo que cria o objeto da parte (como é o caso do exemplo anterior).
 - E/ou, a classe do todo pode até criar a parte, mas ela tem algum método de acesso que retorna (o endereço da) a parte.
-  - Permitindo que outras classes mantenham o objeto da parte, sem o conhecimento da classe que representa o todo.s
+  - Permitindo que outras classes mantenham o objeto da parte, sem o conhecimento da classe que representa o todo.
 
 ## {.smaller}
 
 ![](imagens/balao_diferenca_composicao_agregacao.png){.r-stretch}
+
+. . .
+
+Uma outra forma de **diferenciar Composição de Agregação** é pensar que:
+
+- Na composição, as partes estão totalmente encapsuladas no todo.
+- De fora da classe do todo, nem precisamos saber **como** a parte é tratada.
 
 ## Agregação - Resumo {.smaller}
 
@@ -411,7 +418,8 @@ Veremos agora o terceiro tipo de relacionamento:
 :::: {.columns}
 
 ::: {.column width="65%"}
-- O professor dá aulas para o aluno e o aluno tem aulas com o professor.
+O professor dá aulas para o aluno e o aluno tem aulas com o professor.
+
 - Mas não faz sentido dizer que o aluno é parte do professor ou que o professor é formado por alunos. 
 - Portanto, **não é um relacionamento todo / parte**.
 :::
@@ -434,6 +442,8 @@ Vamos pensar no relacionamento entre as classes `Motorista`, `CarteiraDeMotorist
   - Mas elas têm um relacionamento baseado em propriedade. Um motorista possui uma CNH.
 - Da mesma forma um carro não é parte de um motorista e nem o contrário. Portanto, também é uma associação.
   - Mas elas têm um relacionamento: um motorista viaja em um carro.
+
+## Associação - Exemplo de Código {.smaller}
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
@@ -491,3 +501,172 @@ Em séries, como *Game of Thrones*, vemos que não é possível separar completa
 Da mesma forma, a **classificação** da relação (se é associação, agregação ou composição) **é relativa**.
 
 - **Depende do contexto**.
+
+## {.smaller}
+
+Voltemos ao exemplo das classes `Carro` e `Motor`.
+
+- Nós vimos que a relação entre essas classes foi classificada como Composição.
+
+![](imagens/partes_carro.jpg){.r-stretch}
+
+. . .
+
+Mas o que vocês pensam sobre esse caso?
+
+. . .
+
+![](imagens/print_manchete_troca_de_motor.png){.r-stretch}
+
+## {.smaller}
+
+![](imagens/print_manchete_troca_de_motor.png)
+
+Nesse caso, um motor existe independentemente do carro.
+
+- Portanto, não é o carro quem controla o tempo de vida do motor.
+- E, por isso, o relacionamento não pode mais ser classificado como composição.
+
+. . .
+
+Qual seria o relacionamento nesse caso então?
+
+- Como continua sendo um relacionamento todo/parte,
+- É um relacionamento de **agregação**.
+
+## {.smaller}
+
+Podemos então concluir que:
+
+- Não basta simplesmente decorar pares de classes com suas respectivas relações. 
+- O relacionamento entre as classes sempre dependerá do contexto, do problema que está sendo tratado.
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Defina o relacionamento entre as classes representadas pelas palavras destacadas nas situações abaixo:
+
+1. Estamos trabalhando em um sistema para controlar um aeroporto. Precisaremos modelar a **pista de pouso** e os **aviões** para simular os pousos e decolagens.
+2. O jogo vai ser muito bacana. Vai ter um **helicóptero** que voa baixo e rápido e que possui **metralhadoras** acopladas. Mas tem que treinar bastante pra conseguir ser um bom piloto e fazer um ataque de verdade.
+3. A Câmara de Vereadores está informatizando todo seu processo legislativo. Como forma de divulgação, eles farão um jogo educativo no qual os **cidadãos** poderão propor leis que melhorem a vida na **cidade**.
+:::
+
+## 
+
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+::: {.nonincremental}
+Crie classes em Java para as situações apresentadas no exerício anterior.
+
+- No comentário do cabeçalho de cada classe coloque o tipo de relacionamento que a classe possui com a outra classe e justifique sua resposta.
+  - Ex.: Esta classe `PistaDePouso` possui um relacionamento de __________ com a classe `Avião`, pois ______.
+
+Obs.: você não precisa criar um programa completo, mas precisa fazer um código que demonstre completamente que ele implementa os tipos de relacionamento que você respondeu no exercício.
+:::
+:::
+
+# Composição e falha de encapsulamento {background-color="#40666e"}
+
+## {.smaller}
+
+Vale a pena reforçar um ponto que foi discutido ao apresentar o **Relacionamento de Composição**.
+
+- Vamos fazer isso através de um exemplo.
+
+. . .
+
+No início da disciplina, usamos o projeto [casa](https://github.com/ufla-ipoo/casa), que tinha uma classe `Figura`.
+
+- A classe `Figura` desenhava uma casa formada por uma parede, uma janela e um telhado, sendo estes objetos das classes `Quadrado` e `Triangulo`.
+- Seguindo o conceito de **encapsulamento**, os atributos da classe são privados.
+
+. . .
+
+Repare que o relacionamento entre a classe `Figura` e as classes `Quadrado` e `Triangulo` é de **composição**.
+
+- Pois a figura [tem]{.alert} paredes (quadrado) e telhado (triângulo), eles são [partes]{.alert} da figura.
+- E a figura [controla o tempo de vida]{.alert} das partes.
+
+## {.smaller}
+
+Mas suponha que a classe `Figura` tivesse um **método de acesso** que retornasse o telhado.
+
+- O relacionamento continuaria sendo de **composição**?
+- E, principalmente, o **encapsulamento** continuaria sendo respeitado?
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    public Triangulo obterTelhado(){
+        return telhado;
+    }
+```
+:::
+
+## {.smaller}
+
+Suponha, por exemplo, que tenhamos um objeto `figura1` como mostrado na figura abaixo.
+
+- Repare que podemos, de fora da classe `Figura`, obter uma referência para o objeto telhado.
+
+![](imagens/falha_encapsulamento_get_1.png){.r-stretch}
+
+## {.smaller}
+
+E, com isso, podemos alterar a cor do telhado sem que a classe `Figura` tome conhecimento.
+
+- O que é uma **falha de encapsulamento**!
+
+![](imagens/falha_encapsulamento_get_2.png){.r-stretch}
+
+
+## {.smaller}
+
+Veja que um método de acesso que retorne um atributo que é um objeto:
+
+- tem o mesmo efeito de deixar o atributo público.
+
+. . .
+
+Mas, **se** o relacionamento desejado era de **composição**,
+
+- Isto é uma **falha de encapsulamento**.
+- Além de, tecnicamente, no código, o relacionamento se tornar uma agregação.
+
+. . . 
+
+Por isso, é muito importante, ao criar uma classe, **documentar** o seu relacionamento com as classes dos atributos.
+
+- Podemos fazer isso nos comentários da classe.
+- Ou, usando **Diagramas de Classes UML** (assunto visto na disciplina PPOO).
+
+## {.smaller}
+
+Por outro lado, veja que nos casos onde o relacionamento desejado é de **agregação**,
+
+- não há problema em ter um método de acesso que retorne o atributo.
+- Pois, nestes casos, o todo não controla o tempo de vida das partes.
+  - E se houver alguma modificação no atributo, isso não é um problema para o todo.
+
+. . .
+
+Veja, por exemplo, o caso do relacionamento entre as classes `Local` e `Item` no jogo **World of Zuul**.
+
+- Um local tem um item, e um item faz parte do local.
+- Mas não é o local quem controla o tempo de vida dos itens.
+  - Pois os itens são criados fora do local e podem ser removidos do local.
+- Portanto, o relacionamento entre as classes é de **agregação**.
+- Neste caso, a classe `Local` pode ter um método que retorne o item, e isso não é uma falha de encapsulamento!
+
+# Entregas dessa Aula {background-color="#40666e"}
+
+## {.smaller}
+
+::: {.nonincremental}
+
+Para ter **presença** nessa aula teórica ANP, você deve fazer a atividade abaixo.
+
+::: {.callout-important title="Entregas no Campus Virtual"}
+Responda a tarefa no Campus Virtual enviando os trechos de código em Java que você fez no exercício marcado para entrega.
+:::
+
+:::
+
