@@ -656,6 +656,14 @@ Veja, por exemplo, o caso do relacionamento entre as classes `Local` e `Item` no
 - Portanto, o relacionamento entre as classes é de **agregação**.
 - Neste caso, a classe `Local` pode ter um método que retorne o item, e isso não é uma falha de encapsulamento!
 
+# Estratégias de depuração {background-color="#40666e"}
+
+## {.smaller}
+
+O conteúdo de [Estratégias de Depuração]{.alert} está em uma [apresentação separada](https://docs.google.com/presentation/d/13j1yuqfqCCknchh2eX0scH2ovJpUfHhZCriwtG0sEUE/edit?usp=sharing).
+
+![](imagens/slides_estrategias_depuracao.png)
+
 # Entregas dessa Aula {background-color="#40666e"}
 
 ## {.smaller}

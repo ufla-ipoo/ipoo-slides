@@ -44,6 +44,7 @@
   - [Aula 7.1 - Teórica](https://docs.google.com/presentation/d/1DZTU_jEUavfASD8cIGk_YzywxBkGDEHsn8lAQxtxycw/edit?usp=sharing)
 - **Capítulo 6**
   - [Aula 6.1 - Teórica](cap6-1.html)
+  - [Aula 6.1b - Teórica](https://docs.google.com/presentation/d/13j1yuqfqCCknchh2eX0scH2ovJpUfHhZCriwtG0sEUE/edit?usp=sharing)
 - **Trabalho Prático**
   - [Tutorial do Greenfoot](greenfoot-tutorial.html)
 
