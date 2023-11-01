@@ -16,6 +16,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
+  <meta name="dcterms.date" content="2023-01-11">
   <title>IPOO - Relacionamentos de Classes</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -412,11 +413,11 @@
     </div>
 </div>
 
-  <p class="date">30/10/2023</p>
+  <p class="date">01/11/2023</p>
 </section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
-<p>Vai aí um conselho:</p>
+<p>Vai aí um <strong>conselho</strong>:</p>
 <ul>
 <li class="fragment">Seu <span class="alert">desempenho</span> como profissional <strong>no futuro</strong> <em>depende</em> de seu <span class="alert">empenho</span> <strong>agora</strong>.</li>
 <li class="fragment">Tome nota durante as aulas.
@@ -449,7 +450,7 @@
 <div class="fragment">
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>Nós dizemos que os <strong>objetos se relacionam quando enviam mensagens</strong> uns aos outros.</p>
+<p>Nós dizemos que os <strong>objetos <span class="alert">se relacionam</span> quando enviam mensagens</strong> uns aos outros.</p>
 <ul>
 <li class="fragment">Sistemas orientados a objetos dependem muito de como os objetos se relacionam.</li>
 <li class="fragment">O planejamento/modelagem das classes se baseiam nesses relacionamentos.</li>
@@ -530,7 +531,8 @@
 <h2></h2>
 <p>Vamos começar com um exemplo de classes <code>Carro</code> e <code>Motor</code>.</p>
 <ul>
-<li class="fragment">Como podemos dizer que é o relacionamento entre os objetos das classes <code>Carro</code> e <code>Motor</code>? <img data-src="imagens/partes_carro.jpg" class="r-stretch"></li>
+<li class="fragment"><p>Como podemos dizer que é o relacionamento entre os objetos das classes <code>Carro</code> e <code>Motor</code>?</p>
+<img data-src="imagens/partes_carro.jpg" class="r-stretch"></li>
 </ul>
 <div class="fragment">
 <p>Podemos dizer que <strong>um carro</strong> <span class="alert">tem um</span> <strong>motor</strong>.</p>
@@ -659,10 +661,8 @@
 <p>Como o motor e as portas são partes do carro, eles devem ser atributos do carro.</p>
 <ul>
 <li class="fragment">E como qualquer atributo devem ser privados.</li>
+<li class="fragment">O carro controla o tempo de vida do motor e das portas, portanto é ele quem cria os objetos do motor e das portas.</li>
 </ul>
-<div class="fragment">
-<p>O carro controla o tempo de vida do motor e das portas, portanto é ele quem cria os objetos do motor e das portas.</p>
-</div>
 </section>
 <section id="section-13" class="slide level2 smaller">
 <h2></h2>
@@ -707,7 +707,7 @@
 </ul>
 </div>
 <div class="fragment">
-<p>Então, à primeira, vista parece uma composição, certo?</p>
+<p>Então, à primeira vista, parece uma composição, certo?</p>
 </div>
 </section>
 <section id="section-16" class="slide level2 smaller">
@@ -720,13 +720,13 @@
 </section>
 <section id="section-17" class="slide level2 smaller">
 <h2></h2>
-<p>O fato é que os produtos podem sair do estoque e ir para as gôndolas.</p>
+<p>O fato é que os produtos podem sair do depósito e ir para as gôndolas.</p>
 <ul>
-<li class="fragment">Além disso, podem existir produtos que vão direto para as gôndolas em alguma ocasião.</li>
-<li class="fragment">Ou seja, o depósito <strong>não controla</strong> o tempo de vida dos produtos.</li>
+<li class="fragment">Além disso, podem existir produtos que vão direto para as gôndolas (sem passar pelo depósito).</li>
+<li class="fragment">Portanto, o depósito <span class="alert">não controla</span> o tempo de vida dos produtos.</li>
 </ul>
 <div class="fragment">
-<p>Dizendo de outra forma, <span class="alert">não é</span> o todo <strong>quem controla o tempo de vida</strong> das partes.</p>
+<p>Dizendo de outra forma, <span class="alert">não é o todo</span> <strong>quem controla o tempo de vida</strong> das partes.</p>
 </div>
 <div class="fragment">
 <p>Nós chamamos esse tipo de relacionamento de <span class="alert">agregação</span>.</p>
@@ -811,7 +811,7 @@
 <li class="fragment">Portanto, <strong>não é um relacionamento todo / parte</strong>.</li>
 </ul>
 </div><div class="column" style="width:35%;">
-<p><img data-src="imagens/professor_particular.jpg"></p>
+<p><img data-src="imagens/professor_particular.jpg" style="width:70.0%"></p>
 </div>
 </div>
 </div>
@@ -823,13 +823,13 @@
 <h2>Associação - Exemplo de Código</h2>
 <p>Vamos pensar no relacionamento entre as classes <code>Motorista</code>, <code>CarteiraDeMotorista</code> e <code>Carro</code>.</p>
 <ul>
-<li class="fragment">Carteira de Motorista não é parte de um motorista e nem o contrário. Portanto, é uma associação.
+<li class="fragment">A carteira de motorista não é parte de um motorista e nem o contrário. Portanto, é uma associação.
 <ul>
-<li class="fragment">Mas elas têm um relacionamento baseado em propriedade. Um motorista possui uma CNH.</li>
+<li class="fragment">Elas têm um relacionamento baseado em propriedade. Um motorista <strong>possui</strong> uma CNH.</li>
 </ul></li>
 <li class="fragment">Da mesma forma um carro não é parte de um motorista e nem o contrário. Portanto, também é uma associação.
 <ul>
-<li class="fragment">Mas elas têm um relacionamento: um motorista viaja em um carro.</li>
+<li class="fragment">Elas têm um relacionamento: um motorista <strong>viaja</strong> em um carro.</li>
 </ul></li>
 </ul>
 </section>
@@ -865,8 +865,8 @@
 </ul></li>
 </ul>
 </section>
-<section id="resumo-composição-agregação-e-associação" class="slide level2 smaller">
-<h2>Resumo: Composição, Agregação e Associação</h2>
+<section id="resumo-relacionamentos" class="slide level2 smaller">
+<h2>Resumo: Relacionamentos</h2>
 <img data-src="imagens/balao_resumo_relacionamentos.png" class="r-stretch">
 </section></section>
 <section>
@@ -965,7 +965,7 @@
 <li>Ex.: Esta classe <code>PistaDePouso</code> possui um relacionamento de __________ com a classe <code>Avião</code>, pois ______.</li>
 </ul></li>
 </ul>
-<p>Obs.: você não precisa criar um programa completo, mas precisa fazer um código que demonstre completamente que ele implementa os tipos de relacionamento que você respondeu no exercício.</p>
+<p>Obs.: você não precisa criar a classe completa, mas precisa fazer um código que demonstre completamente que ele implementa o tipo de relacionamento que você respondeu no exercício.</p>
 </div>
 </div>
 </div>
@@ -1058,7 +1058,7 @@
 </ul></li>
 </ul>
 <div class="fragment">
-<p>Veja, por exemplo, o caso do relacionamento entre as classes <code>Local</code> e <code>Item</code> no jogo <strong>World of Zuul</strong>.</p>
+<p>Veja, por exemplo, o caso do relacionamento entre as classes <code>Local</code> e <code>Item</code> no jogo que você está fazendo, baseado no <strong>World of Zuul</strong>.</p>
 <ul>
 <li class="fragment">Um local tem um item, e um item faz parte do local.</li>
 <li class="fragment">Mas não é o local quem controla o tempo de vida dos itens.

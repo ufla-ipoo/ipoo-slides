@@ -5,7 +5,7 @@ subtitle: Aula 6.1 - Teórica
 
 ## {.smaller}
 
-Vai aí um conselho:
+Vai aí um **conselho**:
 
 - Seu [desempenho]{.alert} como profissional **no futuro** *depende* de seu [empenho]{.alert} **agora**.
 - Tome nota durante as aulas.
@@ -39,7 +39,7 @@ Nós já vimos que sistemas orientados a objetos se baseiam em **envio de mensag
 
 ::: {.column width="50%"}
 
-Nós dizemos que os **objetos se relacionam quando enviam mensagens** uns aos outros.
+Nós dizemos que os **objetos [se relacionam]{.alert} quando enviam mensagens** uns aos outros.
 
 - Sistemas orientados a objetos dependem muito de como os objetos se relacionam.
 - O planejamento/modelagem das classes se baseiam nesses relacionamentos.
@@ -119,6 +119,7 @@ Podemos perceber, portanto, que a grande maioria dos softwares orientados a  obj
 Vamos começar com um exemplo de classes `Carro` e `Motor`.
 
 - Como podemos dizer que é o relacionamento entre os objetos das classes `Carro` e `Motor`?
+
   ![](imagens/partes_carro.jpg){.r-stretch}
 
 . . .
@@ -275,10 +276,7 @@ public class Carro {
 Como o motor e as portas são partes do carro, eles devem ser atributos do carro.
 
 - E como qualquer atributo devem ser privados.
-
-. . .
-
-O carro controla o tempo de vida do motor e das portas, portanto é ele quem cria os objetos do motor e das portas.
+- O carro controla o tempo de vida do motor e das portas, portanto é ele quem cria os objetos do motor e das portas.
 
 ## {.smaller}
 
@@ -321,7 +319,7 @@ Voltando nesse exemplo, qual seria o relacionamento entre os **produtos** e o **
 
 . . .
 
-Então, à primeira, vista parece uma composição, certo? 
+Então, à primeira vista, parece uma composição, certo? 
 
 ## {.smaller}
 
@@ -335,14 +333,14 @@ Repare que os produtos **continuam existindo** ao deixarem o depósito, certo?
 
 ## {.smaller}
 
-O fato é que os produtos podem sair do estoque e ir para as gôndolas.
+O fato é que os produtos podem sair do depósito e ir para as gôndolas.
 
-- Além disso, podem existir produtos que vão direto para as gôndolas em alguma ocasião.
-- Ou seja, o depósito **não controla** o tempo de vida dos produtos.
+- Além disso, podem existir produtos que vão direto para as gôndolas (sem passar pelo depósito).
+- Portanto, o depósito [não controla]{.alert} o tempo de vida dos produtos.
 
 . . .
 
-Dizendo de outra forma, [não é]{.alert} o todo **quem controla o tempo de vida** das partes.
+Dizendo de outra forma, [não é o todo]{.alert} **quem controla o tempo de vida** das partes.
 
 . . .
 
@@ -425,7 +423,7 @@ O professor dá aulas para o aluno e o aluno tem aulas com o professor.
 :::
 
 ::: {.column width="35%"}
-![](imagens/professor_particular.jpg)
+![](imagens/professor_particular.jpg){width=70%}
 :::
 
 ::::
@@ -438,10 +436,10 @@ Nós chamamos esse tipo de relacionamento de [associação]{.alert}.
 
 Vamos pensar no relacionamento entre as classes `Motorista`, `CarteiraDeMotorista` e `Carro`.
 
-- Carteira de Motorista  não é parte de um motorista e nem o contrário. Portanto, é uma associação.
-  - Mas elas têm um relacionamento baseado em propriedade. Um motorista possui uma CNH.
+- A carteira de motorista  não é parte de um motorista e nem o contrário. Portanto, é uma associação.
+  - Elas têm um relacionamento baseado em propriedade. Um motorista **possui** uma CNH.
 - Da mesma forma um carro não é parte de um motorista e nem o contrário. Portanto, também é uma associação.
-  - Mas elas têm um relacionamento: um motorista viaja em um carro.
+  - Elas têm um relacionamento: um motorista **viaja** em um carro.
 
 ## Associação - Exemplo de Código {.smaller}
 
@@ -474,7 +472,7 @@ Repare que, no exemplo anterior, existem duas formas de implementação de assoc
 - O que importa no final das contas é que na associação um objeto chama métodos de outro.
   - Mas o relacionamento **não é todo/parte**.
 
-## Resumo: Composição, Agregação e Associação {.smaller}
+## Resumo: Relacionamentos {.smaller}
 
 ![](imagens/balao_resumo_relacionamentos.png){.r-stretch}
 
@@ -560,7 +558,7 @@ Crie classes em Java para as situações apresentadas no exerício anterior.
 - No comentário do cabeçalho de cada classe coloque o tipo de relacionamento que a classe possui com a outra classe e justifique sua resposta.
   - Ex.: Esta classe `PistaDePouso` possui um relacionamento de __________ com a classe `Avião`, pois ______.
 
-Obs.: você não precisa criar um programa completo, mas precisa fazer um código que demonstre completamente que ele implementa os tipos de relacionamento que você respondeu no exercício.
+Obs.: você não precisa criar a classe completa, mas precisa fazer um código que demonstre completamente que ele implementa o tipo de relacionamento que você respondeu no exercício.
 :::
 :::
 
@@ -648,7 +646,7 @@ Por outro lado, veja que nos casos onde o relacionamento desejado é de **agrega
 
 . . .
 
-Veja, por exemplo, o caso do relacionamento entre as classes `Local` e `Item` no jogo **World of Zuul**.
+Veja, por exemplo, o caso do relacionamento entre as classes `Local` e `Item` no jogo que você está fazendo, baseado no **World of Zuul**.
 
 - Um local tem um item, e um item faz parte do local.
 - Mas não é o local quem controla o tempo de vida dos itens.
