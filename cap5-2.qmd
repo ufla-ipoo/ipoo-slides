@@ -109,7 +109,7 @@ Há duas palavras-chave novas nessa declaração: `static` e `final`
 A palalavra-chave `static` do Java serve para declarar [atributos estáticos]{.alert}.
 
 - Atributos desse tipo são guardados na própria classe, não nos objetos.
-  - Ele são também chamados de [variáveis de classe]{.alert}.
+  - Eles são também chamados de [variáveis de classe]{.alert}.
 - Isso torna esses atributos muito diferentes dos atributos comuns que vimos até agora.
   - Lembrando que os atributos comuns são também chamados de **variáveis de instância**.
 
@@ -138,7 +138,7 @@ Já o **atributo estático** `GRAVIDADE` é guardado na classe:
 Os **atributos estáticos** podem ser acessados normalmente dentro de qualquer método da classe.
 
 - Isso significa que todos os objetos compartilham o mesmo atributo.
-- Se um objeto alterar o valor do atributo estático, esse valor será usado para todos os objetos.
+- Se um objeto alterar o valor do atributo estático, esse valor será usado por todos os objetos.
   - Já que existe um único valor na memória.
 
 . . .

@@ -174,9 +174,9 @@ No contexto de POO, uma **coleção** pode ser **representada por uma** [classe]
 Alguns exemplos de coleção comuns no contexto de programação seriam:
 
 - O conjunto de estudantes da universidade no SIG:
-  - A cada semestre novos estudantes são adicionados, e alunos formados são removidos.
+  - A cada semestre, novos estudantes são adicionados, e alunos formados são removidos.
 - Filmes e séries no catálogo da Netflix:
-  - O catálogo é continuamente atualizado, acrescentando novos filmes e séries e retirando outros.
+  - O catálogo é continuamente atualizado, com adição de novos filmes e séries e retirando outros.
 - Os comentários de uma publicação em uma rede social:
   - Novos comentários são postados e comentários também podem ser removidos.
 
@@ -246,7 +246,7 @@ Nesse cenário, precisaremos que o **`ArrayList` guarde objetos String** que rep
 
 ## {.smaller}
 
-A classe vai assumir que cada arquivo tem uma única música.
+A classe vai assumir que cada arquivo representa uma única música.
 
 - E o nome do arquivo tem o nome do artista e da música (usaremos isso mais adiante).
 

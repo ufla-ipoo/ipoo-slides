@@ -1,5 +1,5 @@
 ---
-title: IPOO - Cap. 2 Entendendo as Definições de Classe
+title: IPOO - Cap. 2 Entendendo as Definições de Classes
 subtitle: Aula 2.1 - Teórica
 ---
 
@@ -12,7 +12,7 @@ Relembrando as [dicas]{.alert}:
 ::: {.column width="70%"}
 
 - É essencial **praticar enquanto estuda**, usando o BlueJ.
-- Ajuda muito se você **ler o** capítulo do **livro** da disciplina para tirar dúvidas e complementar o que está sendo estudado.
+- Ajuda muito se você **ler o capítulo do livro** da disciplina para tirar dúvidas e complementar o que está sendo estudado.
 - Use um caderno e caneta para [anotar]{.alert} os principais [conceitos]{.alert} e eventuais [dúvidas]{.alert} que surgirem.
 
 :::
@@ -39,7 +39,7 @@ Gostaria de ressaltar algumas observações sobre o livro:
 - Para construir os slides usei também a 6ª edição do livro (que só tem em inglês).
   - Portanto, os slides podem ter coisas a mais ou ligeiramente diferentes que o livro.
 - Apesar do livro ser em português, todo o código nele é em inglês.
-  - Nos slides vocês podem notar que traduzi todos os códigos para ficar mais fácil entender.
+  - Nos slides, vocês podem notar que traduzi todos os códigos para ficar mais fácil entender.
 - Os exercícios no slide nem sempre são iguais aos do livro.
   - Portanto, sigam o enunciado dos slides.
 - Nem sempre uso a mesma tradução do livro
@@ -55,7 +55,7 @@ Gostaria de ressaltar algumas observações sobre o livro:
 - Atributos
 - Construtores
 - Parâmetros
-- Métodos (de acesso e modificadores)
+- Métodos (de acesso e modificação)
 :::
 
 . . .
@@ -907,7 +907,7 @@ Obs.: escolha nomes representativos para os parâmetros.
 ## Quiz 2.3 {background-color="#f7fad1" .smaller}
 
 ::: {.nonincremental}
-[Complete a frase: _______ têm tempo de vida igual ao do objeto:]{.alert}
+[Complete a frase: _______ tem tempo de vida igual ao do objeto:]{.alert}
 
 a. Parâmetros.
 b. Atributos.
@@ -1333,7 +1333,7 @@ O que exatamente será exibido na tela pelo comando abaixo.
 Adicione um método `imprimirPreco` à classe `MaquinaIngressos`.
 O método deve ter retorno `void`, não ter nenhum parâmetro e exibir uma mensagem como a abaixo.
 ```
-  O preco do ingresso é X centavos
+  O preço do ingresso é X centavos
 ```
 Onde no lugar de X deve aparecer o valor do atributo `preco`.
 :::

@@ -197,7 +197,7 @@ Você deve ter notado que as principais alterações são:
   - Isso afeta diversos métodos que tínhamos implementado.
 - No método `listarTodasAsMusicas`, pedimos ao objeto `Musica` que retorna uma String contendo seus detalhes.
   - Isso indica que estamos deixando a classe `Musica` responsável por fornecer os detalhes a serem exibidos, como o título e o artista.
-  - Este é um exemplo de **design baseado em responsabilidade** que veremos em mais detalhes no Cap. 7.
+  - Este é um exemplo de **design baseado em responsabilidade**, conceito que veremos em mais detalhes no Cap. 7.
 - No método `tocarMusica`, precisamos agora obter o nome do arquivo do objeto `Musica` para passá-lo para o tocador.
 - Foram adicionados também códigos para buscar todas as músicas que estão na pasta principal do projeto.
 
@@ -341,14 +341,14 @@ Um **iterador** é um objeto que permite iterar sobre todos os elementos de uma 
 
 . . .
 
-Realmente, o que fizemos até agora não traz vantagens. Mas há duas situações nas quais um `Iterator` é muito útil:
+Até o momento, o que realizamos não proporciona vantagens significativas. Mas há duas situações nas quais um `Iterator` é muito útil:
 
 1. Para coleções cujo acesso por posição não é possível, ou muito lento.
 2. Para a remoção de elementos de uma coleção
 
 ## Acesso por índice vs. iteradores {.smaller}
 
-Quando estamos usando um `ArrayList`, não faz nenhuma diferença utilizar `while` acessando por índice ou com iteradores.
+Quando estamos usando um `ArrayList`, não faz diferença utilizar `while` acessando por índice ou com iteradores.
 
 - Mas nem toda coleção funciona assim.
 - Veremos coleções mais adiante que não permitem acesso por posição.
@@ -386,7 +386,7 @@ Apesar dessa forma parecer perfeitamente razoável, não é possível remover el
 
 ## {.smaller}
 
-A solução para usar isso é **usar um `Iterator` para remover elementos** de uma coleção.
+A solução para isso é empregar um ** `Iterator` para remover elementos** de uma coleção.
 
 - Além dos métodos `hasNext` e `next`, a classe tem um método `remove`.
 - O método remove o elemento que foi retornado pela última chamada do método `next`.
@@ -605,7 +605,7 @@ public int[] criarVetor() {
 
 ## Vetores de objetos {.smaller}
 
-Nós podemos também criar vetores para guardar objetos.
+Também podemos criar vetores para armazenar objetos.
 
 - Suponha, por exemplo, que queiramos poder criar e trabalhar com vários objetos de uma classe `Carro`.
 
@@ -898,7 +898,7 @@ public class Cavaleiro extends Actor
 
 ## {.smaller}
 
-A alteração no slide anterior apenas carregou as imagens para a memória, mas ainda não faz nenhuma animação.
+A alteração no slide anterior carregou apenas as imagens na memória, mas ainda não implementou a animação
 
 - Para criar a animação, precisamos que seja exibida uma das imagens de cada vez.
 - Podemos então usar o método `act` que é chamado várias vezes por segundo na execução do jogo.
@@ -907,7 +907,7 @@ A alteração no slide anterior apenas carregou as imagens para a memória, mas 
 
 . . .
 
-Repare que para que consigamos mudar para a próxima imagem, precisaremos de um atributo que indique qual é a imagem atual.
+Observe que, para conseguirmos mudar para a próxima imagem, precisaremos de um atributo que indique qual é a imagem atual.
 
 - Vamos então criar um atributo inteiro `indiceImagemAtual`, e inicializá-lo com `0` no construtor.
 - Feito isso, podemos utilizá-lo no método `act`, como mostrado no slide a seguir.
@@ -950,7 +950,7 @@ O que achou da animação?
 
 Veja que a animação ficou muito acelerada.
 
-- Isso porque a quantidade de vezes por segundo que o método `act` está sendo chamado é muito alta para as imagens que estamos usando.
+Isso ocorre porque a frequência com que o método `act` está sendo chamado por segundo é muito alta para as imagens que estamos usando.
 
 . . .
 

@@ -20,7 +20,7 @@ Acesse o menu **Projeto** --> **Novo Projeto**.
 
 Aparecerá uma caixa de diálogo na qual você informará o **nome do projeto**.
 
-- Você pode também mudar a pasta onde o projeto será colocado.
+- Você também pode mudar a pasta onde o projeto será colocado.
   - Será criada uma subpasta dentro dela com o nome que escolheu para o projeto.
 - O projeto será criado, a princípio, sem nenhuma classe.
 
