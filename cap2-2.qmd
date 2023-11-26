@@ -23,7 +23,7 @@ Como já foi comentado na aula passada:
 Lembre-se que para ter presença na aula prática é necessário.
 
 - Responder à **chamada**;
-- e, **também**, entregar, no mínimo, 30% do exercícios propostos até o final da aula.
+- e, **também** entregar, no mínimo, 30% do exercícios propostos até o final da aula.
 :::
 :::
 
@@ -58,10 +58,10 @@ Teste as alterações criando máquinas usando os dois construtores.
 ::: {.nonincremental}
 
 ::: {.callout-note title="Exercício 1.3" icon=false}
-Crie um método na classe `MaquinaIngressos` que retorne o valor do total de dinheiro arrecadado na máquina (o valor do atributo `total`). 
+Crie um método na classe `MaquinaIngressos` que retorne o valor total de dinheiro arrecadado na máquina (o valor do atributo `total`). 
 Ao escolher o nome do método, siga a convenção de nomenclatura da classe.
 
-Acrescente um comentário no método dizendo se esse é um *método de acesso* ou um *método modificador*, justificando sua resposta.
+Acrescente um comentário no método dizendo se este é um *método de acesso* ou um *método modificador*, justificando sua resposta.
 :::
 
 ::: {.callout-note title="Exercício 1.4" icon=false}
@@ -81,7 +81,7 @@ Por fim, teste sua implementação inserindo dinheiro na máquina, comprando ing
 
 
 ::: {.callout-note title="Exercício 1.5" icon=false}
-Ao imprimir um ingresso você deve ter notado que aparece o texto `Ingressos & Cia`, que seria o nome da empresa que vende os ingressos.
+Ao imprimir um ingresso, você deve ter notado que aparece o texto `Ingressos & Cia`, que seria o nome da empresa que vende os ingressos.
 Vamos agora permitir que cada máquina possa vender ingressos de uma empresa diferente.
 Repare que, para isso, quando uma máquina é criada ela precisará guardar o nome da empresa.
 

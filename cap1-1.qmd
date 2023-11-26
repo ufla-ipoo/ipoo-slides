@@ -67,7 +67,7 @@ Em qualquer dos casos, é altamente recomendável, ter um caderno e caneta para 
 
 . . .
 
-Vamos começar nossa jornada no mundo da [Programação Orientada a Objetos]{.alert} (PPOO)!
+Vamos iniciar nossa jornada no mundo da [Programação Orientada a Objetos]{.alert} (PPOO)!
 
 . . .
 
@@ -298,7 +298,7 @@ Ao abrir o projeto, você verá um diagrama.
 
 ::: {.column width="50%"}
 
-Você verá um retângulo na parte inferior do BlueJ, chamado "circulo1".
+Você verá um retângulo na parte inferior do BlueJ, chamado "círculo1".
 
 ![](imagens/print_bluej_objeto.png)
 
@@ -446,7 +446,7 @@ Tente chamar os métodos **moverVertical**, **moverVerticalLento** e **mudarTama
 
 As informações adicionais que alguns métodos precisam para executar são chamadas [parâmetros]{.alert}.
 
-- O método indica que tipos de parâmetros ele precisa.
+- O método indica quais tipos de parâmetros ele precisa.
 
 ## {.smaller}
 

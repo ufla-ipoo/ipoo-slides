@@ -114,7 +114,7 @@ Experimente a simulação do sistema de e-mails.
 
 Ao fazer o exercício anterior vimos que:
 
-- O projeto tem três classes: `ServidorDeEmail`, `ClienteDeEmail` e `Email`.
+- O projeto possui três classes: `ServidorDeEmail`, `ClienteDeEmail` e `Email`.
 - Um objeto servidor de email deve ser criado primeiro para ser usado pelos clientes de e-mail.
   - É ele quem cuida da troca de mensagens.
 - Vários clientes de e-mail podem ser criados.

@@ -40,7 +40,7 @@ Lembre-se que para ter presença na aula prática é necessário.
 
 . . .
 
-Tende adivinhar os resultados das expressões abaixo, antes de usar o Bloco de Códigos.
+Tente adivinhar os resultados das expressões abaixo, antes de usar o Bloco de Códigos.
 
 - `2023 + 4`
 - `"passa" + "tempo"`
@@ -145,13 +145,13 @@ Baixe o **projeto [exercicio-livro](https://github.com/ufla-ipoo/exercicio-livro
 ##
 
 ::: {.callout-note title="Exercício 1.1" icon=false}
-Adicione dois métodos, `imprimirAutor` e `imprimirTitulo`, à classe `Livro` que exibem os valores do atributo correspondente no terminal.
+Adicione dois métodos, `imprimirAutor` e `imprimirTitulo`, à classe `Livro` que exibam os valores dos atributos autor e título no terminal.
 :::
 
 . . .
 
 ::: {.callout-note title="Exercício 1.2" icon=false}
-Adicione um atibuto `paginas` à classe `Livro` para guardar a quantidade de páginas do livro.
+Adicione um atributo `paginas` à classe `Livro` para guardar a quantidade de páginas do livro.
 O atributo deve ser do tipo `int` e seu valor inicial deve ser passado para o construtor junto com o `autor` e o `titulo`.
 Adicione também um método de acesso `obterPaginas` para esse atributo.
 :::
@@ -203,7 +203,7 @@ Dica: use um comando condicional e o método `length` da classe String para sabe
 
 ::: {.callout-note title="Exercício 1.7" icon=false}
 Altere o método que define o número de chamada de forma que ele só aceite números de chamada que tenham pelo menos três caracteres.
-Caso o valor passado tenha menos que três caracteres, uma mensagem de erro deve ser exibida e o número de chamada não deve ser alterado.
+Caso o valor passado tenha menos de três caracteres, uma mensagem de erro deve ser exibida e o número de chamada não deve ser alterado.
 :::
 
 ##
@@ -212,7 +212,7 @@ Caso o valor passado tenha menos que três caracteres, uma mensagem de erro deve
 Por fim, vamos alterar a classe `Livro` para que seja possível contabilizar quantas vezes o livro já foi emprestado.
 
 - Crie um atributo `numeroEmprestimos` do tipo `int` para guardar a quantidade de vezes que o livro foi emprestado.
-- Crie um método `emprestar` que adiciona 1 ao atributo.
+- Crie um método `emprestar` que incrementa o atributo em 1.
 - Crie um método de acesso que permita consultar o número de empréstimos.
 - Altere o método `imprimmirDetalhes` para incluir a informação do atributo criado.
 :::
