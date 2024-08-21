@@ -1,0 +1,524 @@
+---
+title: Tutorial do Greenfoot
+subtitle: UFLA de portas abertas - 2024
+---
+
+# Sobre o Tutorial {background-color="#40666e"}
+
+O intuito dessa oficina será realizar um jogo com gráficos em 2D, desenvolvido em Java, com a IDE Greenfoot.
+
+- Este material se baseia no tutorial disponibilizado no site do Greenfoot: https://www.greenfoot.org/doc/tut-1
+
+# Parte 1: Interagindo com o Greenfoot {background-color="#40666e"}
+
+## A interface do Greenfoot {.smaller}
+
+Baixe o projeto [greenfoot-ursos](https://github.com/ufla-ipoo/greenfoot-ursos/archive/refs/heads/main.zip) e abra-o no Greenfoot.
+
+Aqui você pode ter alguma dificuldade em descompactar o arquivo nos computadores em Linux, chame o monitor para ajudar.
+
+. . .
+
+A interface do Greenfoot tem três áreas principais.
+
+- O **mundo**.
+  - Na maior parte da tela aparece o mundo do jogo.
+- As **classes** (elas são moldes que agente usa para criar objetos que vão se tornar realidade no jogo).
+  - São exibidas em *caixas* no diagrama do lado direito.
+- E os botões de **controle de execução**.
+  - Botões abaixo do mundo que permitem controlar a execução do jogo (velocidade que acontece as ações do jogo).
+
+## Colocando objetos no mundo {.smaller}
+
+Clique com o botão direito na classe `Urso` e acesse a opção `new Urso()`.
+
+- E então clique em qualquer lugar do mundo.
+- Você acabou de criar um objeto `Urso`.
+
+. . .
+
+Faça o mesmo tipo de operação com as folhas, colocando algumas folhas no mundo.
+
+. . .
+
+**Dica**:
+
+- Existe um atalho para colocar objetos no mundo.
+- Selecione uma classe, e clique no mundo segurando a tecla `Shift` do teclado.
+
+## Fazendo objetos agirem {.smaller}
+
+Clique no botão **Executar uma vez** (obs.: no Greenfoot em inglês o botão se chama `Act`).
+
+- Ao clicar no botão, cada objeto age.
+- Ou seja, faz o que foi programado para fazer.
+
+. . .
+
+Neste exemplo, as folhas não fazem nada.
+
+- E os ursos são programados para andar para frente.
+- Experimente criar dois ursos e clicar de novo no botão **Executar uma vez**. 
+  - Os dois ursos vão se mover.
+
+. . .
+
+Ursos também comem folhas.
+
+- Experimente colocar uma folha na frente de um urso e clicar no botão **Executar uma vez**.
+
+## Chamar métodos (ações dos objetos) diretamente {.smaller}
+
+Em vez de executar todo o cenário, você pode chamar métodos para cada objeto separadamente.
+
+- Experimente clicar em um urso colocado no mundo.
+- Você verá as opções de chamar os métodos, da mesma forma que vemos no BlueJ.
+
+. . .
+
+Experimente chamar o método `virarAEsquerda` para algum urso.
+
+- E depois o método `mover`.
+
+. . .
+
+Repare que há um método chamado `act`.
+
+- É este método que é chamado toda vez que clicamos no botão **Executar uma vez**.
+
+
+## Criar um novo mundo {.smaller}
+
+Você pode recomeçar tudo, criando um novo mundo.
+
+- Para isso use o obtão **Reiniciar**.
+- O objeto do mundo será descartado (junto com os objetos adicionados nele).
+- E um novo mundo será criado.
+  - Obs.: Só pode existir um mundo ativo por vez.
+
+## Chamando um método do mundo {.smaller}
+
+É possível também chamar métodos do mundo.
+
+- Basta clicar em uma área vazia do mundo (sem ursos, nem folhas),
+  - ou na área cinza ao redor do mundo.
+- E serão exibidos os seus métodos.
+
+. . .
+
+Experimente chamar o método `povoar`.
+
+- Este método cria vários ursos e folhas.
+- Execute então o jogo.
+
+. . .
+
+Experimente agora o método `folhasAleatorias`.
+
+- A quantidade de folhas pode ser passada por parâmetro.
+- Obs.: às vezes pode parecer que não apareceram todas as folhas.
+  - Mas é que pode acontecer de duas folhas acabarem caindo na mesma célula.
+
+## {.smaller}
+
+Bom, chega de ursos andando em círculos...
+
+- Vamos agora para outro exemplo no qual faremos algo mais interessante: [programar]{.alert}!
+
+# Parte 2: Movimento e controle pelo teclado {background-color="#40666e"}
+
+Nesta parte veremos como criar movimento, e usar o teclado para controlar um ator (personagem).
+
+## O cenário caranguejo {.smaller}
+
+Baixe o projeto [greenfoot-caranguejo](https://github.com/ufla-ipoo/greenfoot-caranguejo/archive/refs/heads/main.zip) e abra-o no Greenfoot.
+
+- Você verá um mundo de areia.
+
+. . .
+
+Crie um caranguejo e coloque-o no mundo.
+
+- Clique então em **Executar**.
+- Aconteceu alguma coisa?
+
+## {.smaller}
+
+O caranguejo não fez nada porque não tem nada programado para ele fazer.
+
+- Vamos mudar isso!
+
+. . .
+
+Abra a classe Caranguejo (clicando duas vezes na caixa da classe, lembrando que ela fica na direita da tela).
+
+- Veja que a classe tem um método `act` (agir) vazio, por isso o caranguejo não faz nada.
+- Experimente colocar o comando `move(4)` dentro do método `act`.
+  - Compile a classe, coloque um caranguejo no mundo e clique em executar.
+  - Veja que o caranguejo se move para a direita até parar na borda do mundo.
+  - Você pode até pausar o mundo e arrastar o caranguejo para que ele ande novamente.
+
+## Só para os curiosos {.smaller}
+
+Experimente agora colocar dois caranguejos e chamar o método **Executar**.
+
+- Os dois caranguejos fazem a mesma coisa, pois são objetos da mesma classe.
+
+. . .
+
+Experimente passar valores diferentes para o método `move`.
+
+- Você pode testar valores menores, maiores e até negativos.
+
+. . .
+
+O método `move` faz um ator se mover para frente pela quantidade passada.
+
+- Um ator sempre começa "olhando" para a direita da tela.
+- Portanto, a princípio, ele se move para a direta da tela.
+
+## {.smaller}
+
+Acrescente agora mais uma linha no método `act`, de forma que ele fique como mostrado abaixo:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    move(4);
+    turn(3);
+```
+:::
+
+. . .
+
+Execute o jogo, com alguns caranguejos e veja o que acontece.
+
+- Experimente passar valores diferentes para o método `turn`.
+  - Mais uma vez, valores maiores, menores e até negativos.
+
+. . .
+
+Note que o método `turn` gira o ator pelo ângulo passado (em graus).
+
+## Controle usando o teclado {.smaller}
+
+Fica mais interessante se pudermos controlar o caranguejo.
+
+- para isso, podemos usar o método estático `isKeyDown` da classe `Greenfoot`.
+
+. . .
+
+Por exemplo, podemos verificar se a tecla seta para a esquerda está pressionada assim:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    if (Greenfoot.isKeyDown("left")) {
+        // implemetamos aqui o que deve acontecer se a tecla seta para
+        // a esquerda estiver pressionada
+    }
+```
+:::
+
+## {.smaller}
+
+Experimente, por exemplo, implementar o método `act` conforme mostrado abaixo:
+
+- Teste o jogo com um e com vários caranguejos.
+- Use seta para a esquerda e seta para a direita para controlar os caranguejos.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    public void act() 
+    {
+        move(4);
+        
+        if (Greenfoot.isKeyDown("left")) {    
+            turn(-3);   
+        }
+        if (Greenfoot.isKeyDown("right")) {    
+            turn(3);   
+        }
+    }  
+```
+:::
+
+## {.smaller}
+
+Você pode alterar os valores passados para o método `turn` para mudar o quanto os caranguejos giram.
+
+- E pode também alterar as teclas utilizadas para controlar o caranguejo.
+- Você pode usar as letras ou caracteres para indicar as teclas (ex.: `"a"`).
+  - Ou os nomes das teclas (ex.: `"space"` ou `"control"`). 
+
+. . .
+
+# Parte 3: Detectando e removendo atores {background-color="#40666e"}
+
+
+Agora vamos descobrir como podemos detectar que um ator está tocando outro (detecção de colisão), e como remover aquele ator do mundo.
+
+## Comendo larvas {.smaller}
+
+Vamos criar uma classe para representar larvas que serão a comida dos caranguejos.
+
+- Para isso clique com o botão direito na classe `Actor` e vá na opção `Nova subclasse...`.
+
+. . .
+
+Na janela que se abre dê o nome `Larva` para a classe (lembre-se de usar `L` maiúsculo).
+
+- E escolha a imagem `larva.png` para representar as larvas.
+- Ao clicar em OK, a classe `Larva` aparecerá no diagrama do Greenfoot.
+
+. . .
+
+Se abrir o código da classe verá que ela ainda não faz nada.
+
+- Mas nós vamos deixar assim.
+- As larvas desse jogo são preguiçosas e só ficam paradas mesmo.
+
+## {.smaller}
+
+A ideia agora é modificar a classe `Caranguejo` para que um caranguejo coma uma larva sempre que passar sobre ela.
+
+. . .
+
+Para fazer isso, vamos usar o método `getOneIntersectingObject`.
+
+- Podemos acrescentar o seguinte trecho de código ao final do método `act`.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    // se o caranguejo estiver colidindo (tocando) uma larva, a larva será
+    // retornada. Se não estiver colidindo com nenhuma, o método retornará null.
+    Actor larva = getOneIntersectingObject(Larva.class);
+    // Se havia colisão com alguma larva
+    if (larva != null) {
+        // Obtemos uma referência (ponteiro) para o mundo
+        World mundo = getWorld();
+        // Removemos a larva do mundo
+        mundo.removeObject(larva);
+    }
+```
+:::
+
+## {.smaller}
+
+Altere o método `act` conforme mostrado no slide anterior.
+
+- Coloque várias larvas e vários caranguejos no mundo.
+- E testes as alterações. Conseguiu capturar todas as larvas?
+
+## Coesão de método {.smaller}
+
+Repare que nosso método `act` está ficando um pouco confuso.
+
+- Isso porque ele agora faz duas coisas: movimenta o caranguejo e o faz comer larvas.
+
+. . .
+
+Como podemos melhorar isso?
+
+- Podemos criar um método `movimentar` e outro `comer`.
+ - Levando para esses métodos os trechos de código que hoje estão no método `act`.
+- O método `act` passaria então a ter apenas duas linhas:
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    public void act() {
+        movimentar();
+        comer();
+    }
+```
+:::
+
+. . .
+
+Veja que, com isso, o código fica mais fácil de entender e de se alterar.
+
+# Parte 4: Salvando o mundo e criando e tocando sons {background-color="#40666e"} 
+-- Verificar se vale deixar essa parte porque os computadores não rodam --
+
+Vamos aprender agora a inicializar o mundo já contendo atores.
+
+- E também a criar e tocar sons.
+
+## Salvando o mundo {.smaller}
+
+Você deve ter ficado cansado de tanto colocar caranguejos e larvas no mundo.
+
+- Mas nós podemos adicionar código para que isso seja feito automaticamente.
+- Ou melhor ainda, pedir ao Greenfoot para fazer esse código para nós.
+
+. . .
+
+Para isso, faça o seguinte:
+
+- Acrescente alguns caranguejos e algumas larvas no mundo.
+- Antes de clicar em *Executar*, clique com o botão direito no mundo e acesse a opção **Salvar o mundo**.
+  - O Greenfoot colocará trechos de código na classe do mundo.
+  - Que criam e posicionam os atores nos mesmos lugares onde você tinha colocado.
+  - Dê uma olhada no código!
+
+. . .
+
+Depois disso, toda vez que o mundo for criado, ele já terá os caranguejos e as larvas.  
+
+## Tocando sons {.smaller}
+
+É bem simples tocar sons no Greenfoot.
+
+- Basta que você tenha um arquivo de som na pasta `sounds` do seu projeto.
+- E use o método estático `playSound` da classe `Greenfoot` para tocar o arquivo.
+
+. . .
+
+O projeto caranguejo já tem um arquivo `comendo.wav` na pasta `sounds`.
+
+- Experimente então acrescentar uma linha de código na classe `Caranguejo`, logo após remover uma larva do mundo:
+  - `Greenfoot.playSound("comendo.wav");`
+- Teste o jogo!
+
+## Criando sons {.smaller}
+
+Para criar seu jogo, você pode procurar por trilha e efeitos sonoros livres e gratuitos na internet.
+
+- Ou você pode criar seus próprios sons usando o Greenfoot mesmo.
+
+. . .
+
+Para criar um som, acesse o menu `Ferramentas` --> `Mostrar gravador de som...`.
+
+- Você pode gravar sons e ouvi-los.
+- E, ao final, dar um nome para o arquivo e salvar.
+  - Depois, basta usar esse nome de arquivo no código para tocá-lo.
+
+## Criando sons {.smaller}
+
+[Dica]{.alert}:
+
+- Silêncios no início ou no final do som podem criar uma experiência desagradável para o jogador.
+- Você pode evitar isso usando o botão `Cortar até a seleção`.
+  - Você pode selecionar o trecho do áudio que tem a parte que você quer que fique no arquivo.
+  - E usar o botão para cortar o áudio, ignorando o que tinha antes e depois da seleção.
+
+
+# Parte 5: Adicionando inimigo com movimento aleatório {background-color="#40666e"}
+
+O jogo está muito fácil! É hora de criarmos algum desafio.
+
+## {.smaller}
+
+Vamos criar uma lagosta que se move em linha reta e que pode comer caranguejos.
+
+- Crie uma classe `Lagosta` clicando com o botão direito em `Actor` e depois em `Nova subclasse...`.
+- Escolha a imagem da lagosta que já existe no projeto.
+  - Obs.: quando você quiser usar uma imagem que não tem no Greenfoot, basta colocá-la na pasta `images` do projeto. 
+
+. . .
+
+Nas partes anteriores do tutorial já vimos como movimentar um ator e como remover um ator do mundo.
+
+- Então você mesmo pode implementar a ação da lagosta.
+- Ela deve se movimentar sempre para a direita e,
+  - Se colidir com um caranguejo, o caranguejo deve ser removido do mundo.
+  - Para ficar mais interessante, grave o seu próprio som e use-o quando isso acontecer.
+
+## Aleatoriedade {.smaller}
+
+Bom, o jogo ainda está muito fácil. Vamos deixá-lo menos previsível.
+
+- A ideia é que as lagostas possam girar a cada hora por um ângulo diferente.
+- Podemos fazer isso usando o o método estático `getRandomNumber` da classe `Greenfoot`.
+  - Exemplo: `int angulo = Greenfoot.getRandomNumber(90);`.
+- E então usamos o angulo como parâmetro do métodp `turn`.
+  - Exemplo: `turn(angulo);`.
+- Implemente e teste o jogo.
+
+. . .
+
+O que achou do resultado?
+
+- A lagosta não é um oponente desafiador ainda, certo? :)
+
+## {.smaller}
+
+Um dos problemas é que a lagosta gira toda hora, com isso ela fica só rodopiando.
+
+- Seria melhor se ela virasse apenas de vez em quando.
+- Podemos implementar isso, fazendo com que o método `turn` não seja chamado toda hora que o `act` é executado.
+
+. . .
+
+Uma das formas de fazer isso é mostrada abaixo.
+
+- Experimente implementar e ver a diferença no comportamento da lagosta.
+
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    move(4);
+    if (Greenfoot.getRandomNumber(100) < 10) {
+        int angulo = Greenfoot.getRandomNumber(90);
+        turn(angulo);
+    }
+```
+:::
+
+## {.smaller}
+
+Mas o que exatamente foi feito?
+
+- Veja que o comando `Greenfoot.getRandomNumber(100)` retorna um número aleatório entre 0 a 99.
+- Se esse método for chamado muitas vezes ele vai retornar cada numéro possível a mesma quantidade de vezes (em média).
+  - Portanto, em média, ele retorna 0 em 1% das vezes, retorna 1 em 1% das vezes e assim por diante.
+  - Logo, ele retorna um valor menor que 10 em 10% das vezes, certo?
+- Com isso, a expressão do comando `if (Greenfoot.getRandomNumber(100) < 10)`, retornará `true`, em média, a cada 10 vezes que for chamado.
+  - Isso faz com que cada lagosta se movimente de forma diferente, girando só de vez em quando. 
+
+## {.smaller}
+
+Repare que podemos deixar a lagosta ainda melhor fazendo com que ela possa girar para os dois lados.
+
+- Como estamos passando sempre um número positivo, ela está girando sempre para o mesmo lado.
+- Como podemos fazê-la girar para os dois lados?
+
+. . .
+
+Podemos mudar a forma que o ângulo é definido:
+
+- Agora teremos valores variando entre 0 - 45 = -45 e 89 - 45 = 44.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+        int angulo = Greenfoot.getRandomNumber(90) - 45;
+```
+:::
+
+## {.smaller}
+
+Faça as últimas alterações no seu código e coloque várias lagostas e larvas, e alguns caranguejos no mundo.
+
+- Não esqueça de salvar o mundo!
+- Jogue e veja como a lagosta é agora um inimigo bem mais desafiador.
+
+. . .
+
+Mas você deve ter reparado que a lagosta ainda não sabe lidar bem com as bordas do mundo.
+
+- Como podemos melhorar isso?
+- Basta acrescentarmos um código para que ela gire 180 graus sempre que chegar perto da borda do mundo.
+
+## Desafio {.smaller}
+
+Como você poderia fazer um [jogo para dois jogadores]{.alert}?
+
+- Imagine que um jogador utilize as setas do teclado e outro as teclas ASDW.
+- Crie uma nova classe no jogo do caranguejo com um animal que possa ser controlado por um segundo jogador.
+  - E faça os tratamentos necessários.
+
+Baixe aqui o código completo para testar
+
