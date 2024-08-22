@@ -1,11 +1,11 @@
 ---
 title: Tutorial do Greenfoot
-subtitle: UFLA de portas abertas - 2024
+subtitle: GAC125 - IPOO
 ---
 
 # Sobre o Tutorial {background-color="#40666e"}
 
-O intuito dessa oficina será realizar um jogo com gráficos em 2D, desenvolvido em Java, com a IDE Greenfoot.
+O trabalho da disciplina será um jogo com gráficos em 2D, desenvolvido em Java, com a IDE Greenfoot.
 
 - Este material se baseia no tutorial disponibilizado no site do Greenfoot: https://www.greenfoot.org/doc/tut-1
 
@@ -13,9 +13,7 @@ O intuito dessa oficina será realizar um jogo com gráficos em 2D, desenvolvido
 
 ## A interface do Greenfoot {.smaller}
 
-Baixe o projeto [greenfoot-ursos](https://github.com/ufla-ipoo/greenfoot-ursos/archive/refs/heads/main.zip) e abra-o no Greenfoot.
-
-Aqui você pode ter alguma dificuldade em descompactar o arquivo nos computadores em Linux, chame o monitor para ajudar.
+Baixe o projeto [greenfoot-ursos](https://github.com/ufla-ipoo/greenfoot-ursos) e abra-o no Greenfoot.
 
 . . .
 
@@ -23,10 +21,10 @@ A interface do Greenfoot tem três áreas principais.
 
 - O **mundo**.
   - Na maior parte da tela aparece o mundo do jogo.
-- As **classes** (elas são moldes que agente usa para criar objetos que vão se tornar realidade no jogo).
+- As **classes**.
   - São exibidas em *caixas* no diagrama do lado direito.
 - E os botões de **controle de execução**.
-  - Botões abaixo do mundo que permitem controlar a execução do jogo (velocidade que acontece as ações do jogo).
+  - Botões abaixo do mundo que permitem controlar a execução do jogo.
 
 ## Colocando objetos no mundo {.smaller}
 
@@ -67,7 +65,7 @@ Ursos também comem folhas.
 
 - Experimente colocar uma folha na frente de um urso e clicar no botão **Executar uma vez**.
 
-## Chamar métodos (ações dos objetos) diretamente {.smaller}
+## Chamar métodos diretamente {.smaller}
 
 Em vez de executar todo o cenário, você pode chamar métodos para cada objeto separadamente.
 
@@ -131,7 +129,7 @@ Nesta parte veremos como criar movimento, e usar o teclado para controlar um ato
 
 ## O cenário caranguejo {.smaller}
 
-Baixe o projeto [greenfoot-caranguejo](https://github.com/ufla-ipoo/greenfoot-caranguejo/archive/refs/heads/main.zip) e abra-o no Greenfoot.
+Baixe o projeto [greenfoot-caranguejo](https://github.com/ufla-ipoo/greenfoot-caranguejo) e abra-o no Greenfoot.
 
 - Você verá um mundo de areia.
 
@@ -150,7 +148,7 @@ O caranguejo não fez nada porque não tem nada programado para ele fazer.
 
 . . .
 
-Abra a classe Caranguejo (clicando duas vezes na caixa da classe, lembrando que ela fica na direita da tela).
+Abra a classe Caranguejo (clicando duas vezes na caixa da classe).
 
 - Veja que a classe tem um método `act` (agir) vazio, por isso o caranguejo não faz nada.
 - Experimente colocar o comando `move(4)` dentro do método `act`.
@@ -159,6 +157,25 @@ Abra a classe Caranguejo (clicando duas vezes na caixa da classe, lembrando que 
   - Você pode até pausar o mundo e arrastar o caranguejo para que ele ande novamente.
 
 ## Só para os curiosos {.smaller}
+
+Mas de onde veio esse método `move`? 
+
+- E por que estamos chamando o método sem usar nenhum objeto?
+
+. . .
+
+Nós vamos entender isso melhor ao estudarmos o conceito de [Herança]{.alert}.
+
+. . .
+
+Mas, para os curiosos, vai aqui um *spoiler*:
+
+- O método `move` (e outros que usaremos da mesma forma) está definido na classe `Actor`.
+- A classe `Caranguejo` é uma subclasse de `Actor`.
+  - Isso significa que ela herda os métodos da classe `Actor`.
+  - E assim, podemos chamar os métodos da classe `Actor` dentro da classe `Caranguejo` como se eles estivessem definidos na própria classe `Caranguejo`.
+
+## {.smaller}
 
 Experimente agora colocar dois caranguejos e chamar o método **Executar**.
 
@@ -251,6 +268,19 @@ Você pode alterar os valores passados para o método `turn` para mudar o quanto
 
 . . .
 
+Para pensar:
+
+- Como você pode tratar para que o jogo possa ser jogado tanto nas teclas de direção quanto usando as teclas `ASDW`?
+
+## Opcional: controlando um carro {.smaller}
+
+Em casa, tente criar uma classe `Carro` e controlar os carros da seguinte forma:
+
+- Usando seta para cima para acelerar o carro.
+- Seta para baixo dar ré no carro.
+- Seta para a esquerda para virar o carro para a esquerda.
+- Seta para a direita para virar o carro para a esquerda.
+
 # Parte 3: Detectando e removendo atores {background-color="#40666e"}
 
 
@@ -339,8 +369,9 @@ Como podemos melhorar isso?
 
 Veja que, com isso, o código fica mais fácil de entender e de se alterar.
 
-# Parte 4: Salvando o mundo e criando e tocando sons {background-color="#40666e"} 
--- Verificar se vale deixar essa parte porque os computadores não rodam --
+- Na próxima aula aprofundaremos essa questão, ao estudarmos o conceito [coesão de métodos]{.alert}.
+
+# Parte 4: Salvando o mundo e criando e tocando sons {background-color="#40666e"}
 
 Vamos aprender agora a inicializar o mundo já contendo atores.
 
@@ -520,5 +551,5 @@ Como você poderia fazer um [jogo para dois jogadores]{.alert}?
 - Crie uma nova classe no jogo do caranguejo com um animal que possa ser controlado por um segundo jogador.
   - E faça os tratamentos necessários.
 
-Baixe aqui o código completo para testar
+
 
