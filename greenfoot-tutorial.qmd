@@ -23,7 +23,7 @@ A interface do Greenfoot tem três áreas principais.
 
 - O **mundo**.
   - Na maior parte da tela aparece o mundo do jogo.
-- As **classes** (elas são moldes que agente usa para criar objetos que vão se tornar realidade no jogo).
+- As **classes** (elas são moldes que a gente usa para criar objetos que vão se tornar realidade no jogo).
   - São exibidas em *caixas* no diagrama do lado direito.
 - E os botões de **controle de execução**.
   - Botões abaixo do mundo que permitem controlar a execução do jogo (velocidade que acontece as ações do jogo).
