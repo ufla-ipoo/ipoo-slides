@@ -40,7 +40,7 @@ Será que preciso dizer de novo as [dicas]{.alert}? :)
 Construções Java do capítulo
 
 ::: {.nonincremental}
-- Tipos de classe, operadores lógicos (`&&` e `||`), concatenação de strings, construçãfo de objetos (operador `new`), chamadas de métodos, `this`.
+- Tipos de classe, operadores lógicos (`&&` e `||`), concatenação de strings, construção de objetos (operador `new`), chamadas de métodos, `this`.
 :::
 
 . . .
@@ -138,7 +138,7 @@ O problema a ser resolvido, às vezes é muito grande.
 
 - Nós então dividimos o problema subproblemas.
   - E dividimos novamente em problemas ainda menores.
-  - Fazemos isso até que eles sejam pequenos o suficiente para que consigamos lidar com eles.
+  - Fazemos isso até que eles sejam pequenos o suficiente para conseguirmos lidar com eles.
 
 ![](imagens/dividir-conquistar-3.png){.relative width="70%"}
 
@@ -324,11 +324,11 @@ Não é simples pensar nos tipos de objetos (e, consequentemente, nas classes) q
 ## Quiz 3.1 {background-color="#f7fad1" .smaller}
 
 ::: {.nonincremental}
-[O conceito de abstração tem relação com:]{.alert}
+[O conceito de abstração tem relações com:]{.alert}
 
 a. Prestar muita atenção aos detalhes de um problema.
 b. Ignorar completamente os detalhes de um problema.
-c. Dividir um problema em problemas menores de forma a ter diferentes níveis de atenção aos seus detalhes.
+c. Dividir um problema em problemas menores, de forma a ter diferentes níveis de atenção aos seus detalhes.
 d. Criar atributos abstratos.
 :::
 
@@ -500,7 +500,7 @@ Quando o programa é iniciado, vamos criar um objeto `VisorDeRelogio`.
 
 - E vamos implementar a classe de forma que ela crie automaticamente dois objetos `VisorDeNumero`.
 - Portanto, o diagrama de objetos mostra uma [visão dinâmica]{.alert}.
-- Ele representa o **tempo de execução**, quando o programa está rodando.
+- Ele representa o **tempo de execução**, quando o programa está executando.
 
 ## {.smaller}
 
@@ -548,14 +548,14 @@ Escreva a declaração de um atributo `orientador` que guarde uma referência pa
 a. Classes definem tipos.
 b. Diagramas de classes dão uma visão estática do programa.
 c. Diagramas de objetos dão uma visão dinâmica do programa.
-d. Visão estática se referente ao tempo de execução do programa.
+d. Visão estática se refere ao tempo de execução do programa.
 :::
 
 # Tipos primitivos e tipos objetos {background-color="#40666e"}
 
 ## {.smaller}
 
-Java tem dois tipos diferentes de tipos :) 
+Java tem dois tipos diferentes de tipos : 
 
 :::: {.columns}
 
@@ -1071,7 +1071,7 @@ Nesse caso, parece que seria possível pois o compilador sabe que a variável `a
 
 ::: {.callout-note title="Exercício" icon=false}
 Avalie o segundo construtor no código da classe `VisorDeRelogio`.
-Explique o que ele faz e como ele o faz.
+Explique o que ele faz e como ele faz isso.
 
 Identifique as semelhanças e diferenças entre os dois construtores.
 Porque o método `atualizarVisor` não é chamado no segundo construtor, por exemplo?

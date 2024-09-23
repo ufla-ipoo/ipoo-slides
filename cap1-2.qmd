@@ -14,7 +14,7 @@ As **aulas práticas são fundamentais** para que consigamos entender os conceit
 Lembre-se também que, como apresentado no Plano de Ensino, [para ter presença]{.alert} na aula prática, **não basta vir à aula**.
 
 - É necessário entregar, no mínimo, 30% do exercícios propostos até o final da aula.
-- Portanto, **não se esqueça de enviar** suas atividades **ao terminar aula** (mesmo que não tiver terminado).
+- Portanto, **não se esqueça de enviar** suas atividades **ao terminar a aula** (mesmo que não tiver terminado).
 
 :::
 
@@ -29,7 +29,7 @@ Lembre-se também que, como apresentado no Plano de Ensino, [para ter presença]
 
 ##
 
-O BlueJ tem uma opção interessante que nos permite ver como as chamadas de métodos são feitas em Java.
+O BlueJ tem uma opção interessante que permite visualizar como as chamadas de métodos são feitas em Java.
 
 ::: {.callout-note title="Exercício 1.1" icon=false}
 
@@ -290,7 +290,7 @@ Nesse passo, vamos dar uma passada de olhos no código das classes do jogo.
 - Apenas tente identificar os atributos e métodos que existem no código-fonte das classes `Nave`, `Inimigo` e `Placar`.
 - Dê uma olhada com mais detalhes no método `atirar` da classe `Nave` e tente entender o que ele faz.
 
-Obs.: a classe `Cenario` é bem complexa porque usa conceitos avançado, portanto, pode ignorá-la. Mas se estiver curioso, fique à vontade.
+Obs.: a classe `Cenario` é bem complexa porque usa conceitos avançado, portanto, pode ignorá-la. Mas, se estiver curioso, fique à vontade.
 :::
 :::
 
@@ -380,7 +380,7 @@ Altere o método `getTextoExibicao` para exibir o nível do campo de proteção.
 
 Jogue novamente e teste a alteração.
 
-- Agora ficou bem melhor, não ficou?
+- Agora ficou muito melhor, não ficou?
 
 :::
 :::
