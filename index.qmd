@@ -17,6 +17,8 @@
 
 [Slides]{.alert} 
 
+- **Primeira Aula**
+  - [Apresentação da disciplina](https://docs.google.com/presentation/d/19KcDBJ90PKpsOwnPbpHvcfIhM-DM1j_cIJgbEhxM5gE/edit?usp=sharing)
 - **Capítulo 1**
   - [Aula 1.1 - Teórica](cap1-1.html)
   - [Aula 1.2 - Prática](cap1-2.html)
@@ -45,7 +47,7 @@
 - **Capítulo 6**
   - [Aula 6.1 - Teórica](cap6-1.html)
   - [Aula 6.1b - Teórica](https://docs.google.com/presentation/d/13j1yuqfqCCknchh2eX0scH2ovJpUfHhZCriwtG0sEUE/edit?usp=sharing)
-- **Trabalho Prático**
+- **Tutorial do Greenfoot**
   - [Tutorial do Greenfoot](greenfoot-tutorial.html)
 
 :::
