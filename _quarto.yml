@@ -1,6 +1,7 @@
 project:
-  title: "GAC125 - Introdução à Programação Orientada a Objetos"
+  type: website
   output-dir: docs
+  title: "GAC125 - Introdução à Programação Orientada a Objetos"
 
 lang: pt-BR
 
@@ -10,7 +11,7 @@ format:
   clean-revealjs:
   # revealjs:
     theme: [default, custom.scss]
-    # self-contained: true
+    embed-resources: false
     incremental: true
     # smaller: true
     logo: imagens/logo_UFLA.png

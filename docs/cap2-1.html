@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR"><head>
-<script src="cap2-1_files/libs/clipboard/clipboard.min.js"></script>
-<script src="cap2-1_files/libs/quarto-html/tabby.min.js"></script>
-<script src="cap2-1_files/libs/quarto-html/popper.min.js"></script>
-<script src="cap2-1_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="cap2-1_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="cap2-1_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="cap2-1_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="cap2-1_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="cap2-1_files/libs/quarto-contrib/jquery-3.6.3/jquery-3.6.3.min.js"></script>
-<script src="cap2-1_files/libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.js" defer="true"></script>
-<link href="cap2-1_files/libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
-<script src="cap2-1_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
-<script src="cap2-1_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/quarto-contrib/jquery-3.6.3/jquery-3.6.3.min.js"></script>
+<script src="site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.js" defer="true"></script>
+<link href="site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
+<script src="site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2023-08-09">
-  <title>IPOO - Cap. 2 Entendendo as Definições de Classe</title>
+  <meta name="dcterms.date" content="2023-05-09">
+  <title>GAC125 - Introdução à Programação Orientada a Objetos – IPOO - Cap. 2 Entendendo as Definições de Classe</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="cap2-1_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="cap2-1_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -37,7 +37,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -48,7 +48,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -101,14 +101,14 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="cap2-1_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="cap2-1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="cap2-1_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="cap2-1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="cap2-1_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="cap2-1_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="cap2-1_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
-  <link href="cap2-1_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -230,7 +230,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -413,7 +414,7 @@
     </div>
 </div>
 
-  <p class="date">08/09/2023</p>
+  <p class="date">05/09/2023</p>
 </section>
 <section id="como-estudar-esse-conteúdo" class="slide level2 smaller">
 <h2>Como estudar esse conteúdo?</h2>
@@ -426,9 +427,8 @@
 <li class="fragment">Use um caderno e caneta para <span class="alert">anotar</span> os principais <span class="alert">conceitos</span> e eventuais <span class="alert">dúvidas</span> que surgirem.</li>
 </ul>
 </div><div class="column" style="width:30%;">
-<p><img data-src="imagens/bluej_completo_vertical.png" style="width:50.0%" alt="Prints do BlueJ."> <img data-src="imagens/livro_bluej.png" style="width:50.0%" data-fig-align="left" alt="Capa do livro do Barnes e Kolling."></p>
-</div>
-</div>
+<p><img data-src="imagens/bluej_completo_vertical.png" style="width:50.0%" alt="Prints do BlueJ."> <img data-src="imagens/livro_bluej.png" class="quarto-figure quarto-figure-left" style="width:50.0%" alt="Capa do livro do Barnes e Kolling."></p>
+</div></div>
 </section>
 <section id="observações-sobre-o-livro" class="slide level2 smaller">
 <h2>Observações sobre o livro</h2>
@@ -437,7 +437,7 @@
 <div class="column" style="width:30%;">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="imagens/livro_bluej.png" alt="Capa do livro do Barnes e Kolling."></p>
+<p><img data-src="imagens/livro_bluej.png" class="quarto-figure quarto-figure-left" alt="Capa do livro do Barnes e Kolling."></p>
 </figure>
 </div>
 </div><div class="column" style="width:70%;">
@@ -460,8 +460,7 @@
 <li class="fragment">Em outros casos porque tentei fazer uma tradução melhor.</li>
 </ul></li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="principais-conceitos-do-capítulo" class="slide level2 smaller">
 <h2>Principais Conceitos do Capítulo</h2>
@@ -508,8 +507,7 @@
 <li class="fragment">Na próxima aula vamos melhorar nossa máquina.</li>
 </ul></li>
 </ul>
-</div>
-</div>
+</div></div>
 </div>
 <div class="fragment">
 <p>O funcionamento básico da máquina o seguinte:</p>
@@ -534,6 +532,7 @@
 </ul></li>
 </ul>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -545,9 +544,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-2" class="slide level2 smaller">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -558,6 +559,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -568,6 +571,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -578,6 +583,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -585,6 +592,7 @@
 </div>
 <div class="callout-content">
 <p>Tente entender bem o funciona da máquina interagindo com o objeto no BlueJ antes de ver o código na próxima seção. Crie outra máquina que tenha ingressos de preço diferente e compre um ingresso dessa máquina. A impressão do bilhete é diferente?</p>
+</div>
 </div>
 </div>
 </div>
@@ -623,10 +631,10 @@
 <div class="fragment">
 <p>A parte externa tem o seguindo trecho de código</p>
 <div class="doublefontsize">
-<div class="sourceCode" id="cb1" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MaquinaIngressos</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Parte interna da classe omitida</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MaquinaIngressos</span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="co">// Parte interna da classe omitida</span></span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
@@ -639,6 +647,7 @@
 </section>
 <section id="section-5" class="slide level2 smaller">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -649,6 +658,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -661,6 +672,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -671,6 +684,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -679,6 +694,7 @@
 <div class="callout-content">
 <p>Coloque a palavra <code>public</code> de volta e agora tente remover a palavra <code>class</code> e tente compilar de novo.</p>
 <p>Volte o código original para continuar a aula.</p>
+</div>
 </div>
 </div>
 </div>
@@ -720,8 +736,7 @@
 </ul>
 </div><div class="column" style="width:30%;">
 <p><img data-src="imagens/print_bluej_codigo.png"></p>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="section-6" class="slide level2 smaller">
@@ -730,14 +745,14 @@
 <ul>
 <li class="fragment"><p>Mas, <strong>geralmente</strong>, nós colocamos <strong>primeiro os atributos, depois os construtores e depois os métodos</strong>.</p>
 <div class="doublefontsize">
-<div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> NomeDaClasse</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Atributos</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Construtores</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Métodos</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> NomeDaClasse</span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="co">// Atributos</span></span>
+<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="co">// Construtores</span></span>
+<span id="cb2-6"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="co">// Métodos</span></span>
+<span id="cb2-8"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul>
 <div class="fragment">
@@ -749,6 +764,7 @@
 </section>
 <section id="section-7" class="slide level2 smaller">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -759,6 +775,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -766,6 +784,7 @@
 </div>
 <div class="callout-content">
 <p>A assinatura do construtor tem duas características que são diferentes dos métodos. Você consegue descobrir quais são?</p>
+</div>
 </div>
 </div>
 </div>
@@ -787,14 +806,14 @@
 <div class="fragment">
 <div class="columns" style="display: flex !important; height: 90%;">
 <div class="column" style="display: flex; justify-content: center; align-items: center;">
-<div class="sourceCode" id="cb3" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MaquinaIngressos</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> preco<span class="op">;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> saldo<span class="op">;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> total<span class="op">;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Construtores e métodos omitidos</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MaquinaIngressos</span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> preco<span class="op">;</span></span>
+<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> saldo<span class="op">;</span></span>
+<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> total<span class="op">;</span></span>
+<span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// Construtores e métodos omitidos</span></span>
+<span id="cb3-8"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:70%;">
 <p>A classe <code>MaquinaIngressos</code>, por exemplo, tem três atributos:</p>
 <ul>
@@ -802,8 +821,7 @@
 <li class="fragment"><code>saldo</code>: guarda a quantidade de dinheiro inserida na máquina por um usuário antes dele pedir para imprimir um ingresso.</li>
 <li class="fragment"><code>total</code>: guarda o total de dinheiro inserido na máquina por todos os usuários, desde que ela foi construída (sem contar o saldo atual).</li>
 </ul>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="section-9" class="slide level2 smaller">
@@ -826,8 +844,7 @@
 </ul>
 </div><div class="column" style="width:40%;">
 <p><img data-src="imagens/lupa_bola.png"></p>
-</div>
-</div>
+</div></div>
 </div>
 <div class="fragment">
 <div class="columns">
@@ -838,8 +855,7 @@
 </ul>
 </div><div class="column" style="width:30%;">
 <p><img data-src="imagens/messi_fifa_ratings.png" style="width:50.0%"></p>
-</div>
-</div>
+</div></div>
 </div>
 <div class="fragment">
 <p>Nós chamamos essas características dos objetos de <span class="alert">atributos</span>.</p>
@@ -869,8 +885,7 @@
 <li class="fragment">Etc.</li>
 </ul>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="section-11" class="slide level2 smaller">
@@ -888,10 +903,10 @@
 </ul>
 </div><div class="column" style="width:30%;">
 <p><img data-src="imagens/objeto_maquina_ingressos.png"></p>
-</div>
-</div>
+</div></div>
 </div>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -899,6 +914,7 @@
 </div>
 <div class="callout-content">
 <p><strong>Atributos</strong> guardam dados para um objeto usar. Eles também são chamados de variáveis de instância.</p>
+</div>
 </div>
 </div>
 </div>
@@ -911,8 +927,8 @@
 <li class="fragment">E na linha acima de cada declaração acrescentamos uma linha de texto: o <span class="alert">comentário</span>.</li>
 </ul>
 <div class="doublefontsize">
-<div class="sourceCode" id="cb4" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">// O preço de um ingresso desta máquina</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> preco<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="co">// O preço de um ingresso desta máquina</span></span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> preco<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Assim como em C++, comentários de uma única linha começam com <code>//</code>.</p>
@@ -924,6 +940,7 @@
 </ul>
 </div>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -931,6 +948,7 @@
 </div>
 <div class="callout-content">
 <p><strong>Comentários</strong> são inseridos em uma classe para explicar o código para leitores humanos. Eles não alteram nada no funcionamento da classe.</p>
+</div>
 </div>
 </div>
 </div>
@@ -969,6 +987,7 @@
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -976,13 +995,15 @@
 </div>
 <div class="callout-content">
 <p>Qual é o <strong>tipo</strong> de cada um dos atributos abaixo?</p>
-<div class="sourceCode" id="cb5" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> contador<span class="op">;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Estudante monitor<span class="op">;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Computador notebook<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> contador<span class="op">;</span></span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Estudante monitor<span class="op">;</span></span>
+<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Computador notebook<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -990,14 +1011,15 @@
 </div>
 <div class="callout-content">
 <p>Qual é o <strong>nome</strong> de cada um dos atributos abaixo?</p>
-<div class="sourceCode" id="cb6" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">boolean</span> vivo<span class="op">;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Pessoa professor<span class="op">;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Jogo jogo<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">boolean</span> vivo<span class="op">;</span></span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Pessoa professor<span class="op">;</span></span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> Jogo jogo<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
-</div>
+</div></div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1008,6 +1030,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1018,6 +1042,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1028,6 +1054,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1035,6 +1063,7 @@
 </div>
 <div class="callout-content">
 <p>Escreva a declaração completa de um atributo do tipo <code>int</code> chamado <code>situacao</code>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1074,21 +1103,20 @@
 <div class="columns">
 <div class="column" style="width:70%;">
 <p>Abaixo está o código do construtor da classe <code>MaquinaIngressos</code>.</p>
-<div class="sourceCode" id="cb7" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Cria uma m<span class="co">á</span>quina que emite ingressos de um dado pre<span class="co">ç</span>o<span class="co">.</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Note que o pre<span class="co">ç</span>o deve ser maior que zero<span class="co">,</span> e n<span class="co">ã</span>o tem</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> nenhuma verifica<span class="co">çã</span>o para garantir isso<span class="co">.</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>   <span class="co">*/</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dt">int</span> custoIngresso<span class="op">)</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>      preco <span class="op">=</span> custoIngresso<span class="op">;</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>      total <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Cria uma m<span class="co">á</span>quina que emite ingressos de um dado pre<span class="co">ç</span>o<span class="co">.</span></span>
+<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Note que o pre<span class="co">ç</span>o deve ser maior que zero<span class="co">,</span> e n<span class="co">ã</span>o tem</span>
+<span id="cb7-4"><a aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> nenhuma verifica<span class="co">çã</span>o para garantir isso<span class="co">.</span></span>
+<span id="cb7-5"><a aria-hidden="true" tabindex="-1"></a>   <span class="co">*/</span></span>
+<span id="cb7-6"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dt">int</span> custoIngresso<span class="op">)</span></span>
+<span id="cb7-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb7-8"><a aria-hidden="true" tabindex="-1"></a>      preco <span class="op">=</span> custoIngresso<span class="op">;</span></span>
+<span id="cb7-9"><a aria-hidden="true" tabindex="-1"></a>      saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb7-10"><a aria-hidden="true" tabindex="-1"></a>      total <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb7-11"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:30%;">
 <p><img data-src="imagens/balao_inicializar_atributos.png"></p>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="section-17" class="slide level2 smaller">
@@ -1129,8 +1157,7 @@
 <li class="fragment">Portanto, não temos como saber o preço do ingresso de uma máquina específica, até que ela seja criada.</li>
 </ul>
 </div>
-</div>
-</div>
+</div></div>
 <div class="fragment">
 <p>Portanto, uma das principais funções de um atributo é <strong>“lembrar” de informações externas</strong> passada para o objeto.</p>
 <ul>
@@ -1139,6 +1166,7 @@
 </ul>
 </div>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1146,6 +1174,7 @@
 </div>
 <div class="callout-content">
 <p><strong>Construtores</strong> permitem que cada objeto seja configurado adequadamente quando é criado.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1161,8 +1190,7 @@
 </ul>
 </div><div class="column" style="width:40%;">
 <p><img data-src="imagens/objeto_maquina_ingressos_criado.png"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="section-20" class="slide level2 smaller">
 <h2></h2>
@@ -1187,8 +1215,7 @@
 <li class="fragment">Quem lê a classe não precisa conhecer o valor padrão do Java para os atributos.</li>
 </ol>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="quiz-2.2" class="slide level2 smaller" data-background-color="#f7fad1">
@@ -1222,7 +1249,7 @@
 </div>
 <div class="fragment">
 <div class="doublefontsize">
-<div class="sourceCode" id="cb8" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dt">int</span> custoIngresso<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dt">int</span> custoIngresso<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li class="fragment">Este construtor tem um único parâmetro <code>custoIngresso</code> de tipo <code>int</code>.
@@ -1268,8 +1295,7 @@
 <li class="fragment">Dizemos que este é o <span class="alert">escopo</span> do parâmetro.</li>
 <li class="fragment">Veja que o <strong>escopo</strong> de um atributo é diferente, pois ele pode ser acessado em qualquer lugar dentro da classe.</li>
 </ul>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="section-24" class="slide level2 smaller">
@@ -1284,8 +1310,7 @@
 <li class="fragment">Quando o construtor é chamado, o espaço do construtor é criado e, depois que ele termina, esse espaço desaparece.</li>
 <li class="fragment">Portanto, o tempo de vida de um parâmetro é limitado a uma única chamada do construtor.</li>
 </ul>
-</div>
-</div>
+</div></div>
 <div class="fragment">
 <p>Repare que é diferente do <strong>tempo de vida de um atributo</strong>.</p>
 <ul>
@@ -1294,6 +1319,7 @@
 </ul>
 </div>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1305,7 +1331,9 @@
 </div>
 </div>
 </div>
+</div>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1317,9 +1345,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-25" class="slide level2 smaller">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1327,10 +1357,12 @@
 </div>
 <div class="callout-content">
 <p>A qual classe pertence o construtor abaixo?</p>
-<div class="sourceCode" id="cb9" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">Estudante</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">Estudante</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1338,10 +1370,12 @@
 </div>
 <div class="callout-content">
 <p>Quantos parâmetros tem o construtor abaixo e quais são seus tipos?</p>
-<div class="sourceCode" id="cb10" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">Livro</span><span class="op">(</span><span class="bu">String</span> titulo<span class="op">,</span> <span class="dt">double</span> preco<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">Livro</span><span class="op">(</span><span class="bu">String</span> titulo<span class="op">,</span> <span class="dt">double</span> preco<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1349,6 +1383,7 @@
 </div>
 <div class="callout-content">
 <p>Apenas pela assinatura do construtor do exercício anterior, você conseguiria chutar alguma coisa sobre os nomes e tipos dos atributos da classe <code>Livro</code>?</p>
+</div>
 </div>
 </div>
 </div>
@@ -1367,7 +1402,7 @@
 <p>Como vocês já aprenderam em disciplinas anteriores de programação, nós usamos o operador <code>=</code> para <span class="alert">atribuir</span> valores a variáveis.</p>
 <ul>
 <li class="fragment"><p>Assim, o comando:</p>
-<div class="sourceCode" id="cb11" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>preco <span class="op">=</span> custoIngresso<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a>preco <span class="op">=</span> custoIngresso<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Indica que o valor do parâmetro <code>custoIngresso</code> será copiado para o atributo <code>preco</code>.</p></li>
 <li class="fragment"><p><span class="alert">Dica</span>:</p>
 <ul>
@@ -1382,8 +1417,7 @@
 <p><img data-src="imagens/diagrama_passagem_parametros.png" style="width:80.0%"></p>
 </div><div class="column" style="width:40%;">
 <p>No diagrama, a atribuição é representada pela seta indica pela letra (B).</p>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="section-28" class="slide level2 smaller">
@@ -1400,6 +1434,7 @@
 </ul>
 </div>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1411,7 +1446,9 @@
 </div>
 </div>
 </div>
+</div>
 <div class="fragment">
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1422,6 +1459,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1429,8 +1468,9 @@
 </div>
 <div class="callout-content">
 <p>A linha de código abaixo cria um objeto, chamando o construtor da classe <code>Date</code>.</p>
-<div class="sourceCode" id="cb12" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="bu">Date</span><span class="op">(</span><span class="st">"Setembro"</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2023</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="bu">Date</span><span class="op">(</span><span class="st">"Setembro"</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2023</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Você conseguiria escrever a assinatura do construtor da classe <code>Date</code>? Obs.: escolha nomes representativos para os parâmetros.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1465,20 +1505,21 @@
 <li class="fragment">Vemos que os métodos têm duas partes: a <strong>assinatura</strong> e o <strong>corpo</strong> do método.</li>
 <li class="fragment">Vemos também que antes da assinatura há um comentáro que descreve o método.</li>
 </ul>
-<div class="sourceCode" id="cb13" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MaquinaIngressos</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// atributos ommitidos</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// construtor omitido</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Retorna o pre<span class="co">ç</span>o do ingresso<span class="co">.</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>   <span class="co">*/</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">int</span> <span class="fu">obterPreco</span><span class="op">()</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> preco<span class="op">;</span></span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span>  </span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">// métodos restantes omitidos</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MaquinaIngressos</span>
+<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb13-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="co">// atributos ommitidos</span></span>
+<span id="cb13-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="co">// construtor omitido</span></span>
+<span id="cb13-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
+<span id="cb13-6"><a aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Retorna o pre<span class="co">ç</span>o do ingresso<span class="co">.</span></span>
+<span id="cb13-7"><a aria-hidden="true" tabindex="-1"></a>   <span class="co">*/</span></span>
+<span id="cb13-8"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">int</span> <span class="fu">obterPreco</span><span class="op">()</span></span>
+<span id="cb13-9"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb13-10"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> preco<span class="op">;</span></span>
+<span id="cb13-11"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span>  </span>
+<span id="cb13-12"><a aria-hidden="true" tabindex="-1"></a>  <span class="co">// métodos restantes omitidos</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1486,6 +1527,7 @@
 </div>
 <div class="callout-content">
 <p>Métodos são formados por duas partes: assinatura e corpo.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1526,8 +1568,8 @@
 <ul>
 <li class="fragment">Obs.: o tipo de retorno aparece antes do nome do método.</li>
 </ul>
-<div class="sourceCode" id="cb14" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dt">int</span> custoIngresso<span class="op">)</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">obterPreco</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb14"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dt">int</span> custoIngresso<span class="op">)</span></span>
+<span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">obterPreco</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li class="fragment">Além disso, <strong>construtores possuem o mesmo nome da classe</strong>.</li>
 </ul>
 </div>
@@ -1536,7 +1578,7 @@
 <h2></h2>
 <p>O corpo do método <code>obterPreco</code> tem apenas um comando.</p>
 <div class="doublefontsize">
-<div class="sourceCode" id="cb15" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> preco<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> preco<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li class="fragment">Esse comando é chamado <span class="alert">comando de retorno</span>.</li>
@@ -1582,6 +1624,7 @@
 <div class="column" style="width:20%;">
 <p><img data-src="imagens/fica_a_dica.png"></p>
 </div><div class="column" style="width:80%;">
+<div title="Convenção">
 <div class="callout callout-note no-icon callout-titled callout-style-simple">
 <div class="callout-body">
 <div class="callout-title">
@@ -1604,8 +1647,9 @@
 </div>
 </div>
 </div>
-</div>
+</div></div>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1617,9 +1661,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-35" class="slide level2 smaller">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1630,6 +1676,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1640,6 +1688,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1650,6 +1700,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1660,6 +1712,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1667,6 +1721,7 @@
 </div>
 <div class="callout-content">
 <p>Além da diferença de nome, o que mais há de diferente nas assinaturas dos métodos <code>obterPreco</code> e <code>inserirDinheiro</code>. Você acha que isso pode ter algo a ver com o fato de que o primeiro método tem comando de retorno e o segundo não?</p>
+</div>
 </div>
 </div>
 </div>
@@ -1694,10 +1749,10 @@
 </ul>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb16" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">definirNome</span><span class="op">(</span><span class="bu">String</span> novoNome<span class="op">)</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    nome <span class="op">=</span> novoNome<span class="op">;</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">definirNome</span><span class="op">(</span><span class="bu">String</span> novoNome<span class="op">)</span></span>
+<span id="cb16-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb16-3"><a aria-hidden="true" tabindex="-1"></a>    nome <span class="op">=</span> novoNome<span class="op">;</span></span>
+<span id="cb16-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
@@ -1705,6 +1760,7 @@
 <div class="column" style="width:20%;">
 <p><img data-src="imagens/fica_a_dica.png"></p>
 </div><div class="column" style="width:80%;">
+<div title="Convenção">
 <div class="callout callout-note no-icon callout-titled callout-style-simple">
 <div class="callout-body">
 <div class="callout-title">
@@ -1720,11 +1776,12 @@
 </div>
 </div>
 </div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="section-38" class="slide level2 smaller">
 <h2></h2>
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1735,8 +1792,10 @@
 </div>
 </div>
 </div>
+</div>
 <div class="fragment">
 <div class="fragment">
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1754,18 +1813,19 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-39" class="slide level2 smaller">
 <h2></h2>
 <p>Vamos analisar agora o código do método <code>inserirDinheiro</code>.</p>
 <div class="fragment">
-<div class="sourceCode" id="cb17" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Recebe uma quantidade de dinheiro de um cliente<span class="co">.</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>   <span class="co">*/</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">inserirDinheiro</span><span class="op">(</span><span class="dt">int</span> quantidade<span class="op">)</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>      saldo <span class="op">=</span> saldo <span class="op">+</span> quantidade<span class="op">;</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
+<span id="cb17-2"><a aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Recebe uma quantidade de dinheiro de um cliente<span class="co">.</span></span>
+<span id="cb17-3"><a aria-hidden="true" tabindex="-1"></a>   <span class="co">*/</span></span>
+<span id="cb17-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">inserirDinheiro</span><span class="op">(</span><span class="dt">int</span> quantidade<span class="op">)</span></span>
+<span id="cb17-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb17-6"><a aria-hidden="true" tabindex="-1"></a>      saldo <span class="op">=</span> saldo <span class="op">+</span> quantidade<span class="op">;</span></span>
+<span id="cb17-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Repare que o método tem retorno do tipo <span class="alert"><code>void</code></span>.</p>
@@ -1778,6 +1838,7 @@
 </section>
 <section id="section-40" class="slide level2 smaller">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1785,10 +1846,12 @@
 </div>
 <div class="callout-content">
 <p>Avaliando apenas a assinatura abaixo, você saberia dizer se ela é de um construtor ou de um método?</p>
-<div class="sourceCode" id="cb18" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">setPreco</span><span class="op">(</span><span class="dt">int</span> custo<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb18-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">setPreco</span><span class="op">(</span><span class="dt">int</span> custo<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1796,6 +1859,7 @@
 </div>
 <div class="callout-content">
 <p>Complete o código do método anterior de modo que ele atualize o valor de um atributo <code>preco</code>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1821,25 +1885,25 @@
 <h2></h2>
 <p>O método <code>imprimirIngresso</code> é o mais complexo da classe.</p>
 <div class="fragment">
-<div class="sourceCode" id="cb19" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Imprime um ingresso<span class="co">.</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Atualiza o total coletado e reduz o saldo para zero<span class="co">.</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>   <span class="co">*/</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">imprimirIngresso</span><span class="op">()</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Simula a impressão de um ingresso</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"##################"</span><span class="op">);</span></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# Ingressos &amp; Cia "</span><span class="op">);</span></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# Ingresso"</span><span class="op">);</span></span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# "</span> <span class="op">+</span> preco <span class="op">+</span> <span class="st">" centavos."</span><span class="op">);</span></span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"##################"</span><span class="op">);</span></span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">();</span></span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Atualiza o total coletado com o saldo</span></span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> saldo<span class="op">;</span></span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Zera o saldo</span></span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb19-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
+<span id="cb19-2"><a aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Imprime um ingresso<span class="co">.</span></span>
+<span id="cb19-3"><a aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Atualiza o total coletado e reduz o saldo para zero<span class="co">.</span></span>
+<span id="cb19-4"><a aria-hidden="true" tabindex="-1"></a>   <span class="co">*/</span></span>
+<span id="cb19-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">imprimirIngresso</span><span class="op">()</span></span>
+<span id="cb19-6"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb19-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// Simula a impressão de um ingresso</span></span>
+<span id="cb19-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"##################"</span><span class="op">);</span></span>
+<span id="cb19-9"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# Ingressos &amp; Cia "</span><span class="op">);</span></span>
+<span id="cb19-10"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# Ingresso"</span><span class="op">);</span></span>
+<span id="cb19-11"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# "</span> <span class="op">+</span> preco <span class="op">+</span> <span class="st">" centavos."</span><span class="op">);</span></span>
+<span id="cb19-12"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"##################"</span><span class="op">);</span></span>
+<span id="cb19-13"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">();</span></span>
+<span id="cb19-14"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-15"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// Atualiza o total coletado com o saldo</span></span>
+<span id="cb19-16"><a aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> saldo<span class="op">;</span></span>
+<span id="cb19-17"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// Zera o saldo</span></span>
+<span id="cb19-18"><a aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb19-19"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Você deve ter notado que, ao chamar o método, o seguinte texto aparece no terminal.</p>
@@ -1853,14 +1917,14 @@
 <section id="section-42" class="slide level2 smaller">
 <h2></h2>
 <p>Vamos avaliar o método passo a passo.</p>
-<div class="sourceCode" id="annotated-cell-5" data-code-line-numbers="false"><pre class="sourceCode java code-annotation-code code-with-copy code-annotated"><code class="sourceCode java"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
+<div class="sourceCode" id="annotated-cell-5"><pre class="sourceCode java code-annotation-code code-with-copy code-annotated"><code class="sourceCode java"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
 <span id="annotated-cell-5-2"><a href="#annotated-cell-5-2" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Imprime um ingresso<span class="co">.</span></span>
 <span id="annotated-cell-5-3"><a href="#annotated-cell-5-3" aria-hidden="true" tabindex="-1"></a>   <span class="co">*</span> Atualiza o total coletado e reduz o saldo para zero<span class="co">.</span></span>
 <span id="annotated-cell-5-4"><a href="#annotated-cell-5-4" aria-hidden="true" tabindex="-1"></a>   <span class="co">*/</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="1" onclick="event.preventDefault();" href="">1</a><span id="annotated-cell-5-5" class="code-annotation-target"><a href="#annotated-cell-5-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">imprimirIngresso</span><span class="op">()</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-5-5" class="code-annotation-target"><a href="#annotated-cell-5-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">imprimirIngresso</span><span class="op">()</span></span>
 <span id="annotated-cell-5-6"><a href="#annotated-cell-5-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
 <span id="annotated-cell-5-7"><a href="#annotated-cell-5-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Simula a impressão de um ingresso</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="2" onclick="event.preventDefault();" href="">2</a><span id="annotated-cell-5-8" class="code-annotation-target"><a href="#annotated-cell-5-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"##################"</span><span class="op">);</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-5-8" class="code-annotation-target"><a href="#annotated-cell-5-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"##################"</span><span class="op">);</span></span>
 <span id="annotated-cell-5-9"><a href="#annotated-cell-5-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# Ingressos &amp; Cia "</span><span class="op">);</span></span>
 <span id="annotated-cell-5-10"><a href="#annotated-cell-5-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# Ingresso"</span><span class="op">);</span></span>
 <span id="annotated-cell-5-11"><a href="#annotated-cell-5-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# "</span> <span class="op">+</span> preco <span class="op">+</span> <span class="st">" centavos."</span><span class="op">);</span></span>
@@ -1868,26 +1932,26 @@
 <span id="annotated-cell-5-13"><a href="#annotated-cell-5-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">();</span></span>
 <span id="annotated-cell-5-14"><a href="#annotated-cell-5-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="annotated-cell-5-15"><a href="#annotated-cell-5-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Atualiza o total coletado com o saldo</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="3" onclick="event.preventDefault();" href="">3</a><span id="annotated-cell-5-16" class="code-annotation-target"><a href="#annotated-cell-5-16" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> saldo<span class="op">;</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-5-16" class="code-annotation-target"><a href="#annotated-cell-5-16" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> total <span class="op">+</span> saldo<span class="op">;</span></span>
 <span id="annotated-cell-5-17"><a href="#annotated-cell-5-17" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Zera o saldo</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="4" onclick="event.preventDefault();" href="">4</a><span id="annotated-cell-5-18" class="code-annotation-target"><a href="#annotated-cell-5-18" aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-5-18" class="code-annotation-target"><a href="#annotated-cell-5-18" aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="annotated-cell-5-19"><a href="#annotated-cell-5-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <dl class="code-annotation-container-grid">
 <dt class="fragment" data-target-cell="annotated-cell-5" data-target-annotation="1">1</dt>
 <dd class="fragment">
-<span data-code-lines="5" data-code-annotation="1" data-code-cell="annotated-cell-5">A assinatura indica que o método tem retorno <code>void</code> e não espera nenhum parâmetro.</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="5" data-code-annotation="1">A assinatura indica que o método tem retorno <code>void</code> e não espera nenhum parâmetro.</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-5" data-target-annotation="2">2</dt>
 <dd class="fragment">
-<span data-code-lines="8,9,10,11,12" data-code-annotation="2" data-code-cell="annotated-cell-5">Os primeiros seis comandos imprimem o que vemos no terminal.</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="8,9,10,11,12" data-code-annotation="2">Os primeiros seis comandos imprimem o que vemos no terminal.</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-5" data-target-annotation="3">3</dt>
 <dd class="fragment">
-<span data-code-lines="16" data-code-annotation="3" data-code-cell="annotated-cell-5">O sétimo comando adiciona o saldo atual inserido pelo usuário ao total acumulado.</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="16" data-code-annotation="3">O sétimo comando adiciona o saldo atual inserido pelo usuário ao total acumulado.</span>
 </dd>
 <dt class="fragment" data-target-cell="annotated-cell-5" data-target-annotation="4">4</dt>
 <dd class="fragment">
-<span data-code-lines="18" data-code-annotation="4" data-code-cell="annotated-cell-5">O último comando retorna o saldo para zero, esperando o próximo usuário.</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="18" data-code-annotation="4">O último comando retorna o saldo para zero, esperando o próximo usuário.</span>
 </dd>
 </dl>
 </section>
@@ -1910,7 +1974,7 @@
 <h2></h2>
 <p>Mas veja que a linha abaixo é um pouco diferente.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb21" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# "</span> <span class="op">+</span> preco <span class="op">+</span> <span class="st">" centavos."</span><span class="op">);</span>    </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb21-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"# "</span> <span class="op">+</span> preco <span class="op">+</span> <span class="st">" centavos."</span><span class="op">);</span>    </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Essa linha tem duas coisas diferentes.</p>
@@ -1932,12 +1996,13 @@
 <li class="fragment">Quando o método é chamado sem nenhum argumento, uma linha em branco é deixada no terminal.</li>
 </ul>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb22" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb22-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
 <section id="section-45" class="slide level2 smaller">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1945,10 +2010,12 @@
 </div>
 <div class="callout-content">
 <p>O que exatamente será exibido na tela pelo comando abaixo.</p>
-<div class="sourceCode" id="cb23" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>  <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Orgulho de ser UFLA!"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb23-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Orgulho de ser UFLA!"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1961,6 +2028,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1968,6 +2037,7 @@
 </div>
 <div class="callout-content">
 <p>Cria duas máquinas de ingressos com valores de ingresso diferentes. Ao chamar o método <code>imprimirPreco</code> para as duas máquinas, o texto exibido é igual ou diferente? Por que?</p>
+</div>
 </div>
 </div>
 </div>
@@ -1985,6 +2055,7 @@
 <li>considerada nas aula em <span class="alert">formato ANP</span> (Atividade Não-Presencial),</li>
 <li>você precisa <strong>demonstrar que</strong> realmente <strong>estudou</strong> o conteúdo.</li>
 </ul>
+<div title="Entregas no Campus Virtual">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1999,30 +2070,34 @@
 </div>
 </div>
 </div>
+</div>
+
+<div class="quarto-auto-generated-content">
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
+</div>
 </div>
 </section></section>
     </div>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="cap2-1_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="cap2-1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="cap2-1_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="cap2-1_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="cap2-1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="cap2-1_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="cap2-1_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
-  <script src="cap2-1_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="cap2-1_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="cap2-1_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="cap2-1_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="cap2-1_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -2032,7 +2107,6 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -2251,18 +2325,7 @@
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -2294,11 +2357,50 @@
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
-      function tippyHover(el, contentFn) {
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -2308,8 +2410,17 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -2323,7 +2434,11 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

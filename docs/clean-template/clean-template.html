@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR"><head>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/tabby.min.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/quarto-contrib/jquery-3.6.3/jquery-3.6.3.min.js"></script>
-<script src="site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.js" defer="true"></script>
-<link href="site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
-<script src="site_libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
-<script src="site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script><meta charset="utf-8">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/jquery-3.6.3/jquery-3.6.3.min.js"></script>
+<script src="../site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.js" defer="true"></script>
+<link href="../site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
+<script src="../site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2023-04-10">
-  <title>GAC125 - Introdução à Programação Orientada a Objetos – IPOO - Cap. 2 Entendendo as Definições de Classe</title>
+  <meta name="author" content="Grant McDermott">
+  <meta name="author" content="Kyle Butts">
+  <title>GAC125 - Introdução à Programação Orientada a Objetos – Quarto reveal.js clean</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -100,15 +100,35 @@
     code span.va { color: #e36209; } /* Variable */
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
-  </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
-  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -400,344 +420,300 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">IPOO - Cap. 2 Entendendo as Definições de Classe</h1>
-  <p class="subtitle">Aula 2.4 - Prática</p>
+  <h1 class="title">Quarto reveal.js clean</h1>
+  <p class="subtitle">A minimal and elegant presentation theme</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<a href="https://julio.dac.ufla.br">Prof.&nbsp;Julio César Alves</a> 
+Grant McDermott <a href="https://orcid.org/0000-0001-7883-8573" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+</div>
+<div class="quarto-title-author-email">
+<a href="mailto:gmcd@amazon.com">gmcd@amazon.com</a>
 </div>
         <p class="quarto-title-affiliation">
-            DAC - ICET - Universidade Federal de Lavras
+            Amazon.com
+          </p>
+    </div>
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Kyle Butts <a href="https://orcid.org/0000-0002-9048-8059" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+</div>
+<div class="quarto-title-author-email">
+<a href="mailto:kyle.butts@colorado.edu">kyle.butts@colorado.edu</a>
+</div>
+        <p class="quarto-title-affiliation">
+            UC Boulder
           </p>
     </div>
 </div>
 
-  <p class="date">04/10/2023</p>
+  <p class="date">23/09/2024</p>
 </section>
-<section id="sobre-as-aulas-práticas" class="slide level2 smaller">
-<h2>Sobre as Aulas Práticas</h2>
-<div>
-<p>Relembrando:</p>
+<section id="example-slide" class="slide level2">
+<h2>Example slide</h2>
+<h3 id="this-is-a-subtitle">This is a subtitle</h3>
+<p>Before we dive a bit deeper, here is a simple example of the <a href="https://github.com/grantmcdermott/quarto-revealjs-clean">clean theme</a> in action.</p>
 <ul>
-<li><strong>Aulas práticas são importantes</strong> para o entendimento dos conceitos.</li>
-<li>Mas, para isso, é fundamental que tenha <strong>estudado o conteúdo teórico ANP antes</strong> da aula prática.</li>
+<li class="fragment">No pictures or anything fancy. Just text for the moment.</li>
 </ul>
-<div class="columns">
-<div class="column" style="width:20%;">
-<p><img data-src="imagens/fica_a_dica.png"></p>
-</div><div class="column" style="width:80%;">
-<div title="Convenção">
-<div class="callout callout-note no-icon callout-titled callout-style-simple">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Convenção</strong></p>
-</div>
-<div class="callout-content">
-<p>Lembre-se que para ter presença na aula prática é necessário.</p>
+<p>Next, we’ll take a brief tour of some theme components.</p>
 <ul>
-<li>Responder à <strong>chamada</strong>;</li>
-<li>e, <strong>também</strong>, entregar, no mínimo, 30% do exercícios propostos até o final da aula.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div></div>
-</div>
-</section>
-<section id="section" class="slide level2 smaller">
-<h2></h2>
-<p>É muito comum precisarmos implementar expressões em nossos códigos.</p>
-<ul>
-<li class="fragment">Como cálculos usando variáveis.</li>
-<li class="fragment">Ou chamadas de métodos de variáveis que são objetos.</li>
-<li class="fragment">O <strong>Bloco de Códigos</strong> do BlueJ pode ser muito útil para experimentarmos expressões antes de as implementarmos em nossas classes.</li>
-</ul>
-<div class="fragment">
-<p>Tende adivinhar os resultados das expressões abaixo, antes de usar o Bloco de Códigos.</p>
-<ul>
-<li class="fragment"><code>2023 + 4</code></li>
-<li class="fragment"><code>"passa" + "tempo"</code></li>
-<li class="fragment"><code>"passa" + 9</code></li>
-<li class="fragment"><code>7 + 2 + "tempo"</code></li>
-<li class="fragment"><code>"tempo" + 7 + 2</code></li>
-<li class="fragment"><code>"passatempo".substring(5,6)</code></li>
-<li class="fragment"><code>"passatempo".substring(5,11)</code></li>
-</ul>
-</div>
-<div class="fragment">
-<p>O que foi novidade para você nesse exercício?</p>
-</div>
-</section>
-<section id="section-1" class="slide level2 smaller">
-<h2></h2>
-<p>No Bloco de Códigos, quando o resultado de uma expressão é um objeto (como uma <code>String</code>), aparece um símbolo vermelho próximo ao resultado.</p>
-<ul>
-<li class="fragment">Você pode clicar duas vezes no símbolo para inspecionar o objeto.</li>
-<li class="fragment">Ou clicar uma vez para colocá-lo na bancada de objetos.</li>
-<li class="fragment">Experimente!</li>
-</ul>
-<div class="fragment">
-<p>Você pode também declarar variáveis e escrever comandos completos no Bloco de Códigos.</p>
-<ul>
-<li class="fragment">Experimente os comandos abaixo:</li>
-<li class="fragment"><code>soma = 2023 + 4;</code></li>
-<li class="fragment"><code>int soma = 0;</code></li>
-<li class="fragment"><code>soma = 2023 + 4;</code></li>
-</ul>
-</div>
-<div class="fragment">
-<p>Se você digitar o nome de uma variável sem ponto-e-vírgula, o Bloco de Códigos exibe seu valor.</p>
-<ul>
-<li class="fragment">Experimente digitar, por exemplo: <code>soma</code></li>
-</ul>
-</div>
-</section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-<div title="Exercício">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício</strong></p>
-</div>
-<div class="callout-content">
-<p>Abra o projeto <a href="https://github.com/ufla-ipoo/maquina-ingressos-melhor">maquina-ingressos-melhor</a> e digite o código abaixo. Veja que tem linhas que terminam com ponto-e-virgula e outras não. <strong>Preste atenção</strong> ao valor retornado pelo método <code>obterSaldo</code> em cada chamada.</p>
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a></a>MaquinaIngressos m1 <span class="op">=</span> <span class="kw">new</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dv">1000</span><span class="op">);</span></span>
-<span id="cb1-2"><a></a>m1<span class="op">.</span><span class="fu">obterSaldo</span><span class="op">()</span></span>
-<span id="cb1-3"><a></a>m1<span class="op">.</span><span class="fu">inserirDinheiro</span><span class="op">(</span><span class="dv">500</span><span class="op">);</span></span>
-<span id="cb1-4"><a></a>m1<span class="op">.</span><span class="fu">obterSaldo</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div title="Exercício">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício</strong></p>
-</div>
-<div class="callout-content">
-<p>Agora digite a linha abaixo no Bloco de Códigos.</p>
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a></a>MaquinaIngressos m2 <span class="op">=</span> m1<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>O que você acha que a chamada <code>m2.obterSaldo()</code> retornaria?</p>
-<p>Experimente!</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<div title="Exercício">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício</strong></p>
-</div>
-<div class="callout-content">
-<p>Agora digite o comando abaixo</p>
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a></a>m1<span class="op">.</span><span class="fu">inserirDinheiro</span><span class="op">(</span><span class="dv">500</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Avalie a linha abaixo e tente adivinhar o que ela vai retornar antes de digitar o código no Bloco de Códigos.</p>
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a></a>m2<span class="op">.</span><span class="fu">obterSaldo</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>A resposta foi a que você esperava?</p>
-<p>Você consegue imaginar alguma ligação entre <code>m1</code> e <code>m2</code> que explique o que está acontecendo?</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-4" class="slide level2 smaller">
-<h2></h2>
-<p>Vamos agora começar os <strong>exercícios de implementação</strong> a serem <span class="alert">entregues</span> nessa semana.</p>
-<p>Baixe o <strong>projeto <a href="https://github.com/ufla-ipoo/exercicio-livro">exercicio-livro</a></strong>.</p>
-<ul>
-<li class="fragment">Avalie o código da classe <code>Livro</code> antes de começar os exercícios.</li>
-<li class="fragment">Veja que ela tem apenas o rascunho inicial da classe, com dois atributos e um construtor.</li>
-<li class="fragment">Nos exercícios vamos completá-la.</li>
+<li class="fragment">We’ll use the same basic structure as the <a href="https://raw.githack.com/kylebutts/templates/master/latex-slides/auxiliary/slides.pdf">original LaTeX slides</a>.</li>
+<li class="fragment">Note that the <a href="https://quarto.org/docs/presentations/revealjs/"><em>full suite</em></a> of Reveal.js features are available for this Quarto implementation, even if we don’t cover everything here.</li>
 </ul>
 </section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<div title="Exercício 1.1">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 1.1</strong></p>
-</div>
-<div class="callout-content">
-<p>Adicione dois métodos, <code>imprimirAutor</code> e <code>imprimirTitulo</code>, à classe <code>Livro</code> que exibem os valores do atributo correspondente no terminal.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="fragment">
-<div title="Exercício 1.2">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 1.2</strong></p>
-</div>
-<div class="callout-content">
-<p>Adicione um atibuto <code>paginas</code> à classe <code>Livro</code> para guardar a quantidade de páginas do livro. O atributo deve ser do tipo <code>int</code> e seu valor inicial deve ser passado para o construtor junto com o <code>autor</code> e o <code>titulo</code>. Adicione também um método de acesso <code>obterPaginas</code> para esse atributo.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="fragment">
-<div title="Exercício 1.3">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 1.3</strong></p>
-</div>
-<div class="callout-content">
-<p>Os objetos <code>Livro</code> são imutáveis? Escreva sua resposta no comentário da classe (que aparece antes da declaração da classe).</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-6" class="slide level2">
-<h2></h2>
-<div title="Exercício 1.4">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 1.4</strong></p>
-</div>
-<div class="callout-content">
-<p>Adicione um método <code>imprimirDetalhes</code> à classe Livro, que imprime no terminal o autor, o título e o número de páginas. Escolha como você quer que a informação apareça na tela (poderia ser tudo em uma linha, ou uma informação por linha, por exemplo). Pode ser útil explicar para o usuário o que é cada informação. Exemplo:</p>
-<div class="halfincfontsize">
-<pre><code>Livro de título: A Dança dos Dragões, escrito por: George R. R. Martin (864 páginas)</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="fragment">
-<div title="Exercício 1.5">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 1.5</strong></p>
-</div>
-<div class="callout-content">
-<p>Vamos agora adicionar um atributo para representar o número de chamada do livro, que é o identificador usado na biblioteca quando queremos buscar um livro. O livro da disciplina, por exemplo, tem o número de chamada <code>005.133 BAR pro</code>.</p>
-<p>Crie então um atributo para guardar essa informação (note que ele precisa ser do tipo <code>String</code>). O atributo deve ser inicializado com string vazia (<code>""</code>) no construtor. Crie um método modificador para o número de chamada, de forma que o usuário consiga defini-lo depois que o objeto estiver criado. Crie também um método de acesso para que o usuário consiga consultar o valor definido.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-7" class="slide level2">
-<h2></h2>
-<div title="Exercício 1.6">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 1.6</strong></p>
-</div>
-<div class="callout-content">
-<p>Modifique o método <code>imprimirDetalhes</code> para incluir o número de chamada do livro. Caso o livro ainda não tenha um número de chamada definido, o método deve exibir a informação <code>NDEF</code> (de “não definido”).</p>
-<p>Dica: use um comando condicional e o método <code>length</code> da classe String para saber se o número de chamada já foi definido ou não.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="fragment">
-<div title="Exercício 1.7">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 1.7</strong></p>
-</div>
-<div class="callout-content">
-<p>Altere o método que define o número de chamada de forma que ele só aceite números de chamada que tenham pelo menos três caracteres. Caso o valor passado tenha menos que três caracteres, uma mensagem de erro deve ser exibida e o número de chamada não deve ser alterado.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-8" class="slide level2">
-<h2></h2>
-<div title="Exercício 1.8">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 1.8</strong></p>
-</div>
-<div class="callout-content">
-<p>Por fim, vamos alterar a classe <code>Livro</code> para que seja possível contabilizar quantas vezes o livro já foi emprestado.</p>
-<ul>
-<li class="fragment">Crie um atributo <code>numeroEmprestimos</code> do tipo <code>int</code> para guardar a quantidade de vezes que o livro foi emprestado.</li>
-<li class="fragment">Crie um método <code>emprestar</code> que adiciona 1 ao atributo.</li>
-<li class="fragment">Crie um método de acesso que permita consultar o número de empréstimos.</li>
-<li class="fragment">Altere o método <code>imprimmirDetalhes</code> para incluir a informação do atributo criado.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-9" class="slide level2">
-<h2></h2>
-<div title="Entrega no Campus Virtual">
-<div class="callout callout-important callout-titled callout-style-default">
+<section id="before-you-proceed" class="slide level2">
+<h2>Before you proceed…</h2>
+<h3 id="requirements-for-the-coding-examples-in-this-demo">Requirements for the coding examples in this demo</h3>
+<div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Entrega no Campus Virtual</strong></p>
+<p><strong>R libraries</strong></p>
 </div>
 <div class="callout-content">
-<p>Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto <code>exercicio-livro</code> da forma que ficou após as suas alterações (compacte a pasta em um arquivo <code>.zip</code> para enviar);</p>
+<p>While the clean theme is language agnostic, we will use several R coding examples in this demo to highlight some advanced theme features.</p>
+<p>You will need the following libraries if you’d like to render the template “as-is”:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"modelsummary"</span>, <span class="st">"gt"</span>, <span class="st">"fixest"</span>, <span class="st">"pdftools"</span>, <span class="st">"tinytex"</span>, <span class="st">"threejs"</span>))</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<p><strong>TinyTex</strong></p>
+</div>
+<div class="callout-content">
+<p>While reveal.js presentations are HTML format, we will show an example of how to embed LaTeX tables as images. This requires a working Tex distribution, of which TinyTex provides by far the easiest and lightest integration with Quarto. More details <a href="https://quarto.org/docs/output-formats/pdf-engine.html">here</a>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="ex">quarto</span> install tinytex</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<section id="components" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Components</h1>
+
+</section>
+<section id="components-1" class="slide level2">
+<h2>Components</h2>
+<h3 id="ordered-and-unordered-lists">Ordered and Unordered Lists</h3>
+<p>Here we have an unordered list.</p>
+<ul>
+<li class="fragment">first item
+<ul>
+<li class="fragment">sub-item</li>
+</ul></li>
+<li class="fragment">second item</li>
+</ul>
+<p>And next we have an ordered one.</p>
+<ol type="1">
+<li class="fragment">first item
+<ol type="i">
+<li class="fragment">sub-item</li>
+</ol></li>
+<li class="fragment">second item</li>
+</ol>
+</section>
+<section id="components-2" class="slide level2">
+<h2>Components</h2>
+<h3 id="sec-crossref">Alerts &amp; Cross-refs</h3>
+<p>To emphasize specific words or text, you can:</p>
+<ul>
+<li class="fragment">Use the default <code>.alert</code> class, e.g.&nbsp;<span class="alert">important note</span>.</li>
+<li class="fragment">Use the <code>.fg</code> class for custom colour, e.g.&nbsp;<span class="fg" style="--col: #e64173">important note</span>.</li>
+<li class="fragment">Use the <code>.bg</code> class for custom background, e.g.&nbsp;<span class="bg" style="--col: #e64173">important note</span>.</li>
+</ul>
+<p>To cross-reference, you have several options, for example:</p>
+<ul>
+<li class="fragment">Beamer-like <code>.button</code> class provided by this theme, e.g.&nbsp;<a href="#/sec-appendix"><span class="button">Appendix</span></a></li>
+<li class="fragment">Quarto’s native cross-ref syntax, e.g., “See <a href="#/sec-appendix" class="quarto-xref">Seção&nbsp;4.3</a>.”</li>
+</ul>
+</section>
+<section id="components-3" class="slide level2">
+<h2>Components</h2>
+<h3 id="citations">Citations</h3>
+<p>Citations follow the standard <a href="https://quarto.org/docs/authoring/footnotes-and-citations.html#citations">Quarto format</a> and be sourced from BibLaTex, BibTeX, or CLS files. For example:</p>
+<ul>
+<li class="fragment"><p><span class="alert">Topic 1:</span> Spatial Frictions <span class="citation" data-cites="Fajgelbaum_Morales_Serrato_Zidar_2018 Hsieh_Moretti_2019 Moretti_2011">(<a href="#/references" role="doc-biblioref" onclick="">Fajgelbaum et al. 2018</a>; <a href="#/references" role="doc-biblioref" onclick="">Hsieh e Moretti 2019</a>; <a href="#/references" role="doc-biblioref" onclick="">Moretti 2011</a>)</span></p></li>
+<li class="fragment"><p><span class="alert">Topic 2:</span> Blah <span class="citation" data-cites="Suárez_Serrato_Zidar_2016">(<a href="#/references" role="doc-biblioref" onclick="">Suárez Serrato e Zidar 2016</a>)</span></p></li>
+</ul>
+</section>
+<section id="components-4" class="slide level2">
+<h2>Components</h2>
+<h3 id="blocks">Blocks</h3>
+<p>Quarto provides <a href="https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs">dedicated environments</a> for theorems, lemmas, and so forth.</p>
+<p>But in presentation format, it’s arguably more effective just to use a <a href="https://quarto.org/docs/authoring/callouts.html">Callout Block</a>.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Regression Specification</strong></p>
+</div>
+<div class="callout-content">
+<p>The main specification is as follows:</p>
+<p><span class="math display">\[
+y_{it} = X_{it} \beta + \mu_i + \varepsilon_{it}
+\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="components-5" class="slide level2">
+<h2>Components</h2>
+<h3 id="multicolumn-i-text-only">Multicolumn I: Text only</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="column-1">Column 1</h4>
+<p>Here is a long sentence that will wrap onto the next line as it hits the column width, and continue this way until it stops.</p>
+</div><div class="column" style="width:50%;">
+<h4 id="column-2">Column 2</h4>
+<p>Some other text in another column.</p>
+<p>A second paragraph.</p>
+</div></div>
+<p>Multicolumn support is very flexible and we can continue with a single full span column in the same slide.</p>
+</section>
+<section id="components-6" class="slide level2">
+<h2>Components</h2>
+<h3 id="multicolumn-ii-text-and-figures">Multicolumn II: Text and figures</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/kanagawa.jpg"></p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li class="fragment">A point about the figure that is potentially important.</li>
+<li class="fragment">Another point about the figure that is also potentially important.</li>
+</ul>
+</div></div>
+<p>Note that sub- and multi-panel figures are also natively supported by Quarto. See <a href="https://quarto.org/docs/authoring/figures.html#subfigures">here</a>.</p>
+</section>
+<section id="components-7" class="slide level2">
+<h2>Components</h2>
+</section></section>
+<section>
+<section id="tables" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Tables</h1>
+
+</section>
+<section id="tables-1" class="slide level2">
+<h2>Tables</h2>
+<h3 id="regression-example">Regression example</h3>
+<p>Quarto offers excellent <a href="https://quarto.org/docs/authoring/tables.html">table support</a>, with further customization via user libraries. Let’s illustrate with a regression example:</p>
+</section>
+<section id="regression-table" class="slide level2">
+<h2>Regression table</h2>
+<h3 id="modelsummary">modelsummary</h3>
+<p>If you use <code>modelsummary</code> with this Quarto theme, we advise setting the <code>gt</code> backend for a cleaner aesthetic. More details <a href="https://vincentarelbundock.github.io/modelsummary/articles/appearance.html">here</a>.</p>
+</section>
+<section id="regression-table-1" class="slide level2">
+<h2>Regression table</h2>
+<h3 id="etable">etable</h3>
+<p><code>fixest</code>’s powerful native tabling functions were designed for LaTeX output. But we can use the <code>markdown = TRUE</code> option to make them work with this theme too. (Details <a href="https://lrberge.github.io/fixest/articles/etable_new_features.html">here</a>.) Quick notes:</p>
+<ul>
+<li class="fragment">Install the <code>tinytex</code> &amp; <code>pdftools</code> packages first.</li>
+<li class="fragment">Set the R chunk option <code>output: asis</code>.</li>
+</ul>
+</section>
+<section id="regression-table-2" class="slide level2">
+<h2>Regression table</h2>
+<h3 id="etable-cont.">etable (cont.)</h3>
+</section></section>
+<section>
+<section id="figures" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Figures</h1>
+
+</section>
+<section id="figure" class="slide level2">
+<h2>Figure</h2>
+<p><img data-src="images/kanagawa.jpg"></p>
+</section>
+<section id="figure-1" class="slide level2">
+<h2>Figure</h2>
+<h3 id="full-size-figures">Full-size Figures</h3>
+<p>You can use the <code>{.background-image}</code> container environment to completely fill the slide background with an image.</p>
+<p>Ideally, your figure will be the same aspect ratio as the screen that you’re presenting on.</p>
+<ul>
+<li class="fragment">This can be a bit tricky because of the dynamic nature of reveal.js / HTML. But it’s probably something close to 16:9.</li>
+<li class="fragment">Aspect ratio can also matter for a regular full-frame images (previous slide).</li>
+</ul>
+</section>
+<section id="section" class="slide level2" data-background-image="images/kanagawa169.jpg" data-background-size="100%">
+<h2></h2>
+</section>
+<section id="interactive-plots" class="slide level2">
+<h2>Interactive plots</h2>
+<p><em>Note: Simple flight data example using <code>threejs</code>. There are many interactive plotting options beyond this. (More <a href="https://quarto.org/docs/interactive/">details</a>.)</em></p>
+</section></section>
+<section>
+<section id="summary" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Summary</h1>
+
+</section>
+<section id="summary-1" class="slide level2">
+<h2>Summary</h2>
+<h3 id="a-minimal-and-elegant-presentation-theme">A minimal and elegant presentation theme</h3>
+<p>The Quarto reveal.js <a href="grantmcdermott/quarto-revealjs-clean">clean theme</a> aims to be a minimal and elegant presention theme.</p>
+<p>We have highlighted some theme-specific components. But all of the regular reveal.js functionality is supported (<a href="https://quarto.org/docs/presentations/revealjs/presenting.html#chalkboard">chalkboard</a>, etc.)</p>
+<p>Install the theme:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="ex">quarto</span> install extension grantmcdermott/quarto-revealjs-clean</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Use these demo slides as a template:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="ex">quarto</span> use template grantmcdermott/quarto-revealjs-clean-demo</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Fajgelbaum_Morales_Serrato_Zidar_2018" class="csl-entry" role="listitem">
+Fajgelbaum, Pablo D, Eduardo Morales, Juan Carlos Suarez Serrato, e Owen Zidar. 2018. <span>“State Taxes and Spatial Misallocation”</span>, 90.
+</div>
+<div id="ref-Hsieh_Moretti_2019" class="csl-entry" role="listitem">
+Hsieh, Chang-Tai, e Enrico Moretti. 2019. <span>“Housing Constraints and Spatial Misallocation”</span>. <em>American Economic Journal: Macroeconomics</em> 11 (2): 39.
+</div>
+<div id="ref-Moretti_2011" class="csl-entry" role="listitem">
+Moretti, Enrico. 2011. <span>“Local Labor Markets”</span>. Em <em>Handbook of Labor Economics</em>. Vol. 4. Elsevier.
+</div>
+<div id="ref-Suárez_Serrato_Zidar_2016" class="csl-entry" role="listitem">
+Suárez Serrato, Juan Carlos, e Owen Zidar. 2016. <span>“Who Benefits from State Corporate Tax Cuts? A Local Labor Markets Approach with Heterogeneous Firms”</span>. <em>American Economic Review</em> 106 (9).
+</div>
+</div>
+</section>
+<section id="sec-appendix" class="slide level2">
+<h2>Appendix</h2>
+<p><a href="#/components-2"><span class="button">Back to main</span></a></p>
 
 <div class="quarto-auto-generated-content">
-<p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
+<p><img src="../imagens/logo_UFLA.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="site_libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
-  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

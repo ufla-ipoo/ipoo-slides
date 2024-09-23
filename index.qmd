@@ -7,13 +7,9 @@
 
 ::: {.column width="50%"}
 
-[Videoaulas]{.alert}
+[Videoaulas]{.alert}: [Playlist no Youtube](https://www.youtube.com/watch?v=Pn49AxSBQ7g&list=PLaPMgEYxCSWep1GK69nOMWPr20zPKRILC)
 
-- [Playlist no Youtube](https://www.youtube.com/watch?v=Pn49AxSBQ7g&list=PLaPMgEYxCSWep1GK69nOMWPr20zPKRILC)
-
-[Projetos de exemplo]{.alert}
-
-- [Repositório no GitHub](https://github.com/orgs/ufla-ipoo/repositories)
+[Projetos de exemplo]{.alert}: [Repositório no GitHub](https://github.com/orgs/ufla-ipoo/repositories)
 
 [Slides]{.alert} 
 

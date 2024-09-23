@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR"><head>
-<script src="cap3-1_files/libs/clipboard/clipboard.min.js"></script>
-<script src="cap3-1_files/libs/quarto-html/tabby.min.js"></script>
-<script src="cap3-1_files/libs/quarto-html/popper.min.js"></script>
-<script src="cap3-1_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="cap3-1_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="cap3-1_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="cap3-1_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="cap3-1_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="cap3-1_files/libs/quarto-contrib/jquery-3.6.3/jquery-3.6.3.min.js"></script>
-<script src="cap3-1_files/libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.js" defer="true"></script>
-<link href="cap3-1_files/libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
-<script src="cap3-1_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
-<script src="cap3-1_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/quarto-contrib/jquery-3.6.3/jquery-3.6.3.min.js"></script>
+<script src="site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.js" defer="true"></script>
+<link href="site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
+<script src="site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <title>IPOO - Cap. 3 Interação entre Objetos</title>
+  <meta name="dcterms.date" content="2023-04-10">
+  <title>GAC125 - Introdução à Programação Orientada a Objetos – IPOO - Cap. 3 Interação entre Objetos</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="cap3-1_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="cap3-1_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -36,7 +37,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -47,7 +48,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -100,14 +101,14 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="cap3-1_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="cap3-1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="cap3-1_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="cap3-1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="cap3-1_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="cap3-1_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="cap3-1_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
-  <link href="cap3-1_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -229,7 +230,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -412,7 +414,7 @@
     </div>
 </div>
 
-  <p class="date">19/09/2023</p>
+  <p class="date">04/10/2023</p>
 </section>
 <section id="como-estudar" class="slide level2 smaller">
 <h2>Como estudar?</h2>
@@ -425,9 +427,8 @@
 <li class="fragment">Use um caderno e caneta para <span class="alert">anotar</span> os principais <span class="alert">conceitos</span> e eventuais <span class="alert">dúvidas</span> que surgirem.</li>
 </ul>
 </div><div class="column" style="width:30%;">
-<p><img data-src="imagens/bluej_completo_vertical.png" style="width:50.0%" alt="Prints do BlueJ."> <img data-src="imagens/livro_bluej.png" style="width:50.0%" data-fig-align="left" alt="Capa do livro do Barnes e Kolling."></p>
-</div>
-</div>
+<p><img data-src="imagens/bluej_completo_vertical.png" style="width:50.0%" alt="Prints do BlueJ."> <img data-src="imagens/livro_bluej.png" class="quarto-figure quarto-figure-left" style="width:50.0%" alt="Capa do livro do Barnes e Kolling."></p>
+</div></div>
 </section>
 <section id="principais-conceitos-do-capítulo" class="slide level2 smaller">
 <h2>Principais Conceitos do Capítulo</h2>
@@ -469,8 +470,7 @@
 <p>Um <strong>visor de um relógio digital</strong> que mostra horas e minutos, separados por dois-pontos.</p>
 </div><div class="column" style="width:30%;">
 <p><img data-src="imagens/visor_relogio_digital.png"></p>
-</div>
-</div>
+</div></div>
 </div>
 <div class="fragment">
 <p>Em um primeiro momento poderíamos pensar em criar uma única classe para representar o visor do relógio.</p>
@@ -640,8 +640,7 @@
 <li class="fragment">Para ele, o <strong>pneu é uma coisa complexa</strong>. <img data-src="imagens/pneu_detalhado.png" style="width:50.0%"></li>
 </ul>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <div class="fragment">
 <p>Já a empresa que fabrica o carro, vai apenas comprar o pneu da fabricante de pneus e enxergá-lo como uma única peça.</p>
@@ -687,6 +686,7 @@
 <h1></h1>
 <p>Modularização e abstração se complementam.</p>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -698,7 +698,9 @@
 </div>
 </div>
 </div>
+</div>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -706,6 +708,7 @@
 </div>
 <div class="callout-content">
 <p><strong>Modularização</strong> é o processo de dividir um todo em partes bem definidas que podem ser construídas e examinadas separadamente, e que interagem de formas bem definidas.</p>
+</div>
 </div>
 </div>
 </div>
@@ -824,13 +827,13 @@
 </div>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb1" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> VisorDeNumero</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> limite<span class="op">;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> valor<span class="op">;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// construtor e métodos omitidos.</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> VisorDeNumero</span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> limite<span class="op">;</span></span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> valor<span class="op">;</span></span>
+<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// construtor e métodos omitidos.</span></span>
+<span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -846,13 +849,13 @@
 </ul>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> VisorDeRelogio</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> VisorDeNumero horas<span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> VisorDeNumero minutos<span class="op">;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// construtor e métodos omitidos.</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> VisorDeRelogio</span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> VisorDeNumero horas<span class="op">;</span></span>
+<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> VisorDeNumero minutos<span class="op">;</span></span>
+<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// construtor e métodos omitidos.</span></span>
+<span id="cb2-7"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
@@ -866,6 +869,7 @@
 <li class="fragment">Se o tipo é uma classe, o atributo pode guardar objetos daquela classe.</li>
 </ul>
 <div class="fragment">
+<div title="Declaração não cria objetos">
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -884,7 +888,9 @@
 </div>
 </div>
 </div>
+</div>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -892,6 +898,7 @@
 </div>
 <div class="callout-content">
 <p><strong>Classes definem tipos</strong>. Um nome de classe pode ser usado como tipo de uma variável. Variáveis de tipo de uma classe podem guardar objetos daquela classe.</p>
+</div>
 </div>
 </div>
 </div>
@@ -914,8 +921,7 @@
 <p><img data-src="imagens/visor_relogio_diagrama_objetos.png"></p>
 </div><div class="column" style="width:50%;">
 <p><img data-src="imagens/visor_relogio_diagrama_classes.png"></p>
-</div>
-</div>
+</div></div>
 <div class="fragment">
 <p><img data-src="imagens/duvida_2_classes_3_objetos.png" style="width:40.0%"></p>
 </div>
@@ -963,6 +969,7 @@
 </section>
 <section id="section-29" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -973,6 +980,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -983,6 +992,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -993,6 +1004,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1000,6 +1013,7 @@
 </div>
 <div class="callout-content">
 <p>Escreva a declaração de um atributo <code>orientador</code> que guarde uma referência para um objeto <code>Professor</code>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1035,8 +1049,7 @@
 <p><span class="alert">Tipos objeto</span> (ou <em>tipos por referência</em>)</p>
 <p><img data-src="imagens/o_objeto.png" style="width:40.0%"></p>
 </div>
-</div>
-</div>
+</div></div>
 <div class="fragment">
 <p>Tipos primitivos são predefinidos na linguagem Java</p>
 <ul>
@@ -1071,6 +1084,7 @@
 </ul>
 </div>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1078,6 +1092,7 @@
 </div>
 <div class="callout-content">
 <p>Os <strong>tipos primitivos</strong> em Java não definem objetos. Tipos como <code>int</code>, <code>boolean</code> e <code>double</code> são os tipos primitivos mais comuns. Tipos primitos não possuem métodos.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1100,6 +1115,7 @@
 </section>
 <section id="section-33" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1116,9 +1132,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-34" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1134,7 +1152,9 @@
 </div>
 </div>
 </div>
+</div>
 <div class="fragment">
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1146,9 +1166,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-35" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1157,12 +1179,14 @@
 <div class="callout-content">
 <p>Experimente digitar o código abaixo no Bloco de Códigos:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb3" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>VisorDeNumero<span class="op">.</span><span class="fu">obterValor</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a>VisorDeNumero<span class="op">.</span><span class="fu">obterValor</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>O que a mensagem de erro indica?</p>
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1171,10 +1195,11 @@
 <div class="callout-content">
 <p>Experimente agora a linha abaixo:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb4" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>vn<span class="op">.</span><span class="fu">definirValor</span><span class="op">(</span><span class="dt">int</span> <span class="dv">5</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a>vn<span class="op">.</span><span class="fu">definirValor</span><span class="op">(</span><span class="dt">int</span> <span class="dv">5</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A mensagem de erro, nesse caso, te ajuda a identificar o problema?</p>
 <p>Tente corrigir o código e memorizar essa situação que é muito comum para quem está começando.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1183,12 +1208,12 @@
 <h2></h2>
 <p>Repare que o método <code>definirValor</code> utiliza uma expressão booleana</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb5" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">void</span> <span class="fu">definirValor</span><span class="op">(</span><span class="dt">int</span> novoValor<span class="op">)</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span><span class="op">((</span>novoValor <span class="op">&gt;=</span> <span class="dv">0</span><span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="op">(</span>novoValor <span class="op">&lt;</span> limite<span class="op">))</span> <span class="op">{</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        valor <span class="op">=</span> novoValor<span class="op">;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">void</span> <span class="fu">definirValor</span><span class="op">(</span><span class="dt">int</span> novoValor<span class="op">)</span></span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span><span class="op">((</span>novoValor <span class="op">&gt;=</span> <span class="dv">0</span><span class="op">)</span> <span class="op">&amp;&amp;</span> <span class="op">(</span>novoValor <span class="op">&lt;</span> limite<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a>        valor <span class="op">=</span> novoValor<span class="op">;</span></span>
+<span id="cb5-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-6"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Em <strong>Java</strong>, os <span class="alert">operadores lógicos</span> são:</p>
@@ -1210,6 +1235,7 @@
 </section>
 <section id="section-37" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1221,6 +1247,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1231,6 +1259,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1241,9 +1271,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-38" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1254,6 +1286,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1261,6 +1295,7 @@
 </div>
 <div class="callout-content">
 <p>O método <code>obterValorVisor</code> sempre funciona corretamente? Quais premissas ele assume? O que acontece, por exemplo, se você criar um objeto com limite 800?</p>
+</div>
 </div>
 </div>
 </div>
@@ -1279,6 +1314,7 @@
 </section>
 <section id="section-40" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1287,13 +1323,15 @@
 <div class="callout-content">
 <p>Crie um objeto <code>VisorDeRelogio</code>, selecionando este construtor:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb6" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Chame o método <code>obterHora</code> para descobrir a hora inicial que o relógio foi criado. Você consegue imaginar porque ele começa nesse horário específico?</p>
 </div>
 </div>
 </div>
+</div>
 <div class="fragment">
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1305,7 +1343,9 @@
 </div>
 </div>
 </div>
+</div>
 <div class="fragment">
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1313,6 +1353,7 @@
 </div>
 <div class="callout-content">
 <p>Quantas vezes você precisa chamar o método <code>tiqueTaque</code> no objeto <code>VisorDeRelogio</code> para fazer sua hora chegar a <code>01:00</code>. De que outra forma você poderia fazer o relógio mostrar esse mesmo horário?</p>
+</div>
 </div>
 </div>
 </div>
@@ -1353,6 +1394,7 @@
 </section>
 <section id="section-43" class="slide level2">
 <h2></h2>
+<div title="Só para os curiosos">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1363,6 +1405,7 @@
 </div>
 <div class="callout-content">
 <p>Você pode também abrir o projeto <a href="https://github.com/ufla-ipoo/visor-relogio">visor-relogio-com-interface-grafica</a>. Veja que ele possui uma classe a mais que você pode experimentar e ver o que faz.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1396,44 +1439,44 @@
 <h2></h2>
 <p>Vamos analisar como o construtor de <code>VisorDeRelogio</code> faz isso:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">public</span> <span class="kw">class</span> VisorDeRelogio</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="op">{</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a>    <span class="kw">private</span> VisorDeNumero horas<span class="op">;</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a>    <span class="kw">private</span> VisorDeNumero minutos<span class="op">;</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a></span>
-<span id="cb7-6"><a href="#cb7-6"></a>    <span class="co">// Atributos restantes omitidos</span></span>
-<span id="cb7-7"><a href="#cb7-7"></a></span>
-<span id="cb7-8"><a href="#cb7-8"></a>    <span class="kw">public</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span>
-<span id="cb7-9"><a href="#cb7-9"></a>    <span class="op">{</span></span>
-<span id="cb7-10"><a href="#cb7-10"></a>        horas <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">24</span><span class="op">);</span></span>
-<span id="cb7-11"><a href="#cb7-11"></a>        minutos <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">60</span><span class="op">);</span></span>
-<span id="cb7-12"><a href="#cb7-12"></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
-<span id="cb7-13"><a href="#cb7-13"></a>    <span class="op">}</span></span>
-<span id="cb7-14"><a href="#cb7-14"></a></span>
-<span id="cb7-15"><a href="#cb7-15"></a>    <span class="co">// Métodos omitidos</span></span>
-<span id="cb7-16"><a href="#cb7-16"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a></a><span class="kw">public</span> <span class="kw">class</span> VisorDeRelogio</span>
+<span id="cb7-2"><a></a><span class="op">{</span></span>
+<span id="cb7-3"><a></a>    <span class="kw">private</span> VisorDeNumero horas<span class="op">;</span></span>
+<span id="cb7-4"><a></a>    <span class="kw">private</span> VisorDeNumero minutos<span class="op">;</span></span>
+<span id="cb7-5"><a></a></span>
+<span id="cb7-6"><a></a>    <span class="co">// Atributos restantes omitidos</span></span>
+<span id="cb7-7"><a></a></span>
+<span id="cb7-8"><a></a>    <span class="kw">public</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span>
+<span id="cb7-9"><a></a>    <span class="op">{</span></span>
+<span id="cb7-10"><a></a>        horas <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">24</span><span class="op">);</span></span>
+<span id="cb7-11"><a></a>        minutos <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">60</span><span class="op">);</span></span>
+<span id="cb7-12"><a></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
+<span id="cb7-13"><a></a>    <span class="op">}</span></span>
+<span id="cb7-14"><a></a></span>
+<span id="cb7-15"><a></a>    <span class="co">// Métodos omitidos</span></span>
+<span id="cb7-16"><a></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="section-46" class="slide level2 smaller">
 <h2></h2>
 <p>Vamos analisar como o construtor de <code>VisorDeRelogio</code> faz isso:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb8" data-code-line-numbers="10-11"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">public</span> <span class="kw">class</span> VisorDeRelogio</span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="op">{</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a>    <span class="kw">private</span> VisorDeNumero horas<span class="op">;</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a>    <span class="kw">private</span> VisorDeNumero minutos<span class="op">;</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a></span>
-<span id="cb8-6"><a href="#cb8-6"></a>    <span class="co">// Atributos restantes omitidos</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a></span>
-<span id="cb8-8"><a href="#cb8-8"></a>    <span class="kw">public</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span>
-<span id="cb8-9"><a href="#cb8-9"></a>    <span class="op">{</span></span>
-<span id="cb8-10"><a href="#cb8-10"></a>        horas <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">24</span><span class="op">);</span></span>
-<span id="cb8-11"><a href="#cb8-11"></a>        minutos <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">60</span><span class="op">);</span></span>
-<span id="cb8-12"><a href="#cb8-12"></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
-<span id="cb8-13"><a href="#cb8-13"></a>    <span class="op">}</span></span>
-<span id="cb8-14"><a href="#cb8-14"></a></span>
-<span id="cb8-15"><a href="#cb8-15"></a>    <span class="co">// Métodos omitidos</span></span>
-<span id="cb8-16"><a href="#cb8-16"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8" data-code-line-numbers="10-11"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a></a><span class="kw">public</span> <span class="kw">class</span> VisorDeRelogio</span>
+<span id="cb8-2"><a></a><span class="op">{</span></span>
+<span id="cb8-3"><a></a>    <span class="kw">private</span> VisorDeNumero horas<span class="op">;</span></span>
+<span id="cb8-4"><a></a>    <span class="kw">private</span> VisorDeNumero minutos<span class="op">;</span></span>
+<span id="cb8-5"><a></a></span>
+<span id="cb8-6"><a></a>    <span class="co">// Atributos restantes omitidos</span></span>
+<span id="cb8-7"><a></a></span>
+<span id="cb8-8"><a></a>    <span class="kw">public</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span>
+<span id="cb8-9"><a></a>    <span class="op">{</span></span>
+<span id="cb8-10"><a></a>        horas <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">24</span><span class="op">);</span></span>
+<span id="cb8-11"><a></a>        minutos <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">60</span><span class="op">);</span></span>
+<span id="cb8-12"><a></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
+<span id="cb8-13"><a></a>    <span class="op">}</span></span>
+<span id="cb8-14"><a></a></span>
+<span id="cb8-15"><a></a>    <span class="co">// Métodos omitidos</span></span>
+<span id="cb8-16"><a></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>As duas primeiras linhas do construtor criam objetos <code>VisorDeNumero</code></p>
 <ul>
@@ -1445,7 +1488,7 @@
 <p>Repare a <strong>sintaxe</strong> do <strong>comando</strong> que <strong>cria um novo objeto</strong>:</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb9" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">NomeDaClasse</span><span class="op">(</span>lista_de_parametros<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">NomeDaClasse</span><span class="op">(</span>lista_de_parametros<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
@@ -1463,12 +1506,12 @@
 <h2></h2>
 <p>Repare, por exemplo, que o construtor da classe <code>VisorDeNumero</code> espera um valor inteiro como parâmetro.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb10" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dt">int</span> limiteParaZerar<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dt">int</span> limiteParaZerar<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Com isso, ao usarmos o operador <code>new</code> para criar um objeto <code>VisorDeNumero</code>, como ele chama o construtor da classe, precisaremos fornecer um argumento inteiro.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb11" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">24</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">24</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li class="fragment">Note que a passagem de parâmetros funciona da mesma forma que já tínhamos visto para os métodos.</li>
@@ -1494,6 +1537,7 @@
 </section>
 <section id="section-50" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1501,6 +1545,7 @@
 </div>
 <div class="callout-content">
 <p>Escreva comandos em Java que declarem uma variável chamada <code>janela</code>, do tipo <code>Retangulo</code>, e então crie um objeto <code>Retangulo</code> e o atribua à variável. Assuma que o construtor de <code>Retangulo</code> tem dois parâmetros do tipo <code>int</code>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1526,8 +1571,8 @@
 <h2></h2>
 <p>Ao criar objetos da classe <code>VisorDeRelogio</code>, usando o BlueJ, você deve ter notado que há duas opções no menu para criar o objeto.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb12" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">VisorDeRelogio</span><span class="op">(</span><span class="dt">int</span> hora<span class="op">,</span> <span class="dt">int</span> minuto<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span>
+<span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">VisorDeRelogio</span><span class="op">(</span><span class="dt">int</span> hora<span class="op">,</span> <span class="dt">int</span> minuto<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Isso acontece porque <code>VisorDeRelogio</code> tem <span class="alert">dois construtores</span>.</p>
@@ -1567,7 +1612,7 @@
 <div class="fragment">
 <p>Imagine a chamada abaixo:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb13" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>    meuCarro<span class="op">.</span><span class="fu">deslocar</span><span class="op">(</span><span class="fl">68.5</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a>    meuCarro<span class="op">.</span><span class="fu">deslocar</span><span class="op">(</span><span class="fl">68.5</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
@@ -1586,14 +1631,14 @@
 </div>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb14" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> a <span class="op">=</span> meuCarro<span class="op">.</span><span class="fu">acelerar</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> a <span class="op">=</span> meuCarro<span class="op">.</span><span class="fu">acelerar</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
 <p>Nesse caso, parece que seria possível pois o compilador sabe que a variável <code>a</code> é do tipo <code>int</code>.</p>
 <ul>
 <li class="fragment"><p>Mas na verdade você não é obrigado a usar o valor retornado por uma chamada de método.</p>
-<div class="sourceCode" id="cb15" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>  meuCarro<span class="op">.</span><span class="fu">acelerar</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb15"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a>  meuCarro<span class="op">.</span><span class="fu">acelerar</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li class="fragment"><p>A chamada acima, por exemplo é válida, e, nesse caso, o compilador não consegue definir qual método será chamado.</p></li>
 <li class="fragment"><p>Portanto, não é possível declarar métodos sobrecarregados dessa forma.</p></li>
 </ul>
@@ -1601,6 +1646,7 @@
 </section>
 <section id="section-56" class="slide level2">
 <h2></h2>
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1611,7 +1657,9 @@
 </div>
 </div>
 </div>
+</div>
 <div class="fragment">
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1620,6 +1668,7 @@
 <div class="callout-content">
 <p>Avalie o segundo construtor no código da classe <code>VisorDeRelogio</code>. Explique o que ele faz e como ele o faz.</p>
 <p>Identifique as semelhanças e diferenças entre os dois construtores. Porque o método <code>atualizarVisor</code> não é chamado no segundo construtor, por exemplo?</p>
+</div>
 </div>
 </div>
 </div>
@@ -1634,19 +1683,19 @@
 <h2></h2>
 <p>A última linha do construtor de <code>VisorDeRelogio</code> tem o comando <code>atualizarVisor</code>.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb16" data-code-line-numbers="5"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a href="#cb16-1"></a>    <span class="kw">public</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span>
-<span id="cb16-2"><a href="#cb16-2"></a>    <span class="op">{</span></span>
-<span id="cb16-3"><a href="#cb16-3"></a>        horas <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">24</span><span class="op">);</span></span>
-<span id="cb16-4"><a href="#cb16-4"></a>        minutos <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">60</span><span class="op">);</span></span>
-<span id="cb16-5"><a href="#cb16-5"></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
-<span id="cb16-6"><a href="#cb16-6"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16" data-code-line-numbers="5"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a></a>    <span class="kw">public</span> <span class="fu">VisorDeRelogio</span><span class="op">()</span></span>
+<span id="cb16-2"><a></a>    <span class="op">{</span></span>
+<span id="cb16-3"><a></a>        horas <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">24</span><span class="op">);</span></span>
+<span id="cb16-4"><a></a>        minutos <span class="op">=</span> <span class="kw">new</span> <span class="fu">VisorDeNumero</span><span class="op">(</span><span class="dv">60</span><span class="op">);</span></span>
+<span id="cb16-5"><a></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
+<span id="cb16-6"><a></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Este comando é uma <span class="alert">chamada de método</span>.</p>
 <ul>
 <li class="fragment"><p>Você já deve ter visto que a classe <code>VisorDeRelogio</code> tem um método com a seguinte assinatura:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb17" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">void</span> <span class="fu">atualizarVisor</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">void</span> <span class="fu">atualizarVisor</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul>
 </div>
@@ -1662,7 +1711,7 @@
 <p>Uma chamada de método interno tem a seguinte <strong>sintaxe</strong>:</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb18" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">nomeDoMetodo</span><span class="op">(</span>lista_de_parametros<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb18-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">nomeDoMetodo</span><span class="op">(</span>lista_de_parametros<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
@@ -1694,14 +1743,14 @@
 <p>Vamos agora avaliar o código do método <code>tiqueTaque</code>:</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb19" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tiqueTaque</span><span class="op">()</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>        minutos<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span><span class="op">(</span>minutos<span class="op">.</span><span class="fu">obterValor</span><span class="op">()</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span>  <span class="co">// minutos voltaram para zero</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>            horas<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb19-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tiqueTaque</span><span class="op">()</span></span>
+<span id="cb19-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb19-3"><a aria-hidden="true" tabindex="-1"></a>        minutos<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
+<span id="cb19-4"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span><span class="op">(</span>minutos<span class="op">.</span><span class="fu">obterValor</span><span class="op">()</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span>  <span class="co">// minutos voltaram para zero</span></span>
+<span id="cb19-5"><a aria-hidden="true" tabindex="-1"></a>            horas<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
+<span id="cb19-6"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb19-7"><a aria-hidden="true" tabindex="-1"></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
+<span id="cb19-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
@@ -1714,14 +1763,14 @@
 <section id="section-61" class="slide level2 smaller">
 <h2></h2>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb20" data-code-line-numbers="3"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb20-1"><a href="#cb20-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tiqueTaque</span><span class="op">()</span></span>
-<span id="cb20-2"><a href="#cb20-2"></a>    <span class="op">{</span></span>
-<span id="cb20-3"><a href="#cb20-3"></a>        minutos<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
-<span id="cb20-4"><a href="#cb20-4"></a>        <span class="cf">if</span><span class="op">(</span>minutos<span class="op">.</span><span class="fu">obterValor</span><span class="op">()</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span>  <span class="co">// minutos voltaram para zero</span></span>
-<span id="cb20-5"><a href="#cb20-5"></a>            horas<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
-<span id="cb20-6"><a href="#cb20-6"></a>        <span class="op">}</span></span>
-<span id="cb20-7"><a href="#cb20-7"></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
-<span id="cb20-8"><a href="#cb20-8"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20" data-code-line-numbers="3"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb20-1"><a></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tiqueTaque</span><span class="op">()</span></span>
+<span id="cb20-2"><a></a>    <span class="op">{</span></span>
+<span id="cb20-3"><a></a>        minutos<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
+<span id="cb20-4"><a></a>        <span class="cf">if</span><span class="op">(</span>minutos<span class="op">.</span><span class="fu">obterValor</span><span class="op">()</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span>  <span class="co">// minutos voltaram para zero</span></span>
+<span id="cb20-5"><a></a>            horas<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
+<span id="cb20-6"><a></a>        <span class="op">}</span></span>
+<span id="cb20-7"><a></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
+<span id="cb20-8"><a></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A primeira linha do método chama o comando <code>incrementar</code> do objeto <code>minutos</code>.</p>
 <ul>
@@ -1736,7 +1785,7 @@
 <p>Uma <strong>chamada de método externo</strong> tem a seguinte <strong>sintaxe</strong>:</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb21" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>  objeto <span class="op">.</span> <span class="fu">nomeDoMetodo</span> <span class="op">(</span>lista_de_parametros<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb21-1"><a aria-hidden="true" tabindex="-1"></a>  objeto <span class="op">.</span> <span class="fu">nomeDoMetodo</span> <span class="op">(</span>lista_de_parametros<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
@@ -1764,14 +1813,14 @@
 <section id="section-64" class="slide level2 smaller">
 <h2></h2>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb22" data-code-line-numbers="4"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb22-1"><a href="#cb22-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tiqueTaque</span><span class="op">()</span></span>
-<span id="cb22-2"><a href="#cb22-2"></a>    <span class="op">{</span></span>
-<span id="cb22-3"><a href="#cb22-3"></a>        minutos<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
-<span id="cb22-4"><a href="#cb22-4"></a>        <span class="cf">if</span><span class="op">(</span>minutos<span class="op">.</span><span class="fu">obterValor</span><span class="op">()</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span>  <span class="co">// minutos voltaram para zero</span></span>
-<span id="cb22-5"><a href="#cb22-5"></a>            horas<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
-<span id="cb22-6"><a href="#cb22-6"></a>        <span class="op">}</span></span>
-<span id="cb22-7"><a href="#cb22-7"></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
-<span id="cb22-8"><a href="#cb22-8"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22" data-code-line-numbers="4"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb22-1"><a></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">tiqueTaque</span><span class="op">()</span></span>
+<span id="cb22-2"><a></a>    <span class="op">{</span></span>
+<span id="cb22-3"><a></a>        minutos<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
+<span id="cb22-4"><a></a>        <span class="cf">if</span><span class="op">(</span>minutos<span class="op">.</span><span class="fu">obterValor</span><span class="op">()</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span>  <span class="co">// minutos voltaram para zero</span></span>
+<span id="cb22-5"><a></a>            horas<span class="op">.</span><span class="fu">incrementar</span><span class="op">();</span></span>
+<span id="cb22-6"><a></a>        <span class="op">}</span></span>
+<span id="cb22-7"><a></a>        <span class="fu">atualizarVisor</span><span class="op">();</span></span>
+<span id="cb22-8"><a></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Repare que a linha seguinte do método <code>tiqueTaque</code> faz outra chamada de método externo.</p>
 <ul>
@@ -1786,6 +1835,7 @@
 <li class="fragment">Identifique neles onde ocorrem chamadas de método interno e chamadas de método externo.</li>
 </ul>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1797,7 +1847,9 @@
 </div>
 </div>
 </div>
+</div>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1809,9 +1861,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-66" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1820,13 +1874,15 @@
 <div class="callout-content">
 <p>Suponha que exista uma variável chamada <code>imp1</code> do tipo <code>Impressora</code>, que referencia um objeto impressora, cuja classe tem métodos com as seguintes assinaturas:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb23" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">imprimir</span><span class="op">(</span><span class="bu">String</span> nomeDoArquivo<span class="op">,</span> <span class="dt">boolean</span> dosDoisLados<span class="op">)</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">int</span> <span class="fu">obterSituacao</span><span class="op">(</span><span class="dt">int</span> atraso<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb23-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">imprimir</span><span class="op">(</span><span class="bu">String</span> nomeDoArquivo<span class="op">,</span> <span class="dt">boolean</span> dosDoisLados<span class="op">)</span></span>
+<span id="cb23-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">int</span> <span class="fu">obterSituacao</span><span class="op">(</span><span class="dt">int</span> atraso<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Escreva duas possíveis chamadas para cada um desses métodos.</p>
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1837,6 +1893,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1847,9 +1905,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-67" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1858,8 +1918,9 @@
 <div class="callout-content">
 <p>Remova as duas linhas abaixo do método <code>desenhar</code> da classe <code>Figura</code>, fazendo com que a definição das cores seja feita através de uma chamada de um método interno chamado <code>definirCor</code> (que você precisará criar).</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb24" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>  janela<span class="op">.</span><span class="fu">mudarCor</span><span class="op">(</span><span class="st">"preta"</span><span class="op">);</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  sol<span class="op">.</span><span class="fu">mudarCor</span><span class="op">(</span><span class="st">"amarela"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb24-1"><a aria-hidden="true" tabindex="-1"></a>  janela<span class="op">.</span><span class="fu">mudarCor</span><span class="op">(</span><span class="st">"preta"</span><span class="op">);</span></span>
+<span id="cb24-2"><a aria-hidden="true" tabindex="-1"></a>  sol<span class="op">.</span><span class="fu">mudarCor</span><span class="op">(</span><span class="st">"amarela"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -1914,6 +1975,7 @@
 </section>
 <section id="section-70" class="slide level2">
 <h2></h2>
+<div title="(Opcional) Exercício - [Desafio]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1925,6 +1987,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="(Opcional) Exercício - [Desafio]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1937,9 +2001,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-71" class="slide level2">
 <h2></h2>
+<div title="(Opcional) Exercício - [Desafio]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1951,6 +2017,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="(Opcional) Exercício - [Desafio]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1958,6 +2026,7 @@
 </div>
 <div class="callout-content">
 <p>Agora complete a classe <code>Arvore</code> do exercício anterior. O construtor deve mover o tronco para debaixo das folhas e fazer ambos serem exibidos. Faça isso criando um método chamado <code>configurar</code> e incluindo uma chamada a este método no construtor. Mude o tamanho do triângulo de forma que a árvore se pareça um pinheiro.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1975,6 +2044,7 @@
 <li>considerada nas aula em <span class="alert">formato ANP</span> (Atividade Não-Presencial),</li>
 <li>você precisa <strong>demonstrar que</strong> realmente <strong>estudou</strong> o conteúdo.</li>
 </ul>
+<div title="Entregas no Campus Virtual">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1992,9 +2062,13 @@
 </div>
 </div>
 </div>
+</div>
+
+<div class="quarto-auto-generated-content">
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
+</div>
 </div>
 </section></section>
 
@@ -2002,21 +2076,21 @@
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="cap3-1_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="cap3-1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="cap3-1_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="cap3-1_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="cap3-1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="cap3-1_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="cap3-1_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
-  <script src="cap3-1_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="cap3-1_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="cap3-1_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="cap3-1_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="cap3-1_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -2026,7 +2100,6 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -2245,18 +2318,7 @@
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -2288,11 +2350,50 @@
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
-      function tippyHover(el, contentFn) {
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -2302,8 +2403,17 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -2317,7 +2427,11 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR"><head>
-<script src="cap1-2_files/libs/clipboard/clipboard.min.js"></script>
-<script src="cap1-2_files/libs/quarto-html/tabby.min.js"></script>
-<script src="cap1-2_files/libs/quarto-html/popper.min.js"></script>
-<script src="cap1-2_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="cap1-2_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="cap1-2_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="cap1-2_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="cap1-2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="cap1-2_files/libs/quarto-contrib/jquery-3.6.3/jquery-3.6.3.min.js"></script>
-<script src="cap1-2_files/libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.js" defer="true"></script>
-<link href="cap1-2_files/libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
-<script src="cap1-2_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
-<script src="cap1-2_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
-<script src="cap1-2_files/libs/quarto-contrib/kbd/kbd.js"></script>
-<link href="cap1-2_files/libs/quarto-contrib/kbd/kbd.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/quarto-contrib/jquery-3.6.3/jquery-3.6.3.min.js"></script>
+<script src="site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.js" defer="true"></script>
+<link href="site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
+<script src="site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
+<script src="site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2023-06-09">
-  <title>IPOO - Cap. 1 Objetos e Classes</title>
+  <meta name="dcterms.date" content="2023-04-10">
+  <title>GAC125 - Introdução à Programação Orientada a Objetos – IPOO - Cap. 1 Objetos e Classes</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="cap1-2_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="cap1-2_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -39,7 +39,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -50,7 +50,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -103,14 +103,14 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="cap1-2_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="cap1-2_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="cap1-2_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="cap1-2_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="cap1-2_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="cap1-2_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="cap1-2_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
-  <link href="cap1-2_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -232,7 +232,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -415,7 +416,7 @@
     </div>
 </div>
 
-  <p class="date">06/09/2023</p>
+  <p class="date">04/10/2023</p>
 </section>
 <section id="sobre-as-aulas-práticas" class="slide level2 smaller">
 <h2>Sobre as Aulas Práticas</h2>
@@ -447,6 +448,7 @@
 <section id="section-1" class="slide level2">
 <h2></h2>
 <p>O BlueJ tem uma opção interessante que nos permite ver como as chamadas de métodos são feitas em Java.</p>
+<div title="Exercício 1.1">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -456,7 +458,7 @@
 <div>
 <p>Baixe o projeto de exemplo <a href="https://github.com/ufla-ipoo/figuras">figuras</a> e abra-o no BlueJ.</p>
 <ul>
-<li>Acesse o menu <strong>Exibir</strong> –&gt; <strong>Exibir Terminal</strong> (ou use o atalho <kbd>Ctrl-T</kbd>)
+<li>Acesse o menu <strong>Exibir</strong> –&gt; <strong>Exibir Terminal</strong> (ou use o atalho <kbd aria-hidden="true">Ctrl-T</kbd><span class="visually-hidden">Ctrl-T</span>)
 <ul>
 <li>Será exibida uma janela que o BlueJ usa para exibir dados de saída.</li>
 <li>Dica: arraste as janelas para que você consiga ver a janela principal do BlueJ e o Terminal ao mesmo tempo.</li>
@@ -471,14 +473,15 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-2" class="slide level2 smaller">
 <h2></h2>
 <p>No passo anterior, vimos que criar uma pessoa, exibi-la e fazê-la mover para a direita seria feito da seguinte forma em Java.</p>
 <div class="doublefontsize">
-<div class="sourceCode" id="cb1" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Pessoa pessoa1 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Pessoa</span><span class="op">();</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pessoa1<span class="op">.</span><span class="fu">exibir</span><span class="op">();</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>pessoa1<span class="op">.</span><span class="fu">moverDireita</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>Pessoa pessoa1 <span class="op">=</span> <span class="kw">new</span> <span class="fu">Pessoa</span><span class="op">();</span></span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>pessoa1<span class="op">.</span><span class="fu">exibir</span><span class="op">();</span></span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>pessoa1<span class="op">.</span><span class="fu">moverDireita</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Podemos observar que:</p>
@@ -493,6 +496,7 @@
 <h2></h2>
 <p>Nós também podemos digitar comandos Java usando o <strong>Bloco de Códigos</strong>.</p>
 <div class="fragment">
+<div title="Exercício 1.2">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -502,13 +506,14 @@
 <div>
 <p>Confira se o Bloco de Códigos está sendo exibido no seu BlueJ.</p>
 <ul>
-<li>Para isso, acesse o menu <strong>Exibir</strong> –&gt; <strong>Exibir Bloco e Códigos</strong> (ou use o atalho <kbd>Ctrl-E</kbd>)
+<li>Para isso, acesse o menu <strong>Exibir</strong> –&gt; <strong>Exibir Bloco e Códigos</strong> (ou use o atalho <kbd aria-hidden="true">Ctrl-E</kbd><span class="visually-hidden">Ctrl-E</span>)
 <ul>
 <li>Vai aparecer um painel na parte inferior, à direita da bancada de objetos.</li>
 </ul></li>
 <li>Agora digite no Bloco de Códigos os comandos do slide anterior para criar uma pessoa, exibi-la e movê-la para direita.</li>
-<li>Experimente criar outros objetos e chamar seus métodos.</li>
+<li>Em seguida, digite os comandos necessários para <strong>desenhar uma bandeira do Brasil</strong>.</li>
 </ul>
+</div>
 </div>
 </div>
 </div>
@@ -522,6 +527,7 @@
 </section>
 <section id="section-4" class="slide level2">
 <h2></h2>
+<div title="Exercício 1.3">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -534,6 +540,7 @@
 <li>Crie uma instância da classe <code>Figura</code> e chame seu método <code>desenhar</code>. Em seguida, experimente os métodos <code>definirPretoEBranco</code> e <code>definirColorida</code>.</li>
 <li>Como você acha que a classe <code>Figura</code> desenha a figura que aparece?</li>
 </ul>
+</div>
 </div>
 </div>
 </div>
@@ -566,6 +573,7 @@
 <li class="fragment">Um programa em Java tem centenas ou milhares de objetos. O usuário inicia o programa (que geralmente cria o primeiro objeto) e, daí em diante, todos os objetos são criados a partir de outros objetos.</li>
 </ul>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -573,6 +581,7 @@
 </div>
 <div class="callout-content">
 <p>Objetos podem se comunicar <strong>chamando métodos</strong> uns dos outros.</p>
+</div>
 </div>
 </div>
 </div>
@@ -606,6 +615,7 @@
 </ul>
 </div>
 <div class="fragment">
+<div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -617,6 +627,7 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-8" class="slide level2 smaller">
 <h2></h2>
@@ -624,12 +635,13 @@
 <ul>
 <li class="fragment">Isso indica que o código foi alterado e precisa ser recompilado.</li>
 <li class="fragment">Você pode recompilar uma classe, clicando com o botão direito no retângulo da classe e acessando a opção <strong>Compilar</strong>.</li>
-<li class="fragment">Ou você pode compilar todas as classes acessando o menu <strong>Ferramentas</strong> –&gt; <strong>Compilar</strong> (ou o atalho de teclado <kbd>Ctrl-K</kbd>)</li>
+<li class="fragment">Ou você pode compilar todas as classes acessando o menu <strong>Ferramentas</strong> –&gt; <strong>Compilar</strong> (ou o atalho de teclado <kbd aria-hidden="true">Ctrl-K</kbd><span class="visually-hidden">Ctrl-K</span>)</li>
 <li class="fragment">Quando recompilamos uma classe, o BlueJ remove quaisquer objetos que tenham sido criados antes.</li>
 </ul>
 </section>
 <section id="section-9" class="slide level2">
 <h2></h2>
+<div title="Exercício 1.4">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -640,6 +652,9 @@
 </div>
 </div>
 </div>
+</div>
+<div class="fragment">
+<div title="Exercício 1.5">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -647,17 +662,20 @@
 </div>
 <div class="callout-content">
 <p>Adicione um segundo sol à figura. Para isso, repare a definição dos atributos no início da classe. Você verá o seguinte código</p>
-<div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> Quadrado parede<span class="op">;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> Quadrado janela<span class="op">;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> Triangulo telhado<span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> Circulo sol<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> Quadrado parede<span class="op">;</span></span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> Quadrado janela<span class="op">;</span></span>
+<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> Triangulo telhado<span class="op">;</span></span>
+<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> Circulo sol<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Você precisará adicionar uma linha nesse trecho para o segundo sol. Além disso, faça as alterações necessárias para que ele apareça quando a figura é desenhada.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 </section>
 <section id="section-10" class="slide level2">
 <h2></h2>
+<div title="Exercício 1.6">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -668,7 +686,9 @@
 </div>
 </div>
 </div>
+</div>
 <div class="fragment">
+<div title="Exercício 1.7">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -680,14 +700,17 @@
 </div>
 </div>
 </div>
+</div>
 <div class="fragment">
+<div title="Exercício 1.8">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <p><strong>Exercício 1.8</strong></p>
 </div>
 <div class="callout-content">
-<p>Altere a classe <code>Figura</code> para que a pessoa caminhe para a casa depois do pôr do sol.</p>
+<p>Altere a classe <code>Figura</code> para incluir uma pessoa na cena. Faça com que ela caminhe para a casa depois do pôr do sol.</p>
+</div>
 </div>
 </div>
 </div>
@@ -695,6 +718,7 @@
 </section>
 <section id="section-11" class="slide level2">
 <h2></h2>
+<div title="Entrega no Campus Virtual">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -705,6 +729,7 @@
 </div>
 <div class="callout-content">
 <p>Acesse, no Campus Virtual, a atividade correspondente a essa primeira parte dos exercícios e envie o código do projeto <code>casa</code> da forma que ficou após as suas alterações (compacte a pasta em um arquivo <code>.zip</code> para enviar);</p>
+</div>
 </div>
 </div>
 </div>
@@ -720,6 +745,7 @@
 </section>
 <section id="section-14" class="slide level2 smaller">
 <h2></h2>
+<div title="Exercício 2.1 - Criando objetos para jogar">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -752,9 +778,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-15" class="slide level2 smaller">
 <h2></h2>
+<div title="Exercício 2.2 - Jogando">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -769,12 +797,12 @@
 <p>A dinâmica do jogo é simples.</p>
 <ul>
 <li>Você controla a nave da esquerda usando as setas do teclado.</li>
-<li>E pode atirar digitando a tecla <kbd>Ctrl</kbd>.</li>
-<li>A tecla <kbd>ENTER</kbd> pausa o jogo.</li>
+<li>E pode atirar digitando a tecla <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span>.</li>
+<li>A tecla <kbd aria-hidden="true">ENTER</kbd><span class="visually-hidden">ENTER</span> pausa o jogo.</li>
 <li>O inimigo se move aleatoriamente na vertical e também atira aleatoriamente.</li>
 <li>Seu objetivo é destruir o maior número de inimigos possível sem ser morto.</li>
 <li>Você ganha 50 pontos a cada inimigo morto.</li>
-<li>Se você morrer, você pode reiniciar o jogo apertando a tecla <kbd>F2</kbd>.</li>
+<li>Se você morrer, você pode reiniciar o jogo apertando a tecla <kbd aria-hidden="true">F2</kbd><span class="visually-hidden">F2</span>.</li>
 </ul>
 <p>Jogue um pouco e veja quantos pontos consegue alcançar:</p>
 <ul>
@@ -784,9 +812,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-16" class="slide level2 smaller">
 <h2></h2>
+<div title="Exercício 2.3 - Conhecendo as classes">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -805,7 +835,9 @@
 </div>
 </div>
 </div>
+</div>
 <div class="fragment">
+<div title="Exercício 2.4 - A Classe `TesteJogo`">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -829,9 +861,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-17" class="slide level2 smaller">
 <h2></h2>
+<div title="Exercício 2.5 - Alterando o Código">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -860,9 +894,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-18" class="slide level2 smaller">
 <h2></h2>
+<div title="Exercício 2.6 - Melhorando a Nave">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -893,9 +929,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-19" class="slide level2 smaller">
 <h2></h2>
+<div title="Exercício 2.7 - Melhorando a usabilidade">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -919,6 +957,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Dica">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -930,15 +970,17 @@
 <div class="callout-content">
 <p>O operador <code>+</code> em Java pode ser usado para <em>concatenar</em> (juntar) Strings e também Strings com outros tipos de dados. A linguagem converte automaticamente números para strings, por exemplo.</p>
 <p>Logo, é possível em Java implementar um código como o apresentado abaixo. Experimente executá-lo no Bloco de Códigos do BlueJ e depois digite somente <code>frase</code> para que ele exiba o valor desta variável:</p>
-<div class="sourceCode" id="cb3" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> numero <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> palavra <span class="op">=</span> <span class="st">"nota"</span><span class="op">;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> frase <span class="op">=</span> palavra <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> numero<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> numero <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> palavra <span class="op">=</span> <span class="st">"nota"</span><span class="op">;</span></span>
+<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> frase <span class="op">=</span> palavra <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> numero<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 </div>
 </section>
 <section id="section-20" class="slide level2 smaller">
 <h2></h2>
+<div title="Entrega no Campus Virtual">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -952,30 +994,34 @@
 </div>
 </div>
 </div>
+</div>
+
+<div class="quarto-auto-generated-content">
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
+</div>
 </div>
 </section></section>
     </div>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="cap1-2_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="cap1-2_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="cap1-2_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="cap1-2_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -985,7 +1031,6 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1204,18 +1249,7 @@
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1247,11 +1281,50 @@
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
-      function tippyHover(el, contentFn) {
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1261,8 +1334,17 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1276,7 +1358,11 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
