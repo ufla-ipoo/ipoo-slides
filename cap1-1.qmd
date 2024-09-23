@@ -67,7 +67,7 @@ Em qualquer dos casos, é altamente recomendável, ter um caderno e caneta para 
 
 . . .
 
-Vamos começar nossa jornada no mundo da [Programação Orientada a Objetos]{.alert} (PPOO)!
+Vamos começar nossa jornada no mundo da [Programação Orientada a Objetos]{.alert} (POO)!
 
 . . .
 
@@ -495,7 +495,7 @@ Os parâmetros poderiam ser, por exemplo, a **direção** e a **força** do chut
 [Sobre métodos e parâmetros é *incorreto* afirmar que:]{.alert}
 
 a. Métodos nos permitem comunicar com os objetos.
-b. Parâmetros nos permitem de fornecer informações adicionais aos métodos.
+b. Parâmetros nos permitem fornecer informações adicionais aos métodos.
 c. A assinatura de um método indica quem o criou.
 d. Em Java, os parâmetros possuem um tipo e um nome.
 :::
