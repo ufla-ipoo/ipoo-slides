@@ -18,7 +18,6 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2023-04-10">
   <title>GAC125 - Introdução à Programação Orientada a Objetos – IPOO - Cap. 1 Objetos e Classes</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -416,7 +415,7 @@
     </div>
 </div>
 
-  <p class="date">04/10/2023</p>
+  <p class="date">28/09/2024</p>
 </section>
 <section id="sobre-as-aulas-práticas" class="slide level2 smaller">
 <h2>Sobre as Aulas Práticas</h2>
@@ -439,15 +438,16 @@
 </section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
-<p><strong>Programar em Java</strong> consiste basicamente em escrever <strong>comandos para chamar métodos de objetos</strong>.</p>
+<p><strong>Programar em Java</strong> consiste, basicamente, em escrever <strong>comandos para chamar métodos de objetos</strong>.</p>
 <ul>
 <li class="fragment">Usando o BlueJ, nós chamamos os métodos clicando nos objetos e acessando opções de menu.</li>
-<li class="fragment">Mas, em Java, nós digitamos os códigos que chamam os métodos.</li>
+<li class="fragment">Mas, em um programa normal em Java, nós digitamos os códigos que chamam os métodos.</li>
 </ul>
 </section>
 <section id="section-1" class="slide level2">
 <h2></h2>
 <p>O BlueJ tem uma opção interessante que nos permite ver como as chamadas de métodos são feitas em Java.</p>
+<div class="fragment">
 <div title="Exercício 1.1">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -458,17 +458,18 @@
 <div>
 <p>Baixe o projeto de exemplo <a href="https://github.com/ufla-ipoo/figuras">figuras</a> e abra-o no BlueJ.</p>
 <ul>
-<li>Acesse o menu <strong>Exibir</strong> –&gt; <strong>Exibir Terminal</strong> (ou use o atalho <kbd aria-hidden="true">Ctrl-T</kbd><span class="visually-hidden">Ctrl-T</span>)
+<li>Acesse o menu <strong>Exibir</strong> → <strong>Exibir Terminal</strong> (ou use o atalho <kbd aria-hidden="true">Ctrl-T</kbd><span class="visually-hidden">Ctrl-T</span>)
 <ul>
 <li>Será exibida uma janela que o BlueJ usa para exibir dados de saída.</li>
 <li>Dica: arraste as janelas para que você consiga ver a janela principal do BlueJ e o Terminal ao mesmo tempo.</li>
 </ul></li>
-<li>Na janela do Terminal, acesse o menu <strong>Opções</strong> –&gt; <strong>Anotar chamadas de métodos</strong>.
+<li>Na janela do Terminal, acesse o menu <strong>Opções</strong> → <strong>Anotar chamadas de métodos</strong>.
 <ul>
 <li>Com essa opção, todas as chamadas de método feitas pelo BlueJ serão exibidas como código Java.</li>
 </ul></li>
 <li>Agora, crie alguns objetos, chame alguns de seus métodos e observe a saída na janela do terminal.</li>
 </ul>
+</div>
 </div>
 </div>
 </div>
@@ -486,8 +487,8 @@
 <div class="fragment">
 <p>Podemos observar que:</p>
 <ul>
-<li class="fragment">Quando criamos um objeto e damos um nome a ele, na verdade estamos <strong>armazenando um objeto Pessoa em uma variável</strong>.</li>
-<li class="fragment">Chamamos métodos usando o nome do objeto, seguido de <code>.</code>, seguido do nome do método, seguido da lista de parâmetros (que pode ser vazia) entre parênteses.</li>
+<li class="fragment">Quando criamos um objeto e damos um nome a ele, na verdade estamos <strong>armazenando um objeto <code>Pessoa</code> em uma variável</strong>.</li>
+<li class="fragment">Chamamos métodos usando o nome da variável, seguido de <code>.</code>, seguido do nome do método, seguido da lista de parâmetros (que pode ser vazia) entre parênteses.</li>
 <li class="fragment">Todos os comandos em Java terminam com <code>;</code>.</li>
 </ul>
 </div>
@@ -506,11 +507,11 @@
 <div>
 <p>Confira se o Bloco de Códigos está sendo exibido no seu BlueJ.</p>
 <ul>
-<li>Para isso, acesse o menu <strong>Exibir</strong> –&gt; <strong>Exibir Bloco e Códigos</strong> (ou use o atalho <kbd aria-hidden="true">Ctrl-E</kbd><span class="visually-hidden">Ctrl-E</span>)
+<li>Para isso, acesse o menu <strong>Exibir</strong> → <strong>Exibir Bloco e Códigos</strong> (ou use o atalho <kbd aria-hidden="true">Ctrl-E</kbd><span class="visually-hidden">Ctrl-E</span>)
 <ul>
 <li>Vai aparecer um painel na parte inferior, à direita da bancada de objetos.</li>
 </ul></li>
-<li>Agora digite no Bloco de Códigos os comandos do slide anterior para criar uma pessoa, exibi-la e movê-la para direita.</li>
+<li>Agora digite no Bloco de Códigos os comandos do slide anterior para criar uma pessoa, exibi-la e movê-la para a direita.</li>
 <li>Em seguida, digite os comandos necessários para <strong>desenhar uma bandeira do Brasil</strong>.</li>
 </ul>
 </div>
@@ -559,7 +560,7 @@
 <li class="fragment">Nós criamos uma classe que faça a tarefa para nós.</li>
 <li class="fragment">É isso que a classe <code>Figura</code> faz.
 <ul>
-<li class="fragment">A classe <code>Figura</code> é escrita de forma que, quando uma instância é criada, são criados dois objetos quadrado (para a parede e para a janela), um triângulo e um círculo.</li>
+<li class="fragment">A classe <code>Figura</code> é escrita de forma que, quando uma instância é criada, são criados dois objetos <code>Quadrado</code> (para a parede e para a janela), um <code>Triângulo</code> e um <code>Círculo</code>.</li>
 <li class="fragment">Esses objetos são então exibidos, movidos e têm seu tamanho e cor alterados até a figura ficar como vimos.</li>
 </ul></li>
 </ul>
@@ -569,8 +570,11 @@
 <h2></h2>
 <p>O importante aqui é entendermos que <span class="alert">objetos podem criar objetos</span>.</p>
 <ul>
-<li class="fragment">E <span class="alert">objetos podem chamar métodos de outros objetos</span>.</li>
-<li class="fragment">Um programa em Java tem centenas ou milhares de objetos. O usuário inicia o programa (que geralmente cria o primeiro objeto) e, daí em diante, todos os objetos são criados a partir de outros objetos.</li>
+<li class="fragment"><p>E <span class="alert">objetos podem chamar métodos de outros objetos</span>.</p></li>
+<li class="fragment"><p>Um programa em Java tem centenas ou milhares de objetos.</p>
+<ul>
+<li class="fragment">O usuário inicia o programa (que geralmente cria o primeiro objeto) e, daí em diante, todos os objetos são criados a partir de outros objetos.</li>
+</ul></li>
 </ul>
 <div class="fragment">
 <div title="Conceito">
@@ -635,7 +639,7 @@
 <ul>
 <li class="fragment">Isso indica que o código foi alterado e precisa ser recompilado.</li>
 <li class="fragment">Você pode recompilar uma classe, clicando com o botão direito no retângulo da classe e acessando a opção <strong>Compilar</strong>.</li>
-<li class="fragment">Ou você pode compilar todas as classes acessando o menu <strong>Ferramentas</strong> –&gt; <strong>Compilar</strong> (ou o atalho de teclado <kbd aria-hidden="true">Ctrl-K</kbd><span class="visually-hidden">Ctrl-K</span>)</li>
+<li class="fragment">Ou você pode compilar todas as classes acessando o menu <strong>Ferramentas</strong> → <strong>Compilar</strong> (ou o atalho de teclado <kbd aria-hidden="true">Ctrl-K</kbd><span class="visually-hidden">Ctrl-K</span>)</li>
 <li class="fragment">Quando recompilamos uma classe, o BlueJ remove quaisquer objetos que tenham sido criados antes.</li>
 </ul>
 </section>
@@ -709,7 +713,7 @@
 <p><strong>Exercício 1.8</strong></p>
 </div>
 <div class="callout-content">
-<p>Altere a classe <code>Figura</code> para incluir uma pessoa na cena. Faça com que ela caminhe para a casa depois do pôr do sol.</p>
+<p>Altere a classe <code>Figura</code> para incluir uma pessoa na cena. Faça com que ela caminhe para a casa <strong>depois</strong> do pôr do sol.</p>
 </div>
 </div>
 </div>
@@ -830,7 +834,7 @@
 <li>Apenas tente identificar os atributos e métodos que existem no código-fonte das classes <code>Nave</code>, <code>Inimigo</code> e <code>Placar</code>.</li>
 <li>Dê uma olhada com mais detalhes no método <code>atirar</code> da classe <code>Nave</code> e tente entender o que ele faz.</li>
 </ul>
-<p>Obs.: a classe <code>Cenario</code> é bem complexa porque usa conceitos avançado, portanto, pode ignorá-la. Mas se estiver curioso, fique à vontade.</p>
+<p>Obs.: a classe <code>Cenario</code> é bem complexa porque usa conceitos avançados, portanto, pode ignorá-la. Mas se estiver curioso, fique à vontade.</p>
 </div>
 </div>
 </div>
@@ -920,11 +924,11 @@
 <ul>
 <li>Qual parte do código deve ser alterada para que a nave não morra com um único tiro, mas sim perca a proteção primeiro?</li>
 <li>Lembre-se de que a nave deve morrer se tomar um tiro e o seu campo de proteção estiver abaixo de 20.</li>
-<li>Lembre-se ainda, que ao reiniciar o jogo, a nave deve voltar a ter nível 100 de proteção.</li>
+<li>Lembre-se ainda, que ao reiniciar o jogo (usando a tecla <kbd aria-hidden="true">F2</kbd><span class="visually-hidden">F2</span>), a nave deve voltar a ter nível 100 de proteção.</li>
 </ul></li>
-<li>Faça a alteração no método necessário.</li>
+<li>Faça a alteração nos métodos necessários.</li>
 </ul>
-<p>Jogue e teste o campo de proteção da nave.</p>
+<p>Jogue e teste o campo magnético de proteção da nave.</p>
 </div>
 </div>
 </div>

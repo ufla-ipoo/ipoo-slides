@@ -223,7 +223,7 @@ Experimente usar o sistema de suporte técnico e digitar `"Tchau"` ou `" tchau"`
 
 A classe String é uma das classes da biblioteca padrão do Java.
 
-- Nós podemos acessar a documentação da classe, no BlueJ, no menu `Ajuda` --> `Biblioteca de classes do Java`.
+- Nós podemos acessar a documentação da classe, no BlueJ, no menu `Ajuda` &rarr; `Biblioteca de classes do Java`.
 - Será aberta a documentação online do Java no seu navegador web.
   - Na parte superior direita há uma caixa de busca.
   - Digite string e escolha primeira opção (`java.lang.String`).    

@@ -628,7 +628,7 @@ Vamos avaliar o código da classe, baixando o projeto [visor-numero](https://git
 ##
 
 ::: {.callout-note title="Exercício" icon=false}
-No BlueJ acesse a opção: **Exibir** --> **Exibir terminal**, e no terminal acesse **Opcoes** --> **Anotar chamadas de métodos**.
+No BlueJ acesse a opção: **Exibir** &rarr; **Exibir terminal**, e no terminal acesse **Opcoes** &rarr; **Anotar chamadas de métodos**.
 
 Crie um objeto `VisorDeNumero` com limite `24` e dê o nome `horas` para a variável.
 

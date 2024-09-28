@@ -134,7 +134,7 @@ Um erro muito comum para quem está começando é esquecer de fechar as chaves, 
 ::: {.column width="80%"}
 ::: {.callout-note title="Convenção" appearance="simple" icon=false}
 Se a sua indentação estiver ficando uma bagunça, o BlueJ pode te ajudar.
-Experimente alterar o código e forma que a indentação fique errada e depois a corriga automaticamente, acessando o menu **Editar --> Auto-indentação** do editor de código do BlueJ.
+Experimente alterar o código e forma que a indentação fique errada e depois a corriga automaticamente, acessando o menu **Editar &rarr; Auto-indentação** do editor de código do BlueJ.
 :::
 :::
 

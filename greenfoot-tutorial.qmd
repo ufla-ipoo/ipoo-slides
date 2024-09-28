@@ -421,7 +421,7 @@ Para criar seu jogo, você pode procurar por trilha e efeitos sonoros livres e g
 
 . . .
 
-Para criar um som, acesse o menu `Ferramentas` --> `Mostrar gravador de som...`.
+Para criar um som, acesse o menu `Ferramentas` &rarr; `Mostrar gravador de som...`.
 
 - Você pode gravar sons e ouvi-los.
 - E, ao final, dar um nome para o arquivo e salvar.

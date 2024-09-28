@@ -22,24 +22,26 @@ Lembre-se também que, como apresentado no Plano de Ensino, [para ter presença]
 
 ## {.smaller}
 
-**Programar em Java** consiste basicamente em escrever **comandos para chamar métodos de objetos**.
+**Programar em Java** consiste, basicamente, em escrever **comandos para chamar métodos de objetos**.
 
 - Usando o BlueJ, nós chamamos os métodos clicando nos objetos e acessando opções de menu.
-- Mas, em Java, nós digitamos os códigos que chamam os métodos.
+- Mas, em um programa normal em Java, nós digitamos os códigos que chamam os métodos.
 
 ##
 
 O BlueJ tem uma opção interessante que nos permite ver como as chamadas de métodos são feitas em Java.
+
+. . .
 
 ::: {.callout-note title="Exercício 1.1" icon=false}
 
 ::: {.nonincremental}
 Baixe o projeto de exemplo [figuras](https://github.com/ufla-ipoo/figuras) e abra-o no BlueJ.
 
-- Acesse o menu **Exibir** --> **Exibir Terminal** (ou use o atalho {{< kbd Ctrl-T >}})
+- Acesse o menu **Exibir** &rarr; **Exibir Terminal** (ou use o atalho {{< kbd Ctrl-T >}})
   - Será exibida uma janela que o BlueJ usa para exibir dados de saída.
   - Dica: arraste as janelas para que você consiga ver a janela principal do BlueJ e o Terminal ao mesmo tempo.
-- Na janela do Terminal, acesse o menu **Opções** --> **Anotar chamadas de métodos**.
+- Na janela do Terminal, acesse o menu **Opções** &rarr; **Anotar chamadas de métodos**.
   - Com essa opção, todas as chamadas de método feitas pelo BlueJ serão exibidas como código Java.
 - Agora, crie alguns objetos, chame alguns de seus métodos e observe a saída na janela do terminal.
 :::
@@ -61,8 +63,8 @@ pessoa1.moverDireita();
 
 Podemos observar que:
 
-- Quando criamos um objeto e damos um nome a ele, na verdade estamos **armazenando um objeto Pessoa em uma variável**.
-- Chamamos métodos usando o nome do objeto, seguido de `.`, seguido do nome do método, seguido da lista de parâmetros (que pode ser vazia) entre parênteses.
+- Quando criamos um objeto e damos um nome a ele, na verdade estamos **armazenando um objeto `Pessoa` em uma variável**.
+- Chamamos métodos usando o nome da variável, seguido de `.`, seguido do nome do método, seguido da lista de parâmetros (que pode ser vazia) entre parênteses.
 - Todos os comandos em Java terminam com `;`.
 
 ##
@@ -76,9 +78,9 @@ Nós também podemos digitar comandos Java usando o **Bloco de Códigos**.
 ::: {.nonincremental}
 Confira se o Bloco de Códigos está sendo exibido no seu BlueJ.
 
-- Para isso, acesse o menu **Exibir** --> **Exibir Bloco e Códigos** (ou use o atalho {{< kbd Ctrl-E >}})
+- Para isso, acesse o menu **Exibir** &rarr; **Exibir Bloco e Códigos** (ou use o atalho {{< kbd Ctrl-E >}})
   - Vai aparecer um painel na parte inferior, à direita da bancada de objetos.
-- Agora digite no Bloco de Códigos os comandos do slide anterior para criar uma pessoa, exibi-la e movê-la para direita.
+- Agora digite no Bloco de Códigos os comandos do slide anterior para criar uma pessoa, exibi-la e movê-la para a direita.
 - Em seguida, digite os comandos necessários para **desenhar uma bandeira do Brasil**.
 :::
 
@@ -111,7 +113,7 @@ Geralmente, quando queremos fazer alguma tarefa em Java, nós não fazemos na m�
 
 - Nós criamos uma classe que faça a tarefa para nós.
 - É isso que a classe `Figura` faz.
-  - A classe `Figura` é escrita de forma que, quando uma instância é criada, são criados dois objetos quadrado (para a parede e para a janela), um triângulo e um círculo.
+  - A classe `Figura` é escrita de forma que, quando uma instância é criada, são criados dois objetos `Quadrado` (para a parede e para a janela), um `Triângulo` e um `Círculo`.
   - Esses objetos são então exibidos, movidos e têm seu tamanho e cor alterados até a figura ficar como vimos.
 
 ## {.smaller}
@@ -119,7 +121,9 @@ Geralmente, quando queremos fazer alguma tarefa em Java, nós não fazemos na m�
 O importante aqui é entendermos que [objetos podem criar objetos]{.alert}.
 
 - E [objetos podem chamar métodos de outros objetos]{.alert}.
-- Um programa em Java tem centenas ou milhares de objetos. O usuário inicia o programa (que geralmente cria o primeiro objeto) e, daí em diante, todos os objetos são criados a partir de outros objetos.
+- Um programa em Java tem centenas ou milhares de objetos.
+  
+  - O usuário inicia o programa (que geralmente cria o primeiro objeto) e, daí em diante, todos os objetos são criados a partir de outros objetos.
 
 . . .
 
@@ -164,7 +168,7 @@ No BlueJ, quando alteramos o código de uma classe e fechamos o editor, o retân
 
 - Isso indica que o código foi alterado e precisa ser recompilado.
 - Você pode recompilar uma classe, clicando com o botão direito no retângulo da classe e acessando a opção **Compilar**.
-- Ou você pode compilar todas as classes acessando o menu **Ferramentas** --> **Compilar** (ou o atalho de teclado {{< kbd Ctrl-K >}})
+- Ou você pode compilar todas as classes acessando o menu **Ferramentas** &rarr; **Compilar** (ou o atalho de teclado {{< kbd Ctrl-K >}})
 - Quando recompilamos uma classe, o BlueJ remove quaisquer objetos que tenham sido criados antes.
 
 . . .
@@ -204,7 +208,7 @@ Fica mais interessante se o pôr do sol for tratado em um método separado. Assi
 
 ::: {.callout-note title="Exercício 1.8" icon=false}
 Altere a classe `Figura` para incluir uma pessoa na cena.
-Faça com que ela caminhe para a casa depois do pôr do sol.
+Faça com que ela caminhe para a casa **depois** do pôr do sol.
 :::
 
 ##
@@ -290,7 +294,7 @@ Nesse passo, vamos dar uma passada de olhos no código das classes do jogo.
 - Apenas tente identificar os atributos e métodos que existem no código-fonte das classes `Nave`, `Inimigo` e `Placar`.
 - Dê uma olhada com mais detalhes no método `atirar` da classe `Nave` e tente entender o que ele faz.
 
-Obs.: a classe `Cenario` é bem complexa porque usa conceitos avançado, portanto, pode ignorá-la. Mas se estiver curioso, fique à vontade.
+Obs.: a classe `Cenario` é bem complexa porque usa conceitos avançados, portanto, pode ignorá-la. Mas se estiver curioso, fique à vontade.
 :::
 :::
 
@@ -357,10 +361,10 @@ Altere a classe `Nave` de forma que ela passe a ter o campo de proteção.
 - Quando a nave tomar um tiro, ela deve perder 20 pontos do seu campo de proteção.
   - Qual parte do código deve ser alterada para que a nave não morra com um único tiro, mas sim perca a proteção primeiro?
   - Lembre-se de que a nave deve morrer se tomar um tiro e o seu campo de proteção estiver abaixo de 20.
-  - Lembre-se ainda, que ao reiniciar o jogo, a nave deve voltar a ter nível 100 de proteção.
-- Faça a alteração no método necessário.
+  - Lembre-se ainda, que ao reiniciar o jogo (usando a tecla {{< kbd F2 >}}), a nave deve voltar a ter nível 100 de proteção.
+- Faça a alteração nos métodos necessários.
 
-Jogue e teste o campo de proteção da nave.
+Jogue e teste o campo magnético de proteção da nave.
 
 :::
 :::

@@ -12,7 +12,7 @@ criei  esses slides para explicar como criar um novo projeto e uma nova classe n
 
 ## {.smaller}
 
-Acesse o menu **Projeto** --> **Novo Projeto**.
+Acesse o menu **Projeto** &rarr; **Novo Projeto**.
 
 ![](imagens/BlueJ_novo_projeto_1.png){.r-stretch}
 
@@ -53,7 +53,7 @@ Clique duas vezes na classe no diagrama para abrir o código-fonte.
 
 ## Resumo
 
-- Acesse o menu **Projeto** --> **Novo Projeto**.
+- Acesse o menu **Projeto** &rarr; **Novo Projeto**.
   - Dê um nome para o projeto.
 - Clique no botão **Nova Classe...**.
   - Digite um nome para a classe e clique em OK.
