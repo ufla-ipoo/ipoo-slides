@@ -115,7 +115,7 @@ Como você pode tratar isso fazendo alterações apenas no método `imprimirIngr
 
 ::: {.nonincremental}
 
-::: {.callout-note title="(OPCIONAL) Exercício 1.7 - Desafio" icon=false}
+::: {.callout-note title="Exercício 1.7 - Desafio" icon=false}
 Altere o método `imprimirIngresso` de forma que o preço do ingresso seja exibido em reais, em vez de centavos.
 O preço deve aparecer conforme o exemplo abaixo.
 ```
@@ -151,19 +151,18 @@ Os exercícios a seguir são do **projeto da [nave](https://github.com/ufla-ipoo
 . . .
 
 ::: {.nonincremental}
-Os exercícios dessa segunda parte são **opcionais** não precisam ser entregues.
+Fazendo esses os exercícios você terá um **jogo mais interessante**:
 
-- Mas fazendo os exercícios você terá um **jogo mais interessante**:
-  - O nível de proteção vai variar a cada vez que começa o jogo.
-  - Os tiros do inimigo terão velocidades diferentes.
-  - E o inimigo ficará mais rápido a cada mudança de nível (a cada 500 pontos).
+- O nível de proteção vai variar a cada vez que começa o jogo.
+- Os tiros do inimigo terão velocidades diferentes.
+- E o inimigo ficará mais rápido a cada mudança de nível (a cada 500 pontos).
 :::
 
 ##
 
 ::: {.nonincremental}
 
-::: {.callout-note title="(OPCIONAL) Exercício 2.1 - Nível de proteção variável" icon=false}
+::: {.callout-note title="Exercício 2.1 - Nível de proteção variável" icon=false}
 Vamos deixar a dificuldade do jogo um pouco imprevisível.
 
 - Crie um método na classe `Nave` chamado `gerarNivelDeProtecao`.
@@ -183,7 +182,7 @@ Jogue o jogo e reinicie-o algumas vezes ao morrer.
 
 ::: {.nonincremental}
 
-::: {.callout-note title="(OPCIONAL) Exercício 2.2 - Tiros variados" icon=false}
+::: {.callout-note title="Exercício 2.2 - Tiros variados" icon=false}
 A gente tinha facilitado as coisas colocando o campo de proteção.
 
 - Agora vamos dificultar um pouco.
@@ -207,6 +206,10 @@ Nosso objetivo agora é fazer com que o **inimigo fique mais rápido** à medida
 - A ideia é que o jogador comece no nível 1 e **mude de nível a cada 500 pontos**.
 - E, a cada nível, o inimigo fica mais rápido.
 - Para tratar isso, vamos fazer os próximos dois exercícios.
+
+. . .
+
+Obs.: os exercícios seguintes são opcionais.
 
 ## {.smaller}
 

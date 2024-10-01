@@ -96,10 +96,10 @@ Para ilustrar os conceitos desse capítulo, vamos usar um novo projeto: uma **m�
 
 . . .
 
-O funcionamento básico da máquina o seguinte:
+O funcionamento básico da máquina é o seguinte:
 
 - O cliente coloca dinheiro na máquina (pode fazer isso várias vezes).
-- A todo momento a máquina guarda quanto dinheiro o cliente já inseriu e o total já inserido.
+- A todo momento a máquina guarda quanto dinheiro o cliente já inseriu e o total inserido por todos os clientes.
 - O cliente pode então solicitar a impressão do ingresso.
 - Nossa máquina inicial trata apenas um tipo de ingresso.
 - Mas, criando várias instâncias (objetos) da máquina, podemos ter máquinas com ingressos diferentes.
@@ -128,9 +128,13 @@ Em seguida, insira uma quantia de dinheiro menor que o preço do ingresso usando
 Insira mais dinheiro até ter a quantidade exata necessária para comprar o ingresso, e então chame o método `imprimirIngresso`.
 :::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
 Qual é o saldo da máquina depois que você compra um ingresso?
 :::
+
+. . .
 
 ::: {.callout-note title="Exercício" icon=false}
 Experimente inserir quantidades diferentes de dinheiro antes de imprimir um ingresso.
@@ -139,8 +143,10 @@ Quando você insere muito dinheiro, você recebe o troco?
 O que acontece se você não colocar dinheiro suficiente e tentar imprimir um ingresso?
 :::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
-Tente entender bem o funciona da máquina interagindo com o objeto no BlueJ antes de ver o código na próxima seção.
+Tente entender bem o funcionamento da máquina interagindo com o objeto no BlueJ antes de ver o código na próxima seção.
 Crie outra máquina que tenha ingressos de preço diferente e compre um ingresso dessa máquina.
 A impressão do bilhete é diferente?
 :::
@@ -166,7 +172,7 @@ Dê uma olhada no código da classe `MaquinaIngressos`, clicando duas vezes na c
 
 Podemos dividir o código da classe em duas partes principais.
 
-- Uma pequena [parte externa]{.alert} que dá nome à classe (aparece com fundo verde).
+- Uma pequena [parte externa]{.alert} que dá nome à classe (aparece com fundo verde no BlueJ).
 - E uma [parte interna]{.alert} muito maior que faz todo o trabalho.
 
 . . .
@@ -195,6 +201,8 @@ A **parte externa** de todas as classe se parecem muito, já que o objetivo é [
 Escreva como você acha que seria a parte externa das classes `Estudante` e `Disciplina`. Não se preocupe com a parte interna.
 :::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
 Faz diferença escrever `public class MaquinaIngressos` ou `class public MaquinaIngressos`?
 
@@ -203,12 +211,16 @@ Clique no botão *Compilar*.
 Que mensagem de erro aparece?
 Ela explica claramente o que tem de errado?
 
-Volte o código para como estava antes compile (confira se não aparece mais a mensagem de erro).
+Volte o código para como estava antes e compile novamente (confira se não aparece mais a mensagem de erro).
 :::
+
+. . .
 
 ::: {.callout-note title="Exercício" icon=false}
 Verifique se é possível remover a palavra `public` da parte externa da classe `MaquinaIngressos` (compile o código).
 :::
+
+. . .
 
 ::: {.callout-note title="Exercício" icon=false}
 Coloque a palavra `public` de volta e agora tente remover a palavra `class` e tente compilar de novo.
@@ -239,7 +251,7 @@ A [parte interna]{.alert} da classe é onde nós definimos os *atributos*, *cons
 Em resumo:
 
 - [Atributos]{.alert} guardam dados dentro de um objeto.
-- [Construtores]{.alert} são responsáveis por garantir que um objeto é configurado corretamente quando ele é criado.
+- [Construtores]{.alert} são responsáveis por garantir que um objeto seja configurado corretamente quando ele é criado.
 - [Métodos]{.alert} implementam o comportamento de um objeto. Fornecem o que ele é capaz de fazer.
 
 . . .
@@ -288,9 +300,11 @@ Você não é obrigado a seguir isso, mas deixa seu **código mais claro**.
 
 ::: {.callout-note title="Exercício" icon=false}
 Sabendo a ordem que os atributos, métodos e construtores são geralmente implementados em uma classe, avalie o código da classe `MaquinaIngressos` e faça uma tabela com três colunas.
-Na primeira coloque os nomes dos atributos, na segunda os nomes dos construtores e, na terceira, os construtores.
+Na primeira coloque os nomes dos atributos, na segunda os nomes dos construtores e, na terceira, os métodos.
 *Dica*: a classe tem apenas um construtor.
 :::
+
+. . .
 
 ::: {.callout-note title="Exercício" icon=false}
 A assinatura do construtor tem duas características que são diferentes dos métodos.
@@ -345,13 +359,10 @@ Atributos  (ou campos) descrevem características dos objetos.
 - Como você descreveria essa bola, por exemplo?  
 - Dizendo de outra forma, como contaria como ela é para alguém que não está vendo a bola?
 - Você poderia descrevê-la, informando:
-  - A cor.
-  - O tamanho.
-  - O tipo.
-  - Etc.
+  - A cor, o tamanho, o tipo, etc.
 :::
 
-::: {.column width="40%"}
+::: {.column width="20%"}
 ![](imagens/lupa_bola.png)
 :::
 
@@ -368,8 +379,8 @@ E quais seriam as características de um jogador em um jogo de videogame de fute
 - Poderiam ser: nome, nacionalidade, altura, velocidade, agilidade, etc.
 :::
 
-::: {.column width="30%"}
-![](imagens/messi_fifa_ratings.png){width="50%"}
+::: {.column width="20%"}
+![](imagens/messi_fifa_ratings.png){width="40%"}
 :::
 
 ::::
@@ -417,7 +428,7 @@ E quais seriam características mais abstratas?
 
 ## {.smaller}
 
-Atributos são pequenos espaços dentro de um objeto que podem usados para guardar dados de forma permanente.
+Atributos são pequenos espaços dentro de um objeto que podem ser usados para guardar dados de forma permanente.
 
 - Cada objeto terá espaço para cada atributo declarado na classe.
 
@@ -519,10 +530,14 @@ Qual é o **nome** de cada um dos atributos abaixo?
 
 ::::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
 Repare os tipos dos atributos nos dois exercícios anteriores.
 Pelo que você sabe das convenções de nomes de classes, quais tipos você acha que são classes?
 :::
+
+. . .
 
 ::: {.callout-note title="Exercício" icon=false}
 Será que a ordem das palavras na declaração de um atributo fazem diferença?
@@ -532,11 +547,15 @@ Tente compilar a classe e avalie a mensagem de erro que aparece.
 Obs.: não se esqueça de voltar a declaração original.
 :::
 
+## {.smaller}
+
 ::: {.callout-note title="Exercício" icon=false}
 É muito interessante quando aprendemos as coisas pela experimentação, em vez de *decorar* uma regra.
 Será que, em Java, as declarações dos atributos precisam sempre terminar com ponto-e-vírgula?
 Experimente você mesmo e descubra!
 :::
+
+. . .
 
 ::: {.callout-note title="Exercício" icon=false}
 Escreva a declaração completa de um atributo do tipo `int` chamado `situacao`.
@@ -640,7 +659,7 @@ A questão é que podem ser criadas várias máquinas (instâncias) a partir da 
 
 . . .
 
-Portanto, uma das principais funções de um atributo é **"lembrar" de informações externas** passada para o objeto.
+Portanto, uma das principais funções de um atributo é **"lembrar" de informações externas** passadas para o objeto.
 
 - De forma que a informação continue disponível durante **todo o tempo de vida do objeto**.
 - Assim, atributos servem para guardar informações que duram (são mantidas) por um tempo maior.
@@ -837,7 +856,7 @@ Apenas pela assinatura do construtor do exercício anterior, você conseguiria c
 
 Repare que os nomes que escolhemos para os atributos e parâmetros indicam para que eles servem.
 
-- Apenas lendo os nomes `preco`, `custo`, `titulo` e `vivo`, já podemos ter uma noção de sua utilidade
+- Apenas lendo os nomes `preco`, `custo`, `titulo` e `vivo`, já podemos ter uma noção de sua utilidade.
 
 - Portanto, apesar da linguagem Java permitir que você dê qualquer nome, evite nomes sem sentido como `a`, `b` ou `x1`, `x2`.
 
@@ -874,7 +893,7 @@ No diagrama, a atribuição é representada pela seta indica pela letra (B).
 O lado direito (o que vem depois do `=`) é chamado [expressão]{.alert}.
 
 - Uma expressão pode ser um único valor (como `custoIngresso`).
-- Ou algo mais complexo, como o resultado de uma cálculo.
+- Ou algo mais complexo, como o resultado de um cálculo.
 
 . . .
 
@@ -888,12 +907,14 @@ Em Java, o tipo do resultado da expressão tem que ser **o mesmo tipo** da vari�
 **Comandos de atribuição** guardam os valores representados pelo lado direito do comando na variável nomeada do lado esquerdo.
 :::
 
-. . .
+## {.smaller}
 
 ::: {.callout-note title="Exercício" icon=false}
 Suponha que uma classe `Cachorro` tem um atributo `nome`.
 Escreva o comando de atribuição que inicializa o atributo `nome`, sabendo que a assinatura do construtor da classe é `public Cachorro(String nomeCachorro)`.
 :::
+
+. . .
 
 ::: {.callout-note title="Exercício" icon=false}
 A linha de código abaixo cria um objeto, chamando o construtor da classe `Date`.
@@ -1009,7 +1030,7 @@ O corpo do método `obterPreco` tem apenas um comando.
 
 Podemos pensar em uma **chamada de método** como **uma pergunta** feita ao objeto.
 
-- Quando o método `obterPreco` é chamado é como se fosse feita a pergunta *Quanto custa o ingresso?* para o objeto.
+- Quando o método `obterPreco` é chamado é como se fosse feita para o objeto a pergunta *Quanto custa o ingresso?*.
 - Nesse caso específico, o objeto não precisa fazer nenhuma conta, já que ele tem o valor do ingresso guardado no atributo `preco`.
   - Mas veremos que métodos podem precisar de códigos mais complexos para retornar uma informação.
 
@@ -1063,24 +1084,31 @@ Compare as assinaturas e os corpos dos métodos `obterSaldo` e `obterPreco`.
 O que eles têm de diferente?
 :::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
 Qual seria a pergunta feita ao objeto máquina de ingressos na chamada do método `obterSaldo`?
 :::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
 Como você acha que seria a implementação de um método `obterTotal`?
 :::
+
+. . .
 
 ::: {.callout-note title="Exercício" icon=false}
 Experimente excluir o comando de retorno do método `obterPreco`.
 Qual mensagem de erro aparece quando você tenta compilar a classe?
 :::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
 Além da diferença de nome, o que mais há de diferente nas assinaturas dos métodos `obterPreco` e `inserirDinheiro`.
 Você acha que isso pode ter algo a ver com o fato de que o primeiro método tem comando de retorno e o segundo não?
 :::
-
 
 
 ## {.smaller}
@@ -1185,6 +1213,8 @@ Avaliando apenas a assinatura abaixo, você saberia dizer se ela é de um constr
 ```
 :::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
 Complete o código do método anterior de modo que ele atualize o valor de um atributo `preco`.
 :::
@@ -1285,7 +1315,7 @@ O método `imprimirIngresso` chama várias vezes o método `println` do objeto `
 A maioria das chamadas do método `println` passa uma string **literal**.
 
 - Ex.: `"# Ingressos & Cia "`.
-- Isso significa que o método simplesmente exibe na tela o texto passa  do entre aspas duplas.
+- Isso significa que o método simplesmente exibe na tela o texto passado entre aspas duplas.
 
 ## {.smaller}
 
@@ -1329,6 +1359,8 @@ O que exatamente será exibido na tela pelo comando abaixo.
 ```
 :::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
 Adicione um método `imprimirPreco` à classe `MaquinaIngressos`.
 O método deve ter retorno `void`, não ter nenhum parâmetro e exibir uma mensagem como a abaixo.
@@ -1337,6 +1369,8 @@ O método deve ter retorno `void`, não ter nenhum parâmetro e exibir uma mensa
 ```
 Onde no lugar de X deve aparecer o valor do atributo `preco`.
 :::
+
+. . .
 
 ::: {.callout-note title="Exercício" icon=false}
 Cria duas máquinas de ingressos com valores de ingresso diferentes.
@@ -1357,5 +1391,8 @@ Como você já viu na aula anterior, para que você tenha a [presença]{.alert}
 
 ::: {.callout-important title="Entregas no Campus Virtual"}
 Para ter presença nessa aula você deve responder, no Campus Virtual, aos quizes presentes nesses slides.
+
+Você deve também enviar o projeto `maquina-ingressos-ingenua` como ele ficou 
+após terem sido feitas todas as alterações pedidas ao longo da aula.
 :::
 :::
