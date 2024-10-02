@@ -3,7 +3,7 @@ title: Quarto reveal.js clean
 subtitle: A minimal and elegant presentation theme
 format:
   clean-revealjs:
-    self-contained: true
+    self-contained: false
 author:
   - name: Grant McDermott
     orcid: 0000-0001-7883-8573

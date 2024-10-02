@@ -13,10 +13,10 @@
 <link href="cap2-3_files/libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
 <script src="cap2-3_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
 <script src="cap2-3_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2023-11-09">
+  <meta name="dcterms.date" content="2024-02-10">
   <title>IPOO - Cap. 2 Entendendo as Definições de Classe</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -37,7 +37,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -48,7 +48,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -230,7 +230,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -413,7 +414,7 @@
     </div>
 </div>
 
-  <p class="date">11/09/2023</p>
+  <p class="date">02/10/2024</p>
 </section>
 <section id="como-estudar-precisa-repetir" class="slide level2 smaller">
 <h2>Como estudar? Precisa repetir? :)</h2>
@@ -427,9 +428,8 @@
 <li class="fragment">Use um caderno e caneta para <span class="alert">anotar</span> os principais <span class="alert">conceitos</span> e eventuais <span class="alert">dúvidas</span> que surgirem.</li>
 </ul>
 </div><div class="column" style="width:30%;">
-<p><img data-src="imagens/bluej_completo_vertical.png" style="width:50.0%" alt="Prints do BlueJ."> <img data-src="imagens/livro_bluej.png" style="width:50.0%" data-fig-align="left" alt="Capa do livro do Barnes e Kolling."></p>
-</div>
-</div>
+<p><img data-src="imagens/bluej_completo_vertical.png" style="width:50.0%" alt="Prints do BlueJ."> <img data-src="imagens/livro_bluej.png" class="quarto-figure quarto-figure-left" style="width:50.0%" alt="Capa do livro do Barnes e Kolling."></p>
+</div></div>
 </section>
 <section>
 <section id="design-da-máquina-de-ingressos" class="title-slide slide level1 center" data-background-color="#40666e">
@@ -489,6 +489,7 @@
 </section>
 <section id="section-2" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -499,6 +500,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -509,6 +512,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -516,6 +521,7 @@
 </div>
 <div class="callout-content">
 <p>Avalie a implementação do método <code>retornarTroco</code>. Experimente colocar mais dinheiro que o necessário para um ingresso, imprima um ingresso e então chame o método <code>retornarTroco</code>. Tente também chamar o método quando não há saldo de dinheiro disponível.</p>
+</div>
 </div>
 </div>
 </div>
@@ -563,6 +569,7 @@
 <div class="column" style="width:20%;">
 <p><img data-src="imagens/fica_a_dica.png"></p>
 </div><div class="column" style="width:80%;">
+<div title="Convenção">
 <div class="callout callout-note no-icon callout-titled callout-style-simple">
 <div class="callout-body">
 <div class="callout-title">
@@ -574,11 +581,12 @@
 </div>
 </div>
 </div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="section-6" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -589,6 +597,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -599,6 +609,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -606,6 +618,7 @@
 </div>
 <div class="callout-content">
 <p>Leia o anexo D.2 do livro do Barnes e Kölling para saber mais sobre os comandos condicionais da linguagem Java. Você verá mais detalhes sobre o comando <code>if</code> e também conhecerá o comando <code>switch</code>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -631,13 +644,13 @@
 <li class="fragment">Ele possui três comandos e uma declaração (da variável <code>troco</code>).</li>
 </ul>
 <div class="doublefontsize">
-<div class="sourceCode" id="cb1" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">retornarTroco</span><span class="op">()</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> troco<span class="op">;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    troco <span class="op">=</span> saldo<span class="op">;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> troco<span class="op">;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">retornarTroco</span><span class="op">()</span></span>
+<span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-3"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> troco<span class="op">;</span></span>
+<span id="cb1-4"><a href="" aria-hidden="true" tabindex="-1"></a>    troco <span class="op">=</span> saldo<span class="op">;</span></span>
+<span id="cb1-5"><a href="" aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> troco<span class="op">;</span></span>
+<span id="cb1-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -698,6 +711,7 @@
 </ul>
 </div>
 <div class="fragment">
+<div title="Cuidado">
 <div class="callout callout-note no-icon callout-titled callout-style-simple">
 <div class="callout-body">
 <div class="callout-title">
@@ -709,9 +723,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-11" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -720,15 +736,17 @@
 <div class="callout-content">
 <p>Porque a implementação alternativa do método <code>retornarTroco</code> abaixo não dá o mesmo resultado da original? Faça testes que mostrem como o funcionamento é diferente.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb2" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">retornarTroco</span><span class="op">()</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> saldo<span class="op">;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">retornarTroco</span><span class="op">()</span></span>
+<span id="cb2-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb2-3"><a href="" aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> saldo<span class="op">;</span></span>
+<span id="cb2-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -737,11 +755,12 @@
 <div class="callout-content">
 <p>Altere o método <code>retornarTroco</code> usando a implementação abaixo. O código compila? Se não, explique porque não compila.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb3" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">retornarTroco</span><span class="op">()</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span>    </span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> saldo<span class="op">;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">retornarTroco</span><span class="op">()</span></span>
+<span id="cb3-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">{</span>    </span>
+<span id="cb3-3"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> saldo<span class="op">;</span></span>
+<span id="cb3-4"><a href="" aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -749,6 +768,7 @@
 </section>
 <section id="section-12" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -757,17 +777,18 @@
 <div class="callout-content">
 <p>O que há de errado com a implementação alternativa abaixo do construtor da classe <code>MaquinaIngressos</code>?</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb4" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dt">int</span> custoIngresso<span class="op">)</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span>    </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> preco <span class="op">=</span> custoIngresso<span class="op">;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dt">int</span> custoIngresso<span class="op">)</span></span>
+<span id="cb4-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">{</span>    </span>
+<span id="cb4-3"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> preco <span class="op">=</span> custoIngresso<span class="op">;</span></span>
+<span id="cb4-4"><a href="" aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-5"><a href="" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Tente usar essa versão. O código compila?</p>
 <p>Crie um objeto e inspecione o valor dos atributos.</p>
 <p>Há algo de errado com o atributo <code>preco</code>?</p>
 <p>Consegue explicar o que aconteceu?</p>
+</div>
 </div>
 </div>
 </div>
@@ -809,7 +830,7 @@
 </ul>
 <div class="fragment">
 <p>Mas possuem diferenças importantes:</p>
-<table>
+<table class="caption-top">
 <colgroup>
 <col style="width: 16%">
 <col style="width: 27%">
@@ -859,6 +880,7 @@
 <div class="column" style="width:20%;">
 <p><img data-src="imagens/fica_a_dica.png"></p>
 </div><div class="column" style="width:80%;">
+<div title="Dica">
 <div class="callout callout-note no-icon callout-titled callout-style-simple">
 <div class="callout-body">
 <div class="callout-title">
@@ -878,10 +900,11 @@
 </div>
 </div>
 </div>
-</div>
+</div></div>
 </section>
 <section id="section-15" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -892,6 +915,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -903,9 +928,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-16" class="slide level2">
 <h2></h2>
+<div title="Entrega no Campus Virtual">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -920,9 +947,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-17" class="slide level2">
 <h2></h2>
+<div title="(Opcional) Exercício - [Desafio]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -933,6 +962,7 @@
 <p>Altere a classe <code>MaquinaIngressos</code> do novo projeto de forma que ela possa emitir ingressos de preços diferentes. Imagine que a máquina real tenha um botão que permite ao usuário escolher uma opção de ingresso com desconto, antes de solicitar a impressão do ingresso.</p>
 <p>Quais atributos e métodos precisariam ser adicionados à classe para tratar isso?</p>
 <p>Você acha que seria necessária alterar muitos dos métodos que já existiam?</p>
+</div>
 </div>
 </div>
 </div>
@@ -985,10 +1015,10 @@
 <h2></h2>
 <p>O método <code>obterLogin</code> da classe <code>Estudante</code> tem algo diferente que é interessante analisarmos.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb5" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">obterLogin</span><span class="op">()</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> nome<span class="op">.</span><span class="fu">substring</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span><span class="dv">4</span><span class="op">)</span> <span class="op">+</span> matricula<span class="op">.</span><span class="fu">substring</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span><span class="dv">3</span><span class="op">);</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">obterLogin</span><span class="op">()</span></span>
+<span id="cb5-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb5-3"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> nome<span class="op">.</span><span class="fu">substring</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span><span class="dv">4</span><span class="op">)</span> <span class="op">+</span> matricula<span class="op">.</span><span class="fu">substring</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span><span class="dv">3</span><span class="op">);</span></span>
+<span id="cb5-4"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Repare em dois pontos interessantes:</p>
 <ol type="1">
@@ -1005,13 +1035,13 @@
 <div class="fragment">
 <p>O método substring tem o seguinte comentário e assinatura.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb6" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">* Returns a string that is a substring of this string. </span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">* The substring begins at the specified beginIndex </span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">* and extends to the character at index endIndex - 1. </span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">* Thus the length of the substring is endIndex-beginIndex.</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">*/</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">String</span> <span class="fu">substring</span><span class="op">(</span><span class="dt">int</span> beginIndex<span class="op">,</span> <span class="dt">int</span> endIndex<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb6-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">* Returns a string that is a substring of this string. </span></span>
+<span id="cb6-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">* The substring begins at the specified beginIndex </span></span>
+<span id="cb6-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">* and extends to the character at index endIndex - 1. </span></span>
+<span id="cb6-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">* Thus the length of the substring is endIndex-beginIndex.</span></span>
+<span id="cb6-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">*/</span></span>
+<span id="cb6-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">String</span> <span class="fu">substring</span><span class="op">(</span><span class="dt">int</span> beginIndex<span class="op">,</span> <span class="dt">int</span> endIndex<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
@@ -1046,6 +1076,7 @@
 </section>
 <section id="section-23" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1056,6 +1087,8 @@
 </div>
 </div>
 </div>
+</div>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1066,9 +1099,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-24" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1077,19 +1112,21 @@
 <div class="callout-content">
 <p>A classe <code>String</code> possui um método de acesso chamado <code>length</code>, com o seguinte cabeçalho:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb7" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> Return the number of characters in this string<span class="co">.</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a> <span class="co">*/</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">length</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb7-2"><a href="" aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> Return the number of characters in this string<span class="co">.</span></span>
+<span id="cb7-3"><a href="" aria-hidden="true" tabindex="-1"></a> <span class="co">*/</span></span>
+<span id="cb7-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">length</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Adicione um comando condicional ao construtor da classe <code>Estudante</code> e imprima um erro na tela caso o parâmetro <code>nomeCompleto</code> tenha menos que quatro caracteres, ou o parâmetro <code>matriculaEstudante</code> tenha menos de três caracteres.</p>
 <p>Obs.: mesmo que a mensagem seja exibida, o objeto deve ser criado normalmente com os valores passados.</p>
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-25" class="slide level2">
 <h2></h2>
+<div title="Entrega no Campus Virtual">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1104,9 +1141,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-26" class="slide level2">
 <h2></h2>
+<div title="(Opcional) Exercício - [Desafio]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1114,6 +1153,7 @@
 </div>
 <div class="callout-content">
 <p>Altere o método <code>obterLogin</code> da classe <code>Estudante</code> de forma que ele sempre retorne um login, mesmo que os atributos <code>nome</code> e <code>matricula</code> não tenham os tamanhos mínimos esperados. Caso algum atributo tenha tamanho insuficiente, use todos os caracteres do atributo.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1131,6 +1171,7 @@
 <li>considerada nas aula em <span class="alert">formato ANP</span> (Atividade Não-Presencial),</li>
 <li>você precisa <strong>demonstrar que</strong> realmente <strong>estudou</strong> o conteúdo.</li>
 </ul>
+<div title="Entregas no Campus Virtual">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1149,9 +1190,12 @@
 </div>
 </div>
 </div>
+</div>
+<div class="quarto-auto-generated-content">
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
+</div>
 </div>
 </section></section>
     </div>
@@ -1182,7 +1226,6 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1401,18 +1444,7 @@
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1444,11 +1476,50 @@
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
-      function tippyHover(el, contentFn) {
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1458,8 +1529,17 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1473,7 +1553,11 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

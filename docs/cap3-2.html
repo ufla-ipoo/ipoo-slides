@@ -13,9 +13,10 @@
 <link href="cap3-2_files/libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
 <script src="cap3-2_files/libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
 <script src="cap3-2_files/libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
+  <meta name="dcterms.date" content="2024-02-10">
   <title>IPOO - Cap. 3 Interação entre Objetos</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -36,7 +37,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -47,7 +48,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -229,7 +230,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -412,7 +414,7 @@
     </div>
 </div>
 
-  <p class="date">25/09/2023</p>
+  <p class="date">02/10/2024</p>
 </section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
@@ -465,8 +467,7 @@
 <p>Uma dessas ferramentas, que vamos aprender a usar agora, é o <span class="alert">depurador</span> (<em>debugger</em>).</p>
 </div><div class="column" style="width:30%;">
 <p><img data-src="imagens/lupa_bug.png"></p>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="section-2" class="slide level2 smaller">
@@ -494,8 +495,7 @@
 <p><img data-src="imagens/fica_a_dica.png"></p>
 </div><div class="column" style="width:80%;">
 <p><span class="alert">Acredite</span>: a <strong>qualidade de vida</strong> de um programador muda de patamar quando ele passa a usar um depurador!</p>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="o-exemplo-do-sistema-de-e-mail" class="slide level2 smaller">
@@ -515,6 +515,7 @@
 </section>
 <section id="section-3" class="slide level2">
 <h2></h2>
+<div title="Atividade em aula">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -532,6 +533,7 @@
 </ul></li>
 <li class="fragment">Experimente também criando mais clientes de e-mail.</li>
 </ul>
+</div>
 </div>
 </div>
 </div>
@@ -557,6 +559,7 @@
 </ul></li>
 </ul>
 <div class="fragment">
+<div title="Atividade em aula">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -564,6 +567,7 @@
 </div>
 <div class="callout-content">
 <p>Desenhe o diagrama de objetos representando a situação logo após a criação de um servidor de e-mail e três clientes de e-mail.</p>
+</div>
 </div>
 </div>
 </div>
@@ -592,40 +596,40 @@
 <section id="section-6" class="slide level2 smaller">
 <h2></h2>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb1" data-code-line-numbers="7-12"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">public</span> <span class="kw">class</span> Email</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="op">{</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>    <span class="kw">private</span> <span class="bu">String</span> remetente<span class="op">;</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>    <span class="kw">private</span> <span class="bu">String</span> destinatario<span class="op">;</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>    <span class="kw">private</span> <span class="bu">String</span> mensagem<span class="op">;</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>    </span>
-<span id="cb1-7"><a href="#cb1-7"></a>    <span class="kw">public</span> <span class="fu">Email</span><span class="op">(</span><span class="bu">String</span> remetente<span class="op">,</span> <span class="bu">String</span> destinatario<span class="op">,</span> <span class="bu">String</span> mensagem<span class="op">)</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>    <span class="op">{</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">remetente</span> <span class="op">=</span> remetente<span class="op">;</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">destinatario</span> <span class="op">=</span> destinatario<span class="op">;</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">mensagem</span> <span class="op">=</span> mensagem<span class="op">;</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a>    <span class="op">}</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a></span>
-<span id="cb1-14"><a href="#cb1-14"></a>    <span class="co">// métodos omitidos</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1" data-code-line-numbers="7-12"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href=""></a><span class="kw">public</span> <span class="kw">class</span> Email</span>
+<span id="cb1-2"><a href=""></a><span class="op">{</span></span>
+<span id="cb1-3"><a href=""></a>    <span class="kw">private</span> <span class="bu">String</span> remetente<span class="op">;</span></span>
+<span id="cb1-4"><a href=""></a>    <span class="kw">private</span> <span class="bu">String</span> destinatario<span class="op">;</span></span>
+<span id="cb1-5"><a href=""></a>    <span class="kw">private</span> <span class="bu">String</span> mensagem<span class="op">;</span></span>
+<span id="cb1-6"><a href=""></a>    </span>
+<span id="cb1-7"><a href=""></a>    <span class="kw">public</span> <span class="fu">Email</span><span class="op">(</span><span class="bu">String</span> remetente<span class="op">,</span> <span class="bu">String</span> destinatario<span class="op">,</span> <span class="bu">String</span> mensagem<span class="op">)</span></span>
+<span id="cb1-8"><a href=""></a>    <span class="op">{</span></span>
+<span id="cb1-9"><a href=""></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">remetente</span> <span class="op">=</span> remetente<span class="op">;</span></span>
+<span id="cb1-10"><a href=""></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">destinatario</span> <span class="op">=</span> destinatario<span class="op">;</span></span>
+<span id="cb1-11"><a href=""></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">mensagem</span> <span class="op">=</span> mensagem<span class="op">;</span></span>
+<span id="cb1-12"><a href=""></a>    <span class="op">}</span></span>
+<span id="cb1-13"><a href=""></a></span>
+<span id="cb1-14"><a href=""></a>    <span class="co">// métodos omitidos</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Vamos avaliar a primeira linha do construtor.</p>
 </section>
 <section id="section-7" class="slide level2 smaller">
 <h2></h2>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb2" data-code-line-numbers="9"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">public</span> <span class="kw">class</span> Email</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="op">{</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="kw">private</span> <span class="bu">String</span> remetente<span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a>    <span class="kw">private</span> <span class="bu">String</span> destinatario<span class="op">;</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>    <span class="kw">private</span> <span class="bu">String</span> mensagem<span class="op">;</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>    </span>
-<span id="cb2-7"><a href="#cb2-7"></a>    <span class="kw">public</span> <span class="fu">Email</span><span class="op">(</span><span class="bu">String</span> remetente<span class="op">,</span> <span class="bu">String</span> destinatario<span class="op">,</span> <span class="bu">String</span> mensagem<span class="op">)</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a>    <span class="op">{</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">remetente</span> <span class="op">=</span> remetente<span class="op">;</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">destinatario</span> <span class="op">=</span> destinatario<span class="op">;</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">mensagem</span> <span class="op">=</span> mensagem<span class="op">;</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a>    <span class="op">}</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a></span>
-<span id="cb2-14"><a href="#cb2-14"></a>    <span class="co">// métodos omitidos</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2" data-code-line-numbers="9"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href=""></a><span class="kw">public</span> <span class="kw">class</span> Email</span>
+<span id="cb2-2"><a href=""></a><span class="op">{</span></span>
+<span id="cb2-3"><a href=""></a>    <span class="kw">private</span> <span class="bu">String</span> remetente<span class="op">;</span></span>
+<span id="cb2-4"><a href=""></a>    <span class="kw">private</span> <span class="bu">String</span> destinatario<span class="op">;</span></span>
+<span id="cb2-5"><a href=""></a>    <span class="kw">private</span> <span class="bu">String</span> mensagem<span class="op">;</span></span>
+<span id="cb2-6"><a href=""></a>    </span>
+<span id="cb2-7"><a href=""></a>    <span class="kw">public</span> <span class="fu">Email</span><span class="op">(</span><span class="bu">String</span> remetente<span class="op">,</span> <span class="bu">String</span> destinatario<span class="op">,</span> <span class="bu">String</span> mensagem<span class="op">)</span></span>
+<span id="cb2-8"><a href=""></a>    <span class="op">{</span></span>
+<span id="cb2-9"><a href=""></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">remetente</span> <span class="op">=</span> remetente<span class="op">;</span></span>
+<span id="cb2-10"><a href=""></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">destinatario</span> <span class="op">=</span> destinatario<span class="op">;</span></span>
+<span id="cb2-11"><a href=""></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">mensagem</span> <span class="op">=</span> mensagem<span class="op">;</span></span>
+<span id="cb2-12"><a href=""></a>    <span class="op">}</span></span>
+<span id="cb2-13"><a href=""></a></span>
+<span id="cb2-14"><a href=""></a>    <span class="co">// métodos omitidos</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li class="fragment">Repare que é um comando de atribuição.
@@ -662,7 +666,7 @@
 <h2></h2>
 <p>Suponha que tivéssemos a seguinte linha de código no construtor:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb3" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>remetente<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>remetente<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Seria exibido o valor do <strong>atributo <code>remetente</code></strong> ou do <strong>parâmetro <code>remetente</code></strong>?</p>
@@ -691,13 +695,13 @@
 <div class="fragment">
 <p>Portanto:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb4" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">remetente</span> <span class="op">=</span> remetente<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">remetente</span> <span class="op">=</span> remetente<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
 <p>Pode ser lido como:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb5" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>    atributo chamado remetente <span class="op">*</span>recebe<span class="op">*</span> parâmetro chamado remetente<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="" aria-hidden="true" tabindex="-1"></a>    atributo chamado remetente <span class="op">*</span>recebe<span class="op">*</span> parâmetro chamado remetente<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -719,6 +723,7 @@
 </section>
 <section id="section-12" class="slide level2">
 <h2></h2>
+<div title="Atividade em aula">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -727,12 +732,13 @@
 <div class="callout-content">
 <p>O que aconteceria se o construtor fosse implementado desse jeito?</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb6" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">Email</span><span class="op">(</span><span class="bu">String</span> remetente<span class="op">,</span> <span class="bu">String</span> destinatario<span class="op">,</span> <span class="bu">String</span> Mensagem<span class="op">)</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        remetente <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="fu">remetente</span><span class="op">;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        destinatario <span class="op">=</span> destinatario<span class="op">;</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">mensagem</span> <span class="op">=</span> mensagem<span class="op">;</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">Email</span><span class="op">(</span><span class="bu">String</span> remetente<span class="op">,</span> <span class="bu">String</span> destinatario<span class="op">,</span> <span class="bu">String</span> Mensagem<span class="op">)</span></span>
+<span id="cb6-2"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb6-3"><a href="" aria-hidden="true" tabindex="-1"></a>        remetente <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="fu">remetente</span><span class="op">;</span></span>
+<span id="cb6-4"><a href="" aria-hidden="true" tabindex="-1"></a>        destinatario <span class="op">=</span> destinatario<span class="op">;</span></span>
+<span id="cb6-5"><a href="" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">mensagem</span> <span class="op">=</span> mensagem<span class="op">;</span></span>
+<span id="cb6-6"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -753,6 +759,7 @@
 </section>
 <section id="section-14" class="slide level2">
 <h2></h2>
+<div title="Atividade em aula">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -761,6 +768,7 @@
 <div class="callout-content">
 <p>Crie um servidor de e-mail, e depois crie dois clientes de e-mail para os usuários “Tião” e “Maria”. Dica use nomes de variáveis <code>tiao</code> e <code>maria</code> para os clientes de e-mail para facilitar.</p>
 <p>Envie um e-mail da Maria para o João usando o método <code>enviarEmail</code>. Não leia a mensagem ainda!</p>
+</div>
 </div>
 </div>
 </div>
@@ -789,6 +797,7 @@
 </section>
 <section id="section-16" class="slide level2 smaller">
 <h2></h2>
+<div title="Atividade em aula">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -796,6 +805,7 @@
 </div>
 <div class="callout-content">
 <p>Crie um <em>breakpoint</em> na primeira linha do método <code>imprimirProximoEmail</code>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -842,6 +852,7 @@
 <section id="depuração-passo-a-passo" class="slide level2 smaller">
 <h2>Depuração passo a passo</h2>
 <p>Na parte inferior da janela do depurador há botões que nos permitem controlar a execução do programa.</p>
+<div title="Atividade em aula">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -849,6 +860,7 @@
 </div>
 <div class="callout-content">
 <p>Use o botão <strong>Avançar</strong> uma vez para executar uma linha do método <code>imprimirProximoEmail</code>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -864,6 +876,7 @@
 </section>
 <section id="section-18" class="slide level2">
 <h2></h2>
+<div title="Atividade em aula">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -871,6 +884,7 @@
 </div>
 <div class="callout-content">
 <p>Antes de continuar, advinhe qual será a próxima linha a ser executada. Depois, clique novamente em <strong>Avançar</strong> e veja se tinha acertado. Tente entender porque você acertou ou errou.</p>
+</div>
 </div>
 </div>
 </div>
@@ -888,6 +902,7 @@
 </section>
 <section id="section-20" class="slide level2">
 <h2></h2>
+<div title="Atividade em aula">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -895,6 +910,7 @@
 </div>
 <div class="callout-content">
 <p>Chame novamente o método <code>imprimirProximoEmail</code> do cliente de e-mail do Tião. Avance a execução passo a passo e observe o que acontece dessa vez. Explique porque o fluxo de execução foi diferente.</p>
+</div>
 </div>
 </div>
 </div>
@@ -909,7 +925,7 @@
 <li class="fragment">Portanto, o objeto da classe cliente de e-mail está chamando o método <code>obterProximoEmail</code> do objeto servidor de e-mail.</li>
 </ul>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb7" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>    Email email <span class="op">=</span> servidor<span class="op">.</span><span class="fu">obterProximoEmail</span><span class="op">(</span>usuario<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="" aria-hidden="true" tabindex="-1"></a>    Email email <span class="op">=</span> servidor<span class="op">.</span><span class="fu">obterProximoEmail</span><span class="op">(</span>usuario<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -921,7 +937,7 @@
 <li class="fragment">Portanto, o objeto da classe cliente de e-mail está chamando o método <code>imprimir</code> do objeto e-mail.</li>
 </ul>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb8" data-code-line-numbers="false"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>    email<span class="op">.</span><span class="fu">imprimir</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a>    email<span class="op">.</span><span class="fu">imprimir</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="section-22" class="slide level2 smaller">
@@ -944,6 +960,7 @@
 </section>
 <section id="section-23" class="slide level2">
 <h2></h2>
+<div title="Atividade em aula">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -955,6 +972,7 @@
 <p>Use o botão <strong>Avançar</strong> até chegar na linha: <code>email.imprimir()</code>.</p>
 <p>Chegando nela, use o botão <strong>Entrar em</strong> em vez de <strong>Avançar</strong>.</p>
 <p>O que você observa? Explique o que vê?</p>
+</div>
 </div>
 </div>
 </div>
@@ -973,6 +991,7 @@
 </section>
 <section id="section-25" class="slide level2">
 <h2></h2>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -985,7 +1004,9 @@
 </div>
 </div>
 </div>
+</div>
 <div class="fragment">
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -994,6 +1015,7 @@
 <div class="callout-content">
 <p>Use o depurador para investigar o método <code>inserirDinheiro</code>do projeto <code>maquina-ingressos-melhor</code> que vimos anteriormente.</p>
 <p>Chame métodos de forma que consiga depurar a execução tanto do bloco <code>if</code> quanto do bloco <code>else</code>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1018,6 +1040,7 @@
 </section>
 <section id="section-27" class="slide level2">
 <h2></h2>
+<div title="Exercício 1.1">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1030,9 +1053,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-28" class="slide level2">
 <h2></h2>
+<div title="Exercício 1.2">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1056,9 +1081,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-29" class="slide level2">
 <h2></h2>
+<div title="Exercício 1.3">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1081,9 +1108,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-30" class="slide level2">
 <h2></h2>
+<div title="Exercício 1.4">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1110,9 +1139,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-31" class="slide level2">
 <h2></h2>
+<div title="Exercício 1.5">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1138,9 +1169,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-32" class="slide level2">
 <h2></h2>
+<div title="Entrega no Campus Virtual">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1154,9 +1187,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-33" class="slide level2">
 <h2></h2>
+<div title="Exercício 2.1">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1168,9 +1203,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-34" class="slide level2">
 <h2></h2>
+<div title="(Opcional) Exercício 2.2 [Desafio]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1190,9 +1227,11 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="section-35" class="slide level2">
 <h2></h2>
+<div title="Entrega no Campus Virtual">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1206,9 +1245,12 @@
 </div>
 </div>
 </div>
+</div>
+<div class="quarto-auto-generated-content">
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
+</div>
 </div>
 </section></section>
     </div>
@@ -1239,7 +1281,6 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1458,18 +1499,7 @@
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1501,11 +1531,50 @@
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
-      function tippyHover(el, contentFn) {
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1515,8 +1584,17 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1530,7 +1608,11 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
