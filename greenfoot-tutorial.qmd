@@ -13,9 +13,9 @@ O intuito dessa oficina será realizar um jogo com gráficos em 2D, desenvolvido
 
 ## A interface do Greenfoot {.smaller}
 
-Baixe o projeto [greenfoot-ursos](https://github.com/ufla-ipoo/greenfoot-ursos/archive/refs/heads/main.zip) e abra-o no Greenfoot.
+Abra o projeto greenfoot-ursos no Greenfoot.
 
-Aqui você pode ter alguma dificuldade em descompactar o arquivo nos computadores em Linux, chame o monitor para ajudar.
+Use a opção: **Cenario** -> **Open recent** -> `\home\aluno\Área de Trabalho\greenfoot-ursos`
 
 . . .
 
@@ -131,7 +131,9 @@ Nesta parte veremos como criar movimento, e usar o teclado para controlar um ato
 
 ## O cenário caranguejo {.smaller}
 
-Baixe o projeto [greenfoot-caranguejo](https://github.com/ufla-ipoo/greenfoot-caranguejo/archive/refs/heads/main.zip) e abra-o no Greenfoot.
+Abra o projeto greenfoot-caranguejo no Greenfoot.
+
+Use a opção: **Cenario** -> **Open recent** -> `\home\aluno\Área de Trabalho\greenfoot-caranguejo`
 
 - Você verá um mundo de areia.
 
