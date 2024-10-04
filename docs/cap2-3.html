@@ -16,6 +16,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
+  <meta name="dcterms.date" content="2024-04-10">
   <title>GAC125 - Introdução à Programação Orientada a Objetos – IPOO - Cap. 2 Entendendo as Definições de Classe</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -413,7 +414,7 @@
     </div>
 </div>
 
-  <p class="date">30/09/2024</p>
+  <p class="date">04/10/2024</p>
 </section>
 <section id="como-estudar-precisa-repetir" class="slide level2 smaller">
 <h2>Como estudar? Precisa repetir? :)</h2>
@@ -500,6 +501,7 @@
 </div>
 </div>
 </div>
+<div class="fragment">
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -512,6 +514,8 @@
 </div>
 </div>
 </div>
+</div>
+<div class="fragment">
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -520,6 +524,7 @@
 </div>
 <div class="callout-content">
 <p>Avalie a implementação do método <code>retornarTroco</code>. Experimente colocar mais dinheiro que o necessário para um ingresso, imprima um ingresso e então chame o método <code>retornarTroco</code>. Tente também chamar o método quando não há saldo de dinheiro disponível.</p>
+</div>
 </div>
 </div>
 </div>
@@ -597,6 +602,7 @@
 </div>
 </div>
 </div>
+<div class="fragment">
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -609,6 +615,8 @@
 </div>
 </div>
 </div>
+</div>
+<div class="fragment">
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -617,6 +625,7 @@
 </div>
 <div class="callout-content">
 <p>Leia o anexo D.2 do livro do Barnes e Kölling para saber mais sobre os comandos condicionais da linguagem Java. Você verá mais detalhes sobre o comando <code>if</code> e também conhecerá o comando <code>switch</code>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -668,7 +677,7 @@
 <div class="fragment">
 <p>A variável <code>troco</code> é de um terceiro tipo: ela é uma <span class="alert">variável local</span>.</p>
 <ul>
-<li class="fragment">Esse nome é porque ela é declarada dentro do corpo de um método.</li>
+<li class="fragment">Tem esse nome porque ela é declarada dentro do corpo de um método.</li>
 <li class="fragment">E, portanto, tem um escopo <em>local</em> (do método).</li>
 </ul>
 </div>
@@ -745,6 +754,7 @@
 </div>
 </div>
 </div>
+<div class="fragment">
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -759,6 +769,7 @@
 <span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> saldo<span class="op">;</span></span>
 <span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -829,6 +840,8 @@
 </ul>
 <div class="fragment">
 <p>Mas possuem diferenças importantes:</p>
+</div>
+<div class="fragment">
 <table class="caption-top">
 <colgroup>
 <col style="width: 16%">
@@ -915,6 +928,7 @@
 </div>
 </div>
 </div>
+<div class="fragment">
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -924,6 +938,7 @@
 <div class="callout-content">
 <p>Altere o método <code>imprimirIngresso</code> criando uma <strong>variável local</strong> chamada <code>valorQueFalta</code>. A variável deve receber a diferença entre o preço e o saldo, ou seja, o valor que falta para completar o preço de um ingresso. Altere o comando condicional para que o teste seja feito verificando o valor da variável <code>valorQueFalta</code>, e utilize a variável também na mensagem dada quando não há dinheiro suficiente para comprar um ingresso.</p>
 <p>Teste as alterações criando situações que caiam tanto no bloco <code>if</code> quanto no bloco <code>else</code>, para garantir que tudo está funcionando como deveria.</p>
+</div>
 </div>
 </div>
 </div>
@@ -960,7 +975,7 @@
 <p>Salve o projeto da máquina de ingressos com um novo nome (ex.: <code>maquina-ingressos-varios-precos</code>).</p>
 <p>Altere a classe <code>MaquinaIngressos</code> do novo projeto de forma que ela possa emitir ingressos de preços diferentes. Imagine que a máquina real tenha um botão que permite ao usuário escolher uma opção de ingresso com desconto, antes de solicitar a impressão do ingresso.</p>
 <p>Quais atributos e métodos precisariam ser adicionados à classe para tratar isso?</p>
-<p>Você acha que seria necessária alterar muitos dos métodos que já existiam?</p>
+<p>Você acha que seria necessárip alterar muitos dos métodos que já existiam?</p>
 </div>
 </div>
 </div>
@@ -977,10 +992,10 @@
 <div class="fragment">
 <p>Abra o projeto e leia com cuidado o código da classe <code>Estudante</code>, tentando responder às perguntas abaixo.</p>
 <ul>
-<li>Quais são as informações que precisam ser guardadas enquanto o estudante existir?</li>
-<li>Quando um objeto é criado, quais informações são recebidas de fora quais são inicializadas com um valor fixo?</li>
-<li>Quais informações podem ser consultadas de fora do objeto?</li>
-<li>E quais podem ser alteradas depois que o objeto é criado?</li>
+<li class="fragment">Quais são as informações que precisam ser guardadas enquanto o estudante existir?</li>
+<li class="fragment">Quando um objeto é criado, quais informações são recebidas de fora e quais são inicializadas com um valor fixo?</li>
+<li class="fragment">Quais informações podem ser consultadas de fora do objeto?</li>
+<li class="fragment">E quais podem ser alteradas depois que o objeto é criado?</li>
 </ul>
 </div>
 </section>
@@ -1087,6 +1102,7 @@
 </div>
 </div>
 </div>
+<div class="fragment">
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1095,6 +1111,7 @@
 </div>
 <div class="callout-content">
 <p>Crie um <code>Estudante</code> com o nome <code>"Teo"</code> e matrícula <code>"748392"</code>. O que acontece quando o método <code>obterLogin</code> é chamado para este estudante? Por que você acha que isso acontece?</p>
+</div>
 </div>
 </div>
 </div>

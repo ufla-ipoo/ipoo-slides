@@ -3623,7 +3623,7 @@
     "href": "cap2-3.html#section-2",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nCompare a implementação do método imprimirIngresso no projeto maquina-ingressos-melhor com o projeto anterior. Experimente com o BlueJ situações iguais nos dois projetos e compare o que acontece. Repare que, além de ter um comando condicional, o total e o saldo são atualizados de forma diferente.\n\n\n\n\n\n\n\n\nExercício\n\n\nSeria possível remover o bloco else do método imprimirIngresso? Qual seria o efeito para o usuário, quando ele tentasse imprimir um ingresso sem inserir quantidade suficiente de dinheiro.\n\n\n\n\n\n\n\n\nExercício\n\n\nAvalie a implementação do método retornarTroco. Experimente colocar mais dinheiro que o necessário para um ingresso, imprima um ingresso e então chame o método retornarTroco. Tente também chamar o método quando não há saldo de dinheiro disponível."
+    "text": "Exercício\n\n\nCompare a implementação do método imprimirIngresso no projeto maquina-ingressos-melhor com o projeto anterior. Experimente com o BlueJ situações iguais nos dois projetos e compare o que acontece. Repare que, além de ter um comando condicional, o total e o saldo são atualizados de forma diferente.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nSeria possível remover o bloco else do método imprimirIngresso? Qual seria o efeito para o usuário, quando ele tentasse imprimir um ingresso sem inserir quantidade suficiente de dinheiro.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAvalie a implementação do método retornarTroco. Experimente colocar mais dinheiro que o necessário para um ingresso, imprima um ingresso e então chame o método retornarTroco. Tente também chamar o método quando não há saldo de dinheiro disponível."
   },
   {
     "objectID": "cap2-3.html#section-3",
@@ -3651,7 +3651,7 @@
     "href": "cap2-3.html#section-6",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nExperimente remover uma chave do código da classe MaquinaIngressos e repare o que é alterado nas cores de fundo do editor de código. Experimente também inserir uma chave onde ela não seria esperada.\n\n\n\n\n\n\n\n\nExercício\n\n\nEscreva um trecho de código em Java que compara o valor das variáveis preco e estimativa. Se o preço for maior que a estimativa, deve ser exibida a mensagem Muito caro.. Se o preço estiver abaixo da estimativa, a mensagem exibida deve ser Bora comprar, tá barato.. Por fim, se o preço for exatamente igual à estimativa, exiba a mensagem Na mosca!.\n\n\n\n\n\n\n\n\nExercício\n\n\nLeia o anexo D.2 do livro do Barnes e Kölling para saber mais sobre os comandos condicionais da linguagem Java. Você verá mais detalhes sobre o comando if e também conhecerá o comando switch."
+    "text": "Exercício\n\n\nExperimente remover uma chave do código da classe MaquinaIngressos e repare o que é alterado nas cores de fundo do editor de código. Experimente também inserir uma chave onde ela não seria esperada.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nEscreva um trecho de código em Java que compara o valor das variáveis preco e estimativa. Se o preço for maior que a estimativa, deve ser exibida a mensagem Muito caro.. Se o preço estiver abaixo da estimativa, a mensagem exibida deve ser Bora comprar, tá barato.. Por fim, se o preço for exatamente igual à estimativa, exiba a mensagem Na mosca!.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nLeia o anexo D.2 do livro do Barnes e Kölling para saber mais sobre os comandos condicionais da linguagem Java. Você verá mais detalhes sobre o comando if e também conhecerá o comando switch."
   },
   {
     "objectID": "cap2-3.html#section-7",
@@ -3665,7 +3665,7 @@
     "href": "cap2-3.html#section-8",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Como podemos saber que a variável troco não é um atributo?\n\nPor que atributos são declarados fora dos métodos (diretamente no escopo da classe).\n\n\nE como sabemos que ela não é um parâmetro?\n\nPor que parâmetros são declarados na assinatura dos métodos e construtores.\n\n\n\nA variável troco é de um terceiro tipo: ela é uma variável local.\n\nEsse nome é porque ela é declarada dentro do corpo de um método.\nE, portanto, tem um escopo local (do método).\n\n\n\nVariáveis locais são declaradas como os atributos (mas sem os modificadores public e private).\n\nE a principal diferença é o tempo de vida.\nVariáves locais existem somente durante a execução do método.\n\nDiferente dos atributos que existem na memória enquanto o objeto existir."
+    "text": "Como podemos saber que a variável troco não é um atributo?\n\nPor que atributos são declarados fora dos métodos (diretamente no escopo da classe).\n\n\nE como sabemos que ela não é um parâmetro?\n\nPor que parâmetros são declarados na assinatura dos métodos e construtores.\n\n\n\nA variável troco é de um terceiro tipo: ela é uma variável local.\n\nTem esse nome porque ela é declarada dentro do corpo de um método.\nE, portanto, tem um escopo local (do método).\n\n\n\nVariáveis locais são declaradas como os atributos (mas sem os modificadores public e private).\n\nE a principal diferença é o tempo de vida.\nVariáves locais existem somente durante a execução do método.\n\nDiferente dos atributos que existem na memória enquanto o objeto existir."
   },
   {
     "objectID": "cap2-3.html#section-9",
@@ -3686,7 +3686,7 @@
     "href": "cap2-3.html#section-11",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nPorque a implementação alternativa do método retornarTroco abaixo não dá o mesmo resultado da original? Faça testes que mostrem como o funcionamento é diferente.\n\npublic int retornarTroco()\n{\n    saldo = 0;\n    return saldo;\n}\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAltere o método retornarTroco usando a implementação abaixo. O código compila? Se não, explique porque não compila.\n\npublic int retornarTroco()\n{    \n    return saldo;\n    saldo = 0;\n}"
+    "text": "Exercício\n\n\nPorque a implementação alternativa do método retornarTroco abaixo não dá o mesmo resultado da original? Faça testes que mostrem como o funcionamento é diferente.\n\npublic int retornarTroco()\n{\n    saldo = 0;\n    return saldo;\n}\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAltere o método retornarTroco usando a implementação abaixo. O código compila? Se não, explique porque não compila.\n\npublic int retornarTroco()\n{    \n    return saldo;\n    saldo = 0;\n}"
   },
   {
     "objectID": "cap2-3.html#section-12",
@@ -3714,7 +3714,7 @@
     "href": "cap2-3.html#section-13",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "É importante entender as semelhanças e diferenças entre atributos, parâmetros e variáveis locais.\n\nOs três servem para armazenar valores de acordo com seu tipo.\n\n\nMas possuem diferenças importantes:\n\n\n\n\n\n\n\n\n\n\nAtributos\nParâmetros\nVariáveis locais\n\n\n\n\nDeclaração\nfora dos métodos e construtores\nna assinatura de métodos/construtores\nno corpo dos métodos/construtores\n\n\nTempo de vida\ndo objeto\ndo método/construtor\ndo método/construtor\n\n\nEscopo\nacessível em qualquer lugar da classe\nacessível no método/construtor\nacessível no bloco onde é declarado\n\n\nValor padrão\nSim\nNão (valor é passado de fora do objeto)\nNão (precisa ser inicializada antes de usada)"
+    "text": "É importante entender as semelhanças e diferenças entre atributos, parâmetros e variáveis locais.\n\nOs três servem para armazenar valores de acordo com seu tipo.\n\n\nMas possuem diferenças importantes:\n\n\n\n\n\n\n\n\n\n\n\n\nAtributos\nParâmetros\nVariáveis locais\n\n\n\n\nDeclaração\nfora dos métodos e construtores\nna assinatura de métodos/construtores\nno corpo dos métodos/construtores\n\n\nTempo de vida\ndo objeto\ndo método/construtor\ndo método/construtor\n\n\nEscopo\nacessível em qualquer lugar da classe\nacessível no método/construtor\nacessível no bloco onde é declarado\n\n\nValor padrão\nSim\nNão (valor é passado de fora do objeto)\nNão (precisa ser inicializada antes de usada)"
   },
   {
     "objectID": "cap2-3.html#section-14",
@@ -3728,7 +3728,7 @@
     "href": "cap2-3.html#section-15",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nAdicione um novo método esvaziar à classe MaquinaIngressos. Você já tinha feito isso na aula passada no projeto anterior, mas, agora, além zerar o valor do atributo total, o método deve retornar o valor do total antes dele ser zerado.\n\n\n\n\n\n\n\n\nExercício\n\n\nAltere o método imprimirIngresso criando uma variável local chamada valorQueFalta. A variável deve receber a diferença entre o preço e o saldo, ou seja, o valor que falta para completar o preço de um ingresso. Altere o comando condicional para que o teste seja feito verificando o valor da variável valorQueFalta, e utilize a variável também na mensagem dada quando não há dinheiro suficiente para comprar um ingresso.\nTeste as alterações criando situações que caiam tanto no bloco if quanto no bloco else, para garantir que tudo está funcionando como deveria."
+    "text": "Exercício\n\n\nAdicione um novo método esvaziar à classe MaquinaIngressos. Você já tinha feito isso na aula passada no projeto anterior, mas, agora, além zerar o valor do atributo total, o método deve retornar o valor do total antes dele ser zerado.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAltere o método imprimirIngresso criando uma variável local chamada valorQueFalta. A variável deve receber a diferença entre o preço e o saldo, ou seja, o valor que falta para completar o preço de um ingresso. Altere o comando condicional para que o teste seja feito verificando o valor da variável valorQueFalta, e utilize a variável também na mensagem dada quando não há dinheiro suficiente para comprar um ingresso.\nTeste as alterações criando situações que caiam tanto no bloco if quanto no bloco else, para garantir que tudo está funcionando como deveria."
   },
   {
     "objectID": "cap2-3.html#section-16",
@@ -3742,7 +3742,7 @@
     "href": "cap2-3.html#section-17",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "(Opcional) Exercício - Desafio\n\n\nSalve o projeto da máquina de ingressos com um novo nome (ex.: maquina-ingressos-varios-precos).\nAltere a classe MaquinaIngressos do novo projeto de forma que ela possa emitir ingressos de preços diferentes. Imagine que a máquina real tenha um botão que permite ao usuário escolher uma opção de ingresso com desconto, antes de solicitar a impressão do ingresso.\nQuais atributos e métodos precisariam ser adicionados à classe para tratar isso?\nVocê acha que seria necessária alterar muitos dos métodos que já existiam?"
+    "text": "(Opcional) Exercício - Desafio\n\n\nSalve o projeto da máquina de ingressos com um novo nome (ex.: maquina-ingressos-varios-precos).\nAltere a classe MaquinaIngressos do novo projeto de forma que ela possa emitir ingressos de preços diferentes. Imagine que a máquina real tenha um botão que permite ao usuário escolher uma opção de ingresso com desconto, antes de solicitar a impressão do ingresso.\nQuais atributos e métodos precisariam ser adicionados à classe para tratar isso?\nVocê acha que seria necessárip alterar muitos dos métodos que já existiam?"
   },
   {
     "objectID": "cap2-3.html#section-20",
@@ -3770,7 +3770,7 @@
     "href": "cap2-3.html#section-23",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nQual seria o login retornado para uma estudante chamada “Maria Pereira”, com matrícula 332211?\n\n\n\n\n\n\n\n\nExercício\n\n\nCrie um Estudante com o nome \"Teo\" e matrícula \"748392\". O que acontece quando o método obterLogin é chamado para este estudante? Por que você acha que isso acontece?"
+    "text": "Exercício\n\n\nQual seria o login retornado para uma estudante chamada “Maria Pereira”, com matrícula 332211?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nCrie um Estudante com o nome \"Teo\" e matrícula \"748392\". O que acontece quando o método obterLogin é chamado para este estudante? Por que você acha que isso acontece?"
   },
   {
     "objectID": "cap2-3.html#section-24",

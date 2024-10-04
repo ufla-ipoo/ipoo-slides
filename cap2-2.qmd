@@ -209,7 +209,7 @@ Nosso objetivo agora é fazer com que o **inimigo fique mais rápido** à medida
 
 . . .
 
-Obs.: os exercícios seguintes são opcionais.
+Obs.: os exercícios seguintes são **opcionais**.
 
 ## {.smaller}
 
