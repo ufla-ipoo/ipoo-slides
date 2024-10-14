@@ -16,7 +16,6 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2023-04-10">
   <title>GAC125 - Introdução à Programação Orientada a Objetos – IPOO - Cap. 2 Entendendo as Definições de Classe</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -414,7 +413,7 @@
     </div>
 </div>
 
-  <p class="date">04/10/2023</p>
+  <p class="date">14/10/2024</p>
 </section>
 <section id="sobre-as-aulas-práticas" class="slide level2 smaller">
 <h2>Sobre as Aulas Práticas</h2>
@@ -456,7 +455,7 @@
 <li class="fragment">O <strong>Bloco de Códigos</strong> do BlueJ pode ser muito útil para experimentarmos expressões antes de as implementarmos em nossas classes.</li>
 </ul>
 <div class="fragment">
-<p>Tende adivinhar os resultados das expressões abaixo, antes de usar o Bloco de Códigos.</p>
+<p>Tente adivinhar os resultados das expressões abaixo, antes de usar o Bloco de Códigos.</p>
 <ul>
 <li class="fragment"><code>2023 + 4</code></li>
 <li class="fragment"><code>"passa" + "tempo"</code></li>
@@ -576,7 +575,7 @@
 <p><strong>Exercício 1.1</strong></p>
 </div>
 <div class="callout-content">
-<p>Adicione dois métodos, <code>imprimirAutor</code> e <code>imprimirTitulo</code>, à classe <code>Livro</code> que exibem os valores do atributo correspondente no terminal.</p>
+<p>Adicione à classe <code>Livro</code> dois métodos, <code>imprimirAutor</code> e <code>imprimirTitulo</code>, que exibem no terminal os valores de seus atributos correspondentes.</p>
 </div>
 </div>
 </div>
@@ -706,7 +705,112 @@
 <p><strong>Entrega no Campus Virtual</strong></p>
 </div>
 <div class="callout-content">
-<p>Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto <code>exercicio-livro</code> da forma que ficou após as suas alterações (compacte a pasta em um arquivo <code>.zip</code> para enviar);</p>
+<p>Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto <code>exercicio-livro</code> da forma que ficou após as suas alterações (compacte a pasta em um arquivo <code>.zip</code> para enviar).</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-10" class="slide level2">
+<h2></h2>
+<p>Agora, na segunda parte, vamos criar um novo projeto do zero no BlueJ.</p>
+</section>
+<section id="section-11" class="slide level2">
+<h2></h2>
+<div title="Exercício 2.1">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 2.1</strong></p>
+</div>
+<div class="callout-content">
+<p>Crie um novo projeto chamado <code>exercicio-aquecedor</code> dentro do BlueJ.</p>
+<ul>
+<li>Crie uma classe chamada <code>Aquecedor</code> que contenha um único atributo, chamado <code>temperatura</code>, cujo tipo é <code>double</code> (<em>ponto flutuante de precisão dupla</em>).</li>
+<li>Implemente um construtor que não aceite parâmetros.</li>
+<li>O campo <code>temperatura</code> deve ser definido como o valor <code>20.0</code> no construtor.</li>
+<li>Implemente os métodos modificadores <code>esquentar</code> e <code>esfriar</code>, cujo efeito é aumentar ou diminuir o valor da temperatura em <code>3.0</code> graus, respectivamente.</li>
+<li>Defina um método de acesso para retornar o valor da temperatura.</li>
+</ul>
+<p>Teste a classe criando alguns objetos e chamando seus métodos.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-12" class="slide level2">
+<h2></h2>
+<div title="Exercício 2.2">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 2.2</strong></p>
+</div>
+<div class="callout-content">
+<p>Modifique sua classe <code>Aquecedor</code> para definir três novos atributos de ponto flutuante de precisão dupla: <code>min</code>, <code>max</code> e <code>incremento</code>.</p>
+<ul>
+<li>Os valores de <code>min</code> e <code>max</code> devem ser definidos por parâmetros passados ​​ao construtor.</li>
+<li>Já o valor de <code>incremento</code> deve ser definido como <code>3.0</code> no construtor.</li>
+<li>Modifique a implementação dos métodos <code>esquentar</code> e <code>esfriar</code> para que usem o valor de <code>incremento</code> em vez de um valor explícito de <code>3.0</code>.</li>
+</ul>
+<p>Antes de prosseguir para o próximo exercício, verifique se tudo funciona como antes.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-13" class="slide level2">
+<h2></h2>
+<div title="Exercício 2.3">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 2.3</strong></p>
+</div>
+<div class="callout-content">
+<p>Agora modifique o método <code>esquentar</code> para que ele não permita que a temperatura seja definida para um valor maior que <code>max</code>.</p>
+<ul>
+<li>Da mesma forma, modifique <code>esfriar</code> para que ele não permita que a temperatura seja definida para um valor menor que <code>min</code>.</li>
+</ul>
+<p>Verifique se a classe funciona corretamente.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-14" class="slide level2">
+<h2></h2>
+<div title="Exercício 2.4">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 2.4</strong></p>
+</div>
+<div class="callout-content">
+<p>Agora adicione um método chamado <code>mudarIncremento</code>, que espera um único parâmetro do tipo apropriado e o usa para definir o valor de <code>incremento</code>.</p>
+<p>Mais uma vez, teste se a classe funciona como você esperaria criando alguns objetos <code>Aquecedor</code> dentro do BlueJ e chamando seus métodos.</p>
+<p>As coisas ainda funcionam como esperado se um valor negativo for passado para o método <code>mudarIncremento</code>?</p>
+<ul>
+<li>Adicione uma verificação a este método para evitar que um valor negativo seja atribuído ao <code>incremento</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-15" class="slide level2">
+<h2></h2>
+<div title="Entrega no Campus Virtual">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Entrega no Campus Virtual</strong></p>
+</div>
+<div class="callout-content">
+<p>Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do seu projeto <code>exercicio-aquecedor</code> (compacte a pasta em um arquivo <code>.zip</code> para enviar).</p>
 </div>
 </div>
 </div>

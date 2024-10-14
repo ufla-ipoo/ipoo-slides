@@ -40,7 +40,7 @@ Lembre-se que para ter presença na aula prática é necessário.
 
 . . .
 
-Tende adivinhar os resultados das expressões abaixo, antes de usar o Bloco de Códigos.
+Tente adivinhar os resultados das expressões abaixo, antes de usar o Bloco de Códigos.
 
 - `2023 + 4`
 - `"passa" + "tempo"`
@@ -145,7 +145,7 @@ Baixe o **projeto [exercicio-livro](https://github.com/ufla-ipoo/exercicio-livro
 ##
 
 ::: {.callout-note title="Exercício 1.1" icon=false}
-Adicione dois métodos, `imprimirAutor` e `imprimirTitulo`, à classe `Livro` que exibem os valores do atributo correspondente no terminal.
+Adicione à classe `Livro` dois métodos, `imprimirAutor` e `imprimirTitulo`, que exibem no terminal os valores de seus atributos correspondentes.
 :::
 
 . . .
@@ -220,5 +220,63 @@ Por fim, vamos alterar a classe `Livro` para que seja possível contabilizar qua
 ## 
 
 ::: {.callout-important title="Entrega no Campus Virtual"}
-Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `exercicio-livro` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
+Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `exercicio-livro` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar).
+:::
+
+##
+
+Agora, na segunda parte, vamos criar um novo projeto do zero no BlueJ.
+
+##
+
+::: {.callout-note title="Exercício 2.1" icon=false .nonincremental}
+Crie um novo projeto chamado `exercicio-aquecedor` dentro do BlueJ.
+
+- Crie uma classe chamada `Aquecedor` que contenha um único atributo, chamado `temperatura`, cujo tipo é `double` (_ponto flutuante de precisão dupla_).
+- Implemente um construtor que não aceite parâmetros.
+- O campo `temperatura` deve ser definido como o valor `20.0` no construtor.
+- Implemente os métodos modificadores `esquentar` e `esfriar`, cujo efeito é aumentar ou diminuir o valor da temperatura em `3.0` graus, respectivamente.
+- Defina um método de acesso para retornar o valor da temperatura.
+
+Teste a classe criando alguns objetos e chamando seus métodos.
+:::
+
+##
+
+::: {.callout-note title="Exercício 2.2" icon=false .nonincremental}
+Modifique sua classe `Aquecedor` para definir três novos atributos de ponto flutuante de precisão dupla: `min`, `max` e `incremento`. 
+
+- Os valores de `min` e `max` devem ser definidos por parâmetros passados ​​ao construtor.
+- Já o valor de `incremento` deve ser definido como `3.0` no construtor.
+- Modifique a implementação dos métodos `esquentar` e `esfriar` para que usem o valor de `incremento` em vez de um valor explícito de `3.0`. 
+
+Antes de prosseguir para o próximo exercício, verifique se tudo funciona como antes.
+:::
+
+##
+
+::: {.callout-note title="Exercício 2.3" icon=false .nonincremental}
+Agora modifique o método `esquentar` para que ele não permita que a temperatura seja definida para um valor maior que `max`. 
+
+- Da mesma forma, modifique `esfriar` para que ele não permita que a temperatura seja definida para um valor menor que `min`. 
+
+Verifique se a classe funciona corretamente. 
+:::
+
+##
+
+::: {.callout-note title="Exercício 2.4" icon=false .nonincremental}
+Agora adicione um método chamado `mudarIncremento`, que espera um único parâmetro do tipo apropriado e o usa para definir o valor de `incremento`. 
+
+Mais uma vez, teste se a classe funciona como você esperaria criando alguns objetos `Aquecedor` dentro do BlueJ e chamando seus métodos. 
+
+As coisas ainda funcionam como esperado se um valor negativo for passado para o método `mudarIncremento`?
+
+- Adicione uma verificação a este método para evitar que um valor negativo seja atribuído ao `incremento`.
+:::
+
+## 
+
+::: {.callout-important title="Entrega no Campus Virtual"}
+Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do seu projeto `exercicio-aquecedor` (compacte a pasta em um arquivo `.zip` para enviar).
 :::

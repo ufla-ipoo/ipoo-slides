@@ -415,7 +415,7 @@ Imagine que a máquina real tenha um botão que permite ao usuário escolher uma
 
 Quais atributos e métodos precisariam ser adicionados à classe para tratar isso?
 
-Você acha que seria necessárip alterar muitos dos métodos que já existiam?
+Você acha que seria necessário alterar muitos dos métodos que já existiam?
 :::
 
 # Reforçando conceitos {background-color="#40666e"}
