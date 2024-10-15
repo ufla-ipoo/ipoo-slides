@@ -1353,7 +1353,7 @@ Repare que isso pode ser mais difícil do que parece, depois da meia-noite e do 
 Portanto, os minutos devem ir de 1 a 59, mas as horas devem ir de 1 a 12.
 :::
 
-::: {.callout-note title="Exercício de Implementação 2" icon=false}
+::: {.callout-note title="(Opcional) Exercício de Implementação 2" icon=false}
 Há pelo menos duas formas de fazer o exercício anterior.
 Você poderia armazenar as horas com valores entre 1 e 12.
 Ou poderia deixar o relógio funcionando internamente com um relógio de 24 horas e tratar apenas a `stringVisor` para mostrar
@@ -1395,6 +1395,6 @@ Como você já sabe das aulas anteriores, para que você tenha a [presença]{.al
 ::: {.callout-important title="Entregas no Campus Virtual"}
 Para ter presença nessa aula você deve:
 
-- Responder, no Campus Virtual, aos quizes presentes nesses slides e enviar os projetos dos exercícios de implementação 1 e 2.
+- Responder, no Campus Virtual, aos quizes presentes nesses slides e enviar o projeto dos exercício de implementação 1.
 :::
 :::

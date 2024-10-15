@@ -2776,7 +2776,7 @@
     "href": "cap3-1.html#section-71",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Exercício de Implementação 1\n\n\nMude o relógio para que ele funcione como relógios americanos, mostrando 12 horas em vez de 24.\nRepare que isso pode ser mais difícil do que parece, depois da meia-noite e do meio-dia, o relógio deve mostrar 12:30 e não 00:30. Portanto, os minutos devem ir de 1 a 59, mas as horas devem ir de 1 a 12.\n\n\n\n\n\n\n\n\nExercício de Implementação 2\n\n\nHá pelo menos duas formas de fazer o exercício anterior. Você poderia armazenar as horas com valores entre 1 e 12. Ou poderia deixar o relógio funcionando internamente com um relógio de 24 horas e tratar apenas a stringVisor para mostrar horas no formato esperado de 12 horas.\nImplemente as duas opções (você deve ter dois projetos separados no BlueJ, um com cada implementação).\nQual opção é mais fácil? Qual é melhor? Por que?"
+    "text": "Exercício de Implementação 1\n\n\nMude o relógio para que ele funcione como relógios americanos, mostrando 12 horas em vez de 24.\nRepare que isso pode ser mais difícil do que parece, depois da meia-noite e do meio-dia, o relógio deve mostrar 12:30 e não 00:30. Portanto, os minutos devem ir de 1 a 59, mas as horas devem ir de 1 a 12.\n\n\n\n\n\n\n\n\n(Opcional) Exercício de Implementação 2\n\n\nHá pelo menos duas formas de fazer o exercício anterior. Você poderia armazenar as horas com valores entre 1 e 12. Ou poderia deixar o relógio funcionando internamente com um relógio de 24 horas e tratar apenas a stringVisor para mostrar horas no formato esperado de 12 horas.\nImplemente as duas opções (você deve ter dois projetos separados no BlueJ, um com cada implementação).\nQual opção é mais fácil? Qual é melhor? Por que?"
   },
   {
     "objectID": "cap3-1.html#section-72",
@@ -2790,7 +2790,7 @@
     "href": "cap3-1.html#section-73",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Como você já sabe das aulas anteriores, para que você tenha a presença\n\nconsiderada nas aula em formato ANP (Atividade Não-Presencial),\nvocê precisa demonstrar que realmente estudou o conteúdo.\n\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nPara ter presença nessa aula você deve:\n\nResponder, no Campus Virtual, aos quizes presentes nesses slides e enviar os projetos dos exercícios de implementação 1 e 2."
+    "text": "Como você já sabe das aulas anteriores, para que você tenha a presença\n\nconsiderada nas aula em formato ANP (Atividade Não-Presencial),\nvocê precisa demonstrar que realmente estudou o conteúdo.\n\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nPara ter presença nessa aula você deve:\n\nResponder, no Campus Virtual, aos quizes presentes nesses slides e enviar o projeto dos exercício de implementação 1."
   },
   {
     "objectID": "cap4-1.html#section",
