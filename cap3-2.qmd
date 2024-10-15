@@ -68,7 +68,7 @@ IDEs mais avançadas têm depuradores complexos, com inúmeras funcionalidades.
 
 - Já o BlueJ tem um depurador que faz o básico: 
   - Parar o programa, executar uma linha de cada vez e ver os valores das variáveis.
-  - Mesmos sendo "só isso", é uma mão na roda na hora de programar.
+  - Mesmo sendo "só isso", é uma mão na roda na hora de programar.
 
 . . .
 
@@ -495,13 +495,6 @@ Use o depurador para investigar o método `inserirDinheiro`do projeto `maquina-i
 Chame métodos de forma que consiga depurar a execução tanto do bloco `if` quanto do bloco `else`.
 ::::
 
-# Sobre a prova {background-color="#40666e"}
-
-##
-
-- Dúvidas?
-- Programação das aulas.
-
 # Exercícios de fixação {background-color="#40666e"}
 
 ## 
@@ -531,6 +524,13 @@ Para isso, siga cuidadosamente as instruções abaixo:
 
 Teste suas alterações!
 ::::
+
+## {.smaller}
+
+No próximo exercício você precisará utilizar uma **estrutura de repetição**.
+
+- É interessante então que saiba que, em Java, a sintaxe das estruturas de repetição [for]{.alert}, [while]{.alert} e [do while]{.alert}
+  é a mesma de C++.
 
 ##
 
@@ -597,7 +597,7 @@ Não se esqueça de testar suas alterações!
 ##
 
 ::: {.callout-important title="Entrega no Campus Virtual"}
-Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `sistema-de-emails` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
+Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `sistema-de-emails` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar).
 :::
 
 ## 
@@ -623,13 +623,13 @@ Por exemplo, seria possível que o objeto `minutos` informasse ao objeto `horas`
 - O método `tiqueTaque` deveria interagir com quais objetos?
 - O que o objeto `horas` deveria fazer quando um dia inteiro tivesse passado?
 
-Explique os problemas envolvido neste design alternativo e, se você realmente sentir vontade de desafiar, tente implementá-lo!
+Explique os problemas envolvidos neste design alternativo e, se você realmente sentir vontade de se desafiar, tente implementá-lo!
 :::
 ::::
 
 ## 
 
 ::: {.callout-important title="Entrega no Campus Virtual"}
-Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `visor-relogio` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
+Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `visor-relogio` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar).
 :::
 

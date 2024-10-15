@@ -697,7 +697,7 @@
     "href": "cap3-2.html#section-2",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Um depurador é um programa que permite que programadores possam executar seus programas um passo de cada vez.\n\nGeralmente ele tem uma função de parar e continuar a execução de um programa em um ponto específico do código.\n\nE permite examinar os valores das variáveis.\n\n\n\nIDEs mais avançadas têm depuradores complexos, com inúmeras funcionalidades.\n\nJá o BlueJ tem um depurador que faz o básico:\n\nParar o programa, executar uma linha de cada vez e ver os valores das variáveis.\nMesmos sendo “só isso”, é uma mão na roda na hora de programar.\n\n\n\n\n\n\n\n\nAcredite: a qualidade de vida de um programador muda de patamar quando ele passa a usar um depurador!"
+    "text": "Um depurador é um programa que permite que programadores possam executar seus programas um passo de cada vez.\n\nGeralmente ele tem uma função de parar e continuar a execução de um programa em um ponto específico do código.\n\nE permite examinar os valores das variáveis.\n\n\n\nIDEs mais avançadas têm depuradores complexos, com inúmeras funcionalidades.\n\nJá o BlueJ tem um depurador que faz o básico:\n\nParar o programa, executar uma linha de cada vez e ver os valores das variáveis.\nMesmo sendo “só isso”, é uma mão na roda na hora de programar.\n\n\n\n\n\n\n\n\nAcredite: a qualidade de vida de um programador muda de patamar quando ele passa a usar um depurador!"
   },
   {
     "objectID": "cap3-2.html#o-exemplo-do-sistema-de-e-mail",
@@ -893,21 +893,21 @@
     "href": "cap3-2.html#section-26",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Dúvidas?\nProgramação das aulas."
+    "text": "Exercício 1.1\n\n\nAdicione um assunto (string) nas mensagens de e-mail do projeto sistema-de-email.\nNão se esqueça de garantir que o assunto do e-mail seja exibido ao imprimir um e-mail. Modifique a classe ClienteDeEmail conforme necessário.\nTeste suas alterações!"
   },
   {
     "objectID": "cap3-2.html#section-27",
     "href": "cap3-2.html#section-27",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Exercício 1.1\n\n\nAdicione um assunto (string) nas mensagens de e-mail do projeto sistema-de-email.\nNão se esqueça de garantir que o assunto do e-mail seja exibido ao imprimir um e-mail. Modifique a classe ClienteDeEmail conforme necessário.\nTeste suas alterações!"
+    "text": "Exercício 1.2\n\n\nVamos agora simular o envio de arquivos anexados a um e-mail, aproveitando para reforçar o conceito de sobrecarga de métodos e construtores.\nPara isso, siga cuidadosamente as instruções abaixo:\n\nAdicione um atributo anexo, do tipo String, para as mensagens de e-mail.\n\nVamos simular que existe um arquivo anexo guardando apenas o nome do arquivo nesse atributo.\n\nCrie um construtor sobrecarregado na classe Email que receba o anexo (além, é claro, de todas as informações do construtor original).\nNo construtor original, inicialize o anexo com string vazia.\nCrie um método de acesso para o atributo anexo.\nAltere o método imprimir para que o anexo seja exibido.\nNa classe ClienteDeEmail, crie uma versão sobrecarregada do método enviarEmail que receba o anexo.\n\nTeste suas alterações!"
   },
   {
     "objectID": "cap3-2.html#section-28",
     "href": "cap3-2.html#section-28",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Exercício 1.2\n\n\nVamos agora simular o envio de arquivos anexados a um e-mail, aproveitando para reforçar o conceito de sobrecarga de métodos e construtores.\nPara isso, siga cuidadosamente as instruções abaixo:\n\nAdicione um atributo anexo, do tipo String, para as mensagens de e-mail.\n\nVamos simular que existe um arquivo anexo guardando apenas o nome do arquivo nesse atributo.\n\nCrie um construtor sobrecarregado na classe Email que receba o anexo (além, é claro, de todas as informações do construtor original).\nNo construtor original, inicialize o anexo com string vazia.\nCrie um método de acesso para o atributo anexo.\nAltere o método imprimir para que o anexo seja exibido.\nNa classe ClienteDeEmail, crie uma versão sobrecarregada do método enviarEmail que receba o anexo.\n\nTeste suas alterações!"
+    "text": "No próximo exercício você precisará utilizar uma estrutura de repetição.\n\nÉ interessante então que saiba que, em Java, a sintaxe das estruturas de repetição for, while e do while é a mesma de C++."
   },
   {
     "objectID": "cap3-2.html#section-29",
@@ -935,7 +935,7 @@
     "href": "cap3-2.html#section-32",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto sistema-de-emails da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar);"
+    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto sistema-de-emails da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar)."
   },
   {
     "objectID": "cap3-2.html#section-33",
@@ -949,14 +949,14 @@
     "href": "cap3-2.html#section-34",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "(Opcional) Exercício 2.2 Desafio\n\n\n\nNo design atual do projeto visor-relogio, um objeto VisorDeRelogio é responsável por detectar quando um objeto VisorDeNumero voltou para zero e, em seguida, informar outro objeto VisorDeNumero para incrementar. Em outras palavras, não há ligação direta entre objetos VisorDeNumero.\nSeria possível que um objeto VisorDeNumero informasse outro que ele voltou para zero e que este, por sua vez, deveria ser incrementado?\nPor exemplo, seria possível que o objeto minutos informasse ao objeto horas que outra hora se passou ou fazer com que o objeto segundos informasse ao objeto minutos que outros sessenta segundos se passaram?\n\nO método tiqueTaque deveria interagir com quais objetos?\nO que o objeto horas deveria fazer quando um dia inteiro tivesse passado?\n\nExplique os problemas envolvido neste design alternativo e, se você realmente sentir vontade de desafiar, tente implementá-lo!"
+    "text": "(Opcional) Exercício 2.2 Desafio\n\n\n\nNo design atual do projeto visor-relogio, um objeto VisorDeRelogio é responsável por detectar quando um objeto VisorDeNumero voltou para zero e, em seguida, informar outro objeto VisorDeNumero para incrementar. Em outras palavras, não há ligação direta entre objetos VisorDeNumero.\nSeria possível que um objeto VisorDeNumero informasse outro que ele voltou para zero e que este, por sua vez, deveria ser incrementado?\nPor exemplo, seria possível que o objeto minutos informasse ao objeto horas que outra hora se passou ou fazer com que o objeto segundos informasse ao objeto minutos que outros sessenta segundos se passaram?\n\nO método tiqueTaque deveria interagir com quais objetos?\nO que o objeto horas deveria fazer quando um dia inteiro tivesse passado?\n\nExplique os problemas envolvidos neste design alternativo e, se você realmente sentir vontade de se desafiar, tente implementá-lo!"
   },
   {
     "objectID": "cap3-2.html#section-35",
     "href": "cap3-2.html#section-35",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto visor-relogio da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar);"
+    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto visor-relogio da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar)."
   },
   {
     "objectID": "cap2-4.html#sobre-as-aulas-práticas",
@@ -2461,14 +2461,21 @@
     "href": "cap3-1.html#section-28",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Vamos avaliar o diagrama de objetos novamente, pois ele traz um detalhe importante.\n\nRepare que quando uma variável que guarda um objeto, ela não o guarda diretamente.\nNa verdade a variável guarda uma referência (um ponteiro) para o objeto .\n\n\nNo diagrama a variável é representada pela caixa branca.\n\nE a referência do objeto pela seta.\nPortanto, repare que o objeto VisorDeNumero é armazenado fora do objeto VisorDeRelogio.\n\nE a referência (o ponteiro) é que liga os dois."
+    "text": "Vamos avaliar o diagrama de objetos novamente, pois ele traz um detalhe importante.\n\nRepare que quando uma variável guarda um objeto, ela não o guarda diretamente.\nNa verdade a variável guarda uma referência (um ponteiro) para o objeto .\n\n\nNo diagrama a variável é representada pela caixa branca.\n\nE a referência do objeto pela seta.\nPortanto, repare que o objeto VisorDeNumero é armazenado fora do objeto VisorDeRelogio.\n\nE a referência (o ponteiro) é que liga os dois."
   },
   {
     "objectID": "cap3-1.html#section-29",
     "href": "cap3-1.html#section-29",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Exercício\n\n\nPense no projeto de exemplo disciplina que vimos antes. Suponha que criamos um objeto Disciplina e três objetos Estudante, e matriculamos os estudantes na disciplina. Tente desenhar um diagrama de classes e um diagrama de objetos para essa situação. Explique a diferença entre os diagramas.\n\n\n\n\n\n\n\n\nExercício\n\n\nQuando um diagrama de classes é alterado? E como ele é alterado?\n\n\n\n\n\n\n\n\nExercício\n\n\nQuando um diagrama de objetos é alterado? E como ele é alterado?\n\n\n\n\n\n\n\n\nExercício\n\n\nEscreva a declaração de um atributo orientador que guarde uma referência para um objeto Professor."
+    "text": "Exercício\n\n\nPense no projeto de exemplo disciplina que vimos antes. Suponha que criamos um objeto Disciplina e três objetos Estudante, e matriculamos os estudantes na disciplina. Tente desenhar um diagrama de classes e um diagrama de objetos para essa situação. Explique a diferença entre os diagramas."
+  },
+  {
+    "objectID": "cap3-1.html#section-30",
+    "href": "cap3-1.html#section-30",
+    "title": "IPOO - Cap. 3 Interação entre Objetos",
+    "section": "",
+    "text": "Exercício\n\n\nQuando um diagrama de classes é alterado? E como ele é alterado?\n\n\n\n\n\n\n\n\nExercício\n\n\nQuando um diagrama de objetos é alterado? E como ele é alterado?\n\n\n\n\n\n\n\n\nExercício\n\n\nEscreva a declaração de um atributo orientador que guarde uma referência para um objeto Professor."
   },
   {
     "objectID": "cap3-1.html#quiz-3.2",
@@ -2478,148 +2485,148 @@
     "text": "Quiz 3.2\n\nMarque a alternativa incorreta:\n\nClasses definem tipos.\nDiagramas de classes dão uma visão estática do programa.\nDiagramas de objetos dão uma visão dinâmica do programa.\nVisão estática se referente ao tempo de execução do programa."
   },
   {
-    "objectID": "cap3-1.html#section-30",
-    "href": "cap3-1.html#section-30",
-    "title": "IPOO - Cap. 3 Interação entre Objetos",
-    "section": "",
-    "text": "Java tem dois tipos diferentes de tipos :)\n\n\n\nTipos primitivos\n \n\n\n\nTipos objeto (ou tipos por referência)\n\n\n\n\nTipos primitivos são predefinidos na linguagem Java\n\nEx.: int, boolean, double.\n\n\n\nJá os tipos objeto são definidos por classes.\n\nAlgumas classes fazem parte do Java padrão (como a String).\nE podemos criar nossas próprias classes."
-  },
-  {
     "objectID": "cap3-1.html#section-31",
     "href": "cap3-1.html#section-31",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Tipos objeto e tipos primitivos têm semelhanças:\n\nAmbos podem ser usados como tipos.\n\n\nMas se comportam de forma diferente:\n\nTipos primitivos são guardados diretamente nas variáveis.\n\nNo diagrama de objetos mostramos os valores diretamente nas caixas das variáveis.\n\nJá tipos objeto guardam apenas uma referência (ponteiro) para o objeto.\n\nNo diagrama representamos com uma seta.\n\n\n\n\n\n\n\n\nConceito\n\n\nOs tipos primitivos em Java não definem objetos. Tipos como int, boolean e double são os tipos primitivos mais comuns. Tipos primitos não possuem métodos."
+    "text": "Java tem dois tipos diferentes de tipos :)\n\n\n\nTipos primitivos\n \n\n\n\nTipos objeto (ou tipos por referência)\n\n\n\n\nTipos primitivos são predefinidos na linguagem Java\n\nEx.: int, boolean, double.\n\n\n\nJá os tipos objeto são definidos por classes.\n\nAlgumas classes fazem parte do Java padrão (como a String).\nE podemos criar nossas próprias classes."
   },
   {
     "objectID": "cap3-1.html#section-32",
     "href": "cap3-1.html#section-32",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Antes de vermos o exemplo do relógio, é importante entendermos a classe VisorDeNumero.\n\nE assim sabermos como ela pode ser usada para construir o relógio.\n\n\nVamos avaliar o código da classe, baixando o projeto visor-numero."
+    "text": "Tipos objeto e tipos primitivos têm semelhanças:\n\nAmbos podem ser usados como tipos.\n\n\nMas se comportam de forma diferente:\n\nTipos primitivos são guardados diretamente nas variáveis.\n\nNo diagrama de objetos mostramos os valores diretamente nas caixas das variáveis.\n\nJá tipos objeto guardam apenas uma referência (ponteiro) para o objeto.\n\nNo diagrama representamos com uma seta.\n\n\n\n\n\n\n\n\nConceito\n\n\nOs tipos primitivos em Java não definem objetos. Tipos como int, boolean e double são os tipos primitivos mais comuns. Tipos primitos não possuem métodos."
   },
   {
     "objectID": "cap3-1.html#section-33",
     "href": "cap3-1.html#section-33",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Exercício\n\n\nNo BlueJ acesse a opção: Exibir → Exibir terminal, e no terminal acesse Opcoes → Anotar chamadas de métodos.\nCrie um objeto VisorDeNumero com limite 24 e dê o nome horas para a variável.\n\nAbra o inspetor e, com ele aberto, chame o método incrementar do objeto criado.\nRepare, no terminal, como é a chamada do método.\nChame repetidamente o método incrementar até que ele volte para zero. Obs.: use um limite menor se estiver impaciente :)"
+    "text": "Antes de vermos o exemplo do relógio, é importante entendermos a classe VisorDeNumero.\n\nE assim sabermos como ela pode ser usada para construir o relógio.\n\n\nVamos avaliar o código da classe, baixando o projeto visor-numero."
   },
   {
     "objectID": "cap3-1.html#section-34",
     "href": "cap3-1.html#section-34",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Exercício\n\n\nCrie outro objeto VisorDeNumero, com limite 60 , e dê o nome minutos.\n\nChame o método incrementar do objeto e repare como é a chamada no terminal.\nRepare que você está fazendo o papel do relógio já que tem um visor de horas e um de minutos.\nO que você deveria fazer a cada chamada do método incrementar para o objeto minutos para saber se é hora de incrementar o objeto de horas?\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nUsando o bloco de códigos do BlueJ, crie um objeto VisorDeNumero, chamado vn, com limite 6, e experimente todos os seus métodos."
+    "text": "Exercício\n\n\nNo BlueJ acesse a opção: Exibir → Exibir terminal, e no terminal acesse Opcoes → Anotar chamadas de métodos.\nCrie um objeto VisorDeNumero com limite 24 e dê o nome horas para a variável.\n\nAbra o inspetor e, com ele aberto, chame o método incrementar do objeto criado.\nRepare, no terminal, como é a chamada do método.\nChame repetidamente o método incrementar até que ele volte para zero. Obs.: use um limite menor se estiver impaciente :)"
   },
   {
     "objectID": "cap3-1.html#section-35",
     "href": "cap3-1.html#section-35",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Exercício\n\n\nExperimente digitar o código abaixo no Bloco de Códigos:\n\nVisorDeNumero.obterValor();\n\nO que a mensagem de erro indica?\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente agora a linha abaixo:\n\nvn.definirValor(int 5);\n\nA mensagem de erro, nesse caso, te ajuda a identificar o problema?\nTente corrigir o código e memorizar essa situação que é muito comum para quem está começando."
+    "text": "Exercício\n\n\nCrie outro objeto VisorDeNumero, com limite 60 , e dê o nome minutos.\n\nChame o método incrementar do objeto e repare como é a chamada no terminal.\nRepare que você está fazendo o papel do relógio já que tem um visor de horas e um de minutos.\nO que você deveria fazer a cada chamada do método incrementar para o objeto minutos para saber se é hora de incrementar o objeto de horas?\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nUsando o bloco de códigos do BlueJ, crie um objeto VisorDeNumero, chamado vn, com limite 6, e experimente todos os seus métodos."
   },
   {
     "objectID": "cap3-1.html#section-36",
     "href": "cap3-1.html#section-36",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Repare que o método definirValor utiliza uma expressão booleana\n\npublic void definirValor(int novoValor)\n{\n    if((novoValor &gt;= 0) && (novoValor &lt; limite)) {\n        valor = novoValor;\n    }\n}\n\n\nEm Java, os operadores lógicos são:\n\n&&\n\ne lógico (and em C++).\n\n||\n\nou lógico (or em C++).\n\n!\n\nnegação (not em C++)."
+    "text": "Exercício\n\n\nExperimente digitar o código abaixo no Bloco de Códigos:\n\nVisorDeNumero.obterValor();\n\nO que a mensagem de erro indica?\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente agora a linha abaixo:\n\nvn.definirValor(int 5);\n\nA mensagem de erro, nesse caso, te ajuda a identificar o problema?\nTente corrigir o código e memorizar essa situação que é muito comum para quem está começando."
   },
   {
     "objectID": "cap3-1.html#section-37",
     "href": "cap3-1.html#section-37",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Exercício\n\n\nO que acontece quando o método definirValor é chamado com um valor inválido (experimente!).\nVocê acha que da forma que foi feito é uma boa solução? Consegue pensar em uma solução melhor?\n\n\n\n\n\n\n\n\nExercício\n\n\nO que aconteceria se, no método definirValor, o operador &gt;= fosse trocado por &gt;?\n\n\n\n\n\n\n\n\nExercício\n\n\nO que aconteceria se, no método definirValor, o operador && fosse trocado por ||?"
+    "text": "Repare que o método definirValor utiliza uma expressão booleana\n\npublic void definirValor(int novoValor)\n{\n    if((novoValor &gt;= 0) && (novoValor &lt; limite)) {\n        valor = novoValor;\n    }\n}\n\n\nEm Java, os operadores lógicos são:\n\n&&\n\ne lógico (and em C++).\n\n||\n\nou lógico (or em C++).\n\n!\n\nnegação (not em C++)."
   },
   {
     "objectID": "cap3-1.html#section-38",
     "href": "cap3-1.html#section-38",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Exercício\n\n\nEstude a implementação dos métodos obterValorVisor e incrementar. Caso tenha dúvidas, estude as páginas 56 a 59 do livro do Barnes e Kölling (4ª ed.).\n\n\n\n\n\n\n\n\nExercício\n\n\nO método obterValorVisor sempre funciona corretamente? Quais premissas ele assume? O que acontece, por exemplo, se você criar um objeto com limite 800?"
+    "text": "Exercício\n\n\nO que acontece quando o método definirValor é chamado com um valor inválido (experimente!).\nVocê acha que da forma que foi feito é uma boa solução? Consegue pensar em uma solução melhor?\n\n\n\n\n\n\n\n\nExercício\n\n\nO que aconteceria se, no método definirValor, o operador &gt;= fosse trocado por &gt;?\n\n\n\n\n\n\n\n\nExercício\n\n\nO que aconteceria se, no método definirValor, o operador && fosse trocado por ||?"
   },
   {
     "objectID": "cap3-1.html#section-39",
     "href": "cap3-1.html#section-39",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Agora que já entendemos como criar uma clase que define um visor de números de dois dígitos, vamos estudar o projeto visor-relogio.\n\nEle possui a classe VisorDeRelogio que cria dois objetos visores de números para construir o visor completo do relógio."
+    "text": "Exercício\n\n\nEstude a implementação dos métodos obterValorVisor e incrementar. Caso tenha dúvidas, estude as páginas 56 a 59 do livro do Barnes e Kölling (4ª ed.).\n\n\n\n\n\n\n\n\nExercício\n\n\nO método obterValorVisor sempre funciona corretamente? Quais premissas ele assume? O que acontece, por exemplo, se você criar um objeto com limite 800?"
   },
   {
     "objectID": "cap3-1.html#section-40",
     "href": "cap3-1.html#section-40",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Exercício\n\n\nCrie um objeto VisorDeRelogio, selecionando este construtor:\n\n  new VisorDeRelogio()\n\nChame o método obterHora para descobrir a hora inicial que o relógio foi criado. Você consegue imaginar porque ele começa nesse horário específico?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAbra o inspetor para esse objeto. Com o inspetor aberto, chame os métodos do objeto, observando o atributo stringVisor no inspetor. No BlueJ, abra o arquivo README.md para entender melhor o funcionamento do projeto.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nQuantas vezes você precisa chamar o método tiqueTaque no objeto VisorDeRelogio para fazer sua hora chegar a 01:00. De que outra forma você poderia fazer o relógio mostrar esse mesmo horário?"
+    "text": "Agora que já entendemos como criar uma clase que define um visor de números de dois dígitos, vamos estudar o projeto visor-relogio.\n\nEle possui a classe VisorDeRelogio que cria dois objetos visores de números para construir o visor completo do relógio."
   },
   {
     "objectID": "cap3-1.html#section-41",
     "href": "cap3-1.html#section-41",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Vamos agora estudar a classe VisorDeRelogio.\n\nAbra a classe e avalie todo o código.\n\n\nVeja que o atributo stringVisor simula um visor físico real do relógio.\n\nSe esse software rodasse em um relógio de verdade, nós mostraríamos a informação no visor físico.\nAqui, o atributo stringVisor serve para simular o visor real do relógio.\n\n\n\nA classe VisorDeRelogio tem mais dois atributos: horas e minutos.\n\nEles guardam referências para objetos do tipo VisorDeNumero.\nO valor lógico do horário do relógio é guardado nesses dois atributos."
+    "text": "Exercício\n\n\nCrie um objeto VisorDeRelogio, selecionando este construtor:\n\n  new VisorDeRelogio()\n\nChame o método obterHora para descobrir a hora inicial que o relógio foi criado. Você consegue imaginar porque ele começa nesse horário específico?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAbra o inspetor para esse objeto. Com o inspetor aberto, chame os métodos do objeto, observando o atributo stringVisor no inspetor. No BlueJ, abra o arquivo README.md para entender melhor o funcionamento do projeto.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nQuantas vezes você precisa chamar o método tiqueTaque no objeto VisorDeRelogio para fazer sua hora chegar a 01:00. De que outra forma você poderia fazer o relógio mostrar esse mesmo horário?"
   },
   {
     "objectID": "cap3-1.html#section-42",
     "href": "cap3-1.html#section-42",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "O digrama de objetos abaixo mostra de forma mais completa um objeto VisorDeRelogio.\n\nVeja que todos os atributos são referências para outros objetos.\nInclusive stringVisor, já que uma string é um objeto em Java.\n\nObs.: por simplicidade, o diagrama não mostra a representação interna do objeto String."
+    "text": "Vamos agora estudar a classe VisorDeRelogio.\n\nAbra a classe e avalie todo o código.\n\n\nVeja que o atributo stringVisor simula um visor físico real do relógio.\n\nSe esse software rodasse em um relógio de verdade, nós mostraríamos a informação no visor físico.\nAqui, o atributo stringVisor serve para simular o visor real do relógio.\n\n\n\nA classe VisorDeRelogio tem mais dois atributos: horas e minutos.\n\nEles guardam referências para objetos do tipo VisorDeNumero.\nO valor lógico do horário do relógio é guardado nesses dois atributos."
   },
   {
     "objectID": "cap3-1.html#section-43",
     "href": "cap3-1.html#section-43",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Só para os curiosos\n\n\nVocê pode também abrir o projeto visor-relogio-com-interface-grafica. Veja que ele possui uma classe a mais que você pode experimentar e ver o que faz."
+    "text": "O digrama de objetos abaixo mostra de forma mais completa um objeto VisorDeRelogio.\n\nVeja que todos os atributos são referências para outros objetos.\nInclusive stringVisor, já que uma string é um objeto em Java.\n\nObs.: por simplicidade, o diagrama não mostra a representação interna do objeto String."
   },
   {
     "objectID": "cap3-1.html#section-44",
     "href": "cap3-1.html#section-44",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Vimos que um visor de relógio possui dois visores de números, para horas e minutos.\n\nMas de onde vêm esses objetos no código?\n\n\nVeja que, como usuários do mostrador de relógio, nós criamos apenas o objeto da classe VisorDeRelogio.\n\nE esperamos que os visores de números sejam criados implicitamente.\n\n\n\nMas, como programadores da classe VisorDeRelogio, nós precisamos fazer isso acontecer.\n\nPara isso, basta criarmos os objetos VisorDeNumero dentro do construtor da classe VisorDeRelogio.\nComo o construtor é chamado quando um objeto VisorDeRelogio é criado, os visores de número serão criados automaticamente."
+    "text": "Só para os curiosos\n\n\nVocê pode também abrir o projeto visor-relogio-com-interface-grafica. Veja que ele possui uma classe a mais que você pode experimentar e ver o que faz."
   },
   {
     "objectID": "cap3-1.html#section-45",
     "href": "cap3-1.html#section-45",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Vamos analisar como o construtor de VisorDeRelogio faz isso:\n\npublic class VisorDeRelogio\n{\n    private VisorDeNumero horas;\n    private VisorDeNumero minutos;\n\n    // Atributos restantes omitidos\n\n    public VisorDeRelogio()\n    {\n        horas = new VisorDeNumero(24);\n        minutos = new VisorDeNumero(60);\n        atualizarVisor();\n    }\n\n    // Métodos omitidos\n}"
+    "text": "Vimos que um visor de relógio possui dois visores de números, para horas e minutos.\n\nMas de onde vêm esses objetos no código?\n\n\nVeja que, como usuários do mostrador de relógio, nós criamos apenas o objeto da classe VisorDeRelogio.\n\nE esperamos que os visores de números sejam criados implicitamente.\n\n\n\nMas, como programadores da classe VisorDeRelogio, nós precisamos fazer isso acontecer.\n\nPara isso, basta criarmos os objetos VisorDeNumero dentro do construtor da classe VisorDeRelogio.\nComo o construtor é chamado quando um objeto VisorDeRelogio é criado, os visores de número serão criados automaticamente."
   },
   {
     "objectID": "cap3-1.html#section-46",
     "href": "cap3-1.html#section-46",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Vamos analisar como o construtor de VisorDeRelogio faz isso:\n\npublic class VisorDeRelogio\n{\n    private VisorDeNumero horas;\n    private VisorDeNumero minutos;\n\n    // Atributos restantes omitidos\n\n    public VisorDeRelogio()\n    {\n        horas = new VisorDeNumero(24);\n        minutos = new VisorDeNumero(60);\n        atualizarVisor();\n    }\n\n    // Métodos omitidos\n}\n\nAs duas primeiras linhas do construtor criam objetos VisorDeNumero\n\nE os atribuem a variáveis."
+    "text": "Vamos analisar como o construtor de VisorDeRelogio faz isso:\n\npublic class VisorDeRelogio\n{\n    private VisorDeNumero horas;\n    private VisorDeNumero minutos;\n\n    // Atributos restantes omitidos\n\n    public VisorDeRelogio()\n    {\n        horas = new VisorDeNumero(24);\n        minutos = new VisorDeNumero(60);\n        atualizarVisor();\n    }\n\n    // Métodos omitidos\n}"
   },
   {
     "objectID": "cap3-1.html#section-47",
     "href": "cap3-1.html#section-47",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Repare a sintaxe do comando que cria um novo objeto:\n\n\n  new NomeDaClasse(lista_de_parametros)\n\n\n\nO operador new faz duas coisas:\n\nCria um novo objeto da classe nomeada (no nosso exemplo VisorDeNumero).\nExecuta o construtor daquela classe.\n\n\n\nSe o construtor da classe tiver parâmetros, os valores deles devem ser passados."
+    "text": "Vamos analisar como o construtor de VisorDeRelogio faz isso:\n\npublic class VisorDeRelogio\n{\n    private VisorDeNumero horas;\n    private VisorDeNumero minutos;\n\n    // Atributos restantes omitidos\n\n    public VisorDeRelogio()\n    {\n        horas = new VisorDeNumero(24);\n        minutos = new VisorDeNumero(60);\n        atualizarVisor();\n    }\n\n    // Métodos omitidos\n}\n\nAs duas primeiras linhas do construtor criam objetos VisorDeNumero\n\nE os atribuem a variáveis."
   },
   {
     "objectID": "cap3-1.html#section-48",
     "href": "cap3-1.html#section-48",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Repare, por exemplo, que o construtor da classe VisorDeNumero espera um valor inteiro como parâmetro.\n\n  public VisorDeNumero(int limiteParaZerar)\n\n\nCom isso, ao usarmos o operador new para criar um objeto VisorDeNumero, como ele chama o construtor da classe, precisaremos fornecer um argumento inteiro.\n\n  new VisorDeNumero(24);\n\n\nNote que a passagem de parâmetros funciona da mesma forma que já tínhamos visto para os métodos."
+    "text": "Repare a sintaxe do comando que cria um novo objeto:\n\n\n  new NomeDaClasse(lista_de_parametros)\n\n\n\nO operador new faz duas coisas:\n\nCria um novo objeto da classe nomeada (no nosso exemplo VisorDeNumero).\nExecuta o construtor daquela classe.\n\n\n\nSe o construtor da classe tiver parâmetros, os valores deles devem ser passados."
   },
   {
     "objectID": "cap3-1.html#section-49",
     "href": "cap3-1.html#section-49",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Veja que da forma que fizemos, ficou como gostaríamos:\n\nComo usuários do VisorDeRelogio:\n\nCriamos apenas esse objeto, e os visores de números são criados implicitamente.\n\nJá como programadores da classe:\n\nPrecisamos explicitar a criação dos objetos, escrevendo código para isso.\n\n\n\nObs.: ao final do construtor, o método atualizarVisor é chamado. Conversaremos sobre ele mais adiante."
+    "text": "Repare, por exemplo, que o construtor da classe VisorDeNumero espera um valor inteiro como parâmetro.\n\n  public VisorDeNumero(int limiteParaZerar)\n\n\nCom isso, ao usarmos o operador new para criar um objeto VisorDeNumero, como ele chama o construtor da classe, precisaremos fornecer um argumento inteiro.\n\n  new VisorDeNumero(24);\n\n\nNote que a passagem de parâmetros funciona da mesma forma que já tínhamos visto para os métodos."
   },
   {
     "objectID": "cap3-1.html#section-50",
     "href": "cap3-1.html#section-50",
+    "title": "IPOO - Cap. 3 Interação entre Objetos",
+    "section": "",
+    "text": "Veja que da forma que fizemos, ficou como gostaríamos:\n\nComo usuários do VisorDeRelogio:\n\nCriamos apenas esse objeto, e os visores de números são criados implicitamente.\n\nJá como programadores da classe:\n\nPrecisamos explicitar a criação dos objetos, escrevendo código para isso.\n\n\n\nObs.: ao final do construtor, o método atualizarVisor é chamado. Conversaremos sobre ele mais adiante."
+  },
+  {
+    "objectID": "cap3-1.html#section-51",
+    "href": "cap3-1.html#section-51",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
     "text": "Exercício\n\n\nEscreva comandos em Java que declarem uma variável chamada janela, do tipo Retangulo, e então crie um objeto Retangulo e o atribua à variável. Assuma que o construtor de Retangulo tem dois parâmetros do tipo int."
@@ -2632,113 +2639,113 @@
     "text": "Quiz 3.3\n\nMarque a alternativa correta:\n\nAtributos de tipo objeto guardam referências (ponteiros) para objetos.\nAtributos de tipo primitivo guardam referências (ponteiros) para objetos primitivos.\nObjetos só podem criar outros objetos dentro de construtores.\nObjetos são criados usando o operador create."
   },
   {
-    "objectID": "cap3-1.html#section-51",
-    "href": "cap3-1.html#section-51",
+    "objectID": "cap3-1.html#section-52",
+    "href": "cap3-1.html#section-52",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
     "text": "Ao criar objetos da classe VisorDeRelogio, usando o BlueJ, você deve ter notado que há duas opções no menu para criar o objeto.\n\n  new VisorDeRelogio()\n  new VisorDeRelogio(int hora, int minuto)\n\n\nIsso acontece porque VisorDeRelogio tem dois construtores.\n\nEles servem para fornecer formas alternativas de inicializar um objeto VisorDeRelogio.\n\nCom o construtor sem parâmetros, criamos um relógio com hora inicial 00:00.\nJá usando o segundo construtor, podemos criar um relógio com hora inicial diferente.\n\n\n\n\nÉ comum que classes tenham vários construtores para dar várias opções de criação dos seus objetos.\n\nPara isso funcionar, cada construtor deve ter um conjunto diferente de parâmetros.\nDamos a isso o nome de sobrecarga de construtores."
-  },
-  {
-    "objectID": "cap3-1.html#section-53",
-    "href": "cap3-1.html#section-53",
-    "title": "IPOO - Cap. 3 Interação entre Objetos",
-    "section": "",
-    "text": "Assim como os construtores, métodos também podem ser sobrecarregados."
   },
   {
     "objectID": "cap3-1.html#section-54",
     "href": "cap3-1.html#section-54",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "O que pode e o que não pode ser feito em termos de sobrecarga tem a ver com o que o compilador consegue identificar.\n\n\nImagine a chamada abaixo:\n\n    meuCarro.deslocar(68.5);\n\n\n\nComo o compilador conseguiria definir qual dos métodos está sendo chamado?\n\nO compilador não consegue!\nPortanto, não é possível criar dois métodos sobrecarregados dessa forma."
+    "text": "Assim como os construtores, métodos também podem ser sobrecarregados."
   },
   {
     "objectID": "cap3-1.html#section-55",
     "href": "cap3-1.html#section-55",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Mais uma vez vamos pensar em um exemplo de chamada:\n\n\n\n    int a = meuCarro.acelerar();\n\n\n\nNesse caso, parece que seria possível pois o compilador sabe que a variável a é do tipo int.\n\nMas na verdade você não é obrigado a usar o valor retornado por uma chamada de método.\n  meuCarro.acelerar();\nA chamada acima, por exemplo é válida, e, nesse caso, o compilador não consegue definir qual método será chamado.\nPortanto, não é possível declarar métodos sobrecarregados dessa forma."
+    "text": "O que pode e o que não pode ser feito em termos de sobrecarga tem a ver com o que o compilador consegue identificar.\n\n\nImagine a chamada abaixo:\n\n    meuCarro.deslocar(68.5);\n\n\n\nComo o compilador conseguiria definir qual dos métodos está sendo chamado?\n\nO compilador não consegue!\nPortanto, não é possível criar dois métodos sobrecarregados dessa forma."
   },
   {
     "objectID": "cap3-1.html#section-56",
     "href": "cap3-1.html#section-56",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Conceito\n\n\nSobrecarga: Uma classe pode ter mais de um construtor, ou mais de um método com o mesmo nome, desde que cada um tenha um conjunto diferente de tipos de parâmetros (ou seja, a quantidade ou a ordem dos tipos dos parâmetros precisa ser diferente).\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAvalie o segundo construtor no código da classe VisorDeRelogio. Explique o que ele faz e como ele o faz.\nIdentifique as semelhanças e diferenças entre os dois construtores. Porque o método atualizarVisor não é chamado no segundo construtor, por exemplo?"
+    "text": "Mais uma vez vamos pensar em um exemplo de chamada:\n\n\n\n    int a = meuCarro.acelerar();\n\n\n\nNesse caso, parece que seria possível pois o compilador sabe que a variável a é do tipo int.\n\nMas na verdade você não é obrigado a usar o valor retornado por uma chamada de método.\n  meuCarro.acelerar();\nA chamada acima, por exemplo é válida, e, nesse caso, o compilador não consegue definir qual método será chamado.\nPortanto, não é possível declarar métodos sobrecarregados dessa forma."
   },
   {
     "objectID": "cap3-1.html#section-57",
     "href": "cap3-1.html#section-57",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "A última linha do construtor de VisorDeRelogio tem o comando atualizarVisor.\n\n    public VisorDeRelogio()\n    {\n        horas = new VisorDeNumero(24);\n        minutos = new VisorDeNumero(60);\n        atualizarVisor();\n    }\n\n\nEste comando é uma chamada de método.\n\nVocê já deve ter visto que a classe VisorDeRelogio tem um método com a seguinte assinatura:\n\n  private void atualizarVisor()\n\n\n\n\nPortanto, o último comando no construtor, chama este método.\n\nComo o método está na mesma classe, a essa operação damos o nome de chamada de método interno."
+    "text": "Conceito\n\n\nSobrecarga: Uma classe pode ter mais de um construtor, ou mais de um método com o mesmo nome, desde que cada um tenha um conjunto diferente de tipos de parâmetros (ou seja, a quantidade ou a ordem dos tipos dos parâmetros precisa ser diferente).\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAvalie o segundo construtor no código da classe VisorDeRelogio. Explique o que ele faz e como ele o faz.\nIdentifique as semelhanças e diferenças entre os dois construtores. Porque o método atualizarVisor não é chamado no segundo construtor, por exemplo?"
   },
   {
     "objectID": "cap3-1.html#section-58",
     "href": "cap3-1.html#section-58",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Uma chamada de método interno tem a seguinte sintaxe:\n\n\n  nomeDoMetodo(lista_de_parametros)\n\n\n\nRepare que uma chamada de método interno não usa variável, nem ponto.\n\nNão é necessário usar variável porque o objeto chama o método dele mesmo.\n\n\n\nMétodos podem ter parâmetros ou não.\n\nNesse exemplo, como o método não tem parâmetros, não passamos nenhum valor na chamada do método."
+    "text": "A última linha do construtor de VisorDeRelogio tem o comando atualizarVisor.\n\n    public VisorDeRelogio()\n    {\n        horas = new VisorDeNumero(24);\n        minutos = new VisorDeNumero(60);\n        atualizarVisor();\n    }\n\n\nEste comando é uma chamada de método.\n\nVocê já deve ter visto que a classe VisorDeRelogio tem um método com a seguinte assinatura:\n\n  private void atualizarVisor()\n\n\n\n\nPortanto, o último comando no construtor, chama este método.\n\nComo o método está na mesma classe, a essa operação damos o nome de chamada de método interno."
   },
   {
     "objectID": "cap3-1.html#section-59",
     "href": "cap3-1.html#section-59",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Quando há uma chamada de método, o método correspondente é executado.\n\nE, então, a execução retorna para onde o método foi chamado e continua depois dela.\nO método correspondente precisa ter o mesmo nome e a mesma sequência de tipos de parâmetros.\n\nJá que podem existir métodos sobrecarregados."
+    "text": "Uma chamada de método interno tem a seguinte sintaxe:\n\n\n  nomeDoMetodo(lista_de_parametros)\n\n\n\nRepare que uma chamada de método interno não usa variável, nem ponto.\n\nNão é necessário usar variável porque o objeto chama o método dele mesmo.\n\n\n\nMétodos podem ter parâmetros ou não.\n\nNesse exemplo, como o método não tem parâmetros, não passamos nenhum valor na chamada do método."
   },
   {
     "objectID": "cap3-1.html#section-60",
     "href": "cap3-1.html#section-60",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Vamos agora avaliar o código do método tiqueTaque:\n\n\n    public void tiqueTaque()\n    {\n        minutos.incrementar();\n        if(minutos.obterValor() == 0) {  // minutos voltaram para zero\n            horas.incrementar();\n        }\n        atualizarVisor();\n    }\n\n\n\nSe este visor estivesse conectado a um relógio de verdade, este método seria chamado a cada 60 segundos por um temporizador eletrônico do relógio.\n\nAqui, nós mesmos chamamos o método para testar o visor."
+    "text": "Quando há uma chamada de método, o método correspondente é executado.\n\nE, então, a execução retorna para onde o método foi chamado e continua depois dela.\nO método correspondente precisa ter o mesmo nome e a mesma sequência de tipos de parâmetros.\n\nJá que podem existir métodos sobrecarregados."
   },
   {
     "objectID": "cap3-1.html#section-61",
     "href": "cap3-1.html#section-61",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "public void tiqueTaque()\n    {\n        minutos.incrementar();\n        if(minutos.obterValor() == 0) {  // minutos voltaram para zero\n            horas.incrementar();\n        }\n        atualizarVisor();\n    }\n\nA primeira linha do método chama o comando incrementar do objeto minutos.\n\nVeja então que, dessa, quando um dos métodos do VisorDeRelogio é chamado, ele, por sua vez, chama um método de outro objeto como parte da tarefa.\n\n\nUma chamada a um método de outro objeto é uma chamada de método externo."
+    "text": "Vamos agora avaliar o código do método tiqueTaque:\n\n\n    public void tiqueTaque()\n    {\n        minutos.incrementar();\n        if(minutos.obterValor() == 0) {  // minutos voltaram para zero\n            horas.incrementar();\n        }\n        atualizarVisor();\n    }\n\n\n\nSe este visor estivesse conectado a um relógio de verdade, este método seria chamado a cada 60 segundos por um temporizador eletrônico do relógio.\n\nAqui, nós mesmos chamamos o método para testar o visor."
   },
   {
     "objectID": "cap3-1.html#section-62",
     "href": "cap3-1.html#section-62",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Uma chamada de método externo tem a seguinte sintaxe:\n\n\n  objeto . nomeDoMetodo (lista_de_parametros)\n\n\n\nEssa sintaxe é conhecida como notação de ponto (dot notation).\n\nUsamos o nome do objeto, seguido de ponto, seguindo do nome do método, seguido dos parâmetros do método.\nRepare que usamos o nome do objeto e não da classe."
+    "text": "public void tiqueTaque()\n    {\n        minutos.incrementar();\n        if(minutos.obterValor() == 0) {  // minutos voltaram para zero\n            horas.incrementar();\n        }\n        atualizarVisor();\n    }\n\nA primeira linha do método chama o comando incrementar do objeto minutos.\n\nVeja então que, dessa, quando um dos métodos do VisorDeRelogio é chamado, ele, por sua vez, chama um método de outro objeto como parte da tarefa.\n\n\nUma chamada a um método de outro objeto é uma chamada de método externo."
   },
   {
     "objectID": "cap3-1.html#section-63",
     "href": "cap3-1.html#section-63",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Veja que, quando usamos o nome de objeto, temos uma chamada de método externo.\n\nO que é bem diferente de uma chamada de método interno.\nPorque, ao chamar o método externo, estamos pedindo a um objeto VisorDeNumero para fazer parte da tarefa completa.\n\n\nPodemos dizer que a tarefa de manter as horas é dividida entre as classe VisorDeRelogio e VisorDeNumero.\n\nEste é um exemplo prático do princípio de dividir e conquistar que vimos no início do capítulo ao discutirmos sobre abstração."
+    "text": "Uma chamada de método externo tem a seguinte sintaxe:\n\n\n  objeto . nomeDoMetodo (lista_de_parametros)\n\n\n\nEssa sintaxe é conhecida como notação de ponto (dot notation).\n\nUsamos o nome do objeto, seguido de ponto, seguindo do nome do método, seguido dos parâmetros do método.\nRepare que usamos o nome do objeto e não da classe."
   },
   {
     "objectID": "cap3-1.html#section-64",
     "href": "cap3-1.html#section-64",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "public void tiqueTaque()\n    {\n        minutos.incrementar();\n        if(minutos.obterValor() == 0) {  // minutos voltaram para zero\n            horas.incrementar();\n        }\n        atualizarVisor();\n    }\n\nRepare que a linha seguinte do método tiqueTaque faz outra chamada de método externo.\n\nO método retorna o valor atual dos minutos.\nSe ele acabou de ir para zero, é hora de incrementar as horas, e isso é feito em seguida."
+    "text": "Veja que, quando usamos o nome de objeto, temos uma chamada de método externo.\n\nO que é bem diferente de uma chamada de método interno.\nPorque, ao chamar o método externo, estamos pedindo a um objeto VisorDeNumero para fazer parte da tarefa completa.\n\n\nPodemos dizer que a tarefa de manter as horas é dividida entre as classe VisorDeRelogio e VisorDeNumero.\n\nEste é um exemplo prático do princípio de dividir e conquistar que vimos no início do capítulo ao discutirmos sobre abstração."
   },
   {
     "objectID": "cap3-1.html#section-65",
     "href": "cap3-1.html#section-65",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Podemos agora entender os demais métodos da classe.\n\nIdentifique neles onde ocorrem chamadas de método interno e chamadas de método externo.\n\n\n\n\n\n\nConceito\n\n\nMétodos podem chamar outros métodos da mesma classe como parte de sua implementação. Chamamos isso de chamada de método interno.\n\n\n\n\n\n\n\n\n\n\nConceito\n\n\nMétodos podem chamar métodos de outros objetos usando notação de ponto. Chamamos isso de chamada de método externo."
+    "text": "public void tiqueTaque()\n    {\n        minutos.incrementar();\n        if(minutos.obterValor() == 0) {  // minutos voltaram para zero\n            horas.incrementar();\n        }\n        atualizarVisor();\n    }\n\nRepare que a linha seguinte do método tiqueTaque faz outra chamada de método externo.\n\nO método retorna o valor atual dos minutos.\nSe ele acabou de ir para zero, é hora de incrementar as horas, e isso é feito em seguida."
   },
   {
     "objectID": "cap3-1.html#section-66",
     "href": "cap3-1.html#section-66",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Exercício\n\n\nSuponha que exista uma variável chamada imp1 do tipo Impressora, que referencia um objeto impressora, cuja classe tem métodos com as seguintes assinaturas:\n\n  public void imprimir(String nomeDoArquivo, boolean dosDoisLados)\n  public int obterSituacao(int atraso)\n\nEscreva duas possíveis chamadas para cada um desses métodos.\n\n\n\n\n\n\n\n\nExercício\n\n\nAbra o projeto casa e avalie a classe Figura. Que tipos de objetos são criados no construtor de Figura?\n\n\n\n\n\n\n\n\nExercício\n\n\nListe todas as chamadas de métodos externos que são feitas no método desenhar da classe Figura para o objeto Triangulo chamado telhado."
+    "text": "Podemos agora entender os demais métodos da classe.\n\nIdentifique neles onde ocorrem chamadas de método interno e chamadas de método externo.\n\n\n\n\n\n\nConceito\n\n\nMétodos podem chamar outros métodos da mesma classe como parte de sua implementação. Chamamos isso de chamada de método interno.\n\n\n\n\n\n\n\n\n\n\nConceito\n\n\nMétodos podem chamar métodos de outros objetos usando notação de ponto. Chamamos isso de chamada de método externo."
   },
   {
     "objectID": "cap3-1.html#section-67",
     "href": "cap3-1.html#section-67",
+    "title": "IPOO - Cap. 3 Interação entre Objetos",
+    "section": "",
+    "text": "Exercício\n\n\nSuponha que exista uma variável chamada imp1 do tipo Impressora, que referencia um objeto impressora, cuja classe tem métodos com as seguintes assinaturas:\n\n  public void imprimir(String nomeDoArquivo, boolean dosDoisLados)\n  public int obterSituacao(int atraso)\n\nEscreva duas possíveis chamadas para cada um desses métodos.\n\n\n\n\n\n\n\n\nExercício\n\n\nAbra o projeto casa e avalie a classe Figura. Que tipos de objetos são criados no construtor de Figura?\n\n\n\n\n\n\n\n\nExercício\n\n\nListe todas as chamadas de métodos externos que são feitas no método desenhar da classe Figura para o objeto Triangulo chamado telhado."
+  },
+  {
+    "objectID": "cap3-1.html#section-68",
+    "href": "cap3-1.html#section-68",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
     "text": "Exercício\n\n\nRemova as duas linhas abaixo do método desenhar da classe Figura, fazendo com que a definição das cores seja feita através de uma chamada de um método interno chamado definirCor (que você precisará criar).\n\n  janela.mudarCor(\"preta\");\n  sol.mudarCor(\"amarela\");"
@@ -2751,39 +2758,39 @@
     "text": "Quiz 3.4\n\nMarque a alternativa incorreta:\n\nConstrutores e métodos podem ser sobrecarregados.\nMétodos sobrecarregados são aqueles que têm muitos comandos.\nMétodos sobrecarregados são métodos de uma mesma classe que possuem o mesmo nome.\nObjetos podem chamar métodos de outros objetos através de chamadas de método externo."
   },
   {
-    "objectID": "cap3-1.html#section-68",
-    "href": "cap3-1.html#section-68",
-    "title": "IPOO - Cap. 3 Interação entre Objetos",
-    "section": "",
-    "text": "É importante reforçarmos como o projeto do visor de relógio usa o conceito de abstração para dividir o problema em problemas menores.\n\nRepare que, no código da classe VisorDeRelogio, criamos objetos VisorDeNumero sem nos preocupar sobre os detalhes internos desses objetos.\nDepois chamamos métodos (incrementar e obterValor) dos objetos para fazer o que precisamos.\n\nNesse ponto, assumimos que o método incrementar vai mudar corretamente o valor, sem preocuparmos com como ele faz isso."
-  },
-  {
     "objectID": "cap3-1.html#section-69",
     "href": "cap3-1.html#section-69",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Em projetos reais, muitas vezes classes diferentes são feitas por pessoas diferentes.\n\nSe tivéssemos feito assim para o exemplo do visor de relógio, o que as duas pessoas precisariam entrar em acordo?\n\nPrecisariam concordar, apenas, sobre as assinaturas de método e o que os métodos fazem.\nNão seria necessário discutir como eles fazem.\n\nFeito isso, uma pessoa poderia implementar os métodos e a outra apenas os usaria.\n\n\nO conjunto dos métodos (assinaturas) que um objeto disponibiliza para outros objetos é chamado de interface.\n\nEsse conceito traz um poder enorme para a Orientação a Objetos.\nVocê poderá conhecê-lo melhor e utilizar todo o seu poder na disciplina PPOO ;)"
+    "text": "É importante reforçarmos como o projeto do visor de relógio usa o conceito de abstração para dividir o problema em problemas menores.\n\nRepare que, no código da classe VisorDeRelogio, criamos objetos VisorDeNumero sem nos preocupar sobre os detalhes internos desses objetos.\nDepois chamamos métodos (incrementar e obterValor) dos objetos para fazer o que precisamos.\n\nNesse ponto, assumimos que o método incrementar vai mudar corretamente o valor, sem preocuparmos com como ele faz isso."
   },
   {
     "objectID": "cap3-1.html#section-70",
     "href": "cap3-1.html#section-70",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "(Opcional) Exercício - Desafio\n\n\nMude o relógio para que ele funcione como relógios americanos, mostrando 12 horas em vez de 24.\nRepare que isso pode ser mais difícil do que parece, depois da meia-noite e do meio-dia, o relógio deve mostrar 12:30 e não 00:30. Portanto, os minutos devem ir de 1 a 59, mas as horas devem ir de 1 a 12.\n\n\n\n\n\n\n\n\n(Opcional) Exercício - Desafio\n\n\nHá pelo menos duas formas de fazer o exercício anterior. Você poderia armazenar as horas com valores entre 1 e 12. Ou poderia deixar o relógio funcionando internamente com um relógio de 24 horas e tratar apenas a stringVisor para mostrar horas no formato esperado de 12 horas.\nImplemente as duas opções.\nQual opção é mais fácil? Qual é melhor? Por que?"
+    "text": "Em projetos reais, muitas vezes classes diferentes são feitas por pessoas diferentes.\n\nSe tivéssemos feito assim para o exemplo do visor de relógio, o que as duas pessoas precisariam entrar em acordo?\n\nPrecisariam concordar, apenas, sobre as assinaturas de método e o que os métodos fazem.\nNão seria necessário discutir como eles fazem.\n\nFeito isso, uma pessoa poderia implementar os métodos e a outra apenas os usaria.\n\n\nO conjunto dos métodos (assinaturas) que um objeto disponibiliza para outros objetos é chamado de interface.\n\nEsse conceito traz um poder enorme para a Orientação a Objetos.\nVocê poderá conhecê-lo melhor e utilizar todo o seu poder na disciplina PPOO ;)"
   },
   {
     "objectID": "cap3-1.html#section-71",
     "href": "cap3-1.html#section-71",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "(Opcional) Exercício - Desafio\n\n\nSuponha que uma classe Arvore tenha um atributo do tipo Triangulo chamado folhas e um atributo do tipo Quadrado chamado tronco. O construtor de Arvores não espera nenhum parâmetro, e seu construtor cria objetos Triangulo e Quadrado para seus atributos.\nUsando o projeto figuras, crie uma classe Arvore que corresponda a essa descrição. Neste exercício, não é necessário definir nenhum método, e nem tratar a forma da árvore.\n\n\n\n\n\n\n\n\n(Opcional) Exercício - Desafio\n\n\nAgora complete a classe Arvore do exercício anterior. O construtor deve mover o tronco para debaixo das folhas e fazer ambos serem exibidos. Faça isso criando um método chamado configurar e incluindo uma chamada a este método no construtor. Mude o tamanho do triângulo de forma que a árvore se pareça um pinheiro."
+    "text": "Exercício de Implementação 1\n\n\nMude o relógio para que ele funcione como relógios americanos, mostrando 12 horas em vez de 24.\nRepare que isso pode ser mais difícil do que parece, depois da meia-noite e do meio-dia, o relógio deve mostrar 12:30 e não 00:30. Portanto, os minutos devem ir de 1 a 59, mas as horas devem ir de 1 a 12.\n\n\n\n\n\n\n\n\nExercício de Implementação 2\n\n\nHá pelo menos duas formas de fazer o exercício anterior. Você poderia armazenar as horas com valores entre 1 e 12. Ou poderia deixar o relógio funcionando internamente com um relógio de 24 horas e tratar apenas a stringVisor para mostrar horas no formato esperado de 12 horas.\nImplemente as duas opções (você deve ter dois projetos separados no BlueJ, um com cada implementação).\nQual opção é mais fácil? Qual é melhor? Por que?"
   },
   {
     "objectID": "cap3-1.html#section-72",
     "href": "cap3-1.html#section-72",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Como você já sabe das aulas anteriores, para que você tenha a presença\n\nconsiderada nas aula em formato ANP (Atividade Não-Presencial),\nvocê precisa demonstrar que realmente estudou o conteúdo.\n\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nPara ter presença nessa aula você deve:\n\nResponder, no Campus Virtual, aos quizes presentes nesses slides."
+    "text": "(Opcional) Exercício - Desafio\n\n\nSuponha que uma classe Arvore tenha um atributo do tipo Triangulo chamado folhas e um atributo do tipo Quadrado chamado tronco. O construtor de Arvores não espera nenhum parâmetro, e seu construtor cria objetos Triangulo e Quadrado para seus atributos.\nUsando o projeto figuras, crie uma classe Arvore que corresponda a essa descrição. Neste exercício, não é necessário definir nenhum método, e nem tratar a forma da árvore.\n\n\n\n\n\n\n\n\n(Opcional) Exercício - Desafio\n\n\nAgora complete a classe Arvore do exercício anterior. O construtor deve mover o tronco para debaixo das folhas e fazer ambos serem exibidos. Faça isso criando um método chamado configurar e incluindo uma chamada a este método no construtor. Mude o tamanho do triângulo de forma que a árvore se pareça um pinheiro."
+  },
+  {
+    "objectID": "cap3-1.html#section-73",
+    "href": "cap3-1.html#section-73",
+    "title": "IPOO - Cap. 3 Interação entre Objetos",
+    "section": "",
+    "text": "Como você já sabe das aulas anteriores, para que você tenha a presença\n\nconsiderada nas aula em formato ANP (Atividade Não-Presencial),\nvocê precisa demonstrar que realmente estudou o conteúdo.\n\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nPara ter presença nessa aula você deve:\n\nResponder, no Campus Virtual, aos quizes presentes nesses slides e enviar os projetos dos exercícios de implementação 1 e 2."
   },
   {
     "objectID": "cap4-1.html#section",

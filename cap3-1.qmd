@@ -508,7 +508,7 @@ Quando o programa é iniciado, vamos criar um objeto `VisorDeRelogio`.
 
 Vamos avaliar o diagrama de objetos novamente, pois ele traz um detalhe importante.
 
-- Repare que quando uma variável que guarda um objeto, ela não o guarda diretamente.
+- Repare que quando uma variável guarda um objeto, ela não o guarda diretamente.
 - Na verdade a variável guarda uma [referência]{.alert} (um ponteiro) [para o objeto]{.alert} .
 
 . . .
@@ -527,6 +527,8 @@ Suponha que criamos um objeto `Disciplina` e três objetos `Estudante`, e matric
 Tente desenhar um diagrama de classes e um diagrama de objetos para essa situação.
 Explique a diferença entre os diagramas.
 :::
+
+##
 
 ::: {.callout-note title="Exercício" icon=false}
 Quando um diagrama de classes é alterado? E como ele é alterado?
@@ -1344,20 +1346,20 @@ O conjunto dos métodos (assinaturas) que um objeto disponibiliza para outros ob
 
 ##
 
-::: {.callout-note title="(Opcional) Exercício - [Desafio]{.alert}" icon=false}
+::: {.callout-note title="Exercício de Implementação 1" icon=false}
 Mude o relógio para que ele funcione como relógios americanos, mostrando 12 horas em vez de 24.
 
 Repare que isso pode ser mais difícil do que parece, depois da meia-noite e do meio-dia, o relógio deve mostrar 12:30 e não 00:30.
 Portanto, os minutos devem ir de 1 a 59, mas as horas devem ir de 1 a 12.
 :::
 
-::: {.callout-note title="(Opcional) Exercício - [Desafio]{.alert}" icon=false}
+::: {.callout-note title="Exercício de Implementação 2" icon=false}
 Há pelo menos duas formas de fazer o exercício anterior.
 Você poderia armazenar as horas com valores entre 1 e 12.
 Ou poderia deixar o relógio funcionando internamente com um relógio de 24 horas e tratar apenas a `stringVisor` para mostrar
 horas no formato esperado de 12 horas.
 
-Implemente as duas opções.
+Implemente as duas opções (você deve ter dois projetos separados no BlueJ, um com cada implementação).
 
 Qual opção é mais fácil? Qual é melhor? Por que?
 :::
@@ -1393,6 +1395,6 @@ Como você já sabe das aulas anteriores, para que você tenha a [presença]{.al
 ::: {.callout-important title="Entregas no Campus Virtual"}
 Para ter presença nessa aula você deve:
 
-- Responder, no Campus Virtual, aos quizes presentes nesses slides.
+- Responder, no Campus Virtual, aos quizes presentes nesses slides e enviar os projetos dos exercícios de implementação 1 e 2.
 :::
 :::
