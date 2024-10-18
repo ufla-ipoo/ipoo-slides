@@ -110,7 +110,7 @@ Na aula passada, vimos o método `buscarMusicas` que listava os nomes de todas a
 
 - Mas suponha que queiramos um método para encontrar a primeira música que tenha a string.
 - Este é um exemplo de situação na qual podemos interromper a interação sem precisar processar a coleção inteira.
-  - *Obs.: apesar de existir uma forma de parar a iteração de um _for-each_ ela é considerada um mal estilo de programação.*
+  - *Obs.: apesar de existir uma forma de parar a iteração de um _for-each_ ela é considerada um estilo ruim de programação.*
 
 ## Exemplo de busca com `while` {.smaller}
 
@@ -213,7 +213,7 @@ Repare que ao utilizarmos a classe `Musica` alguns métodos ficaram um pouco mai
 
 Além disso, agora conseguimos evitar o problema mencionado no final da aula anterior,
 
-- De querermos buscar todas as músicas que tenham a palavra `love` no título, mas isso acabar retornando músicas de um cantor chamado `Glover`.
+- De querermos buscar todas as músicas que tenham a palavra `renda` no título, mas isso acabar retornando músicas de uma cantora chamada `Brenda`.
 
 ## {.smaller}
 
@@ -239,7 +239,7 @@ public void buscarNoTitulo(String stringDeBusca)
 
 ## 
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
 Adicione um atributo `numeroDeExecucoes` à classe `Musica`.
 Implemente métodos para reiniciar a contagem (voltando para zero) e para incrementá-la em um.
 Altere também o método `obterDetalhes` para que inclua essa informação.
@@ -382,7 +382,7 @@ Remover elementos traz consequências importantes quando estamos iterando uma co
 Apesar dessa forma parecer perfeitamente razoável, não é possível remover elementos usando um loop **for-each**.
 
 - Se você tentar fazer isso, ocorrerá um erro no programa (`ConcurrentModificationException`).
-- Isso ocorre porque causa uma confusão sobre qual seria o próximo elemento nesta situação.
+- Isso ocorre porque a remoção causa uma confusão sobre qual seria o próximo elemento nesta situação.
 
 ## {.smaller}
 
@@ -451,14 +451,14 @@ Mas qual a **vantagem de usarmos vetores**?
 - É que o acesso por índice (posição) é geralmente mais eficiente do que em uma coleção de tamanho flexível, como a `ArrayList`.
 - Outra vantagem é que, em Java, podemos ter vetores de elementos que são tipos primitivos.
   - Enquanto `ArrayList`, por exemplo, permite guardar apenas objetos.
-  - Apesar de que, como veremos no próximo capítulo, há uma forma de lidarmos comn isso usando *wrappers*.
+  - Apesar de que, como veremos no próximo capítulo, há uma forma de lidarmos comn isso usando *wrappers* (classes empacotadoras).
 
 ## {.smaller}
 
 Um **vetor** é um grupo de variáveis que contém **elementos de um mesmo tipo**.
 
 - Em Java, vetores são considerados objetos, portanto, são considerados tipos por referência.
-- Como mencionado, os elementos de um vetor podem ser de tipos primitivos (`int`, `double`, `boolean`, etc.) ou de tipos por referência (objetos).
+- Como já mencionado, os elementos de um vetor podem ser de tipos primitivos (`int`, `double`, `boolean`, etc.) ou de tipos por referência (objetos).
 
 . . .
 
@@ -733,7 +733,7 @@ public class MeuMundo extends World
 
 ## 
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
 Crie o projeto no Greenfoot e use o código do slide anterior para definir o mundo (altere a classe inicial `MyWorld`).
 
 Crie então um objeto da classe `MeuMundo`, clicando na caixa da classe e acessando a opção `new MeuMundo()`.
@@ -754,7 +754,7 @@ As imagens que vamos utilizar foram baixadas do site:
 
 . . .
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
 Baixe as imagens do site citado, encontre a imagem `Idle (1).png` e copie-a para a pasta `images` do projeto do Greenfoot.
 Renomeie a imagem para `knight.png`.
 :::
@@ -788,7 +788,7 @@ public class Cavaleiro extends Actor
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
 Crie uma classe `Cavaleiro` no seu projeto. Para isso, clique em `Actor` e acesse a opção `Nova subclasse...`.
 Use o nome `Cavaleiro` na janela que aparece e clique em OK.
 
@@ -827,7 +827,7 @@ Vamos agora adicionar código para que o cavaleiro possa caminhar na horizontal.
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
 Altere o método `act` da classe `Cavaleiro` de acordo com o slide anterior.
 
 Crie um objeto da classe, coloque-o no mundo e então clique no botão `Executar`.
@@ -937,7 +937,7 @@ Toda vez que o método `act` é chamado, a próxima imagem do vetor é exibida.
 
 ## 
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
 Implemente as últimas alterações apresentadas da classe `Cavaleiro`: a criação do atributo `indiceImagemAtual` e alterações no construtor e no método `act`.
 
 Agora crie um objeto `Cavaleiro` e execute o jogo.
@@ -1026,7 +1026,7 @@ Por fim, vamos alterar o método `act` para usar os atributos que criamos
 
 ## 
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
 Implemente as últimas alterações para uso dos atributos `passosParaAtualizarImagem` e `passosDesdeUltimaAtualizacaoImagem` na classe `Cavaleiro`.
 
 Execute o jogo e veja o resultado.
@@ -1105,7 +1105,7 @@ E aí? Vai encarar o desafio?
 Para ter **presença** nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.
 
 ::: {.callout-important title="Entregas no Campus Virtual"}
-Responda a tarefa no Campus Virtual enviando o seu projeto do `organizador-musicas-v5` com as alterações solicitadas nos exercícios ao longo dos slides.
+Responda às tarefas no Campus Virtual enviando o o seu projeto do `organizador-musicas-v5` e o projeto criado no Greenfoot com a animação do cavaleiro, contendo as alterações solicitadas nos exercícios ao longo dos slides.
 :::
 
 :::

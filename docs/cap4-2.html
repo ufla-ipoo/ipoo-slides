@@ -16,7 +16,6 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2023-10-10">
   <title>GAC125 - Introdução à Programação Orientada a Objetos – IPOO - Cap. 4 Agrupando Objetos</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -414,7 +413,7 @@
     </div>
 </div>
 
-  <p class="date">10/10/2023</p>
+  <p class="date">18/10/2024</p>
 </section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
@@ -526,7 +525,7 @@
 <li class="fragment">Mas suponha que queiramos um método para encontrar a primeira música que tenha a string.</li>
 <li class="fragment">Este é um exemplo de situação na qual podemos interromper a interação sem precisar processar a coleção inteira.
 <ul>
-<li class="fragment"><em>Obs.: apesar de existir uma forma de parar a iteração de um <em>for-each</em> ela é considerada um mal estilo de programação.</em></li>
+<li class="fragment"><em>Obs.: apesar de existir uma forma de parar a iteração de um <em>for-each</em> ela é considerada um estilo ruim de programação.</em></li>
 </ul></li>
 </ul>
 </section>
@@ -645,7 +644,7 @@
 <div class="fragment">
 <p>Além disso, agora conseguimos evitar o problema mencionado no final da aula anterior,</p>
 <ul>
-<li class="fragment">De querermos buscar todas as músicas que tenham a palavra <code>love</code> no título, mas isso acabar retornando músicas de um cantor chamado <code>Glover</code>.</li>
+<li class="fragment">De querermos buscar todas as músicas que tenham a palavra <code>renda</code> no título, mas isso acabar retornando músicas de uma cantora chamada <code>Brenda</code>.</li>
 </ul>
 </div>
 </section>
@@ -670,11 +669,11 @@
 </section>
 <section id="section-8" class="slide level2">
 <h2></h2>
-<div title="Exercício">
+<div title="Exercício [(entrega)]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício</strong></p>
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
 </div>
 <div class="callout-content">
 <p>Adicione um atributo <code>numeroDeExecucoes</code> à classe <code>Musica</code>. Implemente métodos para reiniciar a contagem (voltando para zero) e para incrementá-la em um. Altere também o método <code>obterDetalhes</code> para que inclua essa informação.</p>
@@ -833,7 +832,7 @@
 <p>Apesar dessa forma parecer perfeitamente razoável, não é possível remover elementos usando um loop <strong>for-each</strong>.</p>
 <ul>
 <li class="fragment">Se você tentar fazer isso, ocorrerá um erro no programa (<code>ConcurrentModificationException</code>).</li>
-<li class="fragment">Isso ocorre porque causa uma confusão sobre qual seria o próximo elemento nesta situação.</li>
+<li class="fragment">Isso ocorre porque a remoção causa uma confusão sobre qual seria o próximo elemento nesta situação.</li>
 </ul>
 </div>
 </section>
@@ -913,7 +912,7 @@
 <li class="fragment">Outra vantagem é que, em Java, podemos ter vetores de elementos que são tipos primitivos.
 <ul>
 <li class="fragment">Enquanto <code>ArrayList</code>, por exemplo, permite guardar apenas objetos.</li>
-<li class="fragment">Apesar de que, como veremos no próximo capítulo, há uma forma de lidarmos comn isso usando <em>wrappers</em>.</li>
+<li class="fragment">Apesar de que, como veremos no próximo capítulo, há uma forma de lidarmos comn isso usando <em>wrappers</em> (classes empacotadoras).</li>
 </ul></li>
 </ul>
 </div>
@@ -923,7 +922,7 @@
 <p>Um <strong>vetor</strong> é um grupo de variáveis que contém <strong>elementos de um mesmo tipo</strong>.</p>
 <ul>
 <li class="fragment">Em Java, vetores são considerados objetos, portanto, são considerados tipos por referência.</li>
-<li class="fragment">Como mencionado, os elementos de um vetor podem ser de tipos primitivos (<code>int</code>, <code>double</code>, <code>boolean</code>, etc.) ou de tipos por referência (objetos).</li>
+<li class="fragment">Como já mencionado, os elementos de um vetor podem ser de tipos primitivos (<code>int</code>, <code>double</code>, <code>boolean</code>, etc.) ou de tipos por referência (objetos).</li>
 </ul>
 <div class="fragment">
 <p>Exemplo de um vetor:</p>
@@ -1172,11 +1171,11 @@
 </section>
 <section id="section-24" class="slide level2">
 <h2></h2>
-<div title="Exercício">
+<div title="Exercício [(entrega)]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício</strong></p>
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
 </div>
 <div class="callout-content">
 <p>Crie o projeto no Greenfoot e use o código do slide anterior para definir o mundo (altere a classe inicial <code>MyWorld</code>).</p>
@@ -1199,11 +1198,11 @@
 </ul>
 </div>
 <div class="fragment">
-<div title="Exercício">
+<div title="Exercício [(entrega)]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício</strong></p>
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
 </div>
 <div class="callout-content">
 <p>Baixe as imagens do site citado, encontre a imagem <code>Idle (1).png</code> e copie-a para a pasta <code>images</code> do projeto do Greenfoot. Renomeie a imagem para <code>knight.png</code>.</p>
@@ -1238,11 +1237,11 @@
 </section>
 <section id="section-27" class="slide level2">
 <h2></h2>
-<div title="Exercício">
+<div title="Exercício [(entrega)]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício</strong></p>
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
 </div>
 <div class="callout-content">
 <p>Crie uma classe <code>Cavaleiro</code> no seu projeto. Para isso, clique em <code>Actor</code> e acesse a opção <code>Nova subclasse...</code>. Use o nome <code>Cavaleiro</code> na janela que aparece e clique em OK.</p>
@@ -1283,11 +1282,11 @@
 </section>
 <section id="section-29" class="slide level2">
 <h2></h2>
-<div title="Exercício">
+<div title="Exercício [(entrega)]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício</strong></p>
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
 </div>
 <div class="callout-content">
 <p>Altere o método <code>act</code> da classe <code>Cavaleiro</code> de acordo com o slide anterior.</p>
@@ -1402,11 +1401,11 @@
 </section>
 <section id="section-35" class="slide level2">
 <h2></h2>
-<div title="Exercício">
+<div title="Exercício [(entrega)]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício</strong></p>
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
 </div>
 <div class="callout-content">
 <p>Implemente as últimas alterações apresentadas da classe <code>Cavaleiro</code>: a criação do atributo <code>indiceImagemAtual</code> e alterações no construtor e no método <code>act</code>.</p>
@@ -1497,11 +1496,11 @@
 </section>
 <section id="section-39" class="slide level2">
 <h2></h2>
-<div title="Exercício">
+<div title="Exercício [(entrega)]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício</strong></p>
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
 </div>
 <div class="callout-content">
 <p>Implemente as últimas alterações para uso dos atributos <code>passosParaAtualizarImagem</code> e <code>passosDesdeUltimaAtualizacaoImagem</code> na classe <code>Cavaleiro</code>.</p>
@@ -1599,7 +1598,7 @@
 <p><strong>Entregas no Campus Virtual</strong></p>
 </div>
 <div class="callout-content">
-<p>Responda a tarefa no Campus Virtual enviando o seu projeto do <code>organizador-musicas-v5</code> com as alterações solicitadas nos exercícios ao longo dos slides.</p>
+<p>Responda às tarefas no Campus Virtual enviando o o seu projeto do <code>organizador-musicas-v5</code> e o projeto criado no Greenfoot com a animação do cavaleiro, contendo as alterações solicitadas nos exercícios ao longo dos slides.</p>
 </div>
 </div>
 </div>

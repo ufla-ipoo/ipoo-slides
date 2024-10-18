@@ -16,7 +16,6 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2023-12-12">
   <title>GAC125 - Introdução à Programação Orientada a Objetos – IPOO - Cap. 4 Agrupando Objetos</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -414,7 +413,7 @@
     </div>
 </div>
 
-  <p class="date">12/12/2023</p>
+  <p class="date">18/10/2024</p>
 </section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
@@ -695,7 +694,7 @@
 <p>Nesse cenário, precisaremos que o <strong><code>ArrayList</code> guarde objetos String</strong> que representem os nomes dos arquivos.</p>
 <ul>
 <li class="fragment">A ideia é começar simples, para focarmos no conceito que vamos aprender agora, criação e uso de coleções.</li>
-<li class="fragment">Depois vamos incrementar um projeto para que ele pareça com um organizar e tocador de músicas de verdade.</li>
+<li class="fragment">Depois vamos incrementar o projeto para que ele pareça com um organizar e tocador de músicas de verdade.</li>
 </ul>
 </div>
 </section>
@@ -723,7 +722,7 @@
 <p>Estamos adotando uma <span class="alert">abordagem incremental</span>.</p>
 <ul>
 <li class="fragment">Começamos com uma <strong>versão básica</strong> que mostra como criar e usar um ArrayList.</li>
-<li class="fragment">E depois vamos melhorá-la até chegar ao ponto de nosso programar <strong>tocar a música de verdade</strong>.</li>
+<li class="fragment">E depois vamos melhorá-la até chegar ao ponto de nosso programa <strong>tocar a música de verdade</strong>.</li>
 </ul>
 <div class="fragment">
 <div class="columns">
@@ -1053,6 +1052,9 @@
 </div>
 </div>
 </div>
+</section>
+<section id="section-26" class="slide level2">
+<h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1083,7 +1085,7 @@
 <h1>Numeração dentro das coleções</h1>
 
 </section>
-<section id="section-26" class="slide level2 smaller">
+<section id="section-27" class="slide level2 smaller">
 <h2></h2>
 <p>Ao usar o projeto <code>organizador-musicas-v1</code> você notou que, para <strong>listar e remover músicas</strong>, foi necessário passar <strong>parâmetros começando em zero</strong>.</p>
 <ul>
@@ -1100,7 +1102,7 @@
 </ul>
 </div>
 </section>
-<section id="section-27" class="slide level2 smaller">
+<section id="section-28" class="slide level2 smaller">
 <h2></h2>
 <p>Repare que os métodos <code>listarArquivo</code> e <code>removerArquivo</code> verificam o valor do índice antes de passá-lo para os métodos do <code>ArrayList</code>.</p>
 <ul>
@@ -1123,9 +1125,9 @@
 </div>
 </div>
 </section>
-<section id="section-28" class="slide level2 smaller">
+<section id="section-29" class="slide level2 smaller">
 <h2></h2>
-<p>É importante se lembrar que, ao <strong>remover um objeto</strong> de um <code>ArrayList</code>, os <strong>objetos</strong> que estavam <strong>depois dele mudam de posição</strong>.</p>
+<p>É importante lembrar que, ao <strong>remover um objeto</strong> de um <code>ArrayList</code>, os <strong>objetos</strong> que estavam <strong>depois dele mudam de posição</strong>.</p>
 <div class="fragment">
 <p>Suponha, por exemplo, um <code>ArrayList</code> com 5 elementos.</p>
 <ul>
@@ -1143,7 +1145,7 @@
 </ul>
 </div>
 </section>
-<section id="section-29" class="slide level2 smaller">
+<section id="section-30" class="slide level2 smaller">
 <h2></h2>
 <p>Suponha, por exemplo, que uma variável <code>p</code> guarda a posição de um objeto na coleção.</p>
 <ul>
@@ -1165,7 +1167,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-30" class="slide level2">
+<section id="section-31" class="slide level2">
 <h2></h2>
 <div title="Exercício [(entrega)]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1195,7 +1197,7 @@
 </div>
 </div>
 </section>
-<section id="section-31" class="slide level2">
+<section id="section-32" class="slide level2">
 <h2></h2>
 <div title="Exercício [(entrega)]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1216,7 +1218,7 @@
 <h1>Tocando os arquivos de música</h1>
 
 </section>
-<section id="section-32" class="slide level2 smaller">
+<section id="section-33" class="slide level2 smaller">
 <h2></h2>
 <p>Seria interessante se nosso organizador não só guardasse uma lista de arquivos de música,</p>
 <ul>
@@ -1226,20 +1228,20 @@
 <p>Se tivermos uma <strong>classe</strong> implementada <strong>para tocar arquivos de aúdio</strong>, nossa classe organizadora não precisar saber nada sobre como fazer isso.</p>
 <ul>
 <li class="fragment">Poderia apenas lidar com o nome do arquivo e deixar a outra classe cuidar do resto.</li>
-<li class="fragment">Infelizmente, a biblioteca padrão do Java não te uma classe para tocar arquivos MP3.</li>
+<li class="fragment">Infelizmente, a biblioteca padrão do Java não tem uma classe para tocar arquivos MP3.</li>
 <li class="fragment">Mas muitos programadores e empesas criam classes úteis o tempo todo.
 <ul>
 <li class="fragment">E as disponibilizam para outras pessoas usarem.</li>
 <li class="fragment">É o que chamamos de <strong>classes de terceiros</strong> (<span class="alert">third-party libraries</span>).</li>
 <li class="fragment">Elas podem ser importadas e usadas da mesma forma que as classes da biblioteca padrão Java.
 <ul>
-<li class="fragment">Precisamos apenas ter o arquivo da biblioteca em nossa projeto (veremos mais sobre isso no futuro).</li>
+<li class="fragment">Precisamos apenas ter o arquivo da biblioteca em nosso projeto (veremos mais sobre isso no futuro).</li>
 </ul></li>
 </ul></li>
 </ul>
 </div>
 </section>
-<section id="section-33" class="slide level2 smaller">
+<section id="section-34" class="slide level2 smaller">
 <h2></h2>
 <p>Em uma nova versão do projeto, usaremos classes da biblioteca <code>javazoom.net</code> para escrever a nossa própria classe tocadora de música.</p>
 <div class="fragment">
@@ -1258,7 +1260,7 @@
 <p>Avalie as modificações na classe <code>OrganizadorDeMusica</code> no projeto <a href="https://github.com/ufla-ipoo/organizador-musicas-v2">organizador-musicas-v2</a>.</p>
 </div>
 </section>
-<section id="section-34" class="slide level2">
+<section id="section-35" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1298,7 +1300,7 @@
 </ul>
 </div>
 <div class="fragment">
-<p>Ainda falta algumas coisas para nosso organizar ficar mais útil.</p>
+<p>Ainda faltam algumas coisas para nosso organizar ficar mais útil.</p>
 <ul>
 <li class="fragment">Especialmente, poder listar os nomes de todos os arquivos da coleção.</li>
 <li class="fragment">É o que veremos a seguir.</li>
@@ -1310,7 +1312,7 @@
 <h1>Processando uma coleção inteira</h1>
 
 </section>
-<section id="section-35" class="slide level2 smaller">
+<section id="section-36" class="slide level2 smaller">
 <h2></h2>
 <p>A ideia agora é ter um método na classe <code>OrganizadorDeMusicas</code> que exiba no terminal todos os nomes de arquivos guardados na coleção.</p>
 <ul>
@@ -1365,7 +1367,7 @@
 </div>
 </div>
 </section>
-<section id="section-36" class="slide level2 smaller">
+<section id="section-37" class="slide level2 smaller">
 <h2></h2>
 <div class="halfincfontsize">
 <pre><code>  for (TipoDoElemento elemento : coleção) {
@@ -1381,7 +1383,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-37" class="slide level2 smaller">
+<section id="section-38" class="slide level2 smaller">
 <h2></h2>
 <p>Abaixo está uma implementação do método <code>listarTodosOsArquivos</code>:</p>
 <div class="halfincfontsize">
@@ -1402,7 +1404,7 @@
 </ul>
 </div>
 </section>
-<section id="section-38" class="slide level2">
+<section id="section-39" class="slide level2">
 <h2></h2>
 <div title="Exercício [(entrega)]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1419,7 +1421,7 @@
 </div>
 </div>
 </section>
-<section id="section-39" class="slide level2">
+<section id="section-40" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1457,7 +1459,7 @@
 </ul>
 </div>
 </section>
-<section id="section-40" class="slide level2 smaller">
+<section id="section-41" class="slide level2 smaller">
 <h2></h2>
 <p>O código abaixo mostra um exemplo de processamento seletivo.</p>
 <div class="halfincfontsize">
@@ -1486,7 +1488,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-41" class="slide level2">
+<section id="section-42" class="slide level2">
 <h2></h2>
 <div title="Exercício [(entrega)]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1515,7 +1517,7 @@
 </div>
 </div>
 </section>
-<section id="section-42" class="slide level2">
+<section id="section-43" class="slide level2">
 <h2></h2>
 <div title="Exercício [(entrega)]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1535,9 +1537,9 @@
 <h2>Limitação do uso de strings</h2>
 <p>Quando começamos a fazer buscas nos nomes dos arquivos, começamos a perceber que tratar tudo como string não é ideal.</p>
 <ul>
-<li class="fragment">Ex.: podemos querer buscar todas as músicas que tenham a palavra <code>love</code> no título.
+<li class="fragment">Ex.: podemos querer buscar todas as músicas que tenham a palavra <code>renda</code> no título.
 <ul>
-<li class="fragment">Mas isso pode retornar músicas de um cantor chamado <code>Glover</code>.</li>
+<li class="fragment">Mas isso pode retornar músicas de uma cantora chamado <code>Brenda</code>.</li>
 </ul></li>
 <li class="fragment">Veja que, pensando em termos de orientação a objetos, o ideal era que tivéssemos uma classe para representar músicas.
 <ul>
@@ -1560,7 +1562,7 @@
 <h1>Entregas dessa Aula</h1>
 
 </section>
-<section id="section-43" class="slide level2 smaller">
+<section id="section-44" class="slide level2 smaller">
 <h2></h2>
 <div>
 <p>Para ter <strong>presença</strong> nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.</p>
