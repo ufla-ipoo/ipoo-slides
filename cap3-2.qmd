@@ -309,7 +309,7 @@ A classe mais interessante do sistema de e-mails é a de cliente de email.
 Crie um servidor de e-mail, e depois crie dois clientes de e-mail para os usuários "Tião" e "Maria".
 Dica use nomes de variáveis `tiao` e `maria` para os clientes de e-mail para facilitar.
 
-Envie um e-mail da Maria para o João usando o método `enviarEmail`. Não leia a mensagem ainda!
+Envie um e-mail da Maria para o Tião usando o método `enviarEmail`. Não leia a mensagem ainda!
 ::::
 
 ## {.smaller}

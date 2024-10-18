@@ -242,7 +242,7 @@ Por razões didáticas, ou seja, para ficar mais fácil assimilarmos os conceito
 Nesse cenário, precisaremos que o **`ArrayList` guarde objetos String** que representem os nomes dos arquivos.
 
 - A ideia é começar simples, para focarmos no conceito que vamos aprender agora, criação e uso de coleções.
-- Depois vamos incrementar um projeto para que ele pareça com um organizar e tocador de músicas de verdade.
+- Depois vamos incrementar o projeto para que ele pareça com um organizar e tocador de músicas de verdade.
 
 ## {.smaller}
 
@@ -268,7 +268,7 @@ Veremos que a classe `ArrayList` torna bem fácil tratar essas operações.
 Estamos adotando uma [abordagem incremental]{.alert}.
 
 - Começamos com uma **versão básica** que mostra como criar e usar um ArrayList.
-- E depois vamos melhorá-la até chegar ao ponto de nosso programar **tocar a música de verdade**.
+- E depois vamos melhorá-la até chegar ao ponto de nosso programa **tocar a música de verdade**.
 
 . . .
 
@@ -549,6 +549,8 @@ Os elementos do `ArrayList` são do tipo `Livro`.
 Escreva a declaração de uma variável local chamada `ipoo` que guarda um `ArrayList` de `Estudante`.
 :::
 
+## 
+
 ::: {.callout-note title="Exercício" icon=false}
 Escreva a declaração de um atributo privado chamado `musicas` para guardar uma coleção de objetos `Musica`.
 ::: 
@@ -591,7 +593,7 @@ Se fizer isso, o programa exibirá uma mensagem de índice fora da faixa (`Index
 
 ## {.smaller}
 
-É importante se lembrar que, ao **remover um objeto** de um `ArrayList`, os **objetos** que estavam **depois dele mudam de posição**.
+É importante lembrar que, ao **remover um objeto** de um `ArrayList`, os **objetos** que estavam **depois dele mudam de posição**.
 
 . . .
 
@@ -661,12 +663,12 @@ Seria interessante se nosso organizador não só guardasse uma lista de arquivos
 Se tivermos uma **classe** implementada **para tocar arquivos de aúdio**, nossa classe organizadora não precisar saber nada sobre como fazer isso.
 
 - Poderia apenas lidar com o nome do arquivo e deixar a outra classe cuidar do resto.
-- Infelizmente, a biblioteca padrão do Java não te uma classe para tocar arquivos MP3.
+- Infelizmente, a biblioteca padrão do Java não tem uma classe para tocar arquivos MP3.
 - Mas muitos programadores e empesas criam classes úteis o tempo todo.
   - E as disponibilizam para outras pessoas usarem.
   - É o que chamamos de **classes de terceiros** ([third-party libraries]{.alert}).
   - Elas podem ser importadas e usadas da mesma forma que as classes da biblioteca padrão Java.
-    - Precisamos apenas ter o arquivo da biblioteca em nossa projeto (veremos mais sobre isso no futuro).
+    - Precisamos apenas ter o arquivo da biblioteca em nosso projeto (veremos mais sobre isso no futuro).
 
 ## {.smaller}
 
@@ -720,7 +722,7 @@ Veja que, em ambos os casos, **precisamos saber** muito **pouco sobre o funciona
 
 . . .
 
-Ainda falta algumas coisas para nosso organizar ficar mais útil.
+Ainda faltam algumas coisas para nosso organizar ficar mais útil.
 
 - Especialmente, poder listar os nomes de todos os arquivos da coleção.
 - É o que veremos a seguir.
