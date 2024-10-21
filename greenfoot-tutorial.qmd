@@ -7,7 +7,11 @@ subtitle: GAC125 - IPOO
 
 O trabalho da disciplina será um jogo com gráficos em 2D, desenvolvido em Java, com a IDE Greenfoot.
 
-- Este material se baseia no tutorial disponibilizado no site do Greenfoot: https://www.greenfoot.org/doc/tut-1
+- Em casa, você pode baixar e instalar o greenfoot acessando o site: [https://greenfoot.org/download]()
+
+. . .
+
+Obs.: Este material se baseia no tutorial disponibilizado no site do Greenfoot: https://www.greenfoot.org/doc/tut-1
 
 # Parte 1: Interagindo com o Greenfoot {background-color="#40666e"}
 
@@ -369,7 +373,7 @@ Como podemos melhorar isso?
 
 Veja que, com isso, o código fica mais fácil de entender e de se alterar.
 
-- Na próxima aula aprofundaremos essa questão, ao estudarmos o conceito [coesão de métodos]{.alert}.
+- Mais adiante na disciplina aprofundaremos essa questão, ao estudarmos o conceito [coesão de métodos]{.alert}.
 
 # Parte 4: Salvando o mundo e criando e tocando sons {background-color="#40666e"}
 
@@ -542,8 +546,9 @@ Mas você deve ter reparado que a lagosta ainda não sabe lidar bem com as borda
 
 - Como podemos melhorar isso?
 - Basta acrescentarmos um código para que ela gire 180 graus sempre que chegar perto da borda do mundo.
+  - Obs.: você pode chamar o método `isAtEdge` para verificar se um ator está na borda do mundo.
 
-## Desafio {.smaller}
+## Desafio (Opcional) {.smaller}
 
 Como você poderia fazer um [jogo para dois jogadores]{.alert}?
 
@@ -552,4 +557,9 @@ Como você poderia fazer um [jogo para dois jogadores]{.alert}?
   - E faça os tratamentos necessários.
 
 
+## 
+
+::: {.callout-important title="Entrega no Campus Virtual"}
+Acesse, no Campus Virtual, a atividade correspondente a essa aula e envie o código do projeto `greenfoot-caranguejo` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar).
+:::
 

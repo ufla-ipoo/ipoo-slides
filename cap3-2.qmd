@@ -490,7 +490,7 @@ Execute o programa passo apassar para ver os atributos sendo inicializados um a 
 . . .
 
 :::: {.callout-note title="Exercício" icon=false}
-Use o depurador para investigar o método `inserirDinheiro`do projeto `maquina-ingressos-melhor` que vimos anteriormente.
+Use o depurador para investigar o método `inserirDinheiro` do projeto `maquina-ingressos-melhor` que vimos anteriormente.
 
 Chame métodos de forma que consiga depurar a execução tanto do bloco `if` quanto do bloco `else`.
 ::::

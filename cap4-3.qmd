@@ -703,8 +703,8 @@ Para **ilustrar o uso de vetores**, vamos aproveitar para conhecer um recurso qu
 
 Vamos criar um projeto no Greenfoot para vermos isso na prática.
 
-- **Atenção**: leia as instruções do trabalho prático para saber do que se trata o Greenfoot!
-  - E, claro, você precisa ter o Greenfoot instalado para conseguir fazer os exercícios da aula.
+  - E, portanto, você precisa ter o Greenfoot instalado para conseguir fazer os exercícios da aula.
+  
 
 ## {.smaller}
 

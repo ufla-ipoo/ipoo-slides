@@ -920,7 +920,7 @@ Você precisará utilizar o método `tocarAmostra` do atributo `tocador` para fa
 Quando começamos a fazer buscas nos nomes dos arquivos, começamos a perceber que tratar tudo como string não é ideal.
 
 - Ex.: podemos querer buscar todas as músicas que tenham a palavra `renda` no título.
-  - Mas isso pode retornar músicas de uma cantora chamado `Brenda`.
+  - Mas isso pode retornar músicas de uma cantora chamada `Brenda`.
 - Veja que, pensando em termos de orientação a objetos, o ideal era que tivéssemos uma classe para representar músicas.
   - E essa classe poderia, por exemplo, guardar separadamente o nome do artista e o nome da música.
   - E, assim, seria mais fácil buscar músicas por artista ou pelo nome.
