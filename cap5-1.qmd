@@ -9,7 +9,7 @@ Os tópicos abaixo te lembram alguma coisa? :)
 
 - **Praticar enquanto estuda**.
 - **Ler o capítulo do livro**.
-- **Anotar conceitos dúvidas**.
+- **Anotar conceitos e dúvidas**.
 
 . . .
 
@@ -56,7 +56,7 @@ No capítulo anterior conhecemos a classe `ArrayList` da biblioteca de classes d
 
 . . .
 
-Mas ela é apenas um exemplo da classe de biblioteca.
+Mas ela é apenas um exemplo de classe da biblioteca.
 
 - Existem muitas que serão muito úteis em nossos softwares.
 - E outras que, possivelmente, nunca usaremos.
@@ -81,7 +81,6 @@ Neste capítulo, vamos trabalhar com um **sistema de Suporte Técnico**.
 
 - Começaremos com uma versão rudimentar.
 - E ela será melhorado, incrementalmente, utilizando diferentes classes da biblioteca Java.
-  - Obs.: parte do conteúdo será tratada como Material de Estudo Autônomo, como previsto no Plano de Ensino.
 
 ## {.smaller}
 
@@ -149,7 +148,7 @@ Na verdade, cada programador deveria:
 Mas, para isso funcionar, cada membro de equipe deveria documentar sua classe assim como é feito para as classes da biblioteca
 
 - Permitindo que outros programadores usem a classe sem precisar ler o código.
-- Veremos como fazer isso nos materiais de estudo autônomo.
+- Veremos como fazer isso na próxima aula.
 
 # O sistema de suporte técnico {background-color="#40666e"}
 
@@ -314,11 +313,7 @@ Nós também podemos falar de interface de um método específico.
 
 ![](imagens/java-doc-String-length.png)
 
-A interface de um método consiste em sua **assinatura e um comentário**. 
-
-. . .
-
-E a assinatura de um método contém:
+A interface de um método consiste em sua **assinatura e um comentário**. E a assinatura de um método contém:
 
 - Um modificador de acesso (`public`, nesse caso).
 - O tipo de retorno do método (`int`, nesse caso).
@@ -535,19 +530,17 @@ Podemos sortear uma posição usando o método `nextInt` da classe `Random`, e o
 
 Exemplos de frases de resposta do sistema de suporte técnico:
 
-::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+"Isso parece estranho. Você poderia descrever com mais detalhes?"
+"Nenhum outro cliente reclamou disso antes. Qual é a configuração do seu sistema?"
+"Poderia me dar mais informações sobre o problema?"
+"Isso é abordado no manual. Você já leu o manual?"
+"Sua descrição é um pouco ruim. Você tem um especialista com você que poderia descrever isso melhor?"
+"Isso não é um bug, é uma funcionalidade!"
+"Você poderia detalhar melhor isso?"
+"Você já tentou executar o aplicativo no seu telefone?"
+"Já verifiquei no StatckOverflow e ChatGPT e nem eles sabem como responder :("
 ```
-Isso parece estranho. Você poderia descrever com mais detalhes?
-Nenhum outro cliente reclamou disso antes. Qual é a configuração do seu sistema?
-Poderia me dar mais informações sobre o problema?
-Isso é abordado no manual. Você já leu o manual?
-Sua descrição é um pouco ruim. Você tem um especialista com você que poderia descrever isso melhor?
-Isso não é um bug, é uma funcionalidade!
-Você poderia detalhar melhor isso?
-Você já tentou executar o aplicativo no seu telefone?
-Já verifiquei no StatckOverflow e ChatGPT e nem eles sabem como responder :(
-```
-:::
 
 # Melhorando o sistema de suporte {background-color="#40666e"}
 
@@ -556,8 +549,8 @@ Já verifiquei no StatckOverflow e ChatGPT e nem eles sabem como responder :(
 Nosso sistema ficou mais dinâmico, mas ainda é muito ruim, pois as respostas são independentes do que o usuário escreve.
 
 - Nós podemos melhorar um pouco isso, fazendo algo pelo menos próximo do que o usuário perguntou.
-- O livro apresenta uma solução usando a classe `HashMap`.
-  - Mas vamos tratar essa classe como material de Estudo Autônomo.
+- O livro apresenta uma solução usando a classe `HashMap` já aqui.
+  - Mas vamos tratar essa classe na próxima aula teórica.
   - Então vamos implementar aqui primeiro uma solução com blocos `if` e `else` para ter um resultado similar.
 
 . . .
@@ -574,11 +567,9 @@ Por exemplo, suponha que na pergunta do usuário apareça a palavra `"lento"`.
 
 . . .
 
-::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+"Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?"
 ```
-Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?
-```
-:::
 
 . . .
 
@@ -586,11 +577,9 @@ Já se na pergunta do usuário aparecer a palava `"bug"`, a resposta poderia ser
 
 . . .
 
-::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+"Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?"
 ```
-Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?
-```
-:::
 
 . . .
 
@@ -636,44 +625,21 @@ Vamos implementar a ideia discutida nos slides anteriores.  Neste exercício, fa
 
 | Palavra-chave| Sugestão de resposta                                                                                               |
 |--------------|--------------------------------------------------------------------------------------------------------------------|
-| travou       | Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração. |
-| travando     | Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração. |
-| lento        | Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software? |
-| desempenho   | O desempenho foi bastante adequado em todos os nossos testes. Você está executando outros processos em segundo plano? |
-| bug          | Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes? |
-| erro         | Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes? |
-| windows      | Este é um bug conhecido relacionado ao sistema operacional Windows. Por favor, informe à Microsoft. Não há nada que possamos fazer a respeito. |
-| mac          | Este é um bug conhecido relacionado ao sistema operacional Mac. Por favor, informe à Apple. Não há nada que possamos fazer a respeito. |
-| caro         | O custo de nosso produto é bastante competitivo. Você deu uma olhada e realmente comparou nossos recursos? |
-| instalação   | A instalação é realmente bastante simples. Temos muitos assistentes que fazem todo o trabalho para você. Você leu as instruções de instalação? |
-| memória      | Se você ler atentamente os requisitos do sistema, verá que os requisitos de memória especificados são de 1,5 gigabyte. Você realmente deve atualizar sua memória. Mais alguma coisa que você gostaria de saber? |
-| linux        | Levamos o suporte ao Linux muito a sério. Mas há alguns problemas. A maioria está relacionada a versões incompatíveis do glibc. Você pode ser um pouco mais preciso? |
-| bluej        | Ah, o BlueJ, sim. Tentamos comprá-los há muito tempo, mas eles simplesmente não vendem... São pessoas teimosas. Não há nada que possamos fazer a respeito, desculpe. |
+| "travou"       | "Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração." |
+| "travando"     | "Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração." |
+| "lento"        | "Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?" |
+| "desempenho"   | "O desempenho foi bastante adequado em todos os nossos testes. Você está executando outros processos em segundo plano?" |
+| "bug"          | "Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?" |
+| "erro"         | "Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?" |
+| "windows"      | "Este é um bug conhecido relacionado ao sistema operacional Windows. Por favor, informe à Microsoft. Não há nada que possamos fazer a respeito." |
+| "mac"          | "Este é um bug conhecido relacionado ao sistema operacional Mac. Por favor, informe à Apple. Não há nada que possamos fazer a respeito." |
+| "caro"         | "O custo de nosso produto é bastante competitivo. Você deu uma olhada e realmente comparou nossos recursos?" |
+| "instalação"   | "A instalação é realmente bastante simples. Temos muitos assistentes que fazem todo o trabalho para você. Você leu as instruções de instalação?" |
+| "memória"      | "Se você ler atentamente os requisitos do sistema, verá que os requisitos de memória especificados são de 6 gigabytes. Você realmente deve atualizar sua memória. Mais alguma coisa que você gostaria de saber?" |
+| "linux"        | "Levamos o suporte ao Linux muito a sério. Mas há alguns problemas. A maioria está relacionada a versões incompatíveis do glibc. Você pode ser um pouco mais preciso?" |
+| "bluej"        | "Ah, o BlueJ, sim. Tentamos comprá-los há muito tempo, mas eles simplesmente não vendem... São pessoas teimosas. Não há nada que possamos fazer a respeito, desculpe." |
 
 :::
-
-# Estudo Autônomo: a classe `HashMap` {background-color="#40666e"}
-
-## {.smaller}
-
-Conforme descrito no Plano de Ensino da disciplina, esse semestre tem 15 semanas letivas
-
--  e, para completar as 17 semanas previstas de carga horária, parte dos conteúdos da disciplina é tratada como **Estudo Autônomo**.
-
-. . .
-
-Uma dessas partes é sobre **a classe `HashMap`**.
-
-- Você pode estudar sobre isso nos **slides disponibilizados no Campus Virtual**.
-- E na **seção 5.6 do livro** da disciplina.
-  - E, se você estudar também as seções 5.7 a 5.9, fazendo os exercícios, você terminará com um **sistema de Suporte bem mais interessante**.
-
-. . .
-
-**Atenção**: 
-
-- Você pode estudar o conteúdo do Estudo Autônomo a qualquer momento.
-- Mas é importante que seja antes do Capítulo 7, pois nele utilizaremos a classe `HashMap`.
 
 # Autoboxing e classes empacotadoras {background-color="#40666e"}
 
@@ -758,33 +724,6 @@ Veja no Apêndice B do livro uma lista completa dos tipos primitivos e suas clas
 **Autoboxing** é realizado automaticamente quando um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (*wrapper*).
 :::
 
-
-# Estudo Autônomo: escrevendo a documentação de classes {background-color="#40666e"}
-
-## {.smaller}
-
-Em grandes empresas, é muito comum precisarmos utilizar uma classe que foi desenvolvida há muito tempo,
-
-- e, possivelmente, quem criou a classe nem trabalha mais na empresa.
-
-. . .
-
-Nesses casos, é muito importante que a classe tenha uma documentação, assim com as classes da biblioteca do Java.
-
-- Pois, com ela, podemos utilizar a classe sem precisar entender sua implementação.
-- Portanto, é muito **importante** que saibamos como **gerar a documentação de nossas classes**.
-
-## {.smaller}
-
-O Java possui uma ferramenta ([`javadoc`]{.alert}) para geração de **documentação a partir de comentários do código**.
-
-- E o BlueJ possui uma integração bem fácil com essa ferramenta.
-
-. . .
-
-Como material de estudo autônomo, estude a seção 5.10 do livro da disciplina.
-
-- Você verá que podemos gerar e visualizar a documentação de nossas classes, facilmente, no próprio BlueJ.
 
 # Encapsulamento {background-color="#40666e"}
 
@@ -885,7 +824,7 @@ Isso tem a ver com duas questões.
 2. Outra questão é que, ao **usar uma classe**, um programador **não deveria [ter permissão de conhecer]{.alert}** seus detalhes internos.
 
 - Apesar de também ter a ver com modularização, a ideia aqui é que a linguagem não deveria permitir o acesso à parte privada de uma classe a partir de comandos em outras classes.
-- Isso garante que uma classe não depende de **como** exatamente uma outra classe está implementada.
+- Isso garante que uma classe não dependa de **como** exatamente uma outra classe está implementada.
 
 ## {.smaller}
 
@@ -938,7 +877,7 @@ O termo **encapsulamento** vem da palavra *cápsula*, que é definida no dicion�
 
 . . .
 
-A ideia é que a implementação da classe (seus detalhes internos) sejam encapsulados (protegidos)
+A ideia é que a implementação da classe (seus detalhes internos) sejam encapsulados (protegidos).
 
 - E a classe exponha apenas sua interface.
 
@@ -1011,9 +950,9 @@ A linguagem Java permite que atributos sejam declarados como privados ou públic
 
 Declarar atributos públicos quebra o *princípio da ocultação das informações*.
 
-- Portanto, mesmo que a linguagem Java permita atributos públicos, isso é considerado um mal estilo de programação.
+- Portanto, mesmo que a linguagem Java permita atributos públicos, isso é considerado um estilo ruim de programação.
 - Há linguagens que nem permitem a existência de atributos públicos.
-  - Enquanto outras não implementam o completamente o conceito de encapsulamento, o que viola a teoria de POO.
+  - Enquanto outras não implementam completamente o conceito de encapsulamento, o que viola a teoria de POO.
   - Esse é o principal motivo para eu não adotar a linguagem Python na disciplina :)
 
 ## Atributos privados! {.smaller}
@@ -1021,7 +960,7 @@ Declarar atributos públicos quebra o *princípio da ocultação das informaçõ
 Outro motivo para manter os atributos privados é permitir que a **classe tenha** um maior **controle sobre o estado** dos seus objetos.
 
 - Se o atributo é encapsulado e só é acessível através de métodos de acesso (obter/get) e modificadores (definir/set),
-- A classe pode garantir que o atributo nunca tenha um valor inválido ou inconsistente.
+- a classe pode garantir que o atributo nunca tenha um valor inválido ou inconsistente.
 
 . . .
 
@@ -1082,7 +1021,7 @@ Mas repare que podem existir diversos trechos de código no programa que alteram
 
 - E seria necessário colocar essa verificação em todos esses lugares.
 - Outro problema é que tudo isso está acontecendo sem o conhecimento da classe `Circulo`.
-  - Mas ela deveria ser responsável por garantir que o estado dos objetos é sempre válido.
+  - Mas é ela quem deveria ser responsável por garantir que o estado dos seus objetos é sempre válido.
 
 ## Atributos privados! {.smaller}
 

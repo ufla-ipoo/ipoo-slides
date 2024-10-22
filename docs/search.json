@@ -2790,7 +2790,7 @@
     "href": "cap5-1.html#section",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Os tópicos abaixo te lembram alguma coisa? :)\n\nPraticar enquanto estuda.\nLer o capítulo do livro.\nAnotar conceitos dúvidas."
+    "text": "Os tópicos abaixo te lembram alguma coisa? :)\n\nPraticar enquanto estuda.\nLer o capítulo do livro.\nAnotar conceitos e dúvidas."
   },
   {
     "objectID": "cap5-1.html#principais-conceitos-do-capítulo",
@@ -2811,14 +2811,14 @@
     "href": "cap5-1.html#section-3",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "No capítulo anterior conhecemos a classe ArrayList da biblioteca de classes do Java.\n\nCom ela, ficou mais fácil fazer programas para guardar uma quantidade qualquer de objetos.\nO que sem ela seria bem mais complicado.\n\n\nMas ela é apenas um exemplo da classe de biblioteca.\n\nExistem muitas que serão muito úteis em nossos softwares.\nE outras que, possivelmente, nunca usaremos.\n\n\n\nUm bom programador Java precisa conseguir trabalhar com as classes da biblioteca.\n\nE saber quando utilizar cada uma.\nDe forma a tornar a implementação de um programa mais fácil."
+    "text": "No capítulo anterior conhecemos a classe ArrayList da biblioteca de classes do Java.\n\nCom ela, ficou mais fácil fazer programas para guardar uma quantidade qualquer de objetos.\nO que sem ela seria bem mais complicado.\n\n\nMas ela é apenas um exemplo de classe da biblioteca.\n\nExistem muitas que serão muito úteis em nossos softwares.\nE outras que, possivelmente, nunca usaremos.\n\n\n\nUm bom programador Java precisa conseguir trabalhar com as classes da biblioteca.\n\nE saber quando utilizar cada uma.\nDe forma a tornar a implementação de um programa mais fácil."
   },
   {
     "objectID": "cap5-1.html#section-4",
     "href": "cap5-1.html#section-4",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Muitas classes da biblioteca têm certas características comuns entre si.\n\nEspecialmente as coleções, são classes que compartilham muitos atributos.\nE, usando a abstração, podemos tratar de classes de coleções de uma maneira mais geral.\n\n\nNeste capítulo, vamos trabalhar com um sistema de Suporte Técnico.\n\nComeçaremos com uma versão rudimentar.\nE ela será melhorado, incrementalmente, utilizando diferentes classes da biblioteca Java.\n\nObs.: parte do conteúdo será tratada como Material de Estudo Autônomo, como previsto no Plano de Ensino."
+    "text": "Muitas classes da biblioteca têm certas características comuns entre si.\n\nEspecialmente as coleções, são classes que compartilham muitos atributos.\nE, usando a abstração, podemos tratar de classes de coleções de uma maneira mais geral.\n\n\nNeste capítulo, vamos trabalhar com um sistema de Suporte Técnico.\n\nComeçaremos com uma versão rudimentar.\nE ela será melhorado, incrementalmente, utilizando diferentes classes da biblioteca Java."
   },
   {
     "objectID": "cap5-1.html#section-6",
@@ -2846,7 +2846,7 @@
     "href": "cap5-1.html#section-9",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "A mesma coisa acontece em projetos de software grandes de uma empresa.\n\nGeralmente, várias pessoas trabalham em diferentes partes do sistema.\nCada programador deveria se concentrar em sua parte, sem ter que entender detalhes das outras partes.\n\nComo discutimos ao falar sobre abstração e modularização.\n\n\n\nNa verdade, cada programador deveria:\n\nConseguir usar as classes das outras equipes como se elas fossem classes de biblioteca.\nSabendo o que elas fazem, mas sem precisar saber como elas funcionam internamente.\n\n\n\nMas, para isso funcionar, cada membro de equipe deveria documentar sua classe assim como é feito para as classes da biblioteca\n\nPermitindo que outros programadores usem a classe sem precisar ler o código.\nVeremos como fazer isso nos materiais de estudo autônomo."
+    "text": "A mesma coisa acontece em projetos de software grandes de uma empresa.\n\nGeralmente, várias pessoas trabalham em diferentes partes do sistema.\nCada programador deveria se concentrar em sua parte, sem ter que entender detalhes das outras partes.\n\nComo discutimos ao falar sobre abstração e modularização.\n\n\n\nNa verdade, cada programador deveria:\n\nConseguir usar as classes das outras equipes como se elas fossem classes de biblioteca.\nSabendo o que elas fazem, mas sem precisar saber como elas funcionam internamente.\n\n\n\nMas, para isso funcionar, cada membro de equipe deveria documentar sua classe assim como é feito para as classes da biblioteca\n\nPermitindo que outros programadores usem a classe sem precisar ler o código.\nVeremos como fazer isso na próxima aula."
   },
   {
     "objectID": "cap5-1.html#section-10",
@@ -2923,7 +2923,7 @@
     "href": "cap5-1.html#section-19",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "A interface de um método consiste em sua assinatura e um comentário.\n\nE a assinatura de um método contém:\n\nUm modificador de acesso (public, nesse caso).\nO tipo de retorno do método (int, nesse caso).\nO nome do método.\nUma lista de parâmetros (vazia, nesse caso).\n\n\n\nRepare que a interface do método tem tudo que precisamos saber para conseguirmos usá-lo."
+    "text": "A interface de um método consiste em sua assinatura e um comentário. E a assinatura de um método contém:\n\nUm modificador de acesso (public, nesse caso).\nO tipo de retorno do método (int, nesse caso).\nO nome do método.\nUma lista de parâmetros (vazia, nesse caso).\n\n\nRepare que a interface do método tem tudo que precisamos saber para conseguirmos usá-lo."
   },
   {
     "objectID": "cap5-1.html#section-20",
@@ -3000,21 +3000,21 @@
     "href": "cap5-1.html#section-29",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exemplos de frases de resposta do sistema de suporte técnico:\n\nIsso parece estranho. Você poderia descrever com mais detalhes?\nNenhum outro cliente reclamou disso antes. Qual é a configuração do seu sistema?\nPoderia me dar mais informações sobre o problema?\nIsso é abordado no manual. Você já leu o manual?\nSua descrição é um pouco ruim. Você tem um especialista com você que poderia descrever isso melhor?\nIsso não é um bug, é uma funcionalidade!\nVocê poderia detalhar melhor isso?\nVocê já tentou executar o aplicativo no seu telefone?\nJá verifiquei no StatckOverflow e ChatGPT e nem eles sabem como responder :("
+    "text": "Exemplos de frases de resposta do sistema de suporte técnico:\n\"Isso parece estranho. Você poderia descrever com mais detalhes?\"\n\"Nenhum outro cliente reclamou disso antes. Qual é a configuração do seu sistema?\"\n\"Poderia me dar mais informações sobre o problema?\"\n\"Isso é abordado no manual. Você já leu o manual?\"\n\"Sua descrição é um pouco ruim. Você tem um especialista com você que poderia descrever isso melhor?\"\n\"Isso não é um bug, é uma funcionalidade!\"\n\"Você poderia detalhar melhor isso?\"\n\"Você já tentou executar o aplicativo no seu telefone?\"\n\"Já verifiquei no StatckOverflow e ChatGPT e nem eles sabem como responder :(\""
   },
   {
     "objectID": "cap5-1.html#section-30",
     "href": "cap5-1.html#section-30",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nosso sistema ficou mais dinâmico, mas ainda é muito ruim, pois as respostas são independentes do que o usuário escreve.\n\nNós podemos melhorar um pouco isso, fazendo algo pelo menos próximo do que o usuário perguntou.\nO livro apresenta uma solução usando a classe HashMap.\n\nMas vamos tratar essa classe como material de Estudo Autônomo.\nEntão vamos implementar aqui primeiro uma solução com blocos if e else para ter um resultado similar.\n\n\n\nA ideia é identificar alguma palavra-chave na pergunta feita pelo usuário.\n\ne fornecer uma resposta que tenha algo a ver com essa palavra-chave."
+    "text": "Nosso sistema ficou mais dinâmico, mas ainda é muito ruim, pois as respostas são independentes do que o usuário escreve.\n\nNós podemos melhorar um pouco isso, fazendo algo pelo menos próximo do que o usuário perguntou.\nO livro apresenta uma solução usando a classe HashMap já aqui.\n\nMas vamos tratar essa classe na próxima aula teórica.\nEntão vamos implementar aqui primeiro uma solução com blocos if e else para ter um resultado similar.\n\n\n\nA ideia é identificar alguma palavra-chave na pergunta feita pelo usuário.\n\ne fornecer uma resposta que tenha algo a ver com essa palavra-chave."
   },
   {
     "objectID": "cap5-1.html#section-31",
     "href": "cap5-1.html#section-31",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Por exemplo, suponha que na pergunta do usuário apareça a palavra \"lento\".\n\nA resposta poderia ser então algo como:\n\n\n\nAcredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?\n\n\n\nJá se na pergunta do usuário aparecer a palava \"bug\", a resposta poderia ser:\n\n\n\nBem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?\n\n\n\nComo podemos implementar isso?"
+    "text": "Por exemplo, suponha que na pergunta do usuário apareça a palavra \"lento\".\n\nA resposta poderia ser então algo como:\n\n\n\"Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?\"\n\n\nJá se na pergunta do usuário aparecer a palava \"bug\", a resposta poderia ser:\n\n\n\"Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?\"\n\n\nComo podemos implementar isso?"
   },
   {
     "objectID": "cap5-1.html#section-32",
@@ -3035,63 +3035,42 @@
     "href": "cap5-1.html#section-34",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Palavra-chave\nSugestão de resposta\n\n\n\n\ntravou\nBem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração.\n\n\ntravando\nBem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração.\n\n\nlento\nAcredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?\n\n\ndesempenho\nO desempenho foi bastante adequado em todos os nossos testes. Você está executando outros processos em segundo plano?\n\n\nbug\nBem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?\n\n\nerro\nBem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?\n\n\nwindows\nEste é um bug conhecido relacionado ao sistema operacional Windows. Por favor, informe à Microsoft. Não há nada que possamos fazer a respeito.\n\n\nmac\nEste é um bug conhecido relacionado ao sistema operacional Mac. Por favor, informe à Apple. Não há nada que possamos fazer a respeito.\n\n\ncaro\nO custo de nosso produto é bastante competitivo. Você deu uma olhada e realmente comparou nossos recursos?\n\n\ninstalação\nA instalação é realmente bastante simples. Temos muitos assistentes que fazem todo o trabalho para você. Você leu as instruções de instalação?\n\n\nmemória\nSe você ler atentamente os requisitos do sistema, verá que os requisitos de memória especificados são de 1,5 gigabyte. Você realmente deve atualizar sua memória. Mais alguma coisa que você gostaria de saber?\n\n\nlinux\nLevamos o suporte ao Linux muito a sério. Mas há alguns problemas. A maioria está relacionada a versões incompatíveis do glibc. Você pode ser um pouco mais preciso?\n\n\nbluej\nAh, o BlueJ, sim. Tentamos comprá-los há muito tempo, mas eles simplesmente não vendem… São pessoas teimosas. Não há nada que possamos fazer a respeito, desculpe."
+    "text": "Palavra-chave\nSugestão de resposta\n\n\n\n\n“travou”\n“Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração.”\n\n\n“travando”\n“Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração.”\n\n\n“lento”\n“Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?”\n\n\n“desempenho”\n“O desempenho foi bastante adequado em todos os nossos testes. Você está executando outros processos em segundo plano?”\n\n\n“bug”\n“Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?”\n\n\n“erro”\n“Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?”\n\n\n“windows”\n“Este é um bug conhecido relacionado ao sistema operacional Windows. Por favor, informe à Microsoft. Não há nada que possamos fazer a respeito.”\n\n\n“mac”\n“Este é um bug conhecido relacionado ao sistema operacional Mac. Por favor, informe à Apple. Não há nada que possamos fazer a respeito.”\n\n\n“caro”\n“O custo de nosso produto é bastante competitivo. Você deu uma olhada e realmente comparou nossos recursos?”\n\n\n“instalação”\n“A instalação é realmente bastante simples. Temos muitos assistentes que fazem todo o trabalho para você. Você leu as instruções de instalação?”\n\n\n“memória”\n“Se você ler atentamente os requisitos do sistema, verá que os requisitos de memória especificados são de 6 gigabytes. Você realmente deve atualizar sua memória. Mais alguma coisa que você gostaria de saber?”\n\n\n“linux”\n“Levamos o suporte ao Linux muito a sério. Mas há alguns problemas. A maioria está relacionada a versões incompatíveis do glibc. Você pode ser um pouco mais preciso?”\n\n\n“bluej”\n“Ah, o BlueJ, sim. Tentamos comprá-los há muito tempo, mas eles simplesmente não vendem… São pessoas teimosas. Não há nada que possamos fazer a respeito, desculpe.”"
   },
   {
     "objectID": "cap5-1.html#section-35",
     "href": "cap5-1.html#section-35",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Conforme descrito no Plano de Ensino da disciplina, esse semestre tem 15 semanas letivas\n\ne, para completar as 17 semanas previstas de carga horária, parte dos conteúdos da disciplina é tratada como Estudo Autônomo.\n\n\nUma dessas partes é sobre a classe HashMap.\n\nVocê pode estudar sobre isso nos slides disponibilizados no Campus Virtual.\nE na seção 5.6 do livro da disciplina.\n\nE, se você estudar também as seções 5.7 a 5.9, fazendo os exercícios, você terminará com um sistema de Suporte bem mais interessante.\n\n\n\n\nAtenção:\n\nVocê pode estudar o conteúdo do Estudo Autônomo a qualquer momento.\nMas é importante que seja antes do Capítulo 7, pois nele utilizaremos a classe HashMap."
+    "text": "Nós vimos que um ArrayList consegue guardar qualquer tipo de objeto.\n\nMas como int não é um objeto, não é possível usar um ArrayList para guardar uma lista de números inteiros?\n\n\nIsso é possível através das classes empacotadoras (wrapper classes).\n\nCada tipo primitivo em Java tem uma classe empacotadora que representa o mesmo tipo,\n\nMas que é um objeto de verdade.\n\nA classe empacotadora para int, por exemplo, se chama Integer."
   },
   {
     "objectID": "cap5-1.html#section-36",
     "href": "cap5-1.html#section-36",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nós vimos que um ArrayList consegue guardar qualquer tipo de objeto.\n\nMas como int não é um objeto, não é possível usar um ArrayList para guardar uma lista de números inteiros?\n\n\nIsso é possível através das classes empacotadoras (wrapper classes).\n\nCada tipo primitivo em Java tem uma classe empacotadora que representa o mesmo tipo,\n\nMas que é um objeto de verdade.\n\nA classe empacotadora para int, por exemplo, se chama Integer."
+    "text": "Nós poderíamos criar explicitamente um objeto do tipo Integer:\n\n    int n = 10;\n    Integer objetoInt = new Integer(n);\n\n\nE poderíamos então declarar um ArrayList&lt;Integer&gt; e guardar nele o objetoInt.\n\nMas, na verdade, nós nunca fazemos isso, pois podemos guardar valores de tipo primitivo no ArrayList!\nIsso porque sempre que um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (wrapper),\n\no compilador converte o valor automaticamente em um objeto empacotador correspondente.\nEssa funcionalidade se chama autoboxing (algo como, auto-empacotamento)."
   },
   {
     "objectID": "cap5-1.html#section-37",
     "href": "cap5-1.html#section-37",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nós poderíamos criar explicitamente um objeto do tipo Integer:\n\n    int n = 10;\n    Integer objetoInt = new Integer(n);\n\n\nE poderíamos então declarar um ArrayList&lt;Integer&gt; e guardar nele o objetoInt.\n\nMas, na verdade, nós nunca fazemos isso, pois podemos guardar valores de tipo primitivo no ArrayList!\nIsso porque sempre que um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (wrapper),\n\no compilador converte o valor automaticamente em um objeto empacotador correspondente.\nEssa funcionalidade se chama autoboxing (algo como, auto-empacotamento)."
+    "text": "Portanto, na prática, podemos escrever código como mostrado abaixo:\n\n    private ArrayList&lt;Integer&gt; notas;\n    ...\n    public void guardarNotasNaLista(int nota) {\n        notas.add(nota);\n    }\n\n\nRepare que estamos guardando o valor da variável nota, do tipo int, em um ArrayList&lt;Integer&gt;."
   },
   {
     "objectID": "cap5-1.html#section-38",
     "href": "cap5-1.html#section-38",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Portanto, na prática, podemos escrever código como mostrado abaixo:\n\n    private ArrayList&lt;Integer&gt; notas;\n    ...\n    public void guardarNotasNaLista(int nota) {\n        notas.add(nota);\n    }\n\n\nRepare que estamos guardando o valor da variável nota, do tipo int, em um ArrayList&lt;Integer&gt;."
+    "text": "Seguindo a mesma ideia, o compilador realiza o unboxing quando obtemos um valor da coleção:\n\n    int primeiraNota = notas.get(0);\n\n\nVeja portanto que, em termos práticos, a única coisa que precisamos lembrar é de declarar o ArrayList usando a classe empacotadora (como a Integer).\n\nMas na hora de usar o ArrayList podemos tratar todos os dados como se fossem do tipo int."
   },
   {
     "objectID": "cap5-1.html#section-39",
     "href": "cap5-1.html#section-39",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Seguindo a mesma ideia, o compilador realiza o unboxing quando obtemos um valor da coleção:\n\n    int primeiraNota = notas.get(0);\n\n\nVeja portanto que, em termos práticos, a única coisa que precisamos lembrar é de declarar o ArrayList usando a classe empacotadora (como a Integer).\n\nMas na hora de usar o ArrayList podemos tratar todos os dados como se fossem do tipo int."
-  },
-  {
-    "objectID": "cap5-1.html#section-40",
-    "href": "cap5-1.html#section-40",
-    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
-    "section": "",
     "text": "Veja no Apêndice B do livro uma lista completa dos tipos primitivos e suas classes empacotadoras.\n\nVale ressaltar também que o mesmo conceito é aplicado para as demais coleções, como a classe HashMap.\n\n\n\n\n\n\nConceito\n\n\nAutoboxing é realizado automaticamente quando um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (wrapper)."
-  },
-  {
-    "objectID": "cap5-1.html#section-41",
-    "href": "cap5-1.html#section-41",
-    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
-    "section": "",
-    "text": "Em grandes empresas, é muito comum precisarmos utilizar uma classe que foi desenvolvida há muito tempo,\n\ne, possivelmente, quem criou a classe nem trabalha mais na empresa.\n\n\nNesses casos, é muito importante que a classe tenha uma documentação, assim com as classes da biblioteca do Java.\n\nPois, com ela, podemos utilizar a classe sem precisar entender sua implementação.\nPortanto, é muito importante que saibamos como gerar a documentação de nossas classes."
-  },
-  {
-    "objectID": "cap5-1.html#section-42",
-    "href": "cap5-1.html#section-42",
-    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
-    "section": "",
-    "text": "O Java possui uma ferramenta (javadoc) para geração de documentação a partir de comentários do código.\n\nE o BlueJ possui uma integração bem fácil com essa ferramenta.\n\n\nComo material de estudo autônomo, estude a seção 5.10 do livro da disciplina.\n\nVocê verá que podemos gerar e visualizar a documentação de nossas classes, facilmente, no próprio BlueJ."
   },
   {
     "objectID": "cap5-1.html#público-vs.-privado",
@@ -3101,29 +3080,29 @@
     "text": "Público vs. Privado\nVocês já notaram que usamos a todo momento as palavras-chave public e private em nossos programas em Java, como mostrado no exemplo abaixo:\n\n    // declaração de atributos\n    private int numeroDeAssentos;\n\n    // métodos\n    public void definirIdade(int novaIdade) {\n      ...\n    }\n    \n    private int calcularMedia() {\n      ...\n    }\n\n\nChegou a hora de entendermos para que essas palavras-chaves servem."
   },
   {
-    "objectID": "cap5-1.html#section-43",
-    "href": "cap5-1.html#section-43",
+    "objectID": "cap5-1.html#section-40",
+    "href": "cap5-1.html#section-40",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
     "text": "Nós chamamos essas palavras-chave de modificadores de acesso.\n\nelas definem a visibilidade de atributos, construtores e métodos.\n\n\nSe um método, por exemplo, é público:\n\nEle pode ser chamado de dentro da mesma classe e também a partir de outra classe.\n\n\n\nJá métodos privados, por outro lado,\n\nSó podem ser chamados de dentro da mesma classe onde foram declarados.\nEles não são visíveis para as outras classes."
   },
   {
-    "objectID": "cap5-1.html#section-44",
-    "href": "cap5-1.html#section-44",
+    "objectID": "cap5-1.html#section-41",
+    "href": "cap5-1.html#section-41",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
     "text": "Como agora já conhecemos os conceitos de interface e implementação fica mais fácil entendermos o objetivo dessas palavras-chave.\n\nLembre-se que a interface de uma classe é o conjunto de detalhes que um programador que vai usar a classe precisa ver.\n\nEla fornece informações sobre como usar a classe.\n\nE inclui assinaturas e comentários de construtores e métodos.\n\nNós também dizemos que a interface é a parte pública da classe.\nSeu objetivo é definir o que a classe faz."
   },
   {
-    "objectID": "cap5-1.html#section-45",
-    "href": "cap5-1.html#section-45",
+    "objectID": "cap5-1.html#section-42",
+    "href": "cap5-1.html#section-42",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
     "text": "Já a implementação é a parte da classe que define precisamente como a classe funciona.\n\nOs corpos dos métodos, contendo comandos Java, e muitos atributos são parte da implementação.\nNós também podemos dizer que ela é a parte privada da classe.\nQuem usa a classe não precisa conhecer a implementação.\nInclusive, há boas razões para que o programador não possa fazer uso desse conhecimento (como veremos mais adiante)."
   },
   {
-    "objectID": "cap5-1.html#section-46",
-    "href": "cap5-1.html#section-46",
+    "objectID": "cap5-1.html#section-43",
+    "href": "cap5-1.html#section-43",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
     "text": "Portanto, podemos dizer que:\n\nA palavra-chave public declara que um elemento de uma classe (atributo ou método) faz parte de sua interface.\n\nOu seja, é visível publicamente.\n\nJá a palavra-chave private declara que um elemento é parte da implementação.\n\nOu seja, está escondida de acesso externo.\n\n\n\n\n\n\n\nConceito\n\n\nModificadores de acesso definem a visibilidade de um atributo, construtor ou método. Elementos públicos são acessíveis de dentro da classe e a partir de outras classes; já elementos privados são acessíveis somente de dentro da mesma classe."
@@ -3133,39 +3112,39 @@
     "href": "cap5-1.html#encapsulamento-1",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "Encapsulamento",
-    "text": "Encapsulamento\nEm muitas linguagens OO, a implementação de uma classe (seus detalhes internos) é ocultada de outras classes.\n\nIsso tem a ver com duas questões.\n\nAo usar uma classe um programador não deveria precisar conhecer seus detalhes internos.\n\n\nIsso tem a ver com a modularização e abstração que já discutimos antes.\nSe fosse necessário saber os detalhes de todas as classes, seria impossível desenvolver grandes sistemas.\n\n\nOutra questão é que, ao usar uma classe, um programador não deveria ter permissão de conhecer seus detalhes internos.\n\n\nApesar de também ter a ver com modularização, a ideia aqui é que a linguagem não deveria permitir o acesso à parte privada de uma classe a partir de comandos em outras classes.\nIsso garante que uma classe não depende de como exatamente uma outra classe está implementada."
+    "text": "Encapsulamento\nEm muitas linguagens OO, a implementação de uma classe (seus detalhes internos) é ocultada de outras classes.\n\nIsso tem a ver com duas questões.\n\nAo usar uma classe um programador não deveria precisar conhecer seus detalhes internos.\n\n\nIsso tem a ver com a modularização e abstração que já discutimos antes.\nSe fosse necessário saber os detalhes de todas as classes, seria impossível desenvolver grandes sistemas.\n\n\nOutra questão é que, ao usar uma classe, um programador não deveria ter permissão de conhecer seus detalhes internos.\n\n\nApesar de também ter a ver com modularização, a ideia aqui é que a linguagem não deveria permitir o acesso à parte privada de uma classe a partir de comandos em outras classes.\nIsso garante que uma classe não dependa de como exatamente uma outra classe está implementada."
+  },
+  {
+    "objectID": "cap5-1.html#section-44",
+    "href": "cap5-1.html#section-44",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Esta última questão é muito importante para a manutenção de sistemas.\n\nQuando precisamos incluir novas funcionalidades ou corrigir bugs é muito comum precisarmos alterar ou aumentar uma classe.\nO ideal é que a alteração de uma classe não provoque alterações em outras classes.\n\nIsso tem a ver com o que chamamos de acoplamento.\nSe a alteração em uma classe não provoca alterações em outras classes, temos um baixo acoplamento.\nE isso é muito bom, porque torna o trabalho de manutenção muito mais fácil.\nJá que em vez de entender e alterar várias classes, o programador precisa trabalhar em apenas em uma."
+  },
+  {
+    "objectID": "cap5-1.html#section-45",
+    "href": "cap5-1.html#section-45",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Suponha, por exemplo, que a equipe que mantém a linguagem Java faça uma melhoria na implementação da classe ArrayList.\n\nO ideal é que essa melhoria não afete os nossos códigos que usam a classe ArrayList.\nRepare que isso só é possível porque nosso código não faz referência à implementação da classe ArrayList.\n\n\nPara ficar mais claro, quando uma classe A utiliza um objeto de uma classe B.\n\nNão é bem o programador que não pode conhecer a parte interna (implementação) da classe B.\nNa verdade é a classe A que não pode conhecer (ou seja, depender) dos detalhes internos da classe B.\nRepare que pode acontecer do mesmo programador implementar tanto a classe A quanto a classe B.\n\nMas de toda forma, as classes ainda deveriam ter baixo acoplamento."
+  },
+  {
+    "objectID": "cap5-1.html#section-46",
+    "href": "cap5-1.html#section-46",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Esta questão de acoplamento é tão importante que vamos discuti-la, em detalhes, no Capítulo 7.\n\nPor enquanto, o mais importante é entender que a palavra-chave private garante o princípio da ocultação de informações\n\nao impedir que outras classes acessem a parte privada da classe.\n\nIsso garante o baixo acoplamento, tornando a aplicação mais modular e facilitando a manutenção.\n\n\nNós também podemos chamar o princípio da ocultação de informações de encapsulamento.\n\nEsse conceito é fundamental na Programação Orientada a Objetos.\nE talvez seja a única parte do livro que não gosto muito, pois acho que ele não dá a ênfase necessária a esse conceito."
   },
   {
     "objectID": "cap5-1.html#section-47",
     "href": "cap5-1.html#section-47",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Esta última questão é muito importante para a manutenção de sistemas.\n\nQuando precisamos incluir novas funcionalidades ou corrigir bugs é muito comum precisarmos alterar ou aumentar uma classe.\nO ideal é que a alteração de uma classe não provoque alterações em outras classes.\n\nIsso tem a ver com o que chamamos de acoplamento.\nSe a alteração em uma classe não provoca alterações em outras classes, temos um baixo acoplamento.\nE isso é muito bom, porque torna o trabalho de manutenção muito mais fácil.\nJá que em vez de entender e alterar várias classes, o programador precisa trabalhar em apenas em uma."
+    "text": "O termo encapsulamento vem da palavra cápsula, que é definida no dicionário como:\n\n\nA ideia é que a implementação da classe (seus detalhes internos) sejam encapsulados (protegidos).\n\nE a classe exponha apenas sua interface."
   },
   {
     "objectID": "cap5-1.html#section-48",
     "href": "cap5-1.html#section-48",
-    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
-    "section": "",
-    "text": "Suponha, por exemplo, que a equipe que mantém a linguagem Java faça uma melhoria na implementação da classe ArrayList.\n\nO ideal é que essa melhoria não afete os nossos códigos que usam a classe ArrayList.\nRepare que isso só é possível porque nosso código não faz referência à implementação da classe ArrayList.\n\n\nPara ficar mais claro, quando uma classe A utiliza um objeto de uma classe B.\n\nNão é bem o programador que não pode conhecer a parte interna (implementação) da classe B.\nNa verdade é a classe A que não pode conhecer (ou seja, depender) dos detalhes internos da classe B.\nRepare que pode acontecer do mesmo programador implementar tanto a classe A quanto a classe B.\n\nMas de toda forma, as classes ainda deveriam ter baixo acoplamento."
-  },
-  {
-    "objectID": "cap5-1.html#section-49",
-    "href": "cap5-1.html#section-49",
-    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
-    "section": "",
-    "text": "Esta questão de acoplamento é tão importante que vamos discuti-la, em detalhes, no Capítulo 7.\n\nPor enquanto, o mais importante é entender que a palavra-chave private garante o princípio da ocultação de informações\n\nao impedir que outras classes acessem a parte privada da classe.\n\nIsso garante o baixo acoplamento, tornando a aplicação mais modular e facilitando a manutenção.\n\n\nNós também podemos chamar o princípio da ocultação de informações de encapsulamento.\n\nEsse conceito é fundamental na Programação Orientada a Objetos.\nE talvez seja a única parte do livro que não gosto muito, pois acho que ele não dá a ênfase necessária a esse conceito."
-  },
-  {
-    "objectID": "cap5-1.html#section-50",
-    "href": "cap5-1.html#section-50",
-    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
-    "section": "",
-    "text": "O termo encapsulamento vem da palavra cápsula, que é definida no dicionário como:\n\n\nA ideia é que a implementação da classe (seus detalhes internos) sejam encapsulados (protegidos)\n\nE a classe exponha apenas sua interface."
-  },
-  {
-    "objectID": "cap5-1.html#section-51",
-    "href": "cap5-1.html#section-51",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
     "text": "Um bom exemplo que ilustra o encapsulamento é um telefone fixo comum.\n\nVocê usa o telefone através de sua interface (os botões) e não precisa saber como é o funcionamento interno.\n\n\n\n\n\n\n\n\n\nA mesma analogia pode ser feita com um caixa eletrônico.\n\nVocê usa as opções que aparecem pra você (interface) mas não precisa saber como isso funciona internamente.\nE você só tem acesso aos dados que a interface disponibiliza."
@@ -3189,14 +3168,14 @@
     "href": "cap5-1.html#atributos-privados",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "Atributos privados!",
-    "text": "Atributos privados!\nA linguagem Java permite que atributos sejam declarados como privados ou públicos.\n\nMas você deve ter notado que nos exemplos sempre declaramos os atributos como privados.\nIsso é fundamental para respeitar o conceito de encapsulamento.\n\n\nDeclarar atributos públicos quebra o princípio da ocultação das informações.\n\nPortanto, mesmo que a linguagem Java permita atributos públicos, isso é considerado um mal estilo de programação.\nHá linguagens que nem permitem a existência de atributos públicos.\n\nEnquanto outras não implementam o completamente o conceito de encapsulamento, o que viola a teoria de POO.\nEsse é o principal motivo para eu não adotar a linguagem Python na disciplina :)"
+    "text": "Atributos privados!\nA linguagem Java permite que atributos sejam declarados como privados ou públicos.\n\nMas você deve ter notado que nos exemplos sempre declaramos os atributos como privados.\nIsso é fundamental para respeitar o conceito de encapsulamento.\n\n\nDeclarar atributos públicos quebra o princípio da ocultação das informações.\n\nPortanto, mesmo que a linguagem Java permita atributos públicos, isso é considerado um estilo ruim de programação.\nHá linguagens que nem permitem a existência de atributos públicos.\n\nEnquanto outras não implementam completamente o conceito de encapsulamento, o que viola a teoria de POO.\nEsse é o principal motivo para eu não adotar a linguagem Python na disciplina :)"
   },
   {
     "objectID": "cap5-1.html#atributos-privados-1",
     "href": "cap5-1.html#atributos-privados-1",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "Atributos privados!",
-    "text": "Atributos privados!\nOutro motivo para manter os atributos privados é permitir que a classe tenha um maior controle sobre o estado dos seus objetos.\n\nSe o atributo é encapsulado e só é acessível através de métodos de acesso (obter/get) e modificadores (definir/set),\nA classe pode garantir que o atributo nunca tenha um valor inválido ou inconsistente.\n\n\nPara deixar o conceito mais claro, suponha que uma classe Circulo tenha um atributo chamado diametro.\n\nE, como o programador faltou às aulas de POO, ele definiu o atributo como público.\nCom isso, qualquer classe consegue acessar e alterar o valor do diâmetro de um círculo.\n\nFazendo, por exemplo:\n\n\n\n\n\nCirculo circulo = new Circulo(10);\ncirculo.diametro = 30;"
+    "text": "Atributos privados!\nOutro motivo para manter os atributos privados é permitir que a classe tenha um maior controle sobre o estado dos seus objetos.\n\nSe o atributo é encapsulado e só é acessível através de métodos de acesso (obter/get) e modificadores (definir/set),\na classe pode garantir que o atributo nunca tenha um valor inválido ou inconsistente.\n\n\nPara deixar o conceito mais claro, suponha que uma classe Circulo tenha um atributo chamado diametro.\n\nE, como o programador faltou às aulas de POO, ele definiu o atributo como público.\nCom isso, qualquer classe consegue acessar e alterar o valor do diâmetro de um círculo.\n\nFazendo, por exemplo:\n\n\n\n\n\nCirculo circulo = new Circulo(10);\ncirculo.diametro = 30;"
   },
   {
     "objectID": "cap5-1.html#atributos-privados-2",
@@ -3210,7 +3189,7 @@
     "href": "cap5-1.html#atributos-privados-3",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "Atributos privados!",
-    "text": "Atributos privados!\nAlém, é claro, de corrigir o método de cálculo, seria uma boa ideia colocar um if antes de alterar o diâmetro:\n\nPara garantir que o círculo nunca ficasse com valor negativo por algum outro erro.\n\n\n\nint d = calcularNovoDiametro();\nif (d &gt; 0) {\n    circulo.diametro = d;\n}\n\nMas repare que podem existir diversos trechos de código no programa que alteram o valor do diâmetro.\n\nE seria necessário colocar essa verificação em todos esses lugares.\nOutro problema é que tudo isso está acontecendo sem o conhecimento da classe Circulo.\n\nMas ela deveria ser responsável por garantir que o estado dos objetos é sempre válido."
+    "text": "Atributos privados!\nAlém, é claro, de corrigir o método de cálculo, seria uma boa ideia colocar um if antes de alterar o diâmetro:\n\nPara garantir que o círculo nunca ficasse com valor negativo por algum outro erro.\n\n\n\nint d = calcularNovoDiametro();\nif (d &gt; 0) {\n    circulo.diametro = d;\n}\n\nMas repare que podem existir diversos trechos de código no programa que alteram o valor do diâmetro.\n\nE seria necessário colocar essa verificação em todos esses lugares.\nOutro problema é que tudo isso está acontecendo sem o conhecimento da classe Circulo.\n\nMas é ela quem deveria ser responsável por garantir que o estado dos seus objetos é sempre válido."
   },
   {
     "objectID": "cap5-1.html#atributos-privados-4",
@@ -3220,15 +3199,15 @@
     "text": "Atributos privados!\nVamos comparar com uma versão bem implementada da classe Circulo:\n\nela teria o atributo diametro privado;\ne um método modificador para alterar o diâmetro.\n\n\n\npublic class Circulo {\n    private int diametro;\n    ...\n    public void definirDiametro(int diametro) {\n        this.diametro = diametro;\n    }\n}\n\n\n\nRepare que, com isso, o diâmetro só pode ser alterado através da chamada do método mudarDiametro.\n\nE agora fica mais fácil evitar o problema anterior.\nPois basta colocarmos a verificação (if) no método definirDiametro.\nNão é necessário tratar todos os lugares que chamam o método mudarDiametro."
   },
   {
-    "objectID": "cap5-1.html#section-52",
-    "href": "cap5-1.html#section-52",
+    "objectID": "cap5-1.html#section-49",
+    "href": "cap5-1.html#section-49",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
     "text": "Em resumo:\n\nAtributos deveriam ser sempre privados!\n\n\n\n\n\n\nConceito\n\n\nEncapsulamento (ou ocultamento de informações) é um princípio que define que os detalhes internos da implementação de uma classe deveriam ser ocultados das outras classes. Isso permite uma melhor modularização de uma aplicação."
   },
   {
-    "objectID": "cap5-1.html#section-53",
-    "href": "cap5-1.html#section-53",
+    "objectID": "cap5-1.html#section-50",
+    "href": "cap5-1.html#section-50",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
     "text": "Para ter presença nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nResponda a tarefa no Campus Virtual enviando o seu projeto suporte-tecnico1 com as alterações dos 5 exercícios solicitados ao longo dos slides.\nAtenção: não se esqueça do aviso dado nos slides sobre o professor ter como corrigir a geração de reposta aleatória!"
