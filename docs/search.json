@@ -3630,7 +3630,7 @@
     "href": "cap3-1.html#principais-conceitos-do-capítulo",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "Principais Conceitos do Capítulo",
-    "text": "Principais Conceitos do Capítulo\n\n\nAbstração\nModularização\nCriação de objetos\nChamadas de métodos\nDepuradores\n\n\n\nConstruções Java do capítulo\n\n\nTipos de classe, operadores lógicos (&& e ||), concatenação de strings, construçãfo de objetos (operador new), chamadas de métodos, this.\n\n\n\n\nNós já temos uma boa noção do que são objetos, como são implementados através de classes e como são utilizados individualmente.\n\nNós agora vamos ver que, para criar aplicações interessantes, precisamos usar objetos que cooperam entre si para realizar alguma tarefa."
+    "text": "Principais Conceitos do Capítulo\n\n\nAbstração\nModularização\nCriação de objetos\nChamadas de métodos\nDepuradores\n\n\n\nConstruções Java do capítulo\n\n\nTipos de classe, operadores lógicos (&& e ||), concatenação de strings, construção de objetos (operador new), chamadas de métodos, this.\n\n\n\n\nNós já temos uma boa noção do que são objetos, como são implementados através de classes e como são utilizados individualmente.\n\nNós agora vamos ver que, para criar aplicações interessantes, precisamos usar objetos que cooperam entre si para realizar alguma tarefa."
   },
   {
     "objectID": "cap3-1.html#section",
@@ -3763,7 +3763,7 @@
     "href": "cap3-1.html#section-21",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Repare como funcionam os dígitos das horas.\n\nEles começam em 0, incrementam de 1 em 1, até chegar a 23, e depois voltam para zero.\n\n\nE como funcionam os dígitos dos minutos?\n\nEles começam em 0, incrementam de 1 em 1, até chegar a 59, e depois voltam para zero.\n\n\n\nRepare que o comportamento dos dígitos das horas e dos minutosé exatamente o mesmo.\n\nO que muda é apenas o valor limite que faz o valor voltar para zero.\nPodemos pensar então em um objeto capaz de representar um visor de dois dígitos. \nE poderíamos usar dois objetos desse tipo, um para as horas e outro para os minutos, para representar o relógio."
+    "text": "Repare como funcionam os dígitos das horas.\n\nEles começam em 0, incrementam de 1 em 1, até chegar a 23, e depois voltam para zero.\n\n\nE como funcionam os dígitos dos minutos?\n\nEles começam em 0, incrementam de 1 em 1, até chegar a 59, e depois voltam para zero.\n\n\n\nRepare que o comportamento dos dígitos das horas e dos minutos é exatamente o mesmo.\n\nO que muda é apenas o valor limite que faz o valor voltar para zero.\nPodemos pensar então em um objeto capaz de representar um visor de dois dígitos. \nE poderíamos usar dois objetos desse tipo, um para as horas e outro para os minutos, para representar o relógio."
   },
   {
     "objectID": "cap3-1.html#section-22",
@@ -3833,7 +3833,7 @@
     "href": "cap3-1.html#quiz-3.2",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "Quiz 3.2",
-    "text": "Quiz 3.2\n\nMarque a alternativa incorreta:\n\nClasses definem tipos.\nDiagramas de classes dão uma visão estática do programa.\nDiagramas de objetos dão uma visão dinâmica do programa.\nVisão estática se referente ao tempo de execução do programa."
+    "text": "Quiz 3.2\n\nMarque a alternativa incorreta:\n\nClasses definem tipos.\nDiagramas de classes dão uma visão estática do programa.\nDiagramas de objetos dão uma visão dinâmica do programa.\nVisão estática se refere ao tempo de execução do programa."
   },
   {
     "objectID": "cap3-1.html#section-31",
@@ -3903,7 +3903,7 @@
     "href": "cap3-1.html#section-40",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Agora que já entendemos como criar uma clase que define um visor de números de dois dígitos, vamos estudar o projeto visor-relogio.\n\nEle possui a classe VisorDeRelogio que cria dois objetos visores de números para construir o visor completo do relógio."
+    "text": "Agora que já entendemos como criar uma classe que define um visor de números de dois dígitos, vamos estudar o projeto visor-relogio.\n\nEle possui a classe VisorDeRelogio que cria dois objetos visores de números para construir o visor completo do relógio."
   },
   {
     "objectID": "cap3-1.html#section-41",
@@ -4057,7 +4057,7 @@
     "href": "cap3-1.html#section-62",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "public void tiqueTaque()\n    {\n        minutos.incrementar();\n        if(minutos.obterValor() == 0) {  // minutos voltaram para zero\n            horas.incrementar();\n        }\n        atualizarVisor();\n    }\n\nA primeira linha do método chama o comando incrementar do objeto minutos.\n\nVeja então que, dessa, quando um dos métodos do VisorDeRelogio é chamado, ele, por sua vez, chama um método de outro objeto como parte da tarefa.\n\n\nUma chamada a um método de outro objeto é uma chamada de método externo."
+    "text": "public void tiqueTaque()\n    {\n        minutos.incrementar();\n        if(minutos.obterValor() == 0) {  // minutos voltaram para zero\n            horas.incrementar();\n        }\n        atualizarVisor();\n    }\n\nA primeira linha do método chama o comando incrementar do objeto minutos.\n\nVeja então que, dessa forma, quando um dos métodos do VisorDeRelogio é chamado, ele, por sua vez, chama um método de outro objeto como parte da tarefa.\n\n\nUma chamada a um método de outro objeto é uma chamada de método externo."
   },
   {
     "objectID": "cap3-1.html#section-63",

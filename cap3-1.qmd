@@ -40,7 +40,7 @@ Será que preciso dizer de novo as [dicas]{.alert}? :)
 Construções Java do capítulo
 
 ::: {.nonincremental}
-- Tipos de classe, operadores lógicos (`&&` e `||`), concatenação de strings, construçãfo de objetos (operador `new`), chamadas de métodos, `this`.
+- Tipos de classe, operadores lógicos (`&&` e `||`), concatenação de strings, construção de objetos (operador `new`), chamadas de métodos, `this`.
 :::
 
 . . .
@@ -362,7 +362,7 @@ E como funcionam os dígitos dos minutos?
 
 . . .
 
-Repare que o comportamento dos dígitos das horas e dos minutosé exatamente o mesmo.
+Repare que o comportamento dos dígitos das horas e dos minutos é exatamente o mesmo.
 
 - O que muda é apenas o valor limite que faz o valor voltar para zero.
 
@@ -550,7 +550,7 @@ Escreva a declaração de um atributo `orientador` que guarde uma referência pa
 a. Classes definem tipos.
 b. Diagramas de classes dão uma visão estática do programa.
 c. Diagramas de objetos dão uma visão dinâmica do programa.
-d. Visão estática se referente ao tempo de execução do programa.
+d. Visão estática se refere ao tempo de execução do programa.
 :::
 
 # Tipos primitivos e tipos objetos {background-color="#40666e"}
@@ -742,7 +742,7 @@ O que acontece, por exemplo, se você criar um objeto com limite 800?
 
 ## {.smaller}
 
-Agora que já entendemos como criar uma clase que define um visor de números de dois dígitos, vamos estudar o projeto [visor-relogio](https://github.com/ufla-ipoo/visor-relogio).
+Agora que já entendemos como criar uma classe que define um visor de números de dois dígitos, vamos estudar o projeto [visor-relogio](https://github.com/ufla-ipoo/visor-relogio).
 
 - Ele possui a classe `VisorDeRelogio` que cria dois objetos visores de números para construir o visor completo do relógio.
 
@@ -1188,7 +1188,7 @@ Se este visor estivesse conectado a um relógio de verdade, este método seria c
 
 A primeira linha do método chama o comando `incrementar` do objeto `minutos`.
 
-- Veja então que, dessa, quando um dos métodos do `VisorDeRelogio` é chamado, ele, por sua vez, chama um método de outro objeto como parte da tarefa.
+- Veja então que, dessa forma, quando um dos métodos do `VisorDeRelogio` é chamado, ele, por sua vez, chama um método de outro objeto como parte da tarefa.
 
 . . .
 
