@@ -2195,7 +2195,7 @@
     "href": "cap4-1.html#section-11",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Por razões didáticas, ou seja, para ficar mais fácil assimilarmos os conceitos:\n\nvamos começar com uma versão bem simples da classe,\nque lida apenas com os nomes dos arquivos de música.\n\nSem detalhes como título, artista, duração, etc.\n\n\n\nNesse cenário, precisaremos que o ArrayList guarde objetos String que representem os nomes dos arquivos.\n\nA ideia é começar simples, para focarmos no conceito que vamos aprender agora, criação e uso de coleções.\nDepois vamos incrementar o projeto para que ele pareça com um organizar e tocador de músicas de verdade."
+    "text": "Por razões didáticas, ou seja, para ficar mais fácil assimilarmos os conceitos:\n\nvamos começar com uma versão bem simples da classe,\nque lida apenas com os nomes dos arquivos de música.\n\nSem detalhes como título, artista, duração, etc.\n\n\n\nNesse cenário, precisaremos que o ArrayList guarde objetos String que representem os nomes dos arquivos.\n\nA ideia é começar simples, para focarmos no conceito que vamos aprender agora: criação e uso de coleções.\nDepois vamos incrementar o projeto para que ele pareça com um organizador e tocador de músicas de verdade."
   },
   {
     "objectID": "cap4-1.html#section-12",
@@ -2307,7 +2307,7 @@
     "href": "cap4-1.html#section-24",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Veja as declarações abaixo, por exemplo:\n\n  private ArrayList&lt;Pessoa&gt; equipe;\n  private ArrayList&lt;MaquinaIngressos&gt; maquinas;  \n\n\nO atributo equipe pode armazenar obetos Pessoa.\n\nJá o atributo maquinas guarda objetos MaquinaIngressos.\nPortanto, ArrayList&lt;Pessoa&gt; e ArrayList&lt;MaquinaIngressos&gt; são tipos diferentes.\n\n\n\nVocê acha que a linha de código abaixo seria válida?\n\n  equipe = maquinas;  \n\n\nNão!\n\nJustamente porque as variáveis são de tipos diferentes."
+    "text": "Veja as declarações abaixo, por exemplo:\n\n  private ArrayList&lt;Pessoa&gt; equipe;\n  private ArrayList&lt;MaquinaIngressos&gt; maquinas;  \n\n\nO atributo equipe pode armazenar objetos Pessoa.\n\nJá o atributo maquinas guarda objetos MaquinaIngressos.\nPortanto, ArrayList&lt;Pessoa&gt; e ArrayList&lt;MaquinaIngressos&gt; são tipos diferentes.\n\n\n\nVocê acha que a linha de código abaixo seria válida?\n\n  equipe = maquinas;  \n\n\nNão!\n\nJustamente porque as variáveis são de tipos diferentes."
   },
   {
     "objectID": "cap4-1.html#section-25",
@@ -2335,7 +2335,7 @@
     "href": "cap4-1.html#section-28",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Repare que os métodos listarArquivo e removerArquivo verificam o valor do índice antes de passá-lo para os métodos do ArrayList.\n\nEles conferem se o índice está no intervalo válido, entre 0 e size()-1.\nÉ um bom hábito fazer isso para evitar erros nas chamadas de métodas de classes da biblioteca.\n\n\n\n\n\n\nCuidado\n\n\nSe você não tomar cuidado, pode acabar tentando acessar uma posição inválida de um ArrayList.\nSe fizer isso, o programa exibirá uma mensagem de índice fora da faixa (IndexOutOfBoundsException) e o programa será terminado."
+    "text": "Repare que os métodos listarArquivo e removerArquivo verificam o valor do índice antes de passá-lo para os métodos do ArrayList.\n\nEles conferem se o índice está no intervalo válido, entre 0 e size()-1.\nÉ um bom hábito fazer isso para evitar erros nas chamadas de métodos de classes da biblioteca.\n\n\n\n\n\n\nCuidado\n\n\nSe você não tomar cuidado, pode acabar tentando acessar uma posição inválida de um ArrayList.\nSe fizer isso, o programa exibirá uma mensagem de índice fora da faixa (IndexOutOfBoundsException) e o programa será terminado."
   },
   {
     "objectID": "cap4-1.html#section-29",
@@ -2370,7 +2370,7 @@
     "href": "cap4-1.html#section-33",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Seria interessante se nosso organizador não só guardasse uma lista de arquivos de música,\n\nMas se também tocasse realmente as músicas.\n\n\nSe tivermos uma classe implementada para tocar arquivos de aúdio, nossa classe organizadora não precisar saber nada sobre como fazer isso.\n\nPoderia apenas lidar com o nome do arquivo e deixar a outra classe cuidar do resto.\nInfelizmente, a biblioteca padrão do Java não tem uma classe para tocar arquivos MP3.\nMas muitos programadores e empesas criam classes úteis o tempo todo.\n\nE as disponibilizam para outras pessoas usarem.\nÉ o que chamamos de classes de terceiros (third-party libraries).\nElas podem ser importadas e usadas da mesma forma que as classes da biblioteca padrão Java.\n\nPrecisamos apenas ter o arquivo da biblioteca em nosso projeto (veremos mais sobre isso no futuro)."
+    "text": "Seria interessante se nosso organizador não só guardasse uma lista de arquivos de música,\n\nMas se também tocasse realmente as músicas.\n\n\nSe tivermos uma classe implementada para tocar arquivos de aúdio, nossa classe organizadora não precisa saber nada sobre como fazer isso.\n\nPoderia apenas lidar com o nome do arquivo e deixar a outra classe cuidar do resto.\nInfelizmente, a biblioteca padrão do Java não tem uma classe para tocar arquivos MP3.\nMas muitos programadores e empesas criam classes úteis o tempo todo.\n\nE as disponibilizam para outras pessoas usarem.\nÉ o que chamamos de classes de terceiros (third-party libraries).\nElas podem ser importadas e usadas da mesma forma que as classes da biblioteca padrão Java.\n\nPrecisamos apenas ter o arquivo da biblioteca em nosso projeto (veremos mais sobre isso no futuro)."
   },
   {
     "objectID": "cap4-1.html#section-34",
@@ -2391,7 +2391,7 @@
     "href": "cap4-1.html#resumo-do-organizador-de-músicas",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "Resumo do organizador de músicas",
-    "text": "Resumo do organizador de músicas\n\nAgora nós sabemos como usar o básico de uma coleção em Java.\n\nFizemos isso com pouco esforço, porque estamos aproveitando o que está implementado na classe ArrayList.\nDa mesma forma, nosso programa é capaz de tocar músicas, com pouco esforço.\n\nAproveitando o que já está implementado em uma classe de biblioteca de terceiros.\n\n\n\n\nVeja que, em ambos os casos, precisamos saber muito pouco sobre o funcionamento interno das classes.\n\nPrecisamos saber apenas informações sobre alguns métodos importantes.\n\nBasicamente seus nomes, tipos de parâmetro e tipo de retorno.\n\n\n\n\nAinda faltam algumas coisas para nosso organizar ficar mais útil.\n\nEspecialmente, poder listar os nomes de todos os arquivos da coleção.\nÉ o que veremos a seguir."
+    "text": "Resumo do organizador de músicas\n\nAgora nós sabemos como usar o básico de uma coleção em Java.\n\nFizemos isso com pouco esforço, porque estamos aproveitando o que está implementado na classe ArrayList.\nDa mesma forma, nosso programa é capaz de tocar músicas, com pouco esforço.\n\nAproveitando o que já está implementado em uma classe de biblioteca de terceiros.\n\n\n\n\nVeja que, em ambos os casos, precisamos saber muito pouco sobre o funcionamento interno das classes.\n\nPrecisamos saber apenas informações sobre alguns métodos importantes.\n\nBasicamente seus nomes, tipos de parâmetro e tipo de retorno.\n\n\n\n\nAinda faltam algumas coisas para nosso organizador ficar mais útil.\n\nEspecialmente, poder listar os nomes de todos os arquivos da coleção.\nÉ o que veremos a seguir."
   },
   {
     "objectID": "cap4-1.html#section-36",
@@ -3448,7 +3448,7 @@
     "href": "greenfoot-tutorial.html#section-2",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Experimente agora colocar dois caranguejos e chamar o método Executar.\n\nOs dois caranguejos fazem a mesma coisa, pois são objetos da mesma classe.\n\n\nExperimente passar valores diferentes para o método move.\n\nVocê pode testar valores menores, maiores e até negativos.\n\n\n\nO método move faz um ator se mover para frente pela quantidade passada.\n\nUm ator sempre começa “olhando” para a direita da tela.\nPortanto, a princípio, ele se move para a direta da tela."
+    "text": "Experimente agora colocar dois caranguejos e chamar o método Executar.\n\nOs dois caranguejos fazem a mesma coisa, pois são objetos da mesma classe.\n\n\nExperimente passar valores diferentes para o método move.\n\nVocê pode testar valores menores, maiores e até negativos.\n\n\n\nO método move faz um ator se mover para frente pela quantidade passada.\n\nUm ator sempre começa “olhando” para a direita da tela.\nPortanto, a princípio, ele se move para a direita da tela."
   },
   {
     "objectID": "greenfoot-tutorial.html#section-3",
@@ -3462,7 +3462,7 @@
     "href": "greenfoot-tutorial.html#controle-usando-o-teclado",
     "title": "Tutorial do Greenfoot",
     "section": "Controle usando o teclado",
-    "text": "Controle usando o teclado\nFica mais interessante se pudermos controlar o caranguejo.\n\npara isso, podemos usar o método estático isKeyDown da classe Greenfoot.\n\n\nPor exemplo, podemos verificar se a tecla seta para a esquerda está pressionada assim:\n\n    if (Greenfoot.isKeyDown(\"left\")) {\n        // implemetamos aqui o que deve acontecer se a tecla seta para\n        // a esquerda estiver pressionada\n    }"
+    "text": "Controle usando o teclado\nFica mais interessante se pudermos controlar o caranguejo.\n\npara isso, podemos usar o método estático isKeyDown da classe Greenfoot.\n\n\nPor exemplo, podemos verificar se a tecla seta para a esquerda está pressionada assim:\n\n    if (Greenfoot.isKeyDown(\"left\")) {\n        // implementamos aqui o que deve acontecer se a tecla seta para\n        // a esquerda estiver pressionada\n    }"
   },
   {
     "objectID": "greenfoot-tutorial.html#section-4",
@@ -3553,7 +3553,7 @@
     "href": "greenfoot-tutorial.html#aleatoriedade",
     "title": "Tutorial do Greenfoot",
     "section": "Aleatoriedade",
-    "text": "Aleatoriedade\nBom, o jogo ainda está muito fácil. Vamos deixá-lo menos previsível.\n\nA ideia é que as lagostas possam girar a cada hora por um ângulo diferente.\nPodemos fazer isso usando o o método estático getRandomNumber da classe Greenfoot.\n\nExemplo: int angulo = Greenfoot.getRandomNumber(90);.\n\nE então usamos o angulo como parâmetro do métodp turn.\n\nExemplo: turn(angulo);.\n\nImplemente e teste o jogo.\n\n\nO que achou do resultado?\n\nA lagosta não é um oponente desafiador ainda, certo? :)"
+    "text": "Aleatoriedade\nBom, o jogo ainda está muito fácil. Vamos deixá-lo menos previsível.\n\nA ideia é que as lagostas possam girar a cada hora por um ângulo diferente.\nPodemos fazer isso usando o método estático getRandomNumber da classe Greenfoot.\n\nExemplo: int angulo = Greenfoot.getRandomNumber(90);.\n\nE então usamos o ângulo como parâmetro do método turn.\n\nExemplo: turn(angulo);.\n\nImplemente e teste o jogo.\n\n\nO que achou do resultado?\n\nA lagosta não é um oponente desafiador ainda, certo? :)"
   },
   {
     "objectID": "greenfoot-tutorial.html#section-9",

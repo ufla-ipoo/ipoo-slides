@@ -11,7 +11,7 @@ O trabalho da disciplina será um jogo com gráficos em 2D, desenvolvido em Java
 
 . . .
 
-Obs.: Este material se baseia no tutorial disponibilizado no site do Greenfoot: https://www.greenfoot.org/doc/tut-1
+Obs.: Este material se baseia no tutorial disponibilizado no site do Greenfoot: [https://www.greenfoot.org/doc/tut-1]()
 
 # Parte 1: Interagindo com o Greenfoot {background-color="#40666e"}
 
@@ -196,7 +196,7 @@ Experimente passar valores diferentes para o método `move`.
 O método `move` faz um ator se mover para frente pela quantidade passada.
 
 - Um ator sempre começa "olhando" para a direita da tela.
-- Portanto, a princípio, ele se move para a direta da tela.
+- Portanto, a princípio, ele se move para a direita da tela.
 
 ## {.smaller}
 
@@ -233,7 +233,7 @@ Por exemplo, podemos verificar se a tecla seta para a esquerda está pressionada
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
     if (Greenfoot.isKeyDown("left")) {
-        // implemetamos aqui o que deve acontecer se a tecla seta para
+        // implementamos aqui o que deve acontecer se a tecla seta para
         // a esquerda estiver pressionada
     }
 ```
@@ -467,9 +467,9 @@ Nas partes anteriores do tutorial já vimos como movimentar um ator e como remov
 Bom, o jogo ainda está muito fácil. Vamos deixá-lo menos previsível.
 
 - A ideia é que as lagostas possam girar a cada hora por um ângulo diferente.
-- Podemos fazer isso usando o o método estático `getRandomNumber` da classe `Greenfoot`.
+- Podemos fazer isso usando o método estático `getRandomNumber` da classe `Greenfoot`.
   - Exemplo: `int angulo = Greenfoot.getRandomNumber(90);`.
-- E então usamos o angulo como parâmetro do métodp `turn`.
+- E então usamos o ângulo como parâmetro do método `turn`.
   - Exemplo: `turn(angulo);`.
 - Implemente e teste o jogo.
 

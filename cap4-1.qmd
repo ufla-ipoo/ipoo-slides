@@ -241,8 +241,8 @@ Por razões didáticas, ou seja, para ficar mais fácil assimilarmos os conceito
 
 Nesse cenário, precisaremos que o **`ArrayList` guarde objetos String** que representem os nomes dos arquivos.
 
-- A ideia é começar simples, para focarmos no conceito que vamos aprender agora, criação e uso de coleções.
-- Depois vamos incrementar o projeto para que ele pareça com um organizar e tocador de músicas de verdade.
+- A ideia é começar simples, para focarmos no conceito que vamos aprender agora: criação e uso de coleções.
+- Depois vamos incrementar o projeto para que ele pareça com um organizador e tocador de músicas de verdade.
 
 ## {.smaller}
 
@@ -520,7 +520,7 @@ Veja as declarações abaixo, por exemplo:
 
 . . .
 
-O atributo `equipe` pode armazenar obetos `Pessoa`.
+O atributo `equipe` pode armazenar objetos `Pessoa`.
 
 - Já o atributo `maquinas` guarda objetos `MaquinaIngressos`.
 - Portanto, `ArrayList<Pessoa>` e `ArrayList<MaquinaIngressos>` são tipos diferentes.
@@ -580,7 +580,7 @@ Portanto, se um `ArrayList` tiver 20 objetos, qual é a posição do último ele
 Repare que os métodos `listarArquivo` e `removerArquivo` verificam o valor do índice antes de passá-lo para os métodos do `ArrayList`.
 
 - Eles conferem se o índice está no intervalo válido, entre `0` e `size()-1`.
-- É um bom hábito fazer isso para evitar erros nas chamadas de métodas de classes da biblioteca.
+- É um bom hábito fazer isso para evitar erros nas chamadas de métodos de classes da biblioteca.
 
 . . .
 
@@ -660,7 +660,7 @@ Seria interessante se nosso organizador não só guardasse uma lista de arquivos
 
 . . .
 
-Se tivermos uma **classe** implementada **para tocar arquivos de aúdio**, nossa classe organizadora não precisar saber nada sobre como fazer isso.
+Se tivermos uma **classe** implementada **para tocar arquivos de aúdio**, nossa classe organizadora não precisa saber nada sobre como fazer isso.
 
 - Poderia apenas lidar com o nome do arquivo e deixar a outra classe cuidar do resto.
 - Infelizmente, a biblioteca padrão do Java não tem uma classe para tocar arquivos MP3.
@@ -722,7 +722,7 @@ Veja que, em ambos os casos, **precisamos saber** muito **pouco sobre o funciona
 
 . . .
 
-Ainda faltam algumas coisas para nosso organizar ficar mais útil.
+Ainda faltam algumas coisas para nosso organizador ficar mais útil.
 
 - Especialmente, poder listar os nomes de todos os arquivos da coleção.
 - É o que veremos a seguir.
