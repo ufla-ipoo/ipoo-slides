@@ -641,7 +641,7 @@
     "href": "cap3-2.html#section-25",
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
-    "text": "Exercício\n\n\nCrie um breakpoint na primeira linha do método enviarEmail da classe ClienteDeEmail e, em seguida, chame o método.\nUse o botão Entrar em para entrar no construtor do objeto e-mail.\nNa janela do depurador observe que os atributos e os parâmetros têm os mesmos nomes. Execute o programa passo apassar para ver os atributos sendo inicializados um a um.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nUse o depurador para investigar o método inserirDinheiro do projeto maquina-ingressos-melhor que vimos anteriormente.\nChame métodos de forma que consiga depurar a execução tanto do bloco if quanto do bloco else."
+    "text": "Exercício\n\n\nCrie um breakpoint na primeira linha do método enviarEmail da classe ClienteDeEmail e, em seguida, chame o método.\nUse o botão Entrar em para entrar no construtor do objeto e-mail.\nNa janela do depurador observe que os atributos e os parâmetros têm os mesmos nomes. Execute o programa passo a passo para ver os atributos sendo inicializados um a um.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nUse o depurador para investigar o método inserirDinheiro do projeto maquina-ingressos-melhor que vimos anteriormente.\nChame métodos de forma que consiga depurar a execução tanto do bloco if quanto do bloco else."
   },
   {
     "objectID": "cap3-2.html#section-26",
