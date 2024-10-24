@@ -484,7 +484,7 @@ Crie um *breakpoint* na primeira linha do método `enviarEmail` da classe `Clien
 Use o botão **Entrar em** para entrar no construtor do objeto e-mail.
 
 Na janela do depurador observe que os atributos e os parâmetros têm os mesmos nomes.
-Execute o programa passo apassar para ver os atributos sendo inicializados um a um.
+Execute o programa passo a passo para ver os atributos sendo inicializados um a um.
 ::::
 
 . . .
