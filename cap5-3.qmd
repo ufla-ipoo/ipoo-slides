@@ -1,6 +1,6 @@
 ---
 title: IPOO - Cap. 5 Comportamento Mais Sofisticado
-subtitle: Aula 5.2 - Prática
+subtitle: Aula 5.3 - Prática
 ---
 
 # Projeto no Greenfoot {background-color="#40666e"}
@@ -13,7 +13,7 @@ Nesta aula, vamos usar o Greenfoot em vez do BlueJ.
 
 . . .
 
-Nós usaremos o projeto no Greenfoot para aprender conceitos que não foram vistos na aula teórica:
+Nós usaremos o projeto no Greenfoot para aprender conceitos que não foram vistos nas aulas teóricas anteriores:
 
 - Atributos estáticos.
 - Métodos estáticos.
@@ -92,7 +92,7 @@ Execute o programa e veja o que acontece de diferente.
 
 . . .
 
-O atributi `GRAVIDADE` é declarado da seguinte forma:
+O atributo `GRAVIDADE` é declarado da seguinte forma:
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
@@ -254,7 +254,7 @@ Suponha, por exemplo, que uma classe `Calendario` tenha o método estático abai
 
 Nós poderíamos chamar esse método usando o comando abaixo:
 
-- Repare que usamos o nome da classe antes do `.` para chamar o método, em vez de usar um objeto.
+- Repare que usamos o **nome da classe** antes do `.` para chamar o método, **em vez de usar um objeto**.
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
