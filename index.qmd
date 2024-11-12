@@ -5,11 +5,13 @@
 :::: {.columns}
 
 
-::: {.column width="50%"}
+::: {.column width="35%"}
 
-[Videoaulas]{.alert}: [Playlist no Youtube](https://www.youtube.com/watch?v=Pn49AxSBQ7g&list=PLaPMgEYxCSWep1GK69nOMWPr20zPKRILC)
+[Videoaulas]{.alert}: 
+- [Playlist no Youtube](https://www.youtube.com/watch?v=Pn49AxSBQ7g&list=PLaPMgEYxCSWep1GK69nOMWPr20zPKRILC)
 
-[Projetos de exemplo]{.alert}: [Repositório no GitHub](https://github.com/orgs/ufla-ipoo/repositories)
+[Projetos de exemplo]{.alert}: 
+- [Repositório no GitHub](https://github.com/orgs/ufla-ipoo/repositories)
 
 [Slides]{.alert} 
 
@@ -26,7 +28,7 @@
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="35%"}
 
 - **Capítulo 3**
   - [Aula 3.1 - Teórica](cap3-1.html)
@@ -37,9 +39,15 @@
   - [Aula 4.2 - Prática (exercício)](cap4-2.html)
   - [Aula 4.3 - Teórica](cap4-3.html)
   - [Aula 4.4 - Prática](https://github.com/ufla-ipoo/produtos)
+
+:::
+
+::: {.column width="30%"}
+
 - **Capítulo 5**
   - [Aula 5.1 - Teórica](cap5-1.html)
-  - [Aula 5.2 - Prática](cap5-2.html)
+  - [Aula 5.2 - Teórica](cap5-2.html)
+  - [Aula 5.3 - Prática](cap5-3.html)
 - **Capítulo 7**
   - [Aula 7.1 - Teórica](https://docs.google.com/presentation/d/1DZTU_jEUavfASD8cIGk_YzywxBkGDEHsn8lAQxtxycw/edit?usp=sharing)
 - **Capítulo 6**

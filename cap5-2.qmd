@@ -1,0 +1,219 @@
+---
+title: IPOO - Cap. 5 Comportamento Mais Sofisticado
+subtitle: Aula 5.2 - Teórica
+---
+
+## {.smaller}
+
+Na aula teórica anterior nós melhoramos as respostas do sistema de suporte acrescentando uma sequência de `if\else if` no método `gerarResposta`.
+
+- fazendo com que a resposta dada tivesse relação com a pergunta do usuário.
+- E isso foi feito verificando-se palavras-chave como: _lento_, _bug_, etc.
+
+. . .
+
+Mas repare que essa forma de implementação tem uma desvantagem importante:
+
+- Se quisermos evoluir o sistema acrescentando novas respostas (para novas palavras-chave), teríamos que modificar o método `gerarResposta` e recompilar o sistema.
+- O ideal era que essas informações viessem de um arquivo e pudéssemos utilizá-las sem precisar modificar o código e recompilar o sistema.
+
+## {.smaller}
+
+Supondo que tivéssemos uma forma de ler os dados de arquivo, nós poderíamos tratar essas informações utilizando a classe `HashMap`.
+
+- Nesta aula vamos conhecer os conceitos que envolvem essa classe.
+- E como ela pode ser bem útil em nossos sistemas.
+
+
+# Usando mapas para associações {background-color="#40666e"}
+
+## {.smaller}
+
+Um [Mapa]{.alert} é uma **coleção de pares de objetos chave-valor**.
+
+- Assim como um `ArrayList`, um Mapa pode guardar uma quantidade flexível de entradas.
+- Mas uma diferença importante é que em um Mapa, uma entrada não é um objeto, e sim um **par de objetos**.
+  - Este par é formado por um objeto **chave** e um objeto **valor**.
+
+. . .
+
+Enquanto com `ArrayList` buscamos objetos pela sua posição,
+
+- com um Mapa, usamos o objeto chave para buscar o objeto valor associado a ele.
+
+## {.smaller}
+
+Você consegue pensar em um exemplo de Mapa, ou seja, de coleção de dados organizados na forma de pares chave/valor?
+
+- Um exemplo bem comum de um Mapa é a lista de contatos de um celular.
+- A lista de contatos tem entradas, e cada entrada é um par: um nome e um número de telefone.
+
+. . .
+
+Usamos a lista de contatos procurando por um nome e, ao encontrá-lo, obtemos o número de telefone associado a ele.
+
+- Nós não procuramos os contatos por um índice ou posição.
+- Portanto, nós **buscamos um valor** (o número de telefone), **a partir de uma chave** (o nome)
+
+## {.smaller}
+
+Na lista de contatos de um celular poderíamos ter uma coleção como a seguinte:
+
+| Nome    | Número    |
+|---------|-----------|
+| Tião    | 9999 1111 |
+| Maria   | 8888 1234 |
+| Joaquim | 9876 5432 |
+
+. . .
+
+Neste exemplo:
+
+- A primeira entrada tem a chave `"Tião"` e o valor `"9999 1111"`. 
+- Eu poderia buscar um número a partir da chave `"Maria"`.
+  - E a resposta a esta busca seria `"8888 1234"`.
+
+## {.smaller}
+
+Você consegue pensar em outros exemplos de coleções na forma de Mapa que usamos no dia a dia?
+
+. . .
+
+Um **dicionário**:
+
+- Buscamos um significado (valor) a partir de uma palavra (chave).
+
+. . .
+
+**Siglas e nomes de estados**:
+
+- Podemos buscar o nome de um estado (valor) a partir de sua sigla (chave).
+
+. . .
+
+**Uma coleção de alunos**:
+
+- Podemos buscar um objeto aluno (valor) a partir da sua matrícula (chave).
+
+## {.smaller}
+
+![](imagens/balao_como_usar_estrutura_mapa.png){.r-stretch}
+
+. . . 
+
+A forma mais simples de usar essa estrutura é através da classe `HashMap`.
+
+- `HashMap` é uma implementação particular de `Mapa`.
+
+
+## {.smaller}
+
+Os métodos mais importantes da classe `HashMap` são: `put` e `get`.
+
+- O método `put` insere uma entrada no mapa (um par de objetos chave/valor).
+- Já o método `get` recupera o valor associado a uma chave.
+
+. . .
+
+O trecho de código abaixo cria um `HashMap` e insere nele três entradas.
+
+- Cada entrada é um par chave/valor consistindo de um nome e um número de telefone.
+
+```{.java code-line-numbers="false"}
+    HashMap<String,String> contatos = new HashMap<>();
+    contatos.put("Tiao", "9999 1111");
+    contatos.put("Maria", "8888 1234");
+    contatos.put("Joaquim", "9876 5432");
+```
+
+## {.smaller}
+
+Como vimos para o `ArrayList`, quando declaramos uma variável do tipo `HashMap` e quando
+criamos um objeto `HashMap`, precisamos informar o tipo dos objetos que serão guardados.
+
+- E, no caso do `HashMap`, precisamos informar dois tipos: o tipo dos objetos chave e o tipo dos objetos valor.
+- No caso da lista de contatos definimos que tanto a chave quanto o valor são objetos do tipo `String`.
+
+## {.smaller}
+
+O trecho de código abaixo encontra e exibe o telefone da Maria.
+
+```{.java code-line-numbers="false"}
+    String telefone = contatos.get("Maria");
+    System.out.println("Telefone da Maria: " + telefone);
+```
+
+. . . 
+
+Repare que passamos a chave (o nome `"Maria"`) para o método `get` e ele nos retorna o valor (o número do telefone).
+
+- Leia a documentação dos métodos `get` e `put` da classe `HashMap` e veja se a explicação bate com o que você está entendendo até o momento.
+
+##
+
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+::: {.nonincremental}
+Crie no BlueJ um projeto chamado `contatos-hashmap`.
+
+Crie uma classe chamada `Contatos` e use um `HashMap` para implementar uma lista de contatos
+similar à que vimos anteriormente. Lembre-se que você deve importar `java.util.HashMap`.
+
+Na classe, implemente dois métodos:
+
+```{.java code-line-numbers="false"}
+    public void cadastrarNumero(String nome, String numero)
+``` 
+
+e
+
+```{.java code-line-numbers="false"}
+    public String buscarNumero(String nome)
+``` 
+
+Os métodos devem usar os métodos `put` e `get` da classe `HashMap` para implementar suas funcionalidades.
+:::
+:::
+
+## {.smaller}
+
+Para os exercícios a seguir, você deve usar a [documentação](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html) oficial da classe `HashMap` do Java.
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Verifique na documentação como podemos saber quantas entradas estão guardadas em um `HashMap`.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Experimente com o BlueJ o que acontece quando você adiciona uma entrada em uma mapa com uma chave que já existia no mapa.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Experimente com o BlueJ o que acontece quando você adiciona duas entradas em uma mapa com o mesmo valor, mas com chaves diferentes.
+:::
+
+## {.smaller}
+
+::: {.callout-note title="Exercício" icon=false}
+Como você pode verificar se uma chave existe em um mapa? Escreva um código Java de exemplo.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Experimente com o BlueJ o que acontece quando você tenta procurar um valor e a chave fornecida não existe no mapa.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Como podemos imprimir todas as chaves que estão armazenadas em um `HashMap`.
+:::
+
+##
+
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+Altere o projeto `contatos-hashmap`, criando uma classe chamada `TestesHashMap`.
+
+Nesta classe, implemente um método chamado `testar` que demonstre todas as funcionalidades que você experimentou nos exercícios dos slides anteriores.
+::: 
+
+## Usando o conceito de mapa no sistema de suporte {.smaller}
+
+

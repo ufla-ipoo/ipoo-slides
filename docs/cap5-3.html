@@ -401,7 +401,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">IPOO - Cap. 5 Comportamento Mais Sofisticado</h1>
-  <p class="subtitle">Aula 5.2 - Teórica</p>
+  <p class="subtitle">Aula 5.3 - Prática</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -416,199 +416,351 @@
 
   <p class="date">12/11/2024</p>
 </section>
+<section>
+<section id="projeto-no-greenfoot" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Projeto no Greenfoot</h1>
+
+</section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
-<p>Na aula teórica anterior nós melhoramos as respostas do sistema de suporte acrescentando uma sequência de <code>if\else if</code> no método <code>gerarResposta</code>.</p>
+<p>Nesta aula, vamos usar o Greenfoot em vez do BlueJ.</p>
 <ul>
-<li class="fragment">fazendo com que a resposta dada tivesse relação com a pergunta do usuário.</li>
-<li class="fragment">E isso foi feito verificando-se palavras-chave como: <em>lento</em>, <em>bug</em>, etc.</li>
+<li class="fragment">Aproveitando o fato de que estamos usando o Greenfoot para o trabalho prático da disciplina.</li>
 </ul>
 <div class="fragment">
-<p>Mas repare que essa forma de implementação tem uma desvantagem importante:</p>
+<p>Nós usaremos o projeto no Greenfoot para aprender conceitos que não foram vistos nas aulas teóricas anteriores:</p>
 <ul>
-<li class="fragment">Se quisermos evoluir o sistema acrescentando novas respostas (para novas palavras-chave), teríamos que modificar o método <code>gerarResposta</code> e recompilar o sistema.</li>
-<li class="fragment">O ideal era que essas informações viessem de um arquivo e pudéssemos utilizá-las sem precisar modificar o código e recompilar o sistema.</li>
+<li class="fragment">Atributos estáticos.</li>
+<li class="fragment">Métodos estáticos.</li>
+<li class="fragment">Constantes.</li>
 </ul>
 </div>
 </section>
 <section id="section-1" class="slide level2 smaller">
 <h2></h2>
-<p>Supondo que tivéssemos uma forma de ler os dados de arquivo, nós poderíamos tratar essas informações utilizando a classe <code>HashMap</code>.</p>
+<p>Para começar, baixe o projeto <a href="https://github.com/ufla-ipoo/bolas-quicando">bolas-quicando</a>.</p>
 <ul>
-<li class="fragment">Nesta aula vamos conhecer os conceitos que envolvem essa classe.</li>
-<li class="fragment">E como ela pode ser bem útil em nossos sistemas.</li>
-</ul>
-</section>
-<section>
-<section id="usando-mapas-para-associações" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>Usando mapas para associações</h1>
-
-</section>
-<section id="section-2" class="slide level2 smaller">
-<h2></h2>
-<p>Um <span class="alert">Mapa</span> é uma <strong>coleção de pares de objetos chave-valor</strong>.</p>
-<ul>
-<li class="fragment">Assim como um <code>ArrayList</code>, um Mapa pode guardar uma quantidade flexível de entradas.</li>
-<li class="fragment">Mas uma diferença importante é que em um Mapa, uma entrada não é um objeto, e sim um <strong>par de objetos</strong>.
-<ul>
-<li class="fragment">Este par é formado por um objeto <strong>chave</strong> e um objeto <strong>valor</strong>.</li>
-</ul></li>
+<li class="fragment">Abra o projeto no Greenfoot.</li>
+<li class="fragment">Execute o programa e veja o que acontece.</li>
 </ul>
 <div class="fragment">
-<p>Enquanto com <code>ArrayList</code> buscamos objetos pela sua posição,</p>
+<p>Vamos aproveitar esse projeto para conhecer um pouco mais sobre o Greenfoot.</p>
+</div>
+</section></section>
+<section>
+<section id="section-2" class="title-slide slide level1 center">
+<h1></h1>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<div>
+<p><strong>Execute</strong> o projeto e em seguida <strong>pause o programa</strong> antes das bolas pararem de quicar. Em seguida, <strong>clique com o botão direito</strong> em uma das bolas.</p>
 <ul>
-<li class="fragment">com um Mapa, usamos o objeto chave para buscar o objeto valor associado a ele.</li>
+<li>Veja que as opções são as mesmas do BlueJ quando clicamos em um objeto na bancada de objetos.</li>
+<li>Você pode clicar em <strong>Inspecionar</strong> para ver os valores dos atributos.</li>
+<li>E você pode também <strong>chamar métodos</strong> do objeto.</li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Abra a classe <code>Mundo</code> e veja o código do método <code>prepare</code>. Repare que ele cria duas bolas e depois cria 10 objetos da classe <code>Chao</code>.</p>
+<div>
+<p>Altere o método para que o programa tenha uma terceira bola.</p>
+<ul>
+<li>Crie a bola com diâmetro igual a 30 e posição vertical (y) 150.</li>
+<li>Posicione a bola na posição (300, 150).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section>
 <section id="section-3" class="slide level2 smaller">
 <h2></h2>
-<p>Você consegue pensar em um exemplo de Mapa, ou seja, de coleção de dados organizados na forma de pares chave/valor?</p>
+<p>Vamos agora avaliar o código da classe <code>Bola</code>.</p>
 <ul>
-<li class="fragment">Um exemplo bem comum de um Mapa é a lista de contatos de um celular.</li>
-<li class="fragment">A lista de contatos tem entradas, e cada entrada é um par: um nome e um número de telefone.</li>
+<li class="fragment">Vamos tentar entender como a classe funciona.</li>
 </ul>
 <div class="fragment">
-<p>Usamos a lista de contatos procurando por um nome e, ao encontrá-lo, obtemos o número de telefone associado a ele.</p>
+<p>Para isso, é útil conhecermos alguns métodos diponíveis do Greenfoot:</p>
 <ul>
-<li class="fragment">Nós não procuramos os contatos por um índice ou posição.</li>
-<li class="fragment">Portanto, nós <strong>buscamos um valor</strong> (o número de telefone), <strong>a partir de uma chave</strong> (o nome)</li>
+<li class="fragment"><code>getImage</code>: retorna a imagem usada para o objeto (definida na hora que criamos a classe).</li>
+<li class="fragment"><code>getImage().scale</code>: permite mudar a dimensão da imagem do objeto.</li>
+<li class="fragment"><code>setLocation</code>: muda a posição do ator no mundo (coordenadas X e Y).</li>
+<li class="fragment"><code>isTouching</code>: indica se o ator está colidindo com algum objeto da classe passada.</li>
 </ul>
 </div>
+<div class="fragment">
+<p>Leia o código da classe <code>Bola</code> e tente entender como ela funciona.</p>
+</div>
+</section></section>
+<section>
+<section id="atributos-estáticos-e-constantes" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Atributos estáticos e constantes</h1>
+
 </section>
 <section id="section-4" class="slide level2 smaller">
 <h2></h2>
-<p>Na lista de contatos de um celular poderíamos ter uma coleção como a seguinte:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Nome</th>
-<th>Número</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Tião</td>
-<td>9999 1111</td>
-</tr>
-<tr class="even">
-<td>Maria</td>
-<td>8888 1234</td>
-</tr>
-<tr class="odd">
-<td>Joaquim</td>
-<td>9876 5432</td>
-</tr>
-</tbody>
-</table>
+<p>Ao avaliar o código da classe <code>Bola</code> você viu alguma palavra-chave nova do Java?</p>
+<ul>
+<li class="fragment">Repare a declaração do atributo <code>GRAVIDADE</code>.</li>
+</ul>
 <div class="fragment">
-<p>Neste exemplo:</p>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Experimente alterar o valor do atributo <code>GRAVIDADE</code> (aumentando e diminuindo seu valor).</p>
+<p>Execute o programa e veja o que acontece de diferente.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>O atributo <code>GRAVIDADE</code> é declarado da seguinte forma:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="dt">double</span> GRAVIDADE <span class="op">=</span> <span class="fl">0.7</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p>Há duas palavras-chave novas nessa declaração: <code>static</code> e <code>final</code></p>
+</div>
+</section>
+<section id="atributos-estáticos" class="slide level2 smaller">
+<h2>Atributos estáticos</h2>
+<p>A palalavra-chave <code>static</code> do Java serve para declarar <span class="alert">atributos estáticos</span>.</p>
 <ul>
-<li class="fragment">A primeira entrada tem a chave <code>"Tião"</code> e o valor <code>"9999 1111"</code>.</li>
-<li class="fragment">Eu poderia buscar um número a partir da chave <code>"Maria"</code>.
+<li class="fragment">Atributos desse tipo são guardados na própria classe, não nos objetos.
 <ul>
-<li class="fragment">E a resposta a esta busca seria <code>"8888 1234"</code>.</li>
+<li class="fragment">Ele são também chamados de <span class="alert">variáveis de classe</span>.</li>
+</ul></li>
+<li class="fragment">Isso torna esses atributos muito diferentes dos atributos comuns que vimos até agora.
+<ul>
+<li class="fragment">Lembrando que os atributos comuns são também chamados de <strong>variáveis de instância</strong>.</li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section id="section-5" class="slide level2 smaller">
 <h2></h2>
-<p>Você consegue pensar em outros exemplos de coleções na forma de Mapa que usamos no dia a dia?</p>
-<div class="fragment">
-<p>Um <strong>dicionário</strong>:</p>
-<ul>
-<li class="fragment">Buscamos um significado (valor) a partir de uma palavra (chave).</li>
-</ul>
-</div>
-<div class="fragment">
-<p><strong>Siglas e nomes de estados</strong>:</p>
-<ul>
-<li class="fragment">Podemos buscar o nome de um estado (valor) a partir de sua sigla (chave).</li>
-</ul>
-</div>
-<div class="fragment">
-<p><strong>Uma coleção de alunos</strong>:</p>
-<ul>
-<li class="fragment">Podemos buscar um objeto aluno (valor) a partir da sua matrícula (chave).</li>
-</ul>
-</div>
+<p>O diagrama abaixo ilustra bem a diferença entre os atributos comuns e estáticos.</p>
+<img data-src="imagens/atributo-estatico-diagrama-objetos.png" class="r-stretch">
 </section>
 <section id="section-6" class="slide level2 smaller">
 <h2></h2>
-<img data-src="imagens/balao_como_usar_estrutura_mapa.png" class="r-stretch">
-<div class="fragment">
-<p>A forma mais simples de usar essa estrutura é através da classe <code>HashMap</code>.</p>
+<img data-src="imagens/atributo-estatico-diagrama-objetos.png" class="r-stretch">
+<p>Os <strong>atributos comuns</strong> (<code>velocidadeVertical</code>, <code>posY</code> e <code>amortecimento</code>) são guardados nos objetos:</p>
 <ul>
-<li class="fragment"><code>HashMap</code> é uma implementação particular de <code>Mapa</code>.</li>
+<li class="fragment">Como criamos três objetos, há <strong>três espaços na memória</strong> para cada um desses atributos.</li>
+</ul>
+<div class="fragment">
+<p>Já o <strong>atributo estático</strong> <code>GRAVIDADE</code> é guardado na classe:</p>
+<ul>
+<li class="fragment">Com isso, existe sempre <strong>um único espaço na memória</strong> para ele, independente da quantidade de objetos criados.</li>
 </ul>
 </div>
 </section>
 <section id="section-7" class="slide level2 smaller">
 <h2></h2>
-<p>Os métodos mais importantes da classe <code>HashMap</code> são: <code>put</code> e <code>get</code>.</p>
+<p>Os <strong>atributos estáticos</strong> podem ser acessados normalmente dentro de qualquer método da classe.</p>
 <ul>
-<li class="fragment">O método <code>put</code> insere uma entrada no mapa (um par de objetos chave/valor).</li>
-<li class="fragment">Já o método <code>get</code> recupera o valor associado a uma chave.</li>
+<li class="fragment">Isso significa que todos os objetos compartilham o mesmo atributo.</li>
+<li class="fragment">Se um objeto alterar o valor do atributo estático, esse valor será usado para todos os objetos.
+<ul>
+<li class="fragment">Já que existe um único valor na memória.</li>
+</ul></li>
 </ul>
 <div class="fragment">
-<p>O trecho de código abaixo cria um <code>HashMap</code> e insere nele três entradas.</p>
+<p>Geralmente usamos atributos estáticos quando todos os objetos da classe devem ter o mesmo valor para o atributo.</p>
 <ul>
-<li class="fragment">Cada entrada é um par chave/valor consistindo de um nome e um número de telefone.</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">HashMap</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span><span class="bu">String</span><span class="op">&gt;</span> contatos <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
-<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>    contatos<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"Tiao"</span><span class="op">,</span> <span class="st">"9999 1111"</span><span class="op">);</span></span>
-<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>    contatos<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"Maria"</span><span class="op">,</span> <span class="st">"8888 1234"</span><span class="op">);</span></span>
-<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a>    contatos<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"Joaquim"</span><span class="op">,</span> <span class="st">"9876 5432"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="section-8" class="slide level2 smaller">
-<h2></h2>
-<p>Como vimos para o <code>ArrayList</code>, quando declaramos uma variável do tipo <code>HashMap</code> e quando criamos um objeto <code>HashMap</code>, precisamos informar o tipo dos objetos que serão guardados.</p>
-<ul>
-<li class="fragment">E, no caso do <code>HashMap</code>, precisamos informar dois tipos: o tipo dos objetos chave e o tipo dos objetos valor.</li>
-<li class="fragment">No caso da lista de contatos definimos que tanto a chave quanto o valor são objetos do tipo <code>String</code>.</li>
-</ul>
-</section>
-<section id="section-9" class="slide level2 smaller">
-<h2></h2>
-<p>O trecho de código abaixo encontra e exibe o telefone da Maria.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> telefone <span class="op">=</span> contatos<span class="op">.</span><span class="fu">get</span><span class="op">(</span><span class="st">"Maria"</span><span class="op">);</span></span>
-<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Telefone da Maria: "</span> <span class="op">+</span> telefone<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p>Repare que passamos a chave (o nome <code>"Maria"</code>) para o método <code>get</code> e ele nos retorna o valor (o número do telefone).</p>
-<ul>
-<li class="fragment">Leia a documentação dos métodos <code>get</code> e <code>put</code> da classe <code>HashMap</code> e veja se a explicação bate com o que você está entendendo até o momento.</li>
+<li class="fragment">Com isso, evitamos desperdiçar memória guardando o mesmo valor repetidas vezes para cada objeto.</li>
 </ul>
 </div>
-</section>
-<section id="section-10" class="slide level2">
-<h2></h2>
-<div title="Exercício [(entrega)]{.alert}">
+</section></section>
+<section id="section-8" class="title-slide slide level1 center">
+<h1></h1>
+<div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
+<p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<div>
-<p>Crie no BlueJ um projeto chamado <code>contatos-hashmap</code>.</p>
-<p>Crie uma classe chamada <code>Contatos</code> e use um <code>HashMap</code> para implementar uma lista de contatos similar à que vimos anteriormente. Lembre-se que você deve importar <code>java.util.HashMap</code>.</p>
-<p>Na classe, implemente dois métodos:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">cadastrarNumero</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">,</span> <span class="bu">String</span> numero<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>e</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">buscarNumero</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Os métodos devem usar os métodos <code>put</code> e <code>get</code> da classe <code>HashMap</code> para implementar suas funcionalidades.</p>
+<p>Como um atributo estático poderia ser usado para contabilizar a quantidade de objetos criados em uma classe?</p>
+<p>Por exemplo, como a própria classe <code>Bola</code> poderia contar quantas bolas foram criadas durante o programa?</p>
 </div>
 </div>
 </div>
 </div>
+</section>
+
+<section id="constantes" class="title-slide slide level1 smaller center">
+<h1>Constantes</h1>
+<p><span class="alert">Constantes</span> são parecidas com variáveis,</p>
+<ul>
+<li class="fragment">mas a diferença é que seus valores não podem ser alterados depois de inicializados.</li>
+<li class="fragment">Definimos constantes em Java usando a <strong>palavra-chave</strong> <code>final</code>.</li>
+</ul>
+<div class="fragment">
+<p>Suponha, por exemplo, a seguinte declaração de constante:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> <span class="dt">int</span> TAMANHO <span class="op">=</span> <span class="dv">30</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li class="fragment">Veja que é uma declaração de atributo.</li>
+<li class="fragment">Mas tem a palavra-chave <code>final</code> antes do tipo do atributo.</li>
+<li class="fragment">Por convenção, escrevemos os nomes das constantes com letras maiúsculas.</li>
+</ul>
+</div>
+</section>
+
+<section>
+<section id="constantes-1" class="title-slide slide level1 smaller center">
+<h1>Constantes</h1>
+<p>Constantes podem ser inicializadas na própria linha da declaração, como no exemplo dado:</p>
+<ul>
+<li class="fragment">Neste caso, todos os objetos teriam o mesmo valor.</li>
+<li class="fragment">E, portanto, seria mais intessante que o atributo <code>TAMANHO</code> fosse estático.</li>
+</ul>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> <span class="dt">int</span> TAMANHO <span class="op">=</span> <span class="dv">30</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Mas constantes podem ser inicializadas nos construtores em vez de ser na declaração.</p>
+<ul>
+<li class="fragment">Como isso, cada objeto poderia ter um valor diferente para o atributo <code>TAMANHO</code>.
+<ul>
+<li class="fragment">Inicializado, por exemplo, a partir de um valor recebido por parâmetro no construtor.</li>
+<li class="fragment">A ideia seria que o objeto não poderia ter seu tamanho alterado depois de sua criação.</li>
+</ul></li>
+<li class="fragment">Nesse caso, não faria sentido declarar o atributo como estático.</li>
+</ul>
+</div>
+</section>
+<section id="section-9" class="slide level2 smaller">
+<h2></h2>
+<p>É mais comum usarmos constantes quando elas têm o mesmo valor para todos os objetos.</p>
+<ul>
+<li class="fragment">Portanto, é mais comum ter constantes estáticas, do que como atributos comuns.</li>
+<li class="fragment">Como é o caso do atributo <code>GRAVIDADE</code> da classe <code>Bola</code>.</li>
+</ul>
+</section></section>
+<section>
+<section id="section-10" class="title-slide slide level1 center">
+<h1></h1>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Repare que o atributo <code>amortecimento</code> da classe <code>Bola</code> é constante, mas não é estático. Com isso, as bolas poderiam ter valores diferentes de amortecimento.</p>
+<p>Altere então a classe <code>Bola</code> de forma que o valor do atributo <code>amortecimento</code> seja recebido por parâmetro no construtor. Você precisará, é claro, alterar a criação das bolas na classe <code>Mundo</code>.</p>
+<p>Experimente usar valores diferentes para cada bola (ex: 2, 3 e 4). Execute o programa para testar.</p>
+<p>O que acontece com bolas que têm maior amortecimento?</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="métodos-estáticos" class="slide level2 smaller">
+<h2>Métodos estáticos</h2>
+<p>Todos os métodos que vimos até agora são <strong>métodos de instância</strong> (de objetos).</p>
+<ul>
+<li class="fragment">Pois eles são chamados usando objetos.</li>
+</ul>
+<div class="fragment">
+<p>Mas nós podemos também ter métodos que são chamados usando a classe, em vez de objetos.</p>
+<ul>
+<li class="fragment">São os <span class="alert">métodos estáticos</span>.</li>
+<li class="fragment">Assim como os atributos estáticos, os métodos estáticos pertencem à classe e não aos objetos.</li>
+</ul>
+</div>
+</section>
+<section id="métodos-estáticos-1" class="slide level2 smaller">
+<h2>Métodos estáticos</h2>
+<p>Nós podemos definir <strong>métodos estáticos</strong> usando a palavra-chave <code>static</code> na assinatura do método.</p>
+<div class="fragment">
+<p>Suponha, por exemplo, que uma classe <code>Calendario</code> tenha o método estático abaixo:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">int</span> <span class="fu">obterNumeroDeDiasDoMesAtual</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span> <span class="op">.</span> <span class="op">.</span></span>
+<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p>Nós poderíamos chamar esse método usando o comando abaixo:</p>
+<ul>
+<li class="fragment">Repare que usamos o <strong>nome da classe</strong> antes do <code>.</code> para chamar o método, <strong>em vez de usar um objeto</strong>.</li>
+</ul>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb5"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> dias <span class="op">=</span> Calendario<span class="op">.</span><span class="fu">obterNumeroDeDiasDoMesAtual</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="métodos-estáticos-2" class="slide level2 smaller">
+<h2>Métodos estáticos</h2>
+<p>Podemos encontrar vários exemplos de métodos estáticos na classe <code>Math</code> do Java.</p>
+<ul>
+<li class="fragment">Ela possui métodos, por exemplo, para encontrar o máximo ou o mínimo entre dois números.
+<ul>
+<li class="fragment">Ou ainda calcular seno e cosseno, por exemplo.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> maximo <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span><span class="op">(</span>numeroA<span class="op">,</span> numeroB<span class="op">);</span></span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> valor <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">cos</span><span class="op">(</span>angulo<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p>Repare que esses métodos dependem apenas dos parâmetros passados.</p>
+<ul>
+<li class="fragment">Eles não dependem de atributos de um possível objeto <code>Math</code>, ou seja, não dependem do estado de um objeto.</li>
+<li class="fragment">Geralmente é nesses casos que usamos métodos estáticos.</li>
+</ul>
 </div>
 </section>
 <section id="section-11" class="slide level2 smaller">
 <h2></h2>
-<p>Para os exercícios a seguir, você deve usar a <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html">documentação</a> oficial da classe <code>HashMap</code> do Java.</p>
+<p>A classe <code>Math</code> do Java possui também exemplos de uso de constantes.</p>
+<ul>
+<li class="fragment">O valor de <code>PI</code>, por exemplo, pode ser acessado com o comando <code>Math.PI</code>.</li>
+<li class="fragment">Repare que estamos acessando o atributo diretamente, usando o nome da classe, em vez de um objeto.
+<ul>
+<li class="fragment">Da mesma forma que usamos para chamar métodos estáticos.</li>
+</ul></li>
+<li class="fragment">Nós conseguimos fazer isso porque PI é declarado como uma constante pública.</li>
+</ul>
 <div class="fragment">
+<p>Mas não seria uma falha de encapsulamento declarar um atributo público?</p>
+<ul>
+<li class="fragment">Note que não há falha de encapsulamento em declarar um atributo público, se ele for uma constante.</li>
+<li class="fragment">Já que não seria possível alterar seu valor de fora da classe.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="section-12" class="title-slide slide level1 center">
+<h1></h1>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -616,96 +768,48 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>Verifique na documentação como podemos saber quantas entradas estão guardadas em um <code>HashMap</code>.</p>
-</div>
-</div>
-</div>
-</div>
-<div title="Exercício">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício</strong></p>
-</div>
-<div class="callout-content">
-<p>Experimente com o BlueJ o que acontece quando você adiciona uma entrada em uma mapa com uma chave que já existia no mapa.</p>
-</div>
-</div>
-</div>
-</div>
-<div title="Exercício">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício</strong></p>
-</div>
-<div class="callout-content">
-<p>Experimente com o BlueJ o que acontece quando você adiciona duas entradas em uma mapa com o mesmo valor, mas com chaves diferentes.</p>
-</div>
-</div>
-</div>
-</div>
-<div title="Exercício">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício</strong></p>
-</div>
-<div class="callout-content">
-<p>Como você pode verificar se uma chave existe em um mapa? Escreva um código Java de exemplo.</p>
-</div>
-</div>
-</div>
-</div>
-<div title="Exercício">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício</strong></p>
-</div>
-<div class="callout-content">
-<p>Experimente com o BlueJ o que acontece quando você tenta procurar um valor e a chave fornecida não existe no mapa.</p>
-</div>
-</div>
-</div>
-</div>
-<div title="Exercício">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício</strong></p>
-</div>
-<div class="callout-content">
-<p>Como podemos imprimir todas as chaves que estão armazenadas em um <code>HashMap</code>.</p>
-</div>
+<p>Altere a declaração do atributo <code>GRAVIDADE</code> da classe <code>Bola</code> de forma que ele não seja mais uma constante. Mas, mantenha a inicialização do atributo na declaração.</p>
+<p>Crie um <strong>método modificador</strong> que permita alterar o valor do atributo.</p>
+<p>Execute o programa e pause-o antes das bolas pararem de quicar. Clique em uma das bolas e chame o método que você criou, informando um novo valor para a gravidade.</p>
+<p>Continue a execução do programa e repare que acontece. A gravidade foi alterada só para a bola que você chamou o método, ou para todas elas?</p>
+<p>Depois que as bolas pararem, pause o programa novamente, e use a opção <em>Inspecionar</em> em cada bola para conferir o valor do atributo <code>GRAVIDADE</code>. (Obs.: na janela de inspeção, use o botão <em>mostrar campos estáticos</em>).</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="section-12" class="slide level2">
-<h2></h2>
-<div title="Exercício [(entrega)]{.alert}">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
-</div>
-<div class="callout-content">
-<p>Altere o projeto <code>contatos-hashmap</code>, criando uma classe chamada <code>TestesHashMap</code>.</p>
-<p>Nesta classe, implemente um método chamado <code>testar</code> que demonstre todas as funcionalidades que você experimentou nos exercícios anteriores.</p>
-</div>
-</div>
-</div>
+<section id="limitações-dos-métodos-estáticos" class="slide level2 smaller">
+<h2>Limitações dos métodos estáticos</h2>
+<p>É importante sabermos que os <strong>métodos estáticos</strong> (métodos de classe) têm <strong>limitações</strong>.</p>
+<ul>
+<li class="fragment">Como eles pertencem à classe e não aos objetos, eles não podem acessar atributos comuns (variáveis de instância).</li>
+<li class="fragment">Eles podem acessar apenas <strong>atributos estáticos</strong> (variáveis de classe).</li>
+</ul>
+<div class="fragment">
+<p>Da mesma forma, métodos estáticos não podem chamar métodos de instância da mesma classe.</p>
+<ul>
+<li class="fragment">Podem chamar apenas outros métodos estáticos.</li>
+</ul>
 </div>
 </section>
-<section id="usando-o-conceito-de-mapa-no-sistema-de-suporte" class="slide level2 smaller">
-<h2>Usando o conceito de mapa no sistema de suporte</h2>
+<section id="limitações-dos-métodos-estáticos-1" class="slide level2 smaller">
+<h2>Limitações dos métodos estáticos</h2>
+<p>Por que você acha que essas limitações existem?</p>
+<ul>
+<li class="fragment">Imagine que um método estático qualquer (vamos chamar de <code>metodoA</code>), de uma classe <code>ClasseX</code> acessasse um atributo comum.</li>
+<li class="fragment">Tente imaginar o que aconteceria se você fizesse uma chamada <code>ClasseX.metodoA()</code> sem ter criado nenhum objeto da classe.
+<ul>
+<li class="fragment">E se existissem vários objetos da classe?</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>E o que isso tem a ver com um método estático não poder chamar um método de instância?</p>
 
 <div class="quarto-auto-generated-content">
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
+</div>
 </div>
 </div>
 </section></section>
