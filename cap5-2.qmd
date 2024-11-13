@@ -251,7 +251,16 @@ Quando declaramos uma variável do tipo `HashMap` e quando criamos um objeto `Ha
 No caso do `HashMap`, precisamos informar dois tipos: 
 
 - o tipo dos objetos chave e o tipo dos objetos valor.
-- No caso da lista de contatos, por exemplo, definimos que tanto a chave quanto o valor são objetos do tipo `String`.
+
+. . .
+
+No caso da lista de contatos, por exemplo, definimos que tanto a chave quanto o valor são objetos do tipo `String`.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    HashMap<String,String> contatos = new HashMap<>();
+```
+:::
 
 ## {.smaller}
 
@@ -266,9 +275,13 @@ O trecho de código abaixo encontra e exibe o telefone da Maria.
 
 . . . 
 
-Repare que passamos a chave (o nome `"Maria"`) para o método `get` e ele nos retorna o valor (o número do telefone).
+Repare que passamos a chave (o nome `"Maria"`) para o método `get` e ele nos retorna o valor (o número do telefone dela).
 
-- Leia a documentação dos métodos `get` e `put` da classe `HashMap` e veja se a explicação bate com o que você está entendendo até o momento.
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Leia a documentação dos métodos `get` e `put` da classe `HashMap` e veja se a explicação bate com o que você está entendendo até o momento.
+:::
 
 ##
 
@@ -504,7 +517,7 @@ Isso funciona porque as classes estão suficientemente bem documentadas.
 
 Em uma equipe de desenvolvimento de software, a implementação das classes é geralmente dividida entre vários programadores.
 
-- Um programador poderia implementar a classe `SistemaSuporte`, por exempllo, e outro a classe `LeitorDeEntrada`.
+- Um programador poderia implementar a classe `SistemaDeSuporte`, por exemplo, e outro a classe `LeitorDeEntrada`.
 - Portanto, você pode precisar implementar uma classe enquanto chama métodos de outras classes.
 
 . . .
@@ -513,7 +526,7 @@ Assim, o mesmo argumento usado para as classes da biblioteca Java vale para as c
 
 - Se podemos usar as classes sem ter que ler e entender toda a implementação, nossa tarefa fica mais fácil.
 - Nós precisamos apenas da interface das classes e não da implementação.
-- Portanto, precisamos escrever boa documentação e classes também para as nossas próprias classes.
+- Portanto, precisamos escrever boa documentação de classes também para as nossas próprias classes.
 
 . . .
 
@@ -532,20 +545,121 @@ O Java tem uma ferramenta chamada [javadoc](.alert) que gera documentação a pa
 
 O BlueJ usa o javadoc para gerar documentação das classes.
 
-- Com o código de uma classe aberto no BlueJ, podemos acessar a caixa de opções no cantos superior direito e mudar de _código-fonte_ para _documentação_.
+- Com o código de uma classe aberto no BlueJ, podemos acessar a caixa de opções no canto superior direito e mudar de _código-fonte_ para _documentação_.
 
 - Ou podemos também usar o menu `Ferramentas` &rarr; `Documentaçao do Projeto` para gerar a documentação de todas as classes do projeto.
 
-. . . 
+##
 
+::: {.callout-note title="Exercício" icon=false}
+Experimente acessar a documentação da classe `SistemaDeSuporte` no BlueJ.
+:::
+
+. . .
+
+::: {.fontsize70}
 Os arquivos HTML gerados ficam em uma pasta `doc` dentro do projeto e podem ser abertos em qualquer navegador.
-
+:::
 
 ## {.smaller}
 
-A documentação de uma classe deveria incluir:
+A **documentação de uma classe** deveria incluir, no mínimo:
+
+- O nome da classe.
+- Um comentário descrevendo o objetivo e as características da classe.
+- Um número de versão.
+- O nome do(s) autor(es).
+- Documentação para cada construtor e para cada método.
+
+## {.smaller}
+
+A **documentação de todo construtor e método** deve incluir, no mínimo:
+
+- O nome do método.
+- O tipo de retorno.
+- Os nomes e tipos dos parâmetros.
+- Uma descrição do objetivo e função do método.
+- Uma descrição de cada parâmetro.
+- Uma descrição do valor retornado.
+
+. . .
+
+Além disso, cada projeto deveria ter um comentário geral sobre o projeto.
+
+- Geralmente dentro de um arquivo `README` na pasta raiz do projeto.
+- No BlueJ podemos fazer esse comentário de projeto abrindo o arquivo que fica no 
+canto superior esquerdo do diagrama de classses. 
+
+## {.smaller}
+
+Alguns elementos da documentação podem ser sempre extraídos do código-fonte.
+
+- Como os nomes e parâmetros dos métodos, por exemplo.
+- Já a descrição da classe e dos métodos demanda mais atenção já que pode ser facilmente esquecida, ou ficar incompleta.
+
+. . .
+
+No Java, comentários `Javadoc` são escritos com um símbolo especial de comentário.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+/**
+ * Este é um comentário Javadoc.
+ * Ele pode ter várias linhas.
+ */
+```
+:::
+
+## {.smaller}
+
+O comentário deve ter `/**` no início e `*/` no final para ser reconhecido como um comentário `javadoc`.
+
+- Se o comentário vem imediatamente antes da declaração da classe, ele é lido como a descrição da classe.
+- Se ele está acima de uma assinatura de método, é considerado como um comentário do método.
+
+. . .
+
+Como exatamente o comentário deve ser formatado para gerar a documentação pode variar de acordo com as
+ferramentas de cada linguagem de programação.
+
+. . .
+
+No caso do `javadoc` várias palavras-chave especiais estão disponíveis para formatar a documentação.
+
+- Essas chaves começam com `@`, como, por exemplo:
+  - `@version`
+  - `@author`
+  - `@param`
+  - `@return`
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Encontre exemplos de palavras-chave `javadoc` no projeto do sistema de suporte e 
+verifique como eles influenciam a formatação da documentação.
+
+Experimente fazer alterações e conferir o resultado na documentação gerada.
+:::
+
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+::: {.nonincremental}
+Documente adequadamente as classes do projeto de suporte técnico e gere a documentação
+usando o BlueJ.
+
+Confira se a documentação gerada está completa antes de enviar o projeto.
+:::
 
 
+# Entregas dessa Aula {background-color="#40666e"}
 
+## {.smaller}
 
+::: {.nonincremental}
 
+Para ter **presença** nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.
+
+::: {.callout-important title="Entregas no Campus Virtual"}
+Responda às duas tarefas no Campus Virtual enviando os seus projetos `contatos-hashmap` e `suporte-tecnico1` com as alterações dos exercícios solicitados ao longo dos slides.
+:::
+
+:::

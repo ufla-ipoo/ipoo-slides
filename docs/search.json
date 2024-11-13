@@ -3693,14 +3693,14 @@
     "href": "cap5-2.html#section-14",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Quando declaramos uma variável do tipo HashMap e quando criamos um objeto HashMap\n\nprecisamos informar o tipo dos objetos que serão guardados.\nAssim como fazemos com ArrayList.\n\n\nNo caso do HashMap, precisamos informar dois tipos:\n\no tipo dos objetos chave e o tipo dos objetos valor.\nNo caso da lista de contatos, por exemplo, definimos que tanto a chave quanto o valor são objetos do tipo String."
+    "text": "Quando declaramos uma variável do tipo HashMap e quando criamos um objeto HashMap\n\nprecisamos informar o tipo dos objetos que serão guardados.\nAssim como fazemos com ArrayList.\n\n\nNo caso do HashMap, precisamos informar dois tipos:\n\no tipo dos objetos chave e o tipo dos objetos valor.\n\n\n\nNo caso da lista de contatos, por exemplo, definimos que tanto a chave quanto o valor são objetos do tipo String.\n\n    HashMap&lt;String,String&gt; contatos = new HashMap&lt;&gt;();"
   },
   {
     "objectID": "cap5-2.html#section-15",
     "href": "cap5-2.html#section-15",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "O trecho de código abaixo encontra e exibe o telefone da Maria.\n\n    String telefone = contatos.get(\"Maria\");\n    System.out.println(\"Telefone da Maria: \" + telefone);\n\n\nRepare que passamos a chave (o nome \"Maria\") para o método get e ele nos retorna o valor (o número do telefone).\n\nLeia a documentação dos métodos get e put da classe HashMap e veja se a explicação bate com o que você está entendendo até o momento."
+    "text": "O trecho de código abaixo encontra e exibe o telefone da Maria.\n\n    String telefone = contatos.get(\"Maria\");\n    System.out.println(\"Telefone da Maria: \" + telefone);\n\n\nRepare que passamos a chave (o nome \"Maria\") para o método get e ele nos retorna o valor (o número do telefone dela).\n\n\n\n\n\n\nExercício\n\n\nLeia a documentação dos métodos get e put da classe HashMap e veja se a explicação bate com o que você está entendendo até o momento."
   },
   {
     "objectID": "cap5-2.html#section-16",
@@ -3750,6 +3750,104 @@
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
     "text": "Exercício (entrega)\n\n\n\nAltere a classe a classe Respondedor do projeto suporte-tecnico1 para que ela tenha um atributo mapa para guardar as palavras-chaves e as respostas.\nCrie um método chamado preencherMapaDeRespostas que preenche o mapa com as respostas que você tinha tratado como if\\else if na aula anterior. Chame o método no construtor da classe.\nPor fim, altere o método gerarResposta da seguinte forma:\n\nEle deve ter um loop para percorrer as chaves do mapa.\nDentro do loop deve verificar se a variável entrada contém a chave.\n\nSe sim, ele deve retornar o valor associado a esta chave.\n\nSe o loop terminar e a entrada não tiver nenhuma das chaves, ele deve retornar uma resposta padrão.\n\nPor exemplo, “Desculpe, não entendi o que você quis dizer. Poderia reformular a pergunta?”."
+  },
+  {
+    "objectID": "cap5-2.html#section-23",
+    "href": "cap5-2.html#section-23",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "A biblioteca de classes do Java possui diferentes tipos de conjuntos implementados em diferentes classes.\n\nUma delas é a classe HashSet.\n\n\n\n\n\n\nExercício\n\n\nBusque na documentação do Java, ou em outras fontes, quais são as similaridades e as diferenças enre um HashSet e um ArrayList.\nTente entender porque ArrayList é um caso especial de List e HashSet é um caso especial de Set."
+  },
+  {
+    "objectID": "cap5-2.html#section-24",
+    "href": "cap5-2.html#section-24",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "A declaração de um HashSet, a criação do objeto e a adição de elementos é feita da mesma forma que um ArrayList.\n\n    import java.util.HashSet;\n    . . .\n    HashSet&lt;String&gt; conjunto = new HashSet&lt;&gt;();\n    conjunto.add(\"um\");\n    conjunto.add(\"dois\");\n    conjunto.add(\"três\");\n\n\nPara percorrer um HashSet podemos usar um for-each, igualzinho ao que usamos para ArrayList.\n\n    for(String elemento : conjunto) {\n        // faz alguma coisa com o elemento.\n    }"
+  },
+  {
+    "objectID": "cap5-2.html#section-25",
+    "href": "cap5-2.html#section-25",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Repare, portanto, que usar diferentes coleções em Java é sempre muito parecido.\n\nSe você entender como usar uma delas, você conseguirá usar as outras com facilidade.\n\n\nAs diferenças entre as coleções estão nos seus comportamentos.\n\nUma lista, por exemplo, mantém a ordem dos elementos, permite acesso aos elementos por posição, e permite elementos repetidos.\nJá um conjunto não mantém a ordem dos elementos, e garante que não existem elementos repetidos.\n\nPortanto, os elementos podem ser percorridos no for-each em ordem diferente da que eles foram inseridos.\nE inserir um mesmo elemento uma segunda vez, simplesmente não tem nenhum efeito."
+  },
+  {
+    "objectID": "cap5-2.html#section-26",
+    "href": "cap5-2.html#section-26",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Quando estamos trabalhando em nossos projetos,\n\né importante escrevermos a documentação de nossas classes, à medida que desenvolvemos o código.\nMuitas vezes programadores não levam a sério a documentação, o que pode levar a sérios problemas.\n\n\nSe você não fornecer documentação suficiente, pode ser difícil para outro programador entender suas classes.\n\nMuitas vezes esse outro programador pode ser você mesmo :)\n\n\n\nSem documentação, precisamos ler o código da classe para tentar entender como ela funciona.\n\nIsso pode funcionar em um projeto pequeno de estudante.\nMas cria problemas em projetos do mundo real."
+  },
+  {
+    "objectID": "cap5-2.html#section-27",
+    "href": "cap5-2.html#section-27",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "É muito comum que sistemas comerciais tenham centenas de milhares de linhas de código.\n\nImagine que você tivesse que ler todas essas linhas para entender como o código funciona.\nSeria impossível!\n\n\nNós conseguimos usar as classes da biblioteca Java, como HashSet e Random, olhando apenas a documentação delas.\n\nNós nunca precisamos olhar o código-fonte destas classes.\n\n\n\nIsso funciona porque as classes estão suficientemente bem documentadas.\n\nSeria muito mais difícil usar essas classes, se precisássemos ler e entender o código-fonte delas primeiro."
+  },
+  {
+    "objectID": "cap5-2.html#section-28",
+    "href": "cap5-2.html#section-28",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Em uma equipe de desenvolvimento de software, a implementação das classes é geralmente dividida entre vários programadores.\n\nUm programador poderia implementar a classe SistemaDeSuporte, por exemplo, e outro a classe LeitorDeEntrada.\nPortanto, você pode precisar implementar uma classe enquanto chama métodos de outras classes.\n\n\nAssim, o mesmo argumento usado para as classes da biblioteca Java vale para as classes que você escreve.\n\nSe podemos usar as classes sem ter que ler e entender toda a implementação, nossa tarefa fica mais fácil.\nNós precisamos apenas da interface das classes e não da implementação.\nPortanto, precisamos escrever boa documentação de classes também para as nossas próprias classes.\n\n\n\n\n\n\n\nConceito\n\n\nA documentação de uma classe deve ser detalhada o suficiente para que outros programadores consigam usar a classe sem precisar ler o código fonte."
+  },
+  {
+    "objectID": "cap5-2.html#section-29",
+    "href": "cap5-2.html#section-29",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "O Java tem uma ferramenta chamada javadoc que gera documentação a partir de comentários no código.\n\nToda a documentação oficial das classes da biblioteca Java é gerada com o javadoc.\n\n\nO BlueJ usa o javadoc para gerar documentação das classes.\n\nCom o código de uma classe aberto no BlueJ, podemos acessar a caixa de opções no canto superior direito e mudar de código-fonte para documentação.\nOu podemos também usar o menu Ferramentas → Documentaçao do Projeto para gerar a documentação de todas as classes do projeto."
+  },
+  {
+    "objectID": "cap5-2.html#section-30",
+    "href": "cap5-2.html#section-30",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Exercício\n\n\nExperimente acessar a documentação da classe SistemaDeSuporte no BlueJ.\n\n\n\n\n\n\nOs arquivos HTML gerados ficam em uma pasta doc dentro do projeto e podem ser abertos em qualquer navegador."
+  },
+  {
+    "objectID": "cap5-2.html#section-31",
+    "href": "cap5-2.html#section-31",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "A documentação de uma classe deveria incluir, no mínimo:\n\nO nome da classe.\nUm comentário descrevendo o objetivo e as características da classe.\nUm número de versão.\nO nome do(s) autor(es).\nDocumentação para cada construtor e para cada método."
+  },
+  {
+    "objectID": "cap5-2.html#section-32",
+    "href": "cap5-2.html#section-32",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "A documentação de todo construtor e método deve incluir, no mínimo:\n\nO nome do método.\nO tipo de retorno.\nOs nomes e tipos dos parâmetros.\nUma descrição do objetivo e função do método.\nUma descrição de cada parâmetro.\nUma descrição do valor retornado.\n\n\nAlém disso, cada projeto deveria ter um comentário geral sobre o projeto.\n\nGeralmente dentro de um arquivo README na pasta raiz do projeto.\nNo BlueJ podemos fazer esse comentário de projeto abrindo o arquivo que fica no canto superior esquerdo do diagrama de classses."
+  },
+  {
+    "objectID": "cap5-2.html#section-33",
+    "href": "cap5-2.html#section-33",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Alguns elementos da documentação podem ser sempre extraídos do código-fonte.\n\nComo os nomes e parâmetros dos métodos, por exemplo.\nJá a descrição da classe e dos métodos demanda mais atenção já que pode ser facilmente esquecida, ou ficar incompleta.\n\n\nNo Java, comentários Javadoc são escritos com um símbolo especial de comentário.\n\n/**\n * Este é um comentário Javadoc.\n * Ele pode ter várias linhas.\n */"
+  },
+  {
+    "objectID": "cap5-2.html#section-34",
+    "href": "cap5-2.html#section-34",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "O comentário deve ter /** no início e */ no final para ser reconhecido como um comentário javadoc.\n\nSe o comentário vem imediatamente antes da declaração da classe, ele é lido como a descrição da classe.\nSe ele está acima de uma assinatura de método, é considerado como um comentário do método.\n\n\nComo exatamente o comentário deve ser formatado para gerar a documentação pode variar de acordo com as ferramentas de cada linguagem de programação.\n\n\nNo caso do javadoc várias palavras-chave especiais estão disponíveis para formatar a documentação.\n\nEssas chaves começam com @, como, por exemplo:\n\n@version\n@author\n@param\n@return"
+  },
+  {
+    "objectID": "cap5-2.html#section-35",
+    "href": "cap5-2.html#section-35",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Exercício\n\n\nEncontre exemplos de palavras-chave javadoc no projeto do sistema de suporte e verifique como eles influenciam a formatação da documentação.\nExperimente fazer alterações e conferir o resultado na documentação gerada.\n\n\n\n\n\n\n\n\nExercício (entrega)\n\n\n\nDocumente adequadamente as classes do projeto de suporte técnico e gere a documentação usando o BlueJ.\nConfira se a documentação gerada está completa antes de enviar o projeto.\n\n\nEntregas dessa Aula\n\n\n\n\n\nPara ter presença nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nResponda às duas tarefas no Campus Virtual enviando os seus projetos contatos-hashmap e suporte-tecnico1 com as alterações dos exercícios solicitados ao longo dos slides."
+  },
+  {
+    "objectID": "cap5-2.html#section-36",
+    "href": "cap5-2.html#section-36",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Para ter presença nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nResponda às duas tarefas no Campus Virtual enviando os seus projetos contatos-hashmap e suporte-tecnico1 com as alterações dos exercícios solicitados ao longo dos slides."
   },
   {
     "objectID": "cap6-1.html#section",
@@ -4282,26 +4380,5 @@
     "title": "Tutorial do Greenfoot",
     "section": "",
     "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa aula e envie o código do projeto greenfoot-caranguejo da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar)."
-  },
-  {
-    "objectID": "cap5-2.html#section-23",
-    "href": "cap5-2.html#section-23",
-    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
-    "section": "",
-    "text": "A biblioteca de classes do Java possui diferentes tipos de conjuntos implementados em diferentes classes.\n\nUma delas é a classe HashSet.\n\n\n\n\n\n\nExercício\n\n\nBusque na documentação do Java, ou em outras fontes, quais são as similaridades e as diferenças enre um HashSet e um ArrayList.\nTente entender porque ArrayList é um caso especial de List e HashSet é um caso especial de Set."
-  },
-  {
-    "objectID": "cap5-2.html#section-24",
-    "href": "cap5-2.html#section-24",
-    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
-    "section": "",
-    "text": "A declaração de um HashSet, a criação do objeto e adição de elementos é feita da mesma forma que um ArrayList.\n\n    import java.util.HashSet;\n    . . .\n    HashSet&lt;String&gt; conjunto = new HashSet&lt;&gt;();\n    conjunto.add(\"um\");\n    conjunto.add(\"dois\");\n    conjunto.add(\"três\");\n\n\nPara percorrer um HashSet podemos usar um for-each, igualzinho ao que usamos para ArrayList.\n\n    for(String elemento : conjunto) {\n        // faz alguma coisa com o elemento.\n    }"
-  },
-  {
-    "objectID": "cap5-2.html#section-25",
-    "href": "cap5-2.html#section-25",
-    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
-    "section": "",
-    "text": "Repare que usar diferentes coleções em Java é sempre muito parecido.\n\nSe você entender como usar uma delas, você conseguiria usar as outras com facilidade.\n\n\nAs diferenças entre as coleções estão nos seus comportamentos.\n\nUma lista, por exemplo, mantém a ordem dos elemento, permite acesso aos elementos por posição, e pode ter elementos repetidos.\nJá um conjunto não mantém a ordem dos elementos, e garante que não existem elementos repetidos.\n\nPortanto, os elementos podem ser percorridos no for-each em ordem diferente da que eles foram inseridos.\nE inserir um mesmo elemento uma segunda vez, simplesmente não tem nenhum efeito."
   }
 ]

@@ -685,22 +685,38 @@
 <p>No caso do <code>HashMap</code>, precisamos informar dois tipos:</p>
 <ul>
 <li class="fragment">o tipo dos objetos chave e o tipo dos objetos valor.</li>
-<li class="fragment">No caso da lista de contatos, por exemplo, definimos que tanto a chave quanto o valor são objetos do tipo <code>String</code>.</li>
 </ul>
+</div>
+<div class="fragment">
+<p>No caso da lista de contatos, por exemplo, definimos que tanto a chave quanto o valor são objetos do tipo <code>String</code>.</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">HashMap</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span><span class="bu">String</span><span class="op">&gt;</span> contatos <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </section>
 <section id="section-15" class="slide level2 smaller">
 <h2></h2>
 <p>O trecho de código abaixo encontra e exibe o telefone da Maria.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> telefone <span class="op">=</span> contatos<span class="op">.</span><span class="fu">get</span><span class="op">(</span><span class="st">"Maria"</span><span class="op">);</span></span>
-<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Telefone da Maria: "</span> <span class="op">+</span> telefone<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> telefone <span class="op">=</span> contatos<span class="op">.</span><span class="fu">get</span><span class="op">(</span><span class="st">"Maria"</span><span class="op">);</span></span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Telefone da Maria: "</span> <span class="op">+</span> telefone<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
-<p>Repare que passamos a chave (o nome <code>"Maria"</code>) para o método <code>get</code> e ele nos retorna o valor (o número do telefone).</p>
-<ul>
-<li class="fragment">Leia a documentação dos métodos <code>get</code> e <code>put</code> da classe <code>HashMap</code> e veja se a explicação bate com o que você está entendendo até o momento.</li>
-</ul>
+<p>Repare que passamos a chave (o nome <code>"Maria"</code>) para o método <code>get</code> e ele nos retorna o valor (o número do telefone dela).</p>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Leia a documentação dos métodos <code>get</code> e <code>put</code> da classe <code>HashMap</code> e veja se a explicação bate com o que você está entendendo até o momento.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section>
 <section id="section-16" class="slide level2">
@@ -717,11 +733,11 @@
 <p>Crie uma classe chamada <code>Contatos</code> e use um <code>HashMap</code> para implementar uma lista de contatos similar à que vimos anteriormente. Lembre-se que você deve importar <code>java.util.HashMap</code>.</p>
 <p>Na classe, implemente dois métodos:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">cadastrarNumero</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">,</span> <span class="bu">String</span> numero<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">cadastrarNumero</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">,</span> <span class="bu">String</span> numero<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>e</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">buscarNumero</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">buscarNumero</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Os métodos devem usar os métodos <code>put</code> e <code>get</code> da classe <code>HashMap</code> para implementar suas funcionalidades.</p>
 </div>
@@ -835,14 +851,14 @@
 <section id="section-20" class="slide level2 smaller">
 <h2></h2>
 <p>Na aula passada você fez um exercício para que o sistema de suporte desse respostas que tivessem relação com a reclamação do usuário.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>entrada<span class="op">.</span><span class="fu">contains</span><span class="op">(</span><span class="st">"lento"</span><span class="op">))</span> <span class="op">{</span></span>
-<span id="cb9-2"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Acredito que isso tem a ver com o seu hardware. "</span> <span class="op">+</span></span>
-<span id="cb9-3"><a aria-hidden="true" tabindex="-1"></a>               <span class="st">"Atualizar seu processador deve resolver todos os "</span> <span class="op">+</span></span>
-<span id="cb9-4"><a aria-hidden="true" tabindex="-1"></a>               <span class="st">"problemas de desempenho. Você tem algum problema "</span> <span class="op">+</span> </span>
-<span id="cb9-5"><a aria-hidden="true" tabindex="-1"></a>               <span class="st">"com nosso software?"</span></span>
-<span id="cb9-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb9-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>entrada<span class="op">.</span><span class="fu">contains</span><span class="op">(</span><span class="st">"bug"</span><span class="op">))</span> <span class="op">{</span></span>
-<span id="cb9-8"><a aria-hidden="true" tabindex="-1"></a>        <span class="kw">...</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>entrada<span class="op">.</span><span class="fu">contains</span><span class="op">(</span><span class="st">"lento"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb10-2"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Acredito que isso tem a ver com o seu hardware. "</span> <span class="op">+</span></span>
+<span id="cb10-3"><a aria-hidden="true" tabindex="-1"></a>               <span class="st">"Atualizar seu processador deve resolver todos os "</span> <span class="op">+</span></span>
+<span id="cb10-4"><a aria-hidden="true" tabindex="-1"></a>               <span class="st">"problemas de desempenho. Você tem algum problema "</span> <span class="op">+</span> </span>
+<span id="cb10-5"><a aria-hidden="true" tabindex="-1"></a>               <span class="st">"com nosso software?"</span></span>
+<span id="cb10-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb10-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>entrada<span class="op">.</span><span class="fu">contains</span><span class="op">(</span><span class="st">"bug"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb10-8"><a aria-hidden="true" tabindex="-1"></a>        <span class="kw">...</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>Mas tratar isso usando blocos <code>if\else if</code> não é a melhor forma implementar.</p>
 <ul>
@@ -928,45 +944,282 @@
 </section>
 <section id="section-24" class="slide level2 smaller">
 <h2></h2>
-<p>A declaração de um <code>HashSet</code>, a criação do objeto e adição de elementos é feita da mesma forma que um <code>ArrayList</code>.</p>
+<p>A declaração de um <code>HashSet</code>, a criação do objeto e a adição de elementos é feita da mesma forma que um <code>ArrayList</code>.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb10"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">HashSet</span><span class="op">;</span></span>
-<span id="cb10-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span> <span class="op">.</span> <span class="op">.</span></span>
-<span id="cb10-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">HashSet</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> conjunto <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashSet</span><span class="op">&lt;&gt;();</span></span>
-<span id="cb10-4"><a aria-hidden="true" tabindex="-1"></a>    conjunto<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="st">"um"</span><span class="op">);</span></span>
-<span id="cb10-5"><a aria-hidden="true" tabindex="-1"></a>    conjunto<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="st">"dois"</span><span class="op">);</span></span>
-<span id="cb10-6"><a aria-hidden="true" tabindex="-1"></a>    conjunto<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="st">"três"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">HashSet</span><span class="op">;</span></span>
+<span id="cb11-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span> <span class="op">.</span> <span class="op">.</span></span>
+<span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">HashSet</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> conjunto <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashSet</span><span class="op">&lt;&gt;();</span></span>
+<span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a>    conjunto<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="st">"um"</span><span class="op">);</span></span>
+<span id="cb11-5"><a aria-hidden="true" tabindex="-1"></a>    conjunto<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="st">"dois"</span><span class="op">);</span></span>
+<span id="cb11-6"><a aria-hidden="true" tabindex="-1"></a>    conjunto<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="st">"três"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Para percorrer um <code>HashSet</code> podemos usar um for-each, igualzinho ao que usamos para <code>ArrayList</code>.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb11"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span><span class="op">(</span><span class="bu">String</span> elemento <span class="op">:</span> conjunto<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb11-2"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// faz alguma coisa com o elemento.</span></span>
-<span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span><span class="op">(</span><span class="bu">String</span> elemento <span class="op">:</span> conjunto<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// faz alguma coisa com o elemento.</span></span>
+<span id="cb12-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
 <section id="section-25" class="slide level2 smaller">
 <h2></h2>
-<p>Repare que usar diferentes coleções em Java é sempre muito parecido.</p>
+<p>Repare, portanto, que <strong>usar diferentes coleções</strong> em Java <strong>é</strong> sempre <strong>muito parecido</strong>.</p>
 <ul>
-<li class="fragment">Se você entender como usar uma delas, você conseguiria usar as outras com facilidade.</li>
+<li class="fragment">Se você entender como usar uma delas, você conseguirá usar as outras com facilidade.</li>
 </ul>
 <div class="fragment">
-<p>As diferenças entre as coleções estão nos seus comportamentos.</p>
+<p>As <strong>diferenças</strong> entre as coleções <strong>estão nos</strong> seus <strong>comportamentos</strong>.</p>
 <ul>
-<li class="fragment">Uma lista, por exemplo, mantém a ordem dos elemento, permite acesso aos elementos por posição, e pode ter elementos repetidos.</li>
+<li class="fragment">Uma lista, por exemplo, mantém a ordem dos elementos, permite acesso aos elementos por posição, e permite elementos repetidos.</li>
 <li class="fragment">Já um conjunto não mantém a ordem dos elementos, e garante que não existem elementos repetidos.
 <ul>
 <li class="fragment">Portanto, os elementos podem ser percorridos no for-each em ordem diferente da que eles foram inseridos.</li>
 <li class="fragment">E inserir um mesmo elemento uma segunda vez, simplesmente não tem nenhum efeito.</li>
 </ul></li>
 </ul>
+</div>
+</section></section>
+<section>
+<section id="escrevendo-documentação-de-classes" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Escrevendo documentação de classes</h1>
+
+</section>
+<section id="section-26" class="slide level2 smaller">
+<h2></h2>
+<p>Quando estamos trabalhando em nossos projetos,</p>
+<ul>
+<li class="fragment"><p>é importante escrevermos a <strong>documentação de nossas classes</strong>, à medida que desenvolvemos o código.</p></li>
+<li class="fragment"><p>Muitas vezes programadores não levam a sério a documentação, o que pode levar a sérios problemas.</p></li>
+</ul>
+<div class="fragment">
+<p>Se você não fornecer documentação suficiente, pode ser difícil para outro programador entender suas classes.</p>
+<ul>
+<li class="fragment">Muitas vezes esse outro programador pode ser você mesmo :)</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Sem documentação, precisamos ler o código da classe para tentar entender como ela funciona.</p>
+<ul>
+<li class="fragment">Isso pode funcionar em um projeto pequeno de estudante.</li>
+<li class="fragment">Mas cria problemas em projetos do mundo real.</li>
+</ul>
+</div>
+</section>
+<section id="section-27" class="slide level2 smaller">
+<h2></h2>
+<p>É muito comum que sistemas comerciais tenham centenas de milhares de linhas de código.</p>
+<ul>
+<li class="fragment">Imagine que você tivesse que ler todas essas linhas para entender como o código funciona.</li>
+<li class="fragment">Seria impossível!</li>
+</ul>
+<div class="fragment">
+<p>Nós conseguimos usar as classes da biblioteca Java, como <code>HashSet</code> e <code>Random</code>, olhando apenas a documentação delas.</p>
+<ul>
+<li class="fragment">Nós nunca precisamos olhar o código-fonte destas classes.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Isso funciona porque as classes estão suficientemente bem documentadas.</p>
+<ul>
+<li class="fragment">Seria muito mais difícil usar essas classes, se precisássemos ler e entender o código-fonte delas primeiro.</li>
+</ul>
+</div>
+</section>
+<section id="section-28" class="slide level2 smaller">
+<h2></h2>
+<p>Em uma equipe de desenvolvimento de software, a implementação das classes é geralmente dividida entre vários programadores.</p>
+<ul>
+<li class="fragment">Um programador poderia implementar a classe <code>SistemaDeSuporte</code>, por exemplo, e outro a classe <code>LeitorDeEntrada</code>.</li>
+<li class="fragment">Portanto, você pode precisar implementar uma classe enquanto chama métodos de outras classes.</li>
+</ul>
+<div class="fragment">
+<p>Assim, o mesmo argumento usado para as classes da biblioteca Java vale para as classes que você escreve.</p>
+<ul>
+<li class="fragment">Se podemos usar as classes sem ter que ler e entender toda a implementação, nossa tarefa fica mais fácil.</li>
+<li class="fragment">Nós precisamos apenas da interface das classes e não da implementação.</li>
+<li class="fragment">Portanto, precisamos escrever boa documentação de classes também para as nossas próprias classes.</li>
+</ul>
+</div>
+<div class="fragment">
+<div title="Conceito">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p>A <strong>documentação</strong> de uma classe deve ser detalhada o suficiente para que outros programadores consigam usar a classe sem precisar ler o código fonte.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-29" class="slide level2 smaller">
+<h2></h2>
+<p>O Java tem uma ferramenta chamada <a href=".alert">javadoc</a> que gera documentação a partir de comentários no código.</p>
+<ul>
+<li class="fragment">Toda a documentação oficial das classes da biblioteca Java é gerada com o javadoc.</li>
+</ul>
+<div class="fragment">
+<p>O BlueJ usa o javadoc para gerar documentação das classes.</p>
+<ul>
+<li class="fragment"><p>Com o código de uma classe aberto no BlueJ, podemos acessar a caixa de opções no canto superior direito e mudar de <em>código-fonte</em> para <em>documentação</em>.</p></li>
+<li class="fragment"><p>Ou podemos também usar o menu <code>Ferramentas</code> → <code>Documentaçao do Projeto</code> para gerar a documentação de todas as classes do projeto.</p></li>
+</ul>
+</div>
+</section>
+<section id="section-30" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Experimente acessar a documentação da classe <code>SistemaDeSuporte</code> no BlueJ.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="fontsize70">
+<p>Os arquivos HTML gerados ficam em uma pasta <code>doc</code> dentro do projeto e podem ser abertos em qualquer navegador.</p>
+</div>
+</div>
+</section>
+<section id="section-31" class="slide level2 smaller">
+<h2></h2>
+<p>A <strong>documentação de uma classe</strong> deveria incluir, no mínimo:</p>
+<ul>
+<li class="fragment">O nome da classe.</li>
+<li class="fragment">Um comentário descrevendo o objetivo e as características da classe.</li>
+<li class="fragment">Um número de versão.</li>
+<li class="fragment">O nome do(s) autor(es).</li>
+<li class="fragment">Documentação para cada construtor e para cada método.</li>
+</ul>
+</section>
+<section id="section-32" class="slide level2 smaller">
+<h2></h2>
+<p>A <strong>documentação de todo construtor e método</strong> deve incluir, no mínimo:</p>
+<ul>
+<li class="fragment">O nome do método.</li>
+<li class="fragment">O tipo de retorno.</li>
+<li class="fragment">Os nomes e tipos dos parâmetros.</li>
+<li class="fragment">Uma descrição do objetivo e função do método.</li>
+<li class="fragment">Uma descrição de cada parâmetro.</li>
+<li class="fragment">Uma descrição do valor retornado.</li>
+</ul>
+<div class="fragment">
+<p>Além disso, cada projeto deveria ter um comentário geral sobre o projeto.</p>
+<ul>
+<li class="fragment">Geralmente dentro de um arquivo <code>README</code> na pasta raiz do projeto.</li>
+<li class="fragment">No BlueJ podemos fazer esse comentário de projeto abrindo o arquivo que fica no canto superior esquerdo do diagrama de classses.</li>
+</ul>
+</div>
+</section>
+<section id="section-33" class="slide level2 smaller">
+<h2></h2>
+<p>Alguns elementos da documentação podem ser sempre extraídos do código-fonte.</p>
+<ul>
+<li class="fragment">Como os nomes e parâmetros dos métodos, por exemplo.</li>
+<li class="fragment">Já a descrição da classe e dos métodos demanda mais atenção já que pode ser facilmente esquecida, ou ficar incompleta.</li>
+</ul>
+<div class="fragment">
+<p>No Java, comentários <code>Javadoc</code> são escritos com um símbolo especial de comentário.</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb13"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> Este <span class="co">é</span> um coment<span class="co">á</span>rio Javadoc<span class="co">.</span></span>
+<span id="cb13-3"><a aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> Ele pode ter v<span class="co">á</span>rias linhas<span class="co">.</span></span>
+<span id="cb13-4"><a aria-hidden="true" tabindex="-1"></a> <span class="co">*/</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-34" class="slide level2 smaller">
+<h2></h2>
+<p>O comentário deve ter <code>/**</code> no início e <code>*/</code> no final para ser reconhecido como um comentário <code>javadoc</code>.</p>
+<ul>
+<li class="fragment">Se o comentário vem imediatamente antes da declaração da classe, ele é lido como a descrição da classe.</li>
+<li class="fragment">Se ele está acima de uma assinatura de método, é considerado como um comentário do método.</li>
+</ul>
+<div class="fragment">
+<p>Como exatamente o comentário deve ser formatado para gerar a documentação pode variar de acordo com as ferramentas de cada linguagem de programação.</p>
+</div>
+<div class="fragment">
+<p>No caso do <code>javadoc</code> várias palavras-chave especiais estão disponíveis para formatar a documentação.</p>
+<ul>
+<li class="fragment">Essas chaves começam com <code>@</code>, como, por exemplo:
+<ul>
+<li class="fragment"><code>@version</code></li>
+<li class="fragment"><code>@author</code></li>
+<li class="fragment"><code>@param</code></li>
+<li class="fragment"><code>@return</code></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-35" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Encontre exemplos de palavras-chave <code>javadoc</code> no projeto do sistema de suporte e verifique como eles influenciam a formatação da documentação.</p>
+<p>Experimente fazer alterações e conferir o resultado na documentação gerada.</p>
+</div>
+</div>
+</div>
+</div>
+<div title="Exercício [(entrega)]{.alert}">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
+</div>
+<div class="callout-content">
+<div>
+<p>Documente adequadamente as classes do projeto de suporte técnico e gere a documentação usando o BlueJ.</p>
+<p>Confira se a documentação gerada está completa antes de enviar o projeto.</p>
+</div>
+<section id="entregas-dessa-aula" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Entregas dessa Aula</h1>
+
+</section>
+<section id="section-36" class="slide level2 smaller">
+<h2></h2>
+<div>
+<p>Para ter <strong>presença</strong> nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.</p>
+<div title="Entregas no Campus Virtual">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Entregas no Campus Virtual</strong></p>
+</div>
+<div class="callout-content">
+<p>Responda às duas tarefas no Campus Virtual enviando os seus projetos <code>contatos-hashmap</code> e <code>suporte-tecnico1</code> com as alterações dos exercícios solicitados ao longo dos slides.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 <div class="quarto-auto-generated-content">
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
+</div>
+</div>
+</section>
+
+</div>
 </div>
 </div>
 </div>
