@@ -459,7 +459,7 @@
     "href": "cap5-1.html#section-29",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exemplos de frases de resposta do sistema de suporte técnico:\n\"Isso parece estranho. Você poderia descrever com mais detalhes?\"\n\"Nenhum outro cliente reclamou disso antes. Qual é a configuração do seu sistema?\"\n\"Poderia me dar mais informações sobre o problema?\"\n\"Isso é abordado no manual. Você já leu o manual?\"\n\"Sua descrição é um pouco ruim. Você tem um especialista com você que poderia descrever isso melhor?\"\n\"Isso não é um bug, é uma funcionalidade!\"\n\"Você poderia detalhar melhor isso?\"\n\"Você já tentou executar o aplicativo no seu telefone?\"\n\"Já verifiquei no StatckOverflow e ChatGPT e nem eles sabem como responder :(\""
+    "text": "Exemplos de frases de resposta do sistema de suporte técnico:\n\n\"Isso parece estranho. Você poderia descrever com mais detalhes?\"\n\"Nenhum outro cliente reclamou disso antes. Qual é a configuração do seu sistema?\"\n\"Poderia me dar mais informações sobre o problema?\"\n\"Isso é abordado no manual. Você já leu o manual?\"\n\"Sua descrição é um pouco ruim. Você tem um especialista com você que poderia descrever isso melhor?\"\n\"Isso não é um bug, é uma funcionalidade!\"\n\"Você poderia detalhar melhor isso?\"\n\"Você já tentou executar o aplicativo no seu telefone?\"\n\"Já verifiquei no StatckOverflow e ChatGPT e nem eles sabem como responder :(\""
   },
   {
     "objectID": "cap5-1.html#section-30",
@@ -473,7 +473,7 @@
     "href": "cap5-1.html#section-31",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Por exemplo, suponha que na pergunta do usuário apareça a palavra \"lento\".\n\nA resposta poderia ser então algo como:\n\n\n\"Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?\"\n\n\nJá se na pergunta do usuário aparecer a palava \"bug\", a resposta poderia ser:\n\n\n\"Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?\"\n\n\nComo podemos implementar isso?"
+    "text": "Por exemplo, suponha que na pergunta do usuário apareça a palavra \"lento\".\n\nA resposta poderia ser então algo como:\n\n\n\n\"Acredito que isso tem a ver com o seu hardware. \" +\n\"Atualizar seu processador deve resolver todos os problemas de desempenho. \" + \n\"Você tem algum problema com nosso software?\"\"\n\n\n\nJá se na pergunta do usuário aparecer a palava \"bug\", a resposta poderia ser:\n\n\n\n\"Bem, você sabe, todo software tem alguns bugs. \" +\n\"Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. \" +\n\"Você pode descrever o problema com mais detalhes?\"\n\n\n\nComo podemos implementar isso?"
   },
   {
     "objectID": "cap5-1.html#section-32",
@@ -3602,98 +3602,154 @@
     "href": "cap5-2.html#section-1",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Supondo que tivéssemos uma forma de ler os dados de arquivo, nós poderíamos tratar essas informações utilizando a classe HashMap.\n\nNesta aula vamos conhecer os conceitos que envolvem essa classe.\nE como ela pode ser bem útil em nossos sistemas."
+    "text": "Supondo que tivéssemos uma forma de ler os dados de arquivo, nós poderíamos tratar essas informações utilizando a classe HashMap.\n\nNesta aula vamos conhecer os conceitos que envolvem essa classe.\nE como ela pode ser bem útil em nossos sistemas.\n\n\nMas antes disso, vamos entender um pouquinho mais sobre a palavra-chave import."
   },
   {
     "objectID": "cap5-2.html#section-2",
     "href": "cap5-2.html#section-2",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Um Mapa é uma coleção de pares de objetos chave-valor.\n\nAssim como um ArrayList, um Mapa pode guardar uma quantidade flexível de entradas.\nMas uma diferença importante é que em um Mapa, uma entrada não é um objeto, e sim um par de objetos.\n\nEste par é formado por um objeto chave e um objeto valor.\n\n\n\nEnquanto com ArrayList buscamos objetos pela sua posição,\n\ncom um Mapa, usamos o objeto chave para buscar o objeto valor associado a ele."
+    "text": "Nos exercícios da aula teórica anterior, você provavelmente usou as linhas de código abaixo:\n\nimport java.util.ArrayList;\nimport java.util.Random;\n\n\nNós já usamos import antes, mas vamos agora entender um pouco mais sobre ele."
   },
   {
     "objectID": "cap5-2.html#section-3",
     "href": "cap5-2.html#section-3",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Você consegue pensar em um exemplo de Mapa, ou seja, de coleção de dados organizados na forma de pares chave/valor?\n\nUm exemplo bem comum de um Mapa é a lista de contatos de um celular.\nA lista de contatos tem entradas, e cada entrada é um par: um nome e um número de telefone.\n\n\nUsamos a lista de contatos procurando por um nome e, ao encontrá-lo, obtemos o número de telefone associado a ele.\n\nNós não procuramos os contatos por um índice ou posição.\nPortanto, nós buscamos um valor (o número de telefone), a partir de uma chave (o nome)"
+    "text": "As classes da biblioteca de classes do Java não ficam disponíveis automaticamente, como as outras classes do projeto.\n\nPara usá-las precisamos informar isso para o compilador.\nEsse processo é chamado de importação de classe.\n\nE é feito usando a palavra-chave import.\n\n\n\nO comando import tem o seguinte formato:\n\nimport nome_qualificado_da_classe;"
   },
   {
     "objectID": "cap5-2.html#section-4",
     "href": "cap5-2.html#section-4",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Na lista de contatos de um celular poderíamos ter uma coleção como a seguinte:\n\n\n\nNome\nNúmero\n\n\n\n\nTião\n9999 1111\n\n\nMaria\n8888 1234\n\n\nJoaquim\n9876 5432\n\n\n\n\nNeste exemplo:\n\nA primeira entrada tem a chave \"Tião\" e o valor \"9999 1111\".\nEu poderia buscar um número a partir da chave \"Maria\".\n\nE a resposta a esta busca seria \"8888 1234\"."
+    "text": "Como a biblioteca de classes do Java possui milhares de classes,\n\né necessário ter alguma forma de organização que facilite a utilização delas.\n\n\nJava usa pacotes para organizar as classes em grupos.\n\nE os pacotes podem ser aninhados (ou seja, os pacotes podem conter outros pacotes)."
   },
   {
     "objectID": "cap5-2.html#section-5",
     "href": "cap5-2.html#section-5",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Você consegue pensar em outros exemplos de coleções na forma de Mapa que usamos no dia a dia?\n\nUm dicionário:\n\nBuscamos um significado (valor) a partir de uma palavra (chave).\n\n\n\nSiglas e nomes de estados:\n\nPodemos buscar o nome de um estado (valor) a partir de sua sigla (chave).\n\n\n\nUma coleção de alunos:\n\nPodemos buscar um objeto aluno (valor) a partir da sua matrícula (chave)."
+    "text": "As classes ArrayList e Random, por exemplo, fazem parte do pacote java.util.\n\nNós podemos ver essa informação na documentação das classes.\n\n\nO nome nome completo ou nome qualificado de uma classe é:\n\no nome do seu pacote, seguido de um ponto, seguido do nome da classe.\nAssim, o nome completo da classe ArrayList, por exemplo, é: java.util.ArrayList."
   },
   {
     "objectID": "cap5-2.html#section-6",
     "href": "cap5-2.html#section-6",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "A forma mais simples de usar essa estrutura é através da classe HashMap.\n\nHashMap é uma implementação particular de Mapa."
+    "text": "Java também nos permite importar pacotes completos com o comando:\n\nimport nome_do_pacote.*;\n\n\nPortanto, o comando abaixo importaria todas as classes do pacote java.util:\n\nimport java.util.*;\n\n\n\nMas, apesar da linguagem permitir isso, é uma boa prática importar apenas as classes que você realmente vai usar.\n\nA vantagem é a legibilidade, pois fica claro quais classes são realmente necessárias."
   },
   {
     "objectID": "cap5-2.html#section-7",
     "href": "cap5-2.html#section-7",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Os métodos mais importantes da classe HashMap são: put e get.\n\nO método put insere uma entrada no mapa (um par de objetos chave/valor).\nJá o método get recupera o valor associado a uma chave.\n\n\nO trecho de código abaixo cria um HashMap e insere nele três entradas.\n\nCada entrada é um par chave/valor consistindo de um nome e um número de telefone.\n\n    HashMap&lt;String,String&gt; contatos = new HashMap&lt;&gt;();\n    contatos.put(\"Tiao\", \"9999 1111\");\n    contatos.put(\"Maria\", \"8888 1234\");\n    contatos.put(\"Joaquim\", \"9876 5432\");"
+    "text": "Há uma exceção a essas regras de pacotes:\n\nAlgumas classes são tão usadas que seriam importadas em quase todas as classes que implementadas.\nEssas classes pertecem ao pacote java.lang.\n\n\nEsse pacote é importado automaticamente pelo compilador em todas as classes.\n\nPortanto, não precisamos usar o comando import para esse pacote.\nA classe String é um exemplo de classe desse pacote."
   },
   {
     "objectID": "cap5-2.html#section-8",
     "href": "cap5-2.html#section-8",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Como vimos para o ArrayList, quando declaramos uma variável do tipo HashMap e quando criamos um objeto HashMap, precisamos informar o tipo dos objetos que serão guardados.\n\nE, no caso do HashMap, precisamos informar dois tipos: o tipo dos objetos chave e o tipo dos objetos valor.\nNo caso da lista de contatos definimos que tanto a chave quanto o valor são objetos do tipo String."
+    "text": "Um Mapa é uma coleção de pares de objetos chave-valor.\n\nAssim como um ArrayList, um Mapa pode guardar uma quantidade flexível de entradas.\nMas uma diferença importante é que em um Mapa, uma entrada não é um objeto, e sim um par de objetos.\n\nEste par é formado por um objeto chave e um objeto valor.\n\n\n\nEnquanto com ArrayList buscamos objetos pela sua posição,\n\ncom um Mapa, usamos o objeto chave para buscar o objeto valor associado a ele."
   },
   {
     "objectID": "cap5-2.html#section-9",
     "href": "cap5-2.html#section-9",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "O trecho de código abaixo encontra e exibe o telefone da Maria.\n    String telefone = contatos.get(\"Maria\");\n    System.out.println(\"Telefone da Maria: \" + telefone);\n\nRepare que passamos a chave (o nome \"Maria\") para o método get e ele nos retorna o valor (o número do telefone).\n\nLeia a documentação dos métodos get e put da classe HashMap e veja se a explicação bate com o que você está entendendo até o momento."
+    "text": "Você consegue pensar em um exemplo de Mapa, ou seja, de coleção de dados organizados na forma de pares chave/valor?\n\nUm exemplo bem comum de um Mapa é a lista de contatos de um celular.\nA lista de contatos tem entradas, e cada entrada é um par: um nome e um número de telefone.\n\n\nUsamos a lista de contatos procurando por um nome e, ao encontrá-lo, obtemos o número de telefone associado a ele.\n\nNós não procuramos os contatos por um índice ou posição.\nPortanto, nós buscamos um valor (o número de telefone), a partir de uma chave (o nome)"
   },
   {
     "objectID": "cap5-2.html#section-10",
     "href": "cap5-2.html#section-10",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício (entrega)\n\n\n\nCrie no BlueJ um projeto chamado contatos-hashmap.\nCrie uma classe chamada Contatos e use um HashMap para implementar uma lista de contatos similar à que vimos anteriormente. Lembre-se que você deve importar java.util.HashMap.\nNa classe, implemente dois métodos:\n    public void cadastrarNumero(String nome, String numero)\ne\n    public String buscarNumero(String nome)\nOs métodos devem usar os métodos put e get da classe HashMap para implementar suas funcionalidades."
+    "text": "Na lista de contatos de um celular poderíamos ter uma coleção como a seguinte:\n\n\n\nNome\nNúmero\n\n\n\n\nTião\n9999 1111\n\n\nMaria\n8888 1234\n\n\nJoaquim\n9876 5432\n\n\n\n\nNeste exemplo:\n\nA primeira entrada tem a chave \"Tião\" e o valor \"9999 1111\".\nEu poderia buscar um número a partir da chave \"Maria\".\n\nE a resposta a esta busca seria \"8888 1234\"."
   },
   {
     "objectID": "cap5-2.html#section-11",
     "href": "cap5-2.html#section-11",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Para os exercícios a seguir, você deve usar a documentação oficial da classe HashMap do Java.\n\n\n\n\n\nExercício\n\n\nVerifique na documentação como podemos saber quantas entradas estão guardadas em um HashMap.\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente com o BlueJ o que acontece quando você adiciona uma entrada em uma mapa com uma chave que já existia no mapa.\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente com o BlueJ o que acontece quando você adiciona duas entradas em uma mapa com o mesmo valor, mas com chaves diferentes."
+    "text": "Você consegue pensar em outros exemplos de coleções na forma de Mapa que usamos no dia a dia?\n\nUm dicionário:\n\nBuscamos um significado (valor) a partir de uma palavra (chave).\n\n\n\nSiglas e nomes de estados:\n\nPodemos buscar o nome de um estado (valor) a partir de sua sigla (chave).\n\n\n\nUma coleção de alunos:\n\nPodemos buscar um objeto aluno (valor) a partir da sua matrícula (chave).\n\n\n\n\n\n\n\nConceito\n\n\nUm mapa é uma coleção que guarda pares chave/valor como entradas. Valores podem ser buscados forncendo-se a chave correspondente."
   },
   {
     "objectID": "cap5-2.html#section-12",
     "href": "cap5-2.html#section-12",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\nComo você pode verificar se uma chave existe em um mapa? Escreva um código Java de exemplo.\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente com o BlueJ o que acontece quando você tenta procurar um valor e a chave fornecida não existe no mapa.\n\n\n\n\n\n\n\n\nExercício\n\n\nComo podemos imprimir todas as chaves que estão armazenadas em um HashMap."
+    "text": "A forma mais simples de usar essa estrutura é através da classe HashMap.\n\nHashMap é uma implementação particular de Mapa."
   },
   {
     "objectID": "cap5-2.html#section-13",
     "href": "cap5-2.html#section-13",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
+    "text": "Os métodos mais importantes da classe HashMap são: put e get.\n\nO método put insere uma entrada no mapa (um par de objetos chave/valor).\nJá o método get recupera o valor associado a uma chave.\n\n\nO trecho de código abaixo cria um HashMap e insere nele três entradas.\n\nCada entrada é um par chave/valor consistindo de um nome e um número de telefone.\n\n\n    HashMap&lt;String,String&gt; contatos = new HashMap&lt;&gt;();\n    contatos.put(\"Tiao\", \"9999 1111\");\n    contatos.put(\"Maria\", \"8888 1234\");\n    contatos.put(\"Joaquim\", \"9876 5432\");"
+  },
+  {
+    "objectID": "cap5-2.html#section-14",
+    "href": "cap5-2.html#section-14",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Quando declaramos uma variável do tipo HashMap e quando criamos um objeto HashMap\n\nprecisamos informar o tipo dos objetos que serão guardados.\nAssim como fazemos com ArrayList.\n\n\nNo caso do HashMap, precisamos informar dois tipos:\n\no tipo dos objetos chave e o tipo dos objetos valor.\nNo caso da lista de contatos, por exemplo, definimos que tanto a chave quanto o valor são objetos do tipo String."
+  },
+  {
+    "objectID": "cap5-2.html#section-15",
+    "href": "cap5-2.html#section-15",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "O trecho de código abaixo encontra e exibe o telefone da Maria.\n\n    String telefone = contatos.get(\"Maria\");\n    System.out.println(\"Telefone da Maria: \" + telefone);\n\n\nRepare que passamos a chave (o nome \"Maria\") para o método get e ele nos retorna o valor (o número do telefone).\n\nLeia a documentação dos métodos get e put da classe HashMap e veja se a explicação bate com o que você está entendendo até o momento."
+  },
+  {
+    "objectID": "cap5-2.html#section-16",
+    "href": "cap5-2.html#section-16",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Exercício (entrega)\n\n\n\nCrie no BlueJ um projeto chamado contatos-hashmap.\nCrie uma classe chamada Contatos e use um HashMap para implementar uma lista de contatos similar à que vimos anteriormente. Lembre-se que você deve importar java.util.HashMap.\nNa classe, implemente dois métodos:\n\n    public void cadastrarNumero(String nome, String numero)\n\ne\n\n    public String buscarNumero(String nome)\n\nOs métodos devem usar os métodos put e get da classe HashMap para implementar suas funcionalidades."
+  },
+  {
+    "objectID": "cap5-2.html#section-17",
+    "href": "cap5-2.html#section-17",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Para os exercícios a seguir, você pode usar a documentação oficial da classe HashMap do Java.\n\n\n\n\n\nExercício\n\n\nVerifique na documentação como podemos saber quantas entradas estão guardadas em um HashMap.\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente com o BlueJ o que acontece quando você adiciona uma entrada em uma mapa com uma chave que já existia no mapa.\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente com o BlueJ o que acontece quando você adiciona duas entradas em uma mapa com o mesmo valor, mas com chaves diferentes."
+  },
+  {
+    "objectID": "cap5-2.html#section-18",
+    "href": "cap5-2.html#section-18",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Exercício\n\n\nComo você pode verificar se uma chave existe em um mapa? Escreva um código Java de exemplo.\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente com o BlueJ o que acontece quando você tenta procurar um valor e a chave fornecida não existe no mapa.\n\n\n\n\n\n\n\n\nExercício\n\n\nComo podemos imprimir todas as chaves que estão armazenadas em um HashMap."
+  },
+  {
+    "objectID": "cap5-2.html#section-19",
+    "href": "cap5-2.html#section-19",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
     "text": "Exercício (entrega)\n\n\nAltere o projeto contatos-hashmap, criando uma classe chamada TestesHashMap.\nNesta classe, implemente um método chamado testar que demonstre todas as funcionalidades que você experimentou nos exercícios dos slides anteriores."
   },
   {
-    "objectID": "cap5-2.html#usando-o-conceito-de-mapa-no-sistema-de-suporte",
-    "href": "cap5-2.html#usando-o-conceito-de-mapa-no-sistema-de-suporte",
+    "objectID": "cap5-2.html#section-20",
+    "href": "cap5-2.html#section-20",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
-    "section": "Usando o conceito de mapa no sistema de suporte",
-    "text": "Usando o conceito de mapa no sistema de suporte"
+    "section": "",
+    "text": "Na aula passada você fez um exercício para que o sistema de suporte desse respostas que tivessem relação com a reclamação do usuário.\n    if (entrada.contains(\"lento\")) {\n        return \"Acredito que isso tem a ver com o seu hardware. \" +\n               \"Atualizar seu processador deve resolver todos os \" +\n               \"problemas de desempenho. Você tem algum problema \" + \n               \"com nosso software?\"\n    }\n    else if (entrada.contains(\"bug\")) {\n        ...\n\nMas tratar isso usando blocos if\\else if não é a melhor forma implementar.\n\nIsso porque a cada nova palavra-chave tratada, teríamos que alterar o código e recompilar o sistema."
+  },
+  {
+    "objectID": "cap5-2.html#section-21",
+    "href": "cap5-2.html#section-21",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Nós podemos melhorar essa implementação usando um HashMap.\n\nA ideia é ter um mapa que relacione palavras como \"lento\" e \"bug\" com as respostas correspondentes a estas palavras.\nPortanto, o mapa terá como chave uma String e como valor também uma String.\n\n\nNos próximos exercícios vamos fazer essa implementação.\n\nNós vamos colocar as entradas do HashMap diretamente no código.\nE, portanto, alguém pode argumentar que isso não é muito diferente de usar if\\else if.\nMas, a inclusão das entradas no HashMap poderia ser feita a partir de um arquivo, por exemplo.\n\nE, assim, poderíamos acrescentar novas palavras-chave no arquivo sem precisar recompilar o sistema."
+  },
+  {
+    "objectID": "cap5-2.html#section-22",
+    "href": "cap5-2.html#section-22",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Exercício (entrega)\n\n\nAltere a classe a classe Respondedor do projeto suporte-tecnico1 para que ela tenha um atributo mapa para guardar as palavras-chaves e as respostas.\nCrie um método chamado preencherMapaDeRespostas que preenche o mapa com as respostas que você tinha tratado como if\\else if na aula anterior. Chame o método no construtor da classe.\nPor fim, altere o método gerarResposta da seguinte forma:\n\nEle deve ter um loop para percorrer as chaves do mapa.\nDentro do loop deve verificar se a variável entrada contém a chave.\n\nSe sim, ele deve retornar o valor associado a esta chave.\n\nSe o loop terminar e a entrada não tiver nenhuma das chaves, ele deve retornar uma resposta padrão.\n\nPor exemplo, “Desculpe, não entendi o que você quis dizer. Poderia reformular a pergunta?”."
   },
   {
     "objectID": "cap6-1.html#section",

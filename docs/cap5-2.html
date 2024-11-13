@@ -437,13 +437,110 @@
 <li class="fragment">Nesta aula vamos conhecer os conceitos que envolvem essa classe.</li>
 <li class="fragment">E como ela pode ser bem útil em nossos sistemas.</li>
 </ul>
+<div class="fragment">
+<p>Mas antes disso, vamos entender um pouquinho mais sobre a palavra-chave <code>import</code>.</p>
+</div>
 </section>
+<section>
+<section id="pacotes-e-import" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Pacotes e <code>import</code></h1>
+
+</section>
+<section id="section-2" class="slide level2 smaller">
+<h2></h2>
+<p>Nos exercícios da aula teórica anterior, você provavelmente usou as linhas de código abaixo:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">ArrayList</span><span class="op">;</span></span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Random</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Nós já usamos <code>import</code> antes, mas vamos agora entender um pouco mais sobre ele.</p>
+</div>
+</section>
+<section id="section-3" class="slide level2 smaller">
+<h2></h2>
+<p>As classes da biblioteca de classes do Java não ficam disponíveis automaticamente, como as outras classes do projeto.</p>
+<ul>
+<li class="fragment">Para usá-las precisamos informar isso para o compilador.</li>
+<li class="fragment">Esse processo é chamado de <span class="alert">importação</span> de classe.
+<ul>
+<li class="fragment">E é feito usando a palavra-chave <code>import</code>.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>O comando <code>import</code> tem o seguinte formato:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">nome_qualificado_da_classe</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-4" class="slide level2 smaller">
+<h2></h2>
+<p>Como a biblioteca de classes do Java possui milhares de classes,</p>
+<ul>
+<li class="fragment">é necessário ter alguma forma de organização que facilite a utilização delas.</li>
+</ul>
+<div class="fragment">
+<p>Java usa <span class="alert">pacotes</span> para organizar as classes em grupos.</p>
+<ul>
+<li class="fragment">E os pacotes podem ser aninhados (ou seja, os pacotes podem conter outros pacotes).</li>
+</ul>
+</div>
+</section>
+<section id="section-5" class="slide level2 smaller">
+<h2></h2>
+<p>As classes <code>ArrayList</code> e <code>Random</code>, por exemplo, fazem parte do pacote <code>java.util</code>.</p>
+<ul>
+<li class="fragment">Nós podemos ver essa informação na documentação das classes.</li>
+</ul>
+<div class="fragment">
+<p>O nome <strong>nome completo</strong> ou <strong>nome qualificado</strong> de uma classe é:</p>
+<ul>
+<li class="fragment">o nome do seu pacote, seguido de um ponto, seguido do nome da classe.</li>
+<li class="fragment">Assim, o nome completo da classe <code>ArrayList</code>, por exemplo, é: <code>java.util.ArrayList</code>.</li>
+</ul>
+</div>
+</section>
+<section id="section-6" class="slide level2 smaller">
+<h2></h2>
+<p>Java também nos permite importar pacotes completos com o comando:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">nome_do_pacote</span><span class="op">.*;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Portanto, o comando abaixo importaria todas as classes do pacote <code>java.util</code>:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.*;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p>Mas, apesar da linguagem permitir isso, é uma boa prática importar apenas as classes que você realmente vai usar.</p>
+<ul>
+<li class="fragment">A vantagem é a legibilidade, pois fica claro quais classes são realmente necessárias.</li>
+</ul>
+</div>
+</section>
+<section id="section-7" class="slide level2 smaller">
+<h2></h2>
+<p>Há uma exceção a essas regras de pacotes:</p>
+<ul>
+<li class="fragment">Algumas classes são tão usadas que seriam importadas em quase todas as classes que implementadas.</li>
+<li class="fragment">Essas classes pertecem ao pacote <code>java.lang</code>.</li>
+</ul>
+<div class="fragment">
+<p>Esse pacote é importado automaticamente pelo compilador em todas as classes.</p>
+<ul>
+<li class="fragment">Portanto, não precisamos usar o comando <code>import</code> para esse pacote.</li>
+<li class="fragment">A classe <code>String</code> é um exemplo de classe desse pacote.</li>
+</ul>
+</div>
+</section></section>
 <section>
 <section id="usando-mapas-para-associações" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Usando mapas para associações</h1>
 
 </section>
-<section id="section-2" class="slide level2 smaller">
+<section id="section-8" class="slide level2 smaller">
 <h2></h2>
 <p>Um <span class="alert">Mapa</span> é uma <strong>coleção de pares de objetos chave-valor</strong>.</p>
 <ul>
@@ -460,7 +557,7 @@
 </ul>
 </div>
 </section>
-<section id="section-3" class="slide level2 smaller">
+<section id="section-9" class="slide level2 smaller">
 <h2></h2>
 <p>Você consegue pensar em um exemplo de Mapa, ou seja, de coleção de dados organizados na forma de pares chave/valor?</p>
 <ul>
@@ -475,7 +572,7 @@
 </ul>
 </div>
 </section>
-<section id="section-4" class="slide level2 smaller">
+<section id="section-10" class="slide level2 smaller">
 <h2></h2>
 <p>Na lista de contatos de um celular poderíamos ter uma coleção como a seguinte:</p>
 <table class="caption-top">
@@ -511,7 +608,7 @@
 </ul>
 </div>
 </section>
-<section id="section-5" class="slide level2 smaller">
+<section id="section-11" class="slide level2 smaller">
 <h2></h2>
 <p>Você consegue pensar em outros exemplos de coleções na forma de Mapa que usamos no dia a dia?</p>
 <div class="fragment">
@@ -532,8 +629,22 @@
 <li class="fragment">Podemos buscar um objeto aluno (valor) a partir da sua matrícula (chave).</li>
 </ul>
 </div>
+<div class="fragment">
+<div title="Conceito">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p>Um <strong>mapa</strong> é uma coleção que guarda pares chave/valor como entradas. Valores podem ser buscados forncendo-se a chave correspondente.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="section-6" class="slide level2 smaller">
+<section id="section-12" class="slide level2 smaller">
 <h2></h2>
 <img data-src="imagens/balao_como_usar_estrutura_mapa.png" class="r-stretch">
 <div class="fragment">
@@ -543,7 +654,7 @@
 </ul>
 </div>
 </section>
-<section id="section-7" class="slide level2 smaller">
+<section id="section-13" class="slide level2 smaller">
 <h2></h2>
 <p>Os métodos mais importantes da classe <code>HashMap</code> são: <code>put</code> e <code>get</code>.</p>
 <ul>
@@ -555,25 +666,36 @@
 <ul>
 <li class="fragment">Cada entrada é um par chave/valor consistindo de um nome e um número de telefone.</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">HashMap</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span><span class="bu">String</span><span class="op">&gt;</span> contatos <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
-<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>    contatos<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"Tiao"</span><span class="op">,</span> <span class="st">"9999 1111"</span><span class="op">);</span></span>
-<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>    contatos<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"Maria"</span><span class="op">,</span> <span class="st">"8888 1234"</span><span class="op">);</span></span>
-<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a>    contatos<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"Joaquim"</span><span class="op">,</span> <span class="st">"9876 5432"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb5"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">HashMap</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span><span class="bu">String</span><span class="op">&gt;</span> contatos <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a>    contatos<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"Tiao"</span><span class="op">,</span> <span class="st">"9999 1111"</span><span class="op">);</span></span>
+<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>    contatos<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"Maria"</span><span class="op">,</span> <span class="st">"8888 1234"</span><span class="op">);</span></span>
+<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a>    contatos<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"Joaquim"</span><span class="op">,</span> <span class="st">"9876 5432"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </section>
-<section id="section-8" class="slide level2 smaller">
+<section id="section-14" class="slide level2 smaller">
 <h2></h2>
-<p>Como vimos para o <code>ArrayList</code>, quando declaramos uma variável do tipo <code>HashMap</code> e quando criamos um objeto <code>HashMap</code>, precisamos informar o tipo dos objetos que serão guardados.</p>
+<p>Quando declaramos uma variável do tipo <code>HashMap</code> e quando criamos um objeto <code>HashMap</code></p>
 <ul>
-<li class="fragment">E, no caso do <code>HashMap</code>, precisamos informar dois tipos: o tipo dos objetos chave e o tipo dos objetos valor.</li>
-<li class="fragment">No caso da lista de contatos definimos que tanto a chave quanto o valor são objetos do tipo <code>String</code>.</li>
+<li class="fragment">precisamos informar o tipo dos objetos que serão guardados.</li>
+<li class="fragment">Assim como fazemos com <code>ArrayList</code>.</li>
 </ul>
+<div class="fragment">
+<p>No caso do <code>HashMap</code>, precisamos informar dois tipos:</p>
+<ul>
+<li class="fragment">o tipo dos objetos chave e o tipo dos objetos valor.</li>
+<li class="fragment">No caso da lista de contatos, por exemplo, definimos que tanto a chave quanto o valor são objetos do tipo <code>String</code>.</li>
+</ul>
+</div>
 </section>
-<section id="section-9" class="slide level2 smaller">
+<section id="section-15" class="slide level2 smaller">
 <h2></h2>
 <p>O trecho de código abaixo encontra e exibe o telefone da Maria.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> telefone <span class="op">=</span> contatos<span class="op">.</span><span class="fu">get</span><span class="op">(</span><span class="st">"Maria"</span><span class="op">);</span></span>
-<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Telefone da Maria: "</span> <span class="op">+</span> telefone<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> telefone <span class="op">=</span> contatos<span class="op">.</span><span class="fu">get</span><span class="op">(</span><span class="st">"Maria"</span><span class="op">);</span></span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Telefone da Maria: "</span> <span class="op">+</span> telefone<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="fragment">
 <p>Repare que passamos a chave (o nome <code>"Maria"</code>) para o método <code>get</code> e ele nos retorna o valor (o número do telefone).</p>
 <ul>
@@ -581,7 +703,7 @@
 </ul>
 </div>
 </section>
-<section id="section-10" class="slide level2">
+<section id="section-16" class="slide level2">
 <h2></h2>
 <div title="Exercício [(entrega)]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -594,9 +716,13 @@
 <p>Crie no BlueJ um projeto chamado <code>contatos-hashmap</code>.</p>
 <p>Crie uma classe chamada <code>Contatos</code> e use um <code>HashMap</code> para implementar uma lista de contatos similar à que vimos anteriormente. Lembre-se que você deve importar <code>java.util.HashMap</code>.</p>
 <p>Na classe, implemente dois métodos:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">cadastrarNumero</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">,</span> <span class="bu">String</span> numero<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">cadastrarNumero</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">,</span> <span class="bu">String</span> numero<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>e</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">buscarNumero</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">buscarNumero</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Os métodos devem usar os métodos <code>put</code> e <code>get</code> da classe <code>HashMap</code> para implementar suas funcionalidades.</p>
 </div>
 </div>
@@ -604,9 +730,9 @@
 </div>
 </div>
 </section>
-<section id="section-11" class="slide level2 smaller">
+<section id="section-17" class="slide level2 smaller">
 <h2></h2>
-<p>Para os exercícios a seguir, você deve usar a <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html">documentação</a> oficial da classe <code>HashMap</code> do Java.</p>
+<p>Para os exercícios a seguir, você pode usar a <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html">documentação</a> oficial da classe <code>HashMap</code> do Java.</p>
 <div class="fragment">
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -646,7 +772,7 @@
 </div>
 </div>
 </section>
-<section id="section-12" class="slide level2 smaller">
+<section id="section-18" class="slide level2 smaller">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -685,7 +811,7 @@
 </div>
 </div>
 </section>
-<section id="section-13" class="slide level2">
+<section id="section-19" class="slide level2">
 <h2></h2>
 <div title="Exercício [(entrega)]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -700,9 +826,76 @@
 </div>
 </div>
 </div>
+</section></section>
+<section>
+<section id="usando-um-mapa-no-sistema-de-suporte" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Usando um mapa no sistema de suporte</h1>
+
 </section>
-<section id="usando-o-conceito-de-mapa-no-sistema-de-suporte" class="slide level2 smaller">
-<h2>Usando o conceito de mapa no sistema de suporte</h2>
+<section id="section-20" class="slide level2 smaller">
+<h2></h2>
+<p>Na aula passada você fez um exercício para que o sistema de suporte desse respostas que tivessem relação com a reclamação do usuário.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>entrada<span class="op">.</span><span class="fu">contains</span><span class="op">(</span><span class="st">"lento"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb9-2"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Acredito que isso tem a ver com o seu hardware. "</span> <span class="op">+</span></span>
+<span id="cb9-3"><a aria-hidden="true" tabindex="-1"></a>               <span class="st">"Atualizar seu processador deve resolver todos os "</span> <span class="op">+</span></span>
+<span id="cb9-4"><a aria-hidden="true" tabindex="-1"></a>               <span class="st">"problemas de desempenho. Você tem algum problema "</span> <span class="op">+</span> </span>
+<span id="cb9-5"><a aria-hidden="true" tabindex="-1"></a>               <span class="st">"com nosso software?"</span></span>
+<span id="cb9-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb9-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>entrada<span class="op">.</span><span class="fu">contains</span><span class="op">(</span><span class="st">"bug"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb9-8"><a aria-hidden="true" tabindex="-1"></a>        <span class="kw">...</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p>Mas tratar isso usando blocos <code>if\else if</code> não é a melhor forma implementar.</p>
+<ul>
+<li class="fragment">Isso porque a cada nova palavra-chave tratada, teríamos que alterar o código e recompilar o sistema.</li>
+</ul>
+</div>
+</section>
+<section id="section-21" class="slide level2 smaller">
+<h2></h2>
+<p>Nós podemos melhorar essa implementação usando um <code>HashMap</code>.</p>
+<ul>
+<li class="fragment">A ideia é ter um mapa que relacione palavras como <code>"lento"</code> e <code>"bug"</code> com as respostas correspondentes a estas palavras.</li>
+<li class="fragment">Portanto, o mapa terá como chave uma <code>String</code> e como valor também uma <code>String</code>.</li>
+</ul>
+<div class="fragment">
+<p>Nos próximos exercícios vamos fazer essa implementação.</p>
+<ul>
+<li class="fragment">Nós vamos colocar as entradas do <code>HashMap</code> diretamente no código.</li>
+<li class="fragment">E, portanto, alguém pode argumentar que isso não é muito diferente de usar <code>if\else if</code>.</li>
+<li class="fragment">Mas, a inclusão das entradas no <code>HashMap</code> poderia ser feita a partir de um arquivo, por exemplo.
+<ul>
+<li class="fragment">E, assim, poderíamos acrescentar novas palavras-chave no arquivo sem precisar recompilar o sistema.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-22" class="slide level2 smaller">
+<h2></h2>
+<div title="Exercício [(entrega)]{.alert}">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
+</div>
+<div class="callout-content">
+<p>Altere a classe a classe <code>Respondedor</code> do projeto <a href="https://github.com/ufla-ipoo/suporte-tecnico1">suporte-tecnico1</a> para que ela tenha um atributo mapa para guardar as palavras-chaves e as respostas.</p>
+<p>Crie um método chamado <code>preencherMapaDeRespostas</code> que preenche o mapa com as respostas que você tinha tratado como <code>if\else if</code> na aula anterior. Chame o método no construtor da classe.</p>
+<p>Por fim, altere o método <code>gerarResposta</code> da seguinte forma:</p>
+<ul>
+<li class="fragment">Ele deve ter um loop para percorrer as chaves do mapa.</li>
+<li class="fragment">Dentro do loop deve verificar se a variável <code>entrada</code> contém a chave.
+<ul>
+<li class="fragment">Se sim, ele deve retornar o valor associado a esta chave.</li>
+</ul></li>
+<li class="fragment">Se o loop terminar e a <code>entrada</code> não tiver nenhuma das chaves, ele deve retornar uma resposta padrão.
+<ul>
+<li class="fragment">Por exemplo, “Desculpe, não entendi o que você quis dizer. Poderia reformular a pergunta?”.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 
 <div class="quarto-auto-generated-content">
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>

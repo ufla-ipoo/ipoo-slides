@@ -413,7 +413,7 @@
     </div>
 </div>
 
-  <p class="date">22/10/2024</p>
+  <p class="date">13/11/2024</p>
 </section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
@@ -1070,6 +1070,7 @@
 <section id="section-29" class="slide level2 smaller">
 <h2></h2>
 <p>Exemplos de frases de resposta do sistema de suporte técnico:</p>
+<div class="halfincfontsize">
 <div class="sourceCode" id="cb5"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"Isso parece estranho. Você poderia descrever com mais detalhes?"</span></span>
 <span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a><span class="st">"Nenhum outro cliente reclamou disso antes. Qual é a configuração do seu sistema?"</span></span>
 <span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a><span class="st">"Poderia me dar mais informações sobre o problema?"</span></span>
@@ -1079,6 +1080,7 @@
 <span id="cb5-7"><a aria-hidden="true" tabindex="-1"></a><span class="st">"Você poderia detalhar melhor isso?"</span></span>
 <span id="cb5-8"><a aria-hidden="true" tabindex="-1"></a><span class="st">"Você já tentou executar o aplicativo no seu telefone?"</span></span>
 <span id="cb5-9"><a aria-hidden="true" tabindex="-1"></a><span class="st">"Já verifiquei no StatckOverflow e ChatGPT e nem eles sabem como responder :("</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section></section>
 <section>
 <section id="melhorando-o-sistema-de-suporte" class="title-slide slide level1 center" data-background-color="#40666e">
@@ -1110,13 +1112,21 @@
 <li class="fragment">A resposta poderia ser então algo como:</li>
 </ul>
 <div class="fragment">
-<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"Acredito que isso tem a ver com o seu hardware. "</span> <span class="op">+</span></span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a><span class="st">"Atualizar seu processador deve resolver todos os problemas de desempenho. "</span> <span class="op">+</span> </span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a><span class="st">"Você tem algum problema com nosso software?""</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <div class="fragment">
 <p>Já se na pergunta do usuário aparecer a palava <code>"bug"</code>, a resposta poderia ser:</p>
 </div>
 <div class="fragment">
-<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"Bem, você sabe, todo software tem alguns bugs. "</span> <span class="op">+</span></span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a><span class="st">"Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. "</span> <span class="op">+</span></span>
+<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a><span class="st">"Você pode descrever o problema com mais detalhes?"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <div class="fragment">
 <p>Como podemos implementar isso?</p>

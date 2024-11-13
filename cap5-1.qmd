@@ -530,6 +530,7 @@ Podemos sortear uma posição usando o método `nextInt` da classe `Random`, e o
 
 Exemplos de frases de resposta do sistema de suporte técnico:
 
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
 "Isso parece estranho. Você poderia descrever com mais detalhes?"
 "Nenhum outro cliente reclamou disso antes. Qual é a configuração do seu sistema?"
@@ -541,6 +542,7 @@ Exemplos de frases de resposta do sistema de suporte técnico:
 "Você já tentou executar o aplicativo no seu telefone?"
 "Já verifiquei no StatckOverflow e ChatGPT e nem eles sabem como responder :("
 ```
+:::
 
 # Melhorando o sistema de suporte {background-color="#40666e"}
 
@@ -567,9 +569,13 @@ Por exemplo, suponha que na pergunta do usuário apareça a palavra `"lento"`.
 
 . . .
 
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-"Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?"
+"Acredito que isso tem a ver com o seu hardware. " +
+"Atualizar seu processador deve resolver todos os problemas de desempenho. " + 
+"Você tem algum problema com nosso software?""
 ```
+:::
 
 . . .
 
@@ -577,9 +583,13 @@ Já se na pergunta do usuário aparecer a palava `"bug"`, a resposta poderia ser
 
 . . .
 
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-"Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?"
+"Bem, você sabe, todo software tem alguns bugs. " +
+"Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. " +
+"Você pode descrever o problema com mais detalhes?"
 ```
+:::
 
 . . .
 
