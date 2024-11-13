@@ -215,11 +215,18 @@ Portanto, de quantas variáveis estamos falando?
 
 ## {.smaller}
 
-Suponha que tivéssemos a seguinte linha de código no construtor:
+Suponha que tivéssemos a linha de código destacada abaixo no construtor:
+
 
 ::: {.halfincfontsize}
-```{.java code-line-numbers="false"}
-    System.out.println(remetente);
+```{.java code-line-numbers="3"}
+    public Email(String remetente, String destinatario, String mensagem)
+    {
+        System.out.println(remetente);
+        this.remetente = remetente;
+        this.destinatario = destinatario;
+        this.mensagem = mensagem;
+    }
 ```
 :::
 
