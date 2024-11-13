@@ -3630,7 +3630,7 @@
     "href": "cap5-2.html#section-5",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "As classes ArrayList e Random, por exemplo, fazem parte do pacote java.util.\n\nNós podemos ver essa informação na documentação das classes.\n\n\nO nome nome completo ou nome qualificado de uma classe é:\n\no nome do seu pacote, seguido de um ponto, seguido do nome da classe.\nAssim, o nome completo da classe ArrayList, por exemplo, é: java.util.ArrayList."
+    "text": "As classes ArrayList e Random, por exemplo, fazem parte do pacote java.util.\n\nNós podemos ver essa informação na documentação das classes.\n\n\nO nome completo ou nome qualificado de uma classe é:\n\no nome do seu pacote, seguido de um ponto, seguido do nome da classe.\nAssim, o nome completo da classe ArrayList, por exemplo, é: java.util.ArrayList."
   },
   {
     "objectID": "cap5-2.html#section-6",
@@ -3644,7 +3644,7 @@
     "href": "cap5-2.html#section-7",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Há uma exceção a essas regras de pacotes:\n\nAlgumas classes são tão usadas que seriam importadas em quase todas as classes que implementadas.\nEssas classes pertecem ao pacote java.lang.\n\n\nEsse pacote é importado automaticamente pelo compilador em todas as classes.\n\nPortanto, não precisamos usar o comando import para esse pacote.\nA classe String é um exemplo de classe desse pacote."
+    "text": "Há uma exceção a essas regras de pacotes:\n\nAlgumas classes são tão usadas que seriam importadas em quase todas as classes que implementamos.\nEssas classes pertecem ao pacote java.lang.\n\n\nEsse pacote é importado automaticamente pelo compilador em todas as classes.\n\nPortanto, não precisamos usar o comando import para esse pacote.\nA classe String é um exemplo de classe desse pacote."
   },
   {
     "objectID": "cap5-2.html#section-8",
@@ -3749,7 +3749,7 @@
     "href": "cap5-2.html#section-22",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício (entrega)\n\n\nAltere a classe a classe Respondedor do projeto suporte-tecnico1 para que ela tenha um atributo mapa para guardar as palavras-chaves e as respostas.\nCrie um método chamado preencherMapaDeRespostas que preenche o mapa com as respostas que você tinha tratado como if\\else if na aula anterior. Chame o método no construtor da classe.\nPor fim, altere o método gerarResposta da seguinte forma:\n\nEle deve ter um loop para percorrer as chaves do mapa.\nDentro do loop deve verificar se a variável entrada contém a chave.\n\nSe sim, ele deve retornar o valor associado a esta chave.\n\nSe o loop terminar e a entrada não tiver nenhuma das chaves, ele deve retornar uma resposta padrão.\n\nPor exemplo, “Desculpe, não entendi o que você quis dizer. Poderia reformular a pergunta?”."
+    "text": "Exercício (entrega)\n\n\n\nAltere a classe a classe Respondedor do projeto suporte-tecnico1 para que ela tenha um atributo mapa para guardar as palavras-chaves e as respostas.\nCrie um método chamado preencherMapaDeRespostas que preenche o mapa com as respostas que você tinha tratado como if\\else if na aula anterior. Chame o método no construtor da classe.\nPor fim, altere o método gerarResposta da seguinte forma:\n\nEle deve ter um loop para percorrer as chaves do mapa.\nDentro do loop deve verificar se a variável entrada contém a chave.\n\nSe sim, ele deve retornar o valor associado a esta chave.\n\nSe o loop terminar e a entrada não tiver nenhuma das chaves, ele deve retornar uma resposta padrão.\n\nPor exemplo, “Desculpe, não entendi o que você quis dizer. Poderia reformular a pergunta?”."
   },
   {
     "objectID": "cap6-1.html#section",
@@ -4282,5 +4282,26 @@
     "title": "Tutorial do Greenfoot",
     "section": "",
     "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa aula e envie o código do projeto greenfoot-caranguejo da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar)."
+  },
+  {
+    "objectID": "cap5-2.html#section-23",
+    "href": "cap5-2.html#section-23",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "A biblioteca de classes do Java possui diferentes tipos de conjuntos implementados em diferentes classes.\n\nUma delas é a classe HashSet.\n\n\n\n\n\n\nExercício\n\n\nBusque na documentação do Java, ou em outras fontes, quais são as similaridades e as diferenças enre um HashSet e um ArrayList.\nTente entender porque ArrayList é um caso especial de List e HashSet é um caso especial de Set."
+  },
+  {
+    "objectID": "cap5-2.html#section-24",
+    "href": "cap5-2.html#section-24",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "A declaração de um HashSet, a criação do objeto e adição de elementos é feita da mesma forma que um ArrayList.\n\n    import java.util.HashSet;\n    . . .\n    HashSet&lt;String&gt; conjunto = new HashSet&lt;&gt;();\n    conjunto.add(\"um\");\n    conjunto.add(\"dois\");\n    conjunto.add(\"três\");\n\n\nPara percorrer um HashSet podemos usar um for-each, igualzinho ao que usamos para ArrayList.\n\n    for(String elemento : conjunto) {\n        // faz alguma coisa com o elemento.\n    }"
+  },
+  {
+    "objectID": "cap5-2.html#section-25",
+    "href": "cap5-2.html#section-25",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Repare que usar diferentes coleções em Java é sempre muito parecido.\n\nSe você entender como usar uma delas, você conseguiria usar as outras com facilidade.\n\n\nAs diferenças entre as coleções estão nos seus comportamentos.\n\nUma lista, por exemplo, mantém a ordem dos elemento, permite acesso aos elementos por posição, e pode ter elementos repetidos.\nJá um conjunto não mantém a ordem dos elementos, e garante que não existem elementos repetidos.\n\nPortanto, os elementos podem ser percorridos no for-each em ordem diferente da que eles foram inseridos.\nE inserir um mesmo elemento uma segunda vez, simplesmente não tem nenhum efeito."
   }
 ]

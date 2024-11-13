@@ -299,7 +299,7 @@ Os métodos devem usar os métodos `put` e `get` da classe `HashMap` para implem
 :::
 :::
 
-## {.smaller}
+## 
 
 Para os exercícios a seguir, você pode usar a [documentação](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html) oficial da classe `HashMap` do Java.
 
@@ -317,7 +317,7 @@ Experimente com o BlueJ o que acontece quando você adiciona uma entrada em uma 
 Experimente com o BlueJ o que acontece quando você adiciona duas entradas em uma mapa com o mesmo valor, mas com chaves diferentes.
 :::
 
-## {.smaller}
+## 
 
 ::: {.callout-note title="Exercício" icon=false}
 Como você pode verificar se uma chave existe em um mapa? Escreva um código Java de exemplo.
@@ -395,5 +395,157 @@ Por fim, altere o método `gerarResposta` da seguinte forma:
   - Por exemplo, "Desculpe, não entendi o que você quis dizer. Poderia reformular a pergunta?".
 ::: 
 :::
+
+
+# Conjuntos (`sets`) {background-color="#40666e"}
+
+## {.smaller}
+
+A biblioteca de classes do Java possui diferentes tipos de [conjuntos](.alert) implementados em diferentes classes.
+
+- Uma delas é a classe `HashSet`.
+
+. . .
+
+
+::: {.callout-note title="Exercício" icon=false}
+Busque na documentação do Java, ou em outras fontes, quais são as similaridades e as diferenças enre
+um `HashSet` e um `ArrayList`.
+
+Tente entender porque `ArrayList` é um caso especial de `List` e `HashSet` é um caso especial de `Set`.
+:::
+
+## {.smaller}
+
+A declaração de um `HashSet`, a criação do objeto e a adição de elementos é feita da mesma forma que um `ArrayList`.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    import java.util.HashSet;
+    . . .
+    HashSet<String> conjunto = new HashSet<>();
+    conjunto.add("um");
+    conjunto.add("dois");
+    conjunto.add("três");
+```
+:::
+
+. . . 
+
+Para percorrer um `HashSet` podemos usar um for-each, igualzinho ao que usamos para `ArrayList`.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    for(String elemento : conjunto) {
+        // faz alguma coisa com o elemento.
+    }
+```
+:::
+
+## {.smaller}
+
+Repare, portanto, que **usar diferentes coleções** em Java **é** sempre **muito parecido**.
+
+- Se você entender como usar uma delas, você conseguirá usar as outras com facilidade.
+
+. . .
+
+As **diferenças** entre as coleções **estão nos** seus **comportamentos**.
+
+- Uma lista, por exemplo, mantém a ordem dos elementos, permite acesso aos elementos por posição, e permite elementos repetidos.
+- Já um conjunto não mantém a ordem dos elementos, e garante que não existem elementos repetidos.
+  - Portanto, os elementos podem ser percorridos no for-each em ordem diferente da que eles foram inseridos.
+  - E inserir um mesmo elemento uma segunda vez, simplesmente não tem nenhum efeito.
+
+
+# Escrevendo documentação de classes {background-color="#40666e"}
+
+## {.smaller}
+
+Quando estamos trabalhando em nossos projetos, 
+
+- é importante escrevermos a **documentação de nossas classes**, à medida que desenvolvemos o código.
+
+- Muitas vezes programadores não levam a sério a documentação, o que pode levar a sérios problemas.
+
+. . .
+
+Se você não fornecer documentação suficiente, pode ser difícil para outro programador entender suas classes.
+
+- Muitas vezes esse outro programador pode ser você mesmo :)
+
+. . .
+
+Sem documentação, precisamos ler o código da classe para tentar entender como ela funciona.
+
+- Isso pode funcionar em um projeto pequeno de estudante.
+- Mas cria problemas em projetos do mundo real.
+
+## {.smaller}
+
+É muito comum que sistemas comerciais tenham centenas de milhares de linhas de código.
+
+- Imagine que você tivesse que ler todas essas linhas para entender como o código funciona.
+- Seria impossível!
+
+. . . 
+
+Nós conseguimos usar as classes da biblioteca Java, como `HashSet` e `Random`, olhando apenas a documentação delas.
+
+- Nós nunca precisamos olhar o código-fonte destas classes.
+
+. . . 
+
+Isso funciona porque as classes estão suficientemente bem documentadas.
+
+- Seria muito mais difícil usar essas classes, se precisássemos ler e entender o código-fonte delas primeiro.
+
+## {.smaller}
+
+Em uma equipe de desenvolvimento de software, a implementação das classes é geralmente dividida entre vários programadores.
+
+- Um programador poderia implementar a classe `SistemaSuporte`, por exempllo, e outro a classe `LeitorDeEntrada`.
+- Portanto, você pode precisar implementar uma classe enquanto chama métodos de outras classes.
+
+. . .
+
+Assim, o mesmo argumento usado para as classes da biblioteca Java vale para as classes que você escreve.
+
+- Se podemos usar as classes sem ter que ler e entender toda a implementação, nossa tarefa fica mais fácil.
+- Nós precisamos apenas da interface das classes e não da implementação.
+- Portanto, precisamos escrever boa documentação e classes também para as nossas próprias classes.
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+A **documentação** de uma classe deve ser detalhada o suficiente para que outros programadores
+consigam usar a classe sem precisar ler o código fonte.
+:::
+
+## {.smaller}
+
+O Java tem uma ferramenta chamada [javadoc](.alert) que gera documentação a partir de comentários no código.
+
+- Toda a documentação oficial das classes da biblioteca Java é gerada com o javadoc.
+
+. . .
+
+O BlueJ usa o javadoc para gerar documentação das classes.
+
+- Com o código de uma classe aberto no BlueJ, podemos acessar a caixa de opções no cantos superior direito e mudar de _código-fonte_ para _documentação_.
+
+- Ou podemos também usar o menu `Ferramentas` &rarr; `Documentaçao do Projeto` para gerar a documentação de todas as classes do projeto.
+
+. . . 
+
+Os arquivos HTML gerados ficam em uma pasta `doc` dentro do projeto e podem ser abertos em qualquer navegador.
+
+
+## {.smaller}
+
+A documentação de uma classe deveria incluir:
+
+
+
 
 
