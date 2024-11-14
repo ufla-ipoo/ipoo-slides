@@ -7,7 +7,7 @@ subtitle: Aula 5.3 - Prática
 
 ## {.smaller}
 
-Nesta aula, vamos usar o Greenfoot em vez do BlueJ.
+Na primeira parte desta aula, vamos usar o Greenfoot em vez do BlueJ.
 
 - Aproveitando o fato de que estamos usando o Greenfoot para o trabalho prático da disciplina.
 
@@ -221,7 +221,9 @@ Execute o programa para testar.
 O que acontece com bolas que têm maior amortecimento?
 :::
 
-## Métodos estáticos {.smaller}
+# Métodos estáticos {background-color="#40666e"}
+
+## {.smaller}
 
 Todos os métodos que vimos até agora são **métodos de instância** (de objetos).
 
@@ -234,7 +236,7 @@ Mas nós podemos também ter métodos que são chamados usando a classe, em vez 
 - São os [métodos estáticos]{.alert}.
 - Assim como os atributos estáticos, os métodos estáticos pertencem à classe e não aos objetos.
 
-## Métodos estáticos {.smaller}
+## {.smaller}
 
 Nós podemos definir **métodos estáticos** usando a palavra-chave `static` na assinatura do método.
 
@@ -262,7 +264,7 @@ Nós poderíamos chamar esse método usando o comando abaixo:
 ```
 :::
 
-## Métodos estáticos {.smaller}
+## {.smaller}
 
 Podemos encontrar vários exemplos de métodos estáticos na classe `Math` do Java.
 
@@ -301,7 +303,7 @@ Mas não seria uma falha de encapsulamento declarar um atributo público?
 - Note que não há falha de encapsulamento em declarar um atributo público, se ele for uma constante.
 - Já que não seria possível alterar seu valor de fora da classe.
 
-# 
+## 
 
 ::: {.callout-note title="Exercício" icon=false}
 Altere a declaração do atributo `GRAVIDADE` da classe `Bola` de forma que ele não seja mais uma constante.
@@ -345,5 +347,138 @@ Por que você acha que essas limitações existem?
 
 E o que isso tem a ver com um método estático não poder chamar um método de instância?
 
+# ArrayList vs. HashMap {background-color="#40666e"}
 
-  
+## {.smaller}
+
+Na segunda parte da aula, faremos um exercício que nos permitirá **comparar o uso** de `ArrayList` e `HashMap`.
+
+- No capítulo anterior, fizemos um exercício que tratava do **estoque de produtos**.
+- Os produtos eram guardados em um `ArrayList`.
+- E, em várias situações, precisávamos encontrar um produto pelo seu identificador.
+
+. . .
+
+Repare que, nesse contexto, podemos tratar a coleção de produtos como **pares de objetos identificador-produto**.
+
+- Ou seja, como **pares de objetos chave-valor**.
+- Que é justamente o que um `HashMap` faz.
+- Portanto, nos exercícios a seguir vamos alterar o projeto para trabalhar com `HashMap` em vez de `ArrayList`.
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+::: {.nonincremental}
+Baixe o projeto `produtos` que você entregou como exercício na aula prática do capítulo anterior e renomeie 
+a pasta do projeto para `produtos-com-hashmap`.
+
+Altere o projeto substituindo o uso de `ArrayList` por `HashMap`.
+
+- Como citado no slide anterior, a ideia é que o `HashMap` guarde entradas tendo o identificador do produto como chave e o produto como valor.
+- Planeje as alterações a serem feitas antes de realmente alterar o código.
+- Pense em como a implementação pode ser feita com o mínimo de alterações.
+
+Teste suas alterações (teste todos os métodos que tinha implementado)!
+:::
+:::
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+::: {.nonincremental}
+Compare o código do projeto `produtos` com o código do projeto `produtos-com-hashmap`.
+
+Você viu alguma vantagem em utilizar `HashMap` em vez de `ArrayList`?
+
+- Se você tivesse começando o projeto do zero, você acha que seria melhor usar `HashMap` desde o início? Por quê?
+
+Escreva sua resposta no comentário `javadoc` da classe `GerenciadorDeEstoque` do projeto `produtos-com-hashmap`.
+:::
+:::
+
+## {.smaller}
+
+No projeto `produtos-com-hashmap` como você tratou a versão sobrecarregada do método `encontrarProduto` que recebe o nome do produto por parâmetro?
+
+- Provavelmente, você implementou um loop para percorrer as chaves do `HashMap` e verificou o nome do produto, certo?
+- Você acha que existe alguma forma mais eficiente de fazer isso?
+
+. . .
+
+Pense sobre isso antes de continuar.
+
+## {.smaller}
+
+Repare que quando usamos um `HashMap`, se quisermos encontrar um valor a partir de uma chave, nós **não precisamos** implementar **um loop**.
+
+- Nós podemos simplesmente usar o método `get`.
+
+. . .
+
+É interessante que você saiba que isso não é apenas uma questão de ficar mais fácil para implementar.
+
+- Um ponto **importante** é que o método `get` de um `HashMap` **é muito mais eficiente** do que um loop que percorre todos os elementos de uma coleção.
+  - Pense, por exemplo, em um estoque com milhares de produtos.
+- É mais eficiente porque o `HashMap` usa uma estrutura de dados chamada **tabela Hash** que otimiza a busca de valores a partir de chaves.
+  - Você aprenderá sobre isso na **disciplina de Estrutura de Dados**.
+- Mas, por enquanto, basta que saiba que um programa será mais rápido se usar `get` em vez de um loop em um `ArrayList`, por exemplo.
+
+
+## {.smaller}
+
+Sabendo disso, como você poderia implementar, de forma mais eficiente, o método `encontrarProduto` que recebe o nome do produto por parâmetro?
+
+- Pense um pouco antes de continuar.
+
+. . .
+
+Você talvez tenha pensado que se tivermos um `HashMap` que use o nome do produto como chave e o produto como valor,
+
+- poderíamos simplesmente usar o método `get` do `HashMap` para encontrar o produto.
+- O que tornaria a busca mais rápida.
+
+. . .
+
+Mas se substituirmos o `HashMap` que temos até agora, que usa o identificador como chave, 
+
+- teríamos que voltar a fazer um loop na outra versão do método `encontrarProduto` que recebe o identificador por parâmetro.
+
+. . .
+
+O que poderíamos fazer então?
+
+## {.smaller}
+
+A solução nesse caso seria ter dois objetos `HashMap`:
+
+- Um que use o identificador como chave e outro que use o nome do produto como chave.
+- Assim, poderíamos usar um `HashMap` para buscar produtos pelo identificador e outro para buscar pelo nome.
+
+. . .
+
+Repare que essa é uma **solução de compromisso** (_trade-off_).
+
+- Nós estamos usando mais memória do computador (para guardar um segundo `HashMap`).
+- Mas com a vantagem de tornar nosso programa mais eficiente (mais rápido).
+- Em um sistema com muitos produtos, a diferença de eficiência pode ser significativa.
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+::: {.nonincremental}
+Altere o projeto `produtos-com-hashmap` para que ele tenha dois objetos   `HashMap`:
+
+- Um que use o identificador como chave e outro que use o nome do produto como chave.
+- Altere o método `encontrarProduto` que recebe o nome do produto por parâmetro para usar o `HashMap` que usa o nome do produto como chave.
+- E, claro, lembre-se de tratar o segundo `HashMap` no método `adicionarProduto`.
+
+Teste suas alterações!
+:::
+:::
+
+
+
+
+
+
+

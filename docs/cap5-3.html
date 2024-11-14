@@ -413,7 +413,7 @@
     </div>
 </div>
 
-  <p class="date">13/11/2024</p>
+  <p class="date">14/11/2024</p>
 </section>
 <section>
 <section id="projeto-no-greenfoot" class="title-slide slide level1 center" data-background-color="#40666e">
@@ -422,7 +422,7 @@
 </section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
-<p>Nesta aula, vamos usar o Greenfoot em vez do BlueJ.</p>
+<p>Na primeira parte desta aula, vamos usar o Greenfoot em vez do BlueJ.</p>
 <ul>
 <li class="fragment">Aproveitando o fato de que estamos usando o Greenfoot para o trabalho prático da disciplina.</li>
 </ul>
@@ -661,7 +661,6 @@
 <li class="fragment">Como é o caso do atributo <code>GRAVIDADE</code> da classe <code>Bola</code>.</li>
 </ul>
 </section></section>
-<section>
 <section id="section-10" class="title-slide slide level1 center">
 <h1></h1>
 <div title="Exercício">
@@ -680,8 +679,14 @@
 </div>
 </div>
 </section>
-<section id="métodos-estáticos" class="slide level2 smaller">
-<h2>Métodos estáticos</h2>
+
+<section>
+<section id="métodos-estáticos" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Métodos estáticos</h1>
+
+</section>
+<section id="section-11" class="slide level2 smaller">
+<h2></h2>
 <p>Todos os métodos que vimos até agora são <strong>métodos de instância</strong> (de objetos).</p>
 <ul>
 <li class="fragment">Pois eles são chamados usando objetos.</li>
@@ -694,8 +699,8 @@
 </ul>
 </div>
 </section>
-<section id="métodos-estáticos-1" class="slide level2 smaller">
-<h2>Métodos estáticos</h2>
+<section id="section-12" class="slide level2 smaller">
+<h2></h2>
 <p>Nós podemos definir <strong>métodos estáticos</strong> usando a palavra-chave <code>static</code> na assinatura do método.</p>
 <div class="fragment">
 <p>Suponha, por exemplo, que uma classe <code>Calendario</code> tenha o método estático abaixo:</p>
@@ -715,8 +720,8 @@
 </div>
 </div>
 </section>
-<section id="métodos-estáticos-2" class="slide level2 smaller">
-<h2>Métodos estáticos</h2>
+<section id="section-13" class="slide level2 smaller">
+<h2></h2>
 <p>Podemos encontrar vários exemplos de métodos estáticos na classe <code>Math</code> do Java.</p>
 <ul>
 <li class="fragment">Ela possui métodos, por exemplo, para encontrar o máximo ou o mínimo entre dois números.
@@ -738,7 +743,7 @@
 </ul>
 </div>
 </section>
-<section id="section-11" class="slide level2 smaller">
+<section id="section-14" class="slide level2 smaller">
 <h2></h2>
 <p>A classe <code>Math</code> do Java possui também exemplos de uso de constantes.</p>
 <ul>
@@ -756,10 +761,9 @@
 <li class="fragment">Já que não seria possível alterar seu valor de fora da classe.</li>
 </ul>
 </div>
-</section></section>
-<section>
-<section id="section-12" class="title-slide slide level1 center">
-<h1></h1>
+</section>
+<section id="section-15" class="slide level2">
+<h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -803,12 +807,174 @@
 </ul>
 <div class="fragment">
 <p>E o que isso tem a ver com um método estático não poder chamar um método de instância?</p>
+</div>
+</section></section>
+<section>
+<section id="arraylist-vs.-hashmap" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>ArrayList vs.&nbsp;HashMap</h1>
+
+</section>
+<section id="section-16" class="slide level2 smaller">
+<h2></h2>
+<p>Na segunda parte da aula, faremos um exercício que nos permitirá <strong>comparar o uso</strong> de <code>ArrayList</code> e <code>HashMap</code>.</p>
+<ul>
+<li class="fragment">No capítulo anterior, fizemos um exercício que tratava do <strong>estoque de produtos</strong>.</li>
+<li class="fragment">Os produtos eram guardados em um <code>ArrayList</code>.</li>
+<li class="fragment">E, em várias situações, precisávamos encontrar um produto pelo seu identificador.</li>
+</ul>
+<div class="fragment">
+<p>Repare que, nesse contexto, podemos tratar a coleção de produtos como <strong>pares de objetos identificador-produto</strong>.</p>
+<ul>
+<li class="fragment">Ou seja, como <strong>pares de objetos chave-valor</strong>.</li>
+<li class="fragment">Que é justamente o que um <code>HashMap</code> faz.</li>
+<li class="fragment">Portanto, nos exercícios a seguir vamos alterar o projeto para trabalhar com <code>HashMap</code> em vez de <code>ArrayList</code>.</li>
+</ul>
+</div>
+</section>
+<section id="section-17" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<div>
+<p>Baixe o projeto <code>produtos</code> que você entregou como exercício na aula prática do capítulo anterior e renomeie a pasta do projeto para <code>produtos-com-hashmap</code>.</p>
+<p>Altere o projeto substituindo o uso de <code>ArrayList</code> por <code>HashMap</code>.</p>
+<ul>
+<li>Como citado no slide anterior, a ideia é que o <code>HashMap</code> guarde entradas tendo o identificador do produto como chave e o produto como valor.</li>
+<li>Planeje as alterações a serem feitas antes de realmente alterar o código.</li>
+<li>Pense em como a implementação pode ser feita com o mínimo de alterações.</li>
+</ul>
+<p>Teste suas alterações (teste todos os métodos que tinha implementado)!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-18" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<div>
+<p>Compare o código do projeto <code>produtos</code> com o código do projeto <code>produtos-com-hashmap</code>.</p>
+<p>Você viu alguma vantagem em utilizar <code>HashMap</code> em vez de <code>ArrayList</code>?</p>
+<ul>
+<li>Se você tivesse começando o projeto do zero, você acha que seria melhor usar <code>HashMap</code> desde o início? Por quê?</li>
+</ul>
+<p>Escreva sua resposta no comentário <code>javadoc</code> da classe <code>GerenciadorDeEstoque</code> do projeto <code>produtos-com-hashmap</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-19" class="slide level2 smaller">
+<h2></h2>
+<p>No projeto <code>produtos-com-hashmap</code> como você tratou a versão sobrecarregada do método <code>encontrarProduto</code> que recebe o nome do produto por parâmetro?</p>
+<ul>
+<li class="fragment">Provavelmente, você implementou um loop para percorrer as chaves do <code>HashMap</code> e verificou o nome do produto, certo?</li>
+<li class="fragment">Você acha que existe alguma forma mais eficiente de fazer isso?</li>
+</ul>
+<div class="fragment">
+<p>Pense sobre isso antes de continuar.</p>
+</div>
+</section>
+<section id="section-20" class="slide level2 smaller">
+<h2></h2>
+<p>Repare que quando usamos um <code>HashMap</code>, se quisermos encontrar um valor a partir de uma chave, nós <strong>não precisamos</strong> implementar <strong>um loop</strong>.</p>
+<ul>
+<li class="fragment">Nós podemos simplesmente usar o método <code>get</code>.</li>
+</ul>
+<div class="fragment">
+<p>É interessante que você saiba que isso não é apenas uma questão de ficar mais fácil para implementar.</p>
+<ul>
+<li class="fragment">Um ponto <strong>importante</strong> é que o método <code>get</code> de um <code>HashMap</code> <strong>é muito mais eficiente</strong> do que um loop que percorre todos os elementos de uma coleção.
+<ul>
+<li class="fragment">Pense, por exemplo, em um estoque com milhares de produtos.</li>
+</ul></li>
+<li class="fragment">É mais eficiente porque o <code>HashMap</code> usa uma estrutura de dados chamada <strong>tabela Hash</strong> que otimiza a busca de valores a partir de chaves.
+<ul>
+<li class="fragment">Você aprenderá sobre isso na <strong>disciplina de Estrutura de Dados</strong>.</li>
+</ul></li>
+<li class="fragment">Mas, por enquanto, basta que saiba que um programa será mais rápido se usar <code>get</code> em vez de um loop em um <code>ArrayList</code>, por exemplo.</li>
+</ul>
+</div>
+</section>
+<section id="section-21" class="slide level2 smaller">
+<h2></h2>
+<p>Sabendo disso, como você poderia implementar, de forma mais eficiente, o método <code>encontrarProduto</code> que recebe o nome do produto por parâmetro?</p>
+<ul>
+<li class="fragment">Pense um pouco antes de continuar.</li>
+</ul>
+<div class="fragment">
+<p>Você talvez tenha pensado que se tivermos um <code>HashMap</code> que use o nome do produto como chave e o produto como valor,</p>
+<ul>
+<li class="fragment">poderíamos simplesmente usar o método <code>get</code> do <code>HashMap</code> para encontrar o produto.</li>
+<li class="fragment">O que tornaria a busca mais rápida.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Mas se substituirmos o <code>HashMap</code> que temos até agora, que usa o identificador como chave,</p>
+<ul>
+<li class="fragment">teríamos que voltar a fazer um loop na outra versão do método <code>encontrarProduto</code> que recebe o identificador por parâmetro.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>O que poderíamos fazer então?</p>
+</div>
+</section>
+<section id="section-22" class="slide level2 smaller">
+<h2></h2>
+<p>A solução nesse caso seria ter dois objetos <code>HashMap</code>:</p>
+<ul>
+<li class="fragment">Um que use o identificador como chave e outro que use o nome do produto como chave.</li>
+<li class="fragment">Assim, poderíamos usar um <code>HashMap</code> para buscar produtos pelo identificador e outro para buscar pelo nome.</li>
+</ul>
+<div class="fragment">
+<p>Repare que essa é uma <strong>solução de compromisso</strong> (<em>trade-off</em>).</p>
+<ul>
+<li class="fragment">Nós estamos usando mais memória do computador (para guardar um segundo <code>HashMap</code>).</li>
+<li class="fragment">Mas com a vantagem de tornar nosso programa mais eficiente (mais rápido).</li>
+<li class="fragment">Em um sistema com muitos produtos, a diferença de eficiência pode ser significativa.</li>
+</ul>
+</div>
+</section>
+<section id="section-23" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<div>
+<p>Altere o projeto <code>produtos-com-hashmap</code> para que ele tenha dois objetos <code>HashMap</code>:</p>
+<ul>
+<li>Um que use o identificador como chave e outro que use o nome do produto como chave.</li>
+<li>Altere o método <code>encontrarProduto</code> que recebe o nome do produto por parâmetro para usar o <code>HashMap</code> que usa o nome do produto como chave.</li>
+<li>E, claro, lembre-se de tratar o segundo <code>HashMap</code> no método <code>adicionarProduto</code>.</li>
+</ul>
+<p>Teste suas alterações!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 <div class="quarto-auto-generated-content">
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
-</div>
 </div>
 </div>
 </section></section>
