@@ -687,7 +687,7 @@
 </section>
 <section id="section-11" class="slide level2 smaller">
 <h2></h2>
-<p>Todos os métodos que vimos até agora são <strong>métodos de instância</strong> (de objetos).</p>
+<p>Todos os métodos que implementamos até agora são <strong>métodos de instância</strong> (de objetos).</p>
 <ul>
 <li class="fragment">Pois eles são chamados usando objetos.</li>
 </ul>
@@ -762,7 +762,33 @@
 </ul>
 </div>
 </section>
-<section id="section-15" class="slide level2">
+<section id="section-15" class="slide level2 smaller">
+<h2></h2>
+<p>Você já usou métodos estáticos antes, sem saber.</p>
+<ul>
+<li class="fragment">Repare como os métodos abaixo são chamados.</li>
+</ul>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">isKeyDown</span><span class="op">(</span><span class="st">"left"</span><span class="op">);</span></span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">playSound</span><span class="op">(</span><span class="st">"comendo.wav"</span><span class="op">);</span></span>
+<span id="cb7-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">getRandomNumber</span><span class="op">(</span><span class="dv">90</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p>Em todas essas chamadas nós usamos o nome da classe <code>Greenfoot</code> para chamar o método.</p>
+<ul>
+<li class="fragment">Isso porque todos esses métodos são estáticos.</li>
+<li class="fragment">Todos eles implementam ações que dependem apenas dos parâmetros passados
+<ul>
+<li class="fragment">(não dependem do estado de um objeto).</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-16" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -814,7 +840,7 @@
 <h1>ArrayList vs.&nbsp;HashMap</h1>
 
 </section>
-<section id="section-16" class="slide level2 smaller">
+<section id="section-17" class="slide level2 smaller">
 <h2></h2>
 <p>Na segunda parte da aula, faremos um exercício que nos permitirá <strong>comparar o uso</strong> de <code>ArrayList</code> e <code>HashMap</code>.</p>
 <ul>
@@ -831,7 +857,7 @@
 </ul>
 </div>
 </section>
-<section id="section-17" class="slide level2">
+<section id="section-18" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -855,7 +881,7 @@
 </div>
 </div>
 </section>
-<section id="section-18" class="slide level2">
+<section id="section-19" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -877,7 +903,7 @@
 </div>
 </div>
 </section>
-<section id="section-19" class="slide level2 smaller">
+<section id="section-20" class="slide level2 smaller">
 <h2></h2>
 <p>No projeto <code>produtos-com-hashmap</code> como você tratou a versão sobrecarregada do método <code>encontrarProduto</code> que recebe o nome do produto por parâmetro?</p>
 <ul>
@@ -888,7 +914,7 @@
 <p>Pense sobre isso antes de continuar.</p>
 </div>
 </section>
-<section id="section-20" class="slide level2 smaller">
+<section id="section-21" class="slide level2 smaller">
 <h2></h2>
 <p>Repare que quando usamos um <code>HashMap</code>, se quisermos encontrar um valor a partir de uma chave, nós <strong>não precisamos</strong> implementar <strong>um loop</strong>.</p>
 <ul>
@@ -909,7 +935,7 @@
 </ul>
 </div>
 </section>
-<section id="section-21" class="slide level2 smaller">
+<section id="section-22" class="slide level2 smaller">
 <h2></h2>
 <p>Sabendo disso, como você poderia implementar, de forma mais eficiente, o método <code>encontrarProduto</code> que recebe o nome do produto por parâmetro?</p>
 <ul>
@@ -932,7 +958,7 @@
 <p>O que poderíamos fazer então?</p>
 </div>
 </section>
-<section id="section-22" class="slide level2 smaller">
+<section id="section-23" class="slide level2 smaller">
 <h2></h2>
 <p>A solução nesse caso seria ter dois objetos <code>HashMap</code>:</p>
 <ul>
@@ -948,7 +974,7 @@
 </ul>
 </div>
 </section>
-<section id="section-23" class="slide level2">
+<section id="section-24" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">

@@ -225,7 +225,7 @@ O que acontece com bolas que têm maior amortecimento?
 
 ## {.smaller}
 
-Todos os métodos que vimos até agora são **métodos de instância** (de objetos).
+Todos os métodos que implementamos até agora são **métodos de instância** (de objetos).
 
 - Pois eles são chamados usando objetos.
 
@@ -302,6 +302,33 @@ Mas não seria uma falha de encapsulamento declarar um atributo público?
 
 - Note que não há falha de encapsulamento em declarar um atributo público, se ele for uma constante.
 - Já que não seria possível alterar seu valor de fora da classe.
+
+## {.smaller}
+
+Você já usou métodos estáticos antes, sem saber.
+
+- Repare como os métodos abaixo são chamados.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+Greenfoot.isKeyDown("left");
+
+Greenfoot.playSound("comendo.wav");
+
+Greenfoot.getRandomNumber(90);
+```
+:::
+
+. . .
+
+Em todas essas chamadas nós usamos o nome da classe `Greenfoot` para chamar o método.
+
+- Isso porque todos esses métodos são estáticos.
+- Todos eles implementam ações que dependem apenas dos parâmetros passados
+  - (não dependem do estado de um objeto).
+
 
 ## 
 
