@@ -21,18 +21,18 @@ Construções Java do capítulo
 
 . . .
 
-Nesta aula vamos aprofundar nas técnicas relacionadas a herança que podem ser usadas
-para melhorar a estrutura das classes e aumentar a manutenibilidade e extensibilidade do código.
+Nesta aula vamos aprofundar nas **técnicas** relacionadas a **herança** que podem ser usadas
+para **melhorar a estrutura** das classes e **aumentar a manutenibilidade** e extensibilidade do código.
 
-- Veremos um projeto de exemplo que aborda uma simulação e com ele discutiremos novamente
-  conceitos vistos anteriormente de herança, polimorfismo, classes abstratas e interfaces.
+- Veremos um projeto de exemplo que aborda uma **simulação** e com ele discutiremos novamente
+  conceitos vistos anteriormente de [herança]{.alert}, [polimorfismo]{.alert}, [classes abstratas]{.alert} e [interfaces]{.alert}.
 
 
 # Simulações {background-color="#40666e"}
 
 ## {.smaller}
 
-É muito comum usarmos computadores para simularmos fenômenos do mundo real.
+É muito comum usarmos computadores para **simularmos** fenômenos do mundo real.
 
 . . .
 
@@ -46,32 +46,32 @@ Isso inclui sistemas que:
 
 . . .
 
-Qualquer simulação faz uso das técnicas de abstração, pois tenta modelar o comportamento de um subconjunto do mundo real.
+Qualquer simulação faz uso das técnicas de **abstração**, pois tenta modelar o comportamento de um subconjunto do mundo real.
 
 - Decidir quais detalhes devem ser incluídos é geralmente um desafio.
-- Mais detatlhes podem levar a uma simulação mais precisa, mas que requer mais esforço de programação e mais equipamento e tempo de execução.
+- Mais detalhes podem levar a uma simulação mais precisa, mas que requer mais esforço de programação e mais equipamento e tempo de execução.
 
 ## {.smaller}
 
 De todo modo, simulações são muito úteis pois permitem fazer o que muitas vezes não conseguimos no mundo real.
 
-- Seja porque não temos controle sobre o comportamento real (ex.: tempo).
+- Seja porque não temos controle sobre o comportamento real (ex.: clima).
 - Ou porque é muito caro, ou muito perigoso.
 
 . . .
 
-A ideia de uma simulação é então experimentar cenários para responder perguntas do tipo "e se".
+A ideia de uma simulação é então **experimentar cenários** para responder perguntas do tipo **"e se"**.
 
 - Um exemplo seria tentar investigar o efeito da ação humana em habitats naturais.
-- Imagine a construção de uma rodovia no meio de um parque floretal, por exemplo.
+- Imagine a construção de uma rodovia no meio de uma reserva ecológica, por exemplo.
 - Como isso afeta a fauna e flora do local?
-- Faz diferença dividir o parque em duas partes? Muda alguma coisa para os animais que vivem ali?
+- Faz diferença dividir a reserva em duas partes? Muda alguma coisa para os animais que vivem ali?
 
 ## {.smaller}
 
 Nesta aula vamos trabalhar em um projeto inspirado nessa ideia de simular o comportamento de animais em um habitat natural.
 
-- Mas, como o objetivo é ilustrar conceitos de design e implementação OO, vamos tratar uma simulação bem simplificada.
+- Mas, como o objetivo é **ilustrar conceitos de design e implementação OO**, vamos tratar uma simulação bem simplificada.
 - De todo modo, nem sempre uma simulação mais complexa leva a um resultado mais preciso.
 - Muitas vezes, uma simulação mais simples pode ser mais útil.
 
@@ -79,19 +79,63 @@ Nesta aula vamos trabalhar em um projeto inspirado nessa ideia de simular o comp
 
 ## {.smaller}
 
-O projeto que vamos usar de exemplo é uma simulação do tipo predador-presa.
+O projeto que vamos usar de exemplo é uma **simulação do tipo predador-presa**.
+
 - Esse tipo de simulação é muito comum em biologia, e é usado para estudar a variação no tamanho das populações de predadores e presas.
 - Uma grande população de presas fornece comida para uma pequena população de predadores.
-- Mas, se a população de predadores crescer demais, a população de presas pode diminuir muito.
+- Mas, se a população de predadores crescer demais, a população de presas pode diminuir muito (ou até desaparecer).
 - Além disso, o tamanho do habitat natural também influencia o tamanho das populações, pois pode facilitar ou dificultar que os predadores encontrem suas presas.
 
 . . .
 
-O projeto que vamos usar segue a mesma ideia do World of Zuul que trabalhos nas aulas de Design de Classes.
+O projeto que vamos usar segue a mesma ideia do World of Zuul que trabalhamos nas aulas de Design de Classes,
 
-- Ou seja, é um projeto que funciona corretamente to ponto de vista do usuário.
+- no sentido de que é um projeto que funciona corretamente do ponto de vista do usuário.
 - Mas que tem problemas de design e implementação.
   - Especialmente por não utilizar os conceitos de herança que vimos nas últimas aulas.
 
 ## {.smaller}
 
+O projeto [raposas-e-coelhos-v1](https://github.com/ufla-ppoo/raposas-e-coelhos-v1) está disponível no repositório do curso.
+
+- O diagrama abaixo mostra as classes do projeto.
+
+. . .
+
+![](imagens/raposas-e-coelhos_diagrama_classes.png){width=60%}
+
+## {.smaller}
+
+![](imagens/raposas-e-coelhos_diagrama_classes.png){width=45%}
+
+As principais classes que vamos focar são `Simulador`, `Raposa`  e `Coelho`.
+
+- As classes `Raposa` e `Coelho` representam o comportamento do predador e da presa, respectivamente.
+- E trataremos principalmente os aspectos que afetam o tamanho das populações: nascimento, morte e fornecimento de comida.
+
+## {.smaller}
+
+A classe `Simulador` é responsável por criar o estado inicial da simulação, controlá-la e executá-la.
+
+- A ideia básica é simples:
+  
+  - o simulador tem coleções de coelhos e raposas.
+  - a cada passo da simulação, a classe permite que cada animal possa viver por um _passo_ de seu ciclo de vida.
+    - não estamos preocupados sobre quanto tempo significa um passo aqui.
+  - e então o estado atual do campo é mostrado na tela.
+
+## {.smaller}
+
+Resumidamente, o objetivo das demais classes é:
+
+- `Campo` representa um campo de duas dimensões onde os animais vivem. 
+  
+  - O campo é formado por um número fixo de localizações (células), arranjadas em linhas e colunas.
+  - Apenas um animal pode ocupar uma localização por vez.
+  - Uma localização pode estar vazia ou ocupada por um animal.
+
+- `Localizacao` representa uma célula dentro do campo, definida por um valor de linha e um de coluna.
+
+- As classes `Simulador`, `Raposa`, `Coelho`, `Campo` e `Localizacao` definem completamente o comportamento da simulação.
+
+  - As demais classes são acessórias.

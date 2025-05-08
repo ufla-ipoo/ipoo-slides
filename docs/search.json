@@ -4471,5 +4471,54 @@
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
     "text": "Exercício\n\n\n\nAltere o projeto produtos-com-hashmap para que ele tenha dois objetos HashMap:\n\nUm que use o identificador como chave e outro que use o nome do produto como chave.\nAltere o método encontrarProduto que recebe o nome do produto por parâmetro para usar o HashMap que usa o nome do produto como chave.\nE, claro, lembre-se de tratar o segundo HashMap no método adicionarProduto.\n\nTeste suas alterações!"
+  },
+  {
+    "objectID": "cap10-1.html#principais-conceitos-da-aula",
+    "href": "cap10-1.html#principais-conceitos-da-aula",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "Principais Conceitos da Aula",
+    "text": "Principais Conceitos da Aula\n\n\nClasses Abstratas\nInterfaces\nHerança Múltipla\n\n\n\nConstruções Java do capítulo\n\n\nabstract, implements, interface\n\n\n\n\nNesta aula vamos aprofundar nas técnicas relacionadas a herança que podem ser usadas para melhorar a estrutura das classes e aumentar a manutenibilidade e extensibilidade do código.\n\nVeremos um projeto de exemplo que aborda uma simulação e com ele discutiremos novamente conceitos vistos anteriormente de herança, polimorfismo, classes abstratas e interfaces."
+  },
+  {
+    "objectID": "cap10-1.html#section",
+    "href": "cap10-1.html#section",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "É muito comum usarmos computadores para simularmos fenômenos do mundo real.\n\nIsso inclui sistemas que:\n\nmodelam o tráfego em uma cidade\nmodelam a previsão do tempo\nsimulação o espalhamento de uma doença\nanalisam o mercado de ações de uma bolsa de valores\ne muitos outros.\n\n\n\nQualquer simulação faz uso das técnicas de abstração, pois tenta modelar o comportamento de um subconjunto do mundo real.\n\nDecidir quais detalhes devem ser incluídos é geralmente um desafio.\nMais detalhes podem levar a uma simulação mais precisa, mas que requer mais esforço de programação e mais equipamento e tempo de execução."
+  },
+  {
+    "objectID": "cap10-1.html#section-1",
+    "href": "cap10-1.html#section-1",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "De todo modo, simulações são muito úteis pois permitem fazer o que muitas vezes não conseguimos no mundo real.\n\nSeja porque não temos controle sobre o comportamento real (ex.: clima).\nOu porque é muito caro, ou muito perigoso.\n\n\nA ideia de uma simulação é então experimentar cenários para responder perguntas do tipo “e se”.\n\nUm exemplo seria tentar investigar o efeito da ação humana em habitats naturais.\nImagine a construção de uma rodovia no meio de uma reserva ecológica, por exemplo.\nComo isso afeta a fauna e flora do local?\nFaz diferença dividir a reserva em duas partes? Muda alguma coisa para os animais que vivem ali?"
+  },
+  {
+    "objectID": "cap10-1.html#section-2",
+    "href": "cap10-1.html#section-2",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Nesta aula vamos trabalhar em um projeto inspirado nessa ideia de simular o comportamento de animais em um habitat natural.\n\nMas, como o objetivo é ilustrar conceitos de design e implementação OO, vamos tratar uma simulação bem simplificada.\nDe todo modo, nem sempre uma simulação mais complexa leva a um resultado mais preciso.\nMuitas vezes, uma simulação mais simples pode ser mais útil."
+  },
+  {
+    "objectID": "cap10-1.html#section-3",
+    "href": "cap10-1.html#section-3",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "O projeto que vamos usar de exemplo é uma simulação do tipo predador-presa.\n\nEsse tipo de simulação é muito comum em biologia, e é usado para estudar a variação no tamanho das populações de predadores e presas.\nUma grande população de presas fornece comida para uma pequena população de predadores.\nMas, se a população de predadores crescer demais, a população de presas pode diminuir muito (ou até desaparecer).\nAlém disso, o tamanho do habitat natural também influencia o tamanho das populações, pois pode facilitar ou dificultar que os predadores encontrem suas presas.\n\n\nO projeto que vamos usar segue a mesma ideia do World of Zuul que trabalhamos nas aulas de Design de Classes,\n\nno sentido de que é um projeto que funciona corretamente do ponto de vista do usuário.\nMas que tem problemas de design e implementação.\n\nEspecialmente por não utilizar os conceitos de herança que vimos nas últimas aulas."
+  },
+  {
+    "objectID": "cap10-1.html#section-4",
+    "href": "cap10-1.html#section-4",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "O projeto raposas-e-coelhos-v1 está disponível no repositório do curso.\n\nO diagrama abaixo mostra as classes do projeto."
+  },
+  {
+    "objectID": "cap10-1.html#section-5",
+    "href": "cap10-1.html#section-5",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "As principais classes que vamos focar são Simulador, Raposa e Coelho.\n\nAs classes Raposa e Coelho representam o comportamento do predador e da presa, respectivamente.\nE trataremos principalmente os aspectos que afetam o tamanho das populações: nascimento, morte, e fornecimento de comida."
   }
 ]
