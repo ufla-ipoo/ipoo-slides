@@ -1,0 +1,97 @@
+---
+title: PPOO - Técnicas de Abstração Adicionais
+subtitle: Aula 4.7 - Teórica
+---
+
+## Principais Conceitos da Aula {.smaller}
+
+::: {.nonincremental}
+- Classes Abstratas
+- Interfaces
+- Herança Múltipla
+:::
+
+. . .
+
+Construções Java do capítulo
+
+::: {.nonincremental}
+- `abstract`, `implements`, `interface`
+:::
+
+. . .
+
+Nesta aula vamos aprofundar nas técnicas relacionadas a herança que podem ser usadas
+para melhorar a estrutura das classes e aumentar a manutenibilidade e extensibilidade do código.
+
+- Veremos um projeto de exemplo que aborda uma simulação e com ele discutiremos novamente
+  conceitos vistos anteriormente de herança, polimorfismo, classes abstratas e interfaces.
+
+
+# Simulações {background-color="#40666e"}
+
+## {.smaller}
+
+É muito comum usarmos computadores para simularmos fenômenos do mundo real.
+
+. . .
+
+Isso inclui sistemas que:
+
+- modelam o tráfego em uma cidade
+- modelam a previsão do tempo
+- simulação o espalhamento de uma doença
+- analisam o mercado de ações de uma bolsa de valores
+- e muitos outros.
+
+. . .
+
+Qualquer simulação faz uso das técnicas de abstração, pois tenta modelar o comportamento de um subconjunto do mundo real.
+
+- Decidir quais detalhes devem ser incluídos é geralmente um desafio.
+- Mais detatlhes podem levar a uma simulação mais precisa, mas que requer mais esforço de programação e mais equipamento e tempo de execução.
+
+## {.smaller}
+
+De todo modo, simulações são muito úteis pois permitem fazer o que muitas vezes não conseguimos no mundo real.
+
+- Seja porque não temos controle sobre o comportamento real (ex.: tempo).
+- Ou porque é muito caro, ou muito perigoso.
+
+. . .
+
+A ideia de uma simulação é então experimentar cenários para responder perguntas do tipo "e se".
+
+- Um exemplo seria tentar investigar o efeito da ação humana em habitats naturais.
+- Imagine a construção de uma rodovia no meio de um parque floretal, por exemplo.
+- Como isso afeta a fauna e flora do local?
+- Faz diferença dividir o parque em duas partes? Muda alguma coisa para os animais que vivem ali?
+
+## {.smaller}
+
+Nesta aula vamos trabalhar em um projeto inspirado nessa ideia de simular o comportamento de animais em um habitat natural.
+
+- Mas, como o objetivo é ilustrar conceitos de design e implementação OO, vamos tratar uma simulação bem simplificada.
+- De todo modo, nem sempre uma simulação mais complexa leva a um resultado mais preciso.
+- Muitas vezes, uma simulação mais simples pode ser mais útil.
+
+# A simulação raposas-e-coelhos {background-color="#40666e"}
+
+## {.smaller}
+
+O projeto que vamos usar de exemplo é uma simulação do tipo predador-presa.
+- Esse tipo de simulação é muito comum em biologia, e é usado para estudar a variação no tamanho das populações de predadores e presas.
+- Uma grande população de presas fornece comida para uma pequena população de predadores.
+- Mas, se a população de predadores crescer demais, a população de presas pode diminuir muito.
+- Além disso, o tamanho do habitat natural também influencia o tamanho das populações, pois pode facilitar ou dificultar que os predadores encontrem suas presas.
+
+. . .
+
+O projeto que vamos usar segue a mesma ideia do World of Zuul que trabalhos nas aulas de Design de Classes.
+
+- Ou seja, é um projeto que funciona corretamente to ponto de vista do usuário.
+- Mas que tem problemas de design e implementação.
+  - Especialmente por não utilizar os conceitos de herança que vimos nas últimas aulas.
+
+## {.smaller}
+
