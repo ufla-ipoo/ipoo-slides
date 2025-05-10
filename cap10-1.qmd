@@ -22,10 +22,10 @@ Construções Java do capítulo
 . . .
 
 Nesta aula vamos aprofundar nas **técnicas** relacionadas a **herança** que podem ser usadas
-para **melhorar a estrutura** das classes e **aumentar a manutenibilidade** e extensibilidade do código.
+para **melhorar a estrutura** das classes e **aumentar a manutenibilidade e extensibilidade** do código.
 
 - Veremos um projeto de exemplo que aborda uma **simulação** e com ele discutiremos novamente
-  conceitos vistos anteriormente de [herança]{.alert}, [polimorfismo]{.alert}, [classes abstratas]{.alert} e [interfaces]{.alert}.
+  os conceitos de [herança]{.alert}, [polimorfismo]{.alert}, [classes abstratas]{.alert} e [interfaces]{.alert}.
 
 
 # Simulações {background-color="#40666e"}
@@ -36,11 +36,11 @@ para **melhorar a estrutura** das classes e **aumentar a manutenibilidade** e ex
 
 . . .
 
-Isso inclui sistemas que:
+Alguns exemplos são sistemas que:
 
 - modelam o tráfego em uma cidade
 - modelam a previsão do tempo
-- simulação o espalhamento de uma doença
+- simulam o espalhamento de uma doença
 - analisam o mercado de ações de uma bolsa de valores
 - e muitos outros.
 
@@ -90,9 +90,9 @@ O projeto que vamos usar de exemplo é uma **simulação do tipo predador-presa*
 
 O projeto que vamos usar segue a mesma ideia do World of Zuul que trabalhamos nas aulas de Design de Classes,
 
-- no sentido de que é um projeto que funciona corretamente do ponto de vista do usuário.
-- Mas que tem problemas de design e implementação.
-  - Especialmente por não utilizar os conceitos de herança que vimos nas últimas aulas.
+- no sentido de que é um projeto que funciona corretamente do ponto de vista do usuário;
+  - mas que tem problemas de design e implementação.
+- Especialmente por não utilizar os conceitos de herança que vimos nas últimas aulas.
 
 ## {.smaller}
 
@@ -111,7 +111,7 @@ O projeto [raposas-e-coelhos-v1](https://github.com/ufla-ppoo/raposas-e-coelhos-
 As principais classes que vamos focar são `Simulador`, `Raposa`  e `Coelho`.
 
 - As classes `Raposa` e `Coelho` representam o comportamento do predador e da presa, respectivamente.
-- E trataremos principalmente os aspectos que afetam o tamanho das populações: nascimento, morte e fornecimento de comida.
+- Trataremos principalmente os aspectos que afetam o tamanho de suas populações: nascimento, morte e fornecimento de comida.
 
 ## {.smaller}
 
@@ -139,3 +139,15 @@ Resumidamente, o objetivo das demais classes é:
 - As classes `Simulador`, `Raposa`, `Coelho`, `Campo` e `Localizacao` definem completamente o comportamento da simulação.
 
   - As demais classes são acessórias.
+
+## {.smaller}
+
+- A classe `Randomizador` nos permite ter um certo grau de controle sobre a aleatoriedade da simulação.
+  - Ex.: quando os animais nascem.
+
+- As classes `VisaoSimulador`, `EstatisticasCampo` e `Contador` fornecem uma visualização gráfica da simulação.
+  - `VisaoSimulador` exibe uma visualização do estado do campo.
+  - `EstatisticasCampo` mostra as quantidades de coelhos e raposas.
+  - `Contador` é uma classe auxiliar que trata a contagem dos animais.
+
+  

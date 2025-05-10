@@ -4477,7 +4477,7 @@
     "href": "cap10-1.html#principais-conceitos-da-aula",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "Principais Conceitos da Aula",
-    "text": "Principais Conceitos da Aula\n\n\nClasses Abstratas\nInterfaces\nHerança Múltipla\n\n\n\nConstruções Java do capítulo\n\n\nabstract, implements, interface\n\n\n\n\nNesta aula vamos aprofundar nas técnicas relacionadas a herança que podem ser usadas para melhorar a estrutura das classes e aumentar a manutenibilidade e extensibilidade do código.\n\nVeremos um projeto de exemplo que aborda uma simulação e com ele discutiremos novamente conceitos vistos anteriormente de herança, polimorfismo, classes abstratas e interfaces."
+    "text": "Principais Conceitos da Aula\n\nClasses Abstratas\nInterfaces\nHerança Múltipla\n\n\nConstruções Java do capítulo\n\nabstract, implements, interface\n\n\n\nNesta aula vamos aprofundar nas técnicas relacionadas a herança que podem ser usadas para melhorar a estrutura das classes e aumentar a manutenibilidade e extensibilidade do código.\n\nVeremos um projeto de exemplo que aborda uma simulação e com ele discutiremos novamente conceitos vistos anteriormente de herança, polimorfismo, classes abstratas e interfaces."
   },
   {
     "objectID": "cap10-1.html#section",
@@ -4519,6 +4519,20 @@
     "href": "cap10-1.html#section-5",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "As principais classes que vamos focar são Simulador, Raposa e Coelho.\n\nAs classes Raposa e Coelho representam o comportamento do predador e da presa, respectivamente.\nE trataremos principalmente os aspectos que afetam o tamanho das populações: nascimento, morte, e fornecimento de comida."
+    "text": "As principais classes que vamos focar são Simulador, Raposa e Coelho.\n\nAs classes Raposa e Coelho representam o comportamento do predador e da presa, respectivamente.\nE trataremos principalmente os aspectos que afetam o tamanho das populações: nascimento, morte e fornecimento de comida."
+  },
+  {
+    "objectID": "cap10-1.html#section-6",
+    "href": "cap10-1.html#section-6",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "A classe Simulador é responsável por criar o estado inicial da simulação, controlá-la e executá-la.\n\nA ideia básica é simples:\n\no simulador tem coleções de coelhos e raposas.\na cada passo da simulação, a classe permite que cada animal possa viver por um passo de seu ciclo de vida.\n\nnão estamos preocupados sobre quanto tempo significa um passo aqui.\n\ne então o estado atual do campo é mostrado na tela."
+  },
+  {
+    "objectID": "cap10-1.html#section-7",
+    "href": "cap10-1.html#section-7",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Resumidamente, o objetivo das demais classes é:\n\nCampo representa um campo de duas dimensões onde os animais vivem.\n\nO campo é formado por um número fixo de localizações (células), arranjadas em linhas e colunas.\nApenas um animal pode ocupar uma localização por vez.\nUma localização pode estar vazia ou ocupada por um animal.\n\nLocalizacao representa uma célula dentro do campo, definida por um valor de linha e um de coluna.\nAs classes Simulador, Raposa, Coelho, Campo e Localizacao definem completamente o comportamento da simulação.\n\nAs demais classes são acessórias."
   }
 ]
