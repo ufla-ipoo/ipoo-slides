@@ -15,7 +15,7 @@
   <meta name="generator" content="quarto-1.7.30">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2025-10-05">
+  <meta name="dcterms.date" content="2025-11-05">
   <title>GAC125 - Introdução à Programação Orientada a Objetos – PPOO - Técnicas de Abstração Adicionais</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -150,7 +150,7 @@
     </div>
 </div>
 
-  <p class="date">10/05/2025</p>
+  <p class="date">11/05/2025</p>
 </section>
 <section id="principais-conceitos-da-aula" class="slide level2 smaller">
 <h2>Principais Conceitos da Aula</h2>
@@ -166,9 +166,9 @@
 </ul>
 </div>
 <div class="fragment">
-<p>Nesta aula vamos aprofundar nas <strong>técnicas</strong> relacionadas a <strong>herança</strong> que podem ser usadas para <strong>melhorar a estrutura</strong> das classes e <strong>aumentar a manutenibilidade</strong> e extensibilidade do código.</p>
+<p>Nesta aula vamos aprofundar nas <strong>técnicas</strong> relacionadas a <strong>herança</strong> que podem ser usadas para <strong>melhorar a estrutura</strong> das classes e <strong>aumentar a manutenibilidade e extensibilidade</strong> do código.</p>
 <ul>
-<li class="fragment">Veremos um projeto de exemplo que aborda uma <strong>simulação</strong> e com ele discutiremos novamente conceitos vistos anteriormente de <span class="alert">herança</span>, <span class="alert">polimorfismo</span>, <span class="alert">classes abstratas</span> e <span class="alert">interfaces</span>.</li>
+<li class="fragment">Veremos um projeto de exemplo que aborda uma <strong>simulação</strong> e com ele discutiremos novamente os conceitos de <span class="alert">herança</span>, <span class="alert">polimorfismo</span>, <span class="alert">classes abstratas</span> e <span class="alert">interfaces</span>.</li>
 </ul>
 </div>
 </section>
@@ -181,11 +181,11 @@
 <h2></h2>
 <p>É muito comum usarmos computadores para <strong>simularmos</strong> fenômenos do mundo real.</p>
 <div class="fragment">
-<p>Isso inclui sistemas que:</p>
+<p>Alguns exemplos são sistemas que:</p>
 <ul>
 <li class="fragment">modelam o tráfego em uma cidade</li>
 <li class="fragment">modelam a previsão do tempo</li>
-<li class="fragment">simulação o espalhamento de uma doença</li>
+<li class="fragment">simulam o espalhamento de uma doença</li>
 <li class="fragment">analisam o mercado de ações de uma bolsa de valores</li>
 <li class="fragment">e muitos outros.</li>
 </ul>
@@ -241,11 +241,11 @@
 <div class="fragment">
 <p>O projeto que vamos usar segue a mesma ideia do World of Zuul que trabalhamos nas aulas de Design de Classes,</p>
 <ul>
-<li class="fragment">no sentido de que é um projeto que funciona corretamente do ponto de vista do usuário.</li>
-<li class="fragment">Mas que tem problemas de design e implementação.
+<li class="fragment">no sentido de que é um projeto que funciona corretamente do ponto de vista do usuário;
 <ul>
-<li class="fragment">Especialmente por não utilizar os conceitos de herança que vimos nas últimas aulas.</li>
+<li class="fragment">mas que tem problemas de design e implementação.</li>
 </ul></li>
+<li class="fragment">Especialmente por não utilizar os conceitos de herança que vimos nas últimas aulas.</li>
 </ul>
 </div>
 </section>
@@ -265,7 +265,7 @@
 <p>As principais classes que vamos focar são <code>Simulador</code>, <code>Raposa</code> e <code>Coelho</code>.</p>
 <ul>
 <li class="fragment">As classes <code>Raposa</code> e <code>Coelho</code> representam o comportamento do predador e da presa, respectivamente.</li>
-<li class="fragment">E trataremos principalmente os aspectos que afetam o tamanho das populações: nascimento, morte e fornecimento de comida.</li>
+<li class="fragment">Trataremos principalmente os aspectos que afetam o tamanho de suas populações: nascimento, morte e fornecimento de comida.</li>
 </ul>
 </section>
 <section id="section-6" class="slide level2 smaller">
@@ -299,9 +299,417 @@
 <li class="fragment">As demais classes são acessórias.</li>
 </ul></li>
 </ul>
-
-
+</section>
+<section id="section-8" class="slide level2 smaller">
+<h2></h2>
+<ul>
+<li class="fragment">A classe <code>Randomizador</code> nos permite ter um certo grau de controle sobre a aleatoriedade da simulação.
+<ul>
+<li class="fragment">Ex.: quando os animais nascem.</li>
+</ul></li>
+<li class="fragment">As classes <code>VisaoSimulador</code>, <code>EstatisticasCampo</code> e <code>Contador</code> fornecem uma visualização gráfica da simulação.
+<ul>
+<li class="fragment"><code>VisaoSimulador</code> exibe uma visualização do estado do campo.</li>
+<li class="fragment"><code>EstatisticasCampo</code> mostra as quantidades de coelhos e raposas.</li>
+<li class="fragment"><code>Contador</code> é uma classe auxiliar que trata a contagem dos animais.</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-9" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Inicie o projeto <code>raposas-e-coelhos-v1</code>. Você verá o estado inical da simulação. Os retângulos em maior número representam os coelhos e os demais as raposas.</p>
+<p>Acione o botão <strong>Simular um Passo</strong>. O número de raposas se altera se você aciona o botão apenas uma vez?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>O número de raposas se altera a cada passo da simulação?</p>
+<p>Quais processos naturais vocês acha que estão sendo modelados para fazer o número de raposas aumentar ou diminuir?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Acione agora o botão <strong>Simular Vários Passos</strong> e escolha uma grande quantidade de passos (como 80 ou 100).</p>
+<p>O número de raposas e coelhos aumentam ou diminuem na mesma taxa?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-10" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Quais mudanças vocês nota ao executar o botão de <strong>Simulação Longa</strong>?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Acione o botão <code>Reiniciar</code> para criar um novo estado inicial para a simulação e rode a simulação novamente.</p>
+<p>A simulação é exatamente igual dessa vez? Se não é, você nota algum padrão similar entre as execuções?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Se você executa a simulação por tempo suficiente, aconte de todas as raposas ou coelhos morrerem?</p>
+<p>Em caso afirmativo, por que você acha que isso acontece?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-11" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>O botão <strong>Reiniciar Randomizador</strong> chama o método <code>reiniciar</code> da classe <code>Randomizador</code> e também da classe <code>Simulador</code>. Isso faz com que a simulação seja exetamente igual à primeira simulação executada.</p>
+<p>Verifique o código da classe <code>Randomizador</code> e a documentação da classe <code>java.util.Random</code> para entender porque isso acontece.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-classe-coelho" class="slide level2 smaller">
+<h2>A classe <code>Coelho</code></h2>
+<p>Abra o código da classe <code>Coelho</code>.</p>
+<ul>
+<li class="fragment">Você notará que a classe tem vários atributos estáticos que definem as configurações de todos os coelhos.</li>
+<li class="fragment">O controle de aleatoriedade é centralizado através de um único objeto <code>Random</code> fornecido pela classe <code>Randomizador</code>.
+<ul>
+<li class="fragment">Isso permite a repetibilidade dos testes da simulação.</li>
+</ul></li>
+<li class="fragment">Cada coelho tem quatro atributos comuns (não estáticos), que descrevem seu estado.
+<ul>
+<li class="fragment">idade (dada pelo número de passos), se está vivo ou não, e sua localização específica no campo.</li>
+</ul></li>
+<li class="fragment">Você notará também as simplificações feitas na simulação e como a aleatoriedade é tratada.</li>
+</ul>
+</section>
+<section id="section-12" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Você acha que não ter um atributo <code>gênero</code>, para indicar se o coelho é macho ou fêmea, provavelmente leva a uma simulação imprecisa?</p>
+<p>Justifique sua resposta.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Você acha que há outras simplificações na implementação da classe <code>Coelho</code> em relação ao mundo real?</p>
+<p>Discuta se isso poderia impactar na precisão da simulação.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Experimente alterar alguns dos atributos da classe <code>Coelho</code> e verifique como isso impacta o comportamento da simulação.</p>
+<p>Por exemplo: o que acontece se a probabilidade de reprodução for muito maior ou muito menor?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-classe-raposa" class="slide level2 smaller">
+<h2>A classe <code>Raposa</code></h2>
+<p>Abra o código da classe <code>Raposa</code>.</p>
+<ul>
+<li class="fragment">Você verá que ele tem muitas similaridades com a classe <code>Coelho</code>.</li>
+<li class="fragment">As diferenças se referem, principalmente, aos comportamentos de <code>cacar</code> (caçar) e <code>buscarComida</code>.</li>
+</ul>
+</section>
+<section id="section-13" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Assim como foi feito para os coelhos, avalise se as simplificações implementadas na classe <code>Raposa</code> podem levar a uma simulação imprecisa.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Se aumentarmos a idade máxima das raposas, você acha que a população das raposas vai aumentar, ou é mais provável que a população de coelhos seja reduzida a zero?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Experimente diferentes valores para os atributos das classes <code>Coelho</code> e <code>Raposa</code>.</p>
+<p>Alguma espécie sempre desaparece em alguma configuração específica?</p>
+<p>Há configurações que são mais estáveis, ou seja, geram um equilíbrio entre as populações por mais tempo?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-14" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Experimente alterar o método <code>main</code> da classe <code>App</code>, chamando o construtor sobrecarregado da classe <code>Simulador</code> para definir campos de tamanhos diferentes.</p>
+<p>O tamanho do campo afeta a probabilidade das espécies sobreviverem?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Atualmente, uma raposa come no máximo um coelho em cada passo.</p>
+<p>Modifique o método <code>buscarComida</code> para que os coelhos em todos os locais vizinhos sejam comidos em um único passo. Avalie o impacto dessa alteração nos resultados da simulação.</p>
+<p>Observe que o método <code>buscarComida</code> atualmente retorna a localização do único coelho que é comido, portanto, você precisará retornar a localização de um dos coelhos comidos na sua versão.</p>
+<p>No entanto, não se esqueça de retornar <code>null</code> se não houver coelhos para comer.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-15" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Seguindo o exercício anterior, se uma raposa comer vários coelhos de uma só vez, existem diversas possibilidades de como podemos modelar seu nível de comida.</p>
+<p>Se somarmos todos os valores de comida dos coelhos, a raposa terá um nível de comida muito alto, tornando improvável que ela morra de fome tão cedo.</p>
+<p>Alternativamente, poderíamos impor um limite ao nível de comida da raposa. Isso modela o efeito de um predador que mata a presa independentemente de estar com fome ou não.</p>
+<p>Altere o código para tratar esse limite e avalie os impactos da implementação dessa escolha na simulação resultante.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-classe-simulador" class="slide level2 smaller">
+<h2>A classe <code>Simulador</code></h2>
+<p>Vamos agora analisaro código da classe <code>Simulador</code>.</p>
+<ul>
+<li class="fragment">Ela é peça principal do sistema, pois ela controla todas as outras partes.</li>
+<li class="fragment">As principais partes são o construtor e os métodos <code>povoar</code> e <code>simularUmPasso</code>.</li>
+<li class="fragment">Obs.: repare que o método <code>povoar</code> criaos amimais com idades aleatórias.</li>
+<li class="fragment">O método <code>simularUmPasso</code> é o responsável por fazer a simulação de um passo.
+<ul>
+<li class="fragment">Isso representa mais corretamente uma população variada que seria um estado normal da simulação.</li>
+<li class="fragment">Além disso, se todos os animais começassem recém-nascidos, até que eles tivessem idade para se reproduzir, pode ser que os coelhos fossem todos caçados ou as raposas morressem de fome.</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-16" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Experimente alterar o método <code>povoar</code> para que os coelhos e raposas comecem com idade inicial zero.</p>
+<p>Execute várias simulações e verifique se isso é sempre catastrófico.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Se apenas os coelhos tiverem uma idade inicial aleatória, a população de coelhos tenderá a crescer, enquanto a população de raposas permanecerá muito pequena.</p>
+<p>Quando as raposas atingirem idade suficiente para se reproduzir, a simulação tende a se comportar novamente como a versão original?</p>
+<p>O que isso sugere sobre os tamanhos relativos das populações iniciais e seu impacto no resultado da simulação?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-classe-simulador-1" class="slide level2 smaller">
+<h2>A classe <code>Simulador</code></h2>
+<p>Avalie agora o código da classe <code>simularUmPasso</code>.</p>
+<ul>
+<li class="fragment">Repare que não estamos usando herança nesta implementação.</li>
+<li class="fragment">Repare também como são tratadas as listas de coelhos e raposas (e como elas são atualizadas com os recém-nascidos).</li>
+</ul>
+</section>
+<section id="começando-a-melhorar-a-simulação" class="slide level2 smaller">
+<h2>Começando a melhorar a simulação</h2>
+<p>Agora que entendemos como a simulação funciona, já podemos começar a melhorar o design e a implementação do projeto.</p>
+<ul>
+<li class="fragment">Faremos isso passo a passo.</li>
+<li class="fragment">Poderíamos começar por vários pontos, mas um ponto-fraco óbvio do design atual é que ele não usa herança.
+<ul>
+<li class="fragment">Que poderia evitar diversas replicações de código entre as classes <code>Coelho</code> e <code>Raposa</code>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-17" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Identifique as semelhanças e diferenças entre as classes <code>Coelho</code> e <code>Raposa</code>.</p>
+<p>Faça listas separadas dos atributos, métodos e construtores e diferencie entre os atributos estáticos e ​​de instância.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Métodos idênticos nas subclasses são claramente candidatos a serem levados para uma superclasse.</p>
+<p>Quais métodos são realmente idênticos nas classes <code>Coelho</code> e <code>Raposa</code>?</p>
+<p>Para chegar a uma conclusão, considere:</p>
+<ul>
+<li class="fragment">se faz diferença a flexão de gênero (como <code>vivo</code> ou <code>viva</code>).</li>
+<li class="fragment">como o uso dos atributos estáticos poderia ser alterado para maximizar o uso da herança.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-18" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Na versão atual da simulação, os valores de todos os atributos estáticos com nomes semelhantes são diferentes.</p>
+<p>Se os dois valores de um atributo estático específico (como <code>IDADE_REPRODUCAO</code>, por exemplo) fossem idênticos, isso faria alguma diferença na sua avaliação de quais métodos são realmente idênticos?</p>
+</div>
+</div>
+</div>
+</div>
 </section></section>
+<section id="classes-abstratas" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Classes Abstratas</h1>
+
+
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>

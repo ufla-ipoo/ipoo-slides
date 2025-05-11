@@ -4477,14 +4477,14 @@
     "href": "cap10-1.html#principais-conceitos-da-aula",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "Principais Conceitos da Aula",
-    "text": "Principais Conceitos da Aula\n\nClasses Abstratas\nInterfaces\nHerança Múltipla\n\n\nConstruções Java do capítulo\n\nabstract, implements, interface\n\n\n\nNesta aula vamos aprofundar nas técnicas relacionadas a herança que podem ser usadas para melhorar a estrutura das classes e aumentar a manutenibilidade e extensibilidade do código.\n\nVeremos um projeto de exemplo que aborda uma simulação e com ele discutiremos novamente conceitos vistos anteriormente de herança, polimorfismo, classes abstratas e interfaces."
+    "text": "Principais Conceitos da Aula\n\nClasses Abstratas\nInterfaces\nHerança Múltipla\n\n\nConstruções Java do capítulo\n\nabstract, implements, interface\n\n\n\nNesta aula vamos aprofundar nas técnicas relacionadas a herança que podem ser usadas para melhorar a estrutura das classes e aumentar a manutenibilidade e extensibilidade do código.\n\nVeremos um projeto de exemplo que aborda uma simulação e com ele discutiremos novamente os conceitos de herança, polimorfismo, classes abstratas e interfaces."
   },
   {
     "objectID": "cap10-1.html#section",
     "href": "cap10-1.html#section",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "É muito comum usarmos computadores para simularmos fenômenos do mundo real.\n\nIsso inclui sistemas que:\n\nmodelam o tráfego em uma cidade\nmodelam a previsão do tempo\nsimulação o espalhamento de uma doença\nanalisam o mercado de ações de uma bolsa de valores\ne muitos outros.\n\n\n\nQualquer simulação faz uso das técnicas de abstração, pois tenta modelar o comportamento de um subconjunto do mundo real.\n\nDecidir quais detalhes devem ser incluídos é geralmente um desafio.\nMais detalhes podem levar a uma simulação mais precisa, mas que requer mais esforço de programação e mais equipamento e tempo de execução."
+    "text": "É muito comum usarmos computadores para simularmos fenômenos do mundo real.\n\nAlguns exemplos são sistemas que:\n\nmodelam o tráfego em uma cidade\nmodelam a previsão do tempo\nsimulam o espalhamento de uma doença\nanalisam o mercado de ações de uma bolsa de valores\ne muitos outros.\n\n\n\nQualquer simulação faz uso das técnicas de abstração, pois tenta modelar o comportamento de um subconjunto do mundo real.\n\nDecidir quais detalhes devem ser incluídos é geralmente um desafio.\nMais detalhes podem levar a uma simulação mais precisa, mas que requer mais esforço de programação e mais equipamento e tempo de execução."
   },
   {
     "objectID": "cap10-1.html#section-1",
@@ -4505,7 +4505,7 @@
     "href": "cap10-1.html#section-3",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "O projeto que vamos usar de exemplo é uma simulação do tipo predador-presa.\n\nEsse tipo de simulação é muito comum em biologia, e é usado para estudar a variação no tamanho das populações de predadores e presas.\nUma grande população de presas fornece comida para uma pequena população de predadores.\nMas, se a população de predadores crescer demais, a população de presas pode diminuir muito (ou até desaparecer).\nAlém disso, o tamanho do habitat natural também influencia o tamanho das populações, pois pode facilitar ou dificultar que os predadores encontrem suas presas.\n\n\nO projeto que vamos usar segue a mesma ideia do World of Zuul que trabalhamos nas aulas de Design de Classes,\n\nno sentido de que é um projeto que funciona corretamente do ponto de vista do usuário.\nMas que tem problemas de design e implementação.\n\nEspecialmente por não utilizar os conceitos de herança que vimos nas últimas aulas."
+    "text": "O projeto que vamos usar de exemplo é uma simulação do tipo predador-presa.\n\nEsse tipo de simulação é muito comum em biologia, e é usado para estudar a variação no tamanho das populações de predadores e presas.\nUma grande população de presas fornece comida para uma pequena população de predadores.\nMas, se a população de predadores crescer demais, a população de presas pode diminuir muito (ou até desaparecer).\nAlém disso, o tamanho do habitat natural também influencia o tamanho das populações, pois pode facilitar ou dificultar que os predadores encontrem suas presas.\n\n\nO projeto que vamos usar segue a mesma ideia do World of Zuul que trabalhamos nas aulas de Design de Classes,\n\nno sentido de que é um projeto que funciona corretamente do ponto de vista do usuário;\n\nmas que tem problemas de design e implementação.\n\nEspecialmente por não utilizar os conceitos de herança que vimos nas últimas aulas."
   },
   {
     "objectID": "cap10-1.html#section-4",
@@ -4519,7 +4519,7 @@
     "href": "cap10-1.html#section-5",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "As principais classes que vamos focar são Simulador, Raposa e Coelho.\n\nAs classes Raposa e Coelho representam o comportamento do predador e da presa, respectivamente.\nE trataremos principalmente os aspectos que afetam o tamanho das populações: nascimento, morte e fornecimento de comida."
+    "text": "As principais classes que vamos focar são Simulador, Raposa e Coelho.\n\nAs classes Raposa e Coelho representam o comportamento do predador e da presa, respectivamente.\nTrataremos principalmente os aspectos que afetam o tamanho de suas populações: nascimento, morte e fornecimento de comida."
   },
   {
     "objectID": "cap10-1.html#section-6",
@@ -4534,5 +4534,117 @@
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
     "text": "Resumidamente, o objetivo das demais classes é:\n\nCampo representa um campo de duas dimensões onde os animais vivem.\n\nO campo é formado por um número fixo de localizações (células), arranjadas em linhas e colunas.\nApenas um animal pode ocupar uma localização por vez.\nUma localização pode estar vazia ou ocupada por um animal.\n\nLocalizacao representa uma célula dentro do campo, definida por um valor de linha e um de coluna.\nAs classes Simulador, Raposa, Coelho, Campo e Localizacao definem completamente o comportamento da simulação.\n\nAs demais classes são acessórias."
+  },
+  {
+    "objectID": "cap10-1.html#section-8",
+    "href": "cap10-1.html#section-8",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "A classe Randomizador nos permite ter um certo grau de controle sobre a aleatoriedade da simulação.\n\nEx.: quando os animais nascem.\n\nAs classes VisaoSimulador, EstatisticasCampo e Contador fornecem uma visualização gráfica da simulação.\n\nVisaoSimulador exibe uma visualização do estado do campo.\nEstatisticasCampo mostra as quantidades de coelhos e raposas.\nContador é uma classe auxiliar que trata a contagem dos animais."
+  },
+  {
+    "objectID": "cap10-1.html#section-9",
+    "href": "cap10-1.html#section-9",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nInicie o projeto raposas-e-coelhos-v1. Você verá o estado inical da simulação. Os retângulos em maior número representam os coelhos e os demais as raposas.\nAcione o botão Simular um Passo. O número de raposas se altera se você aciona o botão apenas uma vez?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nO número de raposas se altera a cada passo da simulação?\nQuais processos naturais vocês acha que estão sendo modelados para fazer o número de raposas aumentar ou diminuir?\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAcione agora o botão Simular Vários Passos e escolha uma grande quantidade de passos (como 80 ou 100).\nO número de raposas e coelhos aumentam ou diminuem na mesma taxa?"
+  },
+  {
+    "objectID": "cap10-1.html#section-10",
+    "href": "cap10-1.html#section-10",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nQuais mudanças vocês nota ao executar o botão de Simulação Longa?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAcione o botão Reiniciar para criar um novo estado inicial para a simulação e rode a simulação novamente.\nA simulação é exatamente igual dessa vez? Se não é, você nota algum padrão similar entre as execuções?\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nSe você executa a simulação por tempo suficiente, aconte de todas as raposas ou coelhos morrerem?\nEm caso afirmativo, por que você acha que isso acontece?"
+  },
+  {
+    "objectID": "cap10-1.html#section-11",
+    "href": "cap10-1.html#section-11",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nO botão Reiniciar Randomizador chama o método reiniciar da classe Randomizador e também da classe Simulador. Isso faz com que a simulação seja exetamente igual à primeira simulação executada.\nVerifique o código da classe Randomizador e a documentação da classe java.util.Random para entender porque isso acontece."
+  },
+  {
+    "objectID": "cap10-1.html#a-classe-coelho",
+    "href": "cap10-1.html#a-classe-coelho",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "A classe Coelho",
+    "text": "A classe Coelho\nAbra o código da classe Coelho.\n\nVocê notará que a classe tem vários atributos estáticos que definem as configurações de todos os coelhos.\nO controle de aleatoriedade é centralizado através de um único objeto Random fornecido pela classe Randomizador.\n\nIsso permite a repetibilidade dos testes da simulação.\n\nCada coelho tem quatro atributos comuns (não estáticos), que descrevem seu estado.\n\nidade (dada pelo número de passos), se está vivo ou não, e sua localização específica no campo.\n\nVocê notará também as simplificações feitas na simulação e como a aleatoriedade é tratada."
+  },
+  {
+    "objectID": "cap10-1.html#a-classe-raposa",
+    "href": "cap10-1.html#a-classe-raposa",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "A classe Raposa",
+    "text": "A classe Raposa\nAbra o código da classe Raposa.\n\nVocê verá que ele tem muitas similaridades com a classe Coelho.\nAs diferenças se referem, principalmente, aos comportamentos de cacar (caçar) e buscarComida."
+  },
+  {
+    "objectID": "cap10-1.html#section-12",
+    "href": "cap10-1.html#section-12",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nVocê acha que não ter um atributo gênero, para indicar se o coelho é macho ou fêmea, provavelmente leva a uma simulação imprecisa?\nJustifique sua resposta.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nVocê acha que há outras simplificações na implementação da classe Coelho em relação ao mundo real?\nDiscuta se isso poderia impactar na precisão da simulação.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente alterar alguns dos atributos da classe Coelho e verifique como isso impacta o comportamento da simulação.\nPor exemplo: o que acontece se a probabilidade de reprodução for muito maior ou muito menor?"
+  },
+  {
+    "objectID": "cap10-1.html#a-classe-simulador",
+    "href": "cap10-1.html#a-classe-simulador",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "A classe Simulador",
+    "text": "A classe Simulador\nVamos agora analisaro código da classe Simulador.\n\nEla é peça principal do sistema, pois ela controla todas as outras partes.\nAs principais partes são o construtor e os métodos povoar e simularUmPasso.\nObs.: repare que o método povoar criaos amimais com idades aleatórias.\nO método simularUmPasso é o responsável por fazer a simulação de um passo.\n\nIsso representa mais corretamente uma população variada que seria um estado normal da simulação.\nAlém disso, se todos os animais começassem recém-nascidos, até que eles tivessem idade para se reproduzir, pode ser que os coelhos fossem todos caçados ou as raposas morressem de fome."
+  },
+  {
+    "objectID": "cap10-1.html#section-13",
+    "href": "cap10-1.html#section-13",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nAssim como foi feito para os coelhos, avalise se as simplificações implementadas na classe Raposa podem levar a uma simulação imprecisa.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nSe aumentarmos a idade máxima das raposas, você acha que a população das raposas vai aumentar, ou é mais provável que a população de coelhos seja reduzida a zero?\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente diferentes valores para os atributos das classes Coelho e Raposa.\nAlguma espécie sempre desaparece em alguma configuração específica?\nHá configurações que são mais estáveis, ou seja, geram um equilíbrio entre as populações por mais tempo?"
+  },
+  {
+    "objectID": "cap10-1.html#a-classe-simulador-1",
+    "href": "cap10-1.html#a-classe-simulador-1",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "A classe Simulador",
+    "text": "A classe Simulador\nAvalie agora o código da classe simularUmPasso.\n\nRepare que não estamos usando herança nesta implementação.\nRepare também como são tratadas as listas de coelhos e raposas (e como elas são atualizadas com os recém-nascidos)."
+  },
+  {
+    "objectID": "cap10-1.html#começando-a-melhorar-a-simulação",
+    "href": "cap10-1.html#começando-a-melhorar-a-simulação",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "Começando a melhorar a simulação",
+    "text": "Começando a melhorar a simulação\nAgora que entendemos como a simulação funciona, já podemos começar a melhorar o design e a implementação do projeto.\n\nFaremos isso passo a passo.\nPoderíamos começar por vários pontos, mas um ponto-fraco óbvio do design atual é que ele não usa herança.\n\nQue poderia evitar diversas replicações de código entre as classes Coelho e Raposa."
+  },
+  {
+    "objectID": "cap10-1.html#section-14",
+    "href": "cap10-1.html#section-14",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nExperimente alterar o método main da classe App, chamando o construtor sobrecarregado da classe Simulador para definir campos de tamanhos diferentes.\nO tamanho do campo afeta a probabilidade das espécies sobreviverem?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAtualmente, uma raposa come no máximo um coelho em cada passo.\nModifique o método buscarComida para que os coelhos em todos os locais vizinhos sejam comidos em um único passo. Avalie o impacto dessa alteração nos resultados da simulação.\nObserve que o método buscarComida atualmente retorna a localização do único coelho que é comido, portanto, você precisará retornar a localização de um dos coelhos comidos na sua versão.\nNo entanto, não se esqueça de retornar null se não houver coelhos para comer."
+  },
+  {
+    "objectID": "cap10-1.html#section-15",
+    "href": "cap10-1.html#section-15",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nSeguindo o exercício anterior, se uma raposa comer vários coelhos de uma só vez, existem diversas possibilidades de como podemos modelar seu nível de comida.\nSe somarmos todos os valores de comida dos coelhos, a raposa terá um nível de comida muito alto, tornando improvável que ela morra de fome tão cedo.\nAlternativamente, poderíamos impor um limite ao nível de comida da raposa. Isso modela o efeito de um predador que mata a presa independentemente de estar com fome ou não.\nAltere o código para tratar esse limite e avalie os impactos da implementação dessa escolha na simulação resultante."
+  },
+  {
+    "objectID": "cap10-1.html#section-16",
+    "href": "cap10-1.html#section-16",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nExperimente alterar o método povoar para que os coelhos e raposas comecem com idade inicial zero.\nExecute várias simulações e verifique se isso é sempre catastrófico.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nSe apenas os coelhos tiverem uma idade inicial aleatória, a população de coelhos tenderá a crescer, enquanto a população de raposas permanecerá muito pequena.\nQuando as raposas atingirem idade suficiente para se reproduzir, a simulação tende a se comportar novamente como a versão original?\nO que isso sugere sobre os tamanhos relativos das populações iniciais e seu impacto no resultado da simulação?"
+  },
+  {
+    "objectID": "cap10-1.html#section-17",
+    "href": "cap10-1.html#section-17",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nIdentifique as semelhanças e diferenças entre as classes Coelho e Raposa.\nFaça listas separadas dos atributos, métodos e construtores e diferencie entre os atributos estáticos e ​​de instância.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nMétodos idênticos nas subclasses são claramente candidatos a serem levados para uma superclasse.\nQuais métodos são realmente idênticos nas classes Coelho e Raposa?\nPara chegar a uma conclusão, considere:\n\nse faz diferença a flexão de gênero (como vivo ou viva).\ncomo o uso dos atributos estáticos poderia ser alterado para maximizar o uso da herança."
+  },
+  {
+    "objectID": "cap10-1.html#section-18",
+    "href": "cap10-1.html#section-18",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nNa versão atual da simulação, os valores de todos os atributos estáticos com nomes semelhantes são diferentes.\nSe os dois valores de um atributo estático específico (como IDADE_REPRODUCAO, por exemplo) fossem idênticos, isso faria alguma diferença na sua avaliação de quais métodos são realmente idênticos?"
   }
 ]

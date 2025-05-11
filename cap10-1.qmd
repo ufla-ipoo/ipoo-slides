@@ -150,4 +150,260 @@ Resumidamente, o objetivo das demais classes é:
   - `EstatisticasCampo` mostra as quantidades de coelhos e raposas.
   - `Contador` é uma classe auxiliar que trata a contagem dos animais.
 
-  
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Inicie o projeto `raposas-e-coelhos-v1`.
+Você verá o estado inical da simulação.
+Os retângulos em maior número representam os coelhos e os demais as raposas.
+
+Acione o botão **Simular um Passo**.
+O número de raposas se altera se você aciona o botão apenas uma vez?
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+O número de raposas se altera a cada passo da simulação?
+
+Quais processos naturais vocês acha que estão sendo modelados para fazer o número
+de raposas aumentar ou diminuir?
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Acione agora o botão **Simular Vários Passos** e escolha uma grande quantidade de passos (como 80 ou 100).
+
+O número de raposas e coelhos aumentam ou diminuem na mesma taxa?
+::: 
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Quais mudanças vocês nota ao executar o botão de **Simulação Longa**?
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Acione o botão `Reiniciar` para criar um novo estado inicial para a simulação e
+rode a simulação novamente.
+
+A simulação é exatamente igual dessa vez? 
+Se não é, você nota algum padrão similar entre as execuções?
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Se você executa a simulação por tempo suficiente, aconte de todas as raposas ou
+coelhos morrerem?
+
+Em caso afirmativo, por que você acha que isso acontece?
+:::
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+O botão **Reiniciar Randomizador** chama o método `reiniciar` da classe `Randomizador` e
+também da classe `Simulador`.
+Isso faz com que a simulação seja exetamente igual à primeira simulação executada.
+
+Verifique o código da classe `Randomizador` e a documentação da classe `java.util.Random`
+para entender porque isso acontece.
+:::
+
+## A classe `Coelho` {.smaller}
+
+Abra o código da classe `Coelho`.
+
+- Você notará que a classe tem vários atributos estáticos que definem as configurações de todos os coelhos.
+- O controle de aleatoriedade é centralizado através de um único objeto `Random` fornecido pela classe `Randomizador`.
+  - Isso permite a repetibilidade dos testes da simulação.
+- Cada coelho tem quatro atributos comuns (não estáticos), que descrevem seu estado.
+  - idade (dada pelo número de passos), se está vivo ou não, e sua localização específica no campo.
+- Você notará também as simplificações feitas na simulação e como a aleatoriedade é tratada.
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Você acha que não ter um atributo `gênero`, para indicar se o coelho é macho ou fêmea,
+provavelmente leva a uma simulação imprecisa?
+
+Justifique sua resposta.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Você acha que há outras simplificações na implementação da classe `Coelho` em relação ao mundo real?
+
+Discuta se isso poderia impactar na precisão da simulação.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Experimente alterar alguns dos atributos da classe `Coelho` e verifique como isso impacta o comportamento
+da simulação.
+
+Por exemplo: o que acontece se a probabilidade de reprodução for muito maior ou muito menor?
+:::
+
+[]: TODO: Não foi colocado o texto do livro após os exercícios, considerando que a aula é presencial.
+
+## A classe `Raposa` {.smaller}
+
+Abra o código da classe `Raposa`.
+
+- Você verá que ele tem muitas similaridades com a classe `Coelho`.
+- As diferenças se referem, principalmente, aos comportamentos de `cacar` (caçar) e `buscarComida`.
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Assim como foi feito para os coelhos, avalise se as simplificações implementadas na classe `Raposa`
+podem levar a uma simulação imprecisa.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Se aumentarmos a idade máxima das raposas, você acha que a população das raposas vai aumentar, ou
+é mais provável que a população de coelhos seja reduzida a zero?
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Experimente diferentes valores para os atributos das classes `Coelho` e `Raposa`.
+
+Alguma espécie sempre desaparece em alguma configuração específica?
+
+Há configurações que são mais estáveis, ou seja, geram um equilíbrio entre as populações por mais tempo?
+:::
+
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Experimente alterar o método `main` da classe `App`, chamando o construtor sobrecarregado da
+classe `Simulador` para definir campos de tamanhos diferentes.
+
+O tamanho do campo afeta a probabilidade das espécies sobreviverem?
+:::
+
+. . .
+
+[]: TODO: deixar esses exercícios para a aula prática? ==========================
+
+::: {.callout-note title="Exercício" icon=false}
+Atualmente, uma raposa come no máximo um coelho em cada passo.
+
+Modifique o método `buscarComida` para que os coelhos em todos os locais vizinhos sejam comidos
+em um único passo. Avalie o impacto dessa alteração nos resultados da simulação.
+
+Observe que o método `buscarComida` atualmente retorna a localização do único coelho que é comido, 
+portanto, você precisará retornar a localização de um dos coelhos comidos na sua versão.
+
+No entanto, não se esqueça de retornar `null` se não houver coelhos para comer.
+:::
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Seguindo o exercício anterior, se uma raposa comer vários coelhos de uma só vez, existem diversas 
+possibilidades de como podemos modelar seu nível de comida. 
+
+Se somarmos todos os valores de comida dos coelhos, a raposa terá um nível de comida muito alto, 
+tornando improvável que ela morra de fome tão cedo. 
+
+Alternativamente, poderíamos impor um limite ao nível de comida da raposa. 
+Isso modela o efeito de um predador que mata a presa independentemente de estar com fome ou não. 
+
+Altere o código para tratar esse limite e avalie os impactos da implementação dessa escolha na 
+simulação resultante.
+:::
+
+## A classe `Simulador` {.smaller}
+
+Vamos agora analisaro código da classe `Simulador`.
+
+- Ela é peça principal do sistema, pois ela controla todas as outras partes.
+- As principais partes são o construtor e os métodos `povoar` e `simularUmPasso`.
+- Obs.: repare que o método `povoar` criaos amimais com idades aleatórias.
+- O método `simularUmPasso` é o responsável por fazer a simulação de um passo.
+  - Isso representa mais corretamente uma população variada que seria um estado normal da simulação.
+  - Além disso, se todos os animais começassem recém-nascidos, até que eles tivessem idade para se reproduzir,
+    pode ser que os coelhos fossem todos caçados ou as raposas morressem de fome.
+
+[]: TODO: Não foi colocado o texto do livro, considerando que a aula é presencial.
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Experimente alterar o método `povoar` para que os coelhos e raposas comecem com idade inicial zero.
+
+Execute várias simulações e verifique se isso é sempre catastrófico.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Se apenas os coelhos tiverem uma idade inicial aleatória, a população de coelhos tenderá a crescer, 
+enquanto a população de raposas permanecerá muito pequena.
+
+Quando as raposas atingirem idade suficiente para se reproduzir, a simulação tende a se comportar
+novamente como a versão original?
+
+O que isso sugere sobre os tamanhos relativos das populações iniciais e seu impacto no resultado da simulação?
+:::
+
+## A classe `Simulador` {.smaller}
+
+Avalie agora o código da classe `simularUmPasso`.
+
+- Repare que não estamos usando herança nesta implementação.
+- Repare também como são tratadas as listas de coelhos e raposas (e como elas são atualizadas com os recém-nascidos).
+
+## Começando a melhorar a simulação {.smaller}
+
+Agora que entendemos como a simulação funciona, já podemos começar a melhorar o design e a implementação do projeto.
+
+- Faremos isso passo a passo.
+- Poderíamos começar por vários pontos, mas um ponto-fraco óbvio do design atual é que ele não usa herança.
+  - Que poderia evitar diversas replicações de código entre as classes `Coelho` e `Raposa`.
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Identifique as semelhanças e diferenças entre as classes `Coelho` e `Raposa`.
+
+Faça listas separadas dos atributos, métodos e construtores e diferencie entre os atributos estáticos e ​​de instância.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Métodos idênticos nas subclasses são claramente candidatos a serem levados para uma superclasse.
+
+Quais métodos são realmente idênticos nas classes `Coelho` e `Raposa`?
+
+Para chegar a uma conclusão, considere:
+
+- se faz diferença a flexão de gênero (como `vivo` ou `viva`).
+- como o uso dos atributos estáticos poderia ser alterado para maximizar o uso da herança.
+:::
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Na versão atual da simulação, os valores de todos os atributos estáticos com nomes semelhantes são diferentes.
+
+Se os dois valores de um atributo estático específico (como `IDADE_REPRODUCAO`, por exemplo) fossem idênticos, 
+isso faria alguma diferença na sua avaliação de quais métodos são realmente idênticos?
+:::
+
+
+# Classes Abstratas {background-color="#40666e"}
