@@ -171,12 +171,34 @@
 </ul>
 </div>
 </section>
+<section id="section" class="slide level2 smaller">
+<h2></h2>
+<p>Estes slides se baseiam no <span class="alert">Cap. 10 do livro</span> do Barnes e Kölling.</p>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="imagens/livro_bluej.png" class="quarto-figure quarto-figure-left" alt="Capa do livro do Barnes e Kolling."></p>
+</figure>
+</div>
+</div><div class="column" style="width:70%;">
+<ul>
+<li class="fragment">A diferença é que o livro apresenta os conceitos de <strong>classe abstrata</strong>, <strong>método abstrato</strong> e <strong>interface</strong> neste capítulo, já estes slides consideram que esses conceitos já foram apresentados.</li>
+<li class="fragment">Além disso, ele se baseia em um projeto a ser executado no VS Code, enquanto o livro se baseia no BlueJ.</li>
+</ul>
+</div></div>
+</div>
+<div class="fragment">
+<p><strong>Dica</strong>: vale a pena estudar pelo livro, porque ele apresenta bem mais detalhes do que os apresentados aqui.</p>
+</div>
+</section>
 <section>
 <section id="simulações" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Simulações</h1>
 
 </section>
-<section id="section" class="slide level2 smaller">
+<section id="section-1" class="slide level2 smaller">
 <h2></h2>
 <p>É muito comum usarmos computadores para <strong>simularmos</strong> fenômenos do mundo real.</p>
 <div class="fragment">
@@ -197,7 +219,7 @@
 </ul>
 </div>
 </section>
-<section id="section-1" class="slide level2 smaller">
+<section id="section-2" class="slide level2 smaller">
 <h2></h2>
 <p>De todo modo, simulações são muito úteis pois permitem fazer o que muitas vezes não conseguimos no mundo real.</p>
 <ul>
@@ -214,7 +236,7 @@
 </ul>
 </div>
 </section>
-<section id="section-2" class="slide level2 smaller">
+<section id="section-3" class="slide level2 smaller">
 <h2></h2>
 <p>Nesta aula vamos trabalhar em um projeto inspirado nessa ideia de simular o comportamento de animais em um habitat natural.</p>
 <ul>
@@ -228,7 +250,7 @@
 <h1>A simulação raposas-e-coelhos</h1>
 
 </section>
-<section id="section-3" class="slide level2 smaller">
+<section id="section-4" class="slide level2 smaller">
 <h2></h2>
 <p>O projeto que vamos usar de exemplo é uma <strong>simulação do tipo predador-presa</strong>.</p>
 <ul>
@@ -248,7 +270,7 @@
 </ul>
 </div>
 </section>
-<section id="section-4" class="slide level2 smaller">
+<section id="section-5" class="slide level2 smaller">
 <h2></h2>
 <p>O projeto <a href="https://github.com/ufla-ppoo/raposas-e-coelhos-v1">raposas-e-coelhos-v1</a> está disponível no repositório do curso.</p>
 <ul>
@@ -258,7 +280,7 @@
 <p><img data-src="imagens/raposas-e-coelhos_diagrama_classes.png" style="width:60.0%"></p>
 </div>
 </section>
-<section id="section-5" class="slide level2 smaller">
+<section id="section-6" class="slide level2 smaller">
 <h2></h2>
 <p><img data-src="imagens/raposas-e-coelhos_diagrama_classes.png" style="width:45.0%"></p>
 <p>As principais classes que vamos focar são <code>Simulador</code>, <code>Raposa</code> e <code>Coelho</code>.</p>
@@ -267,7 +289,7 @@
 <li class="fragment">Trataremos principalmente os aspectos que afetam o tamanho de suas populações: nascimento, morte e fornecimento de comida.</li>
 </ul>
 </section>
-<section id="section-6" class="slide level2 smaller">
+<section id="section-7" class="slide level2 smaller">
 <h2></h2>
 <p>A classe <code>Simulador</code> é responsável por criar o estado inicial da simulação, controlá-la e executá-la.</p>
 <ul>
@@ -282,7 +304,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-7" class="slide level2 smaller">
+<section id="section-8" class="slide level2 smaller">
 <h2></h2>
 <p>Resumidamente, o objetivo das demais classes é:</p>
 <ul>
@@ -299,7 +321,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-8" class="slide level2 smaller">
+<section id="section-9" class="slide level2 smaller">
 <h2></h2>
 <ul>
 <li class="fragment">A classe <code>Randomizador</code> nos permite ter um certo grau de controle sobre a aleatoriedade da simulação.
@@ -314,7 +336,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-9" class="slide level2">
+<section id="section-10" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -360,7 +382,7 @@
 </div>
 </div>
 </section>
-<section id="section-10" class="slide level2">
+<section id="section-11" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -405,7 +427,7 @@
 </div>
 </div>
 </section>
-<section id="section-11" class="slide level2">
+<section id="section-12" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -437,7 +459,7 @@
 <li class="fragment">Você notará também as simplificações feitas na simulação e como a aleatoriedade é tratada.</li>
 </ul>
 </section>
-<section id="section-12" class="slide level2">
+<section id="section-13" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -491,7 +513,7 @@
 <li class="fragment">As diferenças se referem, principalmente, aos comportamentos de <code>cacar</code> (caçar) e <code>buscarComida</code>.</li>
 </ul>
 </section>
-<section id="section-13" class="slide level2">
+<section id="section-14" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -536,7 +558,7 @@
 </div>
 </div>
 </section>
-<section id="section-14" class="slide level2">
+<section id="section-15" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -569,7 +591,7 @@
 </div>
 </div>
 </section>
-<section id="section-15" class="slide level2">
+<section id="section-16" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -601,7 +623,7 @@
 <li class="fragment">O método <code>simularUmPasso</code> é o responsável por fazer a simulação de um passo.</li>
 </ul>
 </section>
-<section id="section-16" class="slide level2">
+<section id="section-17" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -652,7 +674,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-17" class="slide level2">
+<section id="section-18" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -687,7 +709,7 @@
 </div>
 </div>
 </section>
-<section id="section-18" class="slide level2">
+<section id="section-19" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -708,7 +730,7 @@
 <h1>Classes Abstratas</h1>
 
 </section>
-<section id="section-19" class="slide level2 smaller">
+<section id="section-20" class="slide level2 smaller">
 <h2></h2>
 <p>Nós já conhecemos os conceitos de <span class="alert">herança</span> e <span class="alert">polimorfismo</span></p>
 <ul>
@@ -775,7 +797,7 @@
 </div>
 </div>
 </section>
-<section id="section-20" class="slide level2 smaller">
+<section id="section-21" class="slide level2 smaller">
 <h2></h2>
 <p>Uma tarefa importante quando refatoramos um sistema é planejar testes que garantam que o sistema continua funcionando como antes do ponto de vista do usuário.</p>
 <ul>
@@ -784,7 +806,7 @@
 <li class="fragment">Assim, podemos implementar a classe <code>Animal</code> em uma cópia do projeto e comparar as simulações antes e depois das alterações.</li>
 </ul>
 </section>
-<section id="section-21" class="slide level2">
+<section id="section-22" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -817,7 +839,7 @@
 <h1>Métodos Abstratos</h1>
 
 </section>
-<section id="section-22" class="slide level2 smaller">
+<section id="section-23" class="slide level2 smaller">
 <h2></h2>
 <p>Até agora a superclasse <code>Animal</code> ajudou a evitar replicação de código nas subclasses <code>Coelho</code> e <code>Raposa</code>.</p>
 <ul>
@@ -830,7 +852,7 @@
 </ul>
 </div>
 </section>
-<section id="section-23" class="slide level2 smaller">
+<section id="section-24" class="slide level2 smaller">
 <h2></h2>
 <p>A classe <code>Simulador</code> tem uma lista separada para cada espécie de animal.</p>
 <ul>
@@ -854,7 +876,7 @@
 <p>Que solução melhor poderíamos adotar?</p>
 </div>
 </section>
-<section id="section-24" class="slide level2 smaller">
+<section id="section-25" class="slide level2 smaller">
 <h2></h2>
 <p>Poderíamos criar um método na superclasse <code>Animal</code> e sobrescrevê-lo nas subclasses,</p>
 <ul>
@@ -868,7 +890,7 @@
 </ul>
 </div>
 </section>
-<section id="section-25" class="slide level2 smaller">
+<section id="section-26" class="slide level2 smaller">
 <h2></h2>
 <p>Nós podemos então criar um método chamado <code>agir</code> na superclasse <code>Animal</code> e sobrescrevê-lo nas subclasses.</p>
 <ul>
@@ -883,7 +905,7 @@
 <p>Dessa forma, estamos <em>reduzindo o acoplamento</em> entre a classe <code>Simulador</code> e as subclasses <code>Coelho</code> e <code>Raposa</code>.</p>
 </div>
 </section>
-<section id="section-26" class="slide level2 smaller">
+<section id="section-27" class="slide level2 smaller">
 <h2></h2>
 <p>E o que seria implementado no método <code>agir</code> da classe <code>Animal</code>?</p>
 <ul>
@@ -919,7 +941,7 @@
 </div>
 </div>
 </section>
-<section id="section-27" class="slide level2">
+<section id="section-28" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -964,7 +986,7 @@
 </div>
 </div>
 </section>
-<section id="section-28" class="slide level2 smaller">
+<section id="section-29" class="slide level2 smaller">
 <h2></h2>
 <p>As últimas alterações que fizemos no simulador removeram as dependências (acoplamentos) do método <code>simularUmPasso</code> com as classes <code>Coelho</code> e <code>Raposa</code>.</p>
 <ul>
@@ -982,7 +1004,7 @@
 </ul>
 </div>
 </section>
-<section id="section-29" class="slide level2">
+<section id="section-30" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -997,7 +1019,7 @@
 </div>
 </div>
 </section>
-<section id="section-30" class="slide level2 smaller">
+<section id="section-31" class="slide level2 smaller">
 <h2></h2>
 <p>O projeto <a href="https://github.com/ufla-ppoo/raposas-e-coelhos-v2">raposas-e-coelhos-v2</a>, disponível no repositório do curso, tem as melhorias de design e alterações que discutimos até agora.</p>
 <ul>
@@ -1006,7 +1028,7 @@
 <li>É muito mais efetivo aprender fazendo do que apenas lendo.</li>
 </ul>
 </section>
-<section id="section-31" class="slide level2 smaller">
+<section id="section-32" class="slide level2 smaller">
 <h2></h2>
 <p>O repositório do curso também tem o projeto <a href="https://github.com/ufla-ppoo/raposas-e-coelhos-v2-grafico">raposas-e-coelhos-v2-grafico</a>.</p>
 <ul>
@@ -1014,7 +1036,7 @@
 <li class="fragment">Mas acrescenta um gráfico de acompanhamento da simulação.</li>
 </ul>
 </section></section>
-<section id="section-32" class="title-slide slide level1 center">
+<section id="section-33" class="title-slide slide level1 center">
 <h1></h1>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1051,7 +1073,7 @@
 <h1>Métodos mais abstratos</h1>
 
 </section>
-<section id="section-33" class="slide level2 smaller">
+<section id="section-34" class="slide level2 smaller">
 <h2></h2>
 <p>Quando identificamos as características comuns entre as classes <code>Coelho</code> e <code>Raposa</code>, para criar a classe <code>Animal</code>, nós adiamos o tratamento do atributo <code>idade</code> e dos métodos associados a ele.</p>
 <ul>
@@ -1068,7 +1090,7 @@
 </ul>
 </div>
 </section>
-<section id="section-34" class="slide level2">
+<section id="section-35" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1097,7 +1119,7 @@
 </div>
 </div>
 </section>
-<section id="section-35" class="slide level2 smaller">
+<section id="section-36" class="slide level2 smaller">
 <h2></h2>
 <p>Vimos que a simulação para no passo 2, pois todos os animais morrem.</p>
 <ul>
@@ -1108,7 +1130,7 @@
 <p>Já que a sobrescrita funciona apenas para métodos, e se criássemos um método <strong>estático</strong> para retornar a idade máxima e tentarmos sobrescrever esse método nas subclasses?</p>
 </div>
 </section>
-<section id="section-36" class="slide level2">
+<section id="section-37" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1125,7 +1147,7 @@
 </div>
 </div>
 </section>
-<section id="section-37" class="slide level2 smaller">
+<section id="section-38" class="slide level2 smaller">
 <h2></h2>
 <p>Veja que, mais uma vez, a simulação termina no passo 2 com todos os animais mortos.</p>
 <ul>
@@ -1141,7 +1163,7 @@
 <p>O que podemos fazer então?</p>
 </div>
 </section>
-<section id="section-38" class="slide level2 smaller">
+<section id="section-39" class="slide level2 smaller">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1183,7 +1205,7 @@
 </div>
 </div>
 </section>
-<section id="section-39" class="slide level2">
+<section id="section-40" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1215,7 +1237,7 @@
 </div>
 </div>
 </section>
-<section id="section-40" class="slide level2">
+<section id="section-41" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">

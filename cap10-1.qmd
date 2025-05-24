@@ -33,6 +33,28 @@ para **melhorar a estrutura** das classes e **aumentar a manutenibilidade e exte
 - Veremos um projeto de exemplo que aborda uma **simulação** e com ele discutiremos novamente
   os conceitos de [herança]{.alert}, [polimorfismo]{.alert}, [classes abstratas]{.alert} e [interfaces]{.alert}.
 
+## {.smaller}
+
+Estes slides se baseiam no [Cap. 10 do livro]{.alert} do Barnes e Kölling.
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](imagens/livro_bluej.png){fig-alt="Capa do livro do Barnes e Kolling." fig-align="left"}
+:::
+
+::: {.column width="70%"}
+- A diferença é que o livro apresenta os conceitos de **classe abstrata**, **método abstrato** e **interface** neste capítulo, já estes slides consideram que esses conceitos já foram apresentados. 
+- Além disso, ele se baseia em um projeto a ser executado no VS Code, enquanto o livro se baseia no BlueJ.
+:::
+
+::::
+
+. . . 
+
+**Dica**: vale a pena estudar pelo livro, porque ele apresenta bem mais detalhes do que os apresentados aqui.
 
 # Simulações {background-color="#40666e"}
 
