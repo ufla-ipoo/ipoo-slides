@@ -4652,7 +4652,7 @@
     "href": "cap10-1.html#section-19",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Nós já conhecemos os conceitos de herança e polimorfismo\n\nE, por isso, sabemos que como Coelho e Raposa têm muitas características em comum,\n\nelas podem ser tornar subclasse de uma classe chamada Animal, por exemplo.\n\nVamos agora começar as fazer modificações para melhorar o design e a implementação do sistema.\nNós já sabemos que, pelo polimorfismo, evitaremos replicação de código\n\ne simplificaremos o código da classe Simulador, que usa as classes Coelho e Raposa.\n\n\n\nÉ importante ressaltar que vamos realizar um processo de refatoração que não deve alterar o comportamento do sistema do ponto de vista do usuário final."
+    "text": "Nós já conhecemos os conceitos de herança e polimorfismo\n\nE, por isso, sabemos que como Coelho e Raposa têm muitas características em comum,\n\nelas podem ser tornar subclasse de uma classe chamada Animal, por exemplo.\n\nVamos agora começar a fazer modificações para melhorar o design e a implementação do sistema.\nNós já sabemos que, pelo polimorfismo, evitaremos replicação de código\n\ne simplificaremos o código da classe Simulador, que usa as classes Coelho e Raposa.\n\n\n\nÉ importante ressaltar que vamos realizar um processo de refatoração que não deve alterar o comportamento do sistema do ponto de vista do usuário final."
   },
   {
     "objectID": "cap10-1.html#a-superclasse-animal",
@@ -4666,20 +4666,160 @@
     "href": "cap10-1.html#section-20",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Uma tarefa importante quando refatoramos um sistema é planejar testes que garantam que o sistema continua funcionando como antes do ponto de vista do usuário.\n\nA classe Randomizador existe para ajudar nesse processo.\nPois sabemos que, ao reiniciar o randomizador o comportamento da simulação é sempre o mesmo.\nAssim, podemos implementarmos a classe Animal em uma cópia do projeto e comparar as simulações antes e depois das alterações."
+    "text": "Uma tarefa importante quando refatoramos um sistema é planejar testes que garantam que o sistema continua funcionando como antes do ponto de vista do usuário.\n\nA classe Randomizador existe para ajudar nesse processo.\nPois sabemos que, ao reiniciar o randomizador, o comportamento da simulação é sempre o mesmo.\nAssim, podemos implementar a classe Animal em uma cópia do projeto e comparar as simulações antes e depois das alterações."
   },
   {
     "objectID": "cap10-1.html#a-superclasse-animal-1",
     "href": "cap10-1.html#a-superclasse-animal-1",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "A superclasse Animal",
-    "text": "A superclasse Animal\nOs métodos de acesso e modificadores desses atributos devem também ser levados para superclasse\n\nMas qual deve ser a visibilidade deles?\ndefinirLocalizacao é privado em Coelho e Raposa, mas não pode permanecer privado em Animal pois é usado por métodos que estão nas subclasses.\n\nDevemos definir então como protected.\n\nmorrer era público em Coelho mas privado em Raposa. Deveria ser público em Animal?\n\nSó era público em Coelho porque Raposa precisava chamar o método.\nAgora que as classes são irmãs, o método pode ser protected, indicando que ele não faz parte da interface geral dos animais (pelo menos até agora)."
+    "text": "A superclasse Animal\nOs métodos de acesso e modificadores desses atributos devem também ser levados para superclasse.\n\nMas qual deve ser a visibilidade deles?\ndefinirLocalizacao é privado em Coelho e Raposa, mas não pode permanecer privado em Animal pois é usado por métodos que estão nas subclasses.\n\nDevemos definir então como protected.\n\nmorrer era público em Coelho mas privado em Raposa. Deveria ser público em Animal?\n\nSó era público em Coelho porque Raposa precisava chamar o método.\nAgora que as classes são irmãs, o método pode ser protected, indicando que ele não faz parte da interface geral dos animais (pelo menos até agora)."
   },
   {
     "objectID": "cap10-1.html#section-21",
     "href": "cap10-1.html#section-21",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Exercício\n\n\nCrie a classe Animal em uma cópia do projeto de acordo com o que foi apresentado anteriormente.\nGaranta que a simulação continua funcionando como antes do ponto de vista do usuário.\n\n\n\n\n\n\n\n\nExercício\n\n\nDiscuta sobre como os conceitos de herança e polimorfismo melhoraram o projeto até agora."
+    "text": "Exercício\n\n\nCrie a classe Animal em uma cópia do projeto de acordo com o que foi apresentado anteriormente.\nGaranta que a simulação continua funcionando como antes do ponto de vista do usuário.\n\n\n\n\n\n\n\n\nExercício\n\n\nDiscuta sobre como o conceito de herança melhorou o projeto até agora."
+  },
+  {
+    "objectID": "cap10-1.html#a-superclasse-animal-2",
+    "href": "cap10-1.html#a-superclasse-animal-2",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "A superclasse Animal",
+    "text": "A superclasse Animal\nOutro ponto importante sobre a classe Animal é que nós nunca vamos instanciar um objeto dessa classe.\n\nPortanto, sabemos que ela deve ser abstrata.\n\n\n\n\n\n\nConceito\n\n\nUma classe abstrata é uma classe que não é criada para ser instanciada. Seu propósito é servir como uma superclasse para outras classes. Classes abstratas podem conter métodos abstratos."
+  },
+  {
+    "objectID": "cap10-1.html#section-22",
+    "href": "cap10-1.html#section-22",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Até agora a superclasse Animal ajudou a evitar replicação de código nas subclasses Coelho e Raposa.\n\nE também tornou mais fácil incluir um novo tipo de animal na simulação, se necessário.\n\n\nMas nós já samos que o uso inteligente de herança ajudaria a simplificar também o código da classe cliente,\n\nou seja, da classe que usa a hierarquia de herança, que, nesse caso, é a classe Simulador."
+  },
+  {
+    "objectID": "cap10-1.html#section-23",
+    "href": "cap10-1.html#section-23",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "A classe Simulador tem uma lista separada para cada espécie de animal.\n\nE sabemos que, com o polimorfismo, podemos usar uma única lista para armazenar todos os animais.\n\n\nMas surge um problema na hora de fazer isso, ao tratar o método simularUmPasso.\n\nNós ainda precisamos trabalhar com tipos específicos de animais para saber qual método devemos chamar.\nJá que, para os coelhos deve ser chamado o método correr,\n\ne para as raposas o método cacar.\n\nUma maneira tratar isso é usar instanceof e type casting.\n\nMas esse é um sinal de que não estamos aproveitando tudo que a herança pode nos oferecer.\n\n\n\n\nQue solução melhor poderíamos adotar?"
+  },
+  {
+    "objectID": "cap10-1.html#section-24",
+    "href": "cap10-1.html#section-24",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Poderíamos criar um método na superclasse Animal e sobrescrevê-lo nas subclasses,\n\nde forma que uma chamada ao método polimórfico faria com que cada animal agisse de forma diferente.\n\n\nEssa é uma técnica de refatoração padrão para esses casos\n\nnos quais nós temos um comportamento que é específico dos subtipos,\nmas que precisa ser chamado de um contexto que lida apenas com o supertipo."
+  },
+  {
+    "objectID": "cap10-1.html#section-25",
+    "href": "cap10-1.html#section-25",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Nós podemos então criar um método chamado agir na superclasse Animal e sobrescrevê-lo nas subclasses.\n\nE renomear os métodos de ação específicos (correr em Coelho e cacar em Raposa) para agir.\nDessa forma, em vez da simulação dizer a cada animal exatamente o que fazer,\n\nestamos apenas dizendo a ele para agir,\ne deixando que o próprio animal decida exatamente o que quer fazer.\n\n\n\nDessa forma, estamos reduzindo o acoplamento entre a classe Simulador e as subclasses Coelho e Raposa."
+  },
+  {
+    "objectID": "cap10-1.html#section-26",
+    "href": "cap10-1.html#section-26",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "E o que seria implementado no método agir da classe Animal?\n\nNão temos nada a implementar, certo? Como o método deve ser definido então?\nComo um método abstrato.\n\n\n\n\n\n\nConceito\n\n\nUma método abstrato possui apenas assinatura e não tem um corpo. Ele é marcado com a palavra-chave abstract.\n\n\n\n\n\n\n\n\n\n\nConceito\n\n\nSubclasse abstrata. Para que uma subclasse de uma classe abstrata se torne concreta, ela deve fornecer implementações para todos os métodos abstratos herdados. Caso contrário, a própria subclasse será abstrata."
+  },
+  {
+    "objectID": "cap10-1.html#section-27",
+    "href": "cap10-1.html#section-27",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nAltere o projeto incluindo o método agir conforme discutido anteriormente.\nObs.: como agora todos os animais fazem parte de uma única lista, e o sistema possui aleatoriedade, a ordem que os animais agem não vai mais ser a mesma de antes dessa alteração. Portanto, não é mais possível comparar exatamente duas simulações (antes e depois das alterações) como fizemos anteriormente.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nExplique porque não seria possível implementar de forma adequada o método agir se a lista de animais guardasse objetos do tipo Object em vez de Animal.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nExplique como o método simularUmPasso da classe Simulador utiliza o conceito de polimorfismo.\nEm sua resposta, inclua os conceitos de variável polimórfica, tipo estático, tipo dinâmico, dynamic dispatch e polimorfismo de método."
+  },
+  {
+    "objectID": "cap10-1.html#section-28",
+    "href": "cap10-1.html#section-28",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "As últimas alterações que fizemos no simulador removeram as dependências (acoplamentos) do método simularUmPasso com as classes Coelho e Raposa.\n\nA classe Simulador, no entanto, ainda está acoplada às classes Coelho e Raposa, porque essas classes são referenciadas no método povoar.\nNão há como evitar isso, pois quando criamos instâncias de animais, precisamos especificar exatamente que tipo de animal criar.\n\n\nMas isso poderia ser melhorado dividindo Simulador em duas classes:\n\numa classe, Simulador, que executa a simulação e é completamente desacoplada das classes concretas de animais,\ne outra classe, GeradorDePopulacoes (criada e chamada pelo simulador), que cria a população.\n\nSomente esta classe está acoplada às classes concretas de animais, facilitando para um programador de manutenção encontrar pontos onde a mudança é necessária quando o aplicativo for estendido (quando for incluída uma nova espécie de animal, por exemplo)."
+  },
+  {
+    "objectID": "cap10-1.html#section-29",
+    "href": "cap10-1.html#section-29",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nTente implementar a refatoração citada, criando a classe GeradorDePopulacoes."
+  },
+  {
+    "objectID": "cap10-1.html#section-30",
+    "href": "cap10-1.html#section-30",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "O projeto raposas-e-coelhos-v2, disponível no repositório do curso, tem as melhorias de design e alterações que discutimos até agora.\n\nMas atenção: a melhor maneira de estudar esse material é tentar implementar as mudanças você mesmo no projeto raposas-e-coelhos-v1 e só depois comparar com o projeto raposas-e-coelhos-v2.\nEstudar apenas lendo o código pronto não é uma boa prática, pois o aprendizado não é o mesmo.\nÉ muito mais efetivo aprender fazendo do que apenas lendo."
+  },
+  {
+    "objectID": "cap10-1.html#section-31",
+    "href": "cap10-1.html#section-31",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "O repositório do curso também tem o projeto raposas-e-coelhos-v2-grafico.\n\nEsse projeto tem a mesma modelagem de simulação do projeto v2.\nMas acrescenta um gráfico de acompanhamento da simulação."
+  },
+  {
+    "objectID": "cap10-1.html#section-32",
+    "href": "cap10-1.html#section-32",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nLeve o atributo idade das subclasses para a classe Animal. Para isso, será necessário:\n\nAlterar os construtores das subclasses para que a inicialização completa da idade seja tratada na superclasse.\n\nCom isso a classe animal vai precisar também de uma atributo randomizador.\n\nCriar um método de acesso para o atributo idade na superclasse, com visibilidade protected.\nLevar o método incrementarIdade para a superclasse.\n\nA questão é que para o método incrementarIdade compilar na classe Animal precisaremos definir um atributo estático IDADE_MAXIMA na superclasse.\n\nSerá o que acontece se esse atributo existir na superclasse e nas subclasses? Funciona como uma sobrescrita dos métodos?\nPara verificar isso, define IDADE_MAXIMA com valor 1 na superclasse Animal e execute a simulação.\nO que acontece com a simulação?"
+  },
+  {
+    "objectID": "cap10-1.html#section-33",
+    "href": "cap10-1.html#section-33",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Quando identificamos as características comuns entre as classes Coelho e Raposa, para criar a classe Animal, nós adiamos o tratamento do atributo idade e dos métodos associados a ele.\n\nA princípio, parece que seria muito simples ter levado o atributo para a classe Animal, criado um método de acesso e levado o método modificador incrementarIdade.\nO problema é que o método incrementarIdade depende do atributo estático IDADE_MAXIMA, que, apesar do mesmo nome, tem valores diferentes nas duas subclasses.\n\nPortanto, não dá para simplesmente levar o atributo IDADE_MAXIMA para a superclasse.\n\n\n\nSerá que seria possível sobrescrever um atributo?\n\nPara os próximos exercícios, use o projeto raposas-e-coelhos-v2-grafico como base."
+  },
+  {
+    "objectID": "cap10-1.html#section-34",
+    "href": "cap10-1.html#section-34",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nLeve o atributo idade das subclasses para a classe Animal. Para isso, será necessário:\n\nAlterar os construtores das subclasses para que a inicialização completa da idade seja tratada na superclasse.\n\nCom isso a classe animal vai precisar também de uma atributo randomizador.\n\nCriar um método de acesso para o atributo idade na superclasse, com visibilidade protected.\nLevar o método incrementarIdade para a superclasse.\n\nA questão é que para o método incrementarIdade compilar na classe Animal precisaremos definir um atributo estático IDADE_MAXIMA na superclasse.\n\nSerá o que acontece se esse atributo existir na superclasse e nas subclasses? Funciona como uma sobrescrita dos métodos?\nPara verificar isso, define IDADE_MAXIMA com valor 1 na superclasse Animal e execute a simulação.\nO que acontece com a simulação?"
+  },
+  {
+    "objectID": "cap10-1.html#section-35",
+    "href": "cap10-1.html#section-35",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Vimos que a simulação para no passo 2, pois todos os animais morrem.\n\nIsso aconteceu porque não existe sobrescrita de atributos.\nAssim, o valor usado para definir a idade dos animais foi aquele definido na classe Animal (e era 1).\n\n\nJá que a sobrescrita funciona apenas para métodos, e se criássemos um método estático para retornar a idade máxima e tentarmos sobrescrever esse método nas subclasses?"
+  },
+  {
+    "objectID": "cap10-1.html#section-36",
+    "href": "cap10-1.html#section-36",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nCrie um método estático na superclasse Animal e nas subclasses Coelho e Raposa para retornar o atributo IDADE_MAXIMA.\nO código dos métodos será exatamente igual, mas precisamos disso porque apesar dos atributos terem o mesmo nome (IDADE_MAXIMA), sabemos que são três atributos diferentes (um de cada classe).\nExecute a simulação e verifique se o problema foi resolvido."
+  },
+  {
+    "objectID": "cap10-1.html#section-37",
+    "href": "cap10-1.html#section-37",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Veja que, mais uma vez, a simulação termina no passo 2 com todos os animais mortos.\n\nMas por que isso aconteceu?\n\n\nA questão é que também não existe sobrescrita de métodos estáticos.\n\nIsso acontece porque é o compilador que decide o método a ser chamado (no caso de métodos estáticos).\n\n\n\nO que podemos fazer então?"
+  },
+  {
+    "objectID": "cap10-1.html#section-38",
+    "href": "cap10-1.html#section-38",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nExperimente remover a palavra-chave static do método que retorna a idade máxima e executar a simulação.\n\n\n\n\n\nVeja que agora a idade máxima retornada é a da subclasse, o que resolve o problema.\n\nMas, da forma que ficou, veja que a implementação do método na superclasse Animal é inútil.\n\nBem como a declaração do atributo IDADE_MAXIMA na superclasse.\n\n\n\n\n\n\n\n\nExercício\n\n\nRemova o atributo IDADE_MAXIMA da superclasse Animal.\nO método que retornava o atributo pode ser removido da classe Animal?\n\nSe não puder, como ele deve ser declarado?"
+  },
+  {
+    "objectID": "cap10-1.html#section-39",
+    "href": "cap10-1.html#section-39",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nLeve os métodos podeProcriar e procriar para superclasse Animal.\nNesse processo você dever criar os métodos necessários para garantir que os valores idade de reprodução, a probabilidade de reprodução e o tamanho máximo de ninhada, efetivamente usados, sejam os das subclasses.\nReflita sobre o nível de visibilidade adequado para cada método tratado.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAs alterações que fizemos tiveram impacto em alguma outra classe do sistema?\nSe não, o que isso sugere sobre os graus de encapsulamento e acoplamento que estavam presentes na versão original do projeto?"
+  },
+  {
+    "objectID": "cap10-1.html#section-40",
+    "href": "cap10-1.html#section-40",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nDESAFIO: as implementações dos métodos reproduzir nas classes Coelho e Raposa são muito similares. A diferença é que um cria objetos do tipo Coelho e o outro do tipo Raposa.\nUsando a mesma ideia adotada para tratar o método podeProcriar, seria possível mover o método reproduzir para a superclasse Animal?\nDica: as regras de substituição polimórfica se aplicam também a valores retornados por métodos da mesma forma que é feita para atribuições e passagens de parâmetros."
   }
 ]

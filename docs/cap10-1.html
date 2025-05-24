@@ -716,7 +716,7 @@
 <ul>
 <li class="fragment">elas podem ser tornar subclasse de uma classe chamada <code>Animal</code>, por exemplo.</li>
 </ul></li>
-<li class="fragment">Vamos agora começar as fazer modificações para melhorar o design e a implementação do sistema.</li>
+<li class="fragment">Vamos agora começar a fazer modificações para melhorar o design e a implementação do sistema.</li>
 <li class="fragment">Nós já sabemos que, pelo polimorfismo, evitaremos replicação de código
 <ul>
 <li class="fragment">e simplificaremos o código da classe <code>Simulador</code>, que usa as classes <code>Coelho</code> e <code>Raposa</code>.</li>
@@ -728,7 +728,7 @@
 </section>
 <section id="a-superclasse-animal" class="slide level2 smaller">
 <h2>A superclasse Animal</h2>
-<p>Vamos começar levando para a classe Animal aquilo que é idêntico nas duas subclasses.</p>
+<p>Vamos começar levando para a classe <code>Animal</code> aquilo que é idêntico nas duas subclasses.</p>
 <ul>
 <li class="fragment">Vamos levar os atributos <code>vivo(a)</code>, <code>localizacao</code> e <code>campo</code> para a superclasse.
 <ul>
@@ -740,7 +740,7 @@
 </section>
 <section id="a-superclasse-animal-1" class="slide level2 smaller">
 <h2>A superclasse Animal</h2>
-<p>Os métodos de acesso e modificadores desses atributos devem também ser levados para superclasse</p>
+<p>Os métodos de acesso e modificadores desses atributos devem também ser levados para superclasse.</p>
 <ul>
 <li class="fragment">Mas qual deve ser a visibilidade deles?</li>
 <li class="fragment"><code>definirLocalizacao</code> é privado em <code>Coelho</code> e <code>Raposa</code>, mas não pode permanecer privado em <code>Animal</code> pois é usado por métodos que estão nas subclasses.
@@ -754,13 +754,34 @@
 </ul></li>
 </ul>
 </section>
+<section id="a-superclasse-animal-2" class="slide level2 smaller">
+<h2>A superclasse Animal</h2>
+<p>Outro ponto importante sobre a classe <code>Animal</code> é que nós nunca vamos instanciar um objeto dessa classe.</p>
+<ul>
+<li class="fragment">Portanto, sabemos que ela deve ser <strong>abstrata</strong>.</li>
+</ul>
+<div class="fragment">
+<div title="Conceito">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p>Uma <strong>classe abstrata</strong> é uma classe que não é criada para ser instanciada. Seu propósito é servir como uma superclasse para outras classes. Classes abstratas podem conter métodos abstratos.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section id="section-20" class="slide level2 smaller">
 <h2></h2>
 <p>Uma tarefa importante quando refatoramos um sistema é planejar testes que garantam que o sistema continua funcionando como antes do ponto de vista do usuário.</p>
 <ul>
 <li class="fragment">A classe <code>Randomizador</code> existe para ajudar nesse processo.</li>
-<li class="fragment">Pois sabemos que, ao reiniciar o randomizador o comportamento da simulação é sempre o mesmo.</li>
-<li class="fragment">Assim, podemos implementarmos a classe <code>Animal</code> em uma cópia do projeto e comparar as simulações antes e depois das alterações.</li>
+<li class="fragment">Pois sabemos que, ao reiniciar o randomizador, o comportamento da simulação é sempre o mesmo.</li>
+<li class="fragment">Assim, podemos implementar a classe <code>Animal</code> em uma cópia do projeto e comparar as simulações antes e depois das alterações.</li>
 </ul>
 </section>
 <section id="section-21" class="slide level2">
@@ -785,7 +806,427 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>Discuta sobre como os conceitos de herança e polimorfismo melhoraram o projeto até agora.</p>
+<p>Discuta sobre como o conceito de herança melhorou o projeto até agora.</p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="métodos-abstratos" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Métodos Abstratos</h1>
+
+</section>
+<section id="section-22" class="slide level2 smaller">
+<h2></h2>
+<p>Até agora a superclasse <code>Animal</code> ajudou a evitar replicação de código nas subclasses <code>Coelho</code> e <code>Raposa</code>.</p>
+<ul>
+<li class="fragment">E também tornou mais fácil incluir um novo tipo de animal na simulação, se necessário.</li>
+</ul>
+<div class="fragment">
+<p>Mas nós já samos que o uso inteligente de herança ajudaria a simplificar também o código da classe cliente,</p>
+<ul>
+<li class="fragment">ou seja, da classe que usa a hierarquia de herança, que, nesse caso, é a classe <code>Simulador</code>.</li>
+</ul>
+</div>
+</section>
+<section id="section-23" class="slide level2 smaller">
+<h2></h2>
+<p>A classe <code>Simulador</code> tem uma lista separada para cada espécie de animal.</p>
+<ul>
+<li class="fragment">E sabemos que, com o <code>polimorfismo</code>, podemos usar uma única lista para armazenar todos os animais.</li>
+</ul>
+<div class="fragment">
+<p>Mas surge um problema na hora de fazer isso, ao tratar o método <code>simularUmPasso</code>.</p>
+<ul>
+<li class="fragment">Nós ainda precisamos trabalhar com tipos específicos de animais para saber qual método devemos chamar.</li>
+<li class="fragment">Já que, para os coelhos deve ser chamado o método <code>correr</code>,
+<ul>
+<li class="fragment">e para as raposas o método <code>cacar</code>.</li>
+</ul></li>
+<li class="fragment">Uma maneira tratar isso é usar <code>instanceof</code> e <em>type casting</em>.
+<ul>
+<li class="fragment">Mas esse é um sinal de que não estamos aproveitando tudo que a herança pode nos oferecer.</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p>Que solução melhor poderíamos adotar?</p>
+</div>
+</section>
+<section id="section-24" class="slide level2 smaller">
+<h2></h2>
+<p>Poderíamos criar um método na superclasse <code>Animal</code> e sobrescrevê-lo nas subclasses,</p>
+<ul>
+<li class="fragment">de forma que uma chamada ao método polimórfico faria com que cada animal agisse de forma diferente.</li>
+</ul>
+<div class="fragment">
+<p>Essa é uma técnica de refatoração padrão para esses casos</p>
+<ul>
+<li class="fragment">nos quais nós temos um comportamento que é específico dos subtipos,</li>
+<li class="fragment">mas que precisa ser chamado de um contexto que lida apenas com o supertipo.</li>
+</ul>
+</div>
+</section>
+<section id="section-25" class="slide level2 smaller">
+<h2></h2>
+<p>Nós podemos então criar um método chamado <code>agir</code> na superclasse <code>Animal</code> e sobrescrevê-lo nas subclasses.</p>
+<ul>
+<li class="fragment">E renomear os métodos de ação específicos (<code>correr</code> em <code>Coelho</code> e <code>cacar</code> em <code>Raposa</code>) para <code>agir</code>.</li>
+<li class="fragment">Dessa forma, em vez da simulação dizer a cada animal exatamente o que fazer,
+<ul>
+<li class="fragment">estamos apenas dizendo a ele para <em>agir</em>,</li>
+<li class="fragment">e deixando que o próprio animal decida exatamente o que quer fazer.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Dessa forma, estamos <em>reduzindo o acoplamento</em> entre a classe <code>Simulador</code> e as subclasses <code>Coelho</code> e <code>Raposa</code>.</p>
+</div>
+</section>
+<section id="section-26" class="slide level2 smaller">
+<h2></h2>
+<p>E o que seria implementado no método <code>agir</code> da classe <code>Animal</code>?</p>
+<ul>
+<li class="fragment">Não temos nada a implementar, certo? Como o método deve ser definido então?</li>
+<li class="fragment">Como um <span class="alert">método abstrato</span>.</li>
+</ul>
+<div class="fragment">
+<div title="Conceito">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p>Uma <strong>método abstrato</strong> possui apenas assinatura e não tem um corpo. Ele é marcado com a palavra-chave <code>abstract</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Conceito">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Subclasse abstrata</strong>. Para que uma subclasse de uma classe abstrata se torne concreta, ela deve fornecer implementações para todos os métodos abstratos herdados. Caso contrário, a própria subclasse será abstrata.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-27" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Altere o projeto incluindo o método <code>agir</code> conforme discutido anteriormente.</p>
+<p>Obs.: como agora todos os animais fazem parte de uma única lista, e o sistema possui aleatoriedade, a ordem que os animais agem não vai mais ser a mesma de antes dessa alteração. Portanto, não é mais possível comparar exatamente duas simulações (antes e depois das alterações) como fizemos anteriormente.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Explique porque não seria possível implementar de forma adequada o método <code>agir</code> se a lista de animais guardasse objetos do tipo <code>Object</code> em vez de <code>Animal</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Explique como o método <code>simularUmPasso</code> da classe <code>Simulador</code> utiliza o conceito de polimorfismo.</p>
+<p>Em sua resposta, inclua os conceitos de <strong>variável polimórfica</strong>, <strong>tipo estático</strong>, <strong>tipo dinâmico</strong>, <strong>dynamic dispatch</strong> e <strong>polimorfismo de método</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-28" class="slide level2 smaller">
+<h2></h2>
+<p>As últimas alterações que fizemos no simulador removeram as dependências (acoplamentos) do método <code>simularUmPasso</code> com as classes <code>Coelho</code> e <code>Raposa</code>.</p>
+<ul>
+<li class="fragment">A classe <code>Simulador</code>, no entanto, ainda está acoplada às classes <code>Coelho</code> e <code>Raposa</code>, porque essas classes são referenciadas no método <code>povoar</code>.</li>
+<li class="fragment">Não há como evitar isso, pois quando criamos instâncias de animais, precisamos especificar exatamente que tipo de animal criar.</li>
+</ul>
+<div class="fragment">
+<p>Mas isso poderia ser melhorado dividindo <code>Simulador</code> em duas classes:</p>
+<ul>
+<li class="fragment">uma classe, <code>Simulador</code>, que executa a simulação e é completamente desacoplada das classes concretas de animais,</li>
+<li class="fragment">e outra classe, <code>GeradorDePopulacoes</code> (criada e chamada pelo simulador), que cria a população.
+<ul>
+<li class="fragment">Somente esta classe está acoplada às classes concretas de animais, facilitando para um programador de manutenção encontrar pontos onde a mudança é necessária quando o aplicativo for estendido (quando for incluída uma nova espécie de animal, por exemplo).</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-29" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Tente implementar a refatoração citada, criando a classe <code>GeradorDePopulacoes</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-30" class="slide level2 smaller">
+<h2></h2>
+<p>O projeto <a href="https://github.com/ufla-ppoo/raposas-e-coelhos-v2">raposas-e-coelhos-v2</a>, disponível no repositório do curso, tem as melhorias de design e alterações que discutimos até agora.</p>
+<ul>
+<li>Mas <strong>atenção</strong>: a melhor maneira de estudar esse material é tentar implementar as mudanças você mesmo no projeto <code>raposas-e-coelhos-v1</code> e só depois comparar com o projeto <code>raposas-e-coelhos-v2</code>.</li>
+<li>Estudar apenas lendo o código pronto não é uma boa prática, pois o aprendizado não é o mesmo.</li>
+<li>É muito mais efetivo aprender fazendo do que apenas lendo.</li>
+</ul>
+</section>
+<section id="section-31" class="slide level2 smaller">
+<h2></h2>
+<p>O repositório do curso também tem o projeto <a href="https://github.com/ufla-ppoo/raposas-e-coelhos-v2-grafico">raposas-e-coelhos-v2-grafico</a>.</p>
+<ul>
+<li class="fragment">Esse projeto tem a mesma modelagem de simulação do projeto v2.</li>
+<li class="fragment">Mas acrescenta um gráfico de acompanhamento da simulação.</li>
+</ul>
+</section></section>
+<section id="section-32" class="title-slide slide level1 center">
+<h1></h1>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Execute o projeto <code>raposas-e-coelhos-v2-grafico</code> e observe o gráfico que ele exibe.</p>
+<p>Escreva o que você acha que o gráfico representa. Existe alguma relação entre as curvas apresentadas?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Faça alguns experimentos alterando o tamanho do campo (especialmente tamanhos menores);</p>
+<p>Os gráficos apresentados te dão algum <em>insight</em> novo sobre o comportamento da simulação?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<section id="métodos-mais-abstratos" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Métodos mais abstratos</h1>
+
+</section>
+<section id="section-33" class="slide level2 smaller">
+<h2></h2>
+<p>Quando identificamos as características comuns entre as classes <code>Coelho</code> e <code>Raposa</code>, para criar a classe <code>Animal</code>, nós adiamos o tratamento do atributo <code>idade</code> e dos métodos associados a ele.</p>
+<ul>
+<li class="fragment">A princípio, parece que seria muito simples ter levado o atributo para a classe <code>Animal</code>, criado um método de acesso e levado o método modificador <code>incrementarIdade</code>.</li>
+<li class="fragment">O problema é que o método <code>incrementarIdade</code> depende do atributo estático <code>IDADE_MAXIMA</code>, que, apesar do mesmo nome, tem valores diferentes nas duas subclasses.
+<ul>
+<li class="fragment">Portanto, não dá para simplesmente levar o atributo <code>IDADE_MAXIMA</code> para a superclasse.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Será que seria possível sobrescrever um atributo?</p>
+<ul>
+<li class="fragment">Para os próximos exercícios, use o projeto <code>raposas-e-coelhos-v2-grafico</code> como base.</li>
+</ul>
+</div>
+</section>
+<section id="section-34" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Leve o atributo <code>idade</code> das subclasses para a classe <code>Animal</code>. Para isso, será necessário:</p>
+<ul>
+<li>Alterar os construtores das subclasses para que a inicialização completa da idade seja tratada na superclasse.
+<ul>
+<li>Com isso a classe <code>animal</code> vai precisar também de uma atributo randomizador.</li>
+</ul></li>
+<li>Criar um método de acesso para o atributo <code>idade</code> na superclasse, com visibilidade <code>protected</code>.</li>
+<li>Levar o método <code>incrementarIdade</code> para a superclasse.</li>
+</ul>
+<p>A questão é que para o método <code>incrementarIdade</code> compilar na classe <code>Animal</code> precisaremos definir um atributo estático <code>IDADE_MAXIMA</code> na superclasse.</p>
+<ul>
+<li>Será o que acontece se esse atributo existir na superclasse e nas subclasses? Funciona como uma sobrescrita dos métodos?</li>
+<li>Para verificar isso, define <code>IDADE_MAXIMA</code> com valor <code>1</code> na superclasse <code>Animal</code> e execute a simulação.</li>
+<li>O que acontece com a simulação?</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-35" class="slide level2 smaller">
+<h2></h2>
+<p>Vimos que a simulação para no passo 2, pois todos os animais morrem.</p>
+<ul>
+<li class="fragment">Isso aconteceu porque não existe sobrescrita de atributos.</li>
+<li class="fragment">Assim, o valor usado para definir a idade dos animais foi aquele definido na classe <code>Animal</code> (e era <code>1</code>).</li>
+</ul>
+<div class="fragment">
+<p>Já que a sobrescrita funciona apenas para métodos, e se criássemos um método <strong>estático</strong> para retornar a idade máxima e tentarmos sobrescrever esse método nas subclasses?</p>
+</div>
+</section>
+<section id="section-36" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Crie um método <strong>estático</strong> na superclasse <code>Animal</code> e nas subclasses <code>Coelho</code> e <code>Raposa</code> para retornar o atributo <code>IDADE_MAXIMA</code>.</p>
+<p>O código dos métodos será exatamente igual, mas precisamos disso porque apesar dos atributos terem o mesmo nome (<code>IDADE_MAXIMA</code>), sabemos que são três atributos diferentes (um de cada classe).</p>
+<p>Execute a simulação e verifique se o problema foi resolvido.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-37" class="slide level2 smaller">
+<h2></h2>
+<p>Veja que, mais uma vez, a simulação termina no passo 2 com todos os animais mortos.</p>
+<ul>
+<li class="fragment">Mas por que isso aconteceu?</li>
+</ul>
+<div class="fragment">
+<p>A questão é que também não existe sobrescrita de métodos estáticos.</p>
+<ul>
+<li class="fragment">Isso acontece porque é o compilador que decide o método a ser chamado (no caso de métodos estáticos).</li>
+</ul>
+</div>
+<div class="fragment">
+<p>O que podemos fazer então?</p>
+</div>
+</section>
+<section id="section-38" class="slide level2 smaller">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Experimente remover a palavra-chave <code>static</code> do método que retorna a idade máxima e executar a simulação.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Veja que agora a idade máxima retornada é a da subclasse, o que resolve o problema.</p>
+<ul>
+<li class="fragment">Mas, da forma que ficou, veja que a implementação do método na superclasse <code>Animal</code> é inútil.
+<ul>
+<li class="fragment">Bem como a declaração do atributo <code>IDADE_MAXIMA</code> na superclasse.</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Remova o atributo <code>IDADE_MAXIMA</code> da superclasse <code>Animal</code>.</p>
+<p>O método que retornava o atributo pode ser removido da classe <code>Animal</code>?</p>
+<ul>
+<li>Se não puder, como ele deve ser declarado?</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-39" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Leve os métodos <code>podeProcriar</code> e <code>procriar</code> para superclasse <code>Animal</code>.</p>
+<p>Nesse processo você dever criar os métodos necessários para garantir que os valores idade de reprodução, a probabilidade de reprodução e o tamanho máximo de ninhada, efetivamente usados, sejam os das subclasses.</p>
+<p>Reflita sobre o nível de visibilidade adequado para cada método tratado.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>As alterações que fizemos tiveram impacto em alguma outra classe do sistema?</p>
+<p>Se não, o que isso sugere sobre os graus de encapsulamento e acoplamento que estavam presentes na versão original do projeto?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-40" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>DESAFIO</strong>: as implementações dos métodos <code>reproduzir</code> nas classes <code>Coelho</code> e <code>Raposa</code> são muito similares. A diferença é que um cria objetos do tipo <code>Coelho</code> e o outro do tipo <code>Raposa</code>.</p>
+<p>Usando a mesma ideia adotada para tratar o método <code>podeProcriar</code>, seria possível mover o método <code>reproduzir</code> para a superclasse <code>Animal</code>?</p>
+<p><em>Dica</em>: as regras de substituição polimórfica se aplicam também a valores retornados por métodos da mesma forma que é feita para atribuições e passagens de parâmetros.</p>
 </div>
 </div>
 </div>

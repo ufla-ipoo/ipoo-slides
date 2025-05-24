@@ -424,7 +424,7 @@ Nós já conhecemos os conceitos de [herança]{.alert} e [polimorfismo]{.alert}
 
 - E, por isso, sabemos que como `Coelho` e `Raposa` têm muitas características em comum, 
   - elas podem ser tornar subclasse de uma classe chamada `Animal`, por exemplo.
-- Vamos agora começar as fazer modificações para melhorar o design e a implementação do sistema.
+- Vamos agora começar a fazer modificações para melhorar o design e a implementação do sistema.
 - Nós já sabemos que, pelo polimorfismo, evitaremos replicação de código 
   - e simplificaremos o código da classe `Simulador`, que usa as classes `Coelho` e `Raposa`.
 
@@ -435,7 +435,7 @@ deve alterar o comportamento do sistema do ponto de vista do usuário final.
 
 ## A superclasse Animal {.smaller}
 
-Vamos começar levando para a classe Animal aquilo que é idêntico nas duas subclasses.
+Vamos começar levando para a classe `Animal` aquilo que é idêntico nas duas subclasses.
 
 - Vamos levar os atributos `vivo(a)`, `localizacao` e `campo` para a superclasse.
   - O atributo `idade` discutiremos mais adiante.
@@ -444,7 +444,7 @@ Vamos começar levando para a classe Animal aquilo que é idêntico nas duas sub
 
 ## A superclasse Animal {.smaller}
 
-Os métodos de acesso e modificadores desses atributos devem também ser levados para superclasse
+Os métodos de acesso e modificadores desses atributos devem também ser levados para superclasse.
 
 - Mas qual deve ser a visibilidade deles?
 - `definirLocalizacao` é privado em `Coelho` e `Raposa`, mas não pode permanecer privado em `Animal` pois
@@ -476,8 +476,8 @@ Uma tarefa importante quando refatoramos um sistema é planejar testes que garan
 continua funcionando como antes do ponto de vista do usuário.
 
 - A classe `Randomizador` existe para ajudar nesse processo. 
-- Pois sabemos que, ao reiniciar o randomizador o comportamento da simulação é sempre o mesmo.
-- Assim, podemos implementarmos a classe `Animal` em uma cópia do projeto e comparar as simulações
+- Pois sabemos que, ao reiniciar o randomizador, o comportamento da simulação é sempre o mesmo.
+- Assim, podemos implementar a classe `Animal` em uma cópia do projeto e comparar as simulações
 antes e depois das alterações.
 
 ## 
@@ -489,7 +489,7 @@ Garanta que a simulação continua funcionando como antes do ponto de vista do u
 :::
 
 ::: {.callout-note title="Exercício" icon=false}
-Discuta sobre como o conceito de herança melhorarou o projeto até agora.
+Discuta sobre como o conceito de herança melhorou o projeto até agora.
 :::
 
 # Métodos Abstratos {background-color="#40666e"}
@@ -543,7 +543,7 @@ Essa é uma técnica de refatoração padrão para esses casos
 
 Nós podemos então criar um método chamado `agir` na superclasse `Animal` e sobrescrevê-lo nas subclasses.
 
-- E renomar os métodos de ação específicos (`correr` em `Coelho` e `cacar` em `Raposa`) para `agir`.
+- E renomear os métodos de ação específicos (`correr` em `Coelho` e `cacar` em `Raposa`) para `agir`.
 - Dessa forma, em vez da simulação dizer a cada animal exatamente o que fazer, 
   - estamos apenas dizendo a ele para _agir_, 
   - e deixando que o próprio animal decida exatamente o que quer fazer.
@@ -557,13 +557,13 @@ Dessa forma, estamos *reduzindo o acoplamento* entre a classe `Simulador` e as s
 E o que seria implementado no método `agir` da classe `Animal`?
 
 - Não temos nada a implementar, certo? Como o método deve ser definido então?
-- Como um [método abstrata]{.alert}.
+- Como um [método abstrato]{.alert}.
 
 . . .
 
 ::: {.callout-tip title="Conceito" icon=false}
 Uma **método abstrato** possui apenas assinatura e não tem um corpo. 
-Ele é marcada com a palavra-chave `abstract`.
+Ele é marcado com a palavra-chave `abstract`.
 :::
 
 . . .
@@ -578,10 +578,252 @@ Caso contrário, a própria subclasse será abstrata.
 ## 
 
 ::: {.callout-note title="Exercício" icon=false}
-Altere o projeto tratamento o método `agir` conforme discutido anteriormente.
+Altere o projeto incluindo o método `agir` conforme discutido anteriormente.
 
+Obs.: como agora todos os animais fazem parte de uma única lista, e o sistema possui
+aleatoriedade, a ordem que os animais agem não vai mais ser a mesma de antes dessa alteração.
+Portanto, não é mais possível comparar exatamente duas simulações (antes e depois das alterações)
+como fizemos anteriormente.
+:::
+
+. . . 
+
+::: {.callout-note title="Exercício" icon=false}
+Explique porque não seria possível implementar de forma adequada o método `agir` se
+a lista de animais guardasse objetos do tipo `Object` em vez de `Animal`.
+:::
+
+. . . 
+
+::: {.callout-note title="Exercício" icon=false}
+Explique como o método `simularUmPasso` da classe `Simulador` utiliza o conceito de polimorfismo.
+
+Em sua resposta, inclua os conceitos de **variável polimórfica**, **tipo estático**, **tipo dinâmico**, 
+**dynamic dispatch** e **polimorfismo de método**.
+:::
+
+## {.smaller}
+
+As últimas alterações que fizemos no simulador removeram as dependências (acoplamentos) do método 
+`simularUmPasso` com as classes `Coelho` e `Raposa`. 
+
+- A classe `Simulador`, no entanto, ainda está acoplada às classes `Coelho` e `Raposa`, porque essas 
+classes são referenciadas no método `povoar`. 
+- Não há como evitar isso, pois quando criamos instâncias de animais, precisamos especificar exatamente 
+que tipo de animal criar. 
+
+. . .
+
+Mas isso poderia ser melhorado dividindo `Simulador` em duas classes: 
+
+- uma classe, `Simulador`, que executa a simulação e é completamente desacoplada das classes 
+concretas de animais,
+- e outra classe, `GeradorDePopulacoes` (criada e chamada pelo simulador), que cria a população. 
+  - Somente esta classe está acoplada às classes concretas de animais, facilitando para um programador 
+de manutenção encontrar pontos onde a mudança é necessária quando o aplicativo for estendido
+(quando for incluída uma nova espécie de animal, por exemplo).
+
+##  
+
+::: {.callout-note title="Exercício" icon=false}
+Tente implementar a refatoração citada, criando a classe `GeradorDePopulacoes`.
+:::
+
+## {.smaller}
+
+::: {.nonincremental}
+
+O projeto [raposas-e-coelhos-v2](https://github.com/ufla-ppoo/raposas-e-coelhos-v2), 
+disponível no repositório do curso, tem as melhorias de design e alterações que discutimos até agora.
+
+- Mas **atenção**: a melhor maneira de estudar esse material é tentar implementar
+as mudanças você mesmo no projeto `raposas-e-coelhos-v1` e só depois comparar com o projeto `raposas-e-coelhos-v2`.
+- Estudar apenas lendo o código pronto não é uma boa prática, pois o aprendizado não é o mesmo.
+- É muito mais efetivo aprender fazendo do que apenas lendo. 
 
 :::
+
+## {.smaller}
+
+O repositório do curso também tem o projeto [raposas-e-coelhos-v2-grafico](https://github.com/ufla-ppoo/raposas-e-coelhos-v2-grafico).
+
+- Esse projeto tem a mesma modelagem de simulação do projeto v2.
+- Mas acrescenta um gráfico de acompanhamento da simulação.
+
+#
+
+::: {.nonincremental}
+::: {.callout-note title="Exercício" icon=false}
+Execute o projeto `raposas-e-coelhos-v2-grafico` e observe o gráfico que ele exibe.
+
+Escreva o que você acha que o gráfico representa.
+Existe alguma relação entre as curvas apresentadas?
+:::
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Faça alguns experimentos alterando o tamanho do campo (especialmente tamanhos menores);
+
+Os gráficos apresentados te dão algum _insight_ novo sobre o comportamento da simulação?
+:::
+
+
+# Métodos mais abstratos {background-color="#40666e"}
+
+## {.smaller}
+
+Quando identificamos as características comuns entre as classes `Coelho` e `Raposa`,
+para criar a classe `Animal`, nós adiamos o tratamento do atributo `idade` e dos
+métodos associados a ele.
+
+- A princípio, parece que seria muito simples ter levado o atributo para a classe `Animal`, 
+criado um método de acesso e levado o método modificador `incrementarIdade`.
+- O problema é que o método `incrementarIdade` depende do atributo estático `IDADE_MAXIMA`,
+que, apesar do mesmo nome, tem valores diferentes nas duas subclasses.
+  - Portanto, não dá para simplesmente levar o atributo `IDADE_MAXIMA` para a superclasse.
+
+. . .
+
+Será que seria possível sobrescrever um atributo?
+
+- Para os próximos exercícios, use o projeto `raposas-e-coelhos-v2-grafico` como base.
+
+##
+
+::: {.nonincremental}
+::: {.callout-note title="Exercício" icon=false}
+Leve o atributo `idade` das subclasses para a classe `Animal`. Para  isso, será necessário:
+
+- Alterar os construtores das subclasses para que a inicialização completa da idade seja tratada na superclasse.
+  - Com isso a classe `animal` vai precisar também de uma atributo randomizador.
+- Criar um método de acesso para o atributo `idade` na superclasse, com visibilidade `protected`.
+- Levar o método `incrementarIdade` para a superclasse.
+
+A questão é que para o método `incrementarIdade` compilar na classe `Animal` precisaremos definir um
+atributo estático `IDADE_MAXIMA` na superclasse.
+
+- Será o que acontece se esse atributo existir na superclasse e nas subclasses?
+  Funciona como uma sobrescrita dos métodos?
+- Para verificar isso, define `IDADE_MAXIMA` com valor `1` na superclasse `Animal` e execute a simulação.
+- O que acontece com a simulação?
+:::
+:::
+
+## {.smaller}
+
+Vimos que a simulação para no passo 2, pois todos os animais morrem.
+
+- Isso aconteceu porque não existe sobrescrita de atributos.
+- Assim, o valor usado para definir a idade dos animais foi aquele definido na classe `Animal` (e era `1`).
+
+. . .
+
+Já que a sobrescrita funciona apenas para métodos, e se criássemos um método **estático** para
+retornar a idade máxima e tentarmos sobrescrever esse método nas subclasses?
+
+##
+
+::: {.nonincremental}
+::: {.callout-note title="Exercício" icon=false}
+Crie um método **estático** na superclasse `Animal` e nas subclasses `Coelho` e `Raposa`
+para retornar o atributo `IDADE_MAXIMA`.
+
+O código dos métodos será exatamente igual, mas precisamos disso porque apesar dos atributos
+terem o mesmo nome (`IDADE_MAXIMA`), sabemos que são três atributos diferentes (um de cada classe).
+
+Execute a simulação e verifique se o problema foi resolvido.
+:::
+:::
+
+## {.smaller}
+
+Veja que, mais uma vez, a simulação termina no passo 2 com todos os animais mortos.
+
+- Mas por que isso aconteceu?
+
+. . .
+
+A questão é que também não existe sobrescrita de métodos estáticos.
+
+- Isso acontece porque é o compilador que decide o método a ser chamado (no caso de métodos estáticos).
+
+. . .
+
+O que podemos fazer então?
+
+## {.smaller}
+
+::: {.nonincremental}
+::: {.callout-note title="Exercício" icon=false}
+Experimente remover a palavra-chave `static` do método que retorna a idade máxima e executar a simulação.
+:::
+:::
+
+. . .
+
+Veja que agora a idade máxima retornada é a da subclasse, o que resolve o problema.
+
+- Mas, da forma que ficou, veja que a implementação do método na superclasse `Animal` é inútil.
+  - Bem como a declaração do atributo `IDADE_MAXIMA` na superclasse.
+
+. . . 
+
+::: {.nonincremental}
+::: {.callout-note title="Exercício" icon=false}
+Remova o atributo `IDADE_MAXIMA` da superclasse `Animal`.
+
+O método que retornava o atributo pode ser removido da classe `Animal`?
+
+- Se não puder, como ele deve ser declarado?
+:::
+:::
+
+
+##
+
+::: {.nonincremental}
+::: {.callout-note title="Exercício" icon=false}
+Leve os métodos `podeProcriar` e `procriar` para superclasse `Animal`.
+
+Nesse processo você dever criar os métodos necessários para garantir que os valores
+idade de reprodução, a probabilidade de reprodução e o tamanho máximo de ninhada,
+efetivamente usados, sejam os das subclasses.
+
+Reflita sobre o nível de visibilidade adequado para cada método tratado.
+:::
+:::
+
+. . .
+
+
+::: {.nonincremental}
+::: {.callout-note title="Exercício" icon=false}
+As alterações que fizemos tiveram impacto em alguma outra classe do sistema?
+
+Se não, o que isso sugere sobre os graus de encapsulamento e acoplamento que 
+estavam presentes na versão original do projeto?
+:::
+:::
+
+##
+
+::: {.nonincremental}
+::: {.callout-note title="Exercício" icon=false}
+**DESAFIO**: as implementações dos métodos `reproduzir` nas classes `Coelho` e `Raposa`
+são muito similares.
+A diferença é que um cria objetos do tipo `Coelho` e o outro do tipo `Raposa`.
+
+Usando a mesma ideia adotada para tratar o método `podeProcriar`, seria possível
+mover o método `reproduzir` para a superclasse `Animal`?
+
+_Dica_: as regras de substituição polimórfica se aplicam também a valores retornados
+por métodos da mesma forma que é feita para atribuições e passagens de parâmetros.
+:::
+:::
+
+
 
 
 
