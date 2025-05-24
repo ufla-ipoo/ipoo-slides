@@ -15,7 +15,6 @@
   <meta name="generator" content="quarto-1.7.30">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2025-11-05">
   <title>GAC125 - Introdução à Programação Orientada a Objetos – PPOO - Técnicas de Abstração Adicionais</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -150,7 +149,7 @@
     </div>
 </div>
 
-  <p class="date">11/05/2025</p>
+  <p class="date">24/05/2025</p>
 </section>
 <section id="principais-conceitos-da-aula" class="slide level2 smaller">
 <h2>Principais Conceitos da Aula</h2>
@@ -398,7 +397,7 @@
 <p><strong>Exercício</strong></p>
 </div>
 <div class="callout-content">
-<p>Se você executa a simulação por tempo suficiente, aconte de todas as raposas ou coelhos morrerem?</p>
+<p>Se você executa a simulação por tempo suficiente, acontece de todas as raposas ou coelhos morrerem?</p>
 <p>Em caso afirmativo, por que você acha que isso acontece?</p>
 </div>
 </div>
@@ -590,16 +589,16 @@
 </section>
 <section id="a-classe-simulador" class="slide level2 smaller">
 <h2>A classe <code>Simulador</code></h2>
-<p>Vamos agora analisaro código da classe <code>Simulador</code>.</p>
+<p>Vamos agora analisar o código da classe <code>Simulador</code>.</p>
 <ul>
 <li class="fragment">Ela é peça principal do sistema, pois ela controla todas as outras partes.</li>
 <li class="fragment">As principais partes são o construtor e os métodos <code>povoar</code> e <code>simularUmPasso</code>.</li>
-<li class="fragment">Obs.: repare que o método <code>povoar</code> criaos amimais com idades aleatórias.</li>
-<li class="fragment">O método <code>simularUmPasso</code> é o responsável por fazer a simulação de um passo.
+<li class="fragment">Repare que o método <code>povoar</code> criaos amimais com idades aleatórias.
 <ul>
 <li class="fragment">Isso representa mais corretamente uma população variada que seria um estado normal da simulação.</li>
 <li class="fragment">Além disso, se todos os animais começassem recém-nascidos, até que eles tivessem idade para se reproduzir, pode ser que os coelhos fossem todos caçados ou as raposas morressem de fome.</li>
 </ul></li>
+<li class="fragment">O método <code>simularUmPasso</code> é o responsável por fazer a simulação de um passo.</li>
 </ul>
 </section>
 <section id="section-16" class="slide level2">
@@ -647,9 +646,9 @@
 <p>Agora que entendemos como a simulação funciona, já podemos começar a melhorar o design e a implementação do projeto.</p>
 <ul>
 <li class="fragment">Faremos isso passo a passo.</li>
-<li class="fragment">Poderíamos começar por vários pontos, mas um ponto-fraco óbvio do design atual é que ele não usa herança.
+<li class="fragment">Poderíamos começar por vários pontos, mas um <strong>ponto fraco</strong> óbvio <strong>do design</strong> atual é que ele <strong>não usa herança</strong>.
 <ul>
-<li class="fragment">Que poderia evitar diversas replicações de código entre as classes <code>Coelho</code> e <code>Raposa</code>.</li>
+<li class="fragment">Que poderia <strong>evitar</strong> diversas <strong>replicações de código</strong> entre as classes <code>Coelho</code> e <code>Raposa</code>.</li>
 </ul></li>
 </ul>
 </section>
@@ -677,11 +676,10 @@
 </div>
 <div class="callout-content">
 <p>Métodos idênticos nas subclasses são claramente candidatos a serem levados para uma superclasse.</p>
-<p>Quais métodos são realmente idênticos nas classes <code>Coelho</code> e <code>Raposa</code>?</p>
-<p>Para chegar a uma conclusão, considere:</p>
+<p>Quais métodos são realmente idênticos nas classes <code>Coelho</code> e <code>Raposa</code>? Para chegar a uma conclusão, considere:</p>
 <ul>
-<li class="fragment">se faz diferença a flexão de gênero (como <code>vivo</code> ou <code>viva</code>).</li>
-<li class="fragment">como o uso dos atributos estáticos poderia ser alterado para maximizar o uso da herança.</li>
+<li>se faz diferença a flexão de gênero (como <code>vivo</code> ou <code>viva</code>);</li>
+<li>como se os valores dos atributos estáticos fossem usados diretamente no código.</li>
 </ul>
 </div>
 </div>
@@ -705,11 +703,96 @@
 </div>
 </div>
 </section></section>
+<section>
 <section id="classes-abstratas" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Classes Abstratas</h1>
 
-
 </section>
+<section id="section-19" class="slide level2 smaller">
+<h2></h2>
+<p>Nós já conhecemos os conceitos de <span class="alert">herança</span> e <span class="alert">polimorfismo</span></p>
+<ul>
+<li class="fragment">E, por isso, sabemos que como <code>Coelho</code> e <code>Raposa</code> têm muitas características em comum,
+<ul>
+<li class="fragment">elas podem ser tornar subclasse de uma classe chamada <code>Animal</code>, por exemplo.</li>
+</ul></li>
+<li class="fragment">Vamos agora começar as fazer modificações para melhorar o design e a implementação do sistema.</li>
+<li class="fragment">Nós já sabemos que, pelo polimorfismo, evitaremos replicação de código
+<ul>
+<li class="fragment">e simplificaremos o código da classe <code>Simulador</code>, que usa as classes <code>Coelho</code> e <code>Raposa</code>.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>É importante ressaltar que vamos realizar um processo de <span class="alert">refatoração</span> que não deve alterar o comportamento do sistema do ponto de vista do usuário final.</p>
+</div>
+</section>
+<section id="a-superclasse-animal" class="slide level2 smaller">
+<h2>A superclasse Animal</h2>
+<p>Vamos começar levando para a classe Animal aquilo que é idêntico nas duas subclasses.</p>
+<ul>
+<li class="fragment">Vamos levar os atributos <code>vivo(a)</code>, <code>localizacao</code> e <code>campo</code> para a superclasse.
+<ul>
+<li class="fragment">O atributo <code>idade</code> discutiremos mais adiante.</li>
+<li class="fragment">Os atributos serão criados com visibilidade privada para respeitar o encapsulamento.</li>
+<li class="fragment">O atributo <code>vivo</code> será inicializado com <code>true</code> no construtor, e os demais serão passados pelas subclasses usando <code>super</code>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="a-superclasse-animal-1" class="slide level2 smaller">
+<h2>A superclasse Animal</h2>
+<p>Os métodos de acesso e modificadores desses atributos devem também ser levados para superclasse</p>
+<ul>
+<li class="fragment">Mas qual deve ser a visibilidade deles?</li>
+<li class="fragment"><code>definirLocalizacao</code> é privado em <code>Coelho</code> e <code>Raposa</code>, mas não pode permanecer privado em <code>Animal</code> pois é usado por métodos que estão nas subclasses.
+<ul>
+<li class="fragment">Devemos definir então como <code>protected</code>.</li>
+</ul></li>
+<li class="fragment"><code>morrer</code> era público em <code>Coelho</code> mas privado em <code>Raposa</code>. Deveria ser público em <code>Animal</code>?
+<ul>
+<li class="fragment">Só era público em <code>Coelho</code> porque <code>Raposa</code> precisava chamar o método.</li>
+<li class="fragment">Agora que as classes são irmãs, o método pode ser <code>protected</code>, indicando que ele não faz parte da interface geral dos animais (pelo menos até agora).</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-20" class="slide level2 smaller">
+<h2></h2>
+<p>Uma tarefa importante quando refatoramos um sistema é planejar testes que garantam que o sistema continua funcionando como antes do ponto de vista do usuário.</p>
+<ul>
+<li class="fragment">A classe <code>Randomizador</code> existe para ajudar nesse processo.</li>
+<li class="fragment">Pois sabemos que, ao reiniciar o randomizador o comportamento da simulação é sempre o mesmo.</li>
+<li class="fragment">Assim, podemos implementarmos a classe <code>Animal</code> em uma cópia do projeto e comparar as simulações antes e depois das alterações.</li>
+</ul>
+</section>
+<section id="section-21" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Crie a classe <code>Animal</code> em uma cópia do projeto de acordo com o que foi apresentado anteriormente.</p>
+<p>Garanta que a simulação continua funcionando como antes do ponto de vista do usuário.</p>
+</div>
+</div>
+</div>
+</div>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Discuta sobre como os conceitos de herança e polimorfismo melhoraram o projeto até agora.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>

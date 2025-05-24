@@ -11,6 +11,12 @@ subtitle: Aula 4.7 - Teórica
 - Herança Múltipla
 :::
 
+
+[]: ATENÇÃO ***
+[]: Esse material foi criado para PPOO e, portanto usa projeto no VS Code.
+[]: Além disso, ele é apresentado depois de uma aula na qual os conceitos de classes abstratas e interfaces foram apresentados.
+[]: Portanto, o material do livro foi alterado, de forma que esses conceitos não são explicados novamente, apenas usados e reforçados.
+
 . . .
 
 Construções Java do capítulo
@@ -197,7 +203,7 @@ Se não é, você nota algum padrão similar entre as execuções?
 . . .
 
 ::: {.callout-note title="Exercício" icon=false}
-Se você executa a simulação por tempo suficiente, aconte de todas as raposas ou
+Se você executa a simulação por tempo suficiente, acontece de todas as raposas ou
 coelhos morrerem?
 
 Em caso afirmativo, por que você acha que isso acontece?
@@ -326,17 +332,19 @@ Altere o código para tratar esse limite e avalie os impactos da implementação
 simulação resultante.
 :::
 
+[]: Experimentar primeiro valor grande como 100 e ir diminuindo até 30.
+
 ## A classe `Simulador` {.smaller}
 
-Vamos agora analisaro código da classe `Simulador`.
+Vamos agora analisar o código da classe `Simulador`.
 
 - Ela é peça principal do sistema, pois ela controla todas as outras partes.
 - As principais partes são o construtor e os métodos `povoar` e `simularUmPasso`.
-- Obs.: repare que o método `povoar` criaos amimais com idades aleatórias.
-- O método `simularUmPasso` é o responsável por fazer a simulação de um passo.
+- Repare que o método `povoar` criaos amimais com idades aleatórias.
   - Isso representa mais corretamente uma população variada que seria um estado normal da simulação.
   - Além disso, se todos os animais começassem recém-nascidos, até que eles tivessem idade para se reproduzir,
     pode ser que os coelhos fossem todos caçados ou as raposas morressem de fome.
+- O método `simularUmPasso` é o responsável por fazer a simulação de um passo.
 
 []: TODO: Não foi colocado o texto do livro, considerando que a aula é presencial.
 
@@ -372,8 +380,8 @@ Avalie agora o código da classe `simularUmPasso`.
 Agora que entendemos como a simulação funciona, já podemos começar a melhorar o design e a implementação do projeto.
 
 - Faremos isso passo a passo.
-- Poderíamos começar por vários pontos, mas um ponto-fraco óbvio do design atual é que ele não usa herança.
-  - Que poderia evitar diversas replicações de código entre as classes `Coelho` e `Raposa`.
+- Poderíamos começar por vários pontos, mas um **ponto fraco** óbvio **do design** atual é que ele **não usa herança**.
+  - Que poderia **evitar** diversas **replicações de código** entre as classes `Coelho` e `Raposa`.
 
 ## 
 
@@ -385,15 +393,17 @@ Faça listas separadas dos atributos, métodos e construtores e diferencie entre
 
 . . .
 
+::: {.nonincremental}
+
 ::: {.callout-note title="Exercício" icon=false}
 Métodos idênticos nas subclasses são claramente candidatos a serem levados para uma superclasse.
 
-Quais métodos são realmente idênticos nas classes `Coelho` e `Raposa`?
+Quais métodos são realmente idênticos nas classes `Coelho` e `Raposa`? Para chegar a uma conclusão, considere:
 
-Para chegar a uma conclusão, considere:
+- se faz diferença a flexão de gênero (como `vivo` ou `viva`);
+- como se os valores dos atributos estáticos fossem usados diretamente no código.
+:::
 
-- se faz diferença a flexão de gênero (como `vivo` ou `viva`).
-- como o uso dos atributos estáticos poderia ser alterado para maximizar o uso da herança.
 :::
 
 ## 
@@ -407,3 +417,173 @@ isso faria alguma diferença na sua avaliação de quais métodos são realmente
 
 
 # Classes Abstratas {background-color="#40666e"}
+
+## {.smaller}
+
+Nós já conhecemos os conceitos de [herança]{.alert} e [polimorfismo]{.alert}
+
+- E, por isso, sabemos que como `Coelho` e `Raposa` têm muitas características em comum, 
+  - elas podem ser tornar subclasse de uma classe chamada `Animal`, por exemplo.
+- Vamos agora começar as fazer modificações para melhorar o design e a implementação do sistema.
+- Nós já sabemos que, pelo polimorfismo, evitaremos replicação de código 
+  - e simplificaremos o código da classe `Simulador`, que usa as classes `Coelho` e `Raposa`.
+
+. . .
+
+É importante ressaltar que vamos realizar um processo de [refatoração]{.alert} que não
+deve alterar o comportamento do sistema do ponto de vista do usuário final.
+
+## A superclasse Animal {.smaller}
+
+Vamos começar levando para a classe Animal aquilo que é idêntico nas duas subclasses.
+
+- Vamos levar os atributos `vivo(a)`, `localizacao` e `campo` para a superclasse.
+  - O atributo `idade` discutiremos mais adiante.
+  - Os atributos serão criados com visibilidade privada para respeitar o encapsulamento.
+  - O atributo `vivo` será inicializado com `true` no construtor, e os demais serão passados pelas subclasses usando `super`.
+
+## A superclasse Animal {.smaller}
+
+Os métodos de acesso e modificadores desses atributos devem também ser levados para superclasse
+
+- Mas qual deve ser a visibilidade deles?
+- `definirLocalizacao` é privado em `Coelho` e `Raposa`, mas não pode permanecer privado em `Animal` pois
+  é usado por métodos que estão nas subclasses.
+  - Devemos definir então como `protected`.
+- `morrer` era público em `Coelho` mas privado em `Raposa`. Deveria ser público em `Animal`?
+  - Só era público em `Coelho` porque `Raposa` precisava chamar o método.
+  - Agora que as classes são irmãs, o método pode ser `protected`, indicando que ele não
+    faz parte da interface geral dos animais (pelo menos até agora).
+
+## A superclasse Animal {.smaller}
+
+Outro ponto importante sobre a classe `Animal` é que nós nunca vamos instanciar um objeto dessa classe.
+
+- Portanto, sabemos que ela deve ser **abstrata**.
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+Uma **classe abstrata** é uma classe que não é criada para ser instanciada.
+Seu propósito é servir como uma superclasse para outras classes.
+Classes abstratas podem conter métodos abstratos.
+:::
+
+
+## {.smaller}
+
+Uma tarefa importante quando refatoramos um sistema é planejar testes que garantam que o sistema
+continua funcionando como antes do ponto de vista do usuário.
+
+- A classe `Randomizador` existe para ajudar nesse processo. 
+- Pois sabemos que, ao reiniciar o randomizador o comportamento da simulação é sempre o mesmo.
+- Assim, podemos implementarmos a classe `Animal` em uma cópia do projeto e comparar as simulações
+antes e depois das alterações.
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Crie a classe `Animal` em uma cópia do projeto de acordo com o que foi apresentado anteriormente.
+
+Garanta que a simulação continua funcionando como antes do ponto de vista do usuário.
+:::
+
+::: {.callout-note title="Exercício" icon=false}
+Discuta sobre como o conceito de herança melhorarou o projeto até agora.
+:::
+
+# Métodos Abstratos {background-color="#40666e"}
+
+## {.smaller}
+
+Até agora a superclasse `Animal` ajudou a evitar replicação de código nas subclasses `Coelho` e `Raposa`.
+
+- E também tornou mais fácil incluir um novo tipo de animal na simulação, se necessário.
+
+. . .
+
+Mas nós já samos que o uso inteligente de herança ajudaria a simplificar também o código da classe cliente,
+
+- ou seja, da classe que usa a hierarquia de herança, que, nesse caso, é a classe `Simulador`.
+
+## {.smaller}
+
+A classe `Simulador` tem uma lista separada para cada espécie de animal.
+
+- E sabemos que, com o `polimorfismo`, podemos usar uma única lista para armazenar todos os animais.
+
+. . .
+
+Mas surge um problema na hora de fazer isso, ao tratar o método `simularUmPasso`.
+
+- Nós ainda precisamos trabalhar com tipos específicos de animais para saber qual método devemos chamar.
+- Já que, para os coelhos deve ser chamado o método `correr`,
+  - e para as raposas o método `cacar`.
+- Uma maneira tratar isso é usar `instanceof` e _type casting_.
+  - Mas esse é um sinal de que não estamos aproveitando tudo que a herança pode nos oferecer.
+
+. . . 
+
+Que solução melhor poderíamos adotar?
+
+## {.smaller}
+
+Poderíamos criar um método na superclasse `Animal` e sobrescrevê-lo nas subclasses,
+
+- de forma que uma chamada ao método polimórfico faria com que cada animal agisse de forma diferente.
+
+. . .
+
+Essa é uma técnica de refatoração padrão para esses casos
+
+- nos quais nós temos um comportamento que é específico dos subtipos,
+- mas que precisa ser chamado de um contexto que lida apenas com o supertipo.
+
+## {.smaller}
+
+Nós podemos então criar um método chamado `agir` na superclasse `Animal` e sobrescrevê-lo nas subclasses.
+
+- E renomar os métodos de ação específicos (`correr` em `Coelho` e `cacar` em `Raposa`) para `agir`.
+- Dessa forma, em vez da simulação dizer a cada animal exatamente o que fazer, 
+  - estamos apenas dizendo a ele para _agir_, 
+  - e deixando que o próprio animal decida exatamente o que quer fazer.
+
+. . .
+
+Dessa forma, estamos *reduzindo o acoplamento* entre a classe `Simulador` e as subclasses `Coelho` e `Raposa`.
+
+## {.smaller}
+
+E o que seria implementado no método `agir` da classe `Animal`?
+
+- Não temos nada a implementar, certo? Como o método deve ser definido então?
+- Como um [método abstrata]{.alert}.
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+Uma **método abstrato** possui apenas assinatura e não tem um corpo. 
+Ele é marcada com a palavra-chave `abstract`.
+:::
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+**Subclasse abstrata**.
+Para que uma subclasse de uma classe abstrata se torne concreta, ela deve
+fornecer implementações para todos os métodos abstratos herdados. 
+Caso contrário, a própria subclasse será abstrata.
+:::
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Altere o projeto tratamento o método `agir` conforme discutido anteriormente.
+
+
+:::
+
+
+
+
+
