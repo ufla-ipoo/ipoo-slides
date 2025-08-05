@@ -651,6 +651,15 @@ de manutenção encontrar pontos onde a mudança é necessária quando o aplicat
 Tente implementar a refatoração citada, criando a classe `GeradorDePopulacoes`.
 :::
 
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Para remover completamente o acoplamento entre `Simulador` e as classes concretas de animais,
+é necessário que a classe `GeradorDePopulacoes` também trate a definição das cores dos animais.
+
+Se ainda não tratou isso, trate agora.
+:::
+
 ## {.smaller}
 
 ::: {.nonincremental}
