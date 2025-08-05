@@ -533,7 +533,7 @@ Veja que quando clicamos em um método no BlueJ, a caixa de diálogo mostra tamb
 - Comentários são usados para fornecer informações para nós, programadores.
 - Veja que o comentário do método **mudarCor** indica quais são as cores que o programa conhece.
 
-. . .
+## 
 
 ::: {.callout-note title="Exercício" icon=false}
 Chame o método **mudarCor** para um dos seus círculos e use a string **"vermelha"**. Tente também outras cores.
@@ -772,6 +772,8 @@ Portanto, podemos obter informações de um objeto através de uma chamada de m�
 
 - Quer dizer então que os métodos podem **mudar o estado de um objeto** [e/ou]{.alert} **retornar algo sobre seu estado**.
 
+. . .
+
 ::: {.callout-tip title="Conceito" icon=false}
 Métodos podem retornar informação sobre o objeto através de um **valor de retorno**
 :::
@@ -818,7 +820,13 @@ As aulas teóricas dessa disciplina são no [formato ANP]{.alert} (Atividade Nã
 - Isso significa que você precisa [estudar]{.alert} o conteúdo da aula [à distância]{.alert}.
 - E para que você tenha a [presença]{.alert} considerada para essa aula, você precisa **demonstrar que** realmente **estudou** o conteúdo.
 
-Para essa aula, você terá presença se fizer **todos** os itens abaixo.
+Para essa aula, você terá presença se fizer **todos** os itens do próximo slide.
+
+:::
+
+##
+
+::: {.nonincremental}
 
 ::: {.callout-important title="Entregas no Campus Virtual"}
 1. Responda, no Campus Virtual, aos quizes presentes nesses slides.
@@ -834,9 +842,11 @@ Usando o projeto `disciplina`, crie um objeto para representar a nossa disciplin
 
 - Defina o professor, a sala e o horário das aulas.
 - Em seguida, matricule pelo menos dois alunos na disciplina.
-  - Um deles deve ser você, ou seja, deve ter seu nome e número de matrícula).
+  - Um deles deve ser você, ou seja, **deve ter seu nome e número de matrícula**.
 - Por fim, chame o método **imprimirLista** para o objeto da disciplina.
 :::
 
-
 :::
+
+
+

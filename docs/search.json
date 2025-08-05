@@ -2195,7 +2195,7 @@
     "href": "cap1-1.html#principais-conceitos-do-capítulo",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "Principais Conceitos do Capítulo",
-    "text": "Principais Conceitos do Capítulo\n\n\nObjetos\nClasses\nMétodos\nParâmetros\n\n\n\nVamos começar nossa jornada no mundo da Programação Orientada a Objetos (POO)!\n\n\nComeçaremos pelos conceitos mais importantes que são a base de tudo: Objetos e Classes"
+    "text": "Principais Conceitos do Capítulo\n\nObjetos\nClasses\nMétodos\nParâmetros\n\n\nVamos começar nossa jornada no mundo da Programação Orientada a Objetos (POO)!\n\n\nComeçaremos pelos conceitos mais importantes que são a base de tudo: Objetos e Classes"
   },
   {
     "objectID": "cap1-1.html#section",
@@ -2272,14 +2272,14 @@
     "href": "cap1-1.html#quiz",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "Quiz",
-    "text": "Quiz\n\nSobre objetos e classes é correto afirmar que:\n\nObjetos são usados para criar classes\nClasses são instâncias de objetos\nInstância é sinônimo de classe\nObjetos são instâncias de classes\n\n\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nAnote a resposta, pois você precisará depois responder ao Quiz no Campus Virtual para considerar a presença nessa aula."
+    "text": "Quiz\nSobre objetos e classes é correto afirmar que:\n\nObjetos são usados para criar classes\nClasses são instâncias de objetos\nInstância é sinônimo de classe\nObjetos são instâncias de classes\n\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nAnote a resposta, pois você precisará depois responder ao Quiz no Campus Virtual para considerar a presença nessa aula."
   },
   {
     "objectID": "cap1-1.html#section-9",
     "href": "cap1-1.html#section-9",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Baixe o projeto de exemplo figuras e abra-o no BlueJ.\n\n\n\n\n\n\n\n\nComo baixar o projeto?\n\n\nOs projetos da disciplina são disponibilizados no GitHub. Se nunca o utilizou, não se preocupe, basta fazer o seguinte:\n\n\nClicando no link do projeto você verá um botão verde bem destacado escrito Code.\nClique nele e vá na última opção: Download ZIP.\nDescompacte o arquivo no seu computador, entre na pasta criada e clique duas vezes no arquivo: package.bluej.\n\n\n\n\n\n\n\n\nAo abrir o projeto, você verá um diagrama.\n\n\n\nCada retângulo representa uma classe no seu projeto.\nClique com o botão direito em Circulo e escolha a opção new Circulo().\nO sistema pedirá o nome da instância, apenas clique em OK."
+    "text": "Baixe o projeto de exemplo figuras e abra-o no BlueJ.\n\n\n\n\n\n\n\n\nComo baixar o projeto?\n\n\nOs projetos da disciplina são disponibilizados no GitHub. Se nunca o utilizou, não se preocupe, basta fazer o seguinte:\n\nClicando no link do projeto você verá um botão verde bem destacado escrito Code.\nClique nele e vá na última opção: Download ZIP.\nDescompacte o arquivo no seu computador, entre na pasta criada e clique duas vezes no arquivo: package.bluej.\n\n\n\n\n\n\n\nAo abrir o projeto, você verá um diagrama.\n\n\n\nCada retângulo representa uma classe no seu projeto.\nClique com o botão direito em Circulo e escolha a opção new Circulo().\nO sistema pedirá o nome da instância, apenas clique em OK."
   },
   {
     "objectID": "cap1-1.html#section-10",
@@ -2314,7 +2314,7 @@
     "href": "cap1-1.html#section-15",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Vamos agora chamar o método moverHorizontal\n\nVeja que aparece uma caixa de diálogo que pede uma informação. \n\n\nDigite 50 e clique em OK.\n\n\nVocê verá que o círculo de move 50 pixels para a direita."
+    "text": "Vamos agora chamar o método moverHorizontal\n\nVeja que aparece uma caixa de diálogo que pede uma informação. \n\n\nDigite 50 e clique em OK.\n\nVocê verá que o círculo de move 50 pixels para a direita."
   },
   {
     "objectID": "cap1-1.html#section-16",
@@ -2342,7 +2342,7 @@
     "href": "cap1-1.html#quiz-1",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "Quiz",
-    "text": "Quiz\n\nSobre métodos e parâmetros é incorreto afirmar que:\n\nMétodos nos permitem comunicar com os objetos.\nParâmetros nos permitem fornecer informações adicionais aos métodos.\nA assinatura de um método indica quem o criou.\nEm Java, os parâmetros possuem um tipo e um nome."
+    "text": "Quiz\nSobre métodos e parâmetros é incorreto afirmar que:\n\nMétodos nos permitem comunicar com os objetos.\nParâmetros nos permitem fornecer informações adicionais aos métodos.\nA assinatura de um método indica quem o criou.\nEm Java, os parâmetros possuem um tipo e um nome."
   },
   {
     "objectID": "cap1-1.html#section-19",
@@ -2356,119 +2356,119 @@
     "href": "cap1-1.html#section-20",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Veja que o método mudarCor espera um parâmetro do tipo String (texto).\n\nStrings em Java devem ser passadas entre aspas duplas (ex: \"vermelha\").\n\n\nVeja que quando clicamos em um método no BlueJ, a caixa de diálogo mostra também um texto de comentário antes da assinatura do método.\n\nComentários são usados para fornecer informações para nós, programadores.\nVeja que o comentário do método mudarCor indica quais são as cores que o programa conhece.\n\n\n\n\n\n\n\nExercício\n\n\nChame o método mudarCor para um dos seus círculos e use a string “vermelha”. Tente também outras cores.\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente o que acontece quando você tenta usar uma cor que não existe.\n\n\n\n\n\n\n\n\nExercício\n\n\nTente chamar o método mudarCor e passar uma cor como parâmetro, mas sem as aspas. O que acontece?"
+    "text": "Veja que o método mudarCor espera um parâmetro do tipo String (texto).\n\nStrings em Java devem ser passadas entre aspas duplas (ex: \"vermelha\").\n\n\nVeja que quando clicamos em um método no BlueJ, a caixa de diálogo mostra também um texto de comentário antes da assinatura do método.\n\nComentários são usados para fornecer informações para nós, programadores.\nVeja que o comentário do método mudarCor indica quais são as cores que o programa conhece."
   },
   {
     "objectID": "cap1-1.html#section-21",
     "href": "cap1-1.html#section-21",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "A partir de uma classe, você pode criar vários objetos (ou instâncias).\n\nUsando a classe Circulo você pode criar muitos círculos. E o mesmo acontece com a classe Quadrado.\n\n\n\n\n\n\nExercício\n\n\nCrie vários objetos círculos, usando a opção new Circulo() no menu da classe Circulo. Faça um grande e amarelo e outro pequeno e verde. Experimente também criar alguns triângulos, quadrados e pessoas, mudando suas posições, tamanhos e cores.\n\n\n\n\n\n\nCada um desses objetos tem sua própria posição, cor e tamanho.\n\nVocê pode mudar uma característica de um objeto (como o tamanho), chamando um método daquele objeto.\nIsso muda apenas aquele objeto e não os demais.\nNós costumamos chamar as características dos objetos de atributos.\n\n\n\n\n\n\n\nConceito\n\n\nMúltiplas instâncias: muitos objetos similares podem ser criados a partir de uma única classe."
+    "text": "Exercício\n\n\nChame o método mudarCor para um dos seus círculos e use a string “vermelha”. Tente também outras cores.\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente o que acontece quando você tenta usar uma cor que não existe.\n\n\n\n\n\n\n\n\nExercício\n\n\nTente chamar o método mudarCor e passar uma cor como parâmetro, mas sem as aspas. O que acontece?"
   },
   {
     "objectID": "cap1-1.html#section-22",
     "href": "cap1-1.html#section-22",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Ao fazer o último exercício você deve ter notado que o método mudarTamanho da classe Triangulo tem a seguinte assinatura.\n\nvoid mudarTamanho(int novaAltura, int novaLargura)\n\n\nEsse é um exemplo de um método com mais de um parâmetro.\n\n\nDe fato, métodos pode ter quaisquer quantidades de parâmetros."
+    "text": "A partir de uma classe, você pode criar vários objetos (ou instâncias).\n\nUsando a classe Circulo você pode criar muitos círculos. E o mesmo acontece com a classe Quadrado.\n\n\n\n\n\n\nExercício\n\n\nCrie vários objetos círculos, usando a opção new Circulo() no menu da classe Circulo. Faça um grande e amarelo e outro pequeno e verde. Experimente também criar alguns triângulos, quadrados e pessoas, mudando suas posições, tamanhos e cores.\n\n\n\n\n\n\nCada um desses objetos tem sua própria posição, cor e tamanho.\n\nVocê pode mudar uma característica de um objeto (como o tamanho), chamando um método daquele objeto.\nIsso muda apenas aquele objeto e não os demais.\nNós costumamos chamar as características dos objetos de atributos.\n\n\n\n\n\n\n\nConceito\n\n\nMúltiplas instâncias: muitos objetos similares podem ser criados a partir de uma única classe."
   },
   {
     "objectID": "cap1-1.html#section-23",
     "href": "cap1-1.html#section-23",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Nós chamamos de estado de um objeto, o conjunto dos valores de todos os seus atributos.\n\nPara um círculo, por exemplo, seriam os valores de sua posição (X e Y), sua cor, seu diâmetro e sua informação de visibilidade.\n\n\nPodemos ver o estado de um objeto no BlueJ através da opção Inspecionar do menu de um objeto.\n\n\nEla exibe o Inspetor de objetos que mostra os atributos guardados dentro de um objeto."
+    "text": "Ao fazer o último exercício você deve ter notado que o método mudarTamanho da classe Triangulo tem a seguinte assinatura.\n\nvoid mudarTamanho(int novaAltura, int novaLargura)\n\n\nEsse é um exemplo de um método com mais de um parâmetro.\n\nDe fato, métodos pode ter quaisquer quantidades de parâmetros."
   },
   {
     "objectID": "cap1-1.html#section-24",
     "href": "cap1-1.html#section-24",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício\n\n\nCrie vários objetos de uma mesma classe e inspecione o estado de cada um. Com o inspetor de objetos aberto, mude o estado de um objeto (chamando o método moverEsquerda, por exemplo). Você verá os valores sendo modificados no inspetor de objetos.\n\n\n\n\n\nNo exercício vimos que alguns métodos, quando chamados, podem alterar o estado de um objeto.\n\nO método moverEsquerda, por exemplo, muda o valor do atributo posicaoX.\nNa linguagem Java, esses atributos também são chamados de campos."
+    "text": "Nós chamamos de estado de um objeto, o conjunto dos valores de todos os seus atributos.\n\nPara um círculo, por exemplo, seriam os valores de sua posição (X e Y), sua cor, seu diâmetro e sua informação de visibilidade.\n\n\nPodemos ver o estado de um objeto no BlueJ através da opção Inspecionar do menu de um objeto.\n\nEla exibe o Inspetor de objetos que mostra os atributos guardados dentro de um objeto."
   },
   {
     "objectID": "cap1-1.html#quiz-2",
     "href": "cap1-1.html#quiz-2",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "Quiz",
-    "text": "Quiz\n\nSe um programa tiver um objeto que é uma bola, a cor da bola é:\n\nUma instância.\nUm atributo.\nUm tipo.\nUm estado."
+    "text": "Quiz\nSe um programa tiver um objeto que é uma bola, a cor da bola é:\n\nUma instância.\nUm atributo.\nUm tipo.\nUm estado."
   },
   {
     "objectID": "cap1-1.html#section-25",
     "href": "cap1-1.html#section-25",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Inspecionando objetos diferentes, você deve ter notado que objetos da mesma classe têm todos os mesmos atributos.\n\nOu seja, a quantidade, o tipo e os nomes dos campos são os mesmos.\nMas os valores de um atributo de cada objeto podem ser diferentes.\n\n\nJá objetos de classes diferentes podem ter atributos diferentes.\n\nPor exemplo: um círculo tem o atributo diâmetro, já um triângulo tem os atributos largura e altura.\n\n\n\nMas por que será que isso acontece?\n\nÉ que a quantidade, os tipos e os nomes dos atributos são definidos em uma classe, e não em um objeto."
+    "text": "Exercício\n\n\nCrie vários objetos de uma mesma classe e inspecione o estado de cada um. Com o inspetor de objetos aberto, mude o estado de um objeto (chamando o método moverEsquerda, por exemplo). Você verá os valores sendo modificados no inspetor de objetos.\n\n\n\n\n\nNo exercício vimos que alguns métodos, quando chamados, podem alterar o estado de um objeto.\n\nO método moverEsquerda, por exemplo, muda o valor do atributo posicaoX.\nNa linguagem Java, esses atributos também são chamados de campos."
   },
   {
     "objectID": "cap1-1.html#section-26",
     "href": "cap1-1.html#section-26",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "A classe Circulo, por exemplo, define que um objeto círculo terá cinco atributos chamados:\n\n\ndiametro\nposicaoX\nposicaoY\ncor\nestaVisivel\n\n\n\nA classe também define os tipos de cada atributo: os primeiros são int, a cor é do tipo String e o último é boolean (verdadeiro ou falso).\nAssim, quando um objeto da classe Círculo for criado, o objeto terá esses atributos."
+    "text": "Inspecionando objetos diferentes, você deve ter notado que objetos da mesma classe têm todos os mesmos atributos.\n\nOu seja, a quantidade, o tipo e os nomes dos campos são os mesmos.\nMas os valores de um atributo de cada objeto podem ser diferentes.\n\n\nJá objetos de classes diferentes podem ter atributos diferentes.\n\nPor exemplo: um círculo tem o atributo diâmetro, já um triângulo tem os atributos largura e altura.\n\n\n\nMas por que será que isso acontece?\n\nÉ que a quantidade, os tipos e os nomes dos atributos são definidos em uma classe, e não em um objeto."
   },
   {
     "objectID": "cap1-1.html#section-27",
     "href": "cap1-1.html#section-27",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Já os valores dos atributos são guardados dentro do objeto.\n\nPor isso, que cada círculo pode ter uma cor diferente, por exemplo."
+    "text": "A classe Circulo, por exemplo, define que um objeto círculo terá cinco atributos chamados:\n\ndiametro\nposicaoX\nposicaoY\ncor\nestaVisivel\n\n\nA classe também define os tipos de cada atributo: os primeiros são int, a cor é do tipo String e o último é boolean (verdadeiro ou falso).\nAssim, quando um objeto da classe Círculo for criado, o objeto terá esses atributos."
   },
   {
     "objectID": "cap1-1.html#section-28",
     "href": "cap1-1.html#section-28",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "A mesma ideia vale para os métodos.\n\nMétodos são definidos na classe do objeto.\nAssim, objetos da mesma classe têm os mesmos métodos.\n\n\nMas, repare que os métodos são chamados nos objetos.\n\nAssim, quando o método moverDireita é chamado para um círculo, é apenas esse círculo que se move."
+    "text": "Já os valores dos atributos são guardados dentro do objeto.\n\nPor isso, que cada círculo pode ter uma cor diferente, por exemplo."
   },
   {
     "objectID": "cap1-1.html#section-29",
     "href": "cap1-1.html#section-29",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício\n\n\nEscolha uma das imagens abaixo e tente criar uma imagem parecida usando as formas do projeto figuras. Mas seja criativo e utilize cores, posições e tamanhos diferentes. Ao fazer isso, anote o que você teve que fazer para conseguir. Seria possível fazer de formas diferentes?\n\n\n\n\n\n\n\n\n\n\n\n\n\nEntrega no Campus Virtual\n\n\nTire um print da imagem que você criou no exercício anterior. Você precisará desse print para as atividades de entrega dessa aula!"
+    "text": "A mesma ideia vale para os métodos.\n\nMétodos são definidos na classe do objeto.\nAssim, objetos da mesma classe têm os mesmos métodos.\n\n\nMas, repare que os métodos são chamados nos objetos.\n\nAssim, quando o método moverDireita é chamado para um círculo, é apenas esse círculo que se move."
   },
   {
     "objectID": "cap1-1.html#section-30",
     "href": "cap1-1.html#section-30",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Vamos reforçar os conceitos que aprendemos usando agora um outro exemplo.\n\n\nBaixe o projeto de exemplo disciplina e abra-o no BlueJ.\n\n\n\n\n\n\n\nExercício\n\n\nCrie um objeto da classe Estudante. Veja que agora você precisa fornecer não só o nome do objeto, mas também alguns outros parâmetros.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nCrie alguns objetos da classe Estudante. Chame o método obterNome de cada objeto. Explique o que está acontecendo."
+    "text": "Exercício\n\n\nEscolha uma das imagens abaixo e tente criar uma imagem parecida usando as formas do projeto figuras. Mas seja criativo e utilize cores, posições e tamanhos diferentes. Ao fazer isso, anote o que você teve que fazer para conseguir. Seria possível fazer de formas diferentes?\n\n\n\n\n\n\n\n\n\n\n\n\n\nEntrega no Campus Virtual\n\n\nTire um print da imagem que você criou no exercício anterior. Você precisará desse print para as atividades de entrega dessa aula!"
   },
   {
     "objectID": "cap1-1.html#section-31",
     "href": "cap1-1.html#section-31",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "O método obterNome da classe Estudante tem algo diferente:\n\nEle pode retornar um valor.\n\n\nNós conseguimos saber o tipo do valor retornado pela assinatura do método\n\nString obterNome()\n\n\n\nA palavra String antes do nome do método indica que ele retorna um valor string (texto).\n\n\nAgora repare a assinatura do método mudarNome.\n\nA palavra void indica que o método não retorna nenhum valor.\n\n\nvoid mudarNome(String novoNome)"
+    "text": "Vamos reforçar os conceitos que aprendemos usando agora um outro exemplo.\n\nBaixe o projeto de exemplo disciplina e abra-o no BlueJ.\n\n\n\n\n\n\nExercício\n\n\nCrie um objeto da classe Estudante. Veja que agora você precisa fornecer não só o nome do objeto, mas também alguns outros parâmetros.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nCrie alguns objetos da classe Estudante. Chame o método obterNome de cada objeto. Explique o que está acontecendo."
   },
   {
     "objectID": "cap1-1.html#section-32",
     "href": "cap1-1.html#section-32",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Portanto, podemos obter informações de um objeto através de uma chamada de método.\n\nQuer dizer então que os métodos podem mudar o estado de um objeto e/ou retornar algo sobre seu estado.\n\n\n\n\n\nConceito\n\n\nMétodos podem retornar informação sobre o objeto através de um valor de retorno"
+    "text": "O método obterNome da classe Estudante tem algo diferente:\n\nEle pode retornar um valor.\n\n\nNós conseguimos saber o tipo do valor retornado pela assinatura do método\n\nString obterNome()\n\n\n\nA palavra String antes do nome do método indica que ele retorna um valor string (texto).\n\n\nAgora repare a assinatura do método mudarNome.\n\nA palavra void indica que o método não retorna nenhum valor.\n\n\nvoid mudarNome(String novoNome)"
   },
   {
     "objectID": "cap1-1.html#section-33",
     "href": "cap1-1.html#section-33",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Vamos agora criar um objeto da classe Disciplina no projeto disciplina, chamado poo.\n\nAcesse o método matricularEstudante, o que o método espera como parâmetro?\n\n\n\n\n\n\nExercício\n\n\nCrie três estudantes e matricule-os na disciplina poo. Em seguida, chame o método imprimirLista do objeto poo.\n\n\n\n\n\n\nFazendo o exercício podemos perceber que objetos podem ser passados como parâmetros de métodos de outros objetos.\n\nQuando um método espera um objeto como parâmetro, o tipo do parâmetro é o nome da classe do objeto que deve ser passado."
+    "text": "Portanto, podemos obter informações de um objeto através de uma chamada de método.\n\nQuer dizer então que os métodos podem mudar o estado de um objeto e/ou retornar algo sobre seu estado.\n\n\n\n\n\n\nConceito\n\n\nMétodos podem retornar informação sobre o objeto através de um valor de retorno"
   },
   {
     "objectID": "cap1-1.html#quiz-3",
     "href": "cap1-1.html#quiz-3",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "Quiz",
-    "text": "Quiz\n\nMarque a alternativa incorreta:\n\nObjetos da mesma classe têm os mesmos atributos.\nValores dos atributos são guardados dentro das classes.\nMétodos podem retornar valores.\nObjetos podem ser passados como parâmetros."
+    "text": "Quiz\nMarque a alternativa incorreta:\n\nObjetos da mesma classe têm os mesmos atributos.\nValores dos atributos são guardados dentro das classes.\nMétodos podem retornar valores.\nObjetos podem ser passados como parâmetros."
   },
   {
     "objectID": "cap1-1.html#section-34",
     "href": "cap1-1.html#section-34",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "As aulas teóricas dessa disciplina são no formato ANP (Atividade Não-Presencial).\n\nIsso significa que você precisa estudar o conteúdo da aula à distância.\nE para que você tenha a presença considerada para essa aula, você precisa demonstrar que realmente estudou o conteúdo.\n\nPara essa aula, você terá presença se fizer todos os itens abaixo.\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\n\nResponda, no Campus Virtual, aos quizes presentes nesses slides.\nEnvie o print que tirou no exercício da seção O que tem dentro de um objeto.\nEnvie também o print da tela que aparece no último passo do exercício abaixo.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nUsando o projeto disciplina, crie um objeto para representar a nossa disciplina.\n\nDefina o professor, a sala e o horário das aulas.\nEm seguida, matricule pelo menos dois alunos na disciplina.\n\nUm deles deve ser você, ou seja, deve ter seu nome e número de matrícula).\n\nPor fim, chame o método imprimirLista para o objeto da disciplina."
+    "text": "Vamos agora criar um objeto da classe Disciplina no projeto disciplina, chamado poo.\n\nAcesse o método matricularEstudante, o que o método espera como parâmetro?\n\n\n\n\n\n\nExercício\n\n\nCrie três estudantes e matricule-os na disciplina poo. Em seguida, chame o método imprimirLista do objeto poo.\n\n\n\n\n\n\nFazendo o exercício podemos perceber que objetos podem ser passados como parâmetros de métodos de outros objetos.\n\nQuando um método espera um objeto como parâmetro, o tipo do parâmetro é o nome da classe do objeto que deve ser passado."
   },
   {
     "objectID": "cap1-2.html#sobre-as-aulas-práticas",
@@ -4828,5 +4828,19 @@
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
     "text": "Exercício\n\n\nDESAFIO: as implementações dos métodos reproduzir nas classes Coelho e Raposa são muito similares. A diferença é que um cria objetos do tipo Coelho e o outro do tipo Raposa.\nUsando a mesma ideia adotada para tratar o método podeProcriar, seria possível mover o método reproduzir para a superclasse Animal?\nDica: as regras de substituição polimórfica se aplicam também a valores retornados por métodos da mesma forma que é feita para atribuições e passagens de parâmetros."
+  },
+  {
+    "objectID": "cap1-1.html#section-35",
+    "href": "cap1-1.html#section-35",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "As aulas teóricas dessa disciplina são no formato ANP (Atividade Não-Presencial).\n\nIsso significa que você precisa estudar o conteúdo da aula à distância.\nE para que você tenha a presença considerada para essa aula, você precisa demonstrar que realmente estudou o conteúdo.\n\nPara essa aula, você terá presença se fizer todos os itens do próximo slide."
+  },
+  {
+    "objectID": "cap1-1.html#section-36",
+    "href": "cap1-1.html#section-36",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Entregas no Campus Virtual\n\n\n\nResponda, no Campus Virtual, aos quizes presentes nesses slides.\nEnvie o print que tirou no exercício da seção O que tem dentro de um objeto.\nEnvie também o print da tela que aparece no último passo do exercício abaixo.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nUsando o projeto disciplina, crie um objeto para representar a nossa disciplina.\n\nDefina o professor, a sala e o horário das aulas.\nEm seguida, matricule pelo menos dois alunos na disciplina.\n\nUm deles deve ser você, ou seja, deve ter seu nome e número de matrícula.\n\nPor fim, chame o método imprimirLista para o objeto da disciplina."
   }
 ]
