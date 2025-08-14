@@ -11,10 +11,9 @@ As **aulas práticas são fundamentais** para que consigamos entender os conceit
 
 - E, para conseguirmos acompanhar a aula, é fundamental ter estudado o conteúdo teórico ANP **antes da aula prática**.
 
-Lembre-se também que, como apresentado no Plano de Ensino, [para ter presença]{.alert} na aula prática, **não basta vir à aula**.
+**Não se esqueça de enviar** suas atividades **ao terminar aula** (mesmo que não tiver terminado).
 
-- É necessário entregar, no mínimo, 30% do exercícios propostos até o final da aula.
-- Portanto, **não se esqueça de enviar** suas atividades **ao terminar aula** (mesmo que não tiver terminado).
+- Para que possa terminar em casa.
 
 :::
 
@@ -49,7 +48,7 @@ Baixe o projeto de exemplo [figuras](https://github.com/ufla-ipoo/figuras) e abr
 
 ## {.smaller}
 
-No passo anterior, vimos que criar uma pessoa, exibi-la e fazê-la mover para a direita seria feito da seguinte forma em Java.
+No passo anterior, vimos que o código Java necessário para criar uma pessoa, exibi-la e fazê-la mover para a direita seria o seguinte:
 
 ::: {.doublefontsize}
 ```{.java code-line-numbers="false"}
@@ -84,6 +83,12 @@ Confira se o Bloco de Códigos está sendo exibido no seu BlueJ.
 - Em seguida, digite os comandos necessários para **desenhar uma bandeira do Brasil**.
 :::
 
+:::
+
+##
+
+::: {.callout-important title="Entrega no Campus Virtual"}
+Acesse, no Campus Virtual, a atividade correspondente a essa primeira parte dos exercícios e envie um print do BlueJ mostrando a bandeira do Brasil que você criou.
 :::
 
 # Interação entre Objetos {background-color="#40666e"}
@@ -183,12 +188,16 @@ No código-fonte da classe `Figura`, encontre a parte que realmente desenha a fi
 
 ::: {.callout-note title="Exercício 1.5" icon=false}
 Adicione um segundo sol à figura. Para isso, repare a definição dos atributos no início da classe. Você verá o seguinte código
+
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
 private Quadrado parede;
 private Quadrado janela;
 private Triangulo telhado;
 private Circulo sol;
 ```
+:::
+
 Você precisará adicionar uma linha nesse trecho para o segundo sol. Além disso, faça as alterações necessárias para que ele apareça quando a figura é desenhada.
 :::
 
@@ -214,7 +223,7 @@ Faça com que ela caminhe para a casa **depois** do pôr do sol.
 ##
 
 ::: {.callout-important title="Entrega no Campus Virtual"}
-Acesse, no Campus Virtual, a atividade correspondente a essa primeira parte dos exercícios e envie o código do projeto `casa` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
+Acesse, no Campus Virtual, a atividade correspondente a essa segunda parte dos exercícios e envie o código do projeto `casa` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar).
 :::
 
 ## {.smaller}
@@ -394,15 +403,17 @@ O operador `+` em Java pode ser usado para *concatenar* (juntar) Strings e tamb�
 
 Logo, é possível em Java implementar um código como o apresentado abaixo. Experimente executá-lo no Bloco de Códigos do BlueJ e depois digite somente `frase` para que ele exiba o valor desta variável:
 
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
 int numero = 10;
 String palavra = "nota";
 String frase = palavra + " " + numero;
 ```
 :::
+:::
 
 ## {.smaller}
 
 ::: {.callout-important title="Entrega no Campus Virtual"}
-Acesse, no Campus Virtual, a atividade correspondente a essa segunda parte dos exercícios e envie o código do projeto `nave` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
+Acesse, no Campus Virtual, a atividade correspondente à terceira parte dos exercícios e envie o código do projeto `nave` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
 :::

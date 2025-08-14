@@ -2475,7 +2475,7 @@
     "href": "cap1-2.html#sobre-as-aulas-práticas",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "Sobre as Aulas Práticas",
-    "text": "Sobre as Aulas Práticas\n\nAs aulas práticas são fundamentais para que consigamos entender os conceitos e saber como aplicá-los em um programa real.\n\nE, para conseguirmos acompanhar a aula, é fundamental ter estudado o conteúdo teórico ANP antes da aula prática.\n\nLembre-se também que, como apresentado no Plano de Ensino, para ter presença na aula prática, não basta vir à aula.\n\nÉ necessário entregar, no mínimo, 30% do exercícios propostos até o final da aula.\nPortanto, não se esqueça de enviar suas atividades ao terminar aula (mesmo que não tiver terminado)."
+    "text": "Sobre as Aulas Práticas\n\nAs aulas práticas são fundamentais para que consigamos entender os conceitos e saber como aplicá-los em um programa real.\n\nE, para conseguirmos acompanhar a aula, é fundamental ter estudado o conteúdo teórico ANP antes da aula prática.\n\nNão se esqueça de enviar suas atividades ao terminar aula (mesmo que não tiver terminado).\n\nPara que possa terminar em casa."
   },
   {
     "objectID": "cap1-2.html#section",
@@ -2496,7 +2496,7 @@
     "href": "cap1-2.html#section-2",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "No passo anterior, vimos que criar uma pessoa, exibi-la e fazê-la mover para a direita seria feito da seguinte forma em Java.\n\nPessoa pessoa1 = new Pessoa();\npessoa1.exibir();\npessoa1.moverDireita();\n\n\nPodemos observar que:\n\nQuando criamos um objeto e damos um nome a ele, na verdade estamos armazenando um objeto Pessoa em uma variável.\nChamamos métodos usando o nome da variável, seguido de ., seguido do nome do método, seguido da lista de parâmetros (que pode ser vazia) entre parênteses.\nTodos os comandos em Java terminam com ;."
+    "text": "No passo anterior, vimos que o código Java necessário para criar uma pessoa, exibi-la e fazê-la mover para a direita seria o seguinte:\n\nPessoa pessoa1 = new Pessoa();\npessoa1.exibir();\npessoa1.moverDireita();\n\n\nPodemos observar que:\n\nQuando criamos um objeto e damos um nome a ele, na verdade estamos armazenando um objeto Pessoa em uma variável.\nChamamos métodos usando o nome da variável, seguido de ., seguido do nome do método, seguido da lista de parâmetros (que pode ser vazia) entre parênteses.\nTodos os comandos em Java terminam com ;."
   },
   {
     "objectID": "cap1-2.html#section-3",
@@ -2510,56 +2510,56 @@
     "href": "cap1-2.html#section-4",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 1.3\n\n\n\nBaixe o projeto de exemplo casa e abra-o no BlueJ.\n\nCrie uma instância da classe Figura e chame seu método desenhar. Em seguida, experimente os métodos definirPretoEBranco e definirColorida.\nComo você acha que a classe Figura desenha a figura que aparece?"
+    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa primeira parte dos exercícios e envie um print do BlueJ mostrando a bandeira do Brasil que você criou."
   },
   {
     "objectID": "cap1-2.html#section-5",
     "href": "cap1-2.html#section-5",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Repare que cinco classes do projeto casa são idênticas as do projeto figuras.\n\nMas há uma classe adicional: Figura.\nEssa classe é programada exatamente como você fez no exercício da aula teórica.\n\n\nGeralmente, quando queremos fazer alguma tarefa em Java, nós não fazemos na mão.\n\nNós criamos uma classe que faça a tarefa para nós.\nÉ isso que a classe Figura faz.\n\nA classe Figura é escrita de forma que, quando uma instância é criada, são criados dois objetos Quadrado (para a parede e para a janela), um Triângulo e um Círculo.\nEsses objetos são então exibidos, movidos e têm seu tamanho e cor alterados até a figura ficar como vimos."
+    "text": "Exercício 1.3\n\n\n\nBaixe o projeto de exemplo casa e abra-o no BlueJ.\n\nCrie uma instância da classe Figura e chame seu método desenhar. Em seguida, experimente os métodos definirPretoEBranco e definirColorida.\nComo você acha que a classe Figura desenha a figura que aparece?"
   },
   {
     "objectID": "cap1-2.html#section-6",
     "href": "cap1-2.html#section-6",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "O importante aqui é entendermos que objetos podem criar objetos.\n\nE objetos podem chamar métodos de outros objetos.\nUm programa em Java tem centenas ou milhares de objetos.\n\nO usuário inicia o programa (que geralmente cria o primeiro objeto) e, daí em diante, todos os objetos são criados a partir de outros objetos.\n\n\n\n\n\n\n\nConceito\n\n\nObjetos podem se comunicar chamando métodos uns dos outros.\n\n\n\n\n\n\nMas como podemos escrever a classe para que objetos façam isso?"
+    "text": "Repare que cinco classes do projeto casa são idênticas as do projeto figuras.\n\nMas há uma classe adicional: Figura.\nEssa classe é programada exatamente como você fez no exercício da aula teórica.\n\n\nGeralmente, quando queremos fazer alguma tarefa em Java, nós não fazemos na mão.\n\nNós criamos uma classe que faça a tarefa para nós.\nÉ isso que a classe Figura faz.\n\nA classe Figura é escrita de forma que, quando uma instância é criada, são criados dois objetos Quadrado (para a parede e para a janela), um Triângulo e um Círculo.\nEsses objetos são então exibidos, movidos e têm seu tamanho e cor alterados até a figura ficar como vimos."
   },
   {
     "objectID": "cap1-2.html#section-7",
     "href": "cap1-2.html#section-7",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Cada classe tem um código-fonte associada a ela; é o texto que define os detalhes da classe.\n\nNo BlueJ podemos ver o código de uma classe clicando duas vezes no retângulo da classe no diagrama.\n\n\nO código-fonte de nossas classes é escrito na linguagem Java.\n\nEle define os atributos e métodos que uma classe tem, e o que exatamente acontece quando um método é chamado.\nVeremos isso melhor na próxima aula.\n\n\n\nA maior parte da arte da programação consiste em aprender como escrever essas definições de classes.\n\nPara isso precisamos aprender a usar a linguagem Java (ou, claro, outras linguagens que existem).\n\n\n\n\n\n\n\nConceito\n\n\nO código-fonte de uma classe determina a estrutura e o comportamento (os atributos e métodos) de cada um dos objetos daquela classe."
+    "text": "O importante aqui é entendermos que objetos podem criar objetos.\n\nE objetos podem chamar métodos de outros objetos.\nUm programa em Java tem centenas ou milhares de objetos.\n\nO usuário inicia o programa (que geralmente cria o primeiro objeto) e, daí em diante, todos os objetos são criados a partir de outros objetos.\n\n\n\n\n\n\n\nConceito\n\n\nObjetos podem se comunicar chamando métodos uns dos outros.\n\n\n\n\n\n\nMas como podemos escrever a classe para que objetos façam isso?"
   },
   {
     "objectID": "cap1-2.html#section-8",
     "href": "cap1-2.html#section-8",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "No BlueJ, quando alteramos o código de uma classe e fechamos o editor, o retângulo da classe aparece listrado.\n\nIsso indica que o código foi alterado e precisa ser recompilado.\nVocê pode recompilar uma classe, clicando com o botão direito no retângulo da classe e acessando a opção Compilar.\nOu você pode compilar todas as classes acessando o menu Ferramentas → Compilar (ou o atalho de teclado Ctrl-KCtrl-K)\nQuando recompilamos uma classe, o BlueJ remove quaisquer objetos que tenham sido criados antes."
+    "text": "Cada classe tem um código-fonte associada a ela; é o texto que define os detalhes da classe.\n\nNo BlueJ podemos ver o código de uma classe clicando duas vezes no retângulo da classe no diagrama.\n\n\nO código-fonte de nossas classes é escrito na linguagem Java.\n\nEle define os atributos e métodos que uma classe tem, e o que exatamente acontece quando um método é chamado.\nVeremos isso melhor na próxima aula.\n\n\n\nA maior parte da arte da programação consiste em aprender como escrever essas definições de classes.\n\nPara isso precisamos aprender a usar a linguagem Java (ou, claro, outras linguagens que existem).\n\n\n\n\n\n\n\nConceito\n\n\nO código-fonte de uma classe determina a estrutura e o comportamento (os atributos e métodos) de cada um dos objetos daquela classe."
   },
   {
     "objectID": "cap1-2.html#section-9",
     "href": "cap1-2.html#section-9",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 1.4\n\n\nNo código-fonte da classe Figura, encontre a parte que realmente desenha a figura e o altere de forma que o sol seja azul em vez de amarelo.\n\n\n\n\n\n\n\n\n\nExercício 1.5\n\n\nAdicione um segundo sol à figura. Para isso, repare a definição dos atributos no início da classe. Você verá o seguinte código\nprivate Quadrado parede;\nprivate Quadrado janela;\nprivate Triangulo telhado;\nprivate Circulo sol;\nVocê precisará adicionar uma linha nesse trecho para o segundo sol. Além disso, faça as alterações necessárias para que ele apareça quando a figura é desenhada."
+    "text": "No BlueJ, quando alteramos o código de uma classe e fechamos o editor, o retângulo da classe aparece listrado.\n\nIsso indica que o código foi alterado e precisa ser recompilado.\nVocê pode recompilar uma classe, clicando com o botão direito no retângulo da classe e acessando a opção Compilar.\nOu você pode compilar todas as classes acessando o menu Ferramentas → Compilar (ou o atalho de teclado Ctrl-KCtrl-K)\nQuando recompilamos uma classe, o BlueJ remove quaisquer objetos que tenham sido criados antes."
   },
   {
     "objectID": "cap1-2.html#section-10",
     "href": "cap1-2.html#section-10",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 1.6\n\n\nVamos criar um pôr do sol no nosso projeto. Ou melhor, dois! Altere a classe Figura de forma que, quando uma figura é criada, os dois sóis se ponham automaticamente. Dica: lembre-se que a classe Circulo tem um método moverVerticalLento que você pode usar.\n\n\n\n\n\n\n\n\n\nExercício 1.7\n\n\nFica mais interessante se o pôr do sol for tratado em um método separado. Assim podemos criar a figura e depois começarmos o pôr do sol quando quisermos. Altere o código da classe Figura, criando um método chamado porDoSol e fazendo as alterações necessárias.\n\n\n\n\n\n\n\n\n\n\nExercício 1.8\n\n\nAltere a classe Figura para incluir uma pessoa na cena. Faça com que ela caminhe para a casa depois do pôr do sol."
+    "text": "Exercício 1.4\n\n\nNo código-fonte da classe Figura, encontre a parte que realmente desenha a figura e o altere de forma que o sol seja azul em vez de amarelo.\n\n\n\n\n\n\n\n\n\nExercício 1.5\n\n\nAdicione um segundo sol à figura. Para isso, repare a definição dos atributos no início da classe. Você verá o seguinte código\n\nprivate Quadrado parede;\nprivate Quadrado janela;\nprivate Triangulo telhado;\nprivate Circulo sol;\n\nVocê precisará adicionar uma linha nesse trecho para o segundo sol. Além disso, faça as alterações necessárias para que ele apareça quando a figura é desenhada."
   },
   {
     "objectID": "cap1-2.html#section-11",
     "href": "cap1-2.html#section-11",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa primeira parte dos exercícios e envie o código do projeto casa da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar);"
+    "text": "Exercício 1.6\n\n\nVamos criar um pôr do sol no nosso projeto. Ou melhor, dois! Altere a classe Figura de forma que, quando uma figura é criada, os dois sóis se ponham automaticamente. Dica: lembre-se que a classe Circulo tem um método moverVerticalLento que você pode usar.\n\n\n\n\n\n\n\n\n\nExercício 1.7\n\n\nFica mais interessante se o pôr do sol for tratado em um método separado. Assim podemos criar a figura e depois começarmos o pôr do sol quando quisermos. Altere o código da classe Figura, criando um método chamado porDoSol e fazendo as alterações necessárias.\n\n\n\n\n\n\n\n\n\n\nExercício 1.8\n\n\nAltere a classe Figura para incluir uma pessoa na cena. Faça com que ela caminhe para a casa depois do pôr do sol."
   },
   {
     "objectID": "cap1-2.html#section-13",
@@ -2573,49 +2573,49 @@
     "href": "cap1-2.html#section-14",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 2.1 - Criando objetos para jogar\n\n\n\nEsse é um jogo bem simples, mas que será interessante para reforçarmos mais alguns conceitos de OO.\n\nVeja que existem seis classes no projeto: Nave, Inimigo, Placar, Cenario, Tiro e TesteJogo.\n\nVamos começar conhecendo os objetos envolvidos.\n\nCrie um objeto da classe Nave.\nClique com o botão direito no objeto e veja os métodos disponíveis.\nClique em Inspecionar e veja os atributos do objeto.\n\nFaça o mesmo com as seguintes classes:\n\nInimigo.\nPlacar.\n\nAgora crie um objeto da classe Cenario:\n\nVeja que para criar um cenário, é necessário passar objetos da classe Nave, Inimigo e Placar por parâmetro.\nPasse os objetos criados anteriormente.\nAvalie os métodos e atributos da objeto cenário."
+    "text": "Baixe o projeto de exemplo nave e abra-o no BlueJ."
   },
   {
     "objectID": "cap1-2.html#section-15",
     "href": "cap1-2.html#section-15",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 2.2 - Jogando\n\n\n\nBom, essa é a parte mais divertida…\n\nChame o método executarLoopDeJogo do objeto da classe Cenario.\n\nA dinâmica do jogo é simples.\n\nVocê controla a nave da esquerda usando as setas do teclado.\nE pode atirar digitando a tecla CtrlCtrl.\nA tecla ENTERENTER pausa o jogo.\nO inimigo se move aleatoriamente na vertical e também atira aleatoriamente.\nSeu objetivo é destruir o maior número de inimigos possível sem ser morto.\nVocê ganha 50 pontos a cada inimigo morto.\nSe você morrer, você pode reiniciar o jogo apertando a tecla F2F2.\n\nJogue um pouco e veja quantos pontos consegue alcançar:\n\nMas não se esqueça de continuar os exercícios ☺"
+    "text": "Exercício 2.1 - Criando objetos para jogar\n\n\n\nEsse é um jogo bem simples, mas que será interessante para reforçarmos mais alguns conceitos de OO.\n\nVeja que existem seis classes no projeto: Nave, Inimigo, Placar, Cenario, Tiro e TesteJogo.\n\nVamos começar conhecendo os objetos envolvidos.\n\nCrie um objeto da classe Nave.\nClique com o botão direito no objeto e veja os métodos disponíveis.\nClique em Inspecionar e veja os atributos do objeto.\n\nFaça o mesmo com as seguintes classes:\n\nInimigo.\nPlacar.\n\nAgora crie um objeto da classe Cenario:\n\nVeja que para criar um cenário, é necessário passar objetos da classe Nave, Inimigo e Placar por parâmetro.\nPasse os objetos criados anteriormente.\nAvalie os métodos e atributos da objeto cenário."
   },
   {
     "objectID": "cap1-2.html#section-16",
     "href": "cap1-2.html#section-16",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 2.3 - Conhecendo as classes\n\n\n\nNesse passo, vamos dar uma passada de olhos no código das classes do jogo.\n\nNão se preocupe em entender detalhes do código nesse momento.\nApenas tente identificar os atributos e métodos que existem no código-fonte das classes Nave, Inimigo e Placar.\nDê uma olhada com mais detalhes no método atirar da classe Nave e tente entender o que ele faz.\n\nObs.: a classe Cenario é bem complexa porque usa conceitos avançados, portanto, pode ignorá-la. Mas se estiver curioso, fique à vontade.\n\n\n\n\n\n\n\n\n\n\nExercício 2.4 - A Classe TesteJogo\n\n\n\nAbra o código da classe TesteJogo.\n\nRepare que ela possui uma nave, um inimigo, um placar e um cenário.\nEla cria esses objetos e chama o método executarLoopDeJogo da classe Cenario.\nMas isso é exatamente o que fizemos para iniciar o jogo.\n\nOu seja, essa classe é um atalho para inicializarmos o jogo mais rápido.\n\nBasta criar um objeto dessa classe que o jogo será executado.\n\nExperimente!"
+    "text": "Exercício 2.2 - Jogando\n\n\n\nBom, essa é a parte mais divertida…\n\nChame o método executarLoopDeJogo do objeto da classe Cenario.\n\nA dinâmica do jogo é simples.\n\nVocê controla a nave da esquerda usando as setas do teclado.\nE pode atirar digitando a tecla CtrlCtrl.\nA tecla ENTERENTER pausa o jogo.\nO inimigo se move aleatoriamente na vertical e também atira aleatoriamente.\nSeu objetivo é destruir o maior número de inimigos possível sem ser morto.\nVocê ganha 50 pontos a cada inimigo morto.\nSe você morrer, você pode reiniciar o jogo apertando a tecla F2F2.\n\nJogue um pouco e veja quantos pontos consegue alcançar:\n\nMas não se esqueça de continuar os exercícios ☺"
   },
   {
     "objectID": "cap1-2.html#section-17",
     "href": "cap1-2.html#section-17",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 2.5 - Alterando o Código\n\n\n\nA classe Nave possui um método chamado getTextoExibicao.\n\nRepare que atualmente ele retorna uma string vazia.\nColoque algum texto na String e inicie o jogo pra ver o que acontece.\nDica: use um objeto da classe TesteJogo.\n\nVocê viu que o texto aparece ao lado da nave. Vamos aproveitar esse fato então para criar um atributo novo na classe Nave para guardar o nome da nave.\n\nCrie então um atributo do tipo String chamado nome.\nAvalie onde seria possível iniciar o atributo nome e coloque um nome bem criativo para a sua nave.\nPor fim, altere o método getTextoExibicao para que ele exiba o valor do atributo nome.\n\nVale ressaltar que o nome será definido diretamente no código.\n\nPortanto, se você quiser usar um nome diferente, será necessário alterar o código, recompilar e executar o jogo novamente.\n\nTeste suas alterações."
+    "text": "Exercício 2.3 - Conhecendo as classes\n\n\n\nNesse passo, vamos dar uma passada de olhos no código das classes do jogo.\n\nNão se preocupe em entender detalhes do código nesse momento.\nApenas tente identificar os atributos e métodos que existem no código-fonte das classes Nave, Inimigo e Placar.\nDê uma olhada com mais detalhes no método atirar da classe Nave e tente entender o que ele faz.\n\nObs.: a classe Cenario é bem complexa porque usa conceitos avançados, portanto, pode ignorá-la. Mas se estiver curioso, fique à vontade.\n\n\n\n\n\n\n\n\n\n\nExercício 2.4 - A Classe TesteJogo\n\n\n\nAbra o código da classe TesteJogo.\n\nRepare que ela possui uma nave, um inimigo, um placar e um cenário.\nEla cria esses objetos e chama o método executarLoopDeJogo da classe Cenario.\nMas isso é exatamente o que fizemos para iniciar o jogo.\n\nOu seja, essa classe é um atalho para inicializarmos o jogo mais rápido.\n\nBasta criar um objeto dessa classe que o jogo será executado.\n\nExperimente!"
   },
   {
     "objectID": "cap1-2.html#section-18",
     "href": "cap1-2.html#section-18",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 2.6 - Melhorando a Nave\n\n\n\nA nave atualmente é muito fraca certo?\n\nCom apenas um tiro ela morre!\nE que tal se ela tivesse uma campo magnético de proteção contra tiros?\nAssim, quando ela tomar um tiro ela perde parte da proteção, mas só morre se o campo não for forte o suficiente para proteger a nave.\n\nAltere a classe Nave de forma que ela passe a ter o campo de proteção.\n\nCrie um atributo nivelDeProtecao.\nAvalie em qual método ele deve ser inicializado e faça com que a nave sempre comece o jogo com nível 100 de proteção.\nQuando a nave tomar um tiro, ela deve perder 20 pontos do seu campo de proteção.\n\nQual parte do código deve ser alterada para que a nave não morra com um único tiro, mas sim perca a proteção primeiro?\nLembre-se de que a nave deve morrer se tomar um tiro e o seu campo de proteção estiver abaixo de 20.\nLembre-se ainda, que ao reiniciar o jogo (usando a tecla F2F2), a nave deve voltar a ter nível 100 de proteção.\n\nFaça a alteração nos métodos necessários.\n\nJogue e teste o campo magnético de proteção da nave."
+    "text": "Exercício 2.5 - Alterando o Código\n\n\n\nA classe Nave possui um método chamado getTextoExibicao.\n\nRepare que atualmente ele retorna uma string vazia.\nColoque algum texto na String e inicie o jogo pra ver o que acontece.\nDica: use um objeto da classe TesteJogo.\n\nVocê viu que o texto aparece ao lado da nave. Vamos aproveitar esse fato então para criar um atributo novo na classe Nave para guardar o nome da nave.\n\nCrie então um atributo do tipo String chamado nome.\nAvalie onde seria possível iniciar o atributo nome e coloque um nome bem criativo para a sua nave.\nPor fim, altere o método getTextoExibicao para que ele exiba o valor do atributo nome.\n\nVale ressaltar que o nome será definido diretamente no código.\n\nPortanto, se você quiser usar um nome diferente, será necessário alterar o código, recompilar e executar o jogo novamente.\n\nTeste suas alterações."
   },
   {
     "objectID": "cap1-2.html#section-19",
     "href": "cap1-2.html#section-19",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 2.7 - Melhorando a usabilidade\n\n\n\nBom, foi bacana nossa nave ter ficado mais forte.\n\nMas quem está jogando não sabe qual o nível de proteção atual da nave!\n\nAltere o método getTextoExibicao para exibir o nível do campo de proteção.\n\nExiba, na frente do nome da nave, o nível de proteção da nave.\n\nJogue novamente e teste a alteração.\n\nAgora ficou bem melhor, não ficou?\n\n\n\n\n\n\n\n\n\n\n\n\n\nDica\n\n\nO operador + em Java pode ser usado para concatenar (juntar) Strings e também Strings com outros tipos de dados. A linguagem converte automaticamente números para strings, por exemplo.\nLogo, é possível em Java implementar um código como o apresentado abaixo. Experimente executá-lo no Bloco de Códigos do BlueJ e depois digite somente frase para que ele exiba o valor desta variável:\nint numero = 10;\nString palavra = \"nota\";\nString frase = palavra + \" \" + numero;"
+    "text": "Exercício 2.6 - Melhorando a Nave\n\n\n\nA nave atualmente é muito fraca certo?\n\nCom apenas um tiro ela morre!\nE que tal se ela tivesse uma campo magnético de proteção contra tiros?\nAssim, quando ela tomar um tiro ela perde parte da proteção, mas só morre se o campo não for forte o suficiente para proteger a nave.\n\nAltere a classe Nave de forma que ela passe a ter o campo de proteção.\n\nCrie um atributo nivelDeProtecao.\nAvalie em qual método ele deve ser inicializado e faça com que a nave sempre comece o jogo com nível 100 de proteção.\nQuando a nave tomar um tiro, ela deve perder 20 pontos do seu campo de proteção.\n\nQual parte do código deve ser alterada para que a nave não morra com um único tiro, mas sim perca a proteção primeiro?\nLembre-se de que a nave deve morrer se tomar um tiro e o seu campo de proteção estiver abaixo de 20.\nLembre-se ainda, que ao reiniciar o jogo (usando a tecla F2F2), a nave deve voltar a ter nível 100 de proteção.\n\nFaça a alteração nos métodos necessários.\n\nJogue e teste o campo magnético de proteção da nave."
   },
   {
     "objectID": "cap1-2.html#section-20",
     "href": "cap1-2.html#section-20",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa segunda parte dos exercícios e envie o código do projeto nave da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar);"
+    "text": "Exercício 2.7 - Melhorando a usabilidade\n\n\n\nBom, foi bacana nossa nave ter ficado mais forte.\n\nMas quem está jogando não sabe qual o nível de proteção atual da nave!\n\nAltere o método getTextoExibicao para exibir o nível do campo de proteção.\n\nExiba, na frente do nome da nave, o nível de proteção da nave.\n\nJogue novamente e teste a alteração.\n\nAgora ficou bem melhor, não ficou?\n\n\n\n\n\n\n\n\n\n\n\n\n\nDica\n\n\nO operador + em Java pode ser usado para concatenar (juntar) Strings e também Strings com outros tipos de dados. A linguagem converte automaticamente números para strings, por exemplo.\nLogo, é possível em Java implementar um código como o apresentado abaixo. Experimente executá-lo no Bloco de Códigos do BlueJ e depois digite somente frase para que ele exiba o valor desta variável:\n\nint numero = 10;\nString palavra = \"nota\";\nString frase = palavra + \" \" + numero;"
   },
   {
     "objectID": "cap2-2.html#sobre-as-aulas-práticas",
@@ -4828,5 +4828,19 @@
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
     "text": "Exercício\n\n\nDESAFIO: as implementações dos métodos reproduzir nas classes Coelho e Raposa são muito similares. A diferença é que um cria objetos do tipo Coelho e o outro do tipo Raposa.\nUsando a mesma ideia adotada para tratar o método podeProcriar, seria possível mover o método reproduzir para a superclasse Animal?\nDica: as regras de substituição polimórfica se aplicam também a valores retornados por métodos da mesma forma que é feita para atribuições e passagens de parâmetros."
+  },
+  {
+    "objectID": "cap1-2.html#section-12",
+    "href": "cap1-2.html#section-12",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa segunda parte dos exercícios e envie o código do projeto casa da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar)."
+  },
+  {
+    "objectID": "cap1-2.html#section-21",
+    "href": "cap1-2.html#section-21",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa segunda parte dos exercícios e envie o código do projeto nave da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar);"
   }
 ]
