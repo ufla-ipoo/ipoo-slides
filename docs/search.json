@@ -1810,28 +1810,28 @@
     "href": "cap2-1.html#section-2",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nCrie um objeto MaquinaIngressos e verifique os métodos disponíveis. Chame o método obterPreco e confira o preço do ingresso. Em seguida, insira uma quantia de dinheiro menor que o preço do ingresso usando o método inserirDinheiro e confira o saldo usando o método obterSaldo. Insira mais dinheiro até ter a quantidade exata necessária para comprar o ingresso, e então chame o método imprimirIngresso.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nQual é o saldo da máquina depois que você compra um ingresso?\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente inserir quantidades diferentes de dinheiro antes de imprimir um ingresso. Você percebeu alguma coisa estranha? Quando você insere muito dinheiro, você recebe o troco? O que acontece se você não colocar dinheiro suficiente e tentar imprimir um ingresso?\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nTente entender bem o funcionamento da máquina interagindo com o objeto no BlueJ antes de ver o código na próxima seção. Crie outra máquina que tenha ingressos de preço diferente e compre um ingresso dessa máquina. A impressão do bilhete é diferente?"
+    "text": "Exercício\n\n\nCrie um objeto MaquinaIngressos e verifique os métodos disponíveis. Chame o método obterPreco e confira o preço do ingresso. Em seguida, insira uma quantia de dinheiro menor que o preço do ingresso usando o método inserirDinheiro e confira o saldo usando o método obterSaldo. Insira mais dinheiro até ter a quantidade exata necessária para comprar o ingresso, e então chame o método imprimirIngresso.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nQual é o saldo da máquina depois que você compra um ingresso?"
   },
   {
     "objectID": "cap2-1.html#section-3",
     "href": "cap2-1.html#section-3",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Nos exercícios vimos que a máquina só funciona como deveria se inserirmos a quantidade exata de dinheiro para comprar um ingresso.\n\nVamos examinar os detalhes da classe e entender porque isso está acontecendo.\n\n\nDê uma olhada no código da classe MaquinaIngressos, clicando duas vezes na classe no diagrama do BlueJ.\n\nAvaliando o código podemos identificar alguns dos conceitos de OO que vimos no capítulo 1.\nA classe tem muitas funcionalidades do Java que veremos várias vezes, portanto, avalie o código cuidadosamente."
+    "text": "Exercício\n\n\nExperimente inserir quantidades diferentes de dinheiro antes de imprimir um ingresso. Você percebeu alguma coisa estranha? Quando você insere muito dinheiro, você recebe o troco? O que acontece se você não colocar dinheiro suficiente e tentar imprimir um ingresso?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nTente entender bem o funcionamento da máquina interagindo com o objeto no BlueJ antes de ver o código na próxima seção. Crie outra máquina que tenha ingressos de preço diferente e compre um ingresso dessa máquina. A impressão do bilhete é diferente?"
   },
   {
     "objectID": "cap2-1.html#section-4",
     "href": "cap2-1.html#section-4",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Podemos dividir o código da classe em duas partes principais.\n\nUma pequena parte externa que dá nome à classe (aparece com fundo verde no BlueJ).\nE uma parte interna muito maior que faz todo o trabalho.\n\n\nA parte externa tem o seguindo trecho de código\n\npublic class MaquinaIngressos\n{\n  // Parte interna da classe omitida\n}\n\n\n\nA parte externa de todas as classe se parecem muito, já que o objetivo é nomear a classe.\n\nPor convenção, sempre começamos o nome da classe com letra maiúscula.\nNo BlueJ, vemos que antes dessa linha há um texto azul que nos diz alguma coisa sobre a classe."
+    "text": "Nos exercícios vimos que a máquina só funciona como deveria se inserirmos a quantidade exata de dinheiro para comprar um ingresso.\n\nVamos examinar os detalhes da classe e entender porque isso está acontecendo.\n\n\nDê uma olhada no código da classe MaquinaIngressos, clicando duas vezes na classe no diagrama do BlueJ.\n\nAvaliando o código podemos identificar alguns dos conceitos de OO que vimos no capítulo 1.\nA classe tem muitas funcionalidades do Java que veremos várias vezes, portanto, avalie o código cuidadosamente."
   },
   {
     "objectID": "cap2-1.html#section-5",
     "href": "cap2-1.html#section-5",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nEscreva como você acha que seria a parte externa das classes Estudante e Disciplina. Não se preocupe com a parte interna.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nFaz diferença escrever public class MaquinaIngressos ou class public MaquinaIngressos?\nFaça essa alteração no código, feche o editor e observe a mudança no diagrama. Clique no botão Compilar. Que mensagem de erro aparece? Ela explica claramente o que tem de errado?\nVolte o código para como estava antes e compile novamente (confira se não aparece mais a mensagem de erro).\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nVerifique se é possível remover a palavra public da parte externa da classe MaquinaIngressos (compile o código).\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nColoque a palavra public de volta e agora tente remover a palavra class e tente compilar de novo.\nVolte o código original para continuar a aula."
+    "text": "Podemos dividir o código da classe em duas partes principais.\n\nUma pequena parte externa que dá nome à classe (aparece com fundo verde no BlueJ).\nE uma parte interna muito maior que faz todo o trabalho.\n\n\nA parte externa tem o seguindo trecho de código\n\npublic class MaquinaIngressos\n{\n  // Parte interna da classe omitida\n}\n\n\n\nA parte externa de todas as classe se parecem muito, já que o objetivo é nomear a classe.\n\nPor convenção, sempre começamos o nome da classe com letra maiúscula.\nNo BlueJ, vemos que antes dessa linha há um texto azul que nos diz alguma coisa sobre a classe."
   },
   {
     "objectID": "cap2-1.html#palavras-chave",
@@ -1852,77 +1852,77 @@
     "href": "cap2-1.html#section-6",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "A linguagem Java permite que os atributos, construtores e métodos sejam colocados em qualquer ordem dentro de uma classe.\n\nMas, geralmente, nós colocamos primeiro os atributos, depois os construtores e depois os métodos.\n\npublic class NomeDaClasse\n{\n  // Atributos\n\n  // Construtores\n\n  // Métodos\n}\n\n\n\nVocê não é obrigado a seguir isso, mas deixa seu código mais claro.\n\nEspecialmente declarar todos os atributos primeiro."
+    "text": "Exercício\n\n\nEscreva como você acha que seria a parte externa das classes Estudante e Disciplina. Não se preocupe com a parte interna.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nFaz diferença escrever public class MaquinaIngressos ou class public MaquinaIngressos?\nFaça essa alteração no código, feche o editor e observe a mudança no diagrama. Clique no botão Compilar. Que mensagem de erro aparece? Ela explica claramente o que tem de errado?\nVolte o código para como estava antes e compile novamente (confira se não aparece mais a mensagem de erro)."
   },
   {
     "objectID": "cap2-1.html#section-7",
     "href": "cap2-1.html#section-7",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nSabendo a ordem que os atributos, métodos e construtores são geralmente implementados em uma classe, avalie o código da classe MaquinaIngressos e faça uma tabela com três colunas. Na primeira coloque os nomes dos atributos, na segunda os nomes dos construtores e, na terceira, os métodos. Dica: a classe tem apenas um construtor.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nA assinatura do construtor tem duas características que são diferentes dos métodos. Você consegue descobrir quais são?"
+    "text": "Exercício\n\n\nVerifique se é possível remover a palavra public da parte externa da classe MaquinaIngressos (compile o código).\n\n\n\n\n\n\n\n\n\nExercício\n\n\nColoque a palavra public de volta e agora tente remover a palavra class e tente compilar de novo.\nVolte o código original para continuar a aula."
   },
   {
     "objectID": "cap2-1.html#section-8",
     "href": "cap2-1.html#section-8",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Atributos guardam dados dentro de um objeto.\n\nAtributos também são chamados de variáveis de instância.\n\nO nome variável é usado para coisas que são armazenadas na memória do computador por um programa.\n\n\n\n\n\npublic class MaquinaIngressos\n{\n  private int preco;\n  private int saldo;\n  private int total;\n\n    // Construtores e métodos omitidos\n}\n\nA classe MaquinaIngressos, por exemplo, tem três atributos:\n\npreco: guarda o valor fixo de cada ingresso.\nsaldo: guarda a quantidade de dinheiro inserida na máquina por um usuário antes dele pedir para imprimir um ingresso.\ntotal: guarda o total de dinheiro inserido na máquina por todos os usuários, desde que ela foi construída (sem contar o saldo atual)."
+    "text": "A linguagem Java permite que os atributos, construtores e métodos sejam colocados em qualquer ordem dentro de uma classe.\n\nMas, geralmente, nós colocamos primeiro os atributos, depois os construtores e depois os métodos.\n\npublic class NomeDaClasse\n{\n  // Atributos\n\n  // Construtores\n\n  // Métodos\n}\n\n\n\nVocê não é obrigado a seguir isso, mas deixa seu código mais claro.\n\nEspecialmente declarar todos os atributos primeiro."
   },
   {
     "objectID": "cap2-1.html#section-9",
     "href": "cap2-1.html#section-9",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Atributos (ou campos) descrevem características dos objetos.\n\n\n\n\nComo você descreveria essa bola, por exemplo?\n\nDizendo de outra forma, como contaria como ela é para alguém que não está vendo a bola?\nVocê poderia descrevê-la, informando:\n\nA cor, o tamanho, o tipo, etc.\n\n\n\n\n\n\n\n\n\nE quais seriam as características de um jogador em um jogo de videogame de futebol?\n\nPoderiam ser: nome, nacionalidade, altura, velocidade, agilidade, etc.\n\n\n\n\n\n\nNós chamamos essas características dos objetos de atributos."
+    "text": "Exercício\n\n\nSabendo a ordem que os atributos, métodos e construtores são geralmente implementados em uma classe, avalie o código da classe MaquinaIngressos e faça uma tabela com três colunas. Na primeira coloque os nomes dos atributos, na segunda os nomes dos construtores e, na terceira, os métodos. Dica: a classe tem apenas um construtor.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nA assinatura do construtor tem duas características que são diferentes dos métodos. Você consegue descobrir quais são?"
   },
   {
     "objectID": "cap2-1.html#section-10",
     "href": "cap2-1.html#section-10",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Atributos podem representar coisas mais palpáveis ou coisas mais abstratas.\n\n\n\n\nDada a imagem acima, por exemplo, quais seriam os atributos físicos de cada pessoa?\n\nCor dos olhos.\nEstilo de roupa.\nAltura.\nEtc.\n\n\n\nE quais seriam características mais abstratas?\n\nInteligência.\nHumor.\nBeleza.\nEtc."
+    "text": "Atributos guardam dados dentro de um objeto.\n\nAtributos também são chamados de variáveis de instância.\n\nO nome variável é usado para coisas que são armazenadas na memória do computador por um programa.\n\n\n\n\n\n\npublic class MaquinaIngressos\n{\n  private int preco;\n  private int saldo;\n  private int total;\n\n    // Construtores e métodos omitidos\n}\n\n\nA classe MaquinaIngressos, por exemplo, tem três atributos:\n\npreco: guarda o valor fixo de cada ingresso.\nsaldo: guarda a quantidade de dinheiro inserida na máquina por um usuário antes dele pedir para imprimir um ingresso.\ntotal: guarda o total de dinheiro inserido na máquina por todos os usuários, desde que ela foi construída (sem contar o saldo atual)."
   },
   {
     "objectID": "cap2-1.html#section-11",
     "href": "cap2-1.html#section-11",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Atributos são pequenos espaços dentro de um objeto que podem ser usados para guardar dados de forma permanente.\n\nCada objeto terá espaço para cada atributo declarado na classe.\n\n\n\n\nPodemos representar um objeto como mostrado na figura ao lado.\n\nCada atributo tem um espaço para guardar um valor quando o objeto for criado.\n\n\n\n\n\n\n\n\n\n\nConceito\n\n\nAtributos guardam dados para um objeto usar. Eles também são chamados de variáveis de instância."
+    "text": "Atributos (ou campos) descrevem características dos objetos.\n\n\n\n\nComo você descreveria essa bola, por exemplo?\n\nDizendo de outra forma, como contaria como ela é para alguém que não está vendo a bola?\nVocê poderia descrevê-la, informando:\n\nA cor, o tamanho, o tipo, etc.\n\n\n\n\n\n\n\n\n\nE quais seriam as características de um jogador em um jogo de videogame de futebol?\n\nPoderiam ser: nome, nacionalidade, altura, velocidade, agilidade, etc.\n\n\n\n\n\n\nNós chamamos essas características dos objetos de atributos."
   },
   {
     "objectID": "cap2-1.html#section-12",
     "href": "cap2-1.html#section-12",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Cada atributo tem sua própria declaração no código-fonte.\n\nE na linha acima de cada declaração acrescentamos uma linha de texto: o comentário.\n\n\n  // O preço de um ingresso desta máquina\n  private int preco;\n\n\nAssim como em C++, comentários de uma única linha começam com //.\n\nComentários de várias linhas podem começar com /* e terminar com */.\n\nVeja, como exemplo, os comentários antes do cabeçalho da classe MaquinaIngressos.\n\n\n\n\n\n\n\n\nConceito\n\n\nComentários são inseridos em uma classe para explicar o código para leitores humanos. Eles não alteram nada no funcionamento da classe."
+    "text": "Atributos podem representar coisas mais palpáveis ou coisas mais abstratas.\n\n\n\n\nDada a imagem acima, por exemplo, quais seriam os atributos físicos de cada pessoa?\n\nCor dos olhos.\nEstilo de roupa.\nAltura.\nEtc.\n\n\n\nE quais seriam características mais abstratas?\n\nInteligência.\nHumor.\nBeleza.\nEtc."
   },
   {
     "objectID": "cap2-1.html#section-13",
     "href": "cap2-1.html#section-13",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "As declarações dos atributos da classe MaquinaIngressos são todas bem similares.\n\nTodas elas indicam que os campos são privados do objeto.\n\nVamos entender melhor o que isso significa ao estudarmos o Capítulo 6.\nPor enquanto, basta sabermos que os atributos devem sempre ser definidos como privados.\n\nOs três atributos são do tipo int.\n\nint é uma palavra-chave do Java e indica que os atributos podem guardar valores que são números inteiros.\nComo nossa máquina guarda os valores em centavos, o tipo inteiro é apropriado."
+    "text": "Atributos são pequenos espaços dentro de um objeto que podem ser usados para guardar dados de forma permanente.\n\nCada objeto terá espaço para cada atributo declarado na classe.\n\n\n\n\nPodemos representar um objeto como mostrado na figura ao lado.\n\nCada atributo tem um espaço para guardar um valor quando o objeto for criado.\n\n\n\n\n\n\n\n\n\n\nConceito\n\n\nAtributos guardam dados para um objeto usar. Eles também são chamados de variáveis de instância."
   },
   {
     "objectID": "cap2-1.html#section-14",
     "href": "cap2-1.html#section-14",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Atributos podem armazenar valores que mudam com o tempo.\n\nPor isso, eles também são chamados de variáveis.\nO atributo saldo, por exemplo, é alterado sempre que o usuário insere dinheiro ou imprime um ingresso.\nPodemos ter atributos que mudam muito, como saldo e total,\n\ne atributos que não variam depois de inicializados, como o preco.\n\nMais adiante veremos que existem outros tipos de váriaveis, com a mesma ideia de que são dados armazenados no computador."
+    "text": "Cada atributo tem sua própria declaração no código-fonte.\n\nE na linha acima de cada declaração acrescentamos uma linha de texto: o comentário.\n\n\n  // O preço de um ingresso desta máquina\n  private int preco;\n\n\nAssim como em C++, comentários de uma única linha começam com //.\n\nComentários de várias linhas podem começar com /* e terminar com */.\n\nVeja, como exemplo, os comentários antes do cabeçalho da classe MaquinaIngressos.\n\n\n\n\n\n\n\n\nConceito\n\n\nComentários são inseridos em uma classe para explicar o código para leitores humanos. Eles não alteram nada no funcionamento da classe."
   },
   {
     "objectID": "cap2-1.html#section-15",
     "href": "cap2-1.html#section-15",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nQual é o tipo de cada um dos atributos abaixo?\n  private int contador;\n  private Estudante monitor;\n  private Computador notebook;\n\n\n\n\n\n\n\n\n\nExercício\n\n\nQual é o nome de cada um dos atributos abaixo?\n  private boolean vivo;\n  private Pessoa professor;\n  private Jogo jogo;\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nRepare os tipos dos atributos nos dois exercícios anteriores. Pelo que você sabe das convenções de nomes de classes, quais tipos você acha que são classes?\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nSerá que a ordem das palavras na declaração de um atributo fazem diferença? A classe MaquinaIngressos tem a seguinte declaração: private int preco;. Experimente mudar a ordem, fechar o editor e ver como a classe fica no diagrama. Tente compilar a classe e avalie a mensagem de erro que aparece. Obs.: não se esqueça de voltar a declaração original."
+    "text": "As declarações dos atributos da classe MaquinaIngressos são todas bem similares.\n\nTodas elas indicam que os campos são privados do objeto.\n\nVamos entender melhor o que isso significa ao estudarmos o Capítulo 6.\nPor enquanto, basta sabermos que os atributos devem sempre ser definidos como privados.\n\nOs três atributos são do tipo int.\n\nint é uma palavra-chave do Java e indica que os atributos podem guardar valores que são números inteiros.\nComo nossa máquina guarda os valores em centavos, o tipo inteiro é apropriado."
   },
   {
     "objectID": "cap2-1.html#section-16",
     "href": "cap2-1.html#section-16",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nÉ muito interessante quando aprendemos as coisas pela experimentação, em vez de decorar uma regra. Será que, em Java, as declarações dos atributos precisam sempre terminar com ponto-e-vírgula? Experimente você mesmo e descubra!\n\n\n\n\n\n\n\n\n\nExercício\n\n\nEscreva a declaração completa de um atributo do tipo int chamado situacao."
+    "text": "Atributos podem armazenar valores que mudam com o tempo.\n\nPor isso, eles também são chamados de variáveis.\nO atributo saldo, por exemplo, é alterado sempre que o usuário insere dinheiro ou imprime um ingresso.\nPodemos ter atributos que mudam muito, como saldo e total,\n\ne atributos que não variam depois de inicializados, como o preco.\n\nMais adiante veremos que existem outros tipos de váriaveis, com a mesma ideia de que são dados armazenados no computador."
   },
   {
     "objectID": "cap2-1.html#quiz-2.1",
@@ -1936,35 +1936,35 @@
     "href": "cap2-1.html#section-17",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Construtores têm um papel especial.\n\nSão responsáveis por garantir que um objeto seja configurado adequadamente quando é criado.\nOu seja, garantir que esteja pronto para ser usado logo após a criação.\nNós também costumamos chamar isso de inicialização.\n\n\nDepois que o objeto é criado, o construtor não tem mais utilidade para aquele objeto específico.\n\nPortanto, não podemos chamar o construtor para um objeto já criado.\n\n\n\n\n\nAbaixo está o código do construtor da classe MaquinaIngressos.\n  /**\n   * Cria uma máquina que emite ingressos de um dado preço.\n   * Note que o preço deve ser maior que zero, e não tem\n   * nenhuma verificação para garantir isso.\n   */\n  public MaquinaIngressos(int custoIngresso)\n  {\n      preco = custoIngresso;\n      saldo = 0;\n      total = 0;\n  }"
+    "text": "Exercício\n\n\nQual é o tipo de cada um dos atributos abaixo?\n\n  private int contador;\n  private Estudante monitor;\n  private Computador notebook;\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nQual é o nome de cada um dos atributos abaixo?\n\n  private boolean vivo;\n  private Pessoa professor;\n  private Jogo jogo;\n\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nRepare os tipos dos atributos nos dois exercícios anteriores. Pelo que você sabe das convenções de nomes de classes, quais tipos você acha que são classes?"
   },
   {
     "objectID": "cap2-1.html#section-18",
     "href": "cap2-1.html#section-18",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Em Java, construtores têm o mesmo nome da classe.\n\nVeja que o construtor da classe MaquinaIngressos se chama: MaquinaIngressos.\nGeralmente usamos a palavra-chave public antes do nome do construtor.\nE construtores não têm tipo de retorno.\n\n\nExiste uma relação direta entre o que acontece no corpo de um construtor e os atributos da classe.\n\nIsso porque a principal responsabilidade do construtor é inicializar os atributos.\nObs.: corpo de um construtor ou de um método é o bloco de código que contém sua implementação. Ou seja, é tudo que tem entre { e } logo após a assinatura.\nAtributos podem ser inicializados com constantes.\n\nComo é o caso do saldo e total que são inicializados com zero.\n\nOu podem ser inicializados por valores determinados externamente à classe.\n\nE que são passados para o construtor por parâmetro.\nComo é o caso do atributo preco."
+    "text": "Exercício\n\n\nSerá que a ordem das palavras na declaração de um atributo fazem diferença? A classe MaquinaIngressos tem a seguinte declaração: private int preco;. Experimente mudar a ordem, fechar o editor e ver como a classe fica no diagrama. Tente compilar a classe e avalie a mensagem de erro que aparece. Obs.: não se esqueça de voltar a declaração original.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nÉ muito interessante quando aprendemos as coisas pela experimentação, em vez de decorar uma regra. Será que, em Java, as declarações dos atributos precisam sempre terminar com ponto-e-vírgula? Experimente você mesmo e descubra!\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nEscreva a declaração completa de um atributo do tipo int chamado situacao."
   },
   {
     "objectID": "cap2-1.html#section-19",
     "href": "cap2-1.html#section-19",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "A questão é que podem ser criadas várias máquinas (instâncias) a partir da classe MaquinaIngressos.\n\nE cada máquina pode trabalhar com ingressos de preços diferentes.\nPortanto, não temos como saber o preço do ingresso de uma máquina específica, até que ela seja criada.\n\n\n\n\nPortanto, uma das principais funções de um atributo é “lembrar” de informações externas passadas para o objeto.\n\nDe forma que a informação continue disponível durante todo o tempo de vida do objeto.\nAssim, atributos servem para guardar informações que duram (são mantidas) por um tempo maior.\n\n\n\n\n\n\n\nConceito\n\n\nConstrutores permitem que cada objeto seja configurado adequadamente quando é criado."
+    "text": "Construtores têm um papel especial.\n\nSão responsáveis por garantir que um objeto seja configurado adequadamente quando é criado.\nOu seja, garantir que esteja pronto para ser usado logo após a criação.\nNós também costumamos chamar isso de inicialização.\n\n\nDepois que o objeto é criado, o construtor não tem mais utilidade para aquele objeto específico.\n\nPortanto, não podemos chamar o construtor para um objeto já criado."
   },
   {
     "objectID": "cap2-1.html#section-20",
     "href": "cap2-1.html#section-20",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "No diagrama ao lado, vemos a representação de um objeto máquina de ingressos, depois que o construtor é chamado.\n\nPodemos ver que ela foi criada com um preço de ingresso de 500 (R$ 5,00)."
+    "text": "Abaixo está o código do construtor da classe MaquinaIngressos.\n\n  /**\n   * Cria uma máquina que emite ingressos de um dado\n   * preço. Note que o preço deve ser maior que zero,\n   * e não tem nenhuma verificação para garantir isso.\n   */\n  public MaquinaIngressos(int custoIngresso)\n  {\n      preco = custoIngresso;\n      saldo = 0;\n      total = 0;\n  }"
   },
   {
     "objectID": "cap2-1.html#section-21",
     "href": "cap2-1.html#section-21",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Em Java, se um atributo não for inicializado explicitamente no código, ele é inicializado automaticamente com um valor padrão.\n\nAtributos inteiros, por exemplo, são inicializados automaticamente com zero.\n\n\n\n\n\n\n\nHá duas vantagens:\n\nQuem lê a classe entende que realmente queremos inicializar com zero.\n\n\nSe não tivéssemos colocado, a pessoa poderia ficar em dúvida se esquecemos de inicializar ou se queríamos deixar o valor padrão zero.\n\n\nQuem lê a classe não precisa conhecer o valor padrão do Java para os atributos."
+    "text": "Em Java, construtores têm o mesmo nome da classe.\n\nVeja que o construtor da classe MaquinaIngressos se chama: MaquinaIngressos.\nGeralmente usamos a palavra-chave public antes do nome do construtor.\nE construtores não têm tipo de retorno.\n\n\nExiste uma relação direta entre o que acontece no corpo de um construtor e os atributos da classe.\n\nIsso porque a principal responsabilidade do construtor é inicializar os atributos.\nObs.: corpo de um construtor ou de um método é o bloco de código que contém sua implementação. Ou seja, é tudo que tem entre { e } logo após a assinatura.\nAtributos podem ser inicializados com constantes.\n\nComo é o caso do saldo e total que são inicializados com zero.\n\nOu podem ser inicializados por valores determinados externamente à classe.\n\nE que são passados para o construtor por parâmetro.\nComo é o caso do atributo preco."
   },
   {
     "objectID": "cap2-1.html#quiz-2.2",
@@ -1978,63 +1978,63 @@
     "href": "cap2-1.html#section-22",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Construtores e métodos têm funções diferentes, mas ambos podem receber valores de fora do objeto da mesma maneira:\n\nAtravés dos parâmetros.\n\n\nNós vimos um pouco sobre parâmetros no capítulo anterior.\n\nParâmetros são variáveis definidas na assinatura de um método ou construtor.\n\n\n\n\n  public MaquinaIngressos(int custoIngresso)\n\n\nEste construtor tem um único parâmetro custoIngresso de tipo int.\n\nO mesmo tipo do campo preco que guardará o valor do parâmetro.\n\n\n\n\nRepare que diferentemente de um atributo, um parâmetro é usado para guardar uma informação temporária.\n\nBasicamente para carregar dados de fora do objeto para dentro do seu construtor ou método."
+    "text": "A questão é que podem ser criadas várias máquinas (instâncias) a partir da classe MaquinaIngressos.\n\nE cada máquina pode trabalhar com ingressos de preços diferentes.\nPortanto, não temos como saber o preço do ingresso de uma máquina específica, até que ela seja criada.\n\n\n\n\nPortanto, uma das principais funções de um atributo é “lembrar” de informações externas passadas para o objeto.\n\nDe forma que a informação continue disponível durante todo o tempo de vida do objeto.\nAssim, atributos servem para guardar informações que duram (são mantidas) por um tempo maior.\n\n\n\n\n\n\n\nConceito\n\n\nConstrutores permitem que cada objeto seja configurado adequadamente quando é criado."
   },
   {
     "objectID": "cap2-1.html#section-23",
     "href": "cap2-1.html#section-23",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "No BlueJ, um usuário envia informação externa para o objeto através da caixa de diálogo, que aparece quando um objeto máquina de ingressos é criado.\n\nO valor é copiado para o parâmetro custoIngresso do construtor da nova máquina (A).\n\nA caixa “MaquinaIngressos (construtor)” ilustra o espaço adicional que é criado para o objeto somente quando o construtor é chamado.\nEle é chamado de espaço do construtor, e é usado para armazenar seus parâmetros."
+    "text": "No diagrama ao lado, vemos a representação de um objeto máquina de ingressos, depois que o construtor é chamado.\n\nPodemos ver que ela foi criada com um preço de ingresso de 500 (R$ 5,00)."
   },
   {
     "objectID": "cap2-1.html#section-24",
     "href": "cap2-1.html#section-24",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Tecnicamente, nós chamamos de parâmetro formal o nome do parâmetro declarado na assinatura do construtor ou método.\n\nApesar de, na prática, chamarmos simplesmente de parâmetro.\nJá o valor passado de fora do objeto é chamado, tecnicamente, de argumento ou parâmetro real.\nPortanto, no exemplo anterior, custoIngresso é o parâmetro formal e o valor 500 é o argumento.\n\n\n\n\n\n\nUm parâmetro formal está disponível para o objeto somente dentro do corpo do construtor ou método que onde ele é declarado.\n\nDizemos que este é o escopo do parâmetro.\nVeja que o escopo de um atributo é diferente, pois ele pode ser acessado em qualquer lugar dentro da classe."
+    "text": "Em Java, se um atributo não for inicializado explicitamente no código, ele é inicializado automaticamente com um valor padrão.\n\nAtributos inteiros, por exemplo, são inicializados automaticamente com zero.\n\n\n\n\n\n\n\nHá duas vantagens:\n\nQuem lê a classe entende que realmente queremos inicializar com zero.\n\n\nSe não tivéssemos colocado, a pessoa poderia ficar em dúvida se esquecemos de inicializar ou se queríamos deixar o valor padrão zero.\n\n\nQuem lê a classe não precisa conhecer o valor padrão do Java para os atributos."
   },
   {
     "objectID": "cap2-1.html#section-25",
     "href": "cap2-1.html#section-25",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Tempo de vida de uma variável é um conceito relacionado à escopo.\n\nUm parâmetro só existe durante uma única chamada do construtor ou do método.\nQuando o construtor é chamado, o espaço do construtor é criado e, depois que ele termina, esse espaço desaparece.\nPortanto, o tempo de vida de um parâmetro é limitado a uma única chamada do construtor.\n\n\n\nRepare que é diferente do tempo de vida de um atributo.\n\nO tempo de vida de um atributo é o mesmo do objeto.\nOu seja, ele existe a partir do momento que o objeto é criado e até ele ser destruído.\n\n\n\n\n\n\n\nConceito\n\n\nO escopo de uma variável define o trecho de código a partir do qual a variável pode ser acessada.\n\n\n\n\n\n\n\n\n\n\nConceito\n\n\nO tempo de vida de uma variável indica quanto tempo ela vai existir até ser destruída."
+    "text": "Construtores e métodos têm funções diferentes, mas ambos podem receber valores de fora do objeto da mesma maneira:\n\nAtravés dos parâmetros.\n\n\nNós vimos um pouco sobre parâmetros no capítulo anterior.\n\nParâmetros são variáveis definidas na assinatura de um método ou construtor.\n\n\n\n\n  public MaquinaIngressos(int custoIngresso)\n\n\nEste construtor tem um único parâmetro custoIngresso de tipo int.\n\nO mesmo tipo do campo preco que guardará o valor do parâmetro.\n\n\n\n\nRepare que diferentemente de um atributo, um parâmetro é usado para guardar uma informação temporária.\n\nBasicamente para carregar dados de fora do objeto para dentro do seu construtor ou método."
   },
   {
     "objectID": "cap2-1.html#section-26",
     "href": "cap2-1.html#section-26",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nA qual classe pertence o construtor abaixo?\npublic Estudante(String nome)\n\n\n\n\n\n\n\n\nExercício\n\n\nQuantos parâmetros tem o construtor abaixo e quais são seus tipos?\npublic Livro(String titulo, double preco)\n\n\n\n\n\n\n\n\nExercício\n\n\nApenas pela assinatura do construtor do exercício anterior, você conseguiria chutar alguma coisa sobre os nomes e tipos dos atributos da classe Livro?"
+    "text": "No BlueJ, um usuário envia informação externa para o objeto através da caixa de diálogo, que aparece quando um objeto máquina de ingressos é criado.\n\nO valor é copiado para o parâmetro custoIngresso do construtor da nova máquina (A).\n\nA caixa “MaquinaIngressos (construtor)” ilustra o espaço adicional que é criado para o objeto somente quando o construtor é chamado.\nEle é chamado de espaço do construtor, e é usado para armazenar seus parâmetros."
   },
   {
     "objectID": "cap2-1.html#section-27",
     "href": "cap2-1.html#section-27",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Repare que os nomes que escolhemos para os atributos e parâmetros indicam para que eles servem.\n\nApenas lendo os nomes preco, custo, titulo e vivo, já podemos ter uma noção de sua utilidade.\nPortanto, apesar da linguagem Java permitir que você dê qualquer nome, evite nomes sem sentido como a, b ou x1, x2."
+    "text": "Tecnicamente, nós chamamos de parâmetro formal o nome do parâmetro declarado na assinatura do construtor ou método.\n\nApesar de, na prática, chamarmos simplesmente de parâmetro.\nJá o valor passado de fora do objeto é chamado, tecnicamente, de argumento ou parâmetro real.\nPortanto, no exemplo anterior, custoIngresso é o parâmetro formal e o valor 500 é o argumento.\n\n\n\n\n\n\nUm parâmetro formal está disponível para o objeto somente dentro do corpo do construtor ou método que onde ele é declarado.\n\nDizemos que este é o escopo do parâmetro.\nVeja que o escopo de um atributo é diferente, pois ele pode ser acessado em qualquer lugar dentro da classe."
   },
   {
     "objectID": "cap2-1.html#section-28",
     "href": "cap2-1.html#section-28",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Como vocês já aprenderam em disciplinas anteriores de programação, nós usamos o operador = para atribuir valores a variáveis.\n\nAssim, o comando:\npreco = custoIngresso;\nIndica que o valor do parâmetro custoIngresso será copiado para o atributo preco.\nDica:\n\nGeralmente a gente lê o comando acima assim: “preço igual a custo do ingresso”\nMas eu acho que fica mais fácil entender se usarmos a palavra recebe.\nRepare a diferença: “preço recebe custo do ingresso”\n\n\n\n\n\n\n\nNo diagrama, a atribuição é representada pela seta indica pela letra (B)."
+    "text": "Tempo de vida de uma variável é um conceito relacionado à escopo.\n\nUm parâmetro só existe durante uma única chamada do construtor ou do método.\nQuando o construtor é chamado, o espaço do construtor é criado e, depois que ele termina, esse espaço desaparece.\nPortanto, o tempo de vida de um parâmetro é limitado a uma única chamada do construtor.\n\n\n\nRepare que é diferente do tempo de vida de um atributo.\n\nO tempo de vida de um atributo é o mesmo do objeto.\nOu seja, ele existe a partir do momento que o objeto é criado e até ele ser destruído."
   },
   {
     "objectID": "cap2-1.html#section-29",
     "href": "cap2-1.html#section-29",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "O lado direito (o que vem depois do =) é chamado expressão.\n\nUma expressão pode ser um único valor (como custoIngresso).\nOu algo mais complexo, como o resultado de um cálculo.\n\n\nEm Java, o tipo do resultado da expressão tem que ser o mesmo tipo da variável.\n\nEx.: não podemos guardar um resultado inteiro em uma variável string.\n\n\n\n\n\n\n\nConceito\n\n\nComandos de atribuição guardam os valores representados pelo lado direito do comando na variável nomeada do lado esquerdo."
+    "text": "Conceito\n\n\nO escopo de uma variável define o trecho de código a partir do qual a variável pode ser acessada.\n\n\n\n\n\n\n\n\n\nConceito\n\n\nO tempo de vida de uma variável indica quanto tempo ela vai existir até ser destruída."
   },
   {
     "objectID": "cap2-1.html#section-30",
     "href": "cap2-1.html#section-30",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nSuponha que uma classe Cachorro tem um atributo nome. Escreva o comando de atribuição que inicializa o atributo nome, sabendo que a assinatura do construtor da classe é public Cachorro(String nomeCachorro).\n\n\n\n\n\n\n\n\n\nExercício\n\n\nA linha de código abaixo cria um objeto, chamando o construtor da classe Date.\n  new Date(\"Setembro\", 1, 2023)\nVocê conseguiria escrever a assinatura do construtor da classe Date? Obs.: escolha nomes representativos para os parâmetros."
+    "text": "Exercício\n\n\nA qual classe pertence o construtor abaixo?\n\npublic Estudante(String nome)\n\n\n\n\n\n\n\n\n\nExercício\n\n\nQuantos parâmetros tem o construtor abaixo e quais são seus tipos?\n\npublic Livro(String titulo, double preco)\n\n\n\n\n\n\n\n\n\nExercício\n\n\nApenas pela assinatura do construtor do exercício anterior, você conseguiria chutar alguma coisa sobre os nomes e tipos dos atributos da classe Livro?"
   },
   {
     "objectID": "cap2-1.html#quiz-2.3",
@@ -2048,84 +2048,84 @@
     "href": "cap2-1.html#section-31",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Analisando o código-fonte da classe MaquinaIngressos podemos ver que ela tem quatro métodos.\n\nOs métodos são mostrados em caixas amarelas no BlueJ.\n\n\nVeja, por exemplo, a implementação do método obterPreco.\n\nVemos que os métodos têm duas partes: a assinatura e o corpo do método.\nVemos também que antes da assinatura há um comentáro que descreve o método.\n\npublic class MaquinaIngressos\n{\n  // atributos ommitidos\n  // construtor omitido\n  /**\n   * Retorna o preço do ingresso.\n   */\n  public int obterPreco()\n  {\n    return preco;\n  }  \n  // métodos restantes omitidos\n\n\n\n\n\n\nConceito\n\n\nMétodos são formados por duas partes: assinatura e corpo."
+    "text": "Repare que os nomes que escolhemos para os atributos e parâmetros indicam para que eles servem.\n\nApenas lendo os nomes preco, custo, titulo e vivo, já podemos ter uma noção de sua utilidade.\nPortanto, apesar da linguagem Java permitir que você dê qualquer nome, evite nomes sem sentido como a, b ou x1, x2."
   },
   {
     "objectID": "cap2-1.html#section-32",
     "href": "cap2-1.html#section-32",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Repare que a assinatura do método se parece um pouco com a declaração de atributo.\n\nComo então sabemos que é um método e não um atributo?\n\nRepare que a assinatura public int obterPreco() possui parênteses e não termina com ponto-e-vírgula.\n\n\n\nO corpo do método, que é o que fica entre chaves { }, pode conter declarações e comandos.\n\nEles definem o que o objeto faz quando o método é chamado.\nDeclarações servem para criar variáveis temporárias adicionais.\nE os comandos são as ações feitas pelo método.\n\n\n\nNós chamamos de bloco de código o conjunto de declarações e comandos que ficam entre um par de chaves.\n\nVemos então que o corpo da classe MaquinaIngressos define um bloco de código.\nO corpo do construtor e de cada método também definem blocos de código."
+    "text": "Como vocês já aprenderam em disciplinas anteriores de programação, nós usamos o operador = para atribuir valores a variáveis.\n\nAssim, o comando:\n\npreco = custoIngresso;\n\nIndica que o valor do parâmetro custoIngresso será copiado para o atributo preco.\nDica:\n\nGeralmente a gente lê o comando acima assim: “preço igual a custo do ingresso”\nMas eu acho que fica mais fácil entender se usarmos a palavra recebe.\nRepare a diferença: “preço recebe custo do ingresso”\n\n\n\n\n\n\n\nNo diagrama, a atribuição é representada pela seta indica pela letra (B)."
   },
   {
     "objectID": "cap2-1.html#section-33",
     "href": "cap2-1.html#section-33",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Tanto construtores quanto métodos podem ter quaisquer quantidades de parâmetros (inclusive nenhum).\n\nMas como podemos diferenciar um contrutor de um método?\n\nNote que construtores não têm tipo de retorno enquanto métodos têm\n\nObs.: o tipo de retorno aparece antes do nome do método.\n\npublic MaquinaIngressos(int custoIngresso)\npublic int obterPreco()\nAlém disso, construtores possuem o mesmo nome da classe."
+    "text": "O lado direito (o que vem depois do =) é chamado expressão.\n\nUma expressão pode ser um único valor (como custoIngresso).\nOu algo mais complexo, como o resultado de um cálculo.\n\n\nEm Java, o tipo do resultado da expressão tem que ser o mesmo tipo da variável.\n\nEx.: não podemos guardar um resultado inteiro em uma variável string.\n\n\n\n\n\n\n\nConceito\n\n\nComandos de atribuição guardam os valores representados pelo lado direito do comando na variável nomeada do lado esquerdo."
   },
   {
     "objectID": "cap2-1.html#section-34",
     "href": "cap2-1.html#section-34",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "O corpo do método obterPreco tem apenas um comando.\n\n  return preco;\n\n\nEsse comando é chamado comando de retorno.\nEle deve retornar um valor que seja do mesmo tipo do método.\nE deve ser sempre o último comando do método\n\npois depois dele nenhum outro comando é executado no método.\n\n\n\nPodemos pensar em uma chamada de método como uma pergunta feita ao objeto.\n\nQuando o método obterPreco é chamado é como se fosse feita para o objeto a pergunta Quanto custa o ingresso?.\nNesse caso específico, o objeto não precisa fazer nenhuma conta, já que ele tem o valor do ingresso guardado no atributo preco.\n\nMas veremos que métodos podem precisar de códigos mais complexos para retornar uma informação."
+    "text": "Exercício\n\n\nSuponha que uma classe Cachorro tem um atributo nome. Escreva o comando de atribuição que inicializa o atributo nome, sabendo que a assinatura do construtor da classe é public Cachorro(String nomeCachorro).\n\n\n\n\n\n\n\n\n\nExercício\n\n\nA linha de código abaixo cria um objeto, chamando o construtor da classe Date.\n\n  new Date(\"Setembro\", 1, 2023)\n\nVocê conseguiria escrever a assinatura do construtor da classe Date? Obs.: escolha nomes representativos para os parâmetros."
   },
   {
     "objectID": "cap2-1.html#section-35",
     "href": "cap2-1.html#section-35",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Nós chamamos de métodos de acesso os métodos que começam com obter (como obterPreco e obterSaldo).\n\nPorque eles retornam uma informação do estado do objeto para quem chamou o método.\nOu seja, eles fornecem acesso ao estado do objeto.\n\n\nMétodos de acesso têm um comando de retorno.\n\nPorque eles retornam, ou repassam, uma informação do objeto para quem chamou o método."
+    "text": "Analisando o código-fonte da classe MaquinaIngressos podemos ver que ela tem quatro métodos.\n\nOs métodos são mostrados em caixas amarelas no BlueJ.\n\n\nVeja, por exemplo, a implementação do método obterPreco.\n\nVemos que os métodos têm duas partes: a assinatura e o corpo do método.\nVemos também que antes da assinatura há um comentáro que descreve o método.\n\n\npublic class MaquinaIngressos\n{\n  // atributos omitidos\n  // construtor omitido\n  /**\n   * Retorna o preço do ingresso.\n   */\n  public int obterPreco()\n  {\n    return preco;\n  }  \n  // métodos restantes omitidos"
   },
   {
     "objectID": "cap2-1.html#section-36",
     "href": "cap2-1.html#section-36",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Convenção\n\n\nEm inglês, usamos a palavra get em vez de obter.\n\nAssim, geralmente todos o métodos de acesso começam com a palavra get.\n\nEx.: getPrice, getBalance, etc.\n\nIsso é tão comum que até em códigos em português costumamos usar a palavra get.\n\nEx.: getPreco, getSaldo, etc.\n\nObs.: nesse material vou preferir usar sempre obter, mas fique à vontade para escolher o que prefere.\n\n\n\n\n\n\n\n\n\n\n\nConceito\n\n\nMétodos de acesso retornam informações sobre o estado de um objeto."
+    "text": "Conceito\n\n\nMétodos são formados por duas partes: assinatura e corpo.\n\n\n\n\n\nRepare que a assinatura do método se parece um pouco com a declaração de atributo.\n\nComo então sabemos que é um método e não um atributo?\n\nRepare que a assinatura public int obterPreco() possui parênteses e não termina com ponto-e-vírgula.\n\n\n\n\nO corpo do método, que é o que fica entre chaves { }, pode conter declarações e comandos.\n\nEles definem o que o objeto faz quando o método é chamado.\nDeclarações servem para criar variáveis temporárias adicionais.\nE os comandos são as ações feitas pelo método."
   },
   {
     "objectID": "cap2-1.html#section-37",
     "href": "cap2-1.html#section-37",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nCompare as assinaturas e os corpos dos métodos obterSaldo e obterPreco. O que eles têm de diferente?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nQual seria a pergunta feita ao objeto máquina de ingressos na chamada do método obterSaldo?\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nComo você acha que seria a implementação de um método obterTotal?\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente excluir o comando de retorno do método obterPreco. Qual mensagem de erro aparece quando você tenta compilar a classe?\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAlém da diferença de nome, o que mais há de diferente nas assinaturas dos métodos obterPreco e inserirDinheiro. Você acha que isso pode ter algo a ver com o fato de que o primeiro método tem comando de retorno e o segundo não?"
+    "text": "Nós chamamos de bloco de código o conjunto de declarações e comandos que ficam entre um par de chaves.\n\nVemos então que o corpo da classe MaquinaIngressos define um bloco de código.\nO corpo do construtor e de cada método também definem blocos de código."
   },
   {
     "objectID": "cap2-1.html#section-38",
     "href": "cap2-1.html#section-38",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Os métodos obter da classe MaquinaIngressos retornam valores dos atributos da classe.\n\nOs demais métodos (inserirDinheiro e imprimirIngresso) têm um papel muito mais importante.\nPrincipalmente porque eles mudam o valor de um ou mais atributos do objeto toda vez que são chamados.\n\n\nNós chamamos os métodos que mudam o estado de seus objetos de métodos modificadores.\n\nPodemos pensar nesses métodos como pedidos feitos para os objetos alterarem seus estados."
+    "text": "Tanto construtores quanto métodos podem ter quaisquer quantidades de parâmetros (inclusive nenhum).\n\nMas como podemos diferenciar um contrutor de um método?\n\nNote que construtores não têm tipo de retorno enquanto métodos têm\n\nObs.: o tipo de retorno aparece antes do nome do método.\n\n\npublic MaquinaIngressos(int custoIngresso)\npublic int obterPreco()\n\nAlém disso, construtores possuem o mesmo nome da classe."
   },
   {
     "objectID": "cap2-1.html#section-39",
     "href": "cap2-1.html#section-39",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "É muito comum que classes tenham métodos modificadores que recebem um novo valor para um de seus atributos.\n\nNós não temos métodos desse tipo na classe MaquinaIngressos.\nMas podemos pensar, por exemplo, que uma classe Pessoa que tenha um atributo nome, poderia ter o método:\n\n\n\n  public void definirNome(String novoNome)\n  {\n    nome = novoNome;\n  }\n\n\n\n\n\n\n\n\n\n\n\nConvenção\n\n\nEm inglês, assim como os métodos de acesso começam com get, os métodos modificadores costumam começar com a palavra set.\n\nPoderíamos ter, por exemplo, o método setName.\nNesse caso é também comum usarmos a palavra set em códigos em português. Ex.: setNome."
+    "text": "O corpo do método obterPreco tem apenas um comando.\n\n  return preco;\n\n\nEsse comando é chamado comando de retorno.\nEle deve retornar um valor que seja do mesmo tipo do método.\nE deve ser sempre o último comando do método\n\npois depois dele nenhum outro comando é executado no método.\n\n\n\nPodemos pensar em uma chamada de método como uma pergunta feita ao objeto.\n\nQuando o método obterPreco é chamado é como se fosse feita para o objeto a pergunta Quanto custa o ingresso?.\nNesse caso específico, o objeto não precisa fazer nenhuma conta, já que ele tem o valor do ingresso guardado no atributo preco.\n\nMas veremos que métodos podem precisar de códigos mais complexos para retornar uma informação."
   },
   {
     "objectID": "cap2-1.html#section-40",
     "href": "cap2-1.html#section-40",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Conceito\n\n\nMétodos modificadores mudam o estado de um objeto.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nCrie uma máquina de ingressos e chame o método obterSaldo.\n\nEm seguida, chame o método inserirDinheiro passando uma quantidade maior que zero.\nChame novamente o método obterSaldo.\nAs duas chamadas do método obterSaldo retornaram o mesmo valor? Por que?"
+    "text": "Nós chamamos de métodos de acesso os métodos que começam com obter (como obterPreco e obterSaldo).\n\nPorque eles retornam uma informação do estado do objeto para quem chamou o método.\nOu seja, eles fornecem acesso ao estado do objeto.\n\n\nMétodos de acesso têm um comando de retorno.\n\nPorque eles retornam, ou repassam, uma informação do objeto para quem chamou o método."
   },
   {
     "objectID": "cap2-1.html#section-41",
     "href": "cap2-1.html#section-41",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Vamos analisar agora o código do método inserirDinheiro.\n\n  /**\n   * Recebe uma quantidade de dinheiro de um cliente.\n   */\n  public void inserirDinheiro(int quantidade)\n  {\n      saldo = saldo + quantidade;\n  }\n\n\nRepare que o método tem retorno do tipo void.\n\nIsso significa que o método não retorna nenhum valor.\nNo BlueJ percemos que a diferença é que não aparece a caixa de diálogo quando chamamos métodos desse tipo.\nA diferença no corpo do método é que ele não tem comando de retorno."
+    "text": "Convenção\n\n\nEm inglês, usamos a palavra get em vez de obter.\n\nAssim, geralmente todos o métodos de acesso começam com a palavra get.\n\nEx.: getPrice, getBalance, etc.\n\nIsso é tão comum que até em códigos em português costumamos usar a palavra get.\n\nEx.: getPreco, getSaldo, etc.\n\nObs.: nesse material vou preferir usar sempre obter, mas fique à vontade para escolher o que prefere.\n\n\n\n\n\n\n\n\n\n\n\nConceito\n\n\nMétodos de acesso retornam informações sobre o estado de um objeto."
   },
   {
     "objectID": "cap2-1.html#section-42",
     "href": "cap2-1.html#section-42",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nAvaliando apenas a assinatura abaixo, você saberia dizer se ela é de um construtor ou de um método?\n  public void setPreco(int custo)\n\n\n\n\n\n\n\n\n\nExercício\n\n\nComplete o código do método anterior de modo que ele atualize o valor de um atributo preco."
+    "text": "Exercício\n\n\nCompare as assinaturas e os corpos dos métodos obterSaldo e obterPreco. O que eles têm de diferente?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nQual seria a pergunta feita ao objeto máquina de ingressos na chamada do método obterSaldo?\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nComo você acha que seria a implementação de um método obterTotal?"
   },
   {
     "objectID": "cap2-1.html#quiz-2.4",
@@ -2139,42 +2139,42 @@
     "href": "cap2-1.html#section-43",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "O método imprimirIngresso é o mais complexo da classe.\n\n  /**\n   * Imprime um ingresso.\n   * Atualiza o total coletado e reduz o saldo para zero.\n   */\n  public void imprimirIngresso()\n  {\n    // Simula a impressão de um ingresso\n    System.out.println(\"##################\");\n    System.out.println(\"# Ingressos & Cia \");\n    System.out.println(\"# Ingresso\");\n    System.out.println(\"# \" + preco + \" centavos.\");\n    System.out.println(\"##################\");\n    System.out.println();\n\n    // Atualiza o total coletado com o saldo\n    total = total + saldo;\n    // Zera o saldo\n    saldo = 0;\n  }\n\n\nVocê deve ter notado que, ao chamar o método, o seguinte texto aparece no terminal.\n##################\n# Ingressos & Cia \n# Ingresso\n# 500 centavos.\n##################"
+    "text": "Exercício\n\n\nExperimente excluir o comando de retorno do método obterPreco. Qual mensagem de erro aparece quando você tenta compilar a classe?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAlém da diferença de nome, o que mais há de diferente nas assinaturas dos métodos obterPreco e inserirDinheiro. Você acha que isso pode ter algo a ver com o fato de que o primeiro método tem comando de retorno e o segundo não?"
   },
   {
     "objectID": "cap2-1.html#section-44",
     "href": "cap2-1.html#section-44",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Vamos avaliar o método passo a passo.\n  /**\n   * Imprime um ingresso.\n   * Atualiza o total coletado e reduz o saldo para zero.\n   */\n1  public void imprimirIngresso()\n  {\n    // Simula a impressão de um ingresso\n2    System.out.println(\"##################\");\n    System.out.println(\"# Ingressos & Cia \");\n    System.out.println(\"# Ingresso\");\n    System.out.println(\"# \" + preco + \" centavos.\");\n    System.out.println(\"##################\");\n    System.out.println();\n\n    // Atualiza o total coletado com o saldo\n3    total = total + saldo;\n    // Zera o saldo\n4    saldo = 0;\n  }\n\n1\n\nA assinatura indica que o método tem retorno void e não espera nenhum parâmetro.\n\n2\n\nOs primeiros seis comandos imprimem o que vemos no terminal.\n\n3\n\nO sétimo comando adiciona o saldo atual inserido pelo usuário ao total acumulado.\n\n4\n\nO último comando retorna o saldo para zero, esperando o próximo usuário."
+    "text": "Os métodos obter da classe MaquinaIngressos retornam valores dos atributos da classe.\n\nOs demais métodos (inserirDinheiro e imprimirIngresso) têm um papel muito mais importante.\nPrincipalmente porque eles mudam o valor de um ou mais atributos do objeto toda vez que são chamados.\n\n\nNós chamamos os métodos que mudam o estado de seus objetos de métodos modificadores.\n\nPodemos pensar nesses métodos como pedidos feitos para os objetos alterarem seus estados."
   },
   {
     "objectID": "cap2-1.html#section-45",
     "href": "cap2-1.html#section-45",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "O método imprimirIngresso chama várias vezes o método println do objeto System.out.\n\nO objeto System.out é construído dentro da linguagem Java.\nO que está dentro dos parênteses é o argumento que estamos passando para o método: alguma string.\n\n\nA maioria das chamadas do método println passa uma string literal.\n\nEx.: \"# Ingressos & Cia \".\nIsso significa que o método simplesmente exibe na tela o texto passado entre aspas duplas."
+    "text": "É muito comum que classes tenham métodos modificadores que recebem um novo valor para um de seus atributos.\n\nNós não temos métodos desse tipo na classe MaquinaIngressos.\nMas podemos pensar, por exemplo, que uma classe Pessoa que tenha um atributo nome, poderia ter o método:\n\n\n\n  public void definirNome(String novoNome)\n  {\n    nome = novoNome;\n  }\n\n\n\n\n\n\n\n\n\n\n\nConvenção\n\n\nEm inglês, assim como os métodos de acesso começam com get, os métodos modificadores costumam começar com a palavra set.\n\nPoderíamos ter, por exemplo, o método setName.\nNesse caso é também comum usarmos a palavra set em códigos em português. Ex.: setNome."
   },
   {
     "objectID": "cap2-1.html#section-46",
     "href": "cap2-1.html#section-46",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Mas veja que a linha abaixo é um pouco diferente.\n\n    System.out.println(\"# \" + preco + \" centavos.\");    \n\n\nEssa linha tem duas coisas diferentes.\n\nO operador + está sendo usado para concatenar (juntar) strings, criando uma nova string.\n\nEx.: \"Tião\" + \" \" + \"Silva\" resulta em \"Tião Silva\".\n\nMas, além disso, o atributo preco está sendo concatenado diretamente na string.\n\nJava converte valores automaticamente para String quando o operador + é usado.\nRepare que se digitássemos \"preco\", seria exibida a palavra preco e não o valor do atributo preco.\n\n\n\n\nOutra linha diferente é a última chamada do método println.\n\nQuando o método é chamado sem nenhum argumento, uma linha em branco é deixada no terminal.\n\n\n    System.out.println();"
+    "text": "Conceito\n\n\nMétodos modificadores mudam o estado de um objeto.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nCrie uma máquina de ingressos e chame o método obterSaldo.\n\nEm seguida, chame o método inserirDinheiro passando uma quantidade maior que zero.\nChame novamente o método obterSaldo.\nAs duas chamadas do método obterSaldo retornaram o mesmo valor? Por que?"
   },
   {
     "objectID": "cap2-1.html#section-47",
     "href": "cap2-1.html#section-47",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nO que exatamente será exibido na tela pelo comando abaixo.\n  System.out.println(\"Orgulho de ser UFLA!\")\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAdicione um método imprimirPreco à classe MaquinaIngressos. O método deve ter retorno void, não ter nenhum parâmetro e exibir uma mensagem como a abaixo.\n  O preco do ingresso é X centavos\nOnde no lugar de X deve aparecer o valor do atributo preco.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nCria duas máquinas de ingressos com valores de ingresso diferentes. Ao chamar o método imprimirPreco para as duas máquinas, o texto exibido é igual ou diferente? Por que?"
+    "text": "Vamos analisar agora o código do método inserirDinheiro.\n\n\n  /**\n   * Recebe uma quantidade de dinheiro de um cliente.\n   */\n  public void inserirDinheiro(int quantidade)\n  {\n      saldo = saldo + quantidade;\n  }\n\n\n\nRepare que o método tem retorno do tipo void.\n\nIsso significa que o método não retorna nenhum valor.\nNo BlueJ percemos que a diferença é que não aparece a caixa de diálogo quando chamamos métodos desse tipo.\nA diferença no corpo do método é que ele não tem comando de retorno."
   },
   {
     "objectID": "cap2-1.html#section-48",
     "href": "cap2-1.html#section-48",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Como você já viu na aula anterior, para que você tenha a presença\n\nconsiderada nas aula em formato ANP (Atividade Não-Presencial),\nvocê precisa demonstrar que realmente estudou o conteúdo.\n\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nPara ter presença nessa aula você deve responder, no Campus Virtual, aos quizes presentes nesses slides.\nVocê deve também enviar o projeto maquina-ingressos-ingenua como ele ficou após terem sido feitas todas as alterações pedidas ao longo da aula."
+    "text": "Exercício\n\n\nAvaliando apenas a assinatura abaixo, você saberia dizer se ela é de um construtor ou de um método?\n\n  public void setPreco(int custo)\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nComplete o código do método anterior de modo que ele atualize o valor de um atributo preco."
   },
   {
     "objectID": "cap1-1.html#como-estudar-esse-conteúdo",
@@ -4842,5 +4842,47 @@
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
     "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa segunda parte dos exercícios e envie o código do projeto nave da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar);"
+  },
+  {
+    "objectID": "cap2-1.html#section-49",
+    "href": "cap2-1.html#section-49",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "O método imprimirIngresso é o mais complexo da classe.\n\n  /**\n   * Imprime um ingresso.\n   * Atualiza o total coletado e reduz o saldo para zero.\n   */\n  public void imprimirIngresso()\n  {\n    // Simula a impressão de um ingresso\n    System.out.println(\"##################\");\n    System.out.println(\"# Ingressos & Cia \");\n    System.out.println(\"# Ingresso\");\n    System.out.println(\"# \" + preco + \" centavos.\");\n    System.out.println(\"##################\");\n    System.out.println();\n\n    // Atualiza o total coletado com o saldo\n    total = total + saldo;\n    // Zera o saldo\n    saldo = 0;\n  }\n\n\nVocê deve ter notado que, ao chamar o método, o seguinte texto aparece no terminal.\n##################\n# Ingressos & Cia \n# Ingresso\n# 500 centavos.\n##################"
+  },
+  {
+    "objectID": "cap2-1.html#section-50",
+    "href": "cap2-1.html#section-50",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Vamos avaliar o método passo a passo.\n  /**\n   * Imprime um ingresso.\n   * Atualiza o total coletado e reduz o saldo para zero.\n   */\n1  public void imprimirIngresso()\n  {\n    // Simula a impressão de um ingresso\n2    System.out.println(\"##################\");\n    System.out.println(\"# Ingressos & Cia \");\n    System.out.println(\"# Ingresso\");\n    System.out.println(\"# \" + preco + \" centavos.\");\n    System.out.println(\"##################\");\n    System.out.println();\n\n    // Atualiza o total coletado com o saldo\n3    total = total + saldo;\n    // Zera o saldo\n4    saldo = 0;\n  }\n\n1\n\nA assinatura indica que o método tem retorno void e não espera nenhum parâmetro.\n\n2\n\nOs primeiros seis comandos imprimem o que vemos no terminal.\n\n3\n\nO sétimo comando adiciona o saldo atual inserido pelo usuário ao total acumulado.\n\n4\n\nO último comando retorna o saldo para zero, esperando o próximo usuário."
+  },
+  {
+    "objectID": "cap2-1.html#section-51",
+    "href": "cap2-1.html#section-51",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "O método imprimirIngresso chama várias vezes o método println do objeto System.out.\n\nO objeto System.out é construído dentro da linguagem Java.\nO que está dentro dos parênteses é o argumento que estamos passando para o método: alguma string.\n\n\nA maioria das chamadas do método println passa uma string literal.\n\nEx.: \"# Ingressos & Cia \".\nIsso significa que o método simplesmente exibe na tela o texto passado entre aspas duplas."
+  },
+  {
+    "objectID": "cap2-1.html#section-52",
+    "href": "cap2-1.html#section-52",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Mas veja que a linha abaixo é um pouco diferente.\n\n    System.out.println(\"# \" + preco + \" centavos.\");    \n\n\nEssa linha tem duas coisas diferentes.\n\nO operador + está sendo usado para concatenar (juntar) strings, criando uma nova string.\n\nEx.: \"Tião\" + \" \" + \"Silva\" resulta em \"Tião Silva\".\n\nMas, além disso, o atributo preco está sendo concatenado diretamente na string.\n\nJava converte valores automaticamente para String quando o operador + é usado.\nRepare que se digitássemos \"preco\", seria exibida a palavra preco e não o valor do atributo preco.\n\n\n\n\nOutra linha diferente é a última chamada do método println.\n\nQuando o método é chamado sem nenhum argumento, uma linha em branco é deixada no terminal.\n\n\n    System.out.println();"
+  },
+  {
+    "objectID": "cap2-1.html#section-53",
+    "href": "cap2-1.html#section-53",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Exercício\n\n\nO que exatamente será exibido na tela pelo comando abaixo.\n\n  System.out.println(\"Orgulho de ser UFLA!\")\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAdicione um método imprimirPreco à classe MaquinaIngressos. O método deve ter retorno void, não ter nenhum parâmetro e exibir uma mensagem como a abaixo.\n\n  O preco do ingresso é X centavos\n\nOnde no lugar de X deve aparecer o valor do atributo preco.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nCria duas máquinas de ingressos com valores de ingresso diferentes. Ao chamar o método imprimirPreco para as duas máquinas, o texto exibido é igual ou diferente? Por que?"
+  },
+  {
+    "objectID": "cap2-1.html#section-54",
+    "href": "cap2-1.html#section-54",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Como você já viu na aula anterior, para que você tenha a presença\n\nconsiderada nas aula em formato ANP (Atividade Não-Presencial),\nvocê precisa demonstrar que realmente estudou o conteúdo.\n\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nPara ter presença nessa aula você deve responder, no Campus Virtual, aos quizes presentes nesses slides.\nVocê deve também enviar o projeto maquina-ingressos-ingenua como ele ficou após terem sido feitas todas as alterações pedidas ao longo da aula."
   }
 ]

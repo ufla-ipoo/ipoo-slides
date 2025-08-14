@@ -119,7 +119,7 @@ Abra então o projeto [maquina-ingressos-ingenua](https://github.com/ufla-ipoo/m
 **Criação de objetos**: alguns objetos não podem ser criados se você não fornecer informação adicional para ele.
 :::
 
-## {.smaller}
+## 
 
 ::: {.callout-note title="Exercício" icon=false}
 Crie um objeto `MaquinaIngressos` e verifique os métodos disponíveis.
@@ -134,7 +134,7 @@ Insira mais dinheiro até ter a quantidade exata necessária para comprar o ingr
 Qual é o saldo da máquina depois que você compra um ingresso?
 :::
 
-. . .
+##
 
 ::: {.callout-note title="Exercício" icon=false}
 Experimente inserir quantidades diferentes de dinheiro antes de imprimir um ingresso.
@@ -195,7 +195,7 @@ A **parte externa** de todas as classe se parecem muito, já que o objetivo é [
 - Por convenção, sempre começamos o nome da classe com letra maiúscula.
 - No BlueJ, vemos que antes dessa linha há um texto azul que nos diz alguma coisa sobre a classe.
 
-## {.smaller}
+## 
 
 ::: {.callout-note title="Exercício" icon=false}
 Escreva como você acha que seria a parte externa das classes `Estudante` e `Disciplina`. Não se preocupe com a parte interna.
@@ -214,7 +214,7 @@ Ela explica claramente o que tem de errado?
 Volte o código para como estava antes e compile novamente (confira se não aparece mais a mensagem de erro).
 :::
 
-. . .
+##
 
 ::: {.callout-note title="Exercício" icon=false}
 Verifique se é possível remover a palavra `public` da parte externa da classe `MaquinaIngressos` (compile o código).
@@ -296,7 +296,7 @@ Você não é obrigado a seguir isso, mas deixa seu **código mais claro**.
 
 - Especialmente declarar todos os atributos primeiro.
 
-## {.smaller}
+## 
 
 ::: {.callout-note title="Exercício" icon=false}
 Sabendo a ordem que os atributos, métodos e construtores são geralmente implementados em uma classe, avalie o código da classe `MaquinaIngressos` e faça uma tabela com três colunas.
@@ -325,6 +325,8 @@ Você consegue descobrir quais são?
 :::: {.columns style='display: flex !important; height: 90%;'}
 
 ::: {.column width="30%" style='display: flex; justify-content: center; align-items: center;'}
+
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
 public class MaquinaIngressos
 {
@@ -335,6 +337,7 @@ public class MaquinaIngressos
     // Construtores e métodos omitidos
 }
 ```
+:::
 :::
 
 ::: {.column width="70%"}
@@ -502,13 +505,15 @@ As declarações dos atributos da classe `MaquinaIngressos` são todas bem simil
   - e atributos que não variam depois de inicializados, como o `preco`.
 - Mais adiante veremos que existem outros tipos de váriaveis, com a mesma ideia de que são dados armazenados no computador.
 
-## {.smaller}
+## 
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 ::: {.callout-note title="Exercício" icon=false}
 Qual é o **tipo** de cada um dos atributos abaixo?
+
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
   private int contador;
   private Estudante monitor;
@@ -516,15 +521,19 @@ Qual é o **tipo** de cada um dos atributos abaixo?
 ```
 :::
 :::
+:::
 
 ::: {.column width="50%"}
 ::: {.callout-note title="Exercício" icon=false}
 Qual é o **nome** de cada um dos atributos abaixo?
+
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
   private boolean vivo;
   private Pessoa professor;
   private Jogo jogo;
 ```
+:::
 :::
 :::
 
@@ -537,7 +546,7 @@ Repare os tipos dos atributos nos dois exercícios anteriores.
 Pelo que você sabe das convenções de nomes de classes, quais tipos você acha que são classes?
 :::
 
-. . .
+##
 
 ::: {.callout-note title="Exercício" icon=false}
 Será que a ordem das palavras na declaração de um atributo fazem diferença?
@@ -547,7 +556,7 @@ Tente compilar a classe e avalie a mensagem de erro que aparece.
 Obs.: não se esqueça de voltar a declaração original.
 :::
 
-## {.smaller}
+. . .
 
 ::: {.callout-note title="Exercício" icon=false}
 É muito interessante quando aprendemos as coisas pela experimentação, em vez de *decorar* uma regra.
@@ -588,18 +597,19 @@ Depois que o objeto é criado, o construtor não tem mais utilidade para aquele 
 
 - Portanto, não podemos chamar o construtor para um objeto já criado.
 
-. . .
+## {.smaller}
 
 :::: {.columns}
 
 ::: {.column width="70%"}
 Abaixo está o código do construtor da classe `MaquinaIngressos`.
 
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
   /**
-   * Cria uma máquina que emite ingressos de um dado preço.
-   * Note que o preço deve ser maior que zero, e não tem
-   * nenhuma verificação para garantir isso.
+   * Cria uma máquina que emite ingressos de um dado
+   * preço. Note que o preço deve ser maior que zero,
+   * e não tem nenhuma verificação para garantir isso.
    */
   public MaquinaIngressos(int custoIngresso)
   {
@@ -608,6 +618,7 @@ Abaixo está o código do construtor da classe `MaquinaIngressos`.
       total = 0;
   }
 ```
+:::
 :::
 
 ::: {.column width="30%"}
@@ -818,7 +829,7 @@ Repare que é diferente do **tempo de vida de um atributo**.
 - O tempo de vida de um atributo é o mesmo do objeto.
 - Ou seja, ele existe a partir do momento que o objeto é criado e até ele ser destruído.
 
-. . .
+## 
 
 ::: {.callout-tip title="Conceito" icon=false}
 O **escopo**  de uma variável define o trecho de código a partir do qual a variável pode ser acessada.
@@ -830,20 +841,26 @@ O **escopo**  de uma variável define o trecho de código a partir do qual a var
 O **tempo de vida** de uma variável indica quanto tempo ela vai existir até ser destruída.
 :::
 
-## {.smaller}
+## 
 
 ::: {.callout-note title="Exercício" icon=false}
 A qual classe pertence o construtor abaixo?
+
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false" }
 public Estudante(String nome)
 ```
 :::
+:::
 
 ::: {.callout-note title="Exercício" icon=false}
 Quantos parâmetros tem o construtor abaixo e quais são seus tipos?
+
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
 public Livro(String titulo, double preco)
 ```
+:::
 :::
 
 ::: {.callout-note title="Exercício" icon=false}
@@ -865,9 +882,12 @@ Repare que os nomes que escolhemos para os atributos e parâmetros indicam para 
 Como vocês já aprenderam em disciplinas anteriores de programação, nós usamos o operador `=` para [atribuir]{.alert} valores a variáveis.
 
 - Assim, o comando:
+
+  ::: {.halfincfontsize}
   ```{.java code-line-numbers="false" } 
   preco = custoIngresso;
   ```
+  :::
   Indica que o valor do parâmetro `custoIngresso` será copiado para o atributo `preco`.
 - [Dica]{.alert}:
   - Geralmente a gente lê o comando acima assim: *"preço igual a custo do ingresso"*
@@ -907,7 +927,7 @@ Em Java, o tipo do resultado da expressão tem que ser **o mesmo tipo** da vari�
 **Comandos de atribuição** guardam os valores representados pelo lado direito do comando na variável nomeada do lado esquerdo.
 :::
 
-## {.smaller}
+## 
 
 ::: {.callout-note title="Exercício" icon=false}
 Suponha que uma classe `Cachorro` tem um atributo `nome`.
@@ -918,9 +938,12 @@ Escreva o comando de atribuição que inicializa o atributo `nome`, sabendo que 
 
 ::: {.callout-note title="Exercício" icon=false}
 A linha de código abaixo cria um objeto, chamando o construtor da classe `Date`.
+
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
   new Date("Setembro", 1, 2023)
 ```
+:::
 Você conseguiria escrever a assinatura do construtor da classe `Date`?
 Obs.: escolha nomes representativos para os parâmetros.
 :::
@@ -951,10 +974,11 @@ Veja, por exemplo, a implementação do método `obterPreco`.
 - Vemos que os métodos têm duas partes: a **assinatura** e o **corpo** do método.
 - Vemos também que antes da assinatura há um comentáro que descreve o método.
 
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
 public class MaquinaIngressos
 {
-  // atributos ommitidos
+  // atributos omitidos
   // construtor omitido
   /**
    * Retorna o preço do ingresso.
@@ -965,13 +989,15 @@ public class MaquinaIngressos
   }  
   // métodos restantes omitidos
 ```
-. . .
+:::
+
+## {.smaller}
 
 ::: {.callout-tip title="Conceito" icon=false}
 Métodos são formados por duas partes: assinatura e corpo.
 :::
 
-## {.smaller}
+. . .
 
 Repare que a assinatura do método se parece um pouco com a declaração de atributo.
 
@@ -986,7 +1012,7 @@ O corpo do método, que é o que fica entre chaves `{` `}`, pode conter **declar
 - Declarações servem para criar variáveis temporárias adicionais.
 - E os comandos são as ações feitas pelo método.
 
-. . .
+## {.smaller}
 
 Nós chamamos de [bloco de código]{.alert} o conjunto de declarações e comandos que ficam entre um par de chaves.
 
@@ -1005,10 +1031,13 @@ Mas como podemos diferenciar um contrutor de um método?
 
 - Note que **construtores não têm tipo de retorno** enquanto métodos têm
   - Obs.: o tipo de retorno aparece antes do nome do método.
+
+  ::: {.halfincfontsize}
   ```{.java code-line-numbers="false"}
   public MaquinaIngressos(int custoIngresso)
   public int obterPreco()
   ```
+  :::
 - Além disso, **construtores possuem o mesmo nome da classe**.
 
 ## {.smaller}
@@ -1049,7 +1078,7 @@ Métodos de acesso têm um comando de retorno.
 
 - Porque eles retornam, ou repassam, uma informação do objeto para quem chamou o método.
 
-## {.smaller}
+## 
 
 :::: {.columns}
 
@@ -1077,7 +1106,7 @@ Em inglês, usamos a palavra `get` em vez de `obter`.
 **Métodos de acesso** retornam informações sobre o estado de um objeto.
 :::
 
-## {.smaller}
+## 
 
 ::: {.callout-note title="Exercício" icon=false}
 Compare as assinaturas e os corpos dos métodos `obterSaldo` e `obterPreco`.
@@ -1096,7 +1125,7 @@ Qual seria a pergunta feita ao objeto máquina de ingressos na chamada do métod
 Como você acha que seria a implementação de um método `obterTotal`?
 :::
 
-. . .
+##
 
 ::: {.callout-note title="Exercício" icon=false}
 Experimente excluir o comando de retorno do método `obterPreco`.
@@ -1162,7 +1191,7 @@ Em inglês, assim como os métodos de acesso começam com `get`, os métodos mod
 ::::
 
 
-## {.smaller}
+## 
 
 ::: {.callout-tip title="Conceito" icon=false}
 **Métodos modificadores** mudam o estado de um objeto.
@@ -1186,6 +1215,7 @@ Vamos analisar agora o código do método `inserirDinheiro`.
 
 . . .
 
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
   /**
    * Recebe uma quantidade de dinheiro de um cliente.
@@ -1195,6 +1225,7 @@ Vamos analisar agora o código do método `inserirDinheiro`.
       saldo = saldo + quantidade;
   }
 ```
+:::
 
 . . .
 
@@ -1204,13 +1235,16 @@ Repare que o método tem retorno do tipo [`void`]{.alert}.
 - No BlueJ percemos que a diferença é que não aparece a caixa de diálogo quando chamamos métodos desse tipo.
 - A diferença no corpo do método é que ele **não tem comando de retorno**.
 
-## {.smaller}
+## 
 
 ::: {.callout-note title="Exercício" icon=false}
 Avaliando apenas a assinatura abaixo, você saberia dizer se ela é de um construtor ou de um método?
+
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
   public void setPreco(int custo)
 ```
+:::
 :::
 
 . . .
@@ -1350,13 +1384,16 @@ Outra linha diferente é a última chamada do método `println`.
 :::
 
 
-## {.smaller}
+## 
 
 ::: {.callout-note title="Exercício" icon=false}
 O que exatamente será exibido na tela pelo comando abaixo.
+
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
   System.out.println("Orgulho de ser UFLA!")
 ```
+:::
 :::
 
 . . .
@@ -1364,9 +1401,12 @@ O que exatamente será exibido na tela pelo comando abaixo.
 ::: {.callout-note title="Exercício" icon=false}
 Adicione um método `imprimirPreco` à classe `MaquinaIngressos`.
 O método deve ter retorno `void`, não ter nenhum parâmetro e exibir uma mensagem como a abaixo.
+
+::: {.halfincfontsize}
 ```
   O preco do ingresso é X centavos
 ```
+:::
 Onde no lugar de X deve aparecer o valor do atributo `preco`.
 :::
 
