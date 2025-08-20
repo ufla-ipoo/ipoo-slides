@@ -48,7 +48,7 @@ Corrigindo isso, teríamos um software que realmente poderia servir de base para
 
 Antes de analisarmos o código, **experimente** criar uma máquina de ingressos e chamar seus métodos e **verifique o que funciona de forma diferente**.
 
-- Veja que há um novo método `retornarTroco`. Veja o que acontece quando ele é chamado.
+- Veja que há um novo método `retornarTroco`. Verifique o que acontece quando ele é chamado.
 
 # Comando Condicional {background-color="#40666e"}
 
@@ -250,9 +250,11 @@ Por exemplo:
 
 . . .
 
+::: {.halfincfontsize}
 ::: {.callout-note title="Cuidado" appearance="simple" icon=false}
 Se você declarar uma variável local (ou um parâmetro) com o mesmo nome de um atributo, você não conseguirá acessar o atributo diretamente.
 No capítulo 3 aprenderemos um jeito de lidar com isso, se necessário.
+:::
 :::
 
 ##
