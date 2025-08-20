@@ -34,7 +34,19 @@ Lembre-se que para ter presença na aula prática é necessário.
 
 ::: {.nonincremental}
 
-Para fazer os exercícios, baixe o projeto [maquina-ingressos-ingenua](https://github.com/ufla-ipoo/maquina-ingressos-ingenua).
+Para fazer os exercícios, baixe o projeto [maquina-ingressos-ingenua](https://github.com/ufla-ipoo/maquina-ingressos-ingenua) original da aula anterior.
+
+- Você pode estar se perguntando se não seria melhor usar o projeto que você alterou ao estudar a 
+  aula teórica ANP.
+- Se tiver acesso ao projeto pode utilizá-lo, mas como a entrega foi feita no Google Forms, não é
+  possível baixá-lo de lá.
+- De todo modo as alterações que faremos aqui nessa aula não dependem do que você tinha feito
+  na aula teórica.
+:::
+
+##
+
+::: {.nonincremental}
 
 ::: {.callout-note title="Exercício 1.1" icon=false}
 Modifique o construtor da classe `MaquinaIngressos` de forma que ele não receba mais parâmetros.
@@ -61,7 +73,7 @@ Teste as alterações criando máquinas usando os dois construtores.
 Crie um método na classe `MaquinaIngressos` que retorne o valor do total de dinheiro arrecadado na máquina (o valor do atributo `total`). 
 Ao escolher o nome do método, siga a convenção de nomenclatura da classe.
 
-Acrescente um comentário no método dizendo se esse é um *método de acesso* ou um *método modificador*, justificando sua resposta.
+Acrescente um comentário no método dizendo se esse é um *método de acesso* ou um *método modificador* e justificando sua resposta.
 :::
 
 ::: {.callout-note title="Exercício 1.4" icon=false}
@@ -69,7 +81,7 @@ Para simular a operação de remover dinheiro da máquina de ingressos, crie um 
 O método deve ter tipo de retorno `void` e deve somente mudar o valor do `total` para zero.
 Avalie se o método precisa receber algum parâmetro.
 
-Acrescente um comentário no método dizendo se esse é um *método de acesso* ou um *método modificador*, justificando sua resposta.
+Acrescente um comentário no método dizendo se esse é um *método de acesso* ou um *método modificador* e justificando sua resposta.
 
 Por fim, teste sua implementação inserindo dinheiro na máquina, comprando ingresso, verificando o total e então esvaziando a máquina e verificando o total novamente. 
 :::
@@ -151,7 +163,7 @@ Os exercícios a seguir são do **projeto da [nave](https://github.com/ufla-ipoo
 . . .
 
 ::: {.nonincremental}
-Fazendo esses os exercícios você terá um **jogo mais interessante**:
+Fazendo esses exercícios você terá um **jogo mais interessante**:
 
 - O nível de proteção vai variar a cada vez que começa o jogo.
 - Os tiros do inimigo terão velocidades diferentes.
@@ -173,7 +185,7 @@ Vamos deixar a dificuldade do jogo um pouco imprevisível.
 
 Jogue o jogo e reinicie-o algumas vezes ao morrer.
 
-- Deu certo, conforme esperado? Senão, o que ficou faltando?
+- Deu certo, conforme esperado? Senão, corrija o que ficou faltando.
 :::
 
 :::
@@ -183,14 +195,14 @@ Jogue o jogo e reinicie-o algumas vezes ao morrer.
 ::: {.nonincremental}
 
 ::: {.callout-note title="Exercício 2.2 - Tiros variados" icon=false}
-A gente tinha facilitado as coisas colocando o campo de proteção.
+A gente tinha facilitado as coisas colocando o nível de proteção.
 
 - Agora vamos dificultar um pouco.
 
 Vamos fazer com que cada tiro do inimigo possa ter uma velocidade diferente.
 
 - A classe `Tiro` sabe quando um tiro é do inimigo ou da nave.
-- Altere então o construtor da classe `Tiro`  de forma que a velocidade do tiro do inimigo (*apenas dele*) possa ser de 1 a 5 vezes mais rápida que a velocidade normal (valor sorteado aleatoriamente).
+- Altere então o construtor da classe `Tiro`  de forma que a velocidade do tiro do inimigo (**apenas dele**) possa ser de 1 a 5 vezes mais rápida que a velocidade normal (valor sorteado aleatoriamente).
 
 Jogue o jogo e teste a alteração.
 
@@ -219,22 +231,31 @@ Obs.: os exercícios seguintes são **opcionais**.
 Faça as alterações a seguir na classe `Placar`:
 
 - Crie um novo atributo chamado `nivelAtual`.
-- Inicialize o novo atributo com valor 1 dentro do método `inicializar`.
+- Inicialize o novo atributo com valor `1` dentro do método `inicializar`.
 - Altere o método `contarMorteInimigo` de forma que, a cada 500 pontos, o nível atual seja incrementado em 1.
-  - Dica: Basta acrescentar uma condição que verifique o resto da divisão por zero.
-    ```{.java code-line-numbers="false"}
-    if (pontos % 500 == 0) {
-        nivelAtual = nivelAtual + 1
-    }
-    ```
+  
+  - Dica: basta acrescentar uma condição que verifique o resto da divisão por zero como mostrado abaixo.
+
+::: {.halfincfontsize}
+  ```{.java code-line-numbers="false"}
+  if (pontos % 500 == 0) {
+      nivelAtual = nivelAtual + 1
+  }
+  ```
+:::
+
 - Crie um método de acesso que retorne o nível atual.
 
 Agora, precisamos que o jogador consiga saber em que nível está.
 
-- Para isso, procure o método `desenharPlacar` em `Cenario` e encontre a linha abaixo:
+- Para isso, procure o método `desenharPlacar` na classe `Cenario` e encontre a linha abaixo:
+
+::: {.halfincfontsize}
   ```{.java code-line-numbers="false"}
   g.drawString("Pontos: " + placar.getPontos(), posX, posY);
   ```
+:::
+
 - Veja que o primeiro argumento passado para o método `drawString` é a String que aparece na tela com o valor do placar (ex: `Pontos: 150`). 
   - Concatene à String passada a palavra *nivel* e o valor do nível atual (usando o método de consulta que você criou na classe `Placar`).
 

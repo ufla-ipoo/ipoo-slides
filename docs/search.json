@@ -2629,91 +2629,91 @@
     "href": "cap2-2.html#section",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Para fazer os exercícios, baixe o projeto maquina-ingressos-ingenua.\n\n\n\n\nExercício 1.1\n\n\nModifique o construtor da classe MaquinaIngressos de forma que ele não receba mais parâmetros. Em vez disso, o preço dos ingressos deve ser fixado em 1000 centavos (R$ 10,00).\nCom essa alteração, o que muda na hora de criar uma máquina de ingressos no BlueJ?\n\n\n\n\n\n\n\n\nExercício 1.2\n\n\nAltere agora a classe de forma que ela passe a ter dois construtores. Um que recebe o preço do ingresso por parâmetro e outro que não recebe nenhum parâmetro (neste caso, escolha um valor fixo padrão para o preço dos ingressos).\nTeste as alterações criando máquinas usando os dois construtores."
+    "text": "Para fazer os exercícios, baixe o projeto maquina-ingressos-ingenua original da aula anterior.\n\nVocê pode estar se perguntando se não seria melhor usar o projeto que você alterou ao estudar a aula teórica ANP.\nSe tiver acesso ao projeto pode utilizá-lo, mas como a entrega foi feita no Google Forms, não é possível baixá-lo de lá.\nDe todo modo as alterações que faremos aqui nessa aula não dependem do que você tinha feito na aula teórica."
   },
   {
     "objectID": "cap2-2.html#section-1",
     "href": "cap2-2.html#section-1",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 1.3\n\n\nCrie um método na classe MaquinaIngressos que retorne o valor do total de dinheiro arrecadado na máquina (o valor do atributo total). Ao escolher o nome do método, siga a convenção de nomenclatura da classe.\nAcrescente um comentário no método dizendo se esse é um método de acesso ou um método modificador, justificando sua resposta.\n\n\n\n\n\n\n\n\nExercício 1.4\n\n\nPara simular a operação de remover dinheiro da máquina de ingressos, crie um método chamado esvaziar na classe MaquinaIngressos. O método deve ter tipo de retorno void e deve somente mudar o valor do total para zero. Avalie se o método precisa receber algum parâmetro.\nAcrescente um comentário no método dizendo se esse é um método de acesso ou um método modificador, justificando sua resposta.\nPor fim, teste sua implementação inserindo dinheiro na máquina, comprando ingresso, verificando o total e então esvaziando a máquina e verificando o total novamente."
+    "text": "Exercício 1.1\n\n\nModifique o construtor da classe MaquinaIngressos de forma que ele não receba mais parâmetros. Em vez disso, o preço dos ingressos deve ser fixado em 1000 centavos (R$ 10,00).\nCom essa alteração, o que muda na hora de criar uma máquina de ingressos no BlueJ?\n\n\n\n\n\n\n\n\nExercício 1.2\n\n\nAltere agora a classe de forma que ela passe a ter dois construtores. Um que recebe o preço do ingresso por parâmetro e outro que não recebe nenhum parâmetro (neste caso, escolha um valor fixo padrão para o preço dos ingressos).\nTeste as alterações criando máquinas usando os dois construtores."
   },
   {
     "objectID": "cap2-2.html#section-2",
     "href": "cap2-2.html#section-2",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 1.5\n\n\nAo imprimir um ingresso você deve ter notado que aparece o texto Ingressos & Cia, que seria o nome da empresa que vende os ingressos. Vamos agora permitir que cada máquina possa vender ingressos de uma empresa diferente. Repare que, para isso, quando uma máquina é criada ela precisará guardar o nome da empresa.\nComo podemos fazer isso? (Pense na solução antes de continuar.)\n\nVeja que basta você alterar a classe MaquinaIngressos fazendo o seguinte:\n\nCrie um novo atributo para guardar o nome da empresa.\nReceba o nome da empresa por parâmetro nos dois construtores da classe e guarde a informação no novo atributo.\nAltere o método imprimirIngresso para que ele exiba o nome da empresa em vez do texto Ingressos & Cia.\nPara que o código fique mais completo, crie também um método de acesso que retorne o nome da empresa."
+    "text": "Exercício 1.3\n\n\nCrie um método na classe MaquinaIngressos que retorne o valor do total de dinheiro arrecadado na máquina (o valor do atributo total). Ao escolher o nome do método, siga a convenção de nomenclatura da classe.\nAcrescente um comentário no método dizendo se esse é um método de acesso ou um método modificador e justificando sua resposta.\n\n\n\n\n\n\n\n\nExercício 1.4\n\n\nPara simular a operação de remover dinheiro da máquina de ingressos, crie um método chamado esvaziar na classe MaquinaIngressos. O método deve ter tipo de retorno void e deve somente mudar o valor do total para zero. Avalie se o método precisa receber algum parâmetro.\nAcrescente um comentário no método dizendo se esse é um método de acesso ou um método modificador e justificando sua resposta.\nPor fim, teste sua implementação inserindo dinheiro na máquina, comprando ingresso, verificando o total e então esvaziando a máquina e verificando o total novamente."
   },
   {
     "objectID": "cap2-2.html#section-3",
     "href": "cap2-2.html#section-3",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 1.6\n\n\nPara evitar a ação de cambistas, as empresas que vendem ingressos pediram que o nome do comprador seja impresso junto com o ingresso.\nComo você pode tratar isso fazendo alterações apenas no método imprimirIngresso?"
+    "text": "Exercício 1.5\n\n\nAo imprimir um ingresso você deve ter notado que aparece o texto Ingressos & Cia, que seria o nome da empresa que vende os ingressos. Vamos agora permitir que cada máquina possa vender ingressos de uma empresa diferente. Repare que, para isso, quando uma máquina é criada ela precisará guardar o nome da empresa.\nComo podemos fazer isso? (Pense na solução antes de continuar.)\n\nVeja que basta você alterar a classe MaquinaIngressos fazendo o seguinte:\n\nCrie um novo atributo para guardar o nome da empresa.\nReceba o nome da empresa por parâmetro nos dois construtores da classe e guarde a informação no novo atributo.\nAltere o método imprimirIngresso para que ele exiba o nome da empresa em vez do texto Ingressos & Cia.\nPara que o código fique mais completo, crie também um método de acesso que retorne o nome da empresa."
   },
   {
     "objectID": "cap2-2.html#section-4",
     "href": "cap2-2.html#section-4",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 1.7 - Desafio\n\n\nAltere o método imprimirIngresso de forma que o preço do ingresso seja exibido em reais, em vez de centavos. O preço deve aparecer conforme o exemplo abaixo.\n##################\n# Ingressos & Cia \n# Ingresso\n# R$ 5,00\n##################\nObservações:\n\nO valor do ingresso deve continuar sendo guardado em centavos. A alteração deve ser feita somente na hora de exibir os dados do ingresso na tela.\nPesquise na internet sobre como uma String pode ser formatada em Java de forma que o valor sempre apareça com duas casas decimais e com vírgula como separador dos decimais."
+    "text": "Exercício 1.6\n\n\nPara evitar a ação de cambistas, as empresas que vendem ingressos pediram que o nome do comprador seja impresso junto com o ingresso.\nComo você pode tratar isso fazendo alterações apenas no método imprimirIngresso?"
   },
   {
     "objectID": "cap2-2.html#section-5",
     "href": "cap2-2.html#section-5",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto maquina-ingressos-ingenua da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar);"
+    "text": "Exercício 1.7 - Desafio\n\n\nAltere o método imprimirIngresso de forma que o preço do ingresso seja exibido em reais, em vez de centavos. O preço deve aparecer conforme o exemplo abaixo.\n##################\n# Ingressos & Cia \n# Ingresso\n# R$ 5,00\n##################\nObservações:\n\nO valor do ingresso deve continuar sendo guardado em centavos. A alteração deve ser feita somente na hora de exibir os dados do ingresso na tela.\nPesquise na internet sobre como uma String pode ser formatada em Java de forma que o valor sempre apareça com duas casas decimais e com vírgula como separador dos decimais."
   },
   {
     "objectID": "cap2-2.html#section-6",
     "href": "cap2-2.html#section-6",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Os exercícios a seguir são do projeto da nave, que você já trabalhou no capítulo anterior.\n\nEles servem para reforçar os conceitos e, ao mesmo tempo, para conhecer mais sobre a linguagem Java.\n\n\n\n\nFazendo esses os exercícios você terá um jogo mais interessante:\n\nO nível de proteção vai variar a cada vez que começa o jogo.\nOs tiros do inimigo terão velocidades diferentes.\nE o inimigo ficará mais rápido a cada mudança de nível (a cada 500 pontos)."
+    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto maquina-ingressos-ingenua da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar);"
   },
   {
     "objectID": "cap2-2.html#section-7",
     "href": "cap2-2.html#section-7",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 2.1 - Nível de proteção variável\n\n\nVamos deixar a dificuldade do jogo um pouco imprevisível.\n\nCrie um método na classe Nave chamado gerarNivelDeProtecao.\nDentro desse método faça com que o atributo nivelDeProtecao receba um valor aleatório entre 0 e 140.\n\nDica: Estude como o objeto da classe Random é usado na classe Inimigo.\nRepare todos os lugares onde ele é usado na classe Inimigo e veja o que precisa ser feito de forma similar na classe Nave.\n\nAltere então a inicialização do atributo nivelDeProtecao, retirando o código atual que o inicializa com 100 e usando o retorno do método gerarNivelDeProtecao.\n\nJogue o jogo e reinicie-o algumas vezes ao morrer.\n\nDeu certo, conforme esperado? Senão, o que ficou faltando?"
+    "text": "Os exercícios a seguir são do projeto da nave, que você já trabalhou no capítulo anterior.\n\nEles servem para reforçar os conceitos e, ao mesmo tempo, para conhecer mais sobre a linguagem Java.\n\n\n\n\nFazendo esses exercícios você terá um jogo mais interessante:\n\nO nível de proteção vai variar a cada vez que começa o jogo.\nOs tiros do inimigo terão velocidades diferentes.\nE o inimigo ficará mais rápido a cada mudança de nível (a cada 500 pontos)."
   },
   {
     "objectID": "cap2-2.html#section-8",
     "href": "cap2-2.html#section-8",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 2.2 - Tiros variados\n\n\nA gente tinha facilitado as coisas colocando o campo de proteção.\n\nAgora vamos dificultar um pouco.\n\nVamos fazer com que cada tiro do inimigo possa ter uma velocidade diferente.\n\nA classe Tiro sabe quando um tiro é do inimigo ou da nave.\nAltere então o construtor da classe Tiro de forma que a velocidade do tiro do inimigo (apenas dele) possa ser de 1 a 5 vezes mais rápida que a velocidade normal (valor sorteado aleatoriamente).\n\nJogue o jogo e teste a alteração.\n\nE aí, ficou mais divertido?"
+    "text": "Exercício 2.1 - Nível de proteção variável\n\n\nVamos deixar a dificuldade do jogo um pouco imprevisível.\n\nCrie um método na classe Nave chamado gerarNivelDeProtecao.\nDentro desse método faça com que o atributo nivelDeProtecao receba um valor aleatório entre 0 e 140.\n\nDica: Estude como o objeto da classe Random é usado na classe Inimigo.\nRepare todos os lugares onde ele é usado na classe Inimigo e veja o que precisa ser feito de forma similar na classe Nave.\n\nAltere então a inicialização do atributo nivelDeProtecao, retirando o código atual que o inicializa com 100 e usando o retorno do método gerarNivelDeProtecao.\n\nJogue o jogo e reinicie-o algumas vezes ao morrer.\n\nDeu certo, conforme esperado? Senão, corrija o que ficou faltando."
   },
   {
     "objectID": "cap2-2.html#section-9",
     "href": "cap2-2.html#section-9",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Nosso objetivo agora é fazer com que o inimigo fique mais rápido à medida que avançamos no jogo.\n\nA ideia é que o jogador comece no nível 1 e mude de nível a cada 500 pontos.\nE, a cada nível, o inimigo fica mais rápido.\nPara tratar isso, vamos fazer os próximos dois exercícios.\n\n\nObs.: os exercícios seguintes são opcionais."
+    "text": "Exercício 2.2 - Tiros variados\n\n\nA gente tinha facilitado as coisas colocando o nível de proteção.\n\nAgora vamos dificultar um pouco.\n\nVamos fazer com que cada tiro do inimigo possa ter uma velocidade diferente.\n\nA classe Tiro sabe quando um tiro é do inimigo ou da nave.\nAltere então o construtor da classe Tiro de forma que a velocidade do tiro do inimigo (apenas dele) possa ser de 1 a 5 vezes mais rápida que a velocidade normal (valor sorteado aleatoriamente).\n\nJogue o jogo e teste a alteração.\n\nE aí, ficou mais divertido?"
   },
   {
     "objectID": "cap2-2.html#section-10",
     "href": "cap2-2.html#section-10",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "(OPCIONAL) Exercício 2.3 - Tratando níveis\n\n\nFaça as alterações a seguir na classe Placar:\n\nCrie um novo atributo chamado nivelAtual.\nInicialize o novo atributo com valor 1 dentro do método inicializar.\nAltere o método contarMorteInimigo de forma que, a cada 500 pontos, o nível atual seja incrementado em 1.\n\nDica: Basta acrescentar uma condição que verifique o resto da divisão por zero.\nif (pontos % 500 == 0) {\n    nivelAtual = nivelAtual + 1\n}\n\nCrie um método de acesso que retorne o nível atual.\n\nAgora, precisamos que o jogador consiga saber em que nível está.\n\nPara isso, procure o método desenharPlacar em Cenario e encontre a linha abaixo:\ng.drawString(\"Pontos: \" + placar.getPontos(), posX, posY);\nVeja que o primeiro argumento passado para o método drawString é a String que aparece na tela com o valor do placar (ex: Pontos: 150).\n\nConcatene à String passada a palavra nivel e o valor do nível atual (usando o método de consulta que você criou na classe Placar).\n\n\nJogue o jogo e teste suas alterações."
+    "text": "Nosso objetivo agora é fazer com que o inimigo fique mais rápido à medida que avançamos no jogo.\n\nA ideia é que o jogador comece no nível 1 e mude de nível a cada 500 pontos.\nE, a cada nível, o inimigo fica mais rápido.\nPara tratar isso, vamos fazer os próximos dois exercícios.\n\n\nObs.: os exercícios seguintes são opcionais."
   },
   {
     "objectID": "cap2-2.html#section-11",
     "href": "cap2-2.html#section-11",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "(OPCIONAL) Exercício 2.4 - Inimigo mais rápido\n\n\nVamos agora fazer com que o inimigo fique mais rápido a cada mudança de nível.\nQuando o inimigo morre, o método inicializar da classe Inimigo é chamado para que ele viva novamente.\n\nVamos alterar esse método para que ele receba o nível atual do jogo e defina a velocidade do inimigo de acordo com o nível.\n\nPara isso: crie um parâmetro no método para receber o nível atual.\nE altere a linha que define a velocidade de forma que ela seja igual a 10 no primeiro nível, 20 no segundo nível e assim sucessivamente.\n\n\nPrecisaremos alterar agora as chamadas do método inicializar do inimigo, passando o nível atual.\n\nNa própria classe Inimigo o método é chamado no construtor. Altere a chamada passando o valor 1 como o nível atual.\nO método inicializar do inimigo é chamado também dentro do método reiniciarInimigo da classe Cenario. Altere a chamada passando o valor do nível atual (usando o objeto placar).\n\nSe você testar as alterações feitas até agora, verá que, quando o jogo reinicia, a velocidade do inimigo no primeiro nível não fica correta.\n\nPara corrigir isso, basta alterar o método inicializar da classe Cenario de forma que o placar seja inicializado antes do inimigo.\n\nDica: enquanto estiver testando, para agilizar, faça com que o nível mude a cada 100 pontos em vez de 500. Mas não esqueça de voltar para 500 antes de terminar."
+    "text": "(OPCIONAL) Exercício 2.3 - Tratando níveis\n\n\nFaça as alterações a seguir na classe Placar:\n\nCrie um novo atributo chamado nivelAtual.\nInicialize o novo atributo com valor 1 dentro do método inicializar.\nAltere o método contarMorteInimigo de forma que, a cada 500 pontos, o nível atual seja incrementado em 1.\n\nDica: basta acrescentar uma condição que verifique o resto da divisão por zero como mostrado abaixo.\n\n\n\nif (pontos % 500 == 0) {\n    nivelAtual = nivelAtual + 1\n}\n\n\nCrie um método de acesso que retorne o nível atual.\n\nAgora, precisamos que o jogador consiga saber em que nível está.\n\nPara isso, procure o método desenharPlacar na classe Cenario e encontre a linha abaixo:\n\n\ng.drawString(\"Pontos: \" + placar.getPontos(), posX, posY);\n\n\nVeja que o primeiro argumento passado para o método drawString é a String que aparece na tela com o valor do placar (ex: Pontos: 150).\n\nConcatene à String passada a palavra nivel e o valor do nível atual (usando o método de consulta que você criou na classe Placar).\n\n\nJogue o jogo e teste suas alterações."
   },
   {
     "objectID": "cap2-2.html#section-12",
     "href": "cap2-2.html#section-12",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto nave da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar);"
+    "text": "(OPCIONAL) Exercício 2.4 - Inimigo mais rápido\n\n\nVamos agora fazer com que o inimigo fique mais rápido a cada mudança de nível.\nQuando o inimigo morre, o método inicializar da classe Inimigo é chamado para que ele viva novamente.\n\nVamos alterar esse método para que ele receba o nível atual do jogo e defina a velocidade do inimigo de acordo com o nível.\n\nPara isso: crie um parâmetro no método para receber o nível atual.\nE altere a linha que define a velocidade de forma que ela seja igual a 10 no primeiro nível, 20 no segundo nível e assim sucessivamente.\n\n\nPrecisaremos alterar agora as chamadas do método inicializar do inimigo, passando o nível atual.\n\nNa própria classe Inimigo o método é chamado no construtor. Altere a chamada passando o valor 1 como o nível atual.\nO método inicializar do inimigo é chamado também dentro do método reiniciarInimigo da classe Cenario. Altere a chamada passando o valor do nível atual (usando o objeto placar).\n\nSe você testar as alterações feitas até agora, verá que, quando o jogo reinicia, a velocidade do inimigo no primeiro nível não fica correta.\n\nPara corrigir isso, basta alterar o método inicializar da classe Cenario de forma que o placar seja inicializado antes do inimigo.\n\nDica: enquanto estiver testando, para agilizar, faça com que o nível mude a cada 100 pontos em vez de 500. Mas não esqueça de voltar para 500 antes de terminar."
   },
   {
     "objectID": "cap2-4.html#sobre-as-aulas-práticas",
@@ -4884,5 +4884,12 @@
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
     "text": "Como você já viu na aula anterior, para que você tenha a presença\n\nconsiderada nas aula em formato ANP (Atividade Não-Presencial),\nvocê precisa demonstrar que realmente estudou o conteúdo.\n\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nPara ter presença nessa aula você deve responder, no Campus Virtual, aos quizes presentes nesses slides.\nVocê deve também enviar o projeto maquina-ingressos-ingenua como ele ficou após terem sido feitas todas as alterações pedidas ao longo da aula."
+  },
+  {
+    "objectID": "cap2-2.html#section-13",
+    "href": "cap2-2.html#section-13",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto nave da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar);"
   }
 ]
