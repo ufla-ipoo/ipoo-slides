@@ -36,7 +36,7 @@
 - **Capítulo 4**
   - [Aula 4.1 - Teórica](cap4-1.html)
   - [Aula 4.2 - Prática (Tutorial do Greenfoot)](greenfoot-tutorial.html)
-  - [Aula 4.2 - Prática (exercício)](cap4-2.html)
+  - [Aula 4.2 - Prática (exercício)](https://github.com/ufla-ipoo/canal)
   - [Aula 4.3 - Teórica](cap4-3.html)
   - [Aula 4.4 - Prática](https://github.com/ufla-ipoo/produtos)
 
