@@ -1782,7 +1782,7 @@
     "href": "cap2-1.html#observações-sobre-o-livro",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "Observações sobre o livro",
-    "text": "Observações sobre o livro\nGostaria de ressaltar algumas observações sobre o livro:\n\n\n\n\n\n\n\n\n\nPara construir os slides usei também a 6ª edição do livro (que só tem em inglês).\n\nPortanto, os slides podem ter coisas a mais ou ligeiramente diferentes que o livro.\n\nApesar do livro ser em português, todo o código nele é em inglês.\n\nNos slides vocês podem notar que traduzi todos os códigos para ficar mais fácil entender.\n\nOs exercícios no slide nem sempre são iguais aos do livro.\n\nPortanto, sigam o enunciado dos slides.\n\nNem sempre uso a mesma tradução do livro\n\nEm alguns casos por simples preferência pessoal (ex: prefiro atributo que campo).\nEm outros casos porque tentei fazer uma tradução melhor."
+    "text": "Observações sobre o livro\nGostaria de ressaltar algumas observações sobre o livro:\n\n\n\n\n\n\n\n\n\nPara construir os slides usei também a 6ª edição do livro (que só tem em inglês).\n\nPortanto, os slides podem ter coisas a mais ou ligeiramente diferentes do livro.\n\nApesar do livro ser em português, todo o código nele é em inglês.\n\nNos slides vocês podem notar que traduzi todos os códigos para ficar mais fácil entender.\n\nOs exercícios no slide nem sempre são iguais aos do livro.\n\nPortanto, sigam o enunciado dos slides.\n\nNem sempre uso a mesma tradução do livro\n\nEm alguns casos por simples preferência pessoal (ex: prefiro atributo que campo).\nEm outros casos porque tentei fazer uma tradução melhor."
   },
   {
     "objectID": "cap2-1.html#principais-conceitos-do-capítulo",
@@ -1831,7 +1831,7 @@
     "href": "cap2-1.html#section-5",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Podemos dividir o código da classe em duas partes principais.\n\nUma pequena parte externa que dá nome à classe (aparece com fundo verde no BlueJ).\nE uma parte interna muito maior que faz todo o trabalho.\n\n\nA parte externa tem o seguindo trecho de código\n\npublic class MaquinaIngressos\n{\n  // Parte interna da classe omitida\n}\n\n\n\nA parte externa de todas as classe se parecem muito, já que o objetivo é nomear a classe.\n\nPor convenção, sempre começamos o nome da classe com letra maiúscula.\nNo BlueJ, vemos que antes dessa linha há um texto azul que nos diz alguma coisa sobre a classe."
+    "text": "Podemos dividir o código da classe em duas partes principais.\n\nUma pequena parte externa que dá nome à classe (aparece com fundo verde no BlueJ).\nE uma parte interna muito maior que faz todo o trabalho.\n\n\nA parte externa tem o seguinte trecho de código\n\npublic class MaquinaIngressos\n{\n  // Parte interna da classe omitida\n}\n\n\n\nA parte externa de todas as classe se parecem muito, já que o objetivo é nomear a classe.\n\nPor convenção, sempre começamos o nome da classe com letra maiúscula.\nNo BlueJ, vemos que antes dessa linha há um texto azul que nos diz alguma coisa sobre a classe."
   },
   {
     "objectID": "cap2-1.html#palavras-chave",
@@ -1985,7 +1985,7 @@
     "href": "cap2-1.html#section-23",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "No diagrama ao lado, vemos a representação de um objeto máquina de ingressos, depois que o construtor é chamado.\n\nPodemos ver que ela foi criada com um preço de ingresso de 500 (R$ 5,00)."
+    "text": "No diagrama ao lado, vemos a representação de um objeto máquina de ingressos, depois que o construtor é chamado.\n\nPodemos ver que ela foi criada com um preço de ingresso de 500 centavos (R$ 5,00)."
   },
   {
     "objectID": "cap2-1.html#section-24",
@@ -4855,7 +4855,7 @@
     "href": "cap2-1.html#section-50",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Vamos avaliar o método passo a passo.\n  /**\n   * Imprime um ingresso.\n   * Atualiza o total coletado e reduz o saldo para zero.\n   */\n1  public void imprimirIngresso()\n  {\n    // Simula a impressão de um ingresso\n2    System.out.println(\"##################\");\n    System.out.println(\"# Ingressos & Cia \");\n    System.out.println(\"# Ingresso\");\n    System.out.println(\"# \" + preco + \" centavos.\");\n    System.out.println(\"##################\");\n    System.out.println();\n\n    // Atualiza o total coletado com o saldo\n3    total = total + saldo;\n    // Zera o saldo\n4    saldo = 0;\n  }\n\n1\n\nA assinatura indica que o método tem retorno void e não espera nenhum parâmetro.\n\n2\n\nOs primeiros seis comandos imprimem o que vemos no terminal.\n\n3\n\nO sétimo comando adiciona o saldo atual inserido pelo usuário ao total acumulado.\n\n4\n\nO último comando retorna o saldo para zero, esperando o próximo usuário."
+    "text": "Vamos avaliar o método passo a passo.\n  /**\n   * Imprime um ingresso.\n   * Atualiza o total coletado e reduz o saldo para zero.\n   */\n1  public void imprimirIngresso()\n  {\n    // Simula a impressão de um ingresso\n2    System.out.println(\"##################\");\n    System.out.println(\"# Ingressos & Cia \");\n    System.out.println(\"# Ingresso\");\n    System.out.println(\"# \" + preco + \" centavos.\");\n    System.out.println(\"##################\");\n    System.out.println();\n\n    // Atualiza o total coletado com o saldo\n3    total = total + saldo;\n    // Zera o saldo\n4    saldo = 0;\n  }\n\n1\n\nA assinatura indica que o método tem retorno void e não espera nenhum parâmetro.\n\n2\n\nOs primeiros seis comandos imprimem o que vemos no terminal.\n\n3\n\nO sétimo comando adiciona o saldo atual inserido pelo usuário ao total acumulado.\n\n4\n\nO último comando reinicializa o saldo como zero, esperando o próximo usuário."
   },
   {
     "objectID": "cap2-1.html#section-51",
@@ -4876,7 +4876,7 @@
     "href": "cap2-1.html#section-53",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nO que exatamente será exibido na tela pelo comando abaixo.\n\n  System.out.println(\"Orgulho de ser UFLA!\")\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAdicione um método imprimirPreco à classe MaquinaIngressos. O método deve ter retorno void, não ter nenhum parâmetro e exibir uma mensagem como a abaixo.\n\n  O preco do ingresso é X centavos\n\nOnde no lugar de X deve aparecer o valor do atributo preco.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nCria duas máquinas de ingressos com valores de ingresso diferentes. Ao chamar o método imprimirPreco para as duas máquinas, o texto exibido é igual ou diferente? Por que?"
+    "text": "Exercício\n\n\nO que exatamente será exibido na tela pelo comando abaixo.\n\n  System.out.println(\"Orgulho de ser UFLA!\")\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAdicione um método imprimirPreco à classe MaquinaIngressos. O método deve ter retorno void, não ter nenhum parâmetro e exibir uma mensagem como a mostrada abaixo.\n\n  O preco do ingresso é X centavos\n\nOnde no lugar de X deve aparecer o valor do atributo preco.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nCria duas máquinas de ingressos com valores de ingresso diferentes. Ao chamar o método imprimirPreco para as duas máquinas, o texto exibido é igual ou diferente? Por que?"
   },
   {
     "objectID": "cap2-1.html#section-54",

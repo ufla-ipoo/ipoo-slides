@@ -37,7 +37,7 @@ Gostaria de ressaltar algumas observações sobre o livro:
 
 ::: {.column width="70%"}
 - Para construir os slides usei também a 6ª edição do livro (que só tem em inglês).
-  - Portanto, os slides podem ter coisas a mais ou ligeiramente diferentes que o livro.
+  - Portanto, os slides podem ter coisas a mais ou ligeiramente diferentes do livro.
 - Apesar do livro ser em português, todo o código nele é em inglês.
   - Nos slides vocês podem notar que traduzi todos os códigos para ficar mais fácil entender.
 - Os exercícios no slide nem sempre são iguais aos do livro.
@@ -177,7 +177,7 @@ Podemos dividir o código da classe em duas partes principais.
 
 . . .
 
-A parte externa tem o seguindo trecho de código
+A parte externa tem o seguinte trecho de código
 
 ::: {.doublefontsize}
 ```{.java code-line-numbers="false"}
@@ -490,7 +490,7 @@ As declarações dos atributos da classe `MaquinaIngressos` são todas bem simil
 
 - Todas elas indicam que os campos são [privados]{.alert} do objeto.
   - Vamos entender melhor o que isso significa ao estudarmos o Capítulo 6.
-  - Por enquanto, basta sabermos que os **atributos** devem **sempre** ser definidos como **privados**.
+  - Por enquanto, basta sabermos que os **atributos devem sempre ser** definidos como **privados**.
 - Os três atributos são do tipo `int`.
   - `int` é uma **palavra-chave** do Java e indica que os atributos podem guardar valores que são números inteiros.
   - Como nossa máquina guarda os valores em centavos, o tipo inteiro é apropriado.
@@ -688,7 +688,7 @@ Portanto, uma das principais funções de um atributo é **"lembrar" de informa�
 ::: {.column width="60%"}
 No diagrama ao lado, vemos a representação de um objeto máquina de ingressos, depois que o construtor é chamado.
 
-- Podemos ver que ela foi criada com um preço de ingresso de 500 (R$ 5,00).
+- Podemos ver que ela foi criada com um preço de ingresso de 500 centavos (R$ 5,00).
 :::
 
 ::: {.column width="40%"}
@@ -1335,7 +1335,7 @@ Vamos avaliar o método passo a passo.
 1. A assinatura indica que o método tem retorno `void` e não espera nenhum parâmetro.
 2. Os primeiros seis comandos imprimem o que vemos no terminal.
 3. O sétimo comando adiciona o saldo atual inserido pelo usuário ao total acumulado.
-4. O último comando retorna o saldo para zero, esperando o próximo usuário.
+4. O último comando reinicializa o saldo como zero, esperando o próximo usuário.
 
 ## {.smaller}
 
@@ -1400,7 +1400,7 @@ O que exatamente será exibido na tela pelo comando abaixo.
 
 ::: {.callout-note title="Exercício" icon=false}
 Adicione um método `imprimirPreco` à classe `MaquinaIngressos`.
-O método deve ter retorno `void`, não ter nenhum parâmetro e exibir uma mensagem como a abaixo.
+O método deve ter retorno `void`, não ter nenhum parâmetro e exibir uma mensagem como a mostrada abaixo.
 
 ::: {.halfincfontsize}
 ```
