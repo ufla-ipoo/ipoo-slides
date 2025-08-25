@@ -76,6 +76,8 @@ Ao escolher o nome do método, siga a convenção de nomenclatura da classe.
 Acrescente um comentário no método dizendo se esse é um *método de acesso* ou um *método modificador* e justificando sua resposta.
 :::
 
+##
+
 ::: {.callout-note title="Exercício 1.4" icon=false}
 Para simular a operação de remover dinheiro da máquina de ingressos, crie um método chamado `esvaziar` na classe `MaquinaIngressos`.
 O método deve ter tipo de retorno `void` e deve somente mudar o valor do `total` para zero.
@@ -119,6 +121,8 @@ Veja que basta você alterar a classe `MaquinaIngressos` fazendo o seguinte:
 Para evitar a ação de cambistas, as empresas que vendem ingressos pediram que o nome do comprador seja impresso junto com o ingresso.
 
 Como você pode tratar isso fazendo alterações apenas no método `imprimirIngresso`?
+
+Faça a implementação.
 :::
 
 :::
