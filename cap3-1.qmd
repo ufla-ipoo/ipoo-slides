@@ -770,7 +770,7 @@ Com o inspetor aberto, chame os métodos do objeto, observando o atributo `strin
 No BlueJ, abra o arquivo `README.md` para entender melhor o funcionamento do projeto.
 :::
 
-. . .
+##
 
 ::: {.callout-note title="Exercício" icon=false}
 Quantas vezes você precisa chamar o método `tiqueTaque` no objeto `VisorDeRelogio` para fazer sua hora chegar a `01:00`.
@@ -1288,11 +1288,11 @@ Abra o projeto [`casa`](https://github.com/ufla-ipoo/casa) e avalie a classe `Fi
 Que tipos de objetos são criados no construtor de `Figura`?
 :::
 
+##
+
 ::: {.callout-note title="Exercício" icon=false}
 Liste todas as chamadas de métodos externos que são feitas no método `desenhar` da classe `Figura` para o objeto `Triangulo` chamado `telhado`.
 :::
-
-##
 
 ::: {.callout-note title="Exercício" icon=false}
 Remova as duas linhas abaixo do método `desenhar` da classe `Figura`, fazendo com que a definição das cores seja feita através de uma chamada de um método interno chamado `definirCor` (que você precisará criar).
@@ -1395,6 +1395,6 @@ Como você já sabe das aulas anteriores, para que você tenha a [presença]{.al
 ::: {.callout-important title="Entregas no Campus Virtual"}
 Para ter presença nessa aula você deve:
 
-- Responder, no Campus Virtual, aos quizes presentes nesses slides e enviar o projeto dos exercício de implementação 1.
+- Responder, no Campus Virtual, aos quizes presentes nesses slides e enviar o projeto do exercício de implementação 1.
 :::
 :::
