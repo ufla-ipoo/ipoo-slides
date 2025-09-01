@@ -2720,119 +2720,119 @@
     "href": "cap2-4.html#sobre-as-aulas-práticas",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "Sobre as Aulas Práticas",
-    "text": "Sobre as Aulas Práticas\n\nRelembrando:\n\nAulas práticas são importantes para o entendimento dos conceitos.\nMas, para isso, é fundamental que tenha estudado o conteúdo teórico ANP antes da aula prática.\n\n\n\n\n\n\n\n\n\nConvenção\n\n\nLembre-se que para ter presença na aula prática é necessário.\n\nResponder à chamada;\ne, também, entregar, no mínimo, 30% do exercícios propostos até o final da aula."
+    "text": "Sobre as Aulas Práticas\n\nRelembrando:\n\nAulas práticas são importantes para o entendimento dos conceitos.\nMas, para isso, é fundamental que tenha estudado o conteúdo teórico ANP antes da aula prática."
   },
   {
     "objectID": "cap2-4.html#section",
     "href": "cap2-4.html#section",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "É muito comum precisarmos implementar expressões em nossos códigos.\n\nComo cálculos usando variáveis.\nOu chamadas de métodos de variáveis que são objetos.\nO Bloco de Códigos do BlueJ pode ser muito útil para experimentarmos expressões antes de as implementarmos em nossas classes.\n\n\nTente adivinhar os resultados das expressões abaixo, antes de usar o Bloco de Códigos.\n\n2023 + 4\n\"passa\" + \"tempo\"\n\"passa\" + 9\n7 + 2 + \"tempo\"\n\"tempo\" + 7 + 2\n\"passatempo\".substring(5,6)\n\"passatempo\".substring(5,11)\n\n\n\nO que foi novidade para você nesse exercício?"
+    "text": "É muito comum precisarmos implementar expressões em nossos códigos.\n\nComo cálculos usando variáveis.\nOu chamadas de métodos de variáveis que são objetos.\nO Bloco de Códigos do BlueJ pode ser muito útil para experimentarmos expressões antes de as implementarmos em nossas classes."
   },
   {
     "objectID": "cap2-4.html#section-1",
     "href": "cap2-4.html#section-1",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "No Bloco de Códigos, quando o resultado de uma expressão é um objeto (como uma String), aparece um símbolo vermelho próximo ao resultado.\n\nVocê pode clicar duas vezes no símbolo para inspecionar o objeto.\nOu clicar uma vez para colocá-lo na bancada de objetos.\nExperimente!\n\n\nVocê pode também declarar variáveis e escrever comandos completos no Bloco de Códigos.\n\nExperimente os comandos abaixo:\nsoma = 2023 + 4;\nint soma = 0;\nsoma = 2023 + 4;\n\n\n\nSe você digitar o nome de uma variável sem ponto-e-vírgula, o Bloco de Códigos exibe seu valor.\n\nExperimente digitar, por exemplo: soma"
+    "text": "Tente adivinhar os resultados das expressões abaixo, antes de usar o Bloco de Códigos.\n\n2023 + 4\n\"passa\" + \"tempo\"\n\"passa\" + 9\n7 + 2 + \"tempo\"\n\"tempo\" + 7 + 2\n\"passatempo\".substring(5,6)\n\"passatempo\".substring(5,11)\n\n\nO que foi novidade para você nesse exercício?"
   },
   {
     "objectID": "cap2-4.html#section-2",
     "href": "cap2-4.html#section-2",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nAbra o projeto maquina-ingressos-melhor e digite o código abaixo. Veja que tem linhas que terminam com ponto-e-virgula e outras não. Preste atenção ao valor retornado pelo método obterSaldo em cada chamada.\n\nMaquinaIngressos m1 = new MaquinaIngressos(1000);\nm1.obterSaldo()\nm1.inserirDinheiro(500);\nm1.obterSaldo()\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAgora digite a linha abaixo no Bloco de Códigos.\n\nMaquinaIngressos m2 = m1;\n\nO que você acha que a chamada m2.obterSaldo() retornaria?\nExperimente!"
+    "text": "No Bloco de Códigos, quando o resultado de uma expressão é um objeto (como uma String), aparece um símbolo vermelho próximo ao resultado.\n\nVocê pode clicar duas vezes no símbolo para inspecionar o objeto.\nOu clicar uma vez para colocá-lo na bancada de objetos.\nExperimente!\n\n\nVocê pode também declarar variáveis e escrever comandos completos no Bloco de Códigos.\n\nExperimente os comandos abaixo:\nsoma = 2023 + 4;\nint soma = 0;\nsoma = 2023 + 4;\n\n\n\nSe você digitar o nome de uma variável sem ponto-e-vírgula, o Bloco de Códigos exibe seu valor.\n\nExperimente digitar, por exemplo: soma"
   },
   {
     "objectID": "cap2-4.html#section-3",
     "href": "cap2-4.html#section-3",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nAgora digite o comando abaixo\n\nm1.inserirDinheiro(500);\n\nAvalie a linha abaixo e tente adivinhar o que ela vai retornar antes de digitar o código no Bloco de Códigos.\n\nm2.obterSaldo()\n\nA resposta foi a que você esperava?\nVocê consegue imaginar alguma ligação entre m1 e m2 que explique o que está acontecendo?"
+    "text": "Exercício\n\n\nAbra o projeto maquina-ingressos-melhor e digite o código abaixo. Veja que tem linhas que terminam com ponto-e-virgula e outras não. Preste atenção ao valor retornado pelo método obterSaldo em cada chamada.\n\nMaquinaIngressos m1 = new MaquinaIngressos(1000);\nm1.obterSaldo()\nm1.inserirDinheiro(500);\nm1.obterSaldo()\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAgora digite a linha abaixo no Bloco de Códigos.\n\nMaquinaIngressos m2 = m1;\n\nO que você acha que a chamada m2.obterSaldo() retornaria?\nExperimente!"
   },
   {
     "objectID": "cap2-4.html#section-4",
     "href": "cap2-4.html#section-4",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Vamos agora começar os exercícios de implementação a serem entregues nessa semana.\nBaixe o projeto exercicio-livro.\n\nAvalie o código da classe Livro antes de começar os exercícios.\nVeja que ela tem apenas o rascunho inicial da classe, com dois atributos e um construtor.\nNos exercícios vamos completá-la."
+    "text": "Exercício\n\n\nAgora digite o comando abaixo\n\nm1.inserirDinheiro(500);\n\nAvalie a linha abaixo e tente adivinhar o que ela vai retornar antes de digitar o código no Bloco de Códigos.\n\nm2.obterSaldo()\n\nA resposta foi a que você esperava?\nVocê consegue imaginar alguma ligação entre m1 e m2 que explique o que está acontecendo?"
   },
   {
     "objectID": "cap2-4.html#section-5",
     "href": "cap2-4.html#section-5",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 1.1\n\n\nAdicione à classe Livro dois métodos, imprimirAutor e imprimirTitulo, que exibem no terminal os valores de seus atributos correspondentes.\n\n\n\n\n\n\n\n\n\nExercício 1.2\n\n\nAdicione um atibuto paginas à classe Livro para guardar a quantidade de páginas do livro. O atributo deve ser do tipo int e seu valor inicial deve ser passado para o construtor junto com o autor e o titulo. Adicione também um método de acesso obterPaginas para esse atributo.\n\n\n\n\n\n\n\n\n\n\nExercício 1.3\n\n\nOs objetos Livro são imutáveis? Escreva sua resposta no comentário da classe (que aparece antes da declaração da classe)."
+    "text": "Vamos agora começar os exercícios de implementação a serem entregues nessa semana.\nBaixe o projeto exercicio-livro.\n\nAvalie o código da classe Livro antes de começar os exercícios.\nVeja que ela tem apenas o rascunho inicial da classe, com dois atributos e um construtor.\nNos exercícios vamos completá-la."
   },
   {
     "objectID": "cap2-4.html#section-6",
     "href": "cap2-4.html#section-6",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 1.4\n\n\nAdicione um método imprimirDetalhes à classe Livro, que imprime no terminal o autor, o título e o número de páginas. Escolha como você quer que a informação apareça na tela (poderia ser tudo em uma linha, ou uma informação por linha, por exemplo). Pode ser útil explicar para o usuário o que é cada informação. Exemplo:\n\nLivro de título: A Dança dos Dragões, escrito por: George R. R. Martin (864 páginas)\n\n\n\n\n\n\n\n\n\n\nExercício 1.5\n\n\nVamos agora adicionar um atributo para representar o número de chamada do livro, que é o identificador usado na biblioteca quando queremos buscar um livro. O livro da disciplina, por exemplo, tem o número de chamada 005.133 BAR pro.\nCrie então um atributo para guardar essa informação (note que ele precisa ser do tipo String). O atributo deve ser inicializado com string vazia (\"\") no construtor. Crie um método modificador para o número de chamada, de forma que o usuário consiga defini-lo depois que o objeto estiver criado. Crie também um método de acesso para que o usuário consiga consultar o valor definido."
+    "text": "Exercício 1.1\n\n\nAdicione à classe Livro dois métodos, imprimirAutor e imprimirTitulo, que exibem no terminal os valores de seus atributos correspondentes.\n\n\n\n\n\n\n\n\n\nExercício 1.2\n\n\nAdicione um atibuto paginas à classe Livro para guardar a quantidade de páginas do livro. O atributo deve ser do tipo int e seu valor inicial deve ser passado para o construtor junto com o autor e o titulo. Adicione também um método de acesso obterPaginas para esse atributo.\n\n\n\n\n\n\n\n\n\n\nExercício 1.3\n\n\nOs objetos Livro são imutáveis? Escreva sua resposta no comentário da classe (que aparece antes da declaração da classe)."
   },
   {
     "objectID": "cap2-4.html#section-7",
     "href": "cap2-4.html#section-7",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 1.6\n\n\nModifique o método imprimirDetalhes para incluir o número de chamada do livro. Caso o livro ainda não tenha um número de chamada definido, o método deve exibir a informação NDEF (de “não definido”).\nDica: use um comando condicional e o método length da classe String para saber se o número de chamada já foi definido ou não.\n\n\n\n\n\n\n\n\n\nExercício 1.7\n\n\nAltere o método que define o número de chamada de forma que ele só aceite números de chamada que tenham pelo menos três caracteres. Caso o valor passado tenha menos que três caracteres, uma mensagem de erro deve ser exibida e o número de chamada não deve ser alterado."
+    "text": "Exercício 1.4\n\n\nAdicione um método imprimirDetalhes à classe Livro, que imprime no terminal o autor, o título e o número de páginas. Escolha como você quer que a informação apareça na tela (poderia ser tudo em uma linha, ou uma informação por linha, por exemplo). Pode ser útil explicar para o usuário o que é cada informação. Exemplo:\n\nLivro de título: A Dança dos Dragões, escrito por: George R. R. Martin (864 páginas)"
   },
   {
     "objectID": "cap2-4.html#section-8",
     "href": "cap2-4.html#section-8",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 1.8\n\n\nPor fim, vamos alterar a classe Livro para que seja possível contabilizar quantas vezes o livro já foi emprestado.\n\nCrie um atributo numeroEmprestimos do tipo int para guardar a quantidade de vezes que o livro foi emprestado.\nCrie um método emprestar que adiciona 1 ao atributo.\nCrie um método de acesso que permita consultar o número de empréstimos.\nAltere o método imprimmirDetalhes para incluir a informação do atributo criado."
+    "text": "Exercício 1.5\n\n\nVamos agora adicionar um atributo para representar o número de chamada do livro, que é o identificador usado na biblioteca quando queremos buscar um livro. O livro da disciplina, por exemplo, tem o número de chamada 005.133 BAR pro.\nCrie então um atributo para guardar essa informação (note que ele precisa ser do tipo String). O atributo deve ser inicializado com string vazia (\"\") no construtor. Crie um método modificador para o número de chamada, de forma que o usuário consiga defini-lo depois que o objeto estiver criado. Crie também um método de acesso para que o usuário consiga consultar o valor definido."
   },
   {
     "objectID": "cap2-4.html#section-9",
     "href": "cap2-4.html#section-9",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto exercicio-livro da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar)."
+    "text": "Exercício 1.6\n\n\nModifique o método imprimirDetalhes para incluir o número de chamada do livro. Caso o livro ainda não tenha um número de chamada definido, o método deve exibir a informação NDEF (de “não definido”).\nDica: use um comando condicional e o método length da classe String para saber se o número de chamada já foi definido ou não.\n\n\n\n\n\n\n\n\n\nExercício 1.7\n\n\nAltere o método que define o número de chamada de forma que ele só aceite números de chamada que tenham pelo menos três caracteres. Caso o valor passado tenha menos que três caracteres, uma mensagem de erro deve ser exibida e o número de chamada não deve ser alterado."
   },
   {
     "objectID": "cap2-4.html#section-10",
     "href": "cap2-4.html#section-10",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Agora, na segunda parte, vamos criar um novo projeto do zero no BlueJ.\nMas como todos os exercícios que vocês fizeram no BlueJ até o momento utilizaram projetos já criados, antes de começarmos os exercícios, veja nos slides a seguir como criar um novo projeto e uma nova classe no BlueJ."
+    "text": "Exercício 1.8\n\n\nPor fim, vamos alterar a classe Livro para que seja possível contabilizar quantas vezes o livro já foi emprestado.\n\nCrie um atributo numeroEmprestimos do tipo int para guardar a quantidade de vezes que o livro foi emprestado.\nCrie um método emprestar que adiciona 1 ao atributo.\nCrie um método de acesso que permita consultar o número de empréstimos.\nAltere o método imprimirDetalhes para incluir a informação do atributo criado."
   },
   {
     "objectID": "cap2-4.html#section-11",
     "href": "cap2-4.html#section-11",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Acesse o menu Projeto → Novo Projeto."
+    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto exercicio-livro da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar)."
   },
   {
     "objectID": "cap2-4.html#section-12",
     "href": "cap2-4.html#section-12",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Aparecerá uma caixa de diálogo na qual você informará o nome do projeto.\n\nVocê pode também mudar a pasta onde o projeto será colocado.\n\nSerá criada uma subpasta dentro dela com o nome que escolheu para o projeto.\n\nO projeto será criado, a princípio, sem nenhuma classe."
+    "text": "Agora, na segunda parte, vamos criar um novo projeto do zero no BlueJ.\nComo todos os exercícios que vocês fizeram até agora no BlueJ utilizaram projetos já criados, antes de começar os exercícios, veja nos slides a seguir como criar um novo projeto e uma nova classe no BlueJ."
   },
   {
     "objectID": "cap2-4.html#section-13",
     "href": "cap2-4.html#section-13",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Clique no botão Nova Classe….\n\nNa caixa diálogo que aparece digite um nome para a classe e clique em OK."
+    "text": "Acesse o menu Projeto → Novo Projeto."
   },
   {
     "objectID": "cap2-4.html#section-14",
     "href": "cap2-4.html#section-14",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "A nova classe aparecerá no diagrama do BlueJ.\n\nNa imagem abaixo, por exemplo, foi criada uma classe de nome Teste."
+    "text": "Aparecerá uma caixa de diálogo na qual você informará o nome do projeto.\n\nVocê pode também mudar a pasta onde o projeto será colocado.\n\nSerá criada uma subpasta dentro dela com o nome que escolheu para o projeto.\n\nO projeto será criado, a princípio, sem nenhuma classe."
   },
   {
     "objectID": "cap2-4.html#section-15",
     "href": "cap2-4.html#section-15",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Clique duas vezes na classe no diagrama para abrir o código-fonte.\n\nVeja que a classe é criada com um código inicial de exemplo.\nApague e/ou altere o código de acordo com que precisar implementar na sua classe."
+    "text": "Clique no botão Nova Classe….\n\nNa caixa diálogo que aparece digite um nome para a classe e clique em OK."
   },
   {
     "objectID": "cap2-4.html#resumo",
@@ -2846,35 +2846,35 @@
     "href": "cap2-4.html#section-16",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 2.1\n\n\nCrie um novo projeto chamado exercicio-aquecedor dentro do BlueJ.\n\nCrie uma classe chamada Aquecedor que contenha um único atributo, chamado temperatura, cujo tipo é double (ponto flutuante de precisão dupla).\nImplemente um construtor que não aceite parâmetros.\nO campo temperatura deve ser definido como o valor 20.0 no construtor.\nImplemente os métodos modificadores esquentar e esfriar, cujo efeito é aumentar ou diminuir o valor da temperatura em 3.0 graus, respectivamente.\nDefina um método de acesso para retornar o valor da temperatura.\n\nTeste a classe criando alguns objetos e chamando seus métodos."
+    "text": "A nova classe aparecerá no diagrama do BlueJ.\n\nNa imagem abaixo, por exemplo, foi criada uma classe de nome Teste."
   },
   {
     "objectID": "cap2-4.html#section-17",
     "href": "cap2-4.html#section-17",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 2.2\n\n\nModifique sua classe Aquecedor para definir três novos atributos de ponto flutuante de precisão dupla: min, max e incremento.\n\nOs valores de min e max devem ser definidos por parâmetros passados ​​ao construtor.\nJá o valor de incremento deve ser definido como 3.0 no construtor.\nModifique a implementação dos métodos esquentar e esfriar para que usem o valor de incremento em vez de um valor explícito de 3.0.\n\nAntes de prosseguir para o próximo exercício, verifique se tudo funciona como antes."
+    "text": "Clique duas vezes na classe no diagrama para abrir o código-fonte.\n\nVeja que a classe é criada com um código inicial de exemplo.\nApague e/ou altere o código de acordo com que precisar implementar na sua classe."
   },
   {
     "objectID": "cap2-4.html#section-18",
     "href": "cap2-4.html#section-18",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 2.3\n\n\nAgora modifique o método esquentar para que ele não permita que a temperatura seja definida para um valor maior que max.\n\nDa mesma forma, modifique esfriar para que ele não permita que a temperatura seja definida para um valor menor que min.\n\nVerifique se a classe funciona corretamente."
+    "text": "Exercício 2.1\n\n\nCrie um novo projeto chamado exercicio-aquecedor dentro do BlueJ.\n\nCrie uma classe chamada Aquecedor que contenha um único atributo, chamado temperatura, cujo tipo é double (ponto flutuante de precisão dupla).\nImplemente um construtor que não aceite parâmetros.\nO campo temperatura deve ser definido com o valor 20.0 no construtor.\nImplemente os métodos modificadores esquentar e esfriar, cujo efeito é aumentar ou diminuir o valor da temperatura em 3.0 graus, respectivamente.\nDefina um método de acesso para retornar o valor da temperatura.\n\nTeste a classe criando alguns objetos e chamando seus métodos."
   },
   {
     "objectID": "cap2-4.html#section-19",
     "href": "cap2-4.html#section-19",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 2.4\n\n\nAgora adicione um método chamado mudarIncremento, que espera um único parâmetro do tipo apropriado e o usa para definir o valor de incremento.\nMais uma vez, teste se a classe funciona como você esperaria criando alguns objetos Aquecedor dentro do BlueJ e chamando seus métodos.\nAs coisas ainda funcionam como esperado se um valor negativo for passado para o método mudarIncremento?\n\nAdicione uma verificação a este método para evitar que um valor negativo seja atribuído ao incremento."
+    "text": "Exercício 2.2\n\n\nModifique sua classe Aquecedor para definir três novos atributos de ponto flutuante de precisão dupla: min, max e incremento.\n\nOs valores de min e max devem ser definidos por parâmetros passados ​​ao construtor.\nJá o valor de incremento deve ser definido como 3.0 no construtor.\nModifique a implementação dos métodos esquentar e esfriar para que usem o valor de incremento em vez de um valor explícito de 3.0.\n\nAntes de prosseguir para o próximo exercício, verifique se tudo funciona como antes."
   },
   {
     "objectID": "cap2-4.html#section-20",
     "href": "cap2-4.html#section-20",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do seu projeto exercicio-aquecedor (compacte a pasta em um arquivo .zip para enviar)."
+    "text": "Exercício 2.3\n\n\nAgora modifique o método esquentar para que ele não permita que a temperatura seja definida para um valor maior que max.\n\nDa mesma forma, modifique o método esfriar para que ele não permita que a temperatura seja definida para um valor menor que min.\n\nVerifique se a classe funciona corretamente."
   },
   {
     "objectID": "cap3-2.html#section",
@@ -4891,5 +4891,19 @@
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
     "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto nave da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar);"
+  },
+  {
+    "objectID": "cap2-4.html#section-21",
+    "href": "cap2-4.html#section-21",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Exercício 2.4\n\n\nAgora adicione um método chamado mudarIncremento, que espera um único parâmetro do tipo apropriado e o usa para definir o valor de incremento.\nMais uma vez, teste se a classe funciona como você esperaria criando alguns objetos Aquecedor dentro do BlueJ e chamando seus métodos.\nAs coisas ainda funcionam como esperado se um valor negativo for passado para o método mudarIncremento?\n\nAdicione uma verificação a este método para evitar que um valor negativo seja atribuído ao incremento."
+  },
+  {
+    "objectID": "cap2-4.html#section-22",
+    "href": "cap2-4.html#section-22",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do seu projeto exercicio-aquecedor (compacte a pasta em um arquivo .zip para enviar)."
   }
 ]

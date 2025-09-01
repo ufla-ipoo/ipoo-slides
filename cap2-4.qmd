@@ -12,22 +12,6 @@ Relembrando:
 - **Aulas práticas são importantes** para o entendimento dos conceitos.
 - Mas, para isso, é fundamental que tenha **estudado o conteúdo teórico ANP antes** da aula prática.
 
-:::: {.columns}
-
-::: {.column width="20%"}
-![](imagens/fica_a_dica.png)
-:::
-
-::: {.column width="80%"}
-::: {.callout-note title="Convenção" appearance="simple" icon=false}
-Lembre-se que para ter presença na aula prática é necessário.
-
-- Responder à **chamada**;
-- e, **também**, entregar, no mínimo, 30% do exercícios propostos até o final da aula.
-:::
-:::
-
-::::
 :::
 
 ## {.smaller}
@@ -38,7 +22,7 @@ Lembre-se que para ter presença na aula prática é necessário.
 - Ou chamadas de métodos de variáveis que são objetos.
 - O **Bloco de Códigos** do BlueJ pode ser muito útil para experimentarmos expressões antes de as implementarmos em nossas classes.
 
-. . .
+##
 
 Tente adivinhar os resultados das expressões abaixo, antes de usar o Bloco de Códigos.
 
@@ -178,7 +162,7 @@ Livro de título: A Dança dos Dragões, escrito por: George R. R. Martin (864 p
 :::
 :::
 
-. . .
+##
 
 ::: {.callout-note title="Exercício 1.5" icon=false}
 Vamos agora adicionar um atributo para representar o número de chamada do livro, que é o identificador usado na biblioteca quando queremos buscar um livro.
@@ -208,13 +192,15 @@ Caso o valor passado tenha menos que três caracteres, uma mensagem de erro deve
 
 ##
 
+::: {.nonincremental}
 ::: {.callout-note title="Exercício 1.8" icon=false}
 Por fim, vamos alterar a classe `Livro` para que seja possível contabilizar quantas vezes o livro já foi emprestado.
 
 - Crie um atributo `numeroEmprestimos` do tipo `int` para guardar a quantidade de vezes que o livro foi emprestado.
 - Crie um método `emprestar` que adiciona 1 ao atributo.
 - Crie um método de acesso que permita consultar o número de empréstimos.
-- Altere o método `imprimmirDetalhes` para incluir a informação do atributo criado.
+- Altere o método `imprimirDetalhes` para incluir a informação do atributo criado.
+:::
 :::
 
 ## 
@@ -227,8 +213,8 @@ Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercíci
 
 Agora, na segunda parte, vamos criar um novo projeto do zero no BlueJ.
 
-Mas como todos os exercícios que vocês fizeram no BlueJ até o momento utilizaram projetos já criados,
-antes de começarmos os exercícios, veja nos slides a seguir como criar um novo projeto e uma nova classe no BlueJ.
+Como todos os exercícios que vocês fizeram até agora no BlueJ utilizaram projetos já criados,
+antes de começar os exercícios, veja nos slides a seguir como criar um novo projeto e uma nova classe no BlueJ.
 
 ## {.smaller}
 
@@ -287,7 +273,7 @@ Crie um novo projeto chamado `exercicio-aquecedor` dentro do BlueJ.
 
 - Crie uma classe chamada `Aquecedor` que contenha um único atributo, chamado `temperatura`, cujo tipo é `double` (_ponto flutuante de precisão dupla_).
 - Implemente um construtor que não aceite parâmetros.
-- O campo `temperatura` deve ser definido como o valor `20.0` no construtor.
+- O campo `temperatura` deve ser definido com o valor `20.0` no construtor.
 - Implemente os métodos modificadores `esquentar` e `esfriar`, cujo efeito é aumentar ou diminuir o valor da temperatura em `3.0` graus, respectivamente.
 - Defina um método de acesso para retornar o valor da temperatura.
 
@@ -311,7 +297,7 @@ Antes de prosseguir para o próximo exercício, verifique se tudo funciona como 
 ::: {.callout-note title="Exercício 2.3" icon=false .nonincremental}
 Agora modifique o método `esquentar` para que ele não permita que a temperatura seja definida para um valor maior que `max`. 
 
-- Da mesma forma, modifique `esfriar` para que ele não permita que a temperatura seja definida para um valor menor que `min`. 
+- Da mesma forma, modifique o método `esfriar` para que ele não permita que a temperatura seja definida para um valor menor que `min`. 
 
 Verifique se a classe funciona corretamente. 
 :::
