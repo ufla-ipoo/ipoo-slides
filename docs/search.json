@@ -2720,7 +2720,7 @@
     "href": "cap2-4.html#sobre-as-aulas-práticas",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "Sobre as Aulas Práticas",
-    "text": "Sobre as Aulas Práticas\n\nRelembrando:\n\nAulas práticas são importantes para o entendimento dos conceitos.\nMas, para isso, é fundamental que tenha estudado o conteúdo teórico ANP antes da aula prática."
+    "text": "Sobre as Aulas Práticas\nRelembrando:\n\nAulas práticas são importantes para o entendimento dos conceitos.\nMas, para isso, é fundamental que tenha estudado o conteúdo teórico ANP antes da aula prática."
   },
   {
     "objectID": "cap2-4.html#section",
@@ -2769,7 +2769,7 @@
     "href": "cap2-4.html#section-6",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 1.1\n\n\nAdicione à classe Livro dois métodos, imprimirAutor e imprimirTitulo, que exibem no terminal os valores de seus atributos correspondentes.\n\n\n\n\n\n\n\n\n\nExercício 1.2\n\n\nAdicione um atibuto paginas à classe Livro para guardar a quantidade de páginas do livro. O atributo deve ser do tipo int e seu valor inicial deve ser passado para o construtor junto com o autor e o titulo. Adicione também um método de acesso obterPaginas para esse atributo.\n\n\n\n\n\n\n\n\n\n\nExercício 1.3\n\n\nOs objetos Livro são imutáveis? Escreva sua resposta no comentário da classe (que aparece antes da declaração da classe)."
+    "text": "Exercício 1.1\n\n\nAdicione à classe Livro dois métodos, imprimirAutor e imprimirTitulo, que exibem no terminal os valores de seus atributos correspondentes.\n\n\n\n\n\n\n\n\n\nExercício 1.2\n\n\nAdicione um atibuto paginas à classe Livro para guardar a quantidade de páginas do livro. O atributo deve ser do tipo int e seu valor inicial deve ser passado para o construtor junto com o autor e o titulo. Adicione também um método de acesso obterPaginas para esse atributo.\n\n\n\n\n\n\n\n\n\n\nExercício 1.3\n\n\nConsiderando a classe como ela está aagora, os objetos Livro são imutáveis? Escreva sua resposta no comentário da classe (que aparece antes da declaração da classe)."
   },
   {
     "objectID": "cap2-4.html#section-7",
