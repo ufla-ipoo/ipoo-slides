@@ -143,7 +143,7 @@ Adicione também um método de acesso `obterPaginas` para esse atributo.
 . . .
 
 ::: {.callout-note title="Exercício 1.3" icon=false}
-Os objetos `Livro` são imutáveis?
+Considerando a classe como ela está aagora, os objetos `Livro` são imutáveis?
 Escreva sua resposta no comentário da classe (que aparece antes da declaração da classe).
 :::
 
