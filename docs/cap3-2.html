@@ -16,6 +16,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
+  <meta name="dcterms.date" content="2025-04-09">
   <title>GAC125 - Introdução à Programação Orientada a Objetos – IPOO - Cap. 3 Interação entre Objetos</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -413,7 +414,7 @@
     </div>
 </div>
 
-  <p class="date">13/11/2024</p>
+  <p class="date">04/09/2025</p>
 </section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
@@ -421,7 +422,7 @@
 <p>Algumas coisas <strong>para relembrar</strong> e pensar:</p>
 <ul>
 <li>O que precisa ser feito <strong>antes</strong> das aulas práticas mesmo?</li>
-<li>E o que você precisa fazer para ter <strong>presença</strong> na aula prática?</li>
+<li>Você trouxe seu caderno com suas <strong>anotações</strong> feitas nas aulas anteriores para fazer os exercícios de hoje?</li>
 </ul>
 </div>
 </section>
@@ -748,13 +749,32 @@
 </div>
 </div>
 </div>
-</section></section>
-<section>
+</section>
+<section id="section-13" class="slide level2">
+<h2></h2>
+<p><img data-src="imagens/bluej_construtor_email.png"></p>
+<p>Nenhum dos atributos seria inicializado. Por que?</p>
+</section>
+<section id="section-14" class="slide level2">
+<h2></h2>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">Email</span><span class="op">(</span><span class="bu">String</span> remetente<span class="op">,</span> <span class="bu">String</span> destinatario<span class="op">,</span> <span class="bu">String</span> Mensagem<span class="op">)</span></span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// Atribuição está invertida. </span></span>
+<span id="cb7-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// O parâmetro está recebendo o atributo.</span></span>
+<span id="cb7-5"><a aria-hidden="true" tabindex="-1"></a>    remetente <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="fu">remetente</span><span class="op">;</span>  </span>
+<span id="cb7-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// Como não usou o this, </span></span>
+<span id="cb7-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// está atribuindo o parâmetro a ele mesmo.</span></span>
+<span id="cb7-8"><a aria-hidden="true" tabindex="-1"></a>    destinatario <span class="op">=</span> destinatario<span class="op">;</span> </span>
+<span id="cb7-9"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// O parâmetro começa com M maiúsculo, </span></span>
+<span id="cb7-10"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// logo está atribuindo o atributo a ele mesmo.</span></span>
+<span id="cb7-11"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">mensagem</span> <span class="op">=</span> mensagem<span class="op">;</span> </span>
+<span id="cb7-12"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="usando-um-depurador" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Usando um depurador</h1>
 
 </section>
-<section id="section-13" class="slide level2 smaller">
+<section id="section-15" class="slide level2 smaller">
 <h2></h2>
 <p>A classe mais interessante do sistema de e-mails é a de cliente de email.</p>
 <ul>
@@ -762,7 +782,7 @@
 <li class="fragment">Para isso, vamos preparar um cenário de uso.</li>
 </ul>
 </section>
-<section id="section-14" class="slide level2">
+<section id="section-16" class="slide level2">
 <h2></h2>
 <div title="Atividade em aula">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
@@ -778,7 +798,7 @@
 </div>
 </div>
 </section>
-<section id="section-15" class="slide level2 smaller">
+<section id="section-17" class="slide level2 smaller">
 <h2></h2>
 <p>Depois do exercício, o servidor tem um e-mail armazenado para o Tião, esperando para ser buscado.</p>
 <ul>
@@ -800,7 +820,7 @@
 <li class="fragment">Você pode remover o <em>breakpoint</em> clicando no marcador.</li>
 </ul>
 </section>
-<section id="section-16" class="slide level2 smaller">
+<section id="section-18" class="slide level2 smaller">
 <h2></h2>
 <div title="Atividade em aula">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
@@ -825,7 +845,7 @@
 <p><img data-src="imagens/depurador_bluej.png" style="width:70.0%"></p>
 </div>
 </section>
-<section id="section-17" class="slide level2 smaller">
+<section id="section-19" class="slide level2 smaller">
 <h2></h2>
 <p>Do lado direito da janela do depurador podemos observar que:</p>
 <ul>
@@ -879,7 +899,7 @@
 </ul>
 </div>
 </section>
-<section id="section-18" class="slide level2">
+<section id="section-20" class="slide level2">
 <h2></h2>
 <div title="Atividade em aula">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
@@ -894,7 +914,7 @@
 </div>
 </div>
 </section>
-<section id="section-19" class="slide level2 smaller">
+<section id="section-21" class="slide level2 smaller">
 <h2></h2>
 <p>Podemos agora clicar em <strong>Avançar</strong> repetidamente até terminar o método.</p>
 <ul>
@@ -905,7 +925,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-20" class="slide level2">
+<section id="section-22" class="slide level2">
 <h2></h2>
 <div title="Atividade em aula">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
@@ -930,11 +950,11 @@
 <li class="fragment">Portanto, o objeto da classe cliente de e-mail está chamando o método <code>obterProximoEmail</code> do objeto servidor de e-mail.</li>
 </ul>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>    Email email <span class="op">=</span> servidor<span class="op">.</span><span class="fu">obterProximoEmail</span><span class="op">(</span>usuario<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a>    Email email <span class="op">=</span> servidor<span class="op">.</span><span class="fu">obterProximoEmail</span><span class="op">(</span>usuario<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
-<section id="section-21" class="slide level2 smaller">
+<section id="section-23" class="slide level2 smaller">
 <h2></h2>
 <p>Já na linha abaixo, o método <code>imprimir</code> é chamado para o objeto <code>email</code>.</p>
 <ul>
@@ -942,10 +962,10 @@
 <li class="fragment">Portanto, o objeto da classe cliente de e-mail está chamando o método <code>imprimir</code> do objeto e-mail.</li>
 </ul>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a>    email<span class="op">.</span><span class="fu">imprimir</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a>    email<span class="op">.</span><span class="fu">imprimir</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="section-22" class="slide level2 smaller">
+<section id="section-24" class="slide level2 smaller">
 <h2></h2>
 <p>Veja que, ao usar o botão <strong>Avançar</strong>, estamos usando <span class="alert">abstração</span>.</p>
 <ul>
@@ -963,7 +983,7 @@
 </ul>
 </div>
 </section>
-<section id="section-23" class="slide level2">
+<section id="section-25" class="slide level2">
 <h2></h2>
 <div title="Atividade em aula">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
@@ -981,20 +1001,20 @@
 </div>
 </div>
 </div>
-</section></section>
-<section>
+</section>
+
 <section id="revisitando-as-chamadas-de-métodos" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Revisitando as chamadas de métodos</h1>
 
 </section>
-<section id="section-24" class="slide level2 smaller">
+<section id="section-26" class="slide level2 smaller">
 <h2></h2>
 <p>Nos exercícios anteriores vimos um objeto chamando método de outro objeto.</p>
 <ul>
 <li class="fragment">Nós podemos usar o depurador também para exarminarmos um objeto criando outro objeto.</li>
 </ul>
 </section>
-<section id="section-25" class="slide level2">
+<section id="section-27" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1025,13 +1045,29 @@
 </div>
 </div>
 </div>
-</section></section>
-<section>
+</section>
+<section id="section-28" class="slide level2">
+<h2></h2>
+<div title="Dica: não consigo chamar métodos após uma depuração">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Dica: não consigo chamar métodos após uma depuração</strong></p>
+</div>
+<div class="callout-content">
+<p>Se você fechar a janela do depurador sem ter finalizado a depuração, o BlueJ não permitirá que você chame outros métodos.</p>
+<p>Se isso acontecer, basta reabrir a janela do depurador pelo menu <code>Exibir -&gt; Exibir depurador</code> ou pelo atalho <code>Ctrl+D</code>, e finalizar a depuração.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
 <section id="exercícios-de-fixação" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Exercícios de fixação</h1>
 
 </section>
-<section id="section-26" class="slide level2">
+<section id="section-29" class="slide level2">
 <h2></h2>
 <div title="Exercício 1.1">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1048,7 +1084,7 @@
 </div>
 </div>
 </section>
-<section id="section-27" class="slide level2">
+<section id="section-30" class="slide level2">
 <h2></h2>
 <div title="Exercício 1.2">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1076,14 +1112,14 @@
 </div>
 </div>
 </section>
-<section id="section-28" class="slide level2 smaller">
+<section id="section-31" class="slide level2 smaller">
 <h2></h2>
 <p>No próximo exercício você precisará utilizar uma <strong>estrutura de repetição</strong>.</p>
 <ul>
 <li class="fragment">É interessante então que saiba que, em Java, a sintaxe das estruturas de repetição <span class="alert">for</span>, <span class="alert">while</span> e <span class="alert">do while</span> é a mesma de C++.</li>
 </ul>
 </section>
-<section id="section-29" class="slide level2">
+<section id="section-32" class="slide level2">
 <h2></h2>
 <div title="Exercício 1.3">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1110,7 +1146,7 @@
 </div>
 </div>
 </section>
-<section id="section-30" class="slide level2">
+<section id="section-33" class="slide level2">
 <h2></h2>
 <div title="Exercício 1.4">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1141,7 +1177,7 @@
 </div>
 </div>
 </section>
-<section id="section-31" class="slide level2">
+<section id="section-34" class="slide level2">
 <h2></h2>
 <div title="Exercício 1.5">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1171,7 +1207,7 @@
 </div>
 </div>
 </section>
-<section id="section-32" class="slide level2">
+<section id="section-35" class="slide level2">
 <h2></h2>
 <div title="Entrega no Campus Virtual">
 <div class="callout callout-important callout-titled callout-style-default">
@@ -1189,7 +1225,7 @@
 </div>
 </div>
 </section>
-<section id="section-33" class="slide level2">
+<section id="section-36" class="slide level2">
 <h2></h2>
 <div title="Exercício 2.1">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1205,7 +1241,7 @@
 </div>
 </div>
 </section>
-<section id="section-34" class="slide level2">
+<section id="section-37" class="slide level2">
 <h2></h2>
 <div title="(Opcional) Exercício 2.2 [Desafio]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1229,7 +1265,7 @@
 </div>
 </div>
 </section>
-<section id="section-35" class="slide level2">
+<section id="section-38" class="slide level2">
 <h2></h2>
 <div title="Entrega no Campus Virtual">
 <div class="callout callout-important callout-titled callout-style-default">
@@ -1252,6 +1288,9 @@
 <div class="footer footer-default">
 
 </div>
+</div>
+</section>
+
 </div>
 </section></section>
     </div>

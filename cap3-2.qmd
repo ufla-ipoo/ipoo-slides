@@ -10,7 +10,7 @@ subtitle: Aula 3.2 - Prática
 Algumas coisas **para relembrar** e pensar:
 
 - O que precisa ser feito **antes** das aulas práticas mesmo?
-- E o que você precisa fazer para ter **presença** na aula prática?
+- Você trouxe seu caderno com suas **anotações** feitas nas aulas anteriores para fazer os exercícios de hoje?
 
 :::
 
@@ -301,6 +301,32 @@ O que aconteceria se o construtor fosse implementado desse jeito?
 
 ::::
 
+##
+
+![](imagens/bluej_construtor_email.png)
+
+Nenhum dos atributos seria inicializado. Por que?
+
+##
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public Email(String remetente, String destinatario, String Mensagem)
+{
+    // Atribuição está invertida. 
+    // O parâmetro está recebendo o atributo.
+    remetente = this.remetente;  
+    // Como não usou o this, 
+    // está atribuindo o parâmetro a ele mesmo.
+    destinatario = destinatario; 
+    // O parâmetro começa com M maiúsculo, 
+    // logo está atribuindo o atributo a ele mesmo.
+    this.mensagem = mensagem; 
+}
+```
+
+
+
 # Usando um depurador {background-color="#40666e"}
 
 ## {.smaller}
@@ -500,6 +526,15 @@ Execute o programa passo a passo para ver os atributos sendo inicializados um a 
 Use o depurador para investigar o método `inserirDinheiro` do projeto `maquina-ingressos-melhor` que vimos anteriormente.
 
 Chame métodos de forma que consiga depurar a execução tanto do bloco `if` quanto do bloco `else`.
+::::
+
+##
+
+:::: {.callout-tip title="Dica: não consigo chamar métodos após uma depuração" icon=false}
+Se você fechar a janela do depurador sem ter finalizado a depuração, o BlueJ não permitirá que você chame outros métodos.
+
+Se isso acontecer, basta reabrir a janela do depurador pelo menu `Exibir -> Exibir depurador` ou pelo atalho `Ctrl+D`,
+e finalizar a depuração.
 ::::
 
 # Exercícios de fixação {background-color="#40666e"}
