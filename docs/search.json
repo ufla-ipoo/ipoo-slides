@@ -4940,5 +4940,180 @@
     "title": "IPOO - Cap. 3 Interação entre Objetos",
     "section": "",
     "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto visor-relogio da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar)."
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#a-interface-do-greenfoot",
+    "href": "greenfoot-ufla-portas-abertas.html#a-interface-do-greenfoot",
+    "title": "Tutorial do Greenfoot",
+    "section": "A interface do Greenfoot",
+    "text": "A interface do Greenfoot\nAbra o projeto greenfoot-caranguejo no Greenfoot.\nUse a opção: Cenario -&gt; Open recent -&gt; \\home\\aluno\\Área de Trabalho\\greenfoot-caranguejo\n\nA interface do Greenfoot tem três áreas principais.\n\nO mundo.\n\nNa maior parte da tela aparece o mundo do jogo.\n\nAs classes (elas são moldes que a gente usa para criar objetos que vão se tornar realidade no jogo).\n\nSão exibidas em caixas no diagrama do lado direito.\n\nE os botões de controle de execução.\n\nBotões abaixo do mundo que permitem controlar a execução do jogo (velocidade que acontece as ações do jogo)."
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#colocando-objetos-no-mundo",
+    "href": "greenfoot-ufla-portas-abertas.html#colocando-objetos-no-mundo",
+    "title": "Tutorial do Greenfoot",
+    "section": "Colocando objetos no mundo",
+    "text": "Colocando objetos no mundo\nClique com o botão direito na classe Caranguejo e acesse a opção new Caranguejo().\n\nE então clique em qualquer lugar do mundo.\nVocê acabou de criar um objeto Caranguejo.\n\n\nColoque mais caranguejos no mundo.\n\n\nDica:\n\nExiste um atalho para colocar objetos no mundo.\nSelecione uma classe, e clique no mundo segurando a tecla Shift do teclado."
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#fazendo-objetos-agirem",
+    "href": "greenfoot-ufla-portas-abertas.html#fazendo-objetos-agirem",
+    "title": "Tutorial do Greenfoot",
+    "section": "Fazendo objetos agirem",
+    "text": "Fazendo objetos agirem\nClique no botão Executar (obs.: no Greenfoot em inglês o botão se chama Act).\n\nAo clicar no botão, cada objeto age.\nOu seja, faz o que foi programado para fazer.\n\n\nAconteceu alguma coisa?\n\nO caranguejo não fez nada porque não tem nada programado para ele fazer.\nPrecisamos mudar isso: programando!"
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#chamar-métodos-ações-dos-objetos-diretamente",
+    "href": "greenfoot-ufla-portas-abertas.html#chamar-métodos-ações-dos-objetos-diretamente",
+    "title": "Tutorial do Greenfoot",
+    "section": "Chamar métodos (ações dos objetos) diretamente",
+    "text": "Chamar métodos (ações dos objetos) diretamente\nEm vez de executar todo o cenário, você pode chamar métodos para cada objeto separadamente.\n\nExperimente clicar em um urso colocado no mundo.\nVocê verá as opções de chamar os métodos.\n\n\nExperimente chamar o método virarAEsquerda para algum urso.\n\nE depois o método mover.\n\n\n\nRepare que há um método chamado act.\n\nÉ este método que é chamado toda vez que clicamos no botão Executar uma vez."
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#criar-um-novo-mundo",
+    "href": "greenfoot-ufla-portas-abertas.html#criar-um-novo-mundo",
+    "title": "Tutorial do Greenfoot",
+    "section": "Criar um novo mundo",
+    "text": "Criar um novo mundo\nMas antes de trabalhar com o caranguejo pode ser que às vezes você precise recomeçar tudo, criando um novo mundo.\n\nPara isso use o obtão Reiniciar.\nO objeto do mundo será descartado (junto com os objetos adicionados nele).\nE um novo mundo será criado.\n\nObs.: Só pode existir um mundo ativo por vez."
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#chamando-um-método-do-mundo",
+    "href": "greenfoot-ufla-portas-abertas.html#chamando-um-método-do-mundo",
+    "title": "Tutorial do Greenfoot",
+    "section": "Chamando um método do mundo",
+    "text": "Chamando um método do mundo\nÉ possível também chamar métodos do mundo.\n\nBasta clicar em uma área vazia do mundo (sem ursos, nem folhas),\n\nou na área cinza ao redor do mundo.\n\nE serão exibidos os seus métodos.\n\n\nExperimente chamar o método povoar.\n\nEste método cria vários ursos e folhas.\nExecute então o jogo.\n\n\n\nExperimente agora o método folhasAleatorias.\n\nA quantidade de folhas pode ser passada por parâmetro.\nObs.: às vezes pode parecer que não apareceram todas as folhas.\n\nMas é que pode acontecer de duas folhas acabarem caindo na mesma célula."
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#section",
+    "href": "greenfoot-ufla-portas-abertas.html#section",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Abra a classe Caranguejo (clicando duas vezes na caixa da classe, lembrando que ela fica na direita da tela).\n\nVeja que a classe tem um método act (agir) vazio, por isso o caranguejo não faz nada.\nExperimente colocar o comando move(4) dentro do método act.\n\nCompile a classe, coloque um caranguejo no mundo e clique em executar.\nVeja que o caranguejo se move para a direita até parar na borda do mundo.\nVocê pode até pausar o mundo e arrastar o caranguejo para que ele ande novamente."
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#o-cenário-caranguejo",
+    "href": "greenfoot-ufla-portas-abertas.html#o-cenário-caranguejo",
+    "title": "Tutorial do Greenfoot",
+    "section": "O cenário caranguejo",
+    "text": "O cenário caranguejo\nAbra o projeto greenfoot-caranguejo no Greenfoot.\nUse a opção: Cenario -&gt; Open recent -&gt; \\home\\aluno\\Área de Trabalho\\greenfoot-caranguejo\n\nVocê verá um mundo de areia.\n\n\nCrie um caranguejo e coloque-o no mundo.\n\nClique então em Executar.\nAconteceu alguma coisa?"
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#section-1",
+    "href": "greenfoot-ufla-portas-abertas.html#section-1",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Acrescente agora mais uma linha no método act, de forma que ele fique como mostrado abaixo:\n\n    move(4);\n    turn(3);\n\n\nExecute o jogo, com alguns caranguejos e veja o que acontece.\n\nExperimente passar valores diferentes para o método turn.\n\nMais uma vez, valores maiores, menores e até negativos.\n\n\n\n\nNote que o método turn gira o ator pelo ângulo passado (em graus)."
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#só-para-os-curiosos",
+    "href": "greenfoot-ufla-portas-abertas.html#só-para-os-curiosos",
+    "title": "Tutorial do Greenfoot",
+    "section": "Só para os curiosos",
+    "text": "Só para os curiosos\nExperimente agora colocar dois caranguejos e chamar o método Executar.\n\nOs dois caranguejos fazem a mesma coisa, pois são objetos da mesma classe.\n\n\nExperimente passar valores diferentes para o método move.\n\nVocê pode testar valores menores, maiores e até negativos.\n\n\n\nO método move faz um ator se mover para frente pela quantidade passada.\n\nUm ator sempre começa “olhando” para a direita da tela.\nPortanto, a princípio, ele se move para a direta da tela."
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#section-2",
+    "href": "greenfoot-ufla-portas-abertas.html#section-2",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Experimente, por exemplo, implementar o método act conforme mostrado abaixo:\n\nTeste o jogo com um e com vários caranguejos.\nUse seta para a esquerda e seta para a direita para controlar os caranguejos.\n\n\n    public void act() \n    {\n        move(4);\n        \n        if (Greenfoot.isKeyDown(\"left\")) {    \n            turn(-3);   \n        }\n        if (Greenfoot.isKeyDown(\"right\")) {    \n            turn(3);   \n        }\n    }"
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#controle-usando-o-teclado",
+    "href": "greenfoot-ufla-portas-abertas.html#controle-usando-o-teclado",
+    "title": "Tutorial do Greenfoot",
+    "section": "Controle usando o teclado",
+    "text": "Controle usando o teclado\nFica mais interessante se pudermos controlar o caranguejo.\n\npara isso, podemos usar o método estático isKeyDown da classe Greenfoot.\n\n\nPor exemplo, podemos verificar se a tecla seta para a esquerda está pressionada assim:\n\n    if (Greenfoot.isKeyDown(\"left\")) {\n        // implemetamos aqui o que deve acontecer se a tecla seta para\n        // a esquerda estiver pressionada\n    }"
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#section-3",
+    "href": "greenfoot-ufla-portas-abertas.html#section-3",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Você pode alterar os valores passados para o método turn para mudar o quanto os caranguejos giram.\n\nE pode também alterar as teclas utilizadas para controlar o caranguejo.\nVocê pode usar as letras ou caracteres para indicar as teclas (ex.: \"a\").\n\nOu os nomes das teclas (ex.: \"space\" ou \"control\")."
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#section-4",
+    "href": "greenfoot-ufla-portas-abertas.html#section-4",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "A ideia agora é modificar a classe Caranguejo para que um caranguejo coma uma larva sempre que passar sobre ela.\n\nPara fazer isso, vamos usar o método getOneIntersectingObject.\n\nPodemos acrescentar o seguinte trecho de código ao final do método act.\n\n\n\n\n    // se o caranguejo estiver colidindo (tocando) uma larva, a larva será\n    // retornada. Se não estiver colidindo com nenhuma, o método retornará null.\n    Actor larva = getOneIntersectingObject(Larva.class);\n    // Se havia colisão com alguma larva\n    if (larva != null) {\n        // Obtemos uma referência (ponteiro) para o mundo\n        World mundo = getWorld();\n        // Removemos a larva do mundo\n        mundo.removeObject(larva);\n    }"
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#comendo-larvas",
+    "href": "greenfoot-ufla-portas-abertas.html#comendo-larvas",
+    "title": "Tutorial do Greenfoot",
+    "section": "Comendo larvas",
+    "text": "Comendo larvas\nVamos criar uma classe para representar larvas que serão a comida dos caranguejos.\n\nPara isso clique com o botão direito na classe Actor e vá na opção Nova subclasse....\n\n\nNa janela que se abre dê o nome Larva para a classe (lembre-se de usar L maiúsculo).\n\nE escolha a imagem larva.png para representar as larvas.\nAo clicar em OK, a classe Larva aparecerá no diagrama do Greenfoot.\n\n\n\nSe abrir o código da classe verá que ela ainda não faz nada.\n\nMas nós vamos deixar assim.\nAs larvas desse jogo são preguiçosas e só ficam paradas mesmo."
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#section-5",
+    "href": "greenfoot-ufla-portas-abertas.html#section-5",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Altere o método act conforme mostrado no slide anterior.\n\nColoque várias larvas e vários caranguejos no mundo.\nE testes as alterações. Conseguiu capturar todas as larvas?"
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#section-6",
+    "href": "greenfoot-ufla-portas-abertas.html#section-6",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Vamos criar uma lagosta que se move em linha reta e que pode comer caranguejos.\n\nCrie uma classe Lagosta clicando com o botão direito em Actor e depois em Nova subclasse....\nEscolha a imagem da lagosta que já existe no projeto.\n\nObs.: quando você quiser usar uma imagem que não tem no Greenfoot, basta colocá-la na pasta images do projeto.\n\n\n\nNas partes anteriores do tutorial já vimos como movimentar um ator e como remover um ator do mundo.\n\nEntão você mesmo pode implementar a ação da lagosta.\nEla deve se movimentar sempre para a direita e,\n\nSe colidir com um caranguejo, o caranguejo deve ser removido do mundo.\nPara ficar mais interessante, grave o seu próprio som e use-o quando isso acontecer."
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#salvando-o-mundo",
+    "href": "greenfoot-ufla-portas-abertas.html#salvando-o-mundo",
+    "title": "Tutorial do Greenfoot",
+    "section": "Salvando o mundo",
+    "text": "Salvando o mundo\nVocê deve ter ficado cansado de tanto colocar caranguejos e larvas no mundo.\n\nMas nós podemos adicionar código para que isso seja feito automaticamente.\nOu melhor ainda, pedir ao Greenfoot para fazer esse código para nós.\n\n\nPara isso, faça o seguinte:\n\nAcrescente alguns caranguejos e algumas larvas no mundo.\nAntes de clicar em Executar, clique com o botão direito no mundo e acesse a opção Salvar o mundo.\n\nO Greenfoot colocará trechos de código na classe do mundo.\nQue criam e posicionam os atores nos mesmos lugares onde você tinha colocado.\nDê uma olhada no código!\n\n\n\n\nDepois disso, toda vez que o mundo for criado, ele já terá os caranguejos e as larvas."
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#section-7",
+    "href": "greenfoot-ufla-portas-abertas.html#section-7",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Um dos problemas é que a lagosta gira toda hora, com isso ela fica só rodopiando.\n\nSeria melhor se ela virasse apenas de vez em quando.\nPodemos implementar isso, fazendo com que o método turn não seja chamado toda hora que o act é executado.\n\n\nUma das formas de fazer isso é mostrada abaixo.\n\nExperimente implementar e ver a diferença no comportamento da lagosta.\n\n\n    move(4);\n    if (Greenfoot.getRandomNumber(100) &lt; 10) {\n        int angulo = Greenfoot.getRandomNumber(90);\n        turn(angulo);\n    }"
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#aleatoriedade",
+    "href": "greenfoot-ufla-portas-abertas.html#aleatoriedade",
+    "title": "Tutorial do Greenfoot",
+    "section": "Aleatoriedade",
+    "text": "Aleatoriedade\nBom, o jogo ainda está muito fácil. Vamos deixá-lo menos previsível.\n\nA ideia é que as lagostas possam girar a cada hora por um ângulo diferente.\nPodemos fazer isso usando o o método estático getRandomNumber da classe Greenfoot.\n\nExemplo: int angulo = Greenfoot.getRandomNumber(90);.\n\nE então usamos o angulo como parâmetro do métodp turn.\n\nExemplo: turn(angulo);.\n\nImplemente e teste o jogo.\n\n\nO que achou do resultado?\n\nA lagosta não é um oponente desafiador ainda, certo? :)"
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#section-8",
+    "href": "greenfoot-ufla-portas-abertas.html#section-8",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Mas o que exatamente foi feito?\n\nVeja que o comando Greenfoot.getRandomNumber(100) retorna um número aleatório entre 0 a 99.\nSe esse método for chamado muitas vezes ele vai retornar cada numéro possível a mesma quantidade de vezes (em média).\n\nPortanto, em média, ele retorna 0 em 1% das vezes, retorna 1 em 1% das vezes e assim por diante.\nLogo, ele retorna um valor menor que 10 em 10% das vezes, certo?\n\nCom isso, a expressão do comando if (Greenfoot.getRandomNumber(100) &lt; 10), retornará true, em média, a cada 10 vezes que for chamado.\n\nIsso faz com que cada lagosta se movimente de forma diferente, girando só de vez em quando."
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#section-9",
+    "href": "greenfoot-ufla-portas-abertas.html#section-9",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Repare que podemos deixar a lagosta ainda melhor fazendo com que ela possa girar para os dois lados.\n\nComo estamos passando sempre um número positivo, ela está girando sempre para o mesmo lado.\nComo podemos fazê-la girar para os dois lados?\n\n\nPodemos mudar a forma que o ângulo é definido:\n\nAgora teremos valores variando entre 0 - 45 = -45 e 89 - 45 = 44.\n\n\n        int angulo = Greenfoot.getRandomNumber(90) - 45;"
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#section-10",
+    "href": "greenfoot-ufla-portas-abertas.html#section-10",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Faça as últimas alterações no seu código e coloque várias lagostas e larvas, e alguns caranguejos no mundo.\n\nNão esqueça de salvar o mundo!\nJogue e veja como a lagosta é agora um inimigo bem mais desafiador.\n\n\nMas você deve ter reparado que a lagosta ainda não sabe lidar bem com as bordas do mundo.\n\nComo podemos melhorar isso?\nBasta acrescentarmos um código para que ela gire 180 graus sempre que chegar perto da borda do mundo."
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#section-11",
+    "href": "greenfoot-ufla-portas-abertas.html#section-11",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Faça as últimas alterações no seu código e coloque várias lagostas e larvas, e alguns caranguejos no mundo.\n\nNão esqueça de salvar o mundo!\nJogue e veja como a lagosta é agora um inimigo bem mais desafiador.\n\n\nMas você deve ter reparado que a lagosta ainda não sabe lidar bem com as bordas do mundo.\n\nComo podemos melhorar isso?\nBasta acrescentarmos um código para que ela gire 180 graus sempre que chegar perto da borda do mundo."
+  },
+  {
+    "objectID": "greenfoot-ufla-portas-abertas.html#desafio",
+    "href": "greenfoot-ufla-portas-abertas.html#desafio",
+    "title": "Tutorial do Greenfoot",
+    "section": "Desafio",
+    "text": "Desafio\nComo você poderia fazer um jogo para dois jogadores?\n\nImagine que um jogador utilize as setas do teclado e outro as teclas ASDW.\nCrie uma nova classe no jogo do caranguejo com um animal que possa ser controlado por um segundo jogador.\n\nE faça os tratamentos necessários."
   }
 ]
