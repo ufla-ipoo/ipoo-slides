@@ -3301,7 +3301,7 @@
     "href": "cap4-3.html#section-12",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Conceito\n\n\nUm iterador é um objeto que permite iterar sobre todos os elementos de uma coleção.\n\n\n\n\n\n\n\n\nRealmente, o que fizemos até agora não traz vantagens. Mas há duas situações nas quais um Iterator é muito útil:\n\nPara coleções cujo acesso por posição não é possível, ou muito lento.\nPara a remoção de elementos de uma coleção"
+    "text": "Conceito\n\n\nUm iterador é um objeto que permite iterar sobre todos os elementos de uma coleção.\n\n\n\n\n\n\n\n\nRealmente, o que fizemos até agora não traz vantagens. Mas há duas situações nas quais um Iterator é muito útil:\n\nPara coleções cujo acesso por posição não é possível, ou muito lento.\nPara a remoção de vários elementos de uma coleção."
   },
   {
     "objectID": "cap4-3.html#acesso-por-índice-vs.-iteradores",
@@ -3434,7 +3434,7 @@
     "href": "cap4-3.html#section-22",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Para ilustrar o uso de vetores, vamos aproveitar para conhecer um recurso que pode ser interessante no trabalho da disciplina.\n\nEm jogos com gráficos 2D, podemos criar animações dos personagens usando sprites.\nSprites nada mais são que imagens que, quando exibidas seguidamente, dão a ilusão de movimento.\n\n\nVamos criar um projeto no Greenfoot para vermos isso na prática.\n\nE, portanto, você precisa ter o Greenfoot instalado para conseguir fazer os exercícios da aula."
+    "text": "Para ter presença nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nResponda às tarefas no Campus Virtual enviando o o seu projeto do organizador-musicas-v5, contendo as alterações solicitadas nos exercícios ao longo dos slides."
   },
   {
     "objectID": "cap4-3.html#section-23",
