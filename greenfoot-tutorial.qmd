@@ -354,7 +354,7 @@ Repare que nosso método `act` está ficando um pouco confuso.
 
 Como podemos melhorar isso?
 
-- Podemos criar um método `movimentar` e outro `comer`.
+- Podemos criar um método `movimentar` e outro `tentarComer`.
  - Levando para esses métodos os trechos de código que hoje estão no método `act`.
 - O método `act` passaria então a ter apenas duas linhas:
 
@@ -364,7 +364,7 @@ Como podemos melhorar isso?
 ```{.java code-line-numbers="false"}
     public void act() {
         movimentar();
-        comer();
+        tentarComer();
     }
 ```
 :::
@@ -380,6 +380,26 @@ Veja que, com isso, o código fica mais fácil de entender e de se alterar.
 Vamos aprender agora a inicializar o mundo já contendo atores.
 
 - E também a criar e tocar sons.
+
+## Tamanho do mundo {.smaller}
+
+A cada passo nosso jogo terá mais personagens.
+
+- Pode ser interessante então criar um mundo de tamanho maior,
+  aproveitando a resolução disponível na tela do computador.
+
+. . .
+
+Para alterar o tamanho do mundo, faça o seguinte:
+
+- Localize o construtor da classe `MundoDoCaranguejo`.
+- Altere os dois primeiros parâmetros da chamada `super`
+  usando, por exemplo, 800 de largura e 600 de altura.
+- Reinicie o jogo e teste.
+
+. . .
+
+Agora você tem mais espaço para projetar seu jogo 😉
 
 ## Salvando o mundo {.smaller}
 
@@ -400,7 +420,8 @@ Para isso, faça o seguinte:
 
 . . .
 
-Depois disso, toda vez que o mundo for criado, ele já terá os caranguejos e as larvas.  
+Depois disso, toda vez que o mundo for criado, ele já terá os caranguejos e as larvas
+como você os tinha posicionado ao salvar. 
 
 ## Tocando sons {.smaller}
 
@@ -565,10 +586,10 @@ Vamos aprender como exibir informações na tela do jogo.
 
 ## Exibindo um texto na tela {.smaller}
 
-A classe `World` possui um método chamado `showText` que permite um texto
+A classe `World` possui um método chamado `showText` que permite exibir um texto
 em uma determinada posição da tela.
 
-- O método recebe com o parâmetros uma String e as posições X e Y que definem
+- O método recebe como parâmetros uma String e as coordenadas X e Y que definem
   o ponto central do texto.
 
 . . .
@@ -586,6 +607,12 @@ Vamos começar então exibindo o texto `Jogo do Caranguejo` na tela.
 ```
 :::
 
+. . .
+
+Veja que o texto apareceu na parte superior da tela.
+
+- Experimente posições diferentes.
+
 ## Mensagem de vitória {.smaller}
 
 Agora que sabemos como exibir um texto na tela, podemos exibir uma
@@ -598,8 +625,8 @@ mensagem quando o jogador vence jogo.
 Mas como saber se ainda existem larvas?
 
 - A classe `World` possui um método chamado `getObjects` que permite
-  consultar os objetos de uma determinada classe, que existem no momento
-  naquele mundo.
+  consultar os objetos de uma determinada classe que estão presentes no mundo
+  naquele momento.
 - Portanto, se usarmos `getObjects(Larva.class)` vamos obter uma lista
   com as larvas que estão no mundo.
 - Se a lista estiver vazia significa que jogador venceu o jogo.
@@ -612,7 +639,7 @@ Mas nós precisamos verificar a todo momento se as larvas já acabaram, certo?
 
 ## Mensagem de vitória {.smaller}
 
-Podemos definir um método `act` na classe `MundoDoCaranguejo` com a mesma
+Podemos implementar um método `act` na classe `MundoDoCaranguejo` com a mesma
 assinatura dos métodos das classes de atores.
 
 - Esse método também é chamado a cada iteração do Greenfoot.
@@ -686,9 +713,8 @@ Vamos então alterar o método `act` como mostrado abaixo.
 
 ## Game Over! {.smaller}
 
-Baseado no que fizemos para a mensagem de vitória, implemente uma
-mensagem de "Game Over" que deve ser exibida quando todos os 
-caranguejos forem comidos pelas lagostas.
+Baseado no que fizemos para a mensagem de vitória, exiba a mensagem
+`"Game Over!"` quando todos os caranguejos forem comidos pelas lagostas.
 
 - Veja que basta seguirmos a mesma ideia, mas agora verificando se ainda existem caranguejos em vez de larvas.
 
@@ -723,30 +749,40 @@ Agora que sabemos como exibir informações na tela, podemos fazer algo mais int
 
 Para contabilizar os pontos do jogador, precisaremos:
 
-- criar um atributo na classe `MundoDoCaranguejo` para guardar a pontuação.
+- Criar um atributo na classe `MundoDoCaranguejo` para guardar a pontuação.
 - Criar um método para incrementar a pontuação.
 - Chamar esse método toda vez que um caranguejo comer uma larva.
 - E exibir a pontuação na tela, sempre que ela for alterada.
 
 . . .
 
-Altere então a classe `MundoDoCaranguejo`:
+Altere então a classe `MundoDoCaranguejo` incluindo um atributo inteiro chamado `pontos`.
 
-- incluindo um atributo inteiro chamado `pontos` 
-- e um método `contarPontos` que incrementa esse atributo em 10 e
-  exibe na tela o placar atualizado.
-  - Use o método `showText` para exibir o texto "Placar: N", onde
-    N é o número de pontos, na posição (400, 20).
+Em seguida, crie um método público chamado `contarPontos` que:
+
+- acrescenta 10 unidades ao atributo `pontos`;
+- e exibe na tela o placar atualizado, utilizando o método `showText`
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+showText("Placar: " + pontos + " pontos", 200, 50);
+```
+:::
 
 ## {.smaller}
 
-Precisamos agora alterar a classe `Caranguejo` para que o método `contarPontos`
-seja chamado toda vez que o caranguejo comer uma larva.
+A pontuação ainda não aparece, porque precisamos agora chamar o 
+método `contarPontos` toda vez que o caranguejo comer uma larva.
 
-- Localize no método `act` o trecho de código que remove a larva comida do jogo.
-- Acrescente ao final a chamada do método `contarPontos`.
-- Para isso, precisaremos obter uma referência do mundo como uma instância 
-  da classe `MundoDoCaranguejo`.
+Para isso, altere o método `act` da classe `Caranguejo`.
+
+- Localize o trecho de código que remove a larva comida do jogo.
+- Logo após a remoção da larva, chame do método `contarPontos` de `MundoDoCaranguejo`.
+  - Para isso, precisaremos obter uma referência do mundo como uma instância 
+    da classe `MundoDoCaranguejo`.
+  - Isso pode ser feito como mostrado abaixo.
 
 . . .
 
@@ -757,14 +793,14 @@ seja chamado toda vez que o caranguejo comer uma larva.
 ```
 :::
 
-# Parte 8: Um competidor que persegue as larvas {background-color="#40666e"}
+# Parte 8: Um inimigo que persegue as larvas {background-color="#40666e"}
 
 ## Criando aranhas comedoras de larvas {.smaller}
 
 Vamos dificultar um pouco mais a vida do jogador :)
 
-- A ideia agora é criar uma aranha que também coma larvas, e assim atrapalhe o
-jogador a obter uma alta pontuação.
+- A ideia agora é criar aranhas que também comam larvas, e assim dificultem
+a vida do jogador na obteção de uma boa pontuação.
 
 - Num primeiro passo, vamos fazer uma versão simplificada da aranha. 
 - Ela sempre andará para frente e comerá uma larva se der sorte de ter uma
@@ -774,9 +810,11 @@ no caminho dela.
 
 Crie então uma classe `Aranha` de forma similar ao que fizemos antes.
 
-- No método `act` da classe faça a aranha movimentar (com `move(2)`) 
+- No método `act` da classe faça a aranha movimentar (com `move(2)`);
 - e faça com que ela coma uma larva se tocar nela 
-  (com o mesmo código que usamos para os caranguejos).
+  - (com o mesmo código que usamos para os caranguejos).
+
+. . .
 
 Posicione uma ou mais aranhas à esquerda de algumas larvas e teste o jogo.
 
@@ -785,41 +823,168 @@ Posicione uma ou mais aranhas à esquerda de algumas larvas e teste o jogo.
 O desafio fica mais interessante se as aranhas perseguirem as larvas
 de forma automática.
 
-- Nós podemos fazer isso usando o método `turnTowards` e passando como
-parâmetro a posição de alguma larva.
+- Nós podemos fazer isso usando o método `turnTowards`.
+- Esse método vira um ator na direção das coordenadas passadas por parâmetro.
+- Portanto, se passarmos as coordenadas de uma larva, a aranha se movimentará
+  em direção a ela.
 
 . . .
 
-Para isso:
+Nós precisamos então ter uma maneira de identificar uma larva que seja
+o alvo da aranha.
 
-- Crie um atributo do tipo `Larva` na classe `Aranha` chamado `larvaPerseguida`.
-- Crie um método `tratarLarvaPerseguida` com o código do próximo slide.
-- Altere o método `act` para chamar o método acima e, em seguida,
-  verificar se o atributo `larvaPerseguida` é diferente de `null`.
-  - Se for, aranha deve se virar na direção da larva perseguida chamando
-    `turnTowards(larvaPerseguida.getX(), larvaPerseguida.getY());`
-::::
+## {.smaller}
 
-##
+Nosso primeiro passo será criar um método público na classe `MundoCaranguejo` 
 
-```java
-    private void tratarLarvaPerseguida() {
-        if (larvaPerseguida == null || larvaPerseguida.getWorld() == null) {
-            MundoDoCaranguejo m = getWorldOfType(MundoDoCaranguejo.class);
-            List<Larva> larvas = m.getObjects(Larva.class);
-            if (larvas.size() > 0) {
-                int posicao = Greenfoot.getRandomNumber(larvas.size());        
-                larvaPerseguida = larvas.get(posicao);
+- que retorna uma das larvas do mundo (escolhendo aleatoriamente).
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    public Larva buscarUmaLarva() {
+        List<Larva> larvas = getObjects(Larva.class);
+        if (larvas.size() > 0) {
+            int posicao = Greenfoot.getRandomNumber(larvas.size());        
+            return larvas.get(posicao);
+        }
+        return null;
+    }
+```
+:::
+
+## {.smaller}
+
+Nós podemos agora chamar o método que criamos na classe `Aranha` para 
+definir qual larva ela vai perseguir.
+
+- Por enquanto vamos apenas guardar qual é a larva-alvo.
+
+. . .
+
+Altere então a classe `Aranha` da seguinte forma:
+
+- Crie um atributo do tipo `Larva` chamado `larvaAlvo`.
+- Altere o método `act` para chamar o método `buscarUmaLarva` da classe
+  `MundoDoCaranguejo`.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    MundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);
+    larvaAlvo = mundoCaranguejo.buscarUmaLarva();
+```
+:::
+
+. . .
+
+Precisamos testar se o nosso método funciona, para isso faça o seguinte:
+
+- Inicie o jogo e, em seguida, clique em `Pausar`.
+- Clique com o botão direito em uma aranha e acesse a opção `Inspecionar`.
+- Verifique o valor do atributo `larvaAlvo` clicando na seta.
+  - Deve aparecer então as coordenadas da larva que foi definida como alvo.
+
+## {.smaller}
+
+Nosso próximo passo é então fazer com que a aranha se vire na direção
+da larva alvo.
+
+- Parece que basta acrescentar o trecho de código abaixo ao final do método `act`.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false" code-line-numbers="5-6"}
+    public void act()
+    {
+        move(2);
+        tentarComer();
+        if (larvaAlvo != null) {
+            turnTowards(larvaAlvo.getX(), larvaAlvo.getY());
+        }
+    }
+```
+:::
+
+. . .
+
+Funcionou?
+
+- Não né? O problema é que estamos escolhendo uma nova larva-alvo a cada iteração do Greenfoot.
+  - Com isso a aranha fica girando sem sentido.
+- Como podemos resolver?
+
+
+## {.smaller}
+
+O que precisamos é manter o alvo e só mudar quando a larva for devorada
+
+- seja pela aranha, seja pelos caranguejos.
+
+. . .
+
+Podemos fazer isso com a seguite implementação no método `act`
+
+```{.java code-line-numbers="false"}
+    public void act()
+    {
+        move(2);
+        tentarComer();
+
+        // se já tem uma larva definida como alvo
+        if (larvaAlvo != null) {
+            // e ela ainda não foi devorada
+            if (larvaAlvo.getWorld() != null) {
+                // a aranha se vira na direção dela
+                turnTowards(larvaAlvo.getX(), larvaAlvo.getY());
             }
-            else {
-                larvaPerseguida = null;
+            else { // se a larva já foi devorada
+                // reinicializamos o atributo para definir um novo alvo
+                larvaAlvo = null;
             }
+        }
+        // se NÃO tem uma larva definida com o alvo
+        if (larvaAlvo == null) {
+            // definimos uma obtendo do mundo
+            MundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);
+            larvaAlvo = mundoCaranguejo.buscarUmaLarva();
         }
     }
 ```
 
-##
+# Parte 9: Documentação do Greenfoot {background-color="#40666e"}
+
+Para desenvolver jogos no Greenfoot é importanter ter uma ideia do que ele é capaz de fazer.
+
+- Uma boa maneira de fazer isso é consultando a sua documentação.
+
+## {.smaller}
+
+Você pode acessar a documentação do Greenfoot através do menu:
+
+- `Ajuda` &rarr; `Documentação de Classe Greenfoot`.
+
+. . .
+
+Será exibida a documentação em HTML das classes disponíveis do Greenfoot.
+
+- Como `Actor`, `Font`, `Greenfoot`, `GreenfootImage` e `World`.
+- Você pode clicar em uma classe e verificar os métodos que estão disponíveis.
+
+. . .
+
+Você também podem acessar diretamente a documentação das classes `Actor` e `World` clicando
+nas caixas com esses nomes no painel direito do Greenfoot.
+
+# Entrega {background-color="#40666e"}
+
+## 
 
 ::: {.callout-important title="Entrega no Campus Virtual"}
-Acesse, no Campus Virtual, a atividade correspondente a essa aula e envie o código do projeto `greenfoot-caranguejo` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar).
+Acesse, no Campus Virtual, a atividade correspondente a essa aula e envie o código do projeto `greenfoot-caranguejo` da forma que ficou após as suas alterações (compacte a pasta do projeto em um arquivo `.zip` para enviar).
 :::
+
+
