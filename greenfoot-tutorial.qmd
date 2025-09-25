@@ -556,10 +556,111 @@ Como você poderia fazer um [jogo para dois jogadores]{.alert}?
 - Crie uma nova classe no jogo do caranguejo com um animal que possa ser controlado por um segundo jogador.
   - E faça os tratamentos necessários.
 
+# Parte 6: Exercícios {background-color="#40666e"}
+
+Vamos agora incrementar o nosso jogo, cada um no seu próprio passo.
+
 
 ## 
+
+:::: {.callout-note title="Exercício 1" icon=false .nonincremental}
+Vamos agora aprender a obter informações do usuário e exibir informações na tela do jogo.
+Pediremos ao jogador para informar seu nome e o mostraremos na tela.
+
+Para isso você deve:
+
+- Criar um atributo `nomeJogador` na classe `MundoDoCaranguejo`.
+- Criar um método `act` na classe `MundoDoCaranguejo` (público, com retorno `void`, sem parâmetros).
+  - O método é chamado a cada atualização do Greenfoot assim como é feito para os atores.
+- No método você deve verificar se o atributo `nomeJogador` é `null`.
+  - Se for, você deve pedir ao usuário seu nome, usando o método `Greenfoot.ask` e guardar o retorno
+    do método no atributo `nomeJogador`.
+  - Caso contrário, você deve exibir o nome do jogador na tela usando o método `showText`,
+    passando como parâmetro o nome do jogador e os valores 200 (posição X) e 10 (posição Y).
+::::
+
+##
+
+:::: {.callout-note title="Exercício 2" icon=false .nonincremental}
+Já que conseguimos mostrar coisas na tela, seria interessante mostrar a pontuação
+do jogador, que poderia ser contada a cada larva que é devorada pelo caranguejo.
+
+Faça as seguintes alterações na classe `MundoDoCaranguejo`:
+
+- Crie um atributo inteiro chamado `pontos`.
+- Altere a chamada do método `showText` para incluir o valor do atributo criado.
+- Crie um método `contarPonto`, que aumente o número de pontos em 10.
+
+Em seguida, altere o método `act` da classe `Caranguejo` para chamar o
+método `contarPonto` que acabamos de criar na classe `MundoDoCaranguejo`
+sempre que o caranguejo comer uma larva.
+
+- Para isso, você precisará obter uma referência para o `MundoDoCaranguejo`
+  usando o seguinte código:
+  ```java
+  MundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);
+  ```
+::::
+
+##
+
+:::: {.callout-note title="Exercício 3" icon=false .nonincremental}
+Vamos dificultar um pouco mais a vida do jogador :)
+
+A ideia agora é criar uma aranha que também coma larvas, e assim atrapalhe o
+jogador a obter uma alta pontuação.
+
+Nesse passo vamos fazer uma versão simplificada da aranha. 
+Ela sempre andará para frente e comerá uma larva se der sorte de ter uma
+no caminho dela.
+
+Crie então uma classe `Aranha` de forma similar ao que fizemos antes.
+
+No método `act` faça a aranha movimentar (com `move(2)`) e faça
+com que ela coma uma larva se tocar nela (com o mesmo código que usamos
+para os caranguejos).
+
+Posicione uma ou mais aranhas à esquerda de algumas larvas e teste o jogo.
+::::
+
+
+## 
+
+:::: {.callout-note title="Exercício 4" icon=false .nonincremental}
+O desafio fica mais interessante se as aranhas perseguirem as larvas.
+Nós podemos fazer isso usando o método `turnTowards` e passando como
+parâmetro a posição de alguma larva.
+
+Para isso:
+
+- Crie um atributo do tipo `Larva` na classe `Aranha` chamado `larvaPerseguida`.
+- Crie um método `tratarLarvaPerseguida` com o código do próximo slide.
+- Altere o método `act` para chamar o método acima e, em seguida,
+  verificar se o atributo `larvaPerseguida` é diferente de `null`.
+  - Se for, aranha deve se virar na direção da larva perseguida chamando
+    `turnTowards(larvaPerseguida.getX(), larvaPerseguida.getY());`
+::::
+
+##
+
+```java
+    private void tratarLarvaPerseguida() {
+        if (larvaPerseguida == null || larvaPerseguida.getWorld() == null) {
+            MundoDoCaranguejo m = getWorldOfType(MundoDoCaranguejo.class);
+            List<Larva> larvas = m.getObjects(Larva.class);
+            if (larvas.size() > 0) {
+                int posicao = Greenfoot.getRandomNumber(larvas.size());        
+                larvaPerseguida = larvas.get(posicao);
+            }
+            else {
+                larvaPerseguida = null;
+            }
+        }
+    }
+```
+
+##
 
 ::: {.callout-important title="Entrega no Campus Virtual"}
 Acesse, no Campus Virtual, a atividade correspondente a essa aula e envie o código do projeto `greenfoot-caranguejo` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar).
 :::
-

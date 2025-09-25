@@ -4379,7 +4379,7 @@
     "href": "greenfoot-tutorial.html#section-13",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa aula e envie o código do projeto greenfoot-caranguejo da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar)."
+    "text": "Exercício 1\n\n\nVamos agora aprender a obter informações do usuário e exibir informações na tela do jogo. Pediremos ao jogador para informar seu nome e o mostraremos na tela.\nPara isso você deve:\n\nCriar um atributo nomeJogador na classe MundoDoCaranguejo.\nCriar um método act na classe MundoDoCaranguejo (público, com retorno void, sem parâmetros).\n\nO método é chamado a cada atualização do Greenfoot assim como é feito para os atores.\n\nNo método você deve verificar se o atributo nomeJogador é null.\n\nSe for, você deve pedir ao usuário seu nome, usando o método Greenfoot.ask e guardar o retorno do método no atributo nomeJogador.\nCaso contrário, você deve exibir o nome do jogador na tela usando o método showText, passando como parâmetro o nome do jogador e os valores 200 (posição X) e 10 (posição Y)."
   },
   {
     "objectID": "cap5-3.html#section-12",
@@ -5115,5 +5115,201 @@
     "title": "Tutorial do Greenfoot",
     "section": "Desafio",
     "text": "Desafio\nComo você poderia fazer um jogo para dois jogadores?\n\nImagine que um jogador utilize as setas do teclado e outro as teclas ASDW.\nCrie uma nova classe no jogo do caranguejo com um animal que possa ser controlado por um segundo jogador.\n\nE faça os tratamentos necessários."
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section",
+    "href": "greenfoot-vetores.html#section",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Para ilustrar o uso de vetores, vamos aproveitar para conhecer um recurso que pode ser interessante no trabalho da disciplina.\n\nEm jogos com gráficos 2D, podemos criar animações dos personagens usando sprites.\nSprites nada mais são que imagens que, quando exibidas seguidamente, dão a ilusão de movimento.\n\n\nVamos criar um projeto no Greenfoot para vermos isso na prática.\n\nE, portanto, você precisa ter o Greenfoot instalado para conseguir fazer os exercícios da aula."
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-1",
+    "href": "greenfoot-vetores.html#section-1",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Vamos criar uma classe MeuMundo e nela definir um mundo de 800x600 pixels com fundo preto.\n\npublic class MeuMundo extends World\n{\n    public MeuMundo()\n    {    \n        // Cria um novo mundo com 800x600 células,\n        // com células de tamanho 1x1 pixels.\n        super(800, 600, 1); \n        // Cria uma imagem do tamanho do mundo\n        GreenfootImage imagemFundoPreto = new GreenfootImage(800, 600);\n        // Desenha um retângulo preto em toda a imagem\n        imagemFundoPreto.setColor(Color.BLACK);\n        imagemFundoPreto.fillRect(0, 0, 800, 600);\n        // Define a imagem com o plano de fundo do mundo\n        setBackground(imagemFundoPreto);\n    }\n}"
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-2",
+    "href": "greenfoot-vetores.html#section-2",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Exercício (entrega)\n\n\nCrie o projeto no Greenfoot e use o código do slide anterior para definir o mundo (altere a classe inicial MyWorld).\nCrie então um objeto da classe MeuMundo, clicando na caixa da classe e acessando a opção new MeuMundo(). Você verá que o jogo exibirá uma tela preta."
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-3",
+    "href": "greenfoot-vetores.html#section-3",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Vamos agora criar uma classe Cavaleiro.\n\nPara ficar claro o conceito das animações, vamos começar com uma imagem estática.\n\n\nAs imagens que vamos utilizar foram baixadas do site:\n\nhttps://www.gameart2d.com/the-knight-free-sprites.html\n\n\n\n\n\n\n\nExercício (entrega)\n\n\nBaixe as imagens do site citado, encontre a imagem Idle (1).png e copie-a para a pasta images do projeto do Greenfoot. Renomeie a imagem para knight.png."
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-4",
+    "href": "greenfoot-vetores.html#section-4",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "O código abaixo utiliza a imagem que copiamos como a imagem do cavaleiro.\n\npublic class Cavaleiro extends Actor\n{\n    public Cavaleiro()\n    {\n        // cria a imagem do cavaleiro\n        GreenfootImage imagem = new GreenfootImage(\"knight.png\");\n        // como a imagem é muito grande, vamos redimensioná-la para 120x140 pixels\n        imagem.scale(120,140);\n        // usamos a imagem como a imagem do cavaleiro\n        setImage(imagem);\n    }\n    \n    public void act() \n    { \n        // não faz nada, por enquanto\n    }\n}"
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-5",
+    "href": "greenfoot-vetores.html#section-5",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Exercício (entrega)\n\n\nCrie uma classe Cavaleiro no seu projeto. Para isso, clique em Actor e acesse a opção Nova subclasse.... Use o nome Cavaleiro na janela que aparece e clique em OK.\nEm seguida, implemente o construtor da classe conforme apresentado no slide anterior.\nPara testar, crie um objeto da classe Cavaleiro e o coloque no mundo."
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-6",
+    "href": "greenfoot-vetores.html#section-6",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Vamos agora adicionar código para que o cavaleiro possa caminhar na horizontal.\n\nPara isso, vamos alterar o método act do Cavaleiro.\nO método, basicamente, aumenta ou diminui o valor da posição do cavaleiro no eixo X (horizontal),\n\ndependendo da tecla que está sendo pressionada (seta para a esquerda ou para a direita).\n\n\n\n\n    public void act()\n    {\n        // se a tecla seta para a ESQUERDA estiver pressionada\n        if (Greenfoot.isKeyDown(\"left\")) {\n            // posição do cavaleiro DIMINUI 4 no eixo X e se mantém no eixo Y\n            setLocation(getX()-4, getY());            \n        }\n        // se a tecla seta para a DIREITA estiver pressionada\n        if (Greenfoot.isKeyDown(\"right\")) {\n            // posição do cavaleiro AUMENTA 4 no eixo X e se mantém no eixo Y\n            setLocation(getX()+4, getY());            \n        }\n    }"
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-7",
+    "href": "greenfoot-vetores.html#section-7",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Exercício (entrega)\n\n\nAltere o método act da classe Cavaleiro de acordo com o slide anterior.\nCrie um objeto da classe, coloque-o no mundo e então clique no botão Executar.\nExperimente movimentar o cavaleiro usando as setas para a direita e para a esquerda.\nO que achou do movimento?"
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-8",
+    "href": "greenfoot-vetores.html#section-8",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Repare que o movimento funciona, mas não é muito realista.\n\nParece que o cavaleiro está deslizando no chão sem mexer o corpo.\n\n\nMas você deve ter notado, nos arquivos que baixou, que há várias imagens do cavaleiro.\n\nAs imagens têm um nome seguido de um número.\nCada nome indica uma ação do personagem.\n\nEx.: idle (parado), walk (caminhando), run (correndo), etc.\n\nE o número é a sequência de imagens que fazem acontecer a animação.\n\nPor ex.: se exibirmos repetidamente, e em sequência, todas as imagens que começam com walk:\nteremos uma ilusão de movimento do personagem."
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-9",
+    "href": "greenfoot-vetores.html#section-9",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Para fazer isso, vamos primeiro copiar todas as imagens que baixamos do cavaleiro para a pasta images do projeto no Greenfoot.\n\nVamos começar tratando a imagem do cavaleiro parado (idle).\nRepare que as imagens se chamam: Idle (1).png, Idle (2).png, …, até Idle (10).png.\n\n\nPara usar essas imagens, vamos declarar um vetor de imagens como atributo da classe Cavaleiro.\n\nE, no construtor da classe, vamos carregar as 10 imagens e guardá-las no vetor."
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-10",
+    "href": "greenfoot-vetores.html#section-10",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "public class Cavaleiro extends Actor\n{\n    // declaramos um vetor de imagens\n    private GreenfootImage[] imagens;\n    public Cavaleiro() {\n        // criamos o vetor com 10 posições, pois temos 10 imagens\n        imagens = new GreenfootImage[10];\n        // usamos um loop for que rodará 10 vezes\n        for (int i = 0; i &lt; imagens.length; i++) {\n            // em cada iteração, carregamos uma imagem usando o\n            // valor i+1 para montar o nome da imagem.\n            // e a guardamos na posição i do vetor.\n            imagens[i] = new GreenfootImage(\"Idle (\" + (i+1) + \").png\");\n            // redimensionamos a imagem porque ela é muito grande.\n            imagens[i].scale(120,140);\n        }\n        // definimos a primeira imagem como a imagem inicial do cavaleiro\n        setImage(imagens[0]);\n    }\n    // restante da classe omitido\n}"
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-11",
+    "href": "greenfoot-vetores.html#section-11",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "A alteração no slide anterior apenas carregou as imagens para a memória, mas ainda não faz nenhuma animação.\n\nPara criar a animação, precisamos que seja exibida uma das imagens de cada vez.\nPodemos então usar o método act que é chamado várias vezes por segundo na execução do jogo.\n\nA princípio, parece que basta mudarmos para a imagem seguinte a cada chamada.\nE quando chegarmos na última imagem, voltamos para a primeira.\n\n\n\nRepare que para que consigamos mudar para a próxima imagem, precisaremos de um atributo que indique qual é a imagem atual.\n\nVamos então criar um atributo inteiro indiceImagemAtual, e inicializá-lo com 0 no construtor.\nFeito isso, podemos utilizá-lo no método act, como mostrado no slide a seguir."
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-12",
+    "href": "greenfoot-vetores.html#section-12",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Toda vez que o método act é chamado, a próxima imagem do vetor é exibida.\n\n    public void act()\n    {        \n        // início do método que trata eventos de teclado omitido\n        \n        // incrementamos o índice da imagem atual para que\n        // possamos usar a próxima imagem.\n        indiceImagemAtual++;\n        // mas se o índice chegou ao final do vetor, voltamos para a primeira posição\n        if (indiceImagemAtual &gt;= imagens.length) {\n            indiceImagemAtual = 0;\n        }\n        // usamos então a próxima imagem, como imagem do cavaleiro\n        setImage(imagens[indiceImagemAtual]);\n    }"
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-13",
+    "href": "greenfoot-vetores.html#section-13",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Exercício (entrega)\n\n\nImplemente as últimas alterações apresentadas da classe Cavaleiro: a criação do atributo indiceImagemAtual e alterações no construtor e no método act.\nAgora crie um objeto Cavaleiro e execute o jogo.\nO que achou da animação?"
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-14",
+    "href": "greenfoot-vetores.html#section-14",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Veja que a animação ficou muito acelerada.\n\nIsso porque a quantidade de vezes por segundo que o método act está sendo chamado é muito alta para as imagens que estamos usando.\n\n\nComo podemos resolver?\n\nPodemos fazer com que cada imagem seja usada por mais de uma execução do método act.\n\nOu dizendo, de outra forma, podemos fazer a atualização a cada X vezes que o método é chamado.\nEm vez de atualizar em toda chamada.\n\n\n\n\nE como podemos fazer isso?"
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-15",
+    "href": "greenfoot-vetores.html#section-15",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Repare que podemos definir de quantos em quantos passos precisamos atualizar as imagens.\n\nE usarmos essa informação para saber se é hora de atualizar a imagem ou não.\n\nMas, para usá-lo, precisamos contar quantos passos foram dados desde a última atualização.\n\n\n\nVamos então definir esses dois atributos na classe Cavaleiro.\n\n\n\n    private int passosParaAtualizarImagem;\n    private int passosDesdeUltimaAtualizacaoImagem;\n\n\n\nE inicializá-los no construtor da classe.\n\nInicializamos passosDesdeUltimaAtualizacaoImagem com zero.\nMas qual valor devemos usar para passosDesdeUltimaAtualizacaoImagem?\n\nAqui vai um processo de tentativa e erro.\nVamos experimentando até achar um valor que a animação pareça razoável."
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-16",
+    "href": "greenfoot-vetores.html#section-16",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Por fim, vamos alterar o método act para usar os atributos que criamos\n\n\n    public void act()\n    {        \n        // início do método que trata eventos de teclado omitido\n\n        // contamos mais um passo desde a última atualização da imagem\n        passosDesdeUltimaAtualizacaoImagem++;\n        \n        // se já se passaram os passos necessários para atualizar a imagem\n        if (passosDesdeUltimaAtualizacaoImagem &gt;= passosParaAtualizarImagem) {\n            // a imagem será atualizada, então voltamos o valor da variável para zero\n            passosDesdeUltimaAtualizacaoImagem = 0;\n            \n            // e atualizamos a imagem (é o código que já tínhamos feito antes)\n            indiceImagemAtual++;\n            if (indiceImagemAtual &gt;= imagens.length) {\n                indiceImagemAtual = 0;\n            }\n            setImage(imagens[indiceImagemAtual]);\n        }\n    }"
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-17",
+    "href": "greenfoot-vetores.html#section-17",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Exercício (entrega)\n\n\nImplemente as últimas alterações para uso dos atributos passosParaAtualizarImagem e passosDesdeUltimaAtualizacaoImagem na classe Cavaleiro.\nExecute o jogo e veja o resultado. Altere o valor do atributo passosParaAtualizarImagem até encontrar um valor interessante. Qual valor achou melhor?"
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-18",
+    "href": "greenfoot-vetores.html#section-18",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Repare que usamos um vetor para guardar as imagens porque sabemos que usaremos 10 imagens e isso não vai mudar durante a execução do jogo.\n\nEsse, portanto, é um exemplo prático da utilidade de vetores em Java."
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-19",
+    "href": "greenfoot-vetores.html#section-19",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Mas, pensando no jogo, repare que fizemos todo esse trabalho só para tratar o movimento de corpo do personagem parado.\n\nJá que quando ele se movimenta, ele continua deslizando pela tela.\nComo podemos tratar isso?\n\n\nVeja que, nas imagens que baixamos, há imagens para a ação de caminhar (walk).\n\nBasta, portanto, seguirmos a mesma ideia:\n\nCriarmos um novo vetor de imagens.\nFazermos com o que a imagem seja alterada a cada X passos (usando passosParaAtualizarImagem).\n\n\n\n\nMas há um “detalhe” importante:\n\nPrecisamos agora saber quando o cavaleiro está parado e quando está se movimentando.\nPara saber qual vetor de imagens usarmos."
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-20",
+    "href": "greenfoot-vetores.html#section-20",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Exercício - DESAFIO\n\n\nAltere a classe Cavaleiro de forma que ela use as imagens com prefixo Walk, quando o cavaleiro estiver se movimentando.\nVocê precisará criar outro atributo vetor de imagens e carregar nele as imagens.\nAlém disso, precisará de um atributo para indicar a ação atual do cavaleiro (se ele está parado ou caminhando). O atributo deve ser atualizado ao tratar os eventos do teclado, e deve ser usado para saber qual vetor de imagens utilizar.\nPor enquanto, não se preocupe com a movimentação para a esquerda."
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-21",
+    "href": "greenfoot-vetores.html#section-21",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Exercício - DESAFIO\n\n\nA ideia agora é tratar a movimentação para a esquerda.\nRepare que, nesse caso, o ideal seria mostrar o cavaleiro olhando para a esquerda. Uma forma de fazer isso é invertermos a imagem horizontalmente. A classe GreenfootImage tem um método chamado mirrorHorizontally que faz exatamente isso.\nPara tratar a movimentação para a esquerda, precisaremos ter agora quatro vetores de imagens: parado olhando para a direita, parado olhando para a esquerda, caminhando para a direita e caminhando para a esquerda. Os dois vetores para a direita você já tratou no exercício anterior. Já os outros dois você pode carregar as mesmas imagens e usar o método mirrorHorizontally para invertê-las.\nAlém disso, é necessário que o atributo que indica a ação do cavaleiro tenha quatro estados, assim como os vetores.\nE aí? Vai encarar o desafio?"
+  },
+  {
+    "objectID": "greenfoot-vetores.html#section-22",
+    "href": "greenfoot-vetores.html#section-22",
+    "title": "Usando Vetores no Greenfoot",
+    "section": "",
+    "text": "Para ter presença nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nResponda às tarefas no Campus Virtual enviando o projeto criado no Greenfoot com a animação do cavaleiro, contendo as alterações solicitadas nos exercícios ao longo dos slides."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-14",
+    "href": "greenfoot-tutorial.html#section-14",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Exercício 2\n\n\nJá que conseguimos mostrar coisas na tela, seria interessante mostrar a pontuação do jogador, que poderia ser contada a cada larva que é devorada pelo caranguejo.\nFaça as seguintes alterações na classe MundoDoCaranguejo:\n\nCrie um atributo inteiro chamado pontos.\nAltere a chamada do método showText para incluir o valor do atributo criado.\nCrie um método contarPonto, que aumente o número de pontos em 10.\n\nEm seguida, altere o método act da classe Caranguejo para chamar o método contarPonto que acabamos de criar na classe MundoDoCaranguejo sempre que o caranguejo comer uma larva.\n\nPara isso, você precisará obter uma referência para o MundoDoCaranguejo usando o seguinte código:\nMundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-15",
+    "href": "greenfoot-tutorial.html#section-15",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Exercício 3\n\n\nVamos dificultar um pouco mais a vida do jogador :)\nA ideia agora é criar uma aranha que também coma larvas, e assim atrapalhe o jogador a obter uma alta pontuação.\nNesse passo vamos fazer uma versão simplificada da aranha. Ela sempre andará para frente e comerá uma larva se der sorte de ter uma no caminho dela.\nCrie então uma classe Aranha de forma similar ao que fizemos antes.\nNo método act faça a aranha movimentar (com move(2)) e faça com que ela coma uma larva se tocar nela (com o mesmo código que usamos para os caranguejos).\nPosicione uma ou mais aranhas à esquerda de algumas larvas e teste o jogo."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-16",
+    "href": "greenfoot-tutorial.html#section-16",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Exercício 4\n\n\nO desafio fica mais interessante se as aranhas perseguirem as larvas. Nós podemos fazer isso usando o método turnTowards e passando como parâmetro a posição de alguma larva.\nPara isso:\n\nCrie um atributo do tipo Larva na classe Aranha chamado larvaPerseguida.\nCrie um método tratarLarvaPerseguida com o código do próximo slide.\nAltere o método act para chamar o método acima e, em seguida, verificar se o atributo larvaPerseguida é diferente de null.\n\nSe for, aranha deve se virar na direção da larva perseguida chamando turnTowards(larvaPerseguida.getX(), larvaPerseguida.getY());"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-17",
+    "href": "greenfoot-tutorial.html#section-17",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "private void tratarLarvaPerseguida() {\n        if (larvaPerseguida == null || larvaPerseguida.getWorld() == null) {\n            MundoDoCaranguejo m = getWorldOfType(MundoDoCaranguejo.class);\n            List&lt;Larva&gt; larvas = m.getObjects(Larva.class);\n            if (larvas.size() &gt; 0) {\n                int posicao = Greenfoot.getRandomNumber(larvas.size());        \n                larvaPerseguida = larvas.get(posicao);\n            }\n            else {\n                larvaPerseguida = null;\n            }\n        }\n    }"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-18",
+    "href": "greenfoot-tutorial.html#section-18",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa aula e envie o código do projeto greenfoot-caranguejo da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar)."
   }
 ]

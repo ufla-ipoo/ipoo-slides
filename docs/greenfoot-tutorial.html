@@ -413,7 +413,7 @@
     </div>
 </div>
 
-  <p class="date">13/11/2024</p>
+  <p class="date">24/09/2025</p>
 </section>
 <section id="sobre-o-tutorial" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Sobre o Tutorial</h1>
@@ -1020,8 +1020,127 @@
 <li class="fragment">E faça os tratamentos necessários.</li>
 </ul></li>
 </ul>
+</section></section>
+<section>
+<section id="parte-6-exercícios" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Parte 6: Exercícios</h1>
+<p>Vamos agora incrementar o nosso jogo, cada um no seu próprio passo.</p>
 </section>
 <section id="section-13" class="slide level2">
+<h2></h2>
+<div title="Exercício 1">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 1</strong></p>
+</div>
+<div class="callout-content">
+<p>Vamos agora aprender a obter informações do usuário e exibir informações na tela do jogo. Pediremos ao jogador para informar seu nome e o mostraremos na tela.</p>
+<p>Para isso você deve:</p>
+<ul>
+<li>Criar um atributo <code>nomeJogador</code> na classe <code>MundoDoCaranguejo</code>.</li>
+<li>Criar um método <code>act</code> na classe <code>MundoDoCaranguejo</code> (público, com retorno <code>void</code>, sem parâmetros).
+<ul>
+<li>O método é chamado a cada atualização do Greenfoot assim como é feito para os atores.</li>
+</ul></li>
+<li>No método você deve verificar se o atributo <code>nomeJogador</code> é <code>null</code>.
+<ul>
+<li>Se for, você deve pedir ao usuário seu nome, usando o método <code>Greenfoot.ask</code> e guardar o retorno do método no atributo <code>nomeJogador</code>.</li>
+<li>Caso contrário, você deve exibir o nome do jogador na tela usando o método <code>showText</code>, passando como parâmetro o nome do jogador e os valores 200 (posição X) e 10 (posição Y).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-14" class="slide level2">
+<h2></h2>
+<div title="Exercício 2">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 2</strong></p>
+</div>
+<div class="callout-content">
+<p>Já que conseguimos mostrar coisas na tela, seria interessante mostrar a pontuação do jogador, que poderia ser contada a cada larva que é devorada pelo caranguejo.</p>
+<p>Faça as seguintes alterações na classe <code>MundoDoCaranguejo</code>:</p>
+<ul>
+<li>Crie um atributo inteiro chamado <code>pontos</code>.</li>
+<li>Altere a chamada do método <code>showText</code> para incluir o valor do atributo criado.</li>
+<li>Crie um método <code>contarPonto</code>, que aumente o número de pontos em 10.</li>
+</ul>
+<p>Em seguida, altere o método <code>act</code> da classe <code>Caranguejo</code> para chamar o método <code>contarPonto</code> que acabamos de criar na classe <code>MundoDoCaranguejo</code> sempre que o caranguejo comer uma larva.</p>
+<ul>
+<li><p>Para isso, você precisará obter uma referência para o <code>MundoDoCaranguejo</code> usando o seguinte código:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a></a>MundoDoCaranguejo mundoCaranguejo <span class="op">=</span> <span class="fu">getWorldOfType</span><span class="op">(</span>MundoDoCaranguejo<span class="op">.</span><span class="fu">class</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-15" class="slide level2">
+<h2></h2>
+<div title="Exercício 3">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 3</strong></p>
+</div>
+<div class="callout-content">
+<p>Vamos dificultar um pouco mais a vida do jogador :)</p>
+<p>A ideia agora é criar uma aranha que também coma larvas, e assim atrapalhe o jogador a obter uma alta pontuação.</p>
+<p>Nesse passo vamos fazer uma versão simplificada da aranha. Ela sempre andará para frente e comerá uma larva se der sorte de ter uma no caminho dela.</p>
+<p>Crie então uma classe <code>Aranha</code> de forma similar ao que fizemos antes.</p>
+<p>No método <code>act</code> faça a aranha movimentar (com <code>move(2)</code>) e faça com que ela coma uma larva se tocar nela (com o mesmo código que usamos para os caranguejos).</p>
+<p>Posicione uma ou mais aranhas à esquerda de algumas larvas e teste o jogo.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-16" class="slide level2">
+<h2></h2>
+<div title="Exercício 4">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 4</strong></p>
+</div>
+<div class="callout-content">
+<p>O desafio fica mais interessante se as aranhas perseguirem as larvas. Nós podemos fazer isso usando o método <code>turnTowards</code> e passando como parâmetro a posição de alguma larva.</p>
+<p>Para isso:</p>
+<ul>
+<li>Crie um atributo do tipo <code>Larva</code> na classe <code>Aranha</code> chamado <code>larvaPerseguida</code>.</li>
+<li>Crie um método <code>tratarLarvaPerseguida</code> com o código do próximo slide.</li>
+<li>Altere o método <code>act</code> para chamar o método acima e, em seguida, verificar se o atributo <code>larvaPerseguida</code> é diferente de <code>null</code>.
+<ul>
+<li>Se for, aranha deve se virar na direção da larva perseguida chamando <code>turnTowards(larvaPerseguida.getX(), larvaPerseguida.getY());</code></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-17" class="slide level2">
+<h2></h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a></a>    <span class="kw">private</span> <span class="dt">void</span> <span class="fu">tratarLarvaPerseguida</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb9-2"><a></a>        <span class="cf">if</span> <span class="op">(</span>larvaPerseguida <span class="op">==</span> <span class="kw">null</span> <span class="op">||</span> larvaPerseguida<span class="op">.</span><span class="fu">getWorld</span><span class="op">()</span> <span class="op">==</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb9-3"><a></a>            MundoDoCaranguejo m <span class="op">=</span> <span class="fu">getWorldOfType</span><span class="op">(</span>MundoDoCaranguejo<span class="op">.</span><span class="fu">class</span><span class="op">);</span></span>
+<span id="cb9-4"><a></a>            <span class="bu">List</span><span class="op">&lt;</span>Larva<span class="op">&gt;</span> larvas <span class="op">=</span> m<span class="op">.</span><span class="fu">getObjects</span><span class="op">(</span>Larva<span class="op">.</span><span class="fu">class</span><span class="op">);</span></span>
+<span id="cb9-5"><a></a>            <span class="cf">if</span> <span class="op">(</span>larvas<span class="op">.</span><span class="fu">size</span><span class="op">()</span> <span class="op">&gt;</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb9-6"><a></a>                <span class="dt">int</span> posicao <span class="op">=</span> Greenfoot<span class="op">.</span><span class="fu">getRandomNumber</span><span class="op">(</span>larvas<span class="op">.</span><span class="fu">size</span><span class="op">());</span>        </span>
+<span id="cb9-7"><a></a>                larvaPerseguida <span class="op">=</span> larvas<span class="op">.</span><span class="fu">get</span><span class="op">(</span>posicao<span class="op">);</span></span>
+<span id="cb9-8"><a></a>            <span class="op">}</span></span>
+<span id="cb9-9"><a></a>            <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb9-10"><a></a>                larvaPerseguida <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb9-11"><a></a>            <span class="op">}</span></span>
+<span id="cb9-12"><a></a>        <span class="op">}</span></span>
+<span id="cb9-13"><a></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="section-18" class="slide level2">
 <h2></h2>
 <div title="Entrega no Campus Virtual">
 <div class="callout callout-important callout-titled callout-style-default">
