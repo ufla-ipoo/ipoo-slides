@@ -556,80 +556,239 @@ Como você poderia fazer um [jogo para dois jogadores]{.alert}?
 - Crie uma nova classe no jogo do caranguejo com um animal que possa ser controlado por um segundo jogador.
   - E faça os tratamentos necessários.
 
-# Parte 6: Exercícios {background-color="#40666e"}
+# Parte 6: Exibindo informações na tela {background-color="#40666e"}
 
-Vamos agora incrementar o nosso jogo, cada um no seu próprio passo.
+Vamos aprender como exibir informações na tela do jogo.
+
+- Com isso poderemos exibir pontuações, quantidade de vidas, mensagens para o jogador, etc.
 
 
-## 
+## Exibindo um texto na tela {.smaller}
 
-:::: {.callout-note title="Exercício 1" icon=false .nonincremental}
-Vamos agora aprender a obter informações do usuário e exibir informações na tela do jogo.
-Pediremos ao jogador para informar seu nome e o mostraremos na tela.
+A classe `World` possui um método chamado `showText` que permite um texto
+em uma determinada posição da tela.
 
-Para isso você deve:
+- O método recebe com o parâmetros uma String e as posições X e Y que definem
+  o ponto central do texto.
 
-- Criar um atributo `nomeJogador` na classe `MundoDoCaranguejo`.
-- Criar um método `act` na classe `MundoDoCaranguejo` (público, com retorno `void`, sem parâmetros).
-  - O método é chamado a cada atualização do Greenfoot assim como é feito para os atores.
-- No método você deve verificar se o atributo `nomeJogador` é `null`.
-  - Se for, você deve pedir ao usuário seu nome, usando o método `Greenfoot.ask` e guardar o retorno
-    do método no atributo `nomeJogador`.
-  - Caso contrário, você deve exibir o nome do jogador na tela usando o método `showText`,
-    passando como parâmetro o nome do jogador e os valores 200 (posição X) e 10 (posição Y).
-::::
+. . .
 
-##
+Vamos começar então exibindo o texto `Jogo do Caranguejo` na tela.
 
-:::: {.callout-note title="Exercício 2" icon=false .nonincremental}
-Já que conseguimos mostrar coisas na tela, seria interessante mostrar a pontuação
-do jogador, que poderia ser contada a cada larva que é devorada pelo caranguejo.
+- Para isso, altere a classe `MundoDoCaranguejo` acresentando a 
+  linha abaixo no final do construtor da classe.
 
-Faça as seguintes alterações na classe `MundoDoCaranguejo`:
+. . .
 
-- Crie um atributo inteiro chamado `pontos`.
-- Altere a chamada do método `showText` para incluir o valor do atributo criado.
-- Crie um método `contarPonto`, que aumente o número de pontos em 10.
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    showText("Jogo do Caranguejo", 200, 20);
+```
+:::
 
-Em seguida, altere o método `act` da classe `Caranguejo` para chamar o
-método `contarPonto` que acabamos de criar na classe `MundoDoCaranguejo`
-sempre que o caranguejo comer uma larva.
+## Mensagem de vitória {.smaller}
 
-- Para isso, você precisará obter uma referência para o `MundoDoCaranguejo`
-  usando o seguinte código:
-  ```java
-  MundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);
-  ```
-::::
+Agora que sabemos como exibir um texto na tela, podemos exibir uma
+mensagem quando o jogador vence jogo.
 
-##
+- No nosso jogo, a vitória acontece quando todas as larvas são devoradas.
 
-:::: {.callout-note title="Exercício 3" icon=false .nonincremental}
+. . .
+
+Mas como saber se ainda existem larvas?
+
+- A classe `World` possui um método chamado `getObjects` que permite
+  consultar os objetos de uma determinada classe, que existem no momento
+  naquele mundo.
+- Portanto, se usarmos `getObjects(Larva.class)` vamos obter uma lista
+  com as larvas que estão no mundo.
+- Se a lista estiver vazia significa que jogador venceu o jogo.
+
+. . .
+
+Mas nós precisamos verificar a todo momento se as larvas já acabaram, certo?
+
+- Como fazer isso?
+
+## Mensagem de vitória {.smaller}
+
+Podemos definir um método `act` na classe `MundoDoCaranguejo` com a mesma
+assinatura dos métodos das classes de atores.
+
+- Esse método também é chamado a cada iteração do Greenfoot.
+- Portanto, para tratar a mensagem de vitória, basta verificarmos 
+  se ainda existe larva dentro desse método.
+
+. . .
+
+Nós vamos então implementar o método como mostrado abaixo.
+
+- Mas, para ele compilar, precisaremos importar a classe `List`.
+  - Podemos fazer isso acrescentado `import java.util.List;` no início do arquivo.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    public void act() {
+        List<Larva> larvas = getObjects(Larva.class);
+        if (larvas.size() == 0) {
+            showText("Voce venceu!", 200, 300);
+        }
+    }
+```
+:::
+
+## {.smaller}
+
+A implementação que fizemos funciona, mas não é eficiente.
+
+- Isso porque, depois que o jogador vence o jogo, a cada iteração do Greenfoot, 
+  um novo texto `"Voce venceu!"` é colocado no lugar do anterior.
+- Seria melhor se o texto fosse colocado apenas uma vez.
+
+. . .
+
+Como podemos fazer isso?
+
+- Veja que podemos criar um atributo booleano para indicar se o jogo terminou.
+- E usá-lo para escrever a mensagem apenas uma vez.
+
+. . .
+
+Altere então a classe `MundoDoCaranguejo` acrescentando um booleano chamado
+`jogoTerminou`.
+
+- O atributo deve ser inicializado com valor `false` no construtor.
+- E o método `act` deve ser alterado para utilizá-lo.
+
+## {.smaller}
+
+Vamos então alterar o método `act` como mostrado abaixo.
+
+- Veja que foi acrescentado um `if` para que a lista de larvas só
+  seja verificada se o jogo ainda não terminou.
+- Além disso, depois que o texto é mostrado, o booleano `jogoTerminou`
+  é alterado para `true`.
+- Com isso, o texto `"Voce venceu"` é inserido na tela uma única vez.  
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false" code-line-numbers="2,6"}
+    public void act() {
+        if (!jogoTerminou) {
+            List<Larva> larvas = getObjects(Larva.class);
+            if (larvas.size() == 0) {
+                showText("Voce venceu!", 200, 300);
+                jogoTerminou = true;
+            }
+        }
+    }
+```
+:::
+
+## Game Over! {.smaller}
+
+Baseado no que fizemos para a mensagem de vitória, implemente uma
+mensagem de "Game Over" que deve ser exibida quando todos os 
+caranguejos forem comidos pelas lagostas.
+
+- Veja que basta seguirmos a mesma ideia, mas agora verificando se ainda existem caranguejos em vez de larvas.
+
+. . .
+
+```{.java code-line-numbers="false" code-line-numbers="9-14"}
+    public void act() {
+        if (!jogoTerminou) {
+            // verificando vitoria
+            List<Larva> larvas = getObjects(Larva.class);
+            if (larvas.size() == 0) {
+                showText("Voce venceu!", 200, 300);
+                jogoTerminou = true;
+            }
+            // verificando derrota
+            List<Caranguejo> caranguejos = getObjects(Caranguejo.class);
+            if (caranguejos.size() == 0) {
+                showText("GameOver!", 200, 300);
+                jogoTerminou = true;
+            }
+        }
+    }
+```
+
+# Parte 7: Tratando pontuação {background-color="#40666e"}
+
+Agora que sabemos como exibir informações na tela, podemos fazer algo mais interessante.
+
+- Podemos passar a contabilizar a pontuação do jogador e exibi-la na tela.
+
+## Contabilizando pontos {.smaller}
+
+Para contabilizar os pontos do jogador, precisaremos:
+
+- criar um atributo na classe `MundoDoCaranguejo` para guardar a pontuação.
+- Criar um método para incrementar a pontuação.
+- Chamar esse método toda vez que um caranguejo comer uma larva.
+- E exibir a pontuação na tela, sempre que ela for alterada.
+
+. . .
+
+Altere então a classe `MundoDoCaranguejo`:
+
+- incluindo um atributo inteiro chamado `pontos` 
+- e um método `contarPontos` que incrementa esse atributo em 10 e
+  exibe na tela o placar atualizado.
+  - Use o método `showText` para exibir o texto "Placar: N", onde
+    N é o número de pontos, na posição (400, 20).
+
+## {.smaller}
+
+Precisamos agora alterar a classe `Caranguejo` para que o método `contarPontos`
+seja chamado toda vez que o caranguejo comer uma larva.
+
+- Localize no método `act` o trecho de código que remove a larva comida do jogo.
+- Acrescente ao final a chamada do método `contarPontos`.
+- Para isso, precisaremos obter uma referência do mundo como uma instância 
+  da classe `MundoDoCaranguejo`.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    MundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);
+    mundoCaranguejo.contarPontos();
+```
+:::
+
+# Parte 8: Um competidor que persegue as larvas {background-color="#40666e"}
+
+## Criando aranhas comedoras de larvas {.smaller}
+
 Vamos dificultar um pouco mais a vida do jogador :)
 
-A ideia agora é criar uma aranha que também coma larvas, e assim atrapalhe o
+- A ideia agora é criar uma aranha que também coma larvas, e assim atrapalhe o
 jogador a obter uma alta pontuação.
 
-Nesse passo vamos fazer uma versão simplificada da aranha. 
-Ela sempre andará para frente e comerá uma larva se der sorte de ter uma
+- Num primeiro passo, vamos fazer uma versão simplificada da aranha. 
+- Ela sempre andará para frente e comerá uma larva se der sorte de ter uma
 no caminho dela.
+
+. . .
 
 Crie então uma classe `Aranha` de forma similar ao que fizemos antes.
 
-No método `act` faça a aranha movimentar (com `move(2)`) e faça
-com que ela coma uma larva se tocar nela (com o mesmo código que usamos
-para os caranguejos).
+- No método `act` da classe faça a aranha movimentar (com `move(2)`) 
+- e faça com que ela coma uma larva se tocar nela 
+  (com o mesmo código que usamos para os caranguejos).
 
 Posicione uma ou mais aranhas à esquerda de algumas larvas e teste o jogo.
-::::
 
+## Tornando as aranhas mais espertas {.smaller} 
 
-## 
+O desafio fica mais interessante se as aranhas perseguirem as larvas
+de forma automática.
 
-:::: {.callout-note title="Exercício 4" icon=false .nonincremental}
-O desafio fica mais interessante se as aranhas perseguirem as larvas.
-Nós podemos fazer isso usando o método `turnTowards` e passando como
+- Nós podemos fazer isso usando o método `turnTowards` e passando como
 parâmetro a posição de alguma larva.
+
+. . .
 
 Para isso:
 

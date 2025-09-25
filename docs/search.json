@@ -4379,7 +4379,7 @@
     "href": "greenfoot-tutorial.html#section-13",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Exercício 1\n\n\nVamos agora aprender a obter informações do usuário e exibir informações na tela do jogo. Pediremos ao jogador para informar seu nome e o mostraremos na tela.\nPara isso você deve:\n\nCriar um atributo nomeJogador na classe MundoDoCaranguejo.\nCriar um método act na classe MundoDoCaranguejo (público, com retorno void, sem parâmetros).\n\nO método é chamado a cada atualização do Greenfoot assim como é feito para os atores.\n\nNo método você deve verificar se o atributo nomeJogador é null.\n\nSe for, você deve pedir ao usuário seu nome, usando o método Greenfoot.ask e guardar o retorno do método no atributo nomeJogador.\nCaso contrário, você deve exibir o nome do jogador na tela usando o método showText, passando como parâmetro o nome do jogador e os valores 200 (posição X) e 10 (posição Y)."
+    "text": "A implementação que fizemos funciona, mas não é eficiente.\n\nIsso porque, depois que o jogador vence o jogo, a cada iteração do Greenfoot, um novo texto \"Voce venceu!\" é colocado no lugar do anterior.\nSeria melhor se o texto fosse colocado apenas uma vez.\n\n\nComo podemos fazer isso?\n\nVeja que podemos criar um atributo booleano para indicar se o jogo terminou.\nE usá-lo para escrever a mensagem apenas uma vez.\n\n\n\nAltere então a classe MundoDoCaranguejo acrescentando um booleano chamado jogoTerminou.\n\nO atributo deve ser inicializado com valor false no construtor.\nE o método act deve ser alterado para utilizá-lo."
   },
   {
     "objectID": "cap5-3.html#section-12",
@@ -5282,34 +5282,83 @@
     "href": "greenfoot-tutorial.html#section-14",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Exercício 2\n\n\nJá que conseguimos mostrar coisas na tela, seria interessante mostrar a pontuação do jogador, que poderia ser contada a cada larva que é devorada pelo caranguejo.\nFaça as seguintes alterações na classe MundoDoCaranguejo:\n\nCrie um atributo inteiro chamado pontos.\nAltere a chamada do método showText para incluir o valor do atributo criado.\nCrie um método contarPonto, que aumente o número de pontos em 10.\n\nEm seguida, altere o método act da classe Caranguejo para chamar o método contarPonto que acabamos de criar na classe MundoDoCaranguejo sempre que o caranguejo comer uma larva.\n\nPara isso, você precisará obter uma referência para o MundoDoCaranguejo usando o seguinte código:\nMundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);"
+    "text": "Vamos então alterar o método act como mostrado abaixo.\n\nVeja que foi acrescentado um if para que a lista de larvas só seja verificada se o jogo ainda não terminou.\nAlém disso, depois que o texto é mostrado, o booleano jogoTerminou é alterado para true.\nCom isso, o texto \"Voce venceu\" é inserido na tela uma única vez.\n\n\n    public void act() {\n        if (!jogoTerminou) {\n            List&lt;Larva&gt; larvas = getObjects(Larva.class);\n            if (larvas.size() == 0) {\n                showText(\"Voce venceu!\", 200, 300);\n                jogoTerminou = true;\n            }\n        }\n    }"
   },
   {
     "objectID": "greenfoot-tutorial.html#section-15",
     "href": "greenfoot-tutorial.html#section-15",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Exercício 3\n\n\nVamos dificultar um pouco mais a vida do jogador :)\nA ideia agora é criar uma aranha que também coma larvas, e assim atrapalhe o jogador a obter uma alta pontuação.\nNesse passo vamos fazer uma versão simplificada da aranha. Ela sempre andará para frente e comerá uma larva se der sorte de ter uma no caminho dela.\nCrie então uma classe Aranha de forma similar ao que fizemos antes.\nNo método act faça a aranha movimentar (com move(2)) e faça com que ela coma uma larva se tocar nela (com o mesmo código que usamos para os caranguejos).\nPosicione uma ou mais aranhas à esquerda de algumas larvas e teste o jogo."
+    "text": "Precisamos agora alterar a classe Caranguejo para que o método contarPontos seja chamado toda vez que o caranguejo comer uma larva.\n\nLocalize no método act o trecho de código que remove a larva comida do jogo.\nAcrescente ao final a chamada do método contarPontos.\nPara isso, precisaremos obter uma referência do mundo como uma instância da classe MundoDoCaranguejo.\n\n\n\n    MundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);\n    mundoCaranguejo.contarPontos();"
   },
   {
     "objectID": "greenfoot-tutorial.html#section-16",
     "href": "greenfoot-tutorial.html#section-16",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Exercício 4\n\n\nO desafio fica mais interessante se as aranhas perseguirem as larvas. Nós podemos fazer isso usando o método turnTowards e passando como parâmetro a posição de alguma larva.\nPara isso:\n\nCrie um atributo do tipo Larva na classe Aranha chamado larvaPerseguida.\nCrie um método tratarLarvaPerseguida com o código do próximo slide.\nAltere o método act para chamar o método acima e, em seguida, verificar se o atributo larvaPerseguida é diferente de null.\n\nSe for, aranha deve se virar na direção da larva perseguida chamando turnTowards(larvaPerseguida.getX(), larvaPerseguida.getY());"
+    "text": "Exercício 2\n\n\nJá que conseguimos mostrar coisas na tela, seria interessante mostrar a pontuação do jogador, que poderia ser contada a cada larva que é devorada pelo caranguejo.\nFaça as seguintes alterações na classe MundoDoCaranguejo:\n\nCrie um atributo inteiro chamado pontos.\nAltere a chamada do método showText para incluir o valor do atributo criado.\nCrie um método contarPonto, que aumente o número de pontos em 10.\n\nEm seguida, altere o método act da classe Caranguejo para chamar o método contarPonto que acabamos de criar na classe MundoDoCaranguejo sempre que o caranguejo comer uma larva.\n\nPara isso, você precisará obter uma referência para o MundoDoCaranguejo usando o seguinte código:\nMundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);"
   },
   {
     "objectID": "greenfoot-tutorial.html#section-17",
     "href": "greenfoot-tutorial.html#section-17",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "private void tratarLarvaPerseguida() {\n        if (larvaPerseguida == null || larvaPerseguida.getWorld() == null) {\n            MundoDoCaranguejo m = getWorldOfType(MundoDoCaranguejo.class);\n            List&lt;Larva&gt; larvas = m.getObjects(Larva.class);\n            if (larvas.size() &gt; 0) {\n                int posicao = Greenfoot.getRandomNumber(larvas.size());        \n                larvaPerseguida = larvas.get(posicao);\n            }\n            else {\n                larvaPerseguida = null;\n            }\n        }\n    }"
+    "text": "Exercício 3\n\n\nVamos dificultar um pouco mais a vida do jogador :)\nA ideia agora é criar uma aranha que também coma larvas, e assim atrapalhe o jogador a obter uma alta pontuação.\nNesse passo vamos fazer uma versão simplificada da aranha. Ela sempre andará para frente e comerá uma larva se der sorte de ter uma no caminho dela.\nCrie então uma classe Aranha de forma similar ao que fizemos antes.\nNo método act faça a aranha movimentar (com move(2)) e faça com que ela coma uma larva se tocar nela (com o mesmo código que usamos para os caranguejos).\nPosicione uma ou mais aranhas à esquerda de algumas larvas e teste o jogo."
   },
   {
     "objectID": "greenfoot-tutorial.html#section-18",
     "href": "greenfoot-tutorial.html#section-18",
     "title": "Tutorial do Greenfoot",
     "section": "",
+    "text": "Exercício 4\n\n\nO desafio fica mais interessante se as aranhas perseguirem as larvas. Nós podemos fazer isso usando o método turnTowards e passando como parâmetro a posição de alguma larva.\nPara isso:\n\nCrie um atributo do tipo Larva na classe Aranha chamado larvaPerseguida.\nCrie um método tratarLarvaPerseguida com o código do próximo slide.\nAltere o método act para chamar o método acima e, em seguida, verificar se o atributo larvaPerseguida é diferente de null.\n\nSe for, aranha deve se virar na direção da larva perseguida chamando turnTowards(larvaPerseguida.getX(), larvaPerseguida.getY());"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#exibindo-um-texto-na-tela",
+    "href": "greenfoot-tutorial.html#exibindo-um-texto-na-tela",
+    "title": "Tutorial do Greenfoot",
+    "section": "Exibindo um texto na tela",
+    "text": "Exibindo um texto na tela\nA classe World possui um método chamado showText que permite um texto em uma determinada posição da tela.\n\nO método recebe com o parâmetros uma String e as posições X e Y que definem o ponto central do texto.\n\n\nVamos começar então exibindo o texto Jogo do Caranguejo na tela.\n\nPara isso, altere a classe MundoDoCaranguejo acresentando a linha abaixo no final do construtor da classe.\n\n\n\n\n    showText(\"Jogo do Caranguejo\", 200, 20);"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#mensagem-de-vitória",
+    "href": "greenfoot-tutorial.html#mensagem-de-vitória",
+    "title": "Tutorial do Greenfoot",
+    "section": "Mensagem de vitória",
+    "text": "Mensagem de vitória\nAgora que sabemos como exibir um texto na tela, podemos exibir uma mensagem quando o jogador vence jogo.\n\nNo nosso jogo, a vitória acontece quando todas as larvas são devoradas.\n\n\nMas como saber se ainda existem larvas?\n\nA classe World possui um método chamado getObjects que permite consultar os objetos de uma determinada classe, que existem no momento naquele mundo.\nPortanto, se usarmos getObjects(Larva.class) vamos obter uma lista com as larvas que estão no mundo.\nSe a lista estiver vazia significa que jogador venceu o jogo.\n\n\n\nMas nós precisamos verificar a todo momento se as larvas já acabaram, certo?\n\nComo fazer isso?"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#mensagem-de-vitória-1",
+    "href": "greenfoot-tutorial.html#mensagem-de-vitória-1",
+    "title": "Tutorial do Greenfoot",
+    "section": "Mensagem de vitória",
+    "text": "Mensagem de vitória\nPodemos definir um método act na classe MundoDoCaranguejo com a mesma assinatura dos métodos das classes de atores.\n\nEsse método também é chamado a cada iteração do Greenfoot.\nPortanto, para tratar a mensagem de vitória, basta verificarmos se ainda existe larva dentro desse método.\n\n\nNós vamos então implementar o método como mostrado abaixo.\n\nMas, para ele compilar, precisaremos importar a classe List.\n\nPodemos fazer isso acrescentado import java.util.List; no início do arquivo.\n\n\n\n    public void act() {\n        List&lt;Larva&gt; larvas = getObjects(Larva.class);\n        if (larvas.size() == 0) {\n            showText(\"Voce venceu!\", 200, 300);\n        }\n    }"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-19",
+    "href": "greenfoot-tutorial.html#section-19",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "private void tratarLarvaPerseguida() {\n        if (larvaPerseguida == null || larvaPerseguida.getWorld() == null) {\n            MundoDoCaranguejo m = getWorldOfType(MundoDoCaranguejo.class);\n            List&lt;Larva&gt; larvas = m.getObjects(Larva.class);\n            if (larvas.size() &gt; 0) {\n                int posicao = Greenfoot.getRandomNumber(larvas.size());        \n                larvaPerseguida = larvas.get(posicao);\n            }\n            else {\n                larvaPerseguida = null;\n            }\n        }\n    }"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-20",
+    "href": "greenfoot-tutorial.html#section-20",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
     "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa aula e envie o código do projeto greenfoot-caranguejo da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar)."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#game-over",
+    "href": "greenfoot-tutorial.html#game-over",
+    "title": "Tutorial do Greenfoot",
+    "section": "Game Over!",
+    "text": "Game Over!\nBaseado no que fizemos para a mensagem de vitória, implemente uma mensagem de “Game Over” que deve ser exibida quando todos os caranguejos forem comidos pelas lagostas.\n\nVeja que basta seguirmos a mesma ideia, mas agora verificando se ainda existem caranguejos em vez de larvas.\n\n\n    public void act() {\n        if (!jogoTerminou) {\n            // verificando vitoria\n            List&lt;Larva&gt; larvas = getObjects(Larva.class);\n            if (larvas.size() == 0) {\n                showText(\"Voce venceu!\", 200, 300);\n                jogoTerminou = true;\n            }\n            // verificando derrota\n            List&lt;Caranguejo&gt; caranguejos = getObjects(Caranguejo.class);\n            if (caranguejos.size() == 0) {\n                showText(\"GameOver!\", 200, 300);\n                jogoTerminou = true;\n            }\n        }\n    }"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#contabilizando-pontos",
+    "href": "greenfoot-tutorial.html#contabilizando-pontos",
+    "title": "Tutorial do Greenfoot",
+    "section": "Contabilizando pontos",
+    "text": "Contabilizando pontos\nPara contabilizar os pontos do jogador, precisaremos:\n\ncriar um atributo na classe MundoDoCaranguejo para guardar a pontuação.\nCriar um método para incrementar a pontuação.\nChamar esse método toda vez que um caranguejo comer uma larva.\nE exibir a pontuação na tela, sempre que ela for alterada.\n\n\nAltere então a classe MundoDoCaranguejo:\n\nincluindo um atributo inteiro chamado pontos\ne um método contarPontos que incrementa esse atributo em 10 e exibe na tela o placar atualizado.\n\nUse o método showText para exibir o texto “Placar: N”, onde N é o número de pontos, na posição (400, 20)."
   }
 ]
