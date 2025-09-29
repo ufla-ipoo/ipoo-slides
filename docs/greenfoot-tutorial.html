@@ -413,19 +413,30 @@
     </div>
 </div>
 
-  <p class="date">25/09/2025</p>
+  <p class="date">29/09/2025</p>
 </section>
+<section>
 <section id="sobre-o-tutorial" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Sobre o Tutorial</h1>
-<p>O trabalho da disciplina será um jogo com gráficos em 2D, desenvolvido em Java, com a IDE Greenfoot.</p>
+<p>Este tutorial apresenta o Greenfoot, uma IDE baseada no BlueJ e usada para criação de jogos e simulações em Java.</p>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>Nós estamos usando o Greenfoot na aula porque</p>
 <ul>
-<li class="fragment">Em casa, você pode baixar e instalar o greenfoot acessando o site: <a href="">https://greenfoot.org/download</a></li>
+<li class="fragment">o trabalho da disciplina terá como tema a implementação de um jogo com gráficos em 2D,</li>
+<li class="fragment">desenvolvido em Java, com a IDE Greenfoot.</li>
 </ul>
 <div class="fragment">
-<p>Obs.: Este material se baseia no tutorial disponibilizado no site do Greenfoot: <a href="">https://www.greenfoot.org/doc/tut-1</a></p>
+<p>Em casa, você pode baixar e instalar o greenfoot acessando o site: <a href="">https://greenfoot.org/download</a></p>
 </div>
-</section>
-
+<div class="fragment">
+<p>Este material se baseia no tutorial disponibilizado no site do Greenfoot: <a href="">https://www.greenfoot.org/doc/tut-1</a></p>
+<ul>
+<li class="fragment">Mas ele foi estendido esse semestre, trazendo mais conteúdo.</li>
+</ul>
+</div>
+</section></section>
 <section>
 <section id="parte-1-interagindo-com-o-greenfoot" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Parte 1: Interagindo com o Greenfoot</h1>
@@ -554,7 +565,7 @@
 </ul>
 </div>
 </section>
-<section id="section" class="slide level2 smaller">
+<section id="section-1" class="slide level2 smaller">
 <h2></h2>
 <p>Bom, chega de ursos andando em círculos…</p>
 <ul>
@@ -580,7 +591,7 @@
 </ul>
 </div>
 </section>
-<section id="section-1" class="slide level2 smaller">
+<section id="section-2" class="slide level2 smaller">
 <h2></h2>
 <p>O caranguejo não fez nada porque não tem nada programado para ele fazer.</p>
 <ul>
@@ -620,7 +631,7 @@
 </ul>
 </div>
 </section>
-<section id="section-2" class="slide level2 smaller">
+<section id="section-3" class="slide level2 smaller">
 <h2></h2>
 <p>Experimente agora colocar dois caranguejos e chamar o método <strong>Executar</strong>.</p>
 <ul>
@@ -640,7 +651,7 @@
 </ul>
 </div>
 </section>
-<section id="section-3" class="slide level2 smaller">
+<section id="section-4" class="slide level2 smaller">
 <h2></h2>
 <p>Acrescente agora mais uma linha no método <code>act</code>, de forma que ele fique como mostrado abaixo:</p>
 <div class="halfincfontsize">
@@ -676,7 +687,7 @@
 </div>
 </div>
 </section>
-<section id="section-4" class="slide level2 smaller">
+<section id="section-5" class="slide level2 smaller">
 <h2></h2>
 <p>Experimente, por exemplo, implementar o método <code>act</code> conforme mostrado abaixo:</p>
 <ul>
@@ -697,7 +708,7 @@
 <span id="cb3-11"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span>  </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="section-5" class="slide level2 smaller">
+<section id="section-6" class="slide level2 smaller">
 <h2></h2>
 <p>Você pode alterar os valores passados para o método <code>turn</code> para mudar o quanto os caranguejos giram.</p>
 <ul>
@@ -750,7 +761,7 @@
 </ul>
 </div>
 </section>
-<section id="section-6" class="slide level2 smaller">
+<section id="section-7" class="slide level2 smaller">
 <h2></h2>
 <p>A ideia agora é modificar a classe <code>Caranguejo</code> para que um caranguejo coma uma larva sempre que passar sobre ela.</p>
 <div class="fragment">
@@ -774,7 +785,7 @@
 </div>
 </div>
 </section>
-<section id="section-7" class="slide level2 smaller">
+<section id="section-8" class="slide level2 smaller">
 <h2></h2>
 <p>Altere o método <code>act</code> conforme mostrado no slide anterior.</p>
 <ul>
@@ -804,12 +815,13 @@
 <span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="fragment">
-<p>Veja que, com isso, o código fica mais fácil de entender e de se alterar.</p>
+</section>
+<section id="section-9" class="slide level2 smaller">
+<h2></h2>
+<p>Veja que, com a alteração que fizemos, o código fica mais fácil de entender e de se alterar.</p>
 <ul>
 <li class="fragment">Mais adiante na disciplina aprofundaremos essa questão, ao estudarmos o conceito <span class="alert">coesão de métodos</span>.</li>
 </ul>
-</div>
 </section></section>
 <section>
 <section id="parte-4-salvando-o-mundo-e-criando-e-tocando-sons" class="title-slide slide level1 center" data-background-color="#40666e">
@@ -870,7 +882,7 @@
 <div class="fragment">
 <p>O projeto caranguejo já tem um arquivo <code>comendo.wav</code> na pasta <code>sounds</code>.</p>
 <ul>
-<li class="fragment">Experimente então acrescentar uma linha de código na classe <code>Caranguejo</code>, logo após remover uma larva do mundo:
+<li class="fragment">Experimente então acrescentar a linha de código abaixo na classe <code>Caranguejo</code>, logo após remover uma larva do mundo:
 <ul>
 <li class="fragment"><code>Greenfoot.playSound("comendo.wav");</code></li>
 </ul></li>
@@ -912,7 +924,7 @@
 <h1>Parte 5: Adicionando inimigo com movimento aleatório</h1>
 <p>O jogo está muito fácil! É hora de criarmos algum desafio.</p>
 </section>
-<section id="section-8" class="slide level2 smaller">
+<section id="section-10" class="slide level2 smaller">
 <h2></h2>
 <p>Vamos criar uma lagosta que se move em linha reta e que pode comer caranguejos.</p>
 <ul>
@@ -956,7 +968,7 @@
 </ul>
 </div>
 </section>
-<section id="section-9" class="slide level2 smaller">
+<section id="section-11" class="slide level2 smaller">
 <h2></h2>
 <p>Um dos problemas é que a lagosta gira toda hora, com isso ela fica só rodopiando.</p>
 <ul>
@@ -977,7 +989,7 @@
 </div>
 </div>
 </section>
-<section id="section-10" class="slide level2 smaller">
+<section id="section-12" class="slide level2 smaller">
 <h2></h2>
 <p>Mas o que exatamente foi feito?</p>
 <ul>
@@ -993,7 +1005,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-11" class="slide level2 smaller">
+<section id="section-13" class="slide level2 smaller">
 <h2></h2>
 <p>Repare que podemos deixar a lagosta ainda melhor fazendo com que ela possa girar para os dois lados.</p>
 <ul>
@@ -1003,14 +1015,18 @@
 <div class="fragment">
 <p>Podemos mudar a forma que o ângulo é definido:</p>
 <ul>
-<li class="fragment">Agora teremos valores variando entre 0 - 45 = -45 e 89 - 45 = 44.</li>
+<li class="fragment">Agora teremos valores variando entre:
+<ul>
+<li class="fragment">0 - 45 = -45</li>
+<li class="fragment">e 89 - 45 = 44.</li>
+</ul></li>
 </ul>
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> angulo <span class="op">=</span> Greenfoot<span class="op">.</span><span class="fu">getRandomNumber</span><span class="op">(</span><span class="dv">90</span><span class="op">)</span> <span class="op">-</span> <span class="dv">45</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
-<section id="section-12" class="slide level2 smaller">
+<section id="section-14" class="slide level2 smaller">
 <h2></h2>
 <p>Faça as últimas alterações no seu código e coloque várias lagostas e larvas, e alguns caranguejos no mundo.</p>
 <ul>
@@ -1117,7 +1133,7 @@
 </div>
 </div>
 </section>
-<section id="section-13" class="slide level2 smaller">
+<section id="section-15" class="slide level2 smaller">
 <h2></h2>
 <p>A implementação que fizemos funciona, mas não é eficiente.</p>
 <ul>
@@ -1139,7 +1155,7 @@
 </ul>
 </div>
 </section>
-<section id="section-14" class="slide level2 smaller">
+<section id="section-16" class="slide level2 smaller">
 <h2></h2>
 <p>Vamos então alterar o método <code>act</code> como mostrado abaixo.</p>
 <ul>
@@ -1203,6 +1219,8 @@
 </ul>
 <div class="fragment">
 <p>Altere então a classe <code>MundoDoCaranguejo</code> incluindo um atributo inteiro chamado <code>pontos</code>.</p>
+</div>
+<div class="fragment">
 <p>Em seguida, crie um método público chamado <code>contarPontos</code> que:</p>
 <ul>
 <li class="fragment">acrescenta 10 unidades ao atributo <code>pontos</code>;</li>
@@ -1215,7 +1233,7 @@
 </div>
 </div>
 </section>
-<section id="section-15" class="slide level2 smaller">
+<section id="section-17" class="slide level2 smaller">
 <h2></h2>
 <p>A pontuação ainda não aparece, porque precisamos agora chamar o método <code>contarPontos</code> toda vez que o caranguejo comer uma larva.</p>
 <p>Para isso, altere o método <code>act</code> da classe <code>Caranguejo</code>.</p>
@@ -1237,15 +1255,14 @@
 <section>
 <section id="parte-8-um-inimigo-que-persegue-as-larvas" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Parte 8: Um inimigo que persegue as larvas</h1>
-
+<p>Vamos dificultar um pouco mais a vida do jogador :)</p>
 </section>
 <section id="criando-aranhas-comedoras-de-larvas" class="slide level2 smaller">
 <h2>Criando aranhas comedoras de larvas</h2>
-<p>Vamos dificultar um pouco mais a vida do jogador :)</p>
+<p>A ideia agora é criar aranhas que também comam larvas, e assim dificultem a vida do jogador na obteção de uma boa pontuação.</p>
 <ul>
-<li class="fragment"><p>A ideia agora é criar aranhas que também comam larvas, e assim dificultem a vida do jogador na obteção de uma boa pontuação.</p></li>
-<li class="fragment"><p>Num primeiro passo, vamos fazer uma versão simplificada da aranha.</p></li>
-<li class="fragment"><p>Ela sempre andará para frente e comerá uma larva se der sorte de ter uma no caminho dela.</p></li>
+<li class="fragment">Num primeiro passo, vamos fazer uma versão simplificada da aranha.</li>
+<li class="fragment">Ela sempre andará para frente e comerá uma larva se der sorte de ter uma no caminho dela.</li>
 </ul>
 <div class="fragment">
 <p>Crie então uma classe <code>Aranha</code> de forma similar ao que fizemos antes.</p>
@@ -1263,21 +1280,29 @@
 </section>
 <section id="tornando-as-aranhas-mais-espertas" class="slide level2 smaller">
 <h2>Tornando as aranhas mais espertas</h2>
-<p>O desafio fica mais interessante se as aranhas perseguirem as larvas de forma automática.</p>
+<p>Poderíamos deixar o jogo mais imprevisível se as aranhas se movimentassem aleatoriamente como as lagotas.</p>
 <ul>
-<li class="fragment">Nós podemos fazer isso usando o método <code>turnTowards</code>.</li>
+<li class="fragment">Mas podemos fazer algo ainda mais interessante:
+<ul>
+<li class="fragment">Fazer com que as aranhas caminhem em direção às larvas de forma automática.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Nós podemos fazer isso usando o método <code>turnTowards</code>.</p>
+<ul>
 <li class="fragment">Esse método vira um ator na direção das coordenadas passadas por parâmetro.</li>
 <li class="fragment">Portanto, se passarmos as coordenadas de uma larva, a aranha se movimentará em direção a ela.</li>
 </ul>
+</div>
 <div class="fragment">
 <p>Nós precisamos então ter uma maneira de identificar uma larva que seja o alvo da aranha.</p>
 </div>
 </section>
-<section id="section-16" class="slide level2 smaller">
+<section id="section-18" class="slide level2 smaller">
 <h2></h2>
 <p>Nosso primeiro passo será criar um método público na classe <code>MundoCaranguejo</code></p>
 <ul>
-<li class="fragment">que retorna uma das larvas do mundo (escolhendo aleatoriamente).</li>
+<li class="fragment">que retorna qualquer uma das larvas existentes do mundo (escolhendo aleatoriamente).</li>
 </ul>
 <div class="fragment">
 <div class="halfincfontsize">
@@ -1292,7 +1317,7 @@
 </div>
 </div>
 </section>
-<section id="section-17" class="slide level2 smaller">
+<section id="section-19" class="slide level2 smaller">
 <h2></h2>
 <p>Nós podemos agora chamar o método que criamos na classe <code>Aranha</code> para definir qual larva ela vai perseguir.</p>
 <ul>
@@ -1323,7 +1348,7 @@
 </ul>
 </div>
 </section>
-<section id="section-18" class="slide level2 smaller">
+<section id="section-20" class="slide level2 smaller">
 <h2></h2>
 <p>Nosso próximo passo é então fazer com que a aranha se vire na direção da larva alvo.</p>
 <ul>
@@ -1352,7 +1377,7 @@
 </ul>
 </div>
 </section>
-<section id="section-19" class="slide level2 smaller">
+<section id="section-21" class="slide level2 smaller">
 <h2></h2>
 <p>O que precisamos é manter o alvo e só mudar quando a larva for devorada</p>
 <ul>
@@ -1379,7 +1404,7 @@
 <span id="cb17-17"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
 <span id="cb17-18"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// se NÃO tem uma larva definida com o alvo</span></span>
 <span id="cb17-19"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>larvaAlvo <span class="op">==</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb17-20"><a aria-hidden="true" tabindex="-1"></a>            <span class="co">// definimos uma obtendo do mundo</span></span>
+<span id="cb17-20"><a aria-hidden="true" tabindex="-1"></a>            <span class="co">// definimos uma obtendo-a do mundo</span></span>
 <span id="cb17-21"><a aria-hidden="true" tabindex="-1"></a>            MundoDoCaranguejo mundoCaranguejo <span class="op">=</span> <span class="fu">getWorldOfType</span><span class="op">(</span>MundoDoCaranguejo<span class="op">.</span><span class="fu">class</span><span class="op">);</span></span>
 <span id="cb17-22"><a aria-hidden="true" tabindex="-1"></a>            larvaAlvo <span class="op">=</span> mundoCaranguejo<span class="op">.</span><span class="fu">buscarUmaLarva</span><span class="op">();</span></span>
 <span id="cb17-23"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
@@ -1389,19 +1414,22 @@
 <section>
 <section id="parte-9-documentação-do-greenfoot" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Parte 9: Documentação do Greenfoot</h1>
+
+</section>
+<section id="section-22" class="slide level2 smaller">
+<h2></h2>
 <p>Para desenvolver jogos no Greenfoot é importanter ter uma ideia do que ele é capaz de fazer.</p>
 <ul>
 <li class="fragment">Uma boa maneira de fazer isso é consultando a sua documentação.</li>
 </ul>
-</section>
-<section id="section-20" class="slide level2 smaller">
-<h2></h2>
+<div class="fragment">
 <p>Você pode acessar a documentação do Greenfoot através do menu:</p>
 <ul>
 <li class="fragment"><code>Ajuda</code> → <code>Documentação de Classe Greenfoot</code>.</li>
 </ul>
+</div>
 <div class="fragment">
-<p>Será exibida a documentação em HTML das classes disponíveis do Greenfoot</p>
+<p>Será exibida a documentação em HTML das classes disponíveis do Greenfoot.</p>
 <ul>
 <li class="fragment">Como <code>Actor</code>, <code>Font</code>, <code>Greenfoot</code>, <code>GreenfootImage</code> e <code>World</code>.</li>
 <li class="fragment">Você pode clicar em uma classe e verificar os métodos que estão disponíveis.</li>
@@ -1416,7 +1444,7 @@
 <h1>Entrega</h1>
 
 </section>
-<section id="section-21" class="slide level2">
+<section id="section-23" class="slide level2">
 <h2></h2>
 <div title="Entrega no Campus Virtual">
 <div class="callout callout-important callout-titled callout-style-default">

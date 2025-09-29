@@ -5,13 +5,25 @@ subtitle: GAC125 - IPOO
 
 # Sobre o Tutorial {background-color="#40666e"}
 
-O trabalho da disciplina será um jogo com gráficos em 2D, desenvolvido em Java, com a IDE Greenfoot.
+Este tutorial apresenta o Greenfoot, uma IDE baseada no BlueJ e usada para criação de jogos 
+e simulações em Java.
 
-- Em casa, você pode baixar e instalar o greenfoot acessando o site: [https://greenfoot.org/download]()
+##
+
+Nós estamos usando o Greenfoot na aula porque 
+
+- o trabalho da disciplina terá como tema a implementação de um jogo com gráficos em 2D, 
+- desenvolvido em Java, com a IDE Greenfoot.
 
 . . .
 
-Obs.: Este material se baseia no tutorial disponibilizado no site do Greenfoot: [https://www.greenfoot.org/doc/tut-1]()
+Em casa, você pode baixar e instalar o greenfoot acessando o site: [https://greenfoot.org/download]()
+
+. . .
+
+Este material se baseia no tutorial disponibilizado no site do Greenfoot: [https://www.greenfoot.org/doc/tut-1]()
+
+- Mas ele foi estendido esse semestre, trazendo mais conteúdo.
 
 # Parte 1: Interagindo com o Greenfoot {background-color="#40666e"}
 
@@ -369,9 +381,9 @@ Como podemos melhorar isso?
 ```
 :::
 
-. . .
+## {.smaller}
 
-Veja que, com isso, o código fica mais fácil de entender e de se alterar.
+Veja que, com a alteração que fizemos, o código fica mais fácil de entender e de se alterar.
 
 - Mais adiante na disciplina aprofundaremos essa questão, ao estudarmos o conceito [coesão de métodos]{.alert}.
 
@@ -434,7 +446,7 @@ como você os tinha posicionado ao salvar.
 
 O projeto caranguejo já tem um arquivo `comendo.wav` na pasta `sounds`.
 
-- Experimente então acrescentar uma linha de código na classe `Caranguejo`, logo após remover uma larva do mundo:
+- Experimente então acrescentar a linha de código abaixo na classe `Caranguejo`, logo após remover uma larva do mundo:
   - `Greenfoot.playSound("comendo.wav");`
 - Teste o jogo!
 
@@ -546,7 +558,9 @@ Repare que podemos deixar a lagosta ainda melhor fazendo com que ela possa girar
 
 Podemos mudar a forma que o ângulo é definido:
 
-- Agora teremos valores variando entre 0 - 45 = -45 e 89 - 45 = 44.
+- Agora teremos valores variando entre:
+  - 0 - 45 = -45 
+  - e 89 - 45 = 44.
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
@@ -758,6 +772,8 @@ Para contabilizar os pontos do jogador, precisaremos:
 
 Altere então a classe `MundoDoCaranguejo` incluindo um atributo inteiro chamado `pontos`.
 
+. . .
+
 Em seguida, crie um método público chamado `contarPontos` que:
 
 - acrescenta 10 unidades ao atributo `pontos`;
@@ -795,11 +811,11 @@ Para isso, altere o método `act` da classe `Caranguejo`.
 
 # Parte 8: Um inimigo que persegue as larvas {background-color="#40666e"}
 
-## Criando aranhas comedoras de larvas {.smaller}
-
 Vamos dificultar um pouco mais a vida do jogador :)
 
-- A ideia agora é criar aranhas que também comam larvas, e assim dificultem
+## Criando aranhas comedoras de larvas {.smaller}
+
+A ideia agora é criar aranhas que também comam larvas, e assim dificultem
 a vida do jogador na obteção de uma boa pontuação.
 
 - Num primeiro passo, vamos fazer uma versão simplificada da aranha. 
@@ -820,10 +836,16 @@ Posicione uma ou mais aranhas à esquerda de algumas larvas e teste o jogo.
 
 ## Tornando as aranhas mais espertas {.smaller} 
 
-O desafio fica mais interessante se as aranhas perseguirem as larvas
-de forma automática.
+Poderíamos deixar o jogo mais imprevisível se as aranhas se movimentassem
+aleatoriamente como as lagotas.
 
-- Nós podemos fazer isso usando o método `turnTowards`.
+- Mas podemos fazer algo ainda mais interessante:
+  - Fazer com que as aranhas caminhem em direção às larvas de forma automática.
+
+. . .
+
+Nós podemos fazer isso usando o método `turnTowards`.
+
 - Esse método vira um ator na direção das coordenadas passadas por parâmetro.
 - Portanto, se passarmos as coordenadas de uma larva, a aranha se movimentará
   em direção a ela.
@@ -837,7 +859,7 @@ o alvo da aranha.
 
 Nosso primeiro passo será criar um método público na classe `MundoCaranguejo` 
 
-- que retorna uma das larvas do mundo (escolhendo aleatoriamente).
+- que retorna qualquer uma das larvas existentes do mundo (escolhendo aleatoriamente).
 
 . . .
 
@@ -948,7 +970,7 @@ Podemos fazer isso com a seguite implementação no método `act`
         }
         // se NÃO tem uma larva definida com o alvo
         if (larvaAlvo == null) {
-            // definimos uma obtendo do mundo
+            // definimos uma obtendo-a do mundo
             MundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);
             larvaAlvo = mundoCaranguejo.buscarUmaLarva();
         }
@@ -957,11 +979,13 @@ Podemos fazer isso com a seguite implementação no método `act`
 
 # Parte 9: Documentação do Greenfoot {background-color="#40666e"}
 
+## {.smaller}
+
 Para desenvolver jogos no Greenfoot é importanter ter uma ideia do que ele é capaz de fazer.
 
 - Uma boa maneira de fazer isso é consultando a sua documentação.
 
-## {.smaller}
+. . .
 
 Você pode acessar a documentação do Greenfoot através do menu:
 
