@@ -5,7 +5,7 @@ subtitle: Aula 5.3 - Prática
 
 # Projeto no Greenfoot {background-color="#40666e"}
 
-## {.smaller}
+## 
 
 Na primeira parte desta aula, vamos usar o Greenfoot em vez do BlueJ.
 
@@ -19,7 +19,7 @@ Nós usaremos o projeto no Greenfoot para aprender conceitos que não foram vist
 - Métodos estáticos.
 - Constantes.
 
-## {.smaller}
+##
 
 Para começar, baixe o projeto [bolas-quicando](https://github.com/ufla-ipoo/bolas-quicando).
 
@@ -30,7 +30,7 @@ Para começar, baixe o projeto [bolas-quicando](https://github.com/ufla-ipoo/bol
 
 Vamos aproveitar esse projeto para conhecer um pouco mais sobre o Greenfoot.
 
-# 
+##
 
 ::: {.callout-note title="Exercício" icon=false}
 ::: {.nonincremental}
@@ -42,6 +42,8 @@ Em seguida, **clique com o botão direito** em uma das bolas.
 - E você pode também **chamar métodos** do objeto.
 :::
 ::: 
+
+##
 
 ::: {.callout-note title="Exercício" icon=false}
 Abra a classe `Mundo` e veja o código do método `prepare`.
@@ -55,28 +57,23 @@ Altere o método para que o programa tenha uma terceira bola.
 :::
 :::
 
-## {.smaller}
+##
 
-Vamos agora avaliar o código da classe `Bola`.
+Antes de continuarmos, vamos conhecermos alguns métodos diponíveis no Greenfoot
+que não tínhamos visto no tutorial.
 
-- Vamos tentar entender como a classe funciona.
-
-. . .
-
-Para isso, é útil conhecermos alguns métodos diponíveis do Greenfoot:
- 
 - `getImage`: retorna a imagem usada para o objeto (definida na hora que criamos a classe).
-- `getImage().scale`: permite mudar a dimensão da imagem do objeto.
+- `getImage().scale`: permite mudar o tamanho da imagem do objeto.
 - `setLocation`: muda a posição do ator no mundo (coordenadas X e Y).
 - `isTouching`: indica se o ator está colidindo com algum objeto da classe passada.
 
-. . .
+##
 
-Leia o código da classe `Bola` e tente entender como ela funciona.
+Agora leia o código da classe `Bola` e tente entender como ela funciona.
 
 # Atributos estáticos e constantes {background-color="#40666e"}
 
-## {.smaller}
+## 
 
 Ao avaliar o código da classe `Bola` você viu alguma palavra-chave nova do Java?
 
@@ -90,7 +87,7 @@ Experimente alterar o valor do atributo `GRAVIDADE` (aumentando e diminuindo seu
 Execute o programa e veja o que acontece de diferente.
 :::
 
-. . .
+##
 
 O atributo `GRAVIDADE` é declarado da seguinte forma:
 
@@ -102,9 +99,11 @@ O atributo `GRAVIDADE` é declarado da seguinte forma:
 
 . . .
 
-Há duas palavras-chave novas nessa declaração: `static` e `final`
+Há duas palavras-chave novas nessa declaração: 
 
-## Atributos estáticos {.smaller}
+- `static` e `final`
+
+## Atributos estáticos
 
 A palalavra-chave `static` do Java serve para declarar [atributos estáticos]{.alert}.
 
@@ -113,13 +112,13 @@ A palalavra-chave `static` do Java serve para declarar [atributos estáticos]{.a
 - Isso torna esses atributos muito diferentes dos atributos comuns que vimos até agora.
   - Lembrando que os atributos comuns são também chamados de **variáveis de instância**.
 
-## {.smaller}
+## 
 
 O diagrama abaixo ilustra bem a diferença entre os atributos comuns e estáticos.
 
 ![](imagens/atributo-estatico-diagrama-objetos.png){.r-stretch}
 
-## {.smaller}
+## 
 
 ![](imagens/atributo-estatico-diagrama-objetos.png){.r-stretch}
 
@@ -127,13 +126,15 @@ Os **atributos comuns** (`velocidadeVertical`, `posY` e `amortecimento`) são gu
 
 - Como criamos três objetos, há **três espaços na memória** para cada um desses atributos.
 
-. . .
+## 
+
+![](imagens/atributo-estatico-diagrama-objetos.png){.r-stretch}
 
 Já o **atributo estático** `GRAVIDADE` é guardado na classe:
 
 - Com isso, existe sempre **um único espaço na memória** para ele, independente da quantidade de objetos criados.
 
-## {.smaller}
+## 
 
 Os **atributos estáticos** podem ser acessados normalmente dentro de qualquer método da classe.
 
@@ -155,14 +156,14 @@ Como um atributo estático poderia ser usado para contabilizar a quantidade de o
 Por exemplo, como a própria classe `Bola` poderia contar quantas bolas foram criadas durante o programa?
 ::: 
 
-# Constantes {.smaller}
+## Constantes 
 
 [Constantes]{.alert} são parecidas com variáveis,
 
 - mas a diferença é que seus valores não podem ser alterados depois de inicializados.
 - Definimos constantes em Java usando a **palavra-chave** `final`.
 
-. . .
+##
 
 Suponha, por exemplo, a seguinte declaração de constante:
 
@@ -174,14 +175,14 @@ Suponha, por exemplo, a seguinte declaração de constante:
 
 - Veja que é uma declaração de atributo.
 - Mas tem a palavra-chave `final` antes do tipo do atributo.
-- Por convenção, escrevemos os nomes das constantes com letras maiúsculas.
 
-# Constantes {.smaller}
+. . .
+
+Obs.: por convenção, escrevemos os nomes das constantes com letras maiúsculas.
+
+##
 
 Constantes podem ser inicializadas na própria linha da declaração, como no exemplo dado:
-
-- Neste caso, todos os objetos teriam o mesmo valor.
-- E, portanto, seria mais intessante que o atributo `TAMANHO` fosse estático.
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
@@ -189,7 +190,10 @@ Constantes podem ser inicializadas na própria linha da declaração, como no ex
 ```
 :::
 
-. . .
+- Neste caso, todos os objetos teriam o mesmo valor.
+- E, portanto, seria mais intessante que o atributo `TAMANHO` fosse estático.
+
+##
 
 Mas constantes podem ser inicializadas nos construtores em vez de ser na declaração.
 
@@ -198,7 +202,7 @@ Mas constantes podem ser inicializadas nos construtores em vez de ser na declara
   - A ideia seria que o objeto não poderia ter seu tamanho alterado depois de sua criação.
 - Nesse caso, não faria sentido declarar o atributo como estático.
 
-## {.smaller}
+## 
 
 É mais comum usarmos constantes quando elas têm o mesmo valor para todos os objetos.
 
@@ -223,7 +227,7 @@ O que acontece com bolas que têm maior amortecimento?
 
 # Métodos estáticos {background-color="#40666e"}
 
-## {.smaller}
+## 
 
 Todos os métodos que implementamos até agora são **métodos de instância** (de objetos).
 
@@ -236,11 +240,11 @@ Mas nós podemos também ter métodos que são chamados usando a classe, em vez 
 - São os [métodos estáticos]{.alert}.
 - Assim como os atributos estáticos, os métodos estáticos pertencem à classe e não aos objetos.
 
-## {.smaller}
+## 
 
 Nós podemos definir **métodos estáticos** usando a palavra-chave `static` na assinatura do método.
 
-. . .
+##
 
 Suponha, por exemplo, que uma classe `Calendario` tenha o método estático abaixo: 
 
@@ -264,7 +268,7 @@ Nós poderíamos chamar esse método usando o comando abaixo:
 ```
 :::
 
-## {.smaller}
+## 
 
 Podemos encontrar vários exemplos de métodos estáticos na classe `Math` do Java.
 
@@ -280,14 +284,22 @@ Podemos encontrar vários exemplos de métodos estáticos na classe `Math` do Ja
 ```
 :::
 
-. . .
+
+##
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    int maximo = Math.max(numeroA, numeroB);
+    double valor = Math.cos(angulo);
+```
+:::
 
 Repare que esses métodos dependem apenas dos parâmetros passados.
 
 - Eles não dependem de atributos de um possível objeto `Math`, ou seja, não dependem do estado de um objeto.
 - Geralmente é nesses casos que usamos métodos estáticos.
 
-## {.smaller}
+## 
 
 A classe `Math` do Java possui também exemplos de uso de constantes.
 
@@ -296,14 +308,14 @@ A classe `Math` do Java possui também exemplos de uso de constantes.
   - Da mesma forma que usamos para chamar métodos estáticos.
 - Nós conseguimos fazer isso porque PI é declarado como uma constante pública.
 
-. . .
+##
 
 Mas não seria uma falha de encapsulamento declarar um atributo público?
 
 - Note que não há falha de encapsulamento em declarar um atributo público, se ele for uma constante.
 - Já que não seria possível alterar seu valor de fora da classe.
 
-## {.smaller}
+## 
 
 Você já usou métodos estáticos antes, sem saber.
 
@@ -321,7 +333,17 @@ Greenfoot.getRandomNumber(90);
 ```
 :::
 
-. . .
+##
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+Greenfoot.isKeyDown("left");
+
+Greenfoot.playSound("comendo.wav");
+
+Greenfoot.getRandomNumber(90);
+```
+:::
 
 Em todas essas chamadas nós usamos o nome da classe `Greenfoot` para chamar o método.
 
@@ -349,7 +371,7 @@ o valor do atributo `GRAVIDADE`.
 (Obs.: na janela de inspeção, use o botão *mostrar campos estáticos*).
 ::: 
 
-## Limitações dos métodos estáticos {.smaller}
+## Limitações dos métodos estáticos 
 
 É importante sabermos que os **métodos estáticos** (métodos de classe) têm **limitações**.
 
@@ -362,7 +384,7 @@ Da mesma forma, métodos estáticos não podem chamar métodos de instância da 
 
 - Podem chamar apenas outros métodos estáticos.
 
-## Limitações dos métodos estáticos {.smaller}
+## Limitações dos métodos estáticos 
 
 Por que você acha que essas limitações existem?
 
@@ -376,11 +398,14 @@ E o que isso tem a ver com um método estático não poder chamar um método de 
 
 # ArrayList vs. HashMap {background-color="#40666e"}
 
-## {.smaller}
+## 
 
 Na segunda parte da aula, faremos um exercício que nos permitirá **comparar o uso** de `ArrayList` e `HashMap`.
 
-- No capítulo anterior, fizemos um exercício que tratava do **estoque de produtos**.
+##
+
+No capítulo anterior, fizemos um exercício que tratava do **estoque de produtos**.
+
 - Os produtos eram guardados em um `ArrayList`.
 - E, em várias situações, precisávamos encontrar um produto pelo seu identificador.
 
@@ -423,7 +448,7 @@ Escreva sua resposta no comentário `javadoc` da classe `GerenciadorDeEstoque` d
 :::
 :::
 
-## {.smaller}
+## 
 
 No projeto `produtos-com-hashmap` como você tratou a versão sobrecarregada do método `encontrarProduto` que recebe o nome do produto por parâmetro?
 
@@ -434,7 +459,7 @@ No projeto `produtos-com-hashmap` como você tratou a versão sobrecarregada do 
 
 Pense sobre isso antes de continuar.
 
-## {.smaller}
+## 
 
 Repare que quando usamos um `HashMap`, se quisermos encontrar um valor a partir de uma chave, nós **não precisamos** implementar **um loop**.
 
@@ -446,12 +471,21 @@ Repare que quando usamos um `HashMap`, se quisermos encontrar um valor a partir 
 
 - Um ponto **importante** é que o método `get` de um `HashMap` **é muito mais eficiente** do que um loop que percorre todos os elementos de uma coleção.
   - Pense, por exemplo, em um estoque com milhares de produtos.
-- É mais eficiente porque o `HashMap` usa uma estrutura de dados chamada **tabela Hash** que otimiza a busca de valores a partir de chaves.
-  - Você aprenderá sobre isso na **disciplina de Estrutura de Dados**.
-- Mas, por enquanto, basta que saiba que um programa será mais rápido se usar `get` em vez de um loop em um `ArrayList`, por exemplo.
+
+##
+
+O método `get` do `HashMap` é  mais eficiente porque usa uma estrutura de dados chamada **tabela Hash** 
+
+- que otimiza a busca de valores a partir de chaves.
+
+. . .
+
+Você aprenderá sobre isso na **disciplina de Estrutura de Dados**.
+
+- Mas, por enquanto, basta que saiba que um programa será mais rápido se usar `get` de `HashMap` em vez de um loop em um `ArrayList`, por exemplo.
 
 
-## {.smaller}
+## 
 
 Sabendo disso, como você poderia implementar, de forma mais eficiente, o método `encontrarProduto` que recebe o nome do produto por parâmetro?
 
@@ -464,7 +498,7 @@ Você talvez tenha pensado que se tivermos um `HashMap` que use o nome do produt
 - poderíamos simplesmente usar o método `get` do `HashMap` para encontrar o produto.
 - O que tornaria a busca mais rápida.
 
-. . .
+##
 
 Mas se substituirmos o `HashMap` que temos até agora, que usa o identificador como chave, 
 
@@ -474,7 +508,7 @@ Mas se substituirmos o `HashMap` que temos até agora, que usa o identificador c
 
 O que poderíamos fazer então?
 
-## {.smaller}
+## 
 
 A solução nesse caso seria ter dois objetos `HashMap`:
 
@@ -487,7 +521,14 @@ Repare que essa é uma **solução de compromisso** (_trade-off_).
 
 - Nós estamos usando mais memória do computador (para guardar um segundo `HashMap`).
 - Mas com a vantagem de tornar nosso programa mais eficiente (mais rápido).
-- Em um sistema com muitos produtos, a diferença de eficiência pode ser significativa.
+
+##
+
+Em um sistema com muitos produtos, a diferença de eficiência pode ser significativa.
+
+- E é importante ressaltar que os objetos não são duplicados na memória por usarmos dois hashmaps.
+- Já que os HashMaps guardam ponteiros para os objetos.
+  - E, portanto, o uso adicional de memória não é tão grande.
 
 ##
 
@@ -503,7 +544,15 @@ Teste suas alterações!
 :::
 :::
 
+# Entregas dessa Aula {background-color="#40666e"}
 
+##
+
+::: {.callout-important title="Entrega no Campus Virtual"}
+Acesse, no Campus Virtual, as atividades dessa aula e envie os códigos dos projetos 
+`bolas-quicando` e `produtos-com-hashmap` da forma que ficaram após as suas alterações 
+(compacte a pasta em um arquivo `.zip` para enviar).
+:::
 
 
 

@@ -158,14 +158,14 @@
     "href": "cap5-3.html#section-3",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Vamos agora avaliar o código da classe Bola.\n\nVamos tentar entender como a classe funciona.\n\n\nPara isso, é útil conhecermos alguns métodos diponíveis do Greenfoot:\n\ngetImage: retorna a imagem usada para o objeto (definida na hora que criamos a classe).\ngetImage().scale: permite mudar a dimensão da imagem do objeto.\nsetLocation: muda a posição do ator no mundo (coordenadas X e Y).\nisTouching: indica se o ator está colidindo com algum objeto da classe passada.\n\n\n\nLeia o código da classe Bola e tente entender como ela funciona."
+    "text": "Exercício\n\n\nAbra a classe Mundo e veja o código do método prepare. Repare que ele cria duas bolas e depois cria 10 objetos da classe Chao.\n\nAltere o método para que o programa tenha uma terceira bola.\n\nCrie a bola com diâmetro igual a 30 e posição vertical (y) 150.\nPosicione a bola na posição (300, 150)."
   },
   {
     "objectID": "cap5-3.html#section-4",
     "href": "cap5-3.html#section-4",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Ao avaliar o código da classe Bola você viu alguma palavra-chave nova do Java?\n\nRepare a declaração do atributo GRAVIDADE.\n\n\n\n\n\n\nExercício\n\n\nExperimente alterar o valor do atributo GRAVIDADE (aumentando e diminuindo seu valor).\nExecute o programa e veja o que acontece de diferente.\n\n\n\n\n\n\nO atributo GRAVIDADE é declarado da seguinte forma:\n\n    private static final double GRAVIDADE = 0.7;\n\n\n\nHá duas palavras-chave novas nessa declaração: static e final"
+    "text": "Antes de continuarmos, vamos conhecermos alguns métodos diponíveis no Greenfoot que não tínhamos visto no tutorial.\n\ngetImage: retorna a imagem usada para o objeto (definida na hora que criamos a classe).\ngetImage().scale: permite mudar o tamanho da imagem do objeto.\nsetLocation: muda a posição do ator no mundo (coordenadas X e Y).\nisTouching: indica se o ator está colidindo com algum objeto da classe passada."
   },
   {
     "objectID": "cap5-3.html#atributos-estáticos",
@@ -179,28 +179,28 @@
     "href": "cap5-3.html#section-5",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "O diagrama abaixo ilustra bem a diferença entre os atributos comuns e estáticos."
+    "text": "Agora leia o código da classe Bola e tente entender como ela funciona."
   },
   {
     "objectID": "cap5-3.html#section-6",
     "href": "cap5-3.html#section-6",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Os atributos comuns (velocidadeVertical, posY e amortecimento) são guardados nos objetos:\n\nComo criamos três objetos, há três espaços na memória para cada um desses atributos.\n\n\nJá o atributo estático GRAVIDADE é guardado na classe:\n\nCom isso, existe sempre um único espaço na memória para ele, independente da quantidade de objetos criados."
+    "text": "Ao avaliar o código da classe Bola você viu alguma palavra-chave nova do Java?\n\nRepare a declaração do atributo GRAVIDADE.\n\n\n\n\n\n\nExercício\n\n\nExperimente alterar o valor do atributo GRAVIDADE (aumentando e diminuindo seu valor).\nExecute o programa e veja o que acontece de diferente."
   },
   {
     "objectID": "cap5-3.html#section-7",
     "href": "cap5-3.html#section-7",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Os atributos estáticos podem ser acessados normalmente dentro de qualquer método da classe.\n\nIsso significa que todos os objetos compartilham o mesmo atributo.\nSe um objeto alterar o valor do atributo estático, esse valor será usado para todos os objetos.\n\nJá que existe um único valor na memória.\n\n\n\nGeralmente usamos atributos estáticos quando todos os objetos da classe devem ter o mesmo valor para o atributo.\n\nCom isso, evitamos desperdiçar memória guardando o mesmo valor repetidas vezes para cada objeto."
+    "text": "O atributo GRAVIDADE é declarado da seguinte forma:\n\n    private static final double GRAVIDADE = 0.7;\n\n\nHá duas palavras-chave novas nessa declaração:\n\nstatic e final"
   },
   {
     "objectID": "cap5-3.html#section-9",
     "href": "cap5-3.html#section-9",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "É mais comum usarmos constantes quando elas têm o mesmo valor para todos os objetos.\n\nPortanto, é mais comum ter constantes estáticas, do que como atributos comuns.\nComo é o caso do atributo GRAVIDADE da classe Bola."
+    "text": "Os atributos comuns (velocidadeVertical, posY e amortecimento) são guardados nos objetos:\n\nComo criamos três objetos, há três espaços na memória para cada um desses atributos."
   },
   {
     "objectID": "cap5-3.html#métodos-estáticos",
@@ -228,7 +228,7 @@
     "href": "cap5-3.html#section-11",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Todos os métodos que implementamos até agora são métodos de instância (de objetos).\n\nPois eles são chamados usando objetos.\n\n\nMas nós podemos também ter métodos que são chamados usando a classe, em vez de objetos.\n\nSão os métodos estáticos.\nAssim como os atributos estáticos, os métodos estáticos pertencem à classe e não aos objetos."
+    "text": "Os atributos estáticos podem ser acessados normalmente dentro de qualquer método da classe.\n\nIsso significa que todos os objetos compartilham o mesmo atributo.\nSe um objeto alterar o valor do atributo estático, esse valor será usado para todos os objetos.\n\nJá que existe um único valor na memória.\n\n\n\nGeralmente usamos atributos estáticos quando todos os objetos da classe devem ter o mesmo valor para o atributo.\n\nCom isso, evitamos desperdiçar memória guardando o mesmo valor repetidas vezes para cada objeto."
   },
   {
     "objectID": "cap5-3.html#limitações-dos-métodos-estáticos",
@@ -4386,91 +4386,91 @@
     "href": "cap5-3.html#section-12",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nós podemos definir métodos estáticos usando a palavra-chave static na assinatura do método.\n\nSuponha, por exemplo, que uma classe Calendario tenha o método estático abaixo:\n\n    public static int obterNumeroDeDiasDoMesAtual() {\n        . . .\n    }\n\n\n\nNós poderíamos chamar esse método usando o comando abaixo:\n\nRepare que usamos o nome da classe antes do . para chamar o método, em vez de usar um objeto.\n\n\n    int dias = Calendario.obterNumeroDeDiasDoMesAtual();"
+    "text": "É mais comum usarmos constantes quando elas têm o mesmo valor para todos os objetos.\n\nPortanto, é mais comum ter constantes estáticas, do que como atributos comuns.\nComo é o caso do atributo GRAVIDADE da classe Bola."
   },
   {
     "objectID": "cap5-3.html#section-13",
     "href": "cap5-3.html#section-13",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Podemos encontrar vários exemplos de métodos estáticos na classe Math do Java.\n\nEla possui métodos, por exemplo, para encontrar o máximo ou o mínimo entre dois números.\n\nOu ainda calcular seno e cosseno, por exemplo.\n\n\n\n\n    int maximo = Math.max(numeroA, numeroB);\n    double valor = Math.cos(angulo);\n\n\n\nRepare que esses métodos dependem apenas dos parâmetros passados.\n\nEles não dependem de atributos de um possível objeto Math, ou seja, não dependem do estado de um objeto.\nGeralmente é nesses casos que usamos métodos estáticos."
+    "text": "Suponha, por exemplo, a seguinte declaração de constante:\n\n    private final int TAMANHO = 30;\n\n\nVeja que é uma declaração de atributo.\nMas tem a palavra-chave final antes do tipo do atributo.\n\n\nObs.: por convenção, escrevemos os nomes das constantes com letras maiúsculas."
   },
   {
     "objectID": "cap5-3.html#section-14",
     "href": "cap5-3.html#section-14",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "A classe Math do Java possui também exemplos de uso de constantes.\n\nO valor de PI, por exemplo, pode ser acessado com o comando Math.PI.\nRepare que estamos acessando o atributo diretamente, usando o nome da classe, em vez de um objeto.\n\nDa mesma forma que usamos para chamar métodos estáticos.\n\nNós conseguimos fazer isso porque PI é declarado como uma constante pública.\n\n\nMas não seria uma falha de encapsulamento declarar um atributo público?\n\nNote que não há falha de encapsulamento em declarar um atributo público, se ele for uma constante.\nJá que não seria possível alterar seu valor de fora da classe."
+    "text": "Constantes podem ser inicializadas na própria linha da declaração, como no exemplo dado:\n\n    private final int TAMANHO = 30;\n\n\nNeste caso, todos os objetos teriam o mesmo valor.\nE, portanto, seria mais intessante que o atributo TAMANHO fosse estático."
   },
   {
     "objectID": "cap5-3.html#section-15",
     "href": "cap5-3.html#section-15",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Você já usou métodos estáticos antes, sem saber.\n\nRepare como os métodos abaixo são chamados.\n\n\n\nGreenfoot.isKeyDown(\"left\");\n\nGreenfoot.playSound(\"comendo.wav\");\n\nGreenfoot.getRandomNumber(90);\n\n\n\nEm todas essas chamadas nós usamos o nome da classe Greenfoot para chamar o método.\n\nIsso porque todos esses métodos são estáticos.\nTodos eles implementam ações que dependem apenas dos parâmetros passados\n\n(não dependem do estado de um objeto)."
+    "text": "Mas constantes podem ser inicializadas nos construtores em vez de ser na declaração.\n\nComo isso, cada objeto poderia ter um valor diferente para o atributo TAMANHO.\n\nInicializado, por exemplo, a partir de um valor recebido por parâmetro no construtor.\nA ideia seria que o objeto não poderia ter seu tamanho alterado depois de sua criação.\n\nNesse caso, não faria sentido declarar o atributo como estático."
   },
   {
     "objectID": "cap5-3.html#section-16",
     "href": "cap5-3.html#section-16",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\nAltere a declaração do atributo GRAVIDADE da classe Bola de forma que ele não seja mais uma constante. Mas, mantenha a inicialização do atributo na declaração.\nCrie um método modificador que permita alterar o valor do atributo.\nExecute o programa e pause-o antes das bolas pararem de quicar. Clique em uma das bolas e chame o método que você criou, informando um novo valor para a gravidade.\nContinue a execução do programa e repare que acontece. A gravidade foi alterada só para a bola que você chamou o método, ou para todas elas?\nDepois que as bolas pararem, pause o programa novamente, e use a opção Inspecionar em cada bola para conferir o valor do atributo GRAVIDADE. (Obs.: na janela de inspeção, use o botão mostrar campos estáticos)."
+    "text": "É mais comum usarmos constantes quando elas têm o mesmo valor para todos os objetos.\n\nPortanto, é mais comum ter constantes estáticas, do que como atributos comuns.\nComo é o caso do atributo GRAVIDADE da classe Bola."
   },
   {
     "objectID": "cap5-3.html#section-17",
     "href": "cap5-3.html#section-17",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Na segunda parte da aula, faremos um exercício que nos permitirá comparar o uso de ArrayList e HashMap.\n\nNo capítulo anterior, fizemos um exercício que tratava do estoque de produtos.\nOs produtos eram guardados em um ArrayList.\nE, em várias situações, precisávamos encontrar um produto pelo seu identificador.\n\n\nRepare que, nesse contexto, podemos tratar a coleção de produtos como pares de objetos identificador-produto.\n\nOu seja, como pares de objetos chave-valor.\nQue é justamente o que um HashMap faz.\nPortanto, nos exercícios a seguir vamos alterar o projeto para trabalhar com HashMap em vez de ArrayList."
+    "text": "Nós podemos definir métodos estáticos usando a palavra-chave static na assinatura do método.\n\nSuponha, por exemplo, que uma classe Calendario tenha o método estático abaixo:\n\n    public static int obterNumeroDeDiasDoMesAtual() {\n        . . .\n    }\n\n\n\nNós poderíamos chamar esse método usando o comando abaixo:\n\nRepare que usamos o nome da classe antes do . para chamar o método, em vez de usar um objeto.\n\n\n    int dias = Calendario.obterNumeroDeDiasDoMesAtual();"
   },
   {
     "objectID": "cap5-3.html#section-18",
     "href": "cap5-3.html#section-18",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\n\nBaixe o projeto produtos que você entregou como exercício na aula prática do capítulo anterior e renomeie a pasta do projeto para produtos-com-hashmap.\nAltere o projeto substituindo o uso de ArrayList por HashMap.\n\nComo citado no slide anterior, a ideia é que o HashMap guarde entradas tendo o identificador do produto como chave e o produto como valor.\nPlaneje as alterações a serem feitas antes de realmente alterar o código.\nPense em como a implementação pode ser feita com o mínimo de alterações.\n\nTeste suas alterações (teste todos os métodos que tinha implementado)!"
+    "text": "Todos os métodos que implementamos até agora são métodos de instância (de objetos).\n\nPois eles são chamados usando objetos.\n\n\nMas nós podemos também ter métodos que são chamados usando a classe, em vez de objetos.\n\nSão os métodos estáticos.\nAssim como os atributos estáticos, os métodos estáticos pertencem à classe e não aos objetos."
   },
   {
     "objectID": "cap5-3.html#section-19",
     "href": "cap5-3.html#section-19",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\n\nCompare o código do projeto produtos com o código do projeto produtos-com-hashmap.\nVocê viu alguma vantagem em utilizar HashMap em vez de ArrayList?\n\nSe você tivesse começando o projeto do zero, você acha que seria melhor usar HashMap desde o início? Por quê?\n\nEscreva sua resposta no comentário javadoc da classe GerenciadorDeEstoque do projeto produtos-com-hashmap."
+    "text": "Nós podemos definir métodos estáticos usando a palavra-chave static na assinatura do método."
   },
   {
     "objectID": "cap5-3.html#section-20",
     "href": "cap5-3.html#section-20",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "No projeto produtos-com-hashmap como você tratou a versão sobrecarregada do método encontrarProduto que recebe o nome do produto por parâmetro?\n\nProvavelmente, você implementou um loop para percorrer as chaves do HashMap e verificou o nome do produto, certo?\nVocê acha que existe alguma forma mais eficiente de fazer isso?\n\n\nPense sobre isso antes de continuar."
+    "text": "Suponha, por exemplo, que uma classe Calendario tenha o método estático abaixo:\n\n    public static int obterNumeroDeDiasDoMesAtual() {\n        . . .\n    }\n\n\nNós poderíamos chamar esse método usando o comando abaixo:\n\nRepare que usamos o nome da classe antes do . para chamar o método, em vez de usar um objeto.\n\n\n    int dias = Calendario.obterNumeroDeDiasDoMesAtual();"
   },
   {
     "objectID": "cap5-3.html#section-21",
     "href": "cap5-3.html#section-21",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Repare que quando usamos um HashMap, se quisermos encontrar um valor a partir de uma chave, nós não precisamos implementar um loop.\n\nNós podemos simplesmente usar o método get.\n\n\nÉ interessante que você saiba que isso não é apenas uma questão de ficar mais fácil para implementar.\n\nUm ponto importante é que o método get de um HashMap é muito mais eficiente do que um loop que percorre todos os elementos de uma coleção.\n\nPense, por exemplo, em um estoque com milhares de produtos.\n\nÉ mais eficiente porque o HashMap usa uma estrutura de dados chamada tabela Hash que otimiza a busca de valores a partir de chaves.\n\nVocê aprenderá sobre isso na disciplina de Estrutura de Dados.\n\nMas, por enquanto, basta que saiba que um programa será mais rápido se usar get em vez de um loop em um ArrayList, por exemplo."
+    "text": "Podemos encontrar vários exemplos de métodos estáticos na classe Math do Java.\n\nEla possui métodos, por exemplo, para encontrar o máximo ou o mínimo entre dois números.\n\nOu ainda calcular seno e cosseno, por exemplo.\n\n\n\n\n    int maximo = Math.max(numeroA, numeroB);\n    double valor = Math.cos(angulo);"
   },
   {
     "objectID": "cap5-3.html#section-22",
     "href": "cap5-3.html#section-22",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Sabendo disso, como você poderia implementar, de forma mais eficiente, o método encontrarProduto que recebe o nome do produto por parâmetro?\n\nPense um pouco antes de continuar.\n\n\nVocê talvez tenha pensado que se tivermos um HashMap que use o nome do produto como chave e o produto como valor,\n\npoderíamos simplesmente usar o método get do HashMap para encontrar o produto.\nO que tornaria a busca mais rápida.\n\n\n\nMas se substituirmos o HashMap que temos até agora, que usa o identificador como chave,\n\nteríamos que voltar a fazer um loop na outra versão do método encontrarProduto que recebe o identificador por parâmetro.\n\n\n\nO que poderíamos fazer então?"
+    "text": "int maximo = Math.max(numeroA, numeroB);\n    double valor = Math.cos(angulo);\n\nRepare que esses métodos dependem apenas dos parâmetros passados.\n\nEles não dependem de atributos de um possível objeto Math, ou seja, não dependem do estado de um objeto.\nGeralmente é nesses casos que usamos métodos estáticos."
   },
   {
     "objectID": "cap5-3.html#section-23",
     "href": "cap5-3.html#section-23",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "A solução nesse caso seria ter dois objetos HashMap:\n\nUm que use o identificador como chave e outro que use o nome do produto como chave.\nAssim, poderíamos usar um HashMap para buscar produtos pelo identificador e outro para buscar pelo nome.\n\n\nRepare que essa é uma solução de compromisso (trade-off).\n\nNós estamos usando mais memória do computador (para guardar um segundo HashMap).\nMas com a vantagem de tornar nosso programa mais eficiente (mais rápido).\nEm um sistema com muitos produtos, a diferença de eficiência pode ser significativa."
+    "text": "A classe Math do Java possui também exemplos de uso de constantes.\n\nO valor de PI, por exemplo, pode ser acessado com o comando Math.PI.\nRepare que estamos acessando o atributo diretamente, usando o nome da classe, em vez de um objeto.\n\nDa mesma forma que usamos para chamar métodos estáticos.\n\nNós conseguimos fazer isso porque PI é declarado como uma constante pública."
   },
   {
     "objectID": "cap5-3.html#section-24",
     "href": "cap5-3.html#section-24",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\n\nAltere o projeto produtos-com-hashmap para que ele tenha dois objetos HashMap:\n\nUm que use o identificador como chave e outro que use o nome do produto como chave.\nAltere o método encontrarProduto que recebe o nome do produto por parâmetro para usar o HashMap que usa o nome do produto como chave.\nE, claro, lembre-se de tratar o segundo HashMap no método adicionarProduto.\n\nTeste suas alterações!"
+    "text": "Mas não seria uma falha de encapsulamento declarar um atributo público?\n\nNote que não há falha de encapsulamento em declarar um atributo público, se ele for uma constante.\nJá que não seria possível alterar seu valor de fora da classe."
   },
   {
     "objectID": "cap10-1.html#principais-conceitos-da-aula",
@@ -5402,5 +5402,145 @@
     "title": "Tutorial do Greenfoot",
     "section": "",
     "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa aula e envie o código do projeto greenfoot-caranguejo da forma que ficou após as suas alterações (compacte a pasta do projeto em um arquivo .zip para enviar)."
+  },
+  {
+    "objectID": "cap5-3.html#section-2",
+    "href": "cap5-3.html#section-2",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Exercício\n\n\n\nExecute o projeto e em seguida pause o programa antes das bolas pararem de quicar. Em seguida, clique com o botão direito em uma das bolas.\n\nVeja que as opções são as mesmas do BlueJ quando clicamos em um objeto na bancada de objetos.\nVocê pode clicar em Inspecionar para ver os valores dos atributos.\nE você pode também chamar métodos do objeto."
+  },
+  {
+    "objectID": "cap5-3.html#section-8",
+    "href": "cap5-3.html#section-8",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "O diagrama abaixo ilustra bem a diferença entre os atributos comuns e estáticos."
+  },
+  {
+    "objectID": "cap5-3.html#section-10",
+    "href": "cap5-3.html#section-10",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Já o atributo estático GRAVIDADE é guardado na classe:\n\nCom isso, existe sempre um único espaço na memória para ele, independente da quantidade de objetos criados."
+  },
+  {
+    "objectID": "cap5-3.html#section-25",
+    "href": "cap5-3.html#section-25",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Você já usou métodos estáticos antes, sem saber.\n\nRepare como os métodos abaixo são chamados.\n\n\n\nGreenfoot.isKeyDown(\"left\");\n\nGreenfoot.playSound(\"comendo.wav\");\n\nGreenfoot.getRandomNumber(90);"
+  },
+  {
+    "objectID": "cap5-3.html#section-26",
+    "href": "cap5-3.html#section-26",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Greenfoot.isKeyDown(\"left\");\n\nGreenfoot.playSound(\"comendo.wav\");\n\nGreenfoot.getRandomNumber(90);\n\nEm todas essas chamadas nós usamos o nome da classe Greenfoot para chamar o método.\n\nIsso porque todos esses métodos são estáticos.\nTodos eles implementam ações que dependem apenas dos parâmetros passados\n\n(não dependem do estado de um objeto)."
+  },
+  {
+    "objectID": "cap5-3.html#section-27",
+    "href": "cap5-3.html#section-27",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Exercício\n\n\nAltere a declaração do atributo GRAVIDADE da classe Bola de forma que ele não seja mais uma constante. Mas, mantenha a inicialização do atributo na declaração.\nCrie um método modificador que permita alterar o valor do atributo.\nExecute o programa e pause-o antes das bolas pararem de quicar. Clique em uma das bolas e chame o método que você criou, informando um novo valor para a gravidade.\nContinue a execução do programa e repare que acontece. A gravidade foi alterada só para a bola que você chamou o método, ou para todas elas?\nDepois que as bolas pararem, pause o programa novamente, e use a opção Inspecionar em cada bola para conferir o valor do atributo GRAVIDADE. (Obs.: na janela de inspeção, use o botão mostrar campos estáticos)."
+  },
+  {
+    "objectID": "cap5-3.html#section-28",
+    "href": "cap5-3.html#section-28",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Na segunda parte da aula, faremos um exercício que nos permitirá comparar o uso de ArrayList e HashMap."
+  },
+  {
+    "objectID": "cap5-3.html#section-29",
+    "href": "cap5-3.html#section-29",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "No capítulo anterior, fizemos um exercício que tratava do estoque de produtos.\n\nOs produtos eram guardados em um ArrayList.\nE, em várias situações, precisávamos encontrar um produto pelo seu identificador.\n\n\nRepare que, nesse contexto, podemos tratar a coleção de produtos como pares de objetos identificador-produto.\n\nOu seja, como pares de objetos chave-valor.\nQue é justamente o que um HashMap faz.\nPortanto, nos exercícios a seguir vamos alterar o projeto para trabalhar com HashMap em vez de ArrayList."
+  },
+  {
+    "objectID": "cap5-3.html#constantes",
+    "href": "cap5-3.html#constantes",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Constantes",
+    "text": "Constantes\nConstantes são parecidas com variáveis,\n\nmas a diferença é que seus valores não podem ser alterados depois de inicializados.\nDefinimos constantes em Java usando a palavra-chave final."
+  },
+  {
+    "objectID": "cap5-3.html#section-30",
+    "href": "cap5-3.html#section-30",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Exercício\n\n\n\nBaixe o projeto produtos que você entregou como exercício na aula prática do capítulo anterior e renomeie a pasta do projeto para produtos-com-hashmap.\nAltere o projeto substituindo o uso de ArrayList por HashMap.\n\nComo citado no slide anterior, a ideia é que o HashMap guarde entradas tendo o identificador do produto como chave e o produto como valor.\nPlaneje as alterações a serem feitas antes de realmente alterar o código.\nPense em como a implementação pode ser feita com o mínimo de alterações.\n\nTeste suas alterações (teste todos os métodos que tinha implementado)!"
+  },
+  {
+    "objectID": "cap5-3.html#section-31",
+    "href": "cap5-3.html#section-31",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Exercício\n\n\n\nCompare o código do projeto produtos com o código do projeto produtos-com-hashmap.\nVocê viu alguma vantagem em utilizar HashMap em vez de ArrayList?\n\nSe você tivesse começando o projeto do zero, você acha que seria melhor usar HashMap desde o início? Por quê?\n\nEscreva sua resposta no comentário javadoc da classe GerenciadorDeEstoque do projeto produtos-com-hashmap."
+  },
+  {
+    "objectID": "cap5-3.html#section-32",
+    "href": "cap5-3.html#section-32",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "No projeto produtos-com-hashmap como você tratou a versão sobrecarregada do método encontrarProduto que recebe o nome do produto por parâmetro?\n\nProvavelmente, você implementou um loop para percorrer as chaves do HashMap e verificou o nome do produto, certo?\nVocê acha que existe alguma forma mais eficiente de fazer isso?\n\n\nPense sobre isso antes de continuar."
+  },
+  {
+    "objectID": "cap5-3.html#section-33",
+    "href": "cap5-3.html#section-33",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Repare que quando usamos um HashMap, se quisermos encontrar um valor a partir de uma chave, nós não precisamos implementar um loop.\n\nNós podemos simplesmente usar o método get.\n\n\nÉ interessante que você saiba que isso não é apenas uma questão de ficar mais fácil para implementar.\n\nUm ponto importante é que o método get de um HashMap é muito mais eficiente do que um loop que percorre todos os elementos de uma coleção.\n\nPense, por exemplo, em um estoque com milhares de produtos."
+  },
+  {
+    "objectID": "cap5-3.html#section-34",
+    "href": "cap5-3.html#section-34",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "O método get do HashMap é mais eficiente porque usa uma estrutura de dados chamada tabela Hash\n\nque otimiza a busca de valores a partir de chaves.\n\n\nVocê aprenderá sobre isso na disciplina de Estrutura de Dados.\n\nMas, por enquanto, basta que saiba que um programa será mais rápido se usar get de HashMap em vez de um loop em um ArrayList, por exemplo."
+  },
+  {
+    "objectID": "cap5-3.html#section-35",
+    "href": "cap5-3.html#section-35",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Sabendo disso, como você poderia implementar, de forma mais eficiente, o método encontrarProduto que recebe o nome do produto por parâmetro?\n\nPense um pouco antes de continuar.\n\n\nVocê talvez tenha pensado que se tivermos um HashMap que use o nome do produto como chave e o produto como valor,\n\npoderíamos simplesmente usar o método get do HashMap para encontrar o produto.\nO que tornaria a busca mais rápida."
+  },
+  {
+    "objectID": "cap5-3.html#section-36",
+    "href": "cap5-3.html#section-36",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Mas se substituirmos o HashMap que temos até agora, que usa o identificador como chave,\n\nteríamos que voltar a fazer um loop na outra versão do método encontrarProduto que recebe o identificador por parâmetro.\n\n\nO que poderíamos fazer então?"
+  },
+  {
+    "objectID": "cap5-3.html#section-37",
+    "href": "cap5-3.html#section-37",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "A solução nesse caso seria ter dois objetos HashMap:\n\nUm que use o identificador como chave e outro que use o nome do produto como chave.\nAssim, poderíamos usar um HashMap para buscar produtos pelo identificador e outro para buscar pelo nome.\n\n\nRepare que essa é uma solução de compromisso (trade-off).\n\nNós estamos usando mais memória do computador (para guardar um segundo HashMap).\nMas com a vantagem de tornar nosso programa mais eficiente (mais rápido)."
+  },
+  {
+    "objectID": "cap5-3.html#section-38",
+    "href": "cap5-3.html#section-38",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Em um sistema com muitos produtos, a diferença de eficiência pode ser significativa.\n\nE é importante ressaltar que os objetos não são duplicados na memória por usarmos dois hashmaps.\nJá que os HashMaps guardam ponteiros para os objetos.\n\nE, portanto, o uso adicional de memória não é tão grande."
+  },
+  {
+    "objectID": "cap5-3.html#section-39",
+    "href": "cap5-3.html#section-39",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Exercício\n\n\n\nAltere o projeto produtos-com-hashmap para que ele tenha dois objetos HashMap:\n\nUm que use o identificador como chave e outro que use o nome do produto como chave.\nAltere o método encontrarProduto que recebe o nome do produto por parâmetro para usar o HashMap que usa o nome do produto como chave.\nE, claro, lembre-se de tratar o segundo HashMap no método adicionarProduto.\n\nTeste suas alterações!"
+  },
+  {
+    "objectID": "cap5-3.html#section-40",
+    "href": "cap5-3.html#section-40",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, as atividades dessa aula e envie os códigos dos projetos bolas-quicando e produtos-com-hashmap da forma que ficaram após as suas alterações (compacte a pasta em um arquivo .zip para enviar)."
   }
 ]

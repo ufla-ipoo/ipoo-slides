@@ -16,6 +16,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
+  <meta name="dcterms.date" content="2025-01-10">
   <title>GAC125 - Introdução à Programação Orientada a Objetos – IPOO - Cap. 5 Comportamento Mais Sofisticado</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -413,14 +414,14 @@
     </div>
 </div>
 
-  <p class="date">14/11/2024</p>
+  <p class="date">01/10/2025</p>
 </section>
 <section>
 <section id="projeto-no-greenfoot" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Projeto no Greenfoot</h1>
 
 </section>
-<section id="section" class="slide level2 smaller">
+<section id="section" class="slide level2">
 <h2></h2>
 <p>Na primeira parte desta aula, vamos usar o Greenfoot em vez do BlueJ.</p>
 <ul>
@@ -435,7 +436,7 @@
 </ul>
 </div>
 </section>
-<section id="section-1" class="slide level2 smaller">
+<section id="section-1" class="slide level2">
 <h2></h2>
 <p>Para começar, baixe o projeto <a href="https://github.com/ufla-ipoo/bolas-quicando">bolas-quicando</a>.</p>
 <ul>
@@ -445,10 +446,9 @@
 <div class="fragment">
 <p>Vamos aproveitar esse projeto para conhecer um pouco mais sobre o Greenfoot.</p>
 </div>
-</section></section>
-<section>
-<section id="section-2" class="title-slide slide level1 center">
-<h1></h1>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -468,6 +468,9 @@
 </div>
 </div>
 </div>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -488,31 +491,26 @@
 </div>
 </div>
 </section>
-<section id="section-3" class="slide level2 smaller">
+<section id="section-4" class="slide level2">
 <h2></h2>
-<p>Vamos agora avaliar o código da classe <code>Bola</code>.</p>
-<ul>
-<li class="fragment">Vamos tentar entender como a classe funciona.</li>
-</ul>
-<div class="fragment">
-<p>Para isso, é útil conhecermos alguns métodos diponíveis do Greenfoot:</p>
+<p>Antes de continuarmos, vamos conhecermos alguns métodos diponíveis no Greenfoot que não tínhamos visto no tutorial.</p>
 <ul>
 <li class="fragment"><code>getImage</code>: retorna a imagem usada para o objeto (definida na hora que criamos a classe).</li>
-<li class="fragment"><code>getImage().scale</code>: permite mudar a dimensão da imagem do objeto.</li>
+<li class="fragment"><code>getImage().scale</code>: permite mudar o tamanho da imagem do objeto.</li>
 <li class="fragment"><code>setLocation</code>: muda a posição do ator no mundo (coordenadas X e Y).</li>
 <li class="fragment"><code>isTouching</code>: indica se o ator está colidindo com algum objeto da classe passada.</li>
 </ul>
-</div>
-<div class="fragment">
-<p>Leia o código da classe <code>Bola</code> e tente entender como ela funciona.</p>
-</div>
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<p>Agora leia o código da classe <code>Bola</code> e tente entender como ela funciona.</p>
 </section></section>
 <section>
 <section id="atributos-estáticos-e-constantes" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Atributos estáticos e constantes</h1>
 
 </section>
-<section id="section-4" class="slide level2 smaller">
+<section id="section-6" class="slide level2">
 <h2></h2>
 <p>Ao avaliar o código da classe <code>Bola</code> você viu alguma palavra-chave nova do Java?</p>
 <ul>
@@ -533,17 +531,21 @@
 </div>
 </div>
 </div>
-<div class="fragment">
+</section>
+<section id="section-7" class="slide level2">
+<h2></h2>
 <p>O atributo <code>GRAVIDADE</code> é declarado da seguinte forma:</p>
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="dt">double</span> GRAVIDADE <span class="op">=</span> <span class="fl">0.7</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
 <div class="fragment">
-<p>Há duas palavras-chave novas nessa declaração: <code>static</code> e <code>final</code></p>
+<p>Há duas palavras-chave novas nessa declaração:</p>
+<ul>
+<li class="fragment"><code>static</code> e <code>final</code></li>
+</ul>
 </div>
 </section>
-<section id="atributos-estáticos" class="slide level2 smaller">
+<section id="atributos-estáticos" class="slide level2">
 <h2>Atributos estáticos</h2>
 <p>A palalavra-chave <code>static</code> do Java serve para declarar <span class="alert">atributos estáticos</span>.</p>
 <ul>
@@ -557,26 +559,28 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-5" class="slide level2 smaller">
+<section id="section-8" class="slide level2">
 <h2></h2>
 <p>O diagrama abaixo ilustra bem a diferença entre os atributos comuns e estáticos.</p>
 <img data-src="imagens/atributo-estatico-diagrama-objetos.png" class="r-stretch">
 </section>
-<section id="section-6" class="slide level2 smaller">
+<section id="section-9" class="slide level2">
 <h2></h2>
 <img data-src="imagens/atributo-estatico-diagrama-objetos.png" class="r-stretch">
 <p>Os <strong>atributos comuns</strong> (<code>velocidadeVertical</code>, <code>posY</code> e <code>amortecimento</code>) são guardados nos objetos:</p>
 <ul>
 <li class="fragment">Como criamos três objetos, há <strong>três espaços na memória</strong> para cada um desses atributos.</li>
 </ul>
-<div class="fragment">
+</section>
+<section id="section-10" class="slide level2">
+<h2></h2>
+<img data-src="imagens/atributo-estatico-diagrama-objetos.png" class="r-stretch">
 <p>Já o <strong>atributo estático</strong> <code>GRAVIDADE</code> é guardado na classe:</p>
 <ul>
 <li class="fragment">Com isso, existe sempre <strong>um único espaço na memória</strong> para ele, independente da quantidade de objetos criados.</li>
 </ul>
-</div>
 </section>
-<section id="section-7" class="slide level2 smaller">
+<section id="section-11" class="slide level2">
 <h2></h2>
 <p>Os <strong>atributos estáticos</strong> podem ser acessados normalmente dentro de qualquer método da classe.</p>
 <ul>
@@ -593,7 +597,8 @@
 </ul>
 </div>
 </section></section>
-<section id="section-8" class="title-slide slide level1 center">
+<section>
+<section id="section-12" class="title-slide slide level1 center">
 <h1></h1>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -609,15 +614,16 @@
 </div>
 </div>
 </section>
-
-<section id="constantes" class="title-slide slide level1 smaller center">
-<h1>Constantes</h1>
+<section id="constantes" class="slide level2">
+<h2>Constantes</h2>
 <p><span class="alert">Constantes</span> são parecidas com variáveis,</p>
 <ul>
 <li class="fragment">mas a diferença é que seus valores não podem ser alterados depois de inicializados.</li>
 <li class="fragment">Definimos constantes em Java usando a <strong>palavra-chave</strong> <code>final</code>.</li>
 </ul>
-<div class="fragment">
+</section>
+<section id="section-13" class="slide level2">
+<h2></h2>
 <p>Suponha, por exemplo, a seguinte declaração de constante:</p>
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> <span class="dt">int</span> TAMANHO <span class="op">=</span> <span class="dv">30</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -625,23 +631,24 @@
 <ul>
 <li class="fragment">Veja que é uma declaração de atributo.</li>
 <li class="fragment">Mas tem a palavra-chave <code>final</code> antes do tipo do atributo.</li>
-<li class="fragment">Por convenção, escrevemos os nomes das constantes com letras maiúsculas.</li>
 </ul>
+<div class="fragment">
+<p>Obs.: por convenção, escrevemos os nomes das constantes com letras maiúsculas.</p>
 </div>
 </section>
-
-<section>
-<section id="constantes-1" class="title-slide slide level1 smaller center">
-<h1>Constantes</h1>
+<section id="section-14" class="slide level2">
+<h2></h2>
 <p>Constantes podem ser inicializadas na própria linha da declaração, como no exemplo dado:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> <span class="dt">int</span> TAMANHO <span class="op">=</span> <span class="dv">30</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ul>
 <li class="fragment">Neste caso, todos os objetos teriam o mesmo valor.</li>
 <li class="fragment">E, portanto, seria mais intessante que o atributo <code>TAMANHO</code> fosse estático.</li>
 </ul>
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> <span class="dt">int</span> TAMANHO <span class="op">=</span> <span class="dv">30</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
+</section>
+<section id="section-15" class="slide level2">
+<h2></h2>
 <p>Mas constantes podem ser inicializadas nos construtores em vez de ser na declaração.</p>
 <ul>
 <li class="fragment">Como isso, cada objeto poderia ter um valor diferente para o atributo <code>TAMANHO</code>.
@@ -651,9 +658,8 @@
 </ul></li>
 <li class="fragment">Nesse caso, não faria sentido declarar o atributo como estático.</li>
 </ul>
-</div>
 </section>
-<section id="section-9" class="slide level2 smaller">
+<section id="section-16" class="slide level2">
 <h2></h2>
 <p>É mais comum usarmos constantes quando elas têm o mesmo valor para todos os objetos.</p>
 <ul>
@@ -661,7 +667,7 @@
 <li class="fragment">Como é o caso do atributo <code>GRAVIDADE</code> da classe <code>Bola</code>.</li>
 </ul>
 </section></section>
-<section id="section-10" class="title-slide slide level1 center">
+<section id="section-17" class="title-slide slide level1 center">
 <h1></h1>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -685,7 +691,7 @@
 <h1>Métodos estáticos</h1>
 
 </section>
-<section id="section-11" class="slide level2 smaller">
+<section id="section-18" class="slide level2">
 <h2></h2>
 <p>Todos os métodos que implementamos até agora são <strong>métodos de instância</strong> (de objetos).</p>
 <ul>
@@ -699,16 +705,17 @@
 </ul>
 </div>
 </section>
-<section id="section-12" class="slide level2 smaller">
+<section id="section-19" class="slide level2">
 <h2></h2>
 <p>Nós podemos definir <strong>métodos estáticos</strong> usando a palavra-chave <code>static</code> na assinatura do método.</p>
-<div class="fragment">
+</section>
+<section id="section-20" class="slide level2">
+<h2></h2>
 <p>Suponha, por exemplo, que uma classe <code>Calendario</code> tenha o método estático abaixo:</p>
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">int</span> <span class="fu">obterNumeroDeDiasDoMesAtual</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span> <span class="op">.</span> <span class="op">.</span></span>
 <span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </div>
 <div class="fragment">
 <p>Nós poderíamos chamar esse método usando o comando abaixo:</p>
@@ -720,7 +727,7 @@
 </div>
 </div>
 </section>
-<section id="section-13" class="slide level2 smaller">
+<section id="section-21" class="slide level2">
 <h2></h2>
 <p>Podemos encontrar vários exemplos de métodos estáticos na classe <code>Math</code> do Java.</p>
 <ul>
@@ -735,15 +742,20 @@
 <span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> valor <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">cos</span><span class="op">(</span>angulo<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="fragment">
+</section>
+<section id="section-22" class="slide level2">
+<h2></h2>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> maximo <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span><span class="op">(</span>numeroA<span class="op">,</span> numeroB<span class="op">);</span></span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> valor <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">cos</span><span class="op">(</span>angulo<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Repare que esses métodos dependem apenas dos parâmetros passados.</p>
 <ul>
 <li class="fragment">Eles não dependem de atributos de um possível objeto <code>Math</code>, ou seja, não dependem do estado de um objeto.</li>
 <li class="fragment">Geralmente é nesses casos que usamos métodos estáticos.</li>
 </ul>
-</div>
 </section>
-<section id="section-14" class="slide level2 smaller">
+<section id="section-23" class="slide level2">
 <h2></h2>
 <p>A classe <code>Math</code> do Java possui também exemplos de uso de constantes.</p>
 <ul>
@@ -754,15 +766,16 @@
 </ul></li>
 <li class="fragment">Nós conseguimos fazer isso porque PI é declarado como uma constante pública.</li>
 </ul>
-<div class="fragment">
+</section>
+<section id="section-24" class="slide level2">
+<h2></h2>
 <p>Mas não seria uma falha de encapsulamento declarar um atributo público?</p>
 <ul>
 <li class="fragment">Note que não há falha de encapsulamento em declarar um atributo público, se ele for uma constante.</li>
 <li class="fragment">Já que não seria possível alterar seu valor de fora da classe.</li>
 </ul>
-</div>
 </section>
-<section id="section-15" class="slide level2 smaller">
+<section id="section-25" class="slide level2">
 <h2></h2>
 <p>Você já usou métodos estáticos antes, sem saber.</p>
 <ul>
@@ -770,14 +783,23 @@
 </ul>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">isKeyDown</span><span class="op">(</span><span class="st">"left"</span><span class="op">);</span></span>
-<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">playSound</span><span class="op">(</span><span class="st">"comendo.wav"</span><span class="op">);</span></span>
-<span id="cb7-4"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">getRandomNumber</span><span class="op">(</span><span class="dv">90</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">isKeyDown</span><span class="op">(</span><span class="st">"left"</span><span class="op">);</span></span>
+<span id="cb8-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">playSound</span><span class="op">(</span><span class="st">"comendo.wav"</span><span class="op">);</span></span>
+<span id="cb8-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">getRandomNumber</span><span class="op">(</span><span class="dv">90</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="fragment">
+</section>
+<section id="section-26" class="slide level2">
+<h2></h2>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">isKeyDown</span><span class="op">(</span><span class="st">"left"</span><span class="op">);</span></span>
+<span id="cb9-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">playSound</span><span class="op">(</span><span class="st">"comendo.wav"</span><span class="op">);</span></span>
+<span id="cb9-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">getRandomNumber</span><span class="op">(</span><span class="dv">90</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Em todas essas chamadas nós usamos o nome da classe <code>Greenfoot</code> para chamar o método.</p>
 <ul>
 <li class="fragment">Isso porque todos esses métodos são estáticos.</li>
@@ -786,9 +808,8 @@
 <li class="fragment">(não dependem do estado de um objeto).</li>
 </ul></li>
 </ul>
-</div>
 </section>
-<section id="section-16" class="slide level2">
+<section id="section-27" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -807,7 +828,7 @@
 </div>
 </div>
 </section>
-<section id="limitações-dos-métodos-estáticos" class="slide level2 smaller">
+<section id="limitações-dos-métodos-estáticos" class="slide level2">
 <h2>Limitações dos métodos estáticos</h2>
 <p>É importante sabermos que os <strong>métodos estáticos</strong> (métodos de classe) têm <strong>limitações</strong>.</p>
 <ul>
@@ -821,7 +842,7 @@
 </ul>
 </div>
 </section>
-<section id="limitações-dos-métodos-estáticos-1" class="slide level2 smaller">
+<section id="limitações-dos-métodos-estáticos-1" class="slide level2">
 <h2>Limitações dos métodos estáticos</h2>
 <p>Por que você acha que essas limitações existem?</p>
 <ul>
@@ -840,11 +861,14 @@
 <h1>ArrayList vs.&nbsp;HashMap</h1>
 
 </section>
-<section id="section-17" class="slide level2 smaller">
+<section id="section-28" class="slide level2">
 <h2></h2>
 <p>Na segunda parte da aula, faremos um exercício que nos permitirá <strong>comparar o uso</strong> de <code>ArrayList</code> e <code>HashMap</code>.</p>
+</section>
+<section id="section-29" class="slide level2">
+<h2></h2>
+<p>No capítulo anterior, fizemos um exercício que tratava do <strong>estoque de produtos</strong>.</p>
 <ul>
-<li class="fragment">No capítulo anterior, fizemos um exercício que tratava do <strong>estoque de produtos</strong>.</li>
 <li class="fragment">Os produtos eram guardados em um <code>ArrayList</code>.</li>
 <li class="fragment">E, em várias situações, precisávamos encontrar um produto pelo seu identificador.</li>
 </ul>
@@ -857,7 +881,7 @@
 </ul>
 </div>
 </section>
-<section id="section-18" class="slide level2">
+<section id="section-30" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -881,7 +905,7 @@
 </div>
 </div>
 </section>
-<section id="section-19" class="slide level2">
+<section id="section-31" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -903,7 +927,7 @@
 </div>
 </div>
 </section>
-<section id="section-20" class="slide level2 smaller">
+<section id="section-32" class="slide level2">
 <h2></h2>
 <p>No projeto <code>produtos-com-hashmap</code> como você tratou a versão sobrecarregada do método <code>encontrarProduto</code> que recebe o nome do produto por parâmetro?</p>
 <ul>
@@ -914,7 +938,7 @@
 <p>Pense sobre isso antes de continuar.</p>
 </div>
 </section>
-<section id="section-21" class="slide level2 smaller">
+<section id="section-33" class="slide level2">
 <h2></h2>
 <p>Repare que quando usamos um <code>HashMap</code>, se quisermos encontrar um valor a partir de uma chave, nós <strong>não precisamos</strong> implementar <strong>um loop</strong>.</p>
 <ul>
@@ -927,15 +951,23 @@
 <ul>
 <li class="fragment">Pense, por exemplo, em um estoque com milhares de produtos.</li>
 </ul></li>
-<li class="fragment">É mais eficiente porque o <code>HashMap</code> usa uma estrutura de dados chamada <strong>tabela Hash</strong> que otimiza a busca de valores a partir de chaves.
-<ul>
-<li class="fragment">Você aprenderá sobre isso na <strong>disciplina de Estrutura de Dados</strong>.</li>
-</ul></li>
-<li class="fragment">Mas, por enquanto, basta que saiba que um programa será mais rápido se usar <code>get</code> em vez de um loop em um <code>ArrayList</code>, por exemplo.</li>
 </ul>
 </div>
 </section>
-<section id="section-22" class="slide level2 smaller">
+<section id="section-34" class="slide level2">
+<h2></h2>
+<p>O método <code>get</code> do <code>HashMap</code> é mais eficiente porque usa uma estrutura de dados chamada <strong>tabela Hash</strong></p>
+<ul>
+<li class="fragment">que otimiza a busca de valores a partir de chaves.</li>
+</ul>
+<div class="fragment">
+<p>Você aprenderá sobre isso na <strong>disciplina de Estrutura de Dados</strong>.</p>
+<ul>
+<li class="fragment">Mas, por enquanto, basta que saiba que um programa será mais rápido se usar <code>get</code> de <code>HashMap</code> em vez de um loop em um <code>ArrayList</code>, por exemplo.</li>
+</ul>
+</div>
+</section>
+<section id="section-35" class="slide level2">
 <h2></h2>
 <p>Sabendo disso, como você poderia implementar, de forma mais eficiente, o método <code>encontrarProduto</code> que recebe o nome do produto por parâmetro?</p>
 <ul>
@@ -948,17 +980,18 @@
 <li class="fragment">O que tornaria a busca mais rápida.</li>
 </ul>
 </div>
-<div class="fragment">
+</section>
+<section id="section-36" class="slide level2">
+<h2></h2>
 <p>Mas se substituirmos o <code>HashMap</code> que temos até agora, que usa o identificador como chave,</p>
 <ul>
 <li class="fragment">teríamos que voltar a fazer um loop na outra versão do método <code>encontrarProduto</code> que recebe o identificador por parâmetro.</li>
 </ul>
-</div>
 <div class="fragment">
 <p>O que poderíamos fazer então?</p>
 </div>
 </section>
-<section id="section-23" class="slide level2 smaller">
+<section id="section-37" class="slide level2">
 <h2></h2>
 <p>A solução nesse caso seria ter dois objetos <code>HashMap</code>:</p>
 <ul>
@@ -970,11 +1003,21 @@
 <ul>
 <li class="fragment">Nós estamos usando mais memória do computador (para guardar um segundo <code>HashMap</code>).</li>
 <li class="fragment">Mas com a vantagem de tornar nosso programa mais eficiente (mais rápido).</li>
-<li class="fragment">Em um sistema com muitos produtos, a diferença de eficiência pode ser significativa.</li>
 </ul>
 </div>
 </section>
-<section id="section-24" class="slide level2">
+<section id="section-38" class="slide level2">
+<h2></h2>
+<p>Em um sistema com muitos produtos, a diferença de eficiência pode ser significativa.</p>
+<ul>
+<li class="fragment">E é importante ressaltar que os objetos não são duplicados na memória por usarmos dois hashmaps.</li>
+<li class="fragment">Já que os HashMaps guardam ponteiros para os objetos.
+<ul>
+<li class="fragment">E, portanto, o uso adicional de memória não é tão grande.</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-39" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -992,6 +1035,29 @@
 </ul>
 <p>Teste suas alterações!</p>
 </div>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="entregas-dessa-aula" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Entregas dessa Aula</h1>
+
+</section>
+<section id="section-40" class="slide level2">
+<h2></h2>
+<div title="Entrega no Campus Virtual">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Entrega no Campus Virtual</strong></p>
+</div>
+<div class="callout-content">
+<p>Acesse, no Campus Virtual, as atividades dessa aula e envie os códigos dos projetos <code>bolas-quicando</code> e <code>produtos-com-hashmap</code> da forma que ficaram após as suas alterações (compacte a pasta em um arquivo <code>.zip</code> para enviar).</p>
 </div>
 </div>
 </div>
