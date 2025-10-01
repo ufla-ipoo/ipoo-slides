@@ -3721,7 +3721,7 @@
     "href": "cap5-2.html#section-18",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\nComo você pode verificar se uma chave existe em um mapa? Escreva um código Java de exemplo.\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente com o BlueJ o que acontece quando você tenta procurar um valor e a chave fornecida não existe no mapa.\n\n\n\n\n\n\n\n\nExercício\n\n\nComo podemos imprimir todas as chaves que estão armazenadas em um HashMap."
+    "text": "Exercício\n\n\nComo você pode verificar se uma chave existe em um mapa? Escreva um código Java de exemplo.\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente com o BlueJ o que acontece quando você tenta procurar um valor e a chave fornecida não existe no mapa.\n\n\n\n\n\n\n\n\nExercício\n\n\nComo podemos imprimir todas as chaves que estão armazenadas em um HashMap.\n\nAtenção, não vale aqui construções de programação funcional que usem o operador -&gt;."
   },
   {
     "objectID": "cap5-2.html#section-19",
@@ -3742,14 +3742,14 @@
     "href": "cap5-2.html#section-21",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nós podemos melhorar essa implementação usando um HashMap.\n\nA ideia é ter um mapa que relacione palavras como \"lento\" e \"bug\" com as respostas correspondentes a estas palavras.\nPortanto, o mapa terá como chave uma String e como valor também uma String.\n\n\nNos próximos exercícios vamos fazer essa implementação.\n\nNós vamos colocar as entradas do HashMap diretamente no código.\nE, portanto, alguém pode argumentar que isso não é muito diferente de usar if\\else if.\nMas, a inclusão das entradas no HashMap poderia ser feita a partir de um arquivo, por exemplo.\n\nE, assim, poderíamos acrescentar novas palavras-chave no arquivo sem precisar recompilar o sistema."
+    "text": "Nós podemos melhorar essa implementação usando um HashMap.\n\nA ideia é ter um mapa que relacione palavras como \"lento\" e \"bug\" com as respostas correspondentes a estas palavras.\nPortanto, o mapa terá como chave uma String e como valor também uma String.\n\n\nNos próximos exercícios vamos fazer essa implementação.\n\nNós vamos colocar as entradas do HashMap diretamente no código.\n\n\n\nAlguém poderia argumentar que isso não é muito diferente de usar if\\else if.\n\nMas, a inclusão das entradas no HashMap poderia ser feita a partir de um arquivo, por exemplo.\n\nE, assim, poderíamos acrescentar novas palavras-chave no arquivo sem precisar recompilar o sistema."
   },
   {
     "objectID": "cap5-2.html#section-22",
     "href": "cap5-2.html#section-22",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício (entrega)\n\n\n\nAltere a classe a classe Respondedor do projeto suporte-tecnico1 para que ela tenha um atributo mapa para guardar as palavras-chaves e as respostas.\nCrie um método chamado preencherMapaDeRespostas que preenche o mapa com as respostas que você tinha tratado como if\\else if na aula anterior. Chame o método no construtor da classe.\nPor fim, altere o método gerarResposta da seguinte forma:\n\nEle deve ter um loop para percorrer as chaves do mapa.\nDentro do loop deve verificar se a variável entrada contém a chave.\n\nSe sim, ele deve retornar o valor associado a esta chave.\n\nSe o loop terminar e a entrada não tiver nenhuma das chaves, ele deve retornar uma resposta padrão.\n\nPor exemplo, “Desculpe, não entendi o que você quis dizer. Poderia reformular a pergunta?”."
+    "text": "Exercício (entrega)\n\n\n\nAltere a classe a classe Respondedor do projeto suporte-tecnico1 para que ela tenha um atributo mapa para guardar as palavras-chaves e as respostas.\nCrie um método chamado preencherMapaDeRespostas que preenche o mapa com as respostas que você tinha tratado como if\\else if na aula anterior. Chame o método no construtor da classe.\nPor fim, altere o método gerarResposta da seguinte forma:\n\nEle deve ter um loop para percorrer as chaves do mapa.\nDentro do loop deve verificar se a variável entrada contém a chave.\n\nSe sim, ele deve retornar o valor associado a esta chave.\n\nSe o loop terminar e a entrada não tiver nenhuma das chaves, ele deve retornar uma resposta padrão.\n\nPor exemplo, “Desculpe, não entendi o que você quis dizer. Poderia reformular a pergunta?”.\n\n\nAtenção: não vale usar construções de programação funcional (como o operador -&gt;)."
   },
   {
     "objectID": "cap5-2.html#section-23",
@@ -3791,14 +3791,14 @@
     "href": "cap5-2.html#section-28",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Em uma equipe de desenvolvimento de software, a implementação das classes é geralmente dividida entre vários programadores.\n\nUm programador poderia implementar a classe SistemaDeSuporte, por exemplo, e outro a classe LeitorDeEntrada.\nPortanto, você pode precisar implementar uma classe enquanto chama métodos de outras classes.\n\n\nAssim, o mesmo argumento usado para as classes da biblioteca Java vale para as classes que você escreve.\n\nSe podemos usar as classes sem ter que ler e entender toda a implementação, nossa tarefa fica mais fácil.\nNós precisamos apenas da interface das classes e não da implementação.\nPortanto, precisamos escrever boa documentação de classes também para as nossas próprias classes.\n\n\n\n\n\n\n\nConceito\n\n\nA documentação de uma classe deve ser detalhada o suficiente para que outros programadores consigam usar a classe sem precisar ler o código fonte."
+    "text": "Em uma equipe de desenvolvimento de software, a implementação das classes é geralmente dividida entre vários programadores.\n\nUm programador poderia implementar a classe SistemaDeSuporte, por exemplo, e outro a classe LeitorDeEntrada.\nPortanto, você pode precisar implementar uma classe enquanto chama métodos de outras classes.\n\n\nAssim, o mesmo argumento usado para as classes da biblioteca Java vale para as classes que você escreve.\n\nSe podemos usar as classes sem ter que ler e entender toda a implementação, nossa tarefa fica mais fácil.\nNós precisamos apenas da interface das classes e não da implementação.\nPortanto, precisamos escrever boa documentação de classes também para as nossas próprias classes."
   },
   {
     "objectID": "cap5-2.html#section-29",
     "href": "cap5-2.html#section-29",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "O Java tem uma ferramenta chamada javadoc que gera documentação a partir de comentários no código.\n\nToda a documentação oficial das classes da biblioteca Java é gerada com o javadoc.\n\n\nO BlueJ usa o javadoc para gerar documentação das classes.\n\nCom o código de uma classe aberto no BlueJ, podemos acessar a caixa de opções no canto superior direito e mudar de código-fonte para documentação.\nOu podemos também usar o menu Ferramentas → Documentaçao do Projeto para gerar a documentação de todas as classes do projeto."
+    "text": "Conceito\n\n\nA documentação de uma classe deve ser detalhada o suficiente para que outros programadores consigam usar a classe sem precisar ler o código fonte.\n\n\n\n\n\nO Java tem uma ferramenta chamada javadoc que gera documentação a partir de comentários no código.\n\nToda a documentação oficial das classes da biblioteca Java é gerada com o javadoc.\n\n\n\nO BlueJ usa o javadoc para gerar documentação das classes.\n\nCom o código de uma classe aberto no BlueJ, podemos acessar a caixa de opções no canto superior direito e mudar de código-fonte para documentação.\nOu podemos também usar o menu Ferramentas → Documentaçao do Projeto para gerar a documentação de todas as classes do projeto."
   },
   {
     "objectID": "cap5-2.html#section-30",

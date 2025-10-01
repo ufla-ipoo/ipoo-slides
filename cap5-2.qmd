@@ -340,8 +340,11 @@ Como você pode verificar se uma chave existe em um mapa? Escreva um código Jav
 Experimente com o BlueJ o que acontece quando você tenta procurar um valor e a chave fornecida não existe no mapa.
 :::
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício" icon=false .nonincremental}
 Como podemos imprimir todas as chaves que estão armazenadas em um `HashMap`.
+
+- Atenção, não vale aqui construções de programação funcional que usem 
+o operador `->`.
 :::
 
 ##
@@ -387,13 +390,17 @@ Nós podemos melhorar essa implementação usando um `HashMap`.
 Nos próximos exercícios vamos fazer essa implementação.
 
 - Nós vamos colocar as entradas do `HashMap` diretamente no código.
-- E, portanto, alguém pode argumentar que isso não é muito diferente de usar `if\else if`.
+
+. . .
+
+ Alguém poderia argumentar que isso não é muito diferente de usar `if\else if`.
+
 - Mas, a inclusão das entradas no `HashMap` poderia ser feita a partir de um arquivo, por exemplo.
   - E, assim, poderíamos acrescentar novas palavras-chave no arquivo sem precisar recompilar o sistema.
 
 ##
 
-::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false .r-fit-text}
 ::: {.nonincremental}
 Altere a classe a classe `Respondedor` do projeto [suporte-tecnico1](https://github.com/ufla-ipoo/suporte-tecnico1) para que ela tenha um atributo mapa para guardar as palavras-chaves e as respostas.
 
@@ -406,6 +413,8 @@ Por fim, altere o método `gerarResposta` da seguinte forma:
   - Se sim, ele deve retornar o valor associado a esta chave.
 - Se o loop terminar e a `entrada` não tiver nenhuma das chaves, ele deve retornar uma resposta padrão.
   - Por exemplo, "Desculpe, não entendi o que você quis dizer. Poderia reformular a pergunta?".
+
+Atenção: não vale usar construções de programação funcional (como o operador `->`).
 ::: 
 :::
 
@@ -528,14 +537,14 @@ Assim, o mesmo argumento usado para as classes da biblioteca Java vale para as c
 - Nós precisamos apenas da interface das classes e não da implementação.
 - Portanto, precisamos escrever boa documentação de classes também para as nossas próprias classes.
 
-. . .
+## {.smaller}
 
 ::: {.callout-tip title="Conceito" icon=false}
 A **documentação** de uma classe deve ser detalhada o suficiente para que outros programadores
 consigam usar a classe sem precisar ler o código fonte.
 :::
 
-## {.smaller}
+. . .
 
 O Java tem uma ferramenta chamada [javadoc](.alert) que gera documentação a partir de comentários no código.
 
@@ -615,7 +624,7 @@ No Java, comentários `Javadoc` são escritos com um símbolo especial de coment
 O comentário deve ter `/**` no início e `*/` no final para ser reconhecido como um comentário `javadoc`.
 
 - Se o comentário vem imediatamente antes da declaração da classe, ele é lido como a descrição da classe.
-- Se ele está acima de uma assinatura de método, é considerado como um comentário do método.
+- Se ele está logo acima de uma assinatura de método, é considerado como um comentário do método.
 
 . . .
 

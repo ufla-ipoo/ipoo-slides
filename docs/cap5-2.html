@@ -16,6 +16,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
+  <meta name="dcterms.date" content="2025-01-10">
   <title>GAC125 - Introdução à Programação Orientada a Objetos – IPOO - Cap. 5 Comportamento Mais Sofisticado</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -413,7 +414,7 @@
     </div>
 </div>
 
-  <p class="date">14/11/2024</p>
+  <p class="date">01/10/2025</p>
 </section>
 <section id="section" class="slide level2 smaller">
 <h2></h2>
@@ -822,6 +823,9 @@
 </div>
 <div class="callout-content">
 <p>Como podemos imprimir todas as chaves que estão armazenadas em um <code>HashMap</code>.</p>
+<ul>
+<li>Atenção, não vale aqui construções de programação funcional que usem o operador <code>-&gt;</code>.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -877,7 +881,11 @@
 <p>Nos próximos exercícios vamos fazer essa implementação.</p>
 <ul>
 <li class="fragment">Nós vamos colocar as entradas do <code>HashMap</code> diretamente no código.</li>
-<li class="fragment">E, portanto, alguém pode argumentar que isso não é muito diferente de usar <code>if\else if</code>.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Alguém poderia argumentar que isso não é muito diferente de usar <code>if\else if</code>.</p>
+<ul>
 <li class="fragment">Mas, a inclusão das entradas no <code>HashMap</code> poderia ser feita a partir de um arquivo, por exemplo.
 <ul>
 <li class="fragment">E, assim, poderíamos acrescentar novas palavras-chave no arquivo sem precisar recompilar o sistema.</li>
@@ -887,7 +895,7 @@
 </section>
 <section id="section-22" class="slide level2">
 <h2></h2>
-<div title="Exercício [(entrega)]{.alert}">
+<div class="r-fit-text" title="Exercício [(entrega)]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -909,6 +917,7 @@
 <li>Por exemplo, “Desculpe, não entendi o que você quis dizer. Poderia reformular a pergunta?”.</li>
 </ul></li>
 </ul>
+<p>Atenção: não vale usar construções de programação funcional (como o operador <code>-&gt;</code>).</p>
 </div>
 </div>
 </div>
@@ -1041,7 +1050,9 @@
 <li class="fragment">Portanto, precisamos escrever boa documentação de classes também para as nossas próprias classes.</li>
 </ul>
 </div>
-<div class="fragment">
+</section>
+<section id="section-29" class="slide level2 smaller">
+<h2></h2>
 <div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1054,14 +1065,12 @@
 </div>
 </div>
 </div>
-</div>
-</section>
-<section id="section-29" class="slide level2 smaller">
-<h2></h2>
+<div class="fragment">
 <p>O Java tem uma ferramenta chamada <a href=".alert">javadoc</a> que gera documentação a partir de comentários no código.</p>
 <ul>
 <li class="fragment">Toda a documentação oficial das classes da biblioteca Java é gerada com o javadoc.</li>
 </ul>
+</div>
 <div class="fragment">
 <p>O BlueJ usa o javadoc para gerar documentação das classes.</p>
 <ul>
