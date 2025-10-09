@@ -8,37 +8,40 @@
 ::: {.column width="35%"}
 
 [Videoaulas]{.alert}: 
+
 - [Playlist no Youtube](https://www.youtube.com/watch?v=Pn49AxSBQ7g&list=PLaPMgEYxCSWep1GK69nOMWPr20zPKRILC)
 
 [Projetos de exemplo]{.alert}: 
+
 - [Repositório no GitHub](https://github.com/orgs/ufla-ipoo/repositories)
 
 [Slides]{.alert} 
 
 - **Primeira Aula**
-  - [Apresentação da disciplina](https://docs.google.com/presentation/d/19KcDBJ90PKpsOwnPbpHvcfIhM-DM1j_cIJgbEhxM5gE/edit?usp=sharing)
+  - [Apresentação da disciplina](https://docs.google.com/presentation/d/1hUVc3ehaJi41at8c9ExuArAabdJMVnIj-myXAbheDw0/edit?usp=sharing)
 - **Capítulo 1**
   - [Aula 1.1 - Teórica](cap1-1.html)
   - [Aula 1.2 - Prática](cap1-2.html)
-- **Capítulo 2**
-  - [Aula 2.1 - Teórica](cap2-1.html)
-  - [Aula 2.2 - Prática](cap2-2.html)
-  - [Aula 2.3 - Teórica](cap2-3.html)
-  - [Aula 2.4 - Prática](cap2-4.html)
 
 :::
 
 ::: {.column width="35%"}
 
+- **Capítulo 2**
+  - [Aula 2.1 - Teórica](cap2-1.html)
+  - [Aula 2.2 - Prática](cap2-2.html)
+  - [Aula 2.3 - Teórica](cap2-3.html)
+  - [Aula 2.4 - Prática](cap2-4.html)
 - **Capítulo 3**
   - [Aula 3.1 - Teórica](cap3-1.html)
   - [Aula 3.2 - Prática](cap3-2.html)
 - **Capítulo 4**
   - [Aula 4.1 - Teórica](cap4-1.html)
-  - [Aula 4.2 - Prática (Tutorial do Greenfoot)](greenfoot-tutorial.html)
-  - [Aula 4.2 - Prática (exercício)](https://github.com/ufla-ipoo/canal)
+  - **Aula 4.2 - Prática**
+    - [Projeto produtos](https://github.com/ufla-ipoo/produtos)
+    - [Projeto canal](https://github.com/ufla-ipoo/canal)
   - [Aula 4.3 - Teórica](cap4-3.html)
-  - [Aula 4.4 - Prática](https://github.com/ufla-ipoo/produtos)
+
 
 :::
 
@@ -46,15 +49,12 @@
 
 - **Capítulo 5**
   - [Aula 5.1 - Teórica](cap5-1.html)
+  - [Aula W.1 - Tutorial Greenfoot](greenfoot-tutorial.html)
   - [Aula 5.2 - Teórica](cap5-2.html)
   - [Aula 5.3 - Prática](cap5-3.html)
-- **Capítulo 7**
-  - [Aula 7.1 - Teórica](https://docs.google.com/presentation/d/1DZTU_jEUavfASD8cIGk_YzywxBkGDEHsn8lAQxtxycw/edit?usp=sharing)
-- **Capítulo 6**
-  - [Aula 6.1 - Teórica](cap6-1.html)
-  - [Aula 6.1b - Teórica](https://docs.google.com/presentation/d/13j1yuqfqCCknchh2eX0scH2ovJpUfHhZCriwtG0sEUE/edit?usp=sharing)
- 
-
+- **Capítulos 6 e 7**
+  - [Aula 7.1 - Teórica](https://docs.google.com/presentation/d/1Tx6DKJl0eMEHfVYjmMKt-fN_89a1uRuYMq-O35I1vCE/edit?usp=sharing)
+  - [Aula 7.2 - Prática](https://docs.google.com/presentation/d/1Ayf-GJYAVysgOGxv5KU7B1WHHRXqGJTcXZwNgzDnIQU/edit?usp=sharing)
 :::
 
 ::::
