@@ -158,7 +158,7 @@
     "href": "cap5-3.html#section-3",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\nAbra a classe Mundo e veja o código do método prepare. Repare que ele cria duas bolas e depois cria 10 objetos da classe Chao.\n\nAltere o método para que o programa tenha uma terceira bola.\n\nCrie a bola com diâmetro igual a 30 e posição vertical (y) 150.\nPosicione a bola na posição (300, 150)."
+    "text": "Exercício\n\n\nAbra a classe Mundo e veja o código do método prepare. Repare que ele cria duas bolas e depois cria 10 objetos da classe Chao.\nAltere o método para que o programa tenha uma terceira bola.\n\nCrie a bola com diâmetro igual a 30 e posição vertical (y) 150.\nPosicione a bola na posição (300, 150)."
   },
   {
     "objectID": "cap5-3.html#section-4",
@@ -5408,7 +5408,7 @@
     "href": "cap5-3.html#section-2",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\n\nExecute o projeto e em seguida pause o programa antes das bolas pararem de quicar. Em seguida, clique com o botão direito em uma das bolas.\n\nVeja que as opções são as mesmas do BlueJ quando clicamos em um objeto na bancada de objetos.\nVocê pode clicar em Inspecionar para ver os valores dos atributos.\nE você pode também chamar métodos do objeto."
+    "text": "Exercício\n\n\nExecute o projeto e em seguida pause o programa antes das bolas pararem de quicar. Em seguida, clique com o botão direito em uma das bolas.\n\nVeja que as opções são as mesmas do BlueJ quando clicamos em um objeto na bancada de objetos.\nVocê pode clicar em Inspecionar para ver os valores dos atributos.\nE você pode também chamar métodos do objeto."
   },
   {
     "objectID": "cap5-3.html#section-8",
@@ -5471,74 +5471,81 @@
     "href": "cap5-3.html#section-30",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\n\nBaixe o projeto produtos que você entregou como exercício na aula prática do capítulo anterior e renomeie a pasta do projeto para produtos-com-hashmap.\nAltere o projeto substituindo o uso de ArrayList por HashMap.\n\nComo citado no slide anterior, a ideia é que o HashMap guarde entradas tendo o identificador do produto como chave e o produto como valor.\nPlaneje as alterações a serem feitas antes de realmente alterar o código.\nPense em como a implementação pode ser feita com o mínimo de alterações.\n\nTeste suas alterações (teste todos os métodos que tinha implementado)!"
+    "text": "Exercício\n\n\nBaixe o projeto produtos que você entregou como exercício na aula prática do capítulo anterior e renomeie a pasta do projeto para produtos-com-hashmap.\nAltere o projeto substituindo o uso de ArrayList por HashMap.\n\nComo citado no slide anterior, a ideia é que o HashMap guarde entradas tendo o identificador do produto como chave e o produto como valor.\nPlaneje as alterações a serem feitas antes de realmente alterar o código.\nPense em como a implementação pode ser feita com o mínimo de alterações.\n\nTeste suas alterações (teste todos os métodos que tinha implementado)!"
   },
   {
     "objectID": "cap5-3.html#section-31",
     "href": "cap5-3.html#section-31",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\n\nCompare o código do projeto produtos com o código do projeto produtos-com-hashmap.\nVocê viu alguma vantagem em utilizar HashMap em vez de ArrayList?\n\nSe você tivesse começando o projeto do zero, você acha que seria melhor usar HashMap desde o início? Por quê?\n\nEscreva sua resposta no comentário javadoc da classe GerenciadorDeEstoque do projeto produtos-com-hashmap."
+    "text": "Exercício\n\n\nConfira como você tratou a versão sobrecarregada do método encontrarProduto que recebe o ID do produto por parâmetro.\nLembre-se que, usando um HashMap, você não deve fazer um loop para encontrar o produto pelo ID. Você deve usar o método get para encontrar o produto (valor) a partir do ID (chave)."
   },
   {
     "objectID": "cap5-3.html#section-32",
     "href": "cap5-3.html#section-32",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "No projeto produtos-com-hashmap como você tratou a versão sobrecarregada do método encontrarProduto que recebe o nome do produto por parâmetro?\n\nProvavelmente, você implementou um loop para percorrer as chaves do HashMap e verificou o nome do produto, certo?\nVocê acha que existe alguma forma mais eficiente de fazer isso?\n\n\nPense sobre isso antes de continuar."
+    "text": "Exercício\n\n\nCompare o código do projeto produtos com o código do projeto produtos-com-hashmap.\nVocê viu alguma vantagem em utilizar HashMap em vez de ArrayList?\n\nSe você tivesse começando o projeto do zero, você acha que seria melhor usar HashMap desde o início? Por quê?\n\nEscreva sua resposta no comentário javadoc da classe GerenciadorDeEstoque do projeto produtos-com-hashmap."
   },
   {
     "objectID": "cap5-3.html#section-33",
     "href": "cap5-3.html#section-33",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Repare que quando usamos um HashMap, se quisermos encontrar um valor a partir de uma chave, nós não precisamos implementar um loop.\n\nNós podemos simplesmente usar o método get.\n\n\nÉ interessante que você saiba que isso não é apenas uma questão de ficar mais fácil para implementar.\n\nUm ponto importante é que o método get de um HashMap é muito mais eficiente do que um loop que percorre todos os elementos de uma coleção.\n\nPense, por exemplo, em um estoque com milhares de produtos."
+    "text": "No projeto produtos-com-hashmap como você tratou a versão sobrecarregada do método encontrarProduto que recebe o nome do produto por parâmetro?\n\nProvavelmente, você implementou um loop para percorrer as chaves do HashMap e verificou o nome do produto, certo?\nVocê acha que existe alguma forma mais eficiente de fazer isso?\n\n\nPense sobre isso antes de continuar."
   },
   {
     "objectID": "cap5-3.html#section-34",
     "href": "cap5-3.html#section-34",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "O método get do HashMap é mais eficiente porque usa uma estrutura de dados chamada tabela Hash\n\nque otimiza a busca de valores a partir de chaves.\n\n\nVocê aprenderá sobre isso na disciplina de Estrutura de Dados.\n\nMas, por enquanto, basta que saiba que um programa será mais rápido se usar get de HashMap em vez de um loop em um ArrayList, por exemplo."
+    "text": "Repare que quando usamos um HashMap, se quisermos encontrar um valor a partir de uma chave, nós não precisamos implementar um loop.\n\nNós podemos simplesmente usar o método get.\n\n\nÉ interessante que você saiba que isso não é apenas uma questão de ficar mais fácil para implementar.\n\nUm ponto importante é que o método get de um HashMap é muito mais eficiente do que um loop que percorre todos os elementos de uma coleção.\n\nPense, por exemplo, em um estoque com milhares de produtos."
   },
   {
     "objectID": "cap5-3.html#section-35",
     "href": "cap5-3.html#section-35",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Sabendo disso, como você poderia implementar, de forma mais eficiente, o método encontrarProduto que recebe o nome do produto por parâmetro?\n\nPense um pouco antes de continuar.\n\n\nVocê talvez tenha pensado que se tivermos um HashMap que use o nome do produto como chave e o produto como valor,\n\npoderíamos simplesmente usar o método get do HashMap para encontrar o produto.\nO que tornaria a busca mais rápida."
+    "text": "O método get do HashMap é mais eficiente porque usa uma estrutura de dados chamada tabela Hash\n\nque otimiza a busca de valores a partir de chaves.\n\n\nVocê aprenderá sobre isso na disciplina de Estrutura de Dados.\n\nMas, por enquanto, basta que saiba que um programa será mais rápido se usar get de HashMap em vez de um loop em um ArrayList, por exemplo."
   },
   {
     "objectID": "cap5-3.html#section-36",
     "href": "cap5-3.html#section-36",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Mas se substituirmos o HashMap que temos até agora, que usa o identificador como chave,\n\nteríamos que voltar a fazer um loop na outra versão do método encontrarProduto que recebe o identificador por parâmetro.\n\n\nO que poderíamos fazer então?"
+    "text": "Sabendo disso, como você poderia implementar, de forma mais eficiente, o método encontrarProduto que recebe o nome do produto por parâmetro?\n\nPense um pouco antes de continuar.\n\n\nVocê talvez tenha pensado que se tivermos um HashMap que use o nome do produto como chave e o produto como valor,\n\npoderíamos simplesmente usar o método get do HashMap para encontrar o produto.\nO que tornaria a busca mais rápida."
   },
   {
     "objectID": "cap5-3.html#section-37",
     "href": "cap5-3.html#section-37",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "A solução nesse caso seria ter dois objetos HashMap:\n\nUm que use o identificador como chave e outro que use o nome do produto como chave.\nAssim, poderíamos usar um HashMap para buscar produtos pelo identificador e outro para buscar pelo nome.\n\n\nRepare que essa é uma solução de compromisso (trade-off).\n\nNós estamos usando mais memória do computador (para guardar um segundo HashMap).\nMas com a vantagem de tornar nosso programa mais eficiente (mais rápido)."
+    "text": "Mas se substituirmos o HashMap que temos até agora, que usa o identificador como chave,\n\nteríamos que voltar a fazer um loop na outra versão do método encontrarProduto que recebe o identificador por parâmetro.\n\n\nO que poderíamos fazer então?"
   },
   {
     "objectID": "cap5-3.html#section-38",
     "href": "cap5-3.html#section-38",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Em um sistema com muitos produtos, a diferença de eficiência pode ser significativa.\n\nE é importante ressaltar que os objetos não são duplicados na memória por usarmos dois hashmaps.\nJá que os HashMaps guardam ponteiros para os objetos.\n\nE, portanto, o uso adicional de memória não é tão grande."
+    "text": "A solução nesse caso seria ter dois objetos HashMap:\n\nUm que use o identificador como chave e outro que use o nome do produto como chave.\nAssim, poderíamos usar um HashMap para buscar produtos pelo identificador e outro para buscar pelo nome.\n\n\nRepare que essa é uma solução de compromisso (trade-off).\n\nNós estamos usando mais memória do computador (para guardar um segundo HashMap).\nMas com a vantagem de tornar nosso programa mais eficiente (mais rápido)."
   },
   {
     "objectID": "cap5-3.html#section-39",
     "href": "cap5-3.html#section-39",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\n\nAltere o projeto produtos-com-hashmap para que ele tenha dois objetos HashMap:\n\nUm que use o identificador como chave e outro que use o nome do produto como chave.\nAltere o método encontrarProduto que recebe o nome do produto por parâmetro para usar o HashMap que usa o nome do produto como chave.\nE, claro, lembre-se de tratar o segundo HashMap no método adicionarProduto.\n\nTeste suas alterações!"
+    "text": "Em um sistema com muitos produtos, a diferença de eficiência pode ser significativa.\n\nE é importante ressaltar que os objetos não são duplicados na memória por usarmos dois hashmaps.\nJá que os HashMaps guardam ponteiros para os objetos.\n\nE, portanto, o uso adicional de memória não é tão grande."
   },
   {
     "objectID": "cap5-3.html#section-40",
     "href": "cap5-3.html#section-40",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Exercício\n\n\nAltere o projeto produtos-com-hashmap para que ele tenha dois objetos HashMap:\n\nUm que use o identificador como chave e outro que use o nome do produto como chave.\nAltere o método encontrarProduto que recebe o nome do produto por parâmetro para usar o HashMap que usa o nome do produto como chave.\nE, claro, lembre-se de tratar o segundo HashMap no método adicionarProduto.\n\nTeste suas alterações!"
+  },
+  {
+    "objectID": "cap5-3.html#section-41",
+    "href": "cap5-3.html#section-41",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
     "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, as atividades dessa aula e envie os códigos dos projetos bolas-quicando e produtos-com-hashmap da forma que ficaram após as suas alterações (compacte a pasta em um arquivo .zip para enviar)."

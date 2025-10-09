@@ -351,26 +351,6 @@ Em todas essas chamadas nós usamos o nome da classe `Greenfoot` para chamar o m
 - Todos eles implementam ações que dependem apenas dos parâmetros passados
   - (não dependem do estado de um objeto).
 
-
-## 
-
-::: {.callout-note title="Exercício" icon=false}
-Altere a declaração do atributo `GRAVIDADE` da classe `Bola` de forma que ele não seja mais uma constante.
-Mas, mantenha a inicialização do atributo na declaração.
-
-Crie um **método modificador** que permita alterar o valor do atributo.
-
-Execute o programa e pause-o antes das bolas pararem de quicar.
-Clique em uma das bolas e chame o método que você criou, informando um novo valor para a gravidade.
-
-Continue a execução do programa e repare que acontece. 
-A gravidade foi alterada só para a bola que você chamou o método, ou para todas elas?
-
-Depois que as bolas pararem, pause o programa novamente, e use a opção *Inspecionar* em cada bola para conferir
-o valor do atributo `GRAVIDADE`.
-(Obs.: na janela de inspeção, use o botão *mostrar campos estáticos*).
-::: 
-
 ## Limitações dos métodos estáticos 
 
 É importante sabermos que os **métodos estáticos** (métodos de classe) têm **limitações**.
@@ -395,6 +375,26 @@ Por que você acha que essas limitações existem?
 . . .
 
 E o que isso tem a ver com um método estático não poder chamar um método de instância?
+
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Altere a declaração do atributo `GRAVIDADE` da classe `Bola` de forma que ele não seja mais uma constante.
+Mas, mantenha a inicialização do atributo na declaração.
+
+Crie um **método modificador** que permita alterar o valor do atributo.
+
+Execute o programa e pause-o antes das bolas pararem de quicar.
+Clique em uma das bolas e chame o método que você criou, informando um novo valor para a gravidade.
+
+Continue a execução do programa e repare que acontece. 
+A gravidade foi alterada só para a bola que você chamou o método, ou para todas elas?
+
+Depois que as bolas pararem, pause o programa novamente, e use a opção *Inspecionar* em cada bola para conferir
+o valor do atributo `GRAVIDADE`.
+(Obs.: na janela de inspeção, use o botão *mostrar campos estáticos*).
+::: 
 
 # ArrayList vs. HashMap {background-color="#40666e"}
 
@@ -438,6 +438,17 @@ Teste suas alterações (teste todos os métodos que tinha implementado)!
 
 ::: {.callout-note title="Exercício" icon=false}
 ::: {.nonincremental}
+Confira como você tratou a versão sobrecarregada do método `encontrarProduto` que recebe o ID do produto por parâmetro.
+
+Lembre-se que, usando um HashMap, você não deve fazer um loop para encontrar o produto pelo ID. 
+Você deve usar o método `get` para encontrar o produto (valor) a partir do ID (chave).
+:::
+::: 
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+::: {.nonincremental}
 Compare o código do projeto `produtos` com o código do projeto `produtos-com-hashmap`.
 
 Você viu alguma vantagem em utilizar `HashMap` em vez de `ArrayList`?
@@ -450,7 +461,7 @@ Escreva sua resposta no comentário `javadoc` da classe `GerenciadorDeEstoque` d
 
 ## 
 
-No projeto `produtos-com-hashmap` como você tratou a versão sobrecarregada do método `encontrarProduto` que recebe o nome do produto por parâmetro?
+No projeto `produtos-com-hashmap` como você tratou a versão sobrecarregada do método `encontrarProduto` que recebe **o nome do produto** por parâmetro?
 
 - Provavelmente, você implementou um loop para percorrer as chaves do `HashMap` e verificou o nome do produto, certo?
 - Você acha que existe alguma forma mais eficiente de fazer isso?
