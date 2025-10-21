@@ -658,7 +658,7 @@ Veja, por exemplo, o caso do relacionamento entre as classes `Local` e `Item` no
 
 ## {.smaller}
 
-O conteúdo de [Estratégias de Depuração]{.alert} está em uma [apresentação separada](https://docs.google.com/presentation/d/13j1yuqfqCCknchh2eX0scH2ovJpUfHhZCriwtG0sEUE/edit?usp=sharing).
+O conteúdo de [Estratégias de Depuração]{.alert} está em uma [apresentação separada](https://docs.google.com/presentation/d/1QZ_yCyAlSF39nkXzpBVt7BCBAp0HYYk6yhUUaLAOZMw/edit?usp=sharing).
 
 ![](imagens/slides_estrategias_depuracao.png)
 

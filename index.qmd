@@ -55,6 +55,9 @@
 - **Capítulos 6 e 7**
   - [Aula 7.1 - Teórica](https://docs.google.com/presentation/d/1Tx6DKJl0eMEHfVYjmMKt-fN_89a1uRuYMq-O35I1vCE/edit?usp=sharing)
   - [Aula 7.2 - Prática](https://docs.google.com/presentation/d/1Ayf-GJYAVysgOGxv5KU7B1WHHRXqGJTcXZwNgzDnIQU/edit?usp=sharing)
+  - [Aula 6.1a - Teórica](https://ufla-ipoo.github.io/ipoo-slides/cap6-1.html)
+  - [Aula 6.1b - Teórica](https://docs.google.com/presentation/d/1QZ_yCyAlSF39nkXzpBVt7BCBAp0HYYk6yhUUaLAOZMw/edit?usp=sharing)
+  - [Aula 7.3 - Prática](https://docs.google.com/presentation/d/1o2ZLdD2ZC3KnOaSN313rk1eqPxONTF3CKiTYVCq-Yq4/edit?usp=sharing)
 :::
 
 ::::
