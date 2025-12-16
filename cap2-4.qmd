@@ -135,7 +135,7 @@ Adicione à classe `Livro` dois métodos, `imprimirAutor` e `imprimirTitulo`, qu
 . . .
 
 ::: {.callout-note title="Exercício 1.2" icon=false}
-Adicione um atibuto `paginas` à classe `Livro` para guardar a quantidade de páginas do livro.
+Adicione um atributo `paginas` à classe `Livro` para guardar a quantidade de páginas do livro.
 O atributo deve ser do tipo `int` e seu valor inicial deve ser passado para o construtor junto com o `autor` e o `titulo`.
 Adicione também um método de acesso `obterPaginas` para esse atributo.
 :::
