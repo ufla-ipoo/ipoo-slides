@@ -4477,7 +4477,7 @@
     "href": "cap10-1.html#principais-conceitos-da-aula",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "Principais Conceitos da Aula",
-    "text": "Principais Conceitos da Aula\n\nClasses Abstratas\nInterfaces\nHerança Múltipla\n\n\nConstruções Java do capítulo\n\nabstract, implements, interface\n\n\n\nNesta aula vamos aprofundar nas técnicas relacionadas a herança que podem ser usadas para melhorar a estrutura das classes e aumentar a manutenibilidade e extensibilidade do código.\n\nVeremos um projeto de exemplo que aborda uma simulação e com ele discutiremos novamente os conceitos de herança, polimorfismo, classes abstratas e interfaces."
+    "text": "Principais Conceitos da Aula\n\n\nClasses Abstratas\nInterfaces\nHerança Múltipla\n\n\n\nConstruções Java do capítulo\n\n\nabstract, implements, interface\n\n\n\n\nNesta aula vamos aprofundar nas técnicas relacionadas a herança que podem ser usadas para melhorar a estrutura das classes e aumentar a manutenibilidade e extensibilidade do código.\n\nVeremos um projeto de exemplo que aborda uma simulação e com ele discutiremos novamente os conceitos de herança, polimorfismo, classes abstratas e interfaces."
   },
   {
     "objectID": "cap10-1.html#section",
@@ -4540,7 +4540,7 @@
     "href": "cap10-1.html#section-8",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Resumidamente, o objetivo das demais classes é:\n\nCampo representa um campo de duas dimensões onde os animais vivem.\n\nO campo é formado por um número fixo de localizações (células), arranjadas em linhas e colunas.\nApenas um animal pode ocupar uma localização por vez.\nUma localização pode estar vazia ou ocupada por um animal.\n\nLocalizacao representa uma célula dentro do campo, definida por um valor de linha e um de coluna.\nAs classes Simulador, Raposa, Coelho, Campo e Localizacao definem completamente o comportamento da simulação.\n\nAs demais classes são acessórias."
+    "text": "Resumidamente, o objetivo das demais classes é:\n\nCampo representa uma área de duas dimensões onde os animais vivem.\n\nO campo é formado por um número fixo de localizações (células), arranjadas em linhas e colunas.\nApenas um animal pode ocupar uma localização por vez.\nUma localização pode estar vazia ou ocupada por um animal.\n\nLocalizacao representa uma célula dentro do campo, definida por um valor de linha e um de coluna.\nAs classes Simulador, Raposa, Coelho, Campo e Localizacao definem completamente o comportamento da simulação.\n\nAs demais classes são acessórias."
   },
   {
     "objectID": "cap10-1.html#section-9",
@@ -4561,7 +4561,7 @@
     "href": "cap10-1.html#section-11",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Exercício\n\n\nQuais mudanças vocês nota ao executar o botão de Simulação Longa?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAcione o botão Reiniciar para criar um novo estado inicial para a simulação e rode a simulação novamente.\nA simulação é exatamente igual dessa vez? Se não é, você nota algum padrão similar entre as execuções?\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nSe você executa a simulação por tempo suficiente, acontece de todas as raposas ou coelhos morrerem?\nEm caso afirmativo, por que você acha que isso acontece?"
+    "text": "Exercício\n\n\nQuais mudanças vocês nota ao executar o botão de Simulação Longa?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAcione o botão Reiniciar Simulação para criar um novo estado inicial para a simulação e rode a simulação novamente.\nA simulação é exatamente igual dessa vez? Se não é, você nota algum padrão similar entre as execuções?\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nSe você executa a simulação por tempo suficiente, acontece de todas as raposas ou coelhos morrerem?\nEm caso afirmativo, por que você acha que isso acontece?"
   },
   {
     "objectID": "cap10-1.html#a-classe-coelho",
@@ -4645,7 +4645,7 @@
     "href": "cap10-1.html#section-18",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Exercício\n\n\nIdentifique as semelhanças e diferenças entre as classes Coelho e Raposa.\nFaça listas separadas dos atributos, métodos e construtores e diferencie entre os atributos estáticos e ​​de instância.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nMétodos idênticos nas subclasses são claramente candidatos a serem levados para uma superclasse.\nQuais métodos são realmente idênticos nas classes Coelho e Raposa? Para chegar a uma conclusão, considere:\n\nse faz diferença a flexão de gênero (como vivo ou viva);\ncomo se os valores dos atributos estáticos fossem usados diretamente no código."
+    "text": "Exercício\n\n\nIdentifique as semelhanças e diferenças entre as classes Coelho e Raposa.\nFaça listas separadas dos atributos, métodos e construtores e diferencie entre os atributos estáticos e ​​de instância.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nMétodos idênticos nas subclasses são claramente candidatos a serem levados para uma superclasse.\nQuais métodos são realmente idênticos nas classes Coelho e Raposa? Para chegar a uma conclusão, considere:\n\nse faz diferença a flexão de gênero (como vivo ou viva);\ncomo se os valores dos atributos estáticos fossem usados diretamente no código."
   },
   {
     "objectID": "cap10-1.html#section-19",
@@ -4750,7 +4750,7 @@
     "href": "cap10-1.html#section-30",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Exercício\n\n\nTente implementar a refatoração citada, criando a classe GeradorDePopulacoes."
+    "text": "Exercício\n\n\nTente implementar a refatoração citada, criando a classe GeradorDePopulacoes.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nPara remover completamente o acoplamento entre Simulador e as classes concretas de animais, é necessário que a classe GeradorDePopulacoes também trate a definição das cores dos animais.\nSe ainda não tratou isso, trate agora."
   },
   {
     "objectID": "cap10-1.html#section-31",
@@ -4785,7 +4785,7 @@
     "href": "cap10-1.html#section-35",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Exercício\n\n\nLeve o atributo idade das subclasses para a classe Animal. Para isso, será necessário:\n\nAlterar os construtores das subclasses para que a inicialização completa da idade seja tratada na superclasse.\n\nCom isso a classe animal vai precisar também de uma atributo randomizador.\n\nCriar um método de acesso para o atributo idade na superclasse, com visibilidade protected.\nLevar o método incrementarIdade para a superclasse.\n\nA questão é que para o método incrementarIdade compilar na classe Animal precisaremos definir um atributo estático IDADE_MAXIMA na superclasse.\n\nSerá o que acontece se esse atributo existir na superclasse e nas subclasses? Funciona como uma sobrescrita dos métodos?\nPara verificar isso, define IDADE_MAXIMA com valor 1 na superclasse Animal e execute a simulação.\nO que acontece com a simulação?"
+    "text": "Exercício\n\n\nLeve o atributo idade das subclasses para a classe Animal. Para isso, será necessário:\n\nAlterar os construtores das subclasses para que a inicialização completa da idade seja tratada na superclasse.\n\nCom isso a classe animal vai precisar também de uma atributo randomizador.\n\nCriar um método de acesso para o atributo idade na superclasse, com visibilidade protected.\nLevar o método incrementarIdade para a superclasse.\n\nA questão é que para o método incrementarIdade compilar na classe Animal precisaremos definir um atributo estático IDADE_MAXIMA na superclasse.\n\nSerá o que acontece se esse atributo existir na superclasse e nas subclasses? Funciona como uma sobrescrita dos métodos?\nPara verificar isso, defina IDADE_MAXIMA com valor 1 na superclasse Animal e execute a simulação.\nO que acontece com a simulação?"
   },
   {
     "objectID": "cap10-1.html#section-36",
@@ -4813,14 +4813,14 @@
     "href": "cap10-1.html#section-39",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Exercício\n\n\nExperimente remover a palavra-chave static do método que retorna a idade máxima e executar a simulação.\n\n\n\n\n\nVeja que agora a idade máxima retornada é a da subclasse, o que resolve o problema.\n\nMas, da forma que ficou, veja que a implementação do método na superclasse Animal é inútil.\n\nBem como a declaração do atributo IDADE_MAXIMA na superclasse.\n\n\n\n\n\n\n\n\nExercício\n\n\nRemova o atributo IDADE_MAXIMA da superclasse Animal.\nO método que retornava o atributo pode ser removido da classe Animal?\n\nSe não puder, como ele deve ser declarado?"
+    "text": "Exercício\n\n\nExperimente remover a palavra-chave static do método que retorna a idade máxima e executar a simulação.\n\n\n\n\n\n\nVeja que agora a idade máxima retornada é a da subclasse, o que resolve o problema.\n\nMas, da forma que ficou, veja que a implementação do método na superclasse Animal é inútil.\n\nBem como a declaração do atributo IDADE_MAXIMA na superclasse.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nRemova o atributo IDADE_MAXIMA da superclasse Animal.\nO método que retornava o atributo pode ser removido da classe Animal?\n\nSe não puder, como ele deve ser declarado?"
   },
   {
     "objectID": "cap10-1.html#section-40",
     "href": "cap10-1.html#section-40",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Exercício\n\n\nLeve os métodos podeProcriar e procriar para superclasse Animal.\nNesse processo você dever criar os métodos necessários para garantir que os valores idade de reprodução, a probabilidade de reprodução e o tamanho máximo de ninhada, efetivamente usados, sejam os das subclasses.\nReflita sobre o nível de visibilidade adequado para cada método tratado.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAs alterações que fizemos tiveram impacto em alguma outra classe do sistema?\nSe não, o que isso sugere sobre os graus de encapsulamento e acoplamento que estavam presentes na versão original do projeto?"
+    "text": "Exercício\n\n\nLeve os métodos podeProcriar e procriar para superclasse Animal.\nNesse processo você dever criar os métodos necessários para garantir que os valores idade de reprodução, a probabilidade de reprodução e o tamanho máximo de ninhada, efetivamente usados, sejam os das subclasses.\nReflita sobre o nível de visibilidade adequado para cada método tratado.\n\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAs alterações que fizemos tiveram impacto em alguma outra classe do sistema?\nSe não, o que isso sugere sobre os graus de encapsulamento e acoplamento que estavam presentes na versão original do projeto?"
   },
   {
     "objectID": "cap10-1.html#section-41",
