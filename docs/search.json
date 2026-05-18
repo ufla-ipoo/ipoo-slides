@@ -4785,49 +4785,49 @@
     "href": "cap10-1.html#section-35",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Exercício\n\n\nLeve o atributo idade das subclasses para a classe Animal. Para isso, será necessário:\n\nAlterar os construtores das subclasses para que a inicialização completa da idade seja tratada na superclasse.\n\nCom isso a classe animal vai precisar também de uma atributo randomizador.\n\nCriar um método de acesso para o atributo idade na superclasse, com visibilidade protected.\nLevar o método incrementarIdade para a superclasse.\n\nA questão é que para o método incrementarIdade compilar na classe Animal precisaremos definir um atributo estático IDADE_MAXIMA na superclasse.\n\nSerá o que acontece se esse atributo existir na superclasse e nas subclasses? Funciona como uma sobrescrita dos métodos?\nPara verificar isso, defina IDADE_MAXIMA com valor 1 na superclasse Animal e execute a simulação.\nO que acontece com a simulação?"
+    "text": "Quando identificamos as características comuns entre as classes Coelho e Raposa, para criar a classe Animal, nós adiamos o tratamento do atributo idade e dos métodos associados a ele.\n\nA princípio, parece que seria muito simples ter levado o atributo para a classe Animal, criado um método de acesso e levado o método modificador incrementarIdade.\nO problema é que o método incrementarIdade depende do atributo estático IDADE_MAXIMA, que, apesar do mesmo nome, tem valores diferentes nas duas subclasses.\n\nPortanto, não dá para simplesmente levar o atributo IDADE_MAXIMA para a superclasse.\n\n\n\nSerá que seria possível sobrescrever um atributo?\n\nPara os próximos exercícios, use o projeto raposas-e-coelhos-v2-grafico como base."
   },
   {
     "objectID": "cap10-1.html#section-36",
     "href": "cap10-1.html#section-36",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Vimos que a simulação para no passo 2, pois todos os animais morrem.\n\nIsso aconteceu porque não existe sobrescrita de atributos.\nAssim, o valor usado para definir a idade dos animais foi aquele definido na classe Animal (e era 1).\n\n\nJá que a sobrescrita funciona apenas para métodos, e se criássemos um método estático para retornar a idade máxima e tentarmos sobrescrever esse método nas subclasses?"
+    "text": "Exercício\n\n\nLeve o atributo idade das subclasses para a classe Animal. Para isso, será necessário:\n\nAlterar os construtores das subclasses para que a inicialização completa da idade seja tratada na superclasse.\n\nCom isso a classe animal vai precisar também de uma atributo randomizador.\n\nCriar um método de acesso para o atributo idade na superclasse, com visibilidade protected.\nLevar o método incrementarIdade para a superclasse.\n\nA questão é que para o método incrementarIdade compilar na classe Animal precisaremos definir um atributo estático IDADE_MAXIMA na superclasse.\n\nSerá o que acontece se esse atributo existir na superclasse e nas subclasses? Funciona como uma sobrescrita dos métodos?\nPara verificar isso, defina IDADE_MAXIMA com valor 1 na superclasse Animal e execute a simulação.\nO que acontece com a simulação?"
   },
   {
     "objectID": "cap10-1.html#section-37",
     "href": "cap10-1.html#section-37",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Exercício\n\n\nCrie um método estático na superclasse Animal e nas subclasses Coelho e Raposa para retornar o atributo IDADE_MAXIMA.\nO código dos métodos será exatamente igual, mas precisamos disso porque apesar dos atributos terem o mesmo nome (IDADE_MAXIMA), sabemos que são três atributos diferentes (um de cada classe).\nExecute a simulação e verifique se o problema foi resolvido."
+    "text": "Vimos que a simulação para no passo 2, pois todos os animais morrem.\n\nIsso aconteceu porque não existe sobrescrita de atributos.\nAssim, o valor usado para definir a idade dos animais foi aquele definido na classe Animal (e era 1).\n\n\nJá que a sobrescrita funciona apenas para métodos, e se criássemos um método estático para retornar a idade máxima e tentarmos sobrescrever esse método nas subclasses?"
   },
   {
     "objectID": "cap10-1.html#section-38",
     "href": "cap10-1.html#section-38",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Veja que, mais uma vez, a simulação termina no passo 2 com todos os animais mortos.\n\nMas por que isso aconteceu?\n\n\nA questão é que também não existe sobrescrita de métodos estáticos.\n\nIsso acontece porque é o compilador que decide o método a ser chamado (no caso de métodos estáticos).\n\n\n\nO que podemos fazer então?"
+    "text": "Exercício\n\n\nCrie um método estático na superclasse Animal e nas subclasses Coelho e Raposa para retornar o atributo IDADE_MAXIMA.\nO código dos métodos será exatamente igual, mas precisamos disso porque apesar dos atributos terem o mesmo nome (IDADE_MAXIMA), sabemos que são três atributos diferentes (um de cada classe).\nExecute a simulação e verifique se o problema foi resolvido."
   },
   {
     "objectID": "cap10-1.html#section-39",
     "href": "cap10-1.html#section-39",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Exercício\n\n\nExperimente remover a palavra-chave static do método que retorna a idade máxima e executar a simulação.\n\n\n\n\n\n\nVeja que agora a idade máxima retornada é a da subclasse, o que resolve o problema.\n\nMas, da forma que ficou, veja que a implementação do método na superclasse Animal é inútil.\n\nBem como a declaração do atributo IDADE_MAXIMA na superclasse.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nRemova o atributo IDADE_MAXIMA da superclasse Animal.\nO método que retornava o atributo pode ser removido da classe Animal?\n\nSe não puder, como ele deve ser declarado?"
+    "text": "Veja que, mais uma vez, a simulação termina no passo 2 com todos os animais mortos.\n\nMas por que isso aconteceu?\n\n\nA questão é que também não existe sobrescrita de métodos estáticos.\n\nIsso acontece porque é o compilador que decide o método a ser chamado (no caso de métodos estáticos).\n\n\n\nO que podemos fazer então?"
   },
   {
     "objectID": "cap10-1.html#section-40",
     "href": "cap10-1.html#section-40",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Exercício\n\n\nLeve os métodos podeProcriar e procriar para superclasse Animal.\nNesse processo você dever criar os métodos necessários para garantir que os valores idade de reprodução, a probabilidade de reprodução e o tamanho máximo de ninhada, efetivamente usados, sejam os das subclasses.\nReflita sobre o nível de visibilidade adequado para cada método tratado.\n\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAs alterações que fizemos tiveram impacto em alguma outra classe do sistema?\nSe não, o que isso sugere sobre os graus de encapsulamento e acoplamento que estavam presentes na versão original do projeto?"
+    "text": "Exercício\n\n\nExperimente remover a palavra-chave static do método que retorna a idade máxima e executar a simulação.\n\n\n\n\n\n\nVeja que agora a idade máxima retornada é a da subclasse, o que resolve o problema.\n\nMas, da forma que ficou, veja que a implementação do método na superclasse Animal é inútil.\n\nBem como a declaração do atributo IDADE_MAXIMA na superclasse.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nRemova o atributo IDADE_MAXIMA da superclasse Animal.\nO método que retornava o atributo pode ser removido da classe Animal?\n\nSe não puder, como ele deve ser declarado?"
   },
   {
     "objectID": "cap10-1.html#section-41",
     "href": "cap10-1.html#section-41",
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
-    "text": "Exercício\n\n\nDESAFIO: as implementações dos métodos reproduzir nas classes Coelho e Raposa são muito similares. A diferença é que um cria objetos do tipo Coelho e o outro do tipo Raposa.\nUsando a mesma ideia adotada para tratar o método podeProcriar, seria possível mover o método reproduzir para a superclasse Animal?\nDica: as regras de substituição polimórfica se aplicam também a valores retornados por métodos da mesma forma que é feita para atribuições e passagens de parâmetros."
+    "text": "Exercício\n\n\nLeve os métodos podeProcriar e procriar para superclasse Animal.\nNesse processo você dever criar os métodos necessários para garantir que os valores idade de reprodução, a probabilidade de reprodução e o tamanho máximo de ninhada, efetivamente usados, sejam os das subclasses.\nReflita sobre o nível de visibilidade adequado para cada método tratado.\n\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAs alterações que fizemos tiveram impacto em alguma outra classe do sistema?\nSe não, o que isso sugere sobre os graus de encapsulamento e acoplamento que estavam presentes na versão original do projeto?"
   },
   {
     "objectID": "cap1-2.html#section-12",
@@ -5549,5 +5549,12 @@
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
     "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, as atividades dessa aula e envie os códigos dos projetos bolas-quicando e produtos-com-hashmap da forma que ficaram após as suas alterações (compacte a pasta em um arquivo .zip para enviar)."
+  },
+  {
+    "objectID": "cap10-1.html#section-42",
+    "href": "cap10-1.html#section-42",
+    "title": "PPOO - Técnicas de Abstração Adicionais",
+    "section": "",
+    "text": "Exercício\n\n\nDESAFIO: as implementações dos métodos reproduzir nas classes Coelho e Raposa são muito similares. A diferença é que um cria objetos do tipo Coelho e o outro do tipo Raposa.\nUsando a mesma ideia adotada para tratar o método podeProcriar, seria possível mover o método reproduzir para a superclasse Animal?\nDica: as regras de substituição polimórfica se aplicam também a valores retornados por métodos da mesma forma que é feita para atribuições e passagens de parâmetros."
   }
 ]

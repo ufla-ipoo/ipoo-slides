@@ -700,6 +700,15 @@ Faça alguns experimentos alterando o tamanho do campo (especialmente tamanhos m
 Os gráficos apresentados te dão algum _insight_ novo sobre o comportamento da simulação?
 :::
 
+# {.smaller}
+
+Antes de continuarmos, há um detalhe importante sobre a implementação da classe `VisaoDeGrafico`.
+
+- Não entraremos nos detalhes sobre implementação de interface gráfica em Java.
+- Mas vale a pena destacar que a classe `VisaoDeGrafico` possui uma classe interna privada chamada
+  `PainelDeGrafico`.
+  - Ela é privada, porque é um detalhe de implementação da classe `VisaoDeGrafico` e não deve ser acessada por outras classes.
+
 
 # Métodos mais abstratos {background-color="#40666e"}
 
