@@ -156,7 +156,7 @@ A classe `Simulador` é responsável por criar o estado inicial da simulação, 
 
 Resumidamente, o objetivo das demais classes é:
 
-- `Campo` representa um campo de duas dimensões onde os animais vivem. 
+- `Campo` representa uma área de duas dimensões onde os animais vivem. 
   
   - O campo é formado por um número fixo de localizações (células), arranjadas em linhas e colunas.
   - Apenas um animal pode ocupar uma localização por vez.
@@ -215,7 +215,7 @@ Quais mudanças vocês nota ao executar o botão de **Simulação Longa**?
 . . .
 
 ::: {.callout-note title="Exercício" icon=false}
-Acione o botão `Reiniciar` para criar um novo estado inicial para a simulação e
+Acione o botão `Reiniciar Simulação` para criar um novo estado inicial para a simulação e
 rode a simulação novamente.
 
 A simulação é exatamente igual dessa vez? 
@@ -737,7 +737,7 @@ atributo estático `IDADE_MAXIMA` na superclasse.
 
 - Será o que acontece se esse atributo existir na superclasse e nas subclasses?
   Funciona como uma sobrescrita dos métodos?
-- Para verificar isso, define `IDADE_MAXIMA` com valor `1` na superclasse `Animal` e execute a simulação.
+- Para verificar isso, defina `IDADE_MAXIMA` com valor `1` na superclasse `Animal` e execute a simulação.
 - O que acontece com a simulação?
 :::
 :::
