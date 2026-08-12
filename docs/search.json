@@ -2188,14 +2188,14 @@
     "href": "cap1-1.html#como-estudar-esse-conteúdo-1",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "Como estudar esse conteúdo?",
-    "text": "Como estudar esse conteúdo?\n\nAlém disso, estes slides se baseiam no Cap. 1 do livro do Barnes e Kölling.\n\n\n\n\n\n\n\n\n\n\n\nEles seguem de forma bem direta o livro, com algumas poucas coisas a mais.\nPortanto, é muito interessante também ler o capítulo no livro para tirar dúvidas e complementar o que está sendo estudado.\n\n\n\n\n\n\n\n\n\n\nDica: faça anotações!\n\n\nEm qualquer dos casos, é altamente recomendável, ter um caderno e caneta para anotar os principais conceitos e eventuais dúvidas que surgirem."
+    "text": "Como estudar esse conteúdo?\n\nAlém disso, estes slides se baseiam no Cap. 1 do livro.\n\n\n\n\n\n\n\n\n\n\n\nEles seguem de forma bem direta o livro, com algumas poucas coisas a mais.\nPortanto, é muito interessante também ler o capítulo no livro para tirar dúvidas e complementar o que está sendo estudado.\n\n\n\n\n\n\n\n\n\n\nDica: faça anotações!\n\n\nEm qualquer dos casos, é altamente recomendável, ter um caderno e caneta para anotar os principais conceitos e eventuais dúvidas que surgirem."
   },
   {
     "objectID": "cap1-1.html#principais-conceitos-do-capítulo",
     "href": "cap1-1.html#principais-conceitos-do-capítulo",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "Principais Conceitos do Capítulo",
-    "text": "Principais Conceitos do Capítulo\n\nObjetos\nClasses\nMétodos\nParâmetros\n\n\nVamos começar nossa jornada no mundo da Programação Orientada a Objetos (POO)!\n\n\nComeçaremos pelos conceitos mais importantes que são a base de tudo: Objetos e Classes"
+    "text": "Principais Conceitos do Capítulo\n\n\nObjetos\nClasses\nMétodos\nParâmetros\n\n\n\nVamos começar nossa jornada no mundo da Programação Orientada a Objetos (POO)!\n\n\nComeçaremos pelos conceitos mais importantes que são a base de tudo: Objetos e Classes"
   },
   {
     "objectID": "cap1-1.html#section",
@@ -2216,259 +2216,259 @@
     "href": "cap1-1.html#section-2",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Ao criar um programa em uma linguagem Orientada a Objetos (OO)\n\nvocê está criando um modelo de alguma parte do mundo;\ne as partes do modelo são construídas a partir de objetos do domínio do problema."
+    "text": "Ao criar um programa em uma linguagem Orientada a Objetos (OO)\n\nvocê está criando um modelo de alguma parte do mundo;\ne as partes do modelo são construídas a partir de objetos dodomínio do problema."
   },
   {
     "objectID": "cap1-1.html#section-3",
     "href": "cap1-1.html#section-3",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Os objetos que criamos dependem do problema que estamos resolvendo\n\nSe estiver criando um software como o Word, os objetos podem ser palavras e parágrafos.\nJá se estiver programando uma rede social, podem ser usuários e mensagens.\nMas podem ser também monstros se estiver criando um jogo.\n\n\nOs objetos podem ser coisas mais concretas, como jogadores em um jogo de futebol.\n\nOu coisas mais abstratas, como um campeonato ou uma partida do jogo\n\n\n\n\n\n\n\nConceito\n\n\nObjetos Java modelam objetos do domínio de um problema."
+    "text": "Os objetos que criamos dependem do problema que estamos resolvendo\n\nSe estiver criando um software como o Word, os objetos podem ser palavras e parágrafos.\nJá se estiver programando uma rede social, podem ser usuários e mensagens.\nMas podem ser também monstros se estiver criando um jogo."
   },
   {
     "objectID": "cap1-1.html#objetos-podem-ser-categorizados",
     "href": "cap1-1.html#objetos-podem-ser-categorizados",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "Objetos podem ser categorizados",
-    "text": "Objetos podem ser categorizados\nUma classe descreve, de forma abstrata, todos os objetos de um tipo específico.\n\nPara ficar mais claro, vamos pensar em um exemplo: uma simulação de trânsito.\n\nClaramente, nós precisaremos lidar com carros.\nNesse contexto, carro é uma classe ou um objeto?\n\n\n\nPara nos ajudar a decidir, vamos pensar em algumas perguntas?\n\nQual a cor do carro?\nO carro é rápido?\nQual direção está indo agora?\n\n\n\nNão dá para responder sem especificar de qual carro estamos falando.\n\nIsso porque a palavra “carro” nesse contexto, se refere a uma classe carro.\nEstamos falando de carros em geral e não de um carro em particular."
+    "text": "Objetos podem ser categorizados\nUma classe descreve, de forma abstrata, todos os objetos de um tipo específico.\n\nPara ficar mais claro, vamos pensar em um exemplo: uma simulação de trânsito.\n\nClaramente, nós precisaremos lidar com carros.\nNesse contexto, carro é uma classe ou um objeto?"
   },
   {
     "objectID": "cap1-1.html#section-4",
     "href": "cap1-1.html#section-4",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Agora, se eu digo: “meu carro velho está parado no estacionamento”.\n\nPodemos responder às perguntas.\nO carro é prata, é lento, e está no estacionamento.\n\n\nPortanto, agora estou falando de um objeto carro, pois é um exemplo de um carro em particular."
+    "text": "Os objetos podem ser coisas mais concretas, como jogadores em um jogo de futebol.\n\nOu coisas mais abstratas, como um campeonato ou uma partida do jogo\n\n\n\n\n\n\nConceito\n\n\nObjetos Java modelam objetos do domínio de um problema."
   },
   {
     "objectID": "cap1-1.html#section-5",
     "href": "cap1-1.html#section-5",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Uma classe pode ser vista como o projeto de um carro:\n\n\n\n\n\nEm uma fábrica de automóveis, por exemplo:\n\nOs engenheiros criam o projeto do carro.\nDepois os carros são produzidos de acordo com aquele projeto.\n\n\n\n\nNesse exemplo o projeto seria a classe, e os carros os objetos."
+    "text": "Para nos ajudar a decidir, vamos pensar em algumas perguntas.\n\nQual a cor do carro?\nO carro é rápido?\nQual direção está indo agora?\n\n\nNão dá para responder sem especificar de qual carro estamos falando.\n\nIsso porque a palavra “carro” nesse contexto, se refere a uma classe carro.\nEstamos falando de carros em geral e não de um carro em particular."
   },
   {
     "objectID": "cap1-1.html#section-6",
     "href": "cap1-1.html#section-6",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Uma classe pode ser vista como a planta de uma casa:\n\n\n\n\n\nEm um conjunto habitacional:\n\nO engenheiro cria uma planta idêntica para todas as casas.\nAs casas são então construídas de acordo com a planta.\n\n\n\n\nNesse exemplo a planta seria a classe, e as casas os objetos."
+    "text": "Agora, se eu digo:\n\n“meu carro velho está parado no estacionamento”.\n\n\nPodemos responder às perguntas.\n\nO carro é prata, é lento, e está no estacionamento.\n\n\n\nPortanto, agora estou falando de um objeto carro, pois é um exemplo de um carro em particular."
   },
   {
     "objectID": "cap1-1.html#section-7",
     "href": "cap1-1.html#section-7",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Pode realmente acontecer de nosso programa ter apenas um objeto de uma determinada classe."
+    "text": "Uma classe pode ser vista como o projeto de um carro:\n\n\n\n\n\nEm uma fábrica de automóveis, por exemplo:\n\nOs engenheiros criam o projeto do carro.\nDepois os carros são produzidos de acordo com aquele projeto.\n\n\n\n\nNesse exemplo o projeto seria a classe, e os carros os objetos."
   },
   {
     "objectID": "cap1-1.html#section-8",
     "href": "cap1-1.html#section-8",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Costumamos dizer que um objeto particular é uma instância de uma classe.\n\nInstância é sinônimo de exemplar daquele tipo.\nÉ sinônimo de objeto em OO.\nServe para enfatizar que é um exemplo particular de um classe específica.\n\n\n\n\n\n\nConceito\n\n\nObjetos são criados a partir de classes. A classe descreve o tipo do objeto; e os objetos representam instâncias individuais da classe."
+    "text": "Uma classe pode ser vista como a planta de uma casa:\n\n\n\n\n\nEm um conjunto habitacional:\n\nO engenheiro cria uma planta idêntica para todas as casas.\nAs casas são então construídas de acordo com a planta.\n\n\n\n\nNesse exemplo a planta seria a classe, e as casas os objetos."
   },
   {
     "objectID": "cap1-1.html#quiz",
     "href": "cap1-1.html#quiz",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "Quiz",
-    "text": "Quiz\nSobre objetos e classes é correto afirmar que:\n\nObjetos são usados para criar classes\nClasses são instâncias de objetos\nInstância é sinônimo de classe\nObjetos são instâncias de classes\n\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nAnote a resposta, pois você precisará depois responder ao Quiz no Campus Virtual para considerar a presença nessa aula."
+    "text": "Quiz\n\nSobre objetos e classes é correto afirmar que:\n\nObjetos são usados para criar classes\nClasses são instâncias de objetos\nInstância é sinônimo de classe\nObjetos são instâncias de classes"
   },
   {
     "objectID": "cap1-1.html#section-9",
     "href": "cap1-1.html#section-9",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Baixe o projeto de exemplo figuras e abra-o no BlueJ.\n\n\n\n\n\n\n\n\nComo baixar o projeto?\n\n\nOs projetos da disciplina são disponibilizados no GitHub. Se nunca o utilizou, não se preocupe, basta fazer o seguinte:\n\nClicando no link do projeto você verá um botão verde bem destacado escrito Code.\nClique nele e vá na última opção: Download ZIP.\nDescompacte o arquivo no seu computador, entre na pasta criada e clique duas vezes no arquivo: package.bluej.\n\n\n\n\n\n\n\nAo abrir o projeto, você verá um diagrama.\n\n\n\nCada retângulo representa uma classe no seu projeto.\nClique com o botão direito em Circulo e escolha a opção new Circulo().\nO sistema pedirá o nome da instância, apenas clique em OK."
+    "text": "Pode realmente acontecer de nosso programa ter apenas um objeto de uma determinada classe."
   },
   {
     "objectID": "cap1-1.html#section-10",
     "href": "cap1-1.html#section-10",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Você verá um retângulo na parte inferior do BlueJ, chamado “circulo1”.\n\n\nEssa parte do BlueJ que mostra os objetos é chamada de bancada de objetos.\n\n\n\nAcabamos de criar nosso primeiro objeto.\n\nA caixa retangular representa a classe Circulo.\nE circulo1 é um objeto dessa classe.\n\n\n\n\n\n\n\n\nConvenção\n\n\nComeçamos os nomes de classes com letras maiúsculas e os nomes de objetos com letras minúsculas. Isso ajuda a identificar do que estamos falando.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAgora é com você: experimente criar outro círculo e um quadrado."
+    "text": "Costumamos dizer que um objeto particular é uma instância de uma classe.\n\nInstância é sinônimo de exemplar daquele tipo.\nÉ sinônimo de objeto em OO.\nServe para enfatizar que é um exemplo particular de um classe específica.\n\n\n\n\n\n\nConceito\n\n\nObjetos são criados a partir de classes. A classe descreve o tipo do objeto; e os objetos representam instâncias individuais da classe."
   },
   {
     "objectID": "cap1-1.html#section-12",
     "href": "cap1-1.html#section-12",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Veja que existem várias opções no menu do círculo.\n\nTente chamar moverDireita e moverBaixo algumas vezes até o círculo chegar perto do canto.\nExperimente também usar exibir e esconder.\n\n\n\n\n\n\nExercício\n\n\nO que acontece se você chamar moverBaixo duas vezes? Ou três vezes? O que acontece se chamar esconder duas vezes?"
+    "text": "Ao abrir o projeto, você verá um diagrama.\n\n\n\nCada retângulo representa uma classe no seu projeto.\nClique com o botão direito em Circulo e escolha a opção new Circulo().\nO sistema pedirá o nome da instância, apenas clique em OK."
   },
   {
     "objectID": "cap1-1.html#section-13",
     "href": "cap1-1.html#section-13",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "As opções do menu círculo representam operações que você pode usar para manipular o círculo\n\nElas são chamadas de métodos em Java.\nNós dizemos que os métodos são chamados ou invocados.\n\n\n\n\n\n\nConceito\n\n\nPodemos nos comunicar com objetos através da chamada de seus métodos. Geralmente os objetos fazem alguma coisa quando chamamos um método."
+    "text": "Você verá um retângulo na parte inferior do BlueJ, chamado “circulo1”.\n\n\nEssa parte do BlueJ que mostra os objetos é chamada de bancada de objetos.\n\n\n\nAcabamos de criar nosso primeiro objeto.\n\nA caixa retangular representa a classe Circulo.\nE circulo1 é um objeto dessa classe."
   },
   {
     "objectID": "cap1-1.html#section-14",
     "href": "cap1-1.html#section-14",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Nós podemos entender métodos também como comportamentos, ou mensagens que podem ser enviadas para os objetos.\n\nEm um jogo de futebol, por exemplo, quais são os comportamentos que um jogador pode ter?\n\n\n\nAlguns exemplos são: chutar, dar passe e correr.\n\nPortanto, um objeto jogador poderia ter os métodos chutar, darPasse e correr.\n\n\n\nJá fazerGol seria um método válido para um objeto jogador?\n\nVeja que o comportamento do jogador no jogo é chutar a bola. Fazer gol é uma consequência que pode acontecer ou não."
+    "text": "Convenção\n\n\nComeçamos os nomes de classes com letras maiúsculas e os nomes de objetos com letras minúsculas. Isso ajuda a identificar do que estamos falando.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAgora é com você: experimente criar outro círculo e um quadrado."
   },
   {
     "objectID": "cap1-1.html#section-15",
     "href": "cap1-1.html#section-15",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Vamos agora chamar o método moverHorizontal\n\nVeja que aparece uma caixa de diálogo que pede uma informação. \n\n\nDigite 50 e clique em OK.\n\nVocê verá que o círculo de move 50 pixels para a direita."
+    "text": "Clique com o botão direito no objeto círculo (não na classe!) e você verá um menu com várias opções.\n\n\n\n\n\nEscolha a opção exibir no menu\n\nIsso vai desenhar uma representação do círculo em uma janela separada"
   },
   {
     "objectID": "cap1-1.html#section-16",
     "href": "cap1-1.html#section-16",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "O método que usamos precisa de informação adicional para ser executado.\n\nNesse caso, é a distância que o círculo deve ser mover.\nVeja que o método moverHorizontal é mais flexível que os métodos moverDireita e moverEsquerda que movem sempre por uma distância fixa.\n\n\n\n\n\n\nExercício\n\n\nTente chamar os métodos moverVertical, moverVerticalLento e mudarTamanho antes de continuar lendo. Descubra como o método moverHorizontal pode ser usado para movimentar o círculo 70 pixels para a esquerda.\n\n\n\n\n\n\nAs informações adicionais que alguns métodos precisam para executar são chamadas parâmetros.\n\nO método indica que tipos de parâmetros ele precisa."
+    "text": "Veja que existem várias opções no menu do círculo.\n\nTente chamar moverDireita e moverBaixo algumas vezes até o círculo chegar perto do canto.\nExperimente também usar exibir e esconder.\n\n\n\n\n\n\nExercício\n\n\nO que acontece se você chamar moverBaixo duas vezes? Ou três vezes? O que acontece se chamar esconder duas vezes?"
   },
   {
     "objectID": "cap1-1.html#section-17",
     "href": "cap1-1.html#section-17",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Ao chamar o método moverHorizontal vemos na caixa de diálogo o seguinte:\n\nvoid moverHorizontal(int distancia)\n\n\nIsso é o que chamamos de assinatura do método.\n\nA parte que está entre parênteses (int distancia) indica as informações que o método precisa para executar.\nPara cada parâmetro, temos:\n\no tipo que indica o tipo de dado do parâmetro\ne o nome que dá uma ideia sobre o que significa a informação que é esperada.\n\n\n\n\n\n\n\n\nConceito\n\n\nMétodos podem ter parâmetros para fornecer informação adicional para uma tarefa.\n\n\n\n\n\n\n\n\n\n\nConceito\n\n\nO nome do método e os tipos dos seus parâmetros são chamados de assinatura. Ela tem todas as informações necessárias para chamar o método."
+    "text": "As opções do menu círculo representam operações que você pode usar para manipular o círculo\n\nElas são chamadas de métodos em Java.\nNós dizemos que os métodos são chamados ou invocados.\n\n\n\n\n\n\nConceito\n\n\nPodemos nos comunicar com objetos através da chamada de seus métodos. Geralmente os objetos fazem alguma coisa quando chamamos um método."
   },
   {
     "objectID": "cap1-1.html#section-18",
     "href": "cap1-1.html#section-18",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Quais poderiam ser os parâmetros de um método chutar de um objeto jogador em um jogo de futebol?\n\n\nOs parâmetros poderiam ser, por exemplo, a direção e a força do chute."
+    "text": "Nós podemos entender métodos também como comportamentos, ou mensagens que podem ser enviadas para os objetos.\n\nEm um jogo de futebol, por exemplo, quais são os comportamentos que um jogador pode ter?"
   },
   {
     "objectID": "cap1-1.html#quiz-1",
     "href": "cap1-1.html#quiz-1",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "Quiz",
-    "text": "Quiz\nSobre métodos e parâmetros é incorreto afirmar que:\n\nMétodos nos permitem comunicar com os objetos.\nParâmetros nos permitem fornecer informações adicionais aos métodos.\nA assinatura de um método indica quem o criou.\nEm Java, os parâmetros possuem um tipo e um nome."
+    "text": "Quiz\n\nSobre métodos e parâmetros é incorreto afirmar que:\n\nMétodos nos permitem comunicar com os objetos.\nParâmetros nos permitem fornecer informações adicionais aos métodos.\nA assinatura de um método indica quem o criou.\nEm Java, os parâmetros possuem um tipo e um nome."
   },
   {
     "objectID": "cap1-1.html#section-19",
     "href": "cap1-1.html#section-19",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Um tipo indica quais tipos de dados podem ser passados para um parâmetro.\n\nNo caso do método moverHorizontal o valor passado deve ser um inteiro (int).\n\n\nA maior parte dos métodos do projeto figuras que espera parâmetros, são parâmetros inteiros.\n\nRepare que ao clicarmos com o botão direito em um objeto (ex: circulo1), os métodos são listados já mostrando os parâmetros que eles esperam.\n\n\n\n\n\n\n\nConceito\n\n\nParâmetros têm tipos. O tipo define quais tipos de valores um parâmetro pode receber"
+    "text": "Alguns exemplos são: chutar, dar passe e correr.\n\nPortanto, um objeto jogador poderia ter os métodos chutar, darPasse e correr.\n\n\nJá fazerGol seria um método válido para um objeto jogador?\n\nVeja que o comportamento do jogador no jogo é chutar a bola. Fazer gol é uma consequência que pode acontecer ou não.\nPortanto, fazerGol não seria um método válido."
   },
   {
     "objectID": "cap1-1.html#section-20",
     "href": "cap1-1.html#section-20",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Veja que o método mudarCor espera um parâmetro do tipo String (texto).\n\nStrings em Java devem ser passadas entre aspas duplas (ex: \"vermelha\").\n\n\nVeja que quando clicamos em um método no BlueJ, a caixa de diálogo mostra também um texto de comentário antes da assinatura do método.\n\nComentários são usados para fornecer informações para nós, programadores.\nVeja que o comentário do método mudarCor indica quais são as cores que o programa conhece."
+    "text": "Vamos agora chamar o método moverHorizontal\n\nVeja que aparece uma caixa de diálogo que pede uma informação.\n\n\n\nDigite 50 e clique em OK.\n\n\nVocê verá que o círculo de move 50 pixels para a direita."
   },
   {
     "objectID": "cap1-1.html#section-21",
     "href": "cap1-1.html#section-21",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício\n\n\nChame o método mudarCor para um dos seus círculos e use a string “vermelha”. Tente também outras cores.\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente o que acontece quando você tenta usar uma cor que não existe.\n\n\n\n\n\n\n\n\nExercício\n\n\nTente chamar o método mudarCor e passar uma cor como parâmetro, mas sem as aspas. O que acontece?"
+    "text": "O método que usamos precisa de informação adicional para ser executado.\n\nNesse caso, é a distância que o círculo deve se mover.\nVeja que o método moverHorizontal é mais flexível que os métodos moverDireita e moverEsquerda que movem sempre por uma distância fixa.\n\n\n\n\n\n\nExercício\n\n\nTente chamar os métodos moverVertical, moverVerticalLento e mudarTamanho antes de continuar lendo. Descubra como o método moverHorizontal pode ser usado para movimentar o círculo 70 pixels para a esquerda."
   },
   {
     "objectID": "cap1-1.html#section-22",
     "href": "cap1-1.html#section-22",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "A partir de uma classe, você pode criar vários objetos (ou instâncias).\n\nUsando a classe Circulo você pode criar muitos círculos. E o mesmo acontece com a classe Quadrado.\n\n\n\n\n\n\nExercício\n\n\nCrie vários objetos círculos, usando a opção new Circulo() no menu da classe Circulo. Faça um grande e amarelo e outro pequeno e verde. Experimente também criar alguns triângulos, quadrados e pessoas, mudando suas posições, tamanhos e cores.\n\n\n\n\n\n\nCada um desses objetos tem sua própria posição, cor e tamanho.\n\nVocê pode mudar uma característica de um objeto (como o tamanho), chamando um método daquele objeto.\nIsso muda apenas aquele objeto e não os demais.\nNós costumamos chamar as características dos objetos de atributos.\n\n\n\n\n\n\n\nConceito\n\n\nMúltiplas instâncias: muitos objetos similares podem ser criados a partir de uma única classe."
+    "text": "As informações adicionais que alguns métodos precisam para executar são chamadas parâmetros.\n\nO método indica que tipos de parâmetros ele precisa."
   },
   {
     "objectID": "cap1-1.html#section-23",
     "href": "cap1-1.html#section-23",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Ao fazer o último exercício você deve ter notado que o método mudarTamanho da classe Triangulo tem a seguinte assinatura.\n\nvoid mudarTamanho(int novaAltura, int novaLargura)\n\n\nEsse é um exemplo de um método com mais de um parâmetro.\n\nDe fato, métodos pode ter quaisquer quantidades de parâmetros."
+    "text": "Ao chamar o método moverHorizontal vemos na caixa de diálogo o seguinte:\n\nvoid moverHorizontal(int distancia)\n\n\nIsso é o que chamamos de assinatura do método.\n\nA parte que está entre parênteses (int distancia) indica as informações que o método precisa para executar.\nPara cada parâmetro, temos:\n\no tipo que indica o tipo de dado do parâmetro\ne o nome que dá uma ideia sobre o que significa a informação que é esperada."
   },
   {
     "objectID": "cap1-1.html#section-24",
     "href": "cap1-1.html#section-24",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Nós chamamos de estado de um objeto, o conjunto dos valores de todos os seus atributos.\n\nPara um círculo, por exemplo, seriam os valores de sua posição (X e Y), sua cor, seu diâmetro e sua informação de visibilidade.\n\n\nPodemos ver o estado de um objeto no BlueJ através da opção Inspecionar do menu de um objeto.\n\nEla exibe o Inspetor de objetos que mostra os atributos guardados dentro de um objeto."
+    "text": "Conceito\n\n\nMétodos podem ter parâmetros para fornecer informação adicional para uma tarefa.\n\n\n\n\n\n\n\n\n\nConceito\n\n\nO nome do método e os tipos dos seus parâmetros são chamados de assinatura. Ela tem todas as informações necessárias para chamar o método."
   },
   {
     "objectID": "cap1-1.html#quiz-2",
     "href": "cap1-1.html#quiz-2",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "Quiz",
-    "text": "Quiz\nSe um programa tiver um objeto que é uma bola, a cor da bola é:\n\nUma instância.\nUm atributo.\nUm tipo.\nUm estado."
+    "text": "Quiz\n\nSe um programa tiver um objeto que é uma bola, a cor da bola é:\n\nUma instância.\nUm atributo.\nUm tipo.\nUm estado."
   },
   {
     "objectID": "cap1-1.html#section-25",
     "href": "cap1-1.html#section-25",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício\n\n\nCrie vários objetos de uma mesma classe e inspecione o estado de cada um. Com o inspetor de objetos aberto, mude o estado de um objeto (chamando o método moverEsquerda, por exemplo). Você verá os valores sendo modificados no inspetor de objetos.\n\n\n\n\n\nNo exercício vimos que alguns métodos, quando chamados, podem alterar o estado de um objeto.\n\nO método moverEsquerda, por exemplo, muda o valor do atributo posicaoX.\nNa linguagem Java, esses atributos também são chamados de campos."
+    "text": "Quais poderiam ser os parâmetros de um método chutar de um objeto jogador em um jogo de futebol?\n\n\nOs parâmetros poderiam ser, por exemplo, a direção e a força do chute."
   },
   {
     "objectID": "cap1-1.html#section-26",
     "href": "cap1-1.html#section-26",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Inspecionando objetos diferentes, você deve ter notado que objetos da mesma classe têm todos os mesmos atributos.\n\nOu seja, a quantidade, o tipo e os nomes dos campos são os mesmos.\nMas os valores de um atributo de cada objeto podem ser diferentes.\n\n\nJá objetos de classes diferentes podem ter atributos diferentes.\n\nPor exemplo: um círculo tem o atributo diâmetro, já um triângulo tem os atributos largura e altura.\n\n\n\nMas por que será que isso acontece?\n\nÉ que a quantidade, os tipos e os nomes dos atributos são definidos em uma classe, e não em um objeto."
+    "text": "Um tipo indica quais tipos de dados podem ser passados para um parâmetro.\n\nNo caso do método moverHorizontal o valor passado deve ser um inteiro (int).\n\n\nA maior parte dos métodos do projeto figuras que espera parâmetros, são parâmetros inteiros.\n\nRepare que ao clicarmos com o botão direito em um objeto (ex: circulo1), os métodos são listados já mostrando os parâmetros que eles esperam."
   },
   {
     "objectID": "cap1-1.html#section-27",
     "href": "cap1-1.html#section-27",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "A classe Circulo, por exemplo, define que um objeto círculo terá cinco atributos chamados:\n\ndiametro\nposicaoX\nposicaoY\ncor\nestaVisivel\n\n\nA classe também define os tipos de cada atributo: os primeiros são int, a cor é do tipo String e o último é boolean (verdadeiro ou falso).\nAssim, quando um objeto da classe Círculo for criado, o objeto terá esses atributos."
+    "text": "Conceito\n\n\nParâmetros têm tipos. O tipo define quais tipos de valores um parâmetro pode receber"
   },
   {
     "objectID": "cap1-1.html#section-28",
     "href": "cap1-1.html#section-28",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Já os valores dos atributos são guardados dentro do objeto.\n\nPor isso, que cada círculo pode ter uma cor diferente, por exemplo."
+    "text": "Veja que o método mudarCor espera um parâmetro do tipo String (texto).\n\nStrings em Java devem ser passadas entre aspas duplas (ex: \"vermelha\").\n\n\nVeja que quando clicamos em um método no BlueJ, a caixa de diálogo mostra também um texto de comentário antes da assinatura do método.\n\nComentários são usados para fornecer informações para nós, programadores.\nVeja que o comentário do método mudarCor indica quais são as cores que o programa conhece."
   },
   {
     "objectID": "cap1-1.html#section-29",
     "href": "cap1-1.html#section-29",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "A mesma ideia vale para os métodos.\n\nMétodos são definidos na classe do objeto.\nAssim, objetos da mesma classe têm os mesmos métodos.\n\n\nMas, repare que os métodos são chamados nos objetos.\n\nAssim, quando o método moverDireita é chamado para um círculo, é apenas esse círculo que se move."
+    "text": "Exercício\n\n\nChame o método mudarCor para um dos seus círculos e use a string “vermelha”. Tente também outras cores.\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente o que acontece quando você tenta usar uma cor que não existe.\n\n\n\n\n\n\n\n\nExercício\n\n\nTente chamar o método mudarCor e passar uma cor como parâmetro, mas sem as aspas. O que acontece?"
   },
   {
     "objectID": "cap1-1.html#section-30",
     "href": "cap1-1.html#section-30",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício\n\n\nEscolha uma das imagens abaixo e tente criar uma imagem parecida usando as formas do projeto figuras. Mas seja criativo e utilize cores, posições e tamanhos diferentes. Ao fazer isso, anote o que você teve que fazer para conseguir. Seria possível fazer de formas diferentes?\n\n\n\n\n\n\n\n\n\n\n\n\n\nEntrega no Campus Virtual\n\n\nTire um print da imagem que você criou no exercício anterior. Você precisará desse print para as atividades de entrega dessa aula!"
+    "text": "A partir de uma classe, você pode criar vários objetos (ou instâncias).\n\nUsando a classe Circulo você pode criar muitos círculos. E o mesmo acontece com a classe Quadrado.\n\n\n\n\n\n\nExercício\n\n\nCrie vários objetos círculos, usando a opção new Circulo() no menu da classe Circulo. Faça um grande e amarelo e outro pequeno e verde. Experimente também criar alguns triângulos, quadrados e pessoas, mudando suas posições, tamanhos e cores."
   },
   {
     "objectID": "cap1-1.html#section-31",
     "href": "cap1-1.html#section-31",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Vamos reforçar os conceitos que aprendemos usando agora um outro exemplo.\n\nBaixe o projeto de exemplo disciplina e abra-o no BlueJ.\n\n\n\n\n\n\nExercício\n\n\nCrie um objeto da classe Estudante. Veja que agora você precisa fornecer não só o nome do objeto, mas também alguns outros parâmetros.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nCrie alguns objetos da classe Estudante. Chame o método obterNome de cada objeto. Explique o que está acontecendo."
+    "text": "Cada um desses objetos tem sua própria posição, cor e tamanho.\n\nVocê pode mudar uma característica de um objeto (como o tamanho), chamando um método daquele objeto.\nIsso muda apenas aquele objeto e não os demais.\nNós costumamos chamar as características dos objetos de atributos.\n\n\n\n\n\n\nConceito\n\n\nMúltiplas instâncias: muitos objetos similares podem ser criados a partir de uma única classe."
   },
   {
     "objectID": "cap1-1.html#section-32",
     "href": "cap1-1.html#section-32",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "O método obterNome da classe Estudante tem algo diferente:\n\nEle pode retornar um valor.\n\n\nNós conseguimos saber o tipo do valor retornado pela assinatura do método\n\nString obterNome()\n\n\n\nA palavra String antes do nome do método indica que ele retorna um valor string (texto).\n\n\nAgora repare a assinatura do método mudarNome.\n\nA palavra void indica que o método não retorna nenhum valor.\n\n\nvoid mudarNome(String novoNome)"
+    "text": "Ao fazer o último exercício, você deve ter notado que o método mudarTamanho da classe Triangulo tem a seguinte assinatura.\n\nvoid mudarTamanho(int novaAltura, int novaLargura)\n\n\nEsse é um exemplo de um método com mais de um parâmetro.\n\n\nDe fato, métodos pode ter quaisquer quantidades de parâmetros."
   },
   {
     "objectID": "cap1-1.html#section-33",
     "href": "cap1-1.html#section-33",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Portanto, podemos obter informações de um objeto através de uma chamada de método.\n\nQuer dizer então que os métodos podem mudar o estado de um objeto e/ou retornar algo sobre seu estado.\n\n\n\n\n\n\nConceito\n\n\nMétodos podem retornar informação sobre o objeto através de um valor de retorno"
+    "text": "Nós chamamos de estado de um objeto, o conjunto dos valores de todos os seus atributos.\n\nPara um círculo, por exemplo, seriam os valores de sua posição (X e Y), sua cor, seu diâmetro e sua informação de visibilidade."
   },
   {
     "objectID": "cap1-1.html#quiz-3",
     "href": "cap1-1.html#quiz-3",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "Quiz",
-    "text": "Quiz\nMarque a alternativa incorreta:\n\nObjetos da mesma classe têm os mesmos atributos.\nValores dos atributos são guardados dentro das classes.\nMétodos podem retornar valores.\nObjetos podem ser passados como parâmetros."
+    "text": "Quiz\n\nMarque a alternativa incorreta:\n\nObjetos da mesma classe têm os mesmos atributos.\nValores dos atributos são guardados dentro das classes.\nMétodos podem retornar valores.\nObjetos podem ser passados como parâmetros."
   },
   {
     "objectID": "cap1-1.html#section-34",
     "href": "cap1-1.html#section-34",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Vamos agora criar um objeto da classe Disciplina no projeto disciplina, chamado poo.\n\nAcesse o método matricularEstudante, o que o método espera como parâmetro?\n\n\n\n\n\n\nExercício\n\n\nCrie três estudantes e matricule-os na disciplina poo. Em seguida, chame o método imprimirLista do objeto poo.\n\n\n\n\n\n\nFazendo o exercício podemos perceber que objetos podem ser passados como parâmetros de métodos de outros objetos.\n\nQuando um método espera um objeto como parâmetro, o tipo do parâmetro é o nome da classe do objeto que deve ser passado."
+    "text": "Podemos ver o estado de um objeto no BlueJ através da opção Inspecionar do menu de um objeto.\n\nEla exibe o Inspetor de objetos que mostra os valores dos atributos guardados dentro de um objeto."
   },
   {
     "objectID": "cap1-2.html#sobre-as-aulas-práticas",
@@ -5556,5 +5556,131 @@
     "title": "PPOO - Técnicas de Abstração Adicionais",
     "section": "",
     "text": "Exercício\n\n\nDESAFIO: as implementações dos métodos reproduzir nas classes Coelho e Raposa são muito similares. A diferença é que um cria objetos do tipo Coelho e o outro do tipo Raposa.\nUsando a mesma ideia adotada para tratar o método podeProcriar, seria possível mover o método reproduzir para a superclasse Animal?\nDica: as regras de substituição polimórfica se aplicam também a valores retornados por métodos da mesma forma que é feita para atribuições e passagens de parâmetros."
+  },
+  {
+    "objectID": "cap1-1.html#section-35",
+    "href": "cap1-1.html#section-35",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Exercício\n\n\nCrie vários objetos de uma mesma classe e inspecione o estado de cada um. Com o inspetor de objetos aberto, mude o estado de um objeto (chamando o método moverEsquerda, por exemplo). Você verá os valores sendo modificados no inspetor de objetos.\n\n\n\n\n\nNo exercício vimos que alguns métodos, quando chamados, podem alterar o estado de um objeto.\n\nO método moverEsquerda, por exemplo, muda o valor do atributo posicaoX.\nNa linguagem Java, esses atributos também são chamados de campos."
+  },
+  {
+    "objectID": "cap1-1.html#section-36",
+    "href": "cap1-1.html#section-36",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Inspecionando objetos diferentes, você deve ter notado que objetos da mesma classe têm todos os mesmos atributos.\n\nOu seja, a quantidade, o tipo e os nomes dos campos são os mesmos.\nMas os valores de um atributo de cada objeto podem ser diferentes."
+  },
+  {
+    "objectID": "cap1-1.html#section-11",
+    "href": "cap1-1.html#section-11",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Baixe o projeto de exemplo figuras e abra-o no BlueJ.\n\n\n\n\n\n\n\n\nComo baixar o projeto?\n\n\nOs projetos da disciplina são disponibilizados no GitHub. Se nunca o utilizou, não se preocupe, basta fazer o seguinte:\n\n\nClicando no link do projeto você verá um botão verde bem destacado escrito Code.\nClique nele e vá na última opção: Download ZIP.\nDescompacte o arquivo no seu computador.\nSe estiver usando Windows, entre na pasta criada e clique duas vezes no arquivo: package.bluej.\n\nSe estiver usando Linux, abra o BlueJ, acesse o menu Projeto –&gt; Abrir projeto… e selecione a pasta criada."
+  },
+  {
+    "objectID": "cap1-1.html#section-37",
+    "href": "cap1-1.html#section-37",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Já objetos de classes diferentes podem ter atributos diferentes.\n\nPor exemplo: um círculo tem o atributo diâmetro, já um triângulo tem os atributos largura e altura.\n\n\nMas por que será que isso acontece?\n\nÉ que a quantidade, os tipos e os nomes dos atributos são definidos em uma classe, e não em um objeto."
+  },
+  {
+    "objectID": "cap1-1.html#section-38",
+    "href": "cap1-1.html#section-38",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "A classe Circulo, por exemplo, define que um objeto círculo terá cinco atributos chamados:\n\n\ndiametro\nposicaoX\nposicaoY\ncor\nestaVisivel"
+  },
+  {
+    "objectID": "cap1-1.html#section-39",
+    "href": "cap1-1.html#section-39",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "A classe também define os tipos de cada atributo:\n\nos primeiros são int, a cor é do tipo String e o último é boolean (verdadeiro ou falso).\n\n\nAssim, quando um objeto da classe Círculo for criado, o objeto terá esses atributos."
+  },
+  {
+    "objectID": "cap1-1.html#section-40",
+    "href": "cap1-1.html#section-40",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Já os valores dos atributos são guardados dentro do objeto.\n\nPor isso, que cada círculo pode ter uma cor diferente, por exemplo."
+  },
+  {
+    "objectID": "cap1-1.html#section-41",
+    "href": "cap1-1.html#section-41",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "A mesma ideia vale para os métodos.\n\nMétodos são definidos na classe do objeto.\nAssim, objetos da mesma classe têm os mesmos métodos.\n\n\nMas, repare que os métodos são chamados nos objetos.\n\nAssim, quando o método moverDireita é chamado para um círculo, é apenas esse círculo que se move."
+  },
+  {
+    "objectID": "cap1-1.html#section-42",
+    "href": "cap1-1.html#section-42",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Exercício\n\n\nEscolha uma das imagens abaixo e tente criar uma imagem parecida usando as formas do projeto figuras. Mas seja criativo e utilize cores, posições e tamanhos diferentes. Ao fazer isso, anote o que você teve que fazer para conseguir. Seria possível fazer a mesma coisa de formas diferentes?"
+  },
+  {
+    "objectID": "cap1-1.html#section-43",
+    "href": "cap1-1.html#section-43",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Entrega no Campus Virtual\n\n\nTire um print da imagem que você criou no exercício anterior. Você precisará desse print para as atividades de entrega dessa aula!"
+  },
+  {
+    "objectID": "cap1-1.html#section-44",
+    "href": "cap1-1.html#section-44",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Vamos reforçar os conceitos que aprendemos usando agora um outro exemplo.\n\n\nBaixe o projeto de exemplo disciplina e abra-o no BlueJ.\n\n\n\n\n\n\n\nExercício\n\n\nCrie um objeto da classe Estudante. Veja que agora você precisa fornecer não só o nome do objeto, mas também alguns outros parâmetros.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nCrie alguns objetos da classe Estudante. Chame o método obterNome de cada objeto. Explique o que está acontecendo."
+  },
+  {
+    "objectID": "cap1-1.html#section-45",
+    "href": "cap1-1.html#section-45",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "O método obterNome da classe Estudante tem algo diferente:\n\nEle pode retornar um valor.\n\n\nNós conseguimos saber o tipo do valor retornado pela assinatura do método.\n\nString obterNome()\n\n\n\nA palavra String antes do nome do método indica que ele retorna um valor string (texto)."
+  },
+  {
+    "objectID": "cap1-1.html#section-46",
+    "href": "cap1-1.html#section-46",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Agora repare a assinatura do método mudarNome.\n\nA palavra void indica que o método não retorna nenhum valor.\n\n\nvoid mudarNome(String novoNome)"
+  },
+  {
+    "objectID": "cap1-1.html#section-47",
+    "href": "cap1-1.html#section-47",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Portanto, podemos obter informações de um objeto através de uma chamada de método.\n\nQuer dizer então que os métodos podem mudar o estado de um objeto e/ou retornar algo sobre seu estado.\n\n\n\n\n\n\nConceito\n\n\nMétodos podem retornar informação sobre o objeto através de um valor de retorno."
+  },
+  {
+    "objectID": "cap1-1.html#section-48",
+    "href": "cap1-1.html#section-48",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Vamos agora criar um objeto da classe Disciplina no projeto disciplina, chamado ipoo.\n\nAcesse o método matricularEstudante, o que o método espera como parâmetro?\n\n\n\n\n\n\nExercício\n\n\nCrie três estudantes e matricule-os na disciplina poo. Em seguida, chame o método imprimirLista do objeto poo."
+  },
+  {
+    "objectID": "cap1-1.html#section-49",
+    "href": "cap1-1.html#section-49",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Fazendo o exercício podemos perceber que objetos podem ser passados como parâmetros para métodos de outros objetos.\n\nQuando um método espera um objeto como parâmetro, o tipo do parâmetro é o nome da classe do objeto que deve ser passado."
+  },
+  {
+    "objectID": "cap1-1.html#section-50",
+    "href": "cap1-1.html#section-50",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Exercício\n\n\nUsando o projeto disciplina, crie um objeto para representar a nossa disciplina.\n\nDefina o professor, a sala e o horário das aulas.\nEm seguida, matricule pelo menos dois alunos na disciplina.\n\nUm deles deve ser você, ou seja, deve ter seu nome e número de matrícula.\n\nPor fim, chame o método imprimirLista para o objeto da disciplina."
+  },
+  {
+    "objectID": "cap1-1.html#section-51",
+    "href": "cap1-1.html#section-51",
+    "title": "IPOO - Cap. 1 Objetos e Classes",
+    "section": "",
+    "text": "Entregas no Campus Virtual\n\n\n\nResponda, no Campus Virtual, aos quizes presentes nesses slides.\nEnvie o print que tirou no exercício da seção O que tem dentro de um objeto.\nEnvie também o print da tela que aparece no último passo do exercício abaixo.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nUsando o projeto disciplina, crie um objeto para representar a nossa disciplina.\n\nDefina o professor, a sala e o horário das aulas.\nEm seguida, matricule pelo menos dois alunos na disciplina.\n\nUm deles deve ser você, ou seja, deve ter seu nome e número de matrícula.\n\nPor fim, chame o método imprimirLista para o objeto da disciplina."
   }
 ]
