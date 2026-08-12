@@ -3,23 +3,23 @@ title: IPOO - Cap. 1 Objetos e Classes
 subtitle: Aula 1.2 - Prática
 ---
 
-## Sobre as Aulas Práticas {.smaller}
-
-::: {.nonincremental}
+## Sobre as Aulas Práticas
 
 As **aulas práticas são fundamentais** para que consigamos entender os conceitos e saber como aplicá-los em um programa real.
 
-- E, para conseguirmos acompanhar a aula, é fundamental ter estudado o conteúdo teórico ANP **antes da aula prática**.
+- E, para conseguirmos acompanhar a aula, é fundamental ter estudado o conteúdo da aula teórica anterior **antes da aula prática**.
+- Portanto, se tiver faltado da aula teórica, estude o conteúdo em casa antes da aula prática.
+
+## Sobre as Aulas Práticas
 
 **Não se esqueça de enviar** suas atividades **ao terminar aula** (mesmo que não tiver terminado).
 
 - Para que possa terminar em casa.
 
-:::
 
 # Código Java {background-color="#40666e"}
 
-## {.smaller}
+##
 
 **Programar em Java** consiste, basicamente, em escrever **comandos para chamar métodos de objetos**.
 
@@ -46,9 +46,19 @@ Baixe o projeto de exemplo [figuras](https://github.com/ufla-ipoo/figuras) e abr
 :::
 :::
 
-## {.smaller}
+##
 
 No passo anterior, vimos que o código Java necessário para criar uma pessoa, exibi-la e fazê-la mover para a direita seria o seguinte:
+
+::: {.doublefontsize}
+```{.java code-line-numbers="false"}
+Pessoa pessoa1 = new Pessoa();
+pessoa1.exibir();
+pessoa1.moverDireita();
+```
+:::
+
+##
 
 ::: {.doublefontsize}
 ```{.java code-line-numbers="false"}
@@ -63,7 +73,7 @@ pessoa1.moverDireita();
 Podemos observar que:
 
 - Quando criamos um objeto e damos um nome a ele, na verdade estamos **armazenando um objeto `Pessoa` em uma variável**.
-- Chamamos métodos usando o nome da variável, seguido de `.`, seguido do nome do método, seguido da lista de parâmetros (que pode ser vazia) entre parênteses.
+- Chamamos métodos usando o nome da variável, seguido de `.` (ponto), seguido do nome do método, seguido da lista de parâmetros (que pode ser vazia) entre parênteses.
 - Todos os comandos em Java terminam com `;`.
 
 ##
@@ -72,7 +82,7 @@ Nós também podemos digitar comandos Java usando o **Bloco de Códigos**.
 
 . . .
 
-::: {.callout-note title="Exercício 1.2" icon=false}
+::: {.callout-note title="(Opcional) Exercício 1.2" icon=false}
 
 ::: {.nonincremental}
 Confira se o Bloco de Códigos está sendo exibido no seu BlueJ.
@@ -83,12 +93,6 @@ Confira se o Bloco de Códigos está sendo exibido no seu BlueJ.
 - Em seguida, digite os comandos necessários para **desenhar uma bandeira do Brasil**.
 :::
 
-:::
-
-##
-
-::: {.callout-important title="Entrega no Campus Virtual"}
-Acesse, no Campus Virtual, a atividade correspondente a essa primeira parte dos exercícios e envie um print do BlueJ mostrando a bandeira do Brasil que você criou.
 :::
 
 # Interação entre Objetos {background-color="#40666e"}
@@ -105,14 +109,14 @@ Baixe o projeto de exemplo [casa](https://github.com/ufla-ipoo/casa) e abra-o no
 :::
 :::
 
-## {.smaller}
+##
 
 Repare que cinco classes do projeto `casa` são idênticas as do projeto `figuras`.
 
 - Mas há uma classe adicional: `Figura`.
 - Essa classe é programada exatamente como você fez no exercício da aula teórica.
 
-. . .
+##
 
 Geralmente, quando queremos fazer alguma tarefa em Java, nós não fazemos na mão.
 
@@ -121,7 +125,7 @@ Geralmente, quando queremos fazer alguma tarefa em Java, nós não fazemos na m�
   - A classe `Figura` é escrita de forma que, quando uma instância é criada, são criados dois objetos `Quadrado` (para a parede e para a janela), um `Triângulo` e um `Círculo`.
   - Esses objetos são então exibidos, movidos e têm seu tamanho e cor alterados até a figura ficar como vimos.
 
-## {.smaller}
+##
 
 O importante aqui é entendermos que [objetos podem criar objetos]{.alert}.
 
@@ -136,26 +140,26 @@ O importante aqui é entendermos que [objetos podem criar objetos]{.alert}.
 Objetos podem se comunicar **chamando métodos** uns dos outros.
 :::
 
-. . .
+##
 
 Mas **como podemos escrever a classe para que objetos façam isso?**
 
 # Código-fonte {background-color="#40666e"}
 
-## {.smaller}
+##
 
-Cada classe tem um *código-fonte* associada a ela; é o texto que define os detalhes da classe.
+Cada classe tem um [código-fonte]{.alert} associada a ela; é o texto que define os detalhes da classe.
 
 - No BlueJ podemos ver o código de uma classe clicando duas vezes no retângulo da classe no diagrama.
 
 . . .
 
-O código-fonte de nossas classes é escrito na linguagem Java.
+O **código-fonte** de nossas classes é escrito na linguagem Java.
 
 - Ele define os atributos e métodos que uma classe tem, e o que exatamente acontece quando um método é chamado.
 - Veremos isso melhor na próxima aula.
 
-. . .
+##
 
 A maior parte da arte da programação consiste em aprender como escrever essas definições de classes.
 
@@ -167,7 +171,7 @@ A maior parte da arte da programação consiste em aprender como escrever essas 
 O **código-fonte** de uma classe determina a estrutura e o comportamento (os atributos e métodos) de cada um dos objetos daquela classe.
 :::
 
-## {.smaller}
+##
 
 No BlueJ, quando alteramos o código de uma classe e fechamos o editor, o retângulo da classe aparece listrado.
 
@@ -226,47 +230,43 @@ Faça com que ela caminhe para a casa **depois** do pôr do sol.
 Acesse, no Campus Virtual, a atividade correspondente a essa segunda parte dos exercícios e envie o código do projeto `casa` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar).
 :::
 
-## {.smaller}
+# Apenas para os curiosos  {background-color="#40666e"}
+
+## 
 
 ![](imagens/chamada-jogo-nave.png)
 
-## {.smaller}
+##
 
 
 Baixe o projeto de exemplo [nave](https://github.com/ufla-ipoo/nave) e abra-o no BlueJ.
 
 ![](imagens/jogo-nave.png){width=70%}
 
-## {.smaller}
+##
 
 ::: {.callout-note title="Exercício 2.1 - Criando objetos para jogar" icon=false}
 
 ::: {.nonincremental}
 Esse é um jogo bem simples, mas que será interessante para reforçarmos mais alguns conceitos de OO.
 
-- Veja que existem seis classes no projeto: `Nave`, `Inimigo`, `Placar`, `Cenario`, `Tiro` e `TesteJogo`.
-
-Vamos começar conhecendo os objetos envolvidos.
+- Veja que existem seis classes no projeto: `Nave`, `Inimigo`, `Placar`, `Cenario`, `Tiro` e `TesteJogo`. Vamos começar conhecendo os objetos envolvidos.
 
 - Crie um objeto da classe `Nave`.
 - Clique com o botão direito no objeto e veja os métodos disponíveis.
 - Clique em *Inspecionar* e veja os atributos do objeto.
 
-Faça o mesmo com as seguintes classes:
-
-- `Inimigo`.
-- `Placar`.
+Faça o mesmo com as seguintes classes: `Inimigo` e `Placar`.
 
 Agora crie um objeto da classe `Cenario`:
 
 - Veja que para criar um cenário, é necessário passar objetos da classe Nave, Inimigo e Placar por parâmetro.
-- Passe os objetos criados anteriormente.
-- Avalie os métodos e atributos da objeto cenário.
+- Passe os objetos criados anteriormente e avalie os métodos e atributos da objeto cenário.
 :::
 
 :::
 
-## {.smaller}
+##
 
 ::: {.callout-note title="Exercício 2.2 - Jogando" icon=false}
 
@@ -292,7 +292,7 @@ Jogue um pouco e veja quantos pontos consegue alcançar:
 :::
 :::
 
-## {.smaller}
+##
 
 ::: {.callout-note title="Exercício 2.3 - Conhecendo as classes" icon=false}
 
@@ -307,7 +307,7 @@ Obs.: a classe `Cenario` é bem complexa porque usa conceitos avançados, portan
 :::
 :::
 
-. . .
+##
 
 ::: {.callout-note title="Exercício 2.4 - A Classe `TesteJogo`" icon=false}
 
@@ -342,7 +342,7 @@ Você viu que o texto aparece ao lado da nave. Vamos aproveitar esse fato então
 
 - Crie então um atributo do tipo String chamado `nome`.
 - Avalie onde seria possível iniciar o atributo `nome` e coloque um nome bem criativo para a sua nave. 
-- Por fim, altere o método `getTextoExibicao` para que ele exiba o valor do atributo `nome`.
+- Por fim, altere o método `getTextoExibicao` para que ele retorne o valor do `nome`.
 
 Vale ressaltar que o nome será definido diretamente no código.
 
@@ -354,7 +354,7 @@ Teste suas alterações.
 
 ## {.smaller}
 
-::: {.callout-note title="Exercício 2.6 - Melhorando a Nave" icon=false}
+::: {.callout-note title="Exercício 2.6 - Melhorando a Nave" icon=false }
 
 ::: {.nonincremental}
 A nave atualmente é muito fraca certo?
@@ -378,7 +378,7 @@ Jogue e teste o campo magnético de proteção da nave.
 :::
 :::
 
-## {.smaller}
+##
 
 ::: {.callout-note title="Exercício 2.7 - Melhorando a usabilidade" icon=false}
 
@@ -389,7 +389,8 @@ Bom, foi bacana nossa nave ter ficado mais forte.
 
 Altere o método `getTextoExibicao` para exibir o nível do campo de proteção.
 
-- Exiba, na frente do nome da nave, o nível de proteção da nave.
+- Faça com que o jogo exiba, na frente do nome da nave, o nível de proteção da nave.
+- Para isso, veja dica no próximo slide.
 
 Jogue novamente e teste a alteração.
 
@@ -397,6 +398,8 @@ Jogue novamente e teste a alteração.
 
 :::
 :::
+
+## 
 
 ::: {.callout-tip title="Dica"}
 O operador `+` em Java pode ser usado para *concatenar* (juntar) Strings e também Strings com outros tipos de dados. A linguagem converte automaticamente números para strings, por exemplo.
@@ -412,7 +415,7 @@ String frase = palavra + " " + numero;
 :::
 :::
 
-## {.smaller}
+##
 
 ::: {.callout-important title="Entrega no Campus Virtual"}
 Acesse, no Campus Virtual, a atividade correspondente à terceira parte dos exercícios e envie o código do projeto `nave` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
