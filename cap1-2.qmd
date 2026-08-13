@@ -3,20 +3,6 @@ title: IPOO - Cap. 1 Objetos e Classes
 subtitle: Aula 1.2 - Prática
 ---
 
-## Sobre as Aulas Práticas
-
-As **aulas práticas são fundamentais** para que consigamos entender os conceitos e saber como aplicá-los em um programa real.
-
-- E, para conseguirmos acompanhar a aula, é fundamental ter estudado o conteúdo da aula teórica anterior **antes da aula prática**.
-- Portanto, se tiver faltado da aula teórica, estude o conteúdo em casa antes da aula prática.
-
-## Sobre as Aulas Práticas
-
-**Não se esqueça de enviar** suas atividades **ao terminar aula** (mesmo que não tiver terminado).
-
-- Para que possa terminar em casa.
-
-
 # Código Java {background-color="#40666e"}
 
 ##
@@ -82,7 +68,7 @@ Nós também podemos digitar comandos Java usando o **Bloco de Códigos**.
 
 . . .
 
-::: {.callout-note title="(Opcional) Exercício 1.2" icon=false}
+::: {.callout-note title="Exercício 1.2" icon=false}
 
 ::: {.nonincremental}
 Confira se o Bloco de Códigos está sendo exibido no seu BlueJ.
@@ -90,7 +76,6 @@ Confira se o Bloco de Códigos está sendo exibido no seu BlueJ.
 - Para exibi-lo, acesse o menu **Exibir** &rarr; **Exibir Bloco e Códigos** (ou use o atalho {{< kbd Ctrl-E >}})
   - Vai aparecer um painel na parte inferior, à direita da bancada de objetos.
 - Agora digite no Bloco de Códigos os comandos do slide anterior para criar uma pessoa, exibi-la e movê-la para a direita.
-- Em seguida, digite os comandos necessários para **desenhar uma bandeira do Brasil**.
 :::
 
 :::
@@ -235,6 +220,10 @@ Acesse, no Campus Virtual, a atividade correspondente a essa segunda parte dos e
 ## 
 
 ![](imagens/chamada-jogo-nave.png)
+
+. . .
+
+Observação: os exercícios a seguir são opcionais, e não precisam ser entregues. 
 
 ##
 
@@ -415,8 +404,3 @@ String frase = palavra + " " + numero;
 :::
 :::
 
-##
-
-::: {.callout-important title="Entrega no Campus Virtual"}
-Acesse, no Campus Virtual, a atividade correspondente à terceira parte dos exercícios e envie o código do projeto `nave` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
-:::

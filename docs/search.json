@@ -2489,7 +2489,7 @@
     "href": "cap1-2.html#section-1",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "O BlueJ tem uma opção interessante que nos permite ver como as chamadas de métodos são feitas em Java.\n\n\n\n\n\nExercício 1.1\n\n\n\nBaixe o projeto de exemplo figuras e abra-o no BlueJ.\n\nAcesse o menu Exibir → Exibir Terminal (ou use o atalho Ctrl-TCtrl-T)\n\nSerá exibida uma janela que o BlueJ usa para exibir dados de saída.\nDica: arraste as janelas para que você consiga ver a janela principal do BlueJ e o Terminal ao mesmo tempo.\n\nNa janela do Terminal, acesse o menu Opções → Anotar chamadas de métodos.\n\nCom essa opção, todas as chamadas de método feitas pelo BlueJ serão exibidas como código Java.\n\nAgora, crie alguns objetos, chame alguns de seus métodos e observe a saída na janela do terminal."
+    "text": "O BlueJ tem uma opção interessante que nos permite ver como as chamadas de métodos são feitas em Java.\n\n\n\n\n\nExercício 1.1\n\n\nBaixe o projeto de exemplo figuras e abra-o no BlueJ.\n\nAcesse o menu Exibir → Exibir Terminal (ou use o atalho Ctrl-TCtrl-T)\n\nSerá exibida uma janela que o BlueJ usa para exibir dados de saída.\nDica: arraste as janelas para que você consiga ver a janela principal do BlueJ e o Terminal ao mesmo tempo.\n\nNa janela do Terminal, acesse o menu Opções → Anotar chamadas de métodos.\n\nCom essa opção, todas as chamadas de método feitas pelo BlueJ serão exibidas como código Java.\n\nAgora, crie alguns objetos, chame alguns de seus métodos e observe a saída na janela do terminal."
   },
   {
     "objectID": "cap1-2.html#section-2",
@@ -2510,14 +2510,14 @@
     "href": "cap1-2.html#section-4",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Nós também podemos digitar comandos Java usando o Bloco de Códigos.\n\n\n\n\n\n(Opcional) Exercício 1.2\n\n\n\nConfira se o Bloco de Códigos está sendo exibido no seu BlueJ.\n\nPara exibi-lo, acesse o menu Exibir → Exibir Bloco e Códigos (ou use o atalho Ctrl-ECtrl-E)\n\nVai aparecer um painel na parte inferior, à direita da bancada de objetos.\n\nAgora digite no Bloco de Códigos os comandos do slide anterior para criar uma pessoa, exibi-la e movê-la para a direita.\nEm seguida, digite os comandos necessários para desenhar uma bandeira do Brasil."
+    "text": "Nós também podemos digitar comandos Java usando o Bloco de Códigos.\n\n\n\n\n\nExercício 1.2\n\n\nConfira se o Bloco de Códigos está sendo exibido no seu BlueJ.\n\nPara exibi-lo, acesse o menu Exibir → Exibir Bloco e Códigos (ou use o atalho Ctrl-ECtrl-E)\n\nVai aparecer um painel na parte inferior, à direita da bancada de objetos.\n\nAgora digite no Bloco de Códigos os comandos do slide anterior para criar uma pessoa, exibi-la e movê-la para a direita."
   },
   {
     "objectID": "cap1-2.html#section-5",
     "href": "cap1-2.html#section-5",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 1.3\n\n\n\nBaixe o projeto de exemplo casa e abra-o no BlueJ.\n\nCrie uma instância da classe Figura e chame seu método desenhar. Em seguida, experimente os métodos definirPretoEBranco e definirColorida.\nComo você acha que a classe Figura desenha a figura que aparece?"
+    "text": "Exercício 1.3\n\n\nBaixe o projeto de exemplo casa e abra-o no BlueJ.\n\nCrie uma instância da classe Figura e chame seu método desenhar. Em seguida, experimente os métodos definirPretoEBranco e definirColorida.\nComo você acha que a classe Figura desenha a figura que aparece?"
   },
   {
     "objectID": "cap1-2.html#section-6",
@@ -2587,7 +2587,7 @@
     "href": "cap1-2.html#section-16",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa segunda parte dos exercícios e envie o código do projeto casa da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar)."
+    "text": "Observação: os exercícios a seguir são opcionais, e não precisam ser entregues."
   },
   {
     "objectID": "cap1-2.html#section-17",
@@ -2601,21 +2601,21 @@
     "href": "cap1-2.html#section-18",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 2.1 - Criando objetos para jogar\n\n\n\nEsse é um jogo bem simples, mas que será interessante para reforçarmos mais alguns conceitos de OO.\n\nVeja que existem seis classes no projeto: Nave, Inimigo, Placar, Cenario, Tiro e TesteJogo. Vamos começar conhecendo os objetos envolvidos.\nCrie um objeto da classe Nave.\nClique com o botão direito no objeto e veja os métodos disponíveis.\nClique em Inspecionar e veja os atributos do objeto.\n\nFaça o mesmo com as seguintes classes: Inimigo e Placar.\nAgora crie um objeto da classe Cenario:\n\nVeja que para criar um cenário, é necessário passar objetos da classe Nave, Inimigo e Placar por parâmetro.\nPasse os objetos criados anteriormente e avalie os métodos e atributos da objeto cenário."
+    "text": "Exercício 2.1 - Criando objetos para jogar\n\n\nEsse é um jogo bem simples, mas que será interessante para reforçarmos mais alguns conceitos de OO.\n\nVeja que existem seis classes no projeto: Nave, Inimigo, Placar, Cenario, Tiro e TesteJogo. Vamos começar conhecendo os objetos envolvidos.\nCrie um objeto da classe Nave.\nClique com o botão direito no objeto e veja os métodos disponíveis.\nClique em Inspecionar e veja os atributos do objeto.\n\nFaça o mesmo com as seguintes classes: Inimigo e Placar.\nAgora crie um objeto da classe Cenario:\n\nVeja que para criar um cenário, é necessário passar objetos da classe Nave, Inimigo e Placar por parâmetro.\nPasse os objetos criados anteriormente e avalie os métodos e atributos da objeto cenário."
   },
   {
     "objectID": "cap1-2.html#section-19",
     "href": "cap1-2.html#section-19",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 2.2 - Jogando\n\n\n\nBom, essa é a parte mais divertida…\n\nChame o método executarLoopDeJogo do objeto da classe Cenario.\n\nA dinâmica do jogo é simples.\n\nVocê controla a nave da esquerda usando as setas do teclado.\nE pode atirar digitando a tecla CtrlCtrl.\nA tecla ENTERENTER pausa o jogo.\nO inimigo se move aleatoriamente na vertical e também atira aleatoriamente.\nSeu objetivo é destruir o maior número de inimigos possível sem ser morto.\nVocê ganha 50 pontos a cada inimigo morto.\nSe você morrer, você pode reiniciar o jogo apertando a tecla F2F2.\n\nJogue um pouco e veja quantos pontos consegue alcançar:\n\nMas não se esqueça de continuar os exercícios ☺"
+    "text": "Exercício 2.2 - Jogando\n\n\nBom, essa é a parte mais divertida…\n\nChame o método executarLoopDeJogo do objeto da classe Cenario.\n\nA dinâmica do jogo é simples.\n\nVocê controla a nave da esquerda usando as setas do teclado.\nE pode atirar digitando a tecla CtrlCtrl.\nA tecla ENTERENTER pausa o jogo.\nO inimigo se move aleatoriamente na vertical e também atira aleatoriamente.\nSeu objetivo é destruir o maior número de inimigos possível sem ser morto.\nVocê ganha 50 pontos a cada inimigo morto.\nSe você morrer, você pode reiniciar o jogo apertando a tecla F2F2.\n\nJogue um pouco e veja quantos pontos consegue alcançar:\n\nMas não se esqueça de continuar os exercícios ☺"
   },
   {
     "objectID": "cap1-2.html#section-20",
     "href": "cap1-2.html#section-20",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 2.3 - Conhecendo as classes\n\n\n\nNesse passo, vamos dar uma passada de olhos no código das classes do jogo.\n\nNão se preocupe em entender detalhes do código nesse momento.\nApenas tente identificar os atributos e métodos que existem no código-fonte das classes Nave, Inimigo e Placar.\nDê uma olhada com mais detalhes no método atirar da classe Nave e tente entender o que ele faz.\n\nObs.: a classe Cenario é bem complexa porque usa conceitos avançados, portanto, pode ignorá-la. Mas se estiver curioso, fique à vontade."
+    "text": "Exercício 2.3 - Conhecendo as classes\n\n\nNesse passo, vamos dar uma passada de olhos no código das classes do jogo.\n\nNão se preocupe em entender detalhes do código nesse momento.\nApenas tente identificar os atributos e métodos que existem no código-fonte das classes Nave, Inimigo e Placar.\nDê uma olhada com mais detalhes no método atirar da classe Nave e tente entender o que ele faz.\n\nObs.: a classe Cenario é bem complexa porque usa conceitos avançados, portanto, pode ignorá-la. Mas se estiver curioso, fique à vontade."
   },
   {
     "objectID": "cap2-2.html#sobre-as-aulas-práticas",
@@ -4841,7 +4841,7 @@
     "href": "cap1-2.html#section-21",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 2.4 - A Classe TesteJogo\n\n\n\nAbra o código da classe TesteJogo.\n\nRepare que ela possui uma nave, um inimigo, um placar e um cenário.\nEla cria esses objetos e chama o método executarLoopDeJogo da classe Cenario.\nMas isso é exatamente o que fizemos para iniciar o jogo.\n\nOu seja, essa classe é um atalho para inicializarmos o jogo mais rápido.\n\nBasta criar um objeto dessa classe que o jogo será executado.\n\nExperimente!"
+    "text": "Exercício 2.4 - A Classe TesteJogo\n\n\nAbra o código da classe TesteJogo.\n\nRepare que ela possui uma nave, um inimigo, um placar e um cenário.\nEla cria esses objetos e chama o método executarLoopDeJogo da classe Cenario.\nMas isso é exatamente o que fizemos para iniciar o jogo.\n\nOu seja, essa classe é um atalho para inicializarmos o jogo mais rápido.\n\nBasta criar um objeto dessa classe que o jogo será executado.\n\nExperimente!"
   },
   {
     "objectID": "cap2-1.html#section-49",
@@ -5695,21 +5695,21 @@
     "href": "cap1-2.html#section-22",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 2.5 - Alterando o Código\n\n\n\nA classe Nave possui um método chamado getTextoExibicao.\n\nRepare que atualmente ele retorna uma string vazia.\nColoque algum texto na String e inicie o jogo pra ver o que acontece.\nDica: use um objeto da classe TesteJogo.\n\nVocê viu que o texto aparece ao lado da nave. Vamos aproveitar esse fato então para criar um atributo novo na classe Nave para guardar o nome da nave.\n\nCrie então um atributo do tipo String chamado nome.\nAvalie onde seria possível iniciar o atributo nome e coloque um nome bem criativo para a sua nave.\nPor fim, altere o método getTextoExibicao para que ele retorne o valor do nome.\n\nVale ressaltar que o nome será definido diretamente no código.\n\nPortanto, se você quiser usar um nome diferente, será necessário alterar o código, recompilar e executar o jogo novamente.\n\nTeste suas alterações."
+    "text": "Exercício 2.5 - Alterando o Código\n\n\nA classe Nave possui um método chamado getTextoExibicao.\n\nRepare que atualmente ele retorna uma string vazia.\nColoque algum texto na String e inicie o jogo pra ver o que acontece.\nDica: use um objeto da classe TesteJogo.\n\nVocê viu que o texto aparece ao lado da nave. Vamos aproveitar esse fato então para criar um atributo novo na classe Nave para guardar o nome da nave.\n\nCrie então um atributo do tipo String chamado nome.\nAvalie onde seria possível iniciar o atributo nome e coloque um nome bem criativo para a sua nave.\nPor fim, altere o método getTextoExibicao para que ele retorne o valor do nome.\n\nVale ressaltar que o nome será definido diretamente no código.\n\nPortanto, se você quiser usar um nome diferente, será necessário alterar o código, recompilar e executar o jogo novamente.\n\nTeste suas alterações."
   },
   {
     "objectID": "cap1-2.html#section-23",
     "href": "cap1-2.html#section-23",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 2.6 - Melhorando a Nave\n\n\n\nA nave atualmente é muito fraca certo?\n\nCom apenas um tiro ela morre!\nE que tal se ela tivesse uma campo magnético de proteção contra tiros?\nAssim, quando ela tomar um tiro ela perde parte da proteção, mas só morre se o campo não for forte o suficiente para proteger a nave.\n\nAltere a classe Nave de forma que ela passe a ter o campo de proteção.\n\nCrie um atributo nivelDeProtecao.\nAvalie em qual método ele deve ser inicializado e faça com que a nave sempre comece o jogo com nível 100 de proteção.\nQuando a nave tomar um tiro, ela deve perder 20 pontos do seu campo de proteção.\n\nQual parte do código deve ser alterada para que a nave não morra com um único tiro, mas sim perca a proteção primeiro?\nLembre-se de que a nave deve morrer se tomar um tiro e o seu campo de proteção estiver abaixo de 20.\nLembre-se ainda, que ao reiniciar o jogo (usando a tecla F2F2), a nave deve voltar a ter nível 100 de proteção.\n\nFaça a alteração nos métodos necessários.\n\nJogue e teste o campo magnético de proteção da nave."
+    "text": "Exercício 2.6 - Melhorando a Nave\n\n\nA nave atualmente é muito fraca certo?\n\nCom apenas um tiro ela morre!\nE que tal se ela tivesse uma campo magnético de proteção contra tiros?\nAssim, quando ela tomar um tiro ela perde parte da proteção, mas só morre se o campo não for forte o suficiente para proteger a nave.\n\nAltere a classe Nave de forma que ela passe a ter o campo de proteção.\n\nCrie um atributo nivelDeProtecao.\nAvalie em qual método ele deve ser inicializado e faça com que a nave sempre comece o jogo com nível 100 de proteção.\nQuando a nave tomar um tiro, ela deve perder 20 pontos do seu campo de proteção.\n\nQual parte do código deve ser alterada para que a nave não morra com um único tiro, mas sim perca a proteção primeiro?\nLembre-se de que a nave deve morrer se tomar um tiro e o seu campo de proteção estiver abaixo de 20.\nLembre-se ainda, que ao reiniciar o jogo (usando a tecla F2F2), a nave deve voltar a ter nível 100 de proteção.\n\nFaça a alteração nos métodos necessários.\n\nJogue e teste o campo magnético de proteção da nave."
   },
   {
     "objectID": "cap1-2.html#section-24",
     "href": "cap1-2.html#section-24",
     "title": "IPOO - Cap. 1 Objetos e Classes",
     "section": "",
-    "text": "Exercício 2.7 - Melhorando a usabilidade\n\n\n\nBom, foi bacana nossa nave ter ficado mais forte.\n\nMas quem está jogando não sabe qual o nível de proteção atual da nave!\n\nAltere o método getTextoExibicao para exibir o nível do campo de proteção.\n\nFaça com que o jogo exiba, na frente do nome da nave, o nível de proteção da nave.\nPara isso, veja dica no próximo slide.\n\nJogue novamente e teste a alteração.\n\nAgora ficou bem melhor, não ficou?"
+    "text": "Exercício 2.7 - Melhorando a usabilidade\n\n\nBom, foi bacana nossa nave ter ficado mais forte.\n\nMas quem está jogando não sabe qual o nível de proteção atual da nave!\n\nAltere o método getTextoExibicao para exibir o nível do campo de proteção.\n\nFaça com que o jogo exiba, na frente do nome da nave, o nível de proteção da nave.\nPara isso, veja dica no próximo slide.\n\nJogue novamente e teste a alteração.\n\nAgora ficou bem melhor, não ficou?"
   },
   {
     "objectID": "cap1-2.html#section-25",

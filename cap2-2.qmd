@@ -3,14 +3,18 @@ title: IPOO - Cap. 2 Entendendo as Definições de Classe
 subtitle: Aula 2.2 - Prática
 ---
 
+## Sobre as Aulas Práticas
+
+
+
 ## Sobre as Aulas Práticas {.smaller}
 
 ::: {.nonincremental}
 
-Como já foi comentado na aula passada:
+As **aulas práticas são fundamentais** para que consigamos entender os conceitos e saber como aplicá-los em um programa real.
 
-- **Aulas práticas são importantes** para o entendimento dos conceitos.
-- Mas, para isso, é fundamental que tenha **estudado o conteúdo teórico ANP antes** da aula prática.
+- E, para conseguirmos acompanhar a aula, é fundamental ter estudado o conteúdo da aula teórica anterior **antes da aula prática**.
+- Portanto, se tiver faltado da aula teórica, estude o conteúdo em casa antes da aula prática.
 
 :::: {.columns}
 
@@ -24,6 +28,10 @@ Lembre-se que para ter presença na aula prática é necessário.
 
 - Responder à **chamada**;
 - e, **também**, entregar, no mínimo, 30% do exercícios propostos até o final da aula.
+
+**E não se esqueça de enviar** suas atividades **ao terminar aula** (mesmo que não tiver terminado).
+
+- Para que possa terminar em casa.
 :::
 :::
 
