@@ -3,7 +3,7 @@ title: IPOO - Cap. 2 Entendendo as Definições de Classe
 subtitle: Aula 2.1 - Teórica
 ---
 
-## Como estudar esse conteúdo? {.smaller}
+## Como estudar esse conteúdo?
 
 Relembrando as [dicas]{.alert}:
 
@@ -25,7 +25,7 @@ Relembrando as [dicas]{.alert}:
 
 ::::
 
-## Observações sobre o livro {.smaller}
+## 
 
 Gostaria de ressaltar algumas observações sobre o livro:
 
@@ -36,10 +36,26 @@ Gostaria de ressaltar algumas observações sobre o livro:
 :::
 
 ::: {.column width="70%"}
-- Para construir os slides usei também a 6ª edição do livro (que só tem em inglês).
+- Para construir os slides usei também a 6ª edição do livro.
+  - Que está disponível apenas em inglês.
   - Portanto, os slides podem ter coisas a mais ou ligeiramente diferentes do livro.
 - Apesar do livro ser em português, todo o código nele é em inglês.
   - Nos slides vocês podem notar que traduzi todos os códigos para ficar mais fácil entender.
+:::
+
+::::
+
+## 
+
+Gostaria de ressaltar algumas observações sobre o livro:
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](imagens/livro_bluej.png){fig-alt="Capa do livro do Barnes e Kolling." fig-align="left"}
+:::
+
+::: {.column width="70%"}
 - Os exercícios no slide nem sempre são iguais aos do livro.
   - Portanto, sigam o enunciado dos slides.
 - Nem sempre uso a mesma tradução do livro
@@ -49,7 +65,8 @@ Gostaria de ressaltar algumas observações sobre o livro:
 
 ::::
 
-## Principais Conceitos do Capítulo {.smaller}
+
+## Principais Conceitos do Capítulo
 
 ::: {.nonincremental}
 - Atributos
@@ -66,7 +83,7 @@ Construções Java do capítulo
 - Atributo, construtor, comentário, parâmetro, atribuição (`=`), bloco, comando de retorno, `void`, operadores de atribuição compostos (`+=`, `-=`), comando `if`.
 :::
 
-. . .
+##
 
 Neste capítulo vamos começar a examinar em mais detalhes o código-fonte de uma classe.
 
@@ -74,7 +91,7 @@ Neste capítulo vamos começar a examinar em mais detalhes o código-fonte de um
 
 # Máquina de Ingressos {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Para ilustrar os conceitos desse capítulo, vamos usar um novo projeto: uma **máquina de ingressos ingênua**
 
@@ -94,7 +111,7 @@ Para ilustrar os conceitos desse capítulo, vamos usar um novo projeto: uma **m�
 
 ::::
 
-. . .
+##
 
 O funcionamento básico da máquina é o seguinte:
 
@@ -104,7 +121,7 @@ O funcionamento básico da máquina é o seguinte:
 - Nossa máquina inicial trata apenas um tipo de ingresso.
 - Mas, criando várias instâncias (objetos) da máquina, podemos ter máquinas com ingressos diferentes.
 
-## {.smaller}
+##
 
 Abra então o projeto [maquina-ingressos-ingenua](https://github.com/ufla-ipoo/maquina-ingressos-ingenua) e vamos explorá-lo como fizemos para outros exemplos.
 
@@ -153,7 +170,7 @@ A impressão do bilhete é diferente?
 
 # Examinando uma definição de classe {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Nos exercícios vimos que a máquina só funciona como deveria se inserirmos a quantidade exata de dinheiro para comprar um ingresso.
 
@@ -168,7 +185,7 @@ Dê uma olhada no código da classe `MaquinaIngressos`, clicando duas vezes na c
 
 # O cabeçalho da classe {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Podemos dividir o código da classe em duas partes principais.
 
@@ -188,9 +205,9 @@ public class MaquinaIngressos
 ```
 :::
 
-. . .
+##
 
-A **parte externa** de todas as classe se parecem muito, já que o objetivo é [nomear a classe]{.alert}.
+A **parte externa** de todas as classes se parecem muito, já que o objetivo é [nomear a classe]{.alert}.
 
 - Por convenção, sempre começamos o nome da classe com letra maiúscula.
 - No BlueJ, vemos que antes dessa linha há um texto azul que nos diz alguma coisa sobre a classe.
@@ -228,7 +245,7 @@ Coloque a palavra `public` de volta e agora tente remover a palavra `class` e te
 Volte o código original para continuar a aula.
 :::
 
-## Palavras-chave {.smaller}
+## Palavras-chave
 
 As palavras `public` e `class` são parte da linguagem Java.
 
@@ -242,7 +259,7 @@ Nós chamamos as palavras `public` e `class` de [palavras-chave]{.alert} ou [pal
 - Há cerca de 50 palavras desse tipo em Java.
 - Em breve conheceremos diversas delas.
 
-## Atributos, construtores e métodos{.smaller}
+## Atributos, construtores e métodos
 
 A [parte interna]{.alert} da classe é onde nós definimos os *atributos*, *construtores* e *métodos* que fazem os objetos terem suas características e comportamentos.
 
@@ -254,7 +271,7 @@ Em resumo:
 - [Construtores]{.alert} são responsáveis por garantir que um objeto seja configurado corretamente quando ele é criado.
 - [Métodos]{.alert} implementam o comportamento de um objeto. Fornecem o que ele é capaz de fazer.
 
-. . .
+##
 
 
 :::: {.columns}
@@ -271,13 +288,13 @@ No BlueJ os atributos aparecem em um fundo branco.
 
 ::::
 
-## {.smaller}
+##
 
 A linguagem Java permite que os atributos, construtores e métodos sejam colocados em **qualquer ordem** dentro de uma classe.
 
 - Mas, **geralmente**, nós colocamos **primeiro os atributos, depois os construtores e depois os métodos**.
 
-  ::: {.doublefontsize}
+  ::: {.halfincfontsize}
   ```{.java code-line-numbers="false"}
   public class NomeDaClasse
   {
@@ -290,9 +307,9 @@ A linguagem Java permite que os atributos, construtores e métodos sejam colocad
   ```
   :::
 
-. . .
+##
 
-Você não é obrigado a seguir isso, mas deixa seu **código mais claro**.
+Você não é obrigado a seguir essa ordem, mas ela deixa seu **código mais claro**.
 
 - Especialmente declarar todos os atributos primeiro.
 
@@ -313,20 +330,19 @@ Você consegue descobrir quais são?
 
 # Atributos {background-color="#40666e"}
 
-## {.smaller}
+##
 
 **Atributos** guardam dados dentro de um objeto.
 
 - Atributos também são chamados de [variáveis de instância]{.alert}.
-  - O nome **variável** é usado para coisas que são armazenadas na memória do computador por um programa.
+- O nome **variável** é usado para coisas que são armazenadas na memória do computador por um programa.
 
-. . .
+##
 
 :::: {.columns style='display: flex !important; height: 90%;'}
 
 ::: {.column width="30%" style='display: flex; justify-content: center; align-items: center;'}
 
-::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
 public class MaquinaIngressos
 {
@@ -337,7 +353,7 @@ public class MaquinaIngressos
     // Construtores e métodos omitidos
 }
 ```
-:::
+
 :::
 
 ::: {.column width="70%"}
@@ -350,7 +366,7 @@ A classe `MaquinaIngressos`, por exemplo, tem três atributos:
 
 ::::
 
-## {.smaller}
+##
 
 Atributos  (ou campos) descrevem características dos objetos.
 
@@ -371,7 +387,7 @@ Atributos  (ou campos) descrevem características dos objetos.
 
 ::::
 
-. . .
+##
 
 :::: {.columns}
 
@@ -392,19 +408,25 @@ E quais seriam as características de um jogador em um jogo de videogame de fute
 
 Nós chamamos essas características dos objetos de [atributos]{.alert}.
 
-## {.smaller}
+##
 
 Atributos podem representar coisas mais palpáveis ou coisas mais abstratas.
 
+Exemplo: dada a imagem abaixo:
+
 . . .
 
-![](imagens/casal_fazendo_careta.png){width="30%"}
+
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="30%"}
+![](imagens/casal_fazendo_careta.png)
+:::
 
-Dada a imagem acima, por exemplo, quais seriam os atributos físicos de cada pessoa?
+::: {.column width="35%"}
+
+Quais seriam os atributos físicos de cada pessoa?
 
 - Cor dos olhos.
 - Estilo de roupa.
@@ -413,7 +435,7 @@ Dada a imagem acima, por exemplo, quais seriam os atributos físicos de cada pes
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="35%"}
 
 ::: {.fragment}
 E quais seriam características mais abstratas?
@@ -429,7 +451,7 @@ E quais seriam características mais abstratas?
 ::::
 
 
-## {.smaller}
+##
 
 Atributos são pequenos espaços dentro de um objeto que podem ser usados para guardar dados de forma permanente.
 
@@ -451,13 +473,13 @@ Podemos representar um objeto como mostrado na figura ao lado.
 
 ::::
 
-. . .
+##
 
 ::: {.callout-tip title="Conceito" icon=false}
 **Atributos** guardam dados para um objeto usar. Eles também são chamados de variáveis de instância.
 :::
 
-## {.smaller}
+##
 
 Cada atributo tem sua própria declaração no código-fonte.
 
@@ -474,8 +496,11 @@ Cada atributo tem sua própria declaração no código-fonte.
 
 Assim como em C++, comentários de uma única linha começam com `//`.
 
-- Comentários de várias linhas podem começar com `/*` e terminar com `*/`.
-  - Veja, como exemplo, os comentários antes do cabeçalho da classe `MaquinaIngressos`.
+##
+
+Comentários de várias linhas podem começar com `/*` e terminar com `*/`.
+
+- Veja, como exemplo, os comentários antes do cabeçalho da classe `MaquinaIngressos`.
 
 . . .
 
@@ -484,7 +509,7 @@ Assim como em C++, comentários de uma única linha começam com `//`.
 Eles não alteram nada no funcionamento da classe.
 :::
 
-## {.smaller}
+##
 
 As declarações dos atributos da classe `MaquinaIngressos` são todas bem similares.
 
@@ -495,7 +520,7 @@ As declarações dos atributos da classe `MaquinaIngressos` são todas bem simil
   - `int` é uma **palavra-chave** do Java e indica que os atributos podem guardar valores que são números inteiros.
   - Como nossa máquina guarda os valores em centavos, o tipo inteiro é apropriado.
 
-## {.smaller}
+##
 
 **Atributos** podem armazenar **valores** que **mudam** com o tempo.
 
@@ -570,7 +595,7 @@ Experimente você mesmo e descubra!
 Escreva a declaração completa de um atributo do tipo `int` chamado `situacao`.
 :::
 
-## Quiz 2.1 {background-color="#f7fad1" .smaller}
+## Quiz 2.1 {background-color="#f7fad1"}
 
 ::: {.nonincremental}
 [Atributo também é chamado de:]{.alert}
@@ -583,7 +608,7 @@ d. Variável binária.
 
 # Construtores {background-color="#40666e"}
 
-## {.smaller}
+##
 
 [Construtores]{.alert} têm um papel especial.
 
@@ -597,14 +622,13 @@ Depois que o objeto é criado, o construtor não tem mais utilidade para aquele 
 
 - Portanto, não podemos chamar o construtor para um objeto já criado.
 
-## {.smaller}
+##
 
 :::: {.columns}
 
 ::: {.column width="70%"}
 Abaixo está o código do construtor da classe `MaquinaIngressos`.
 
-::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
   /**
    * Cria uma máquina que emite ingressos de um dado
@@ -619,7 +643,6 @@ Abaixo está o código do construtor da classe `MaquinaIngressos`.
   }
 ```
 :::
-:::
 
 ::: {.column width="30%"}
 ![](imagens/balao_inicializar_atributos.png)
@@ -627,7 +650,7 @@ Abaixo está o código do construtor da classe `MaquinaIngressos`.
 
 ::::
 
-## {.smaller}
+##
 
 Em Java, **construtores** têm o **mesmo nome da classe**.
 
@@ -635,20 +658,25 @@ Em Java, **construtores** têm o **mesmo nome da classe**.
 - Geralmente usamos a palavra-chave `public` antes do nome do construtor.
 - E construtores não têm tipo de retorno.
 
-. . .
+##
 
 Existe uma relação direta entre o que acontece no corpo de um construtor e os atributos da classe.
 
 - Isso porque a principal responsabilidade do construtor é inicializar os atributos.
-- *Obs.: corpo de um construtor ou de um método é o bloco de código que contém sua implementação. Ou seja, é tudo que tem entre `{` e `}` logo após a assinatura.*
-- Atributos podem ser inicializados com constantes.
-  - Como é o caso do `saldo` e `total` que são inicializados com zero.
+- *Obs.: corpo de um construtor ou de um método é o bloco de código que contém sua implementação.* 
+  - *Ou seja, é tudo que tem entre `{` e `}` logo após a assinatura.*
+
+##
+
+Atributos podem ser inicializados com constantes.
+
+- Como é o caso do `saldo` e `total` que são inicializados com zero.
 - Ou podem ser inicializados por valores determinados externamente à classe.
   - E que são passados para o construtor por parâmetro.
   - Como é o caso do atributo `preco`.
 
 
-## {.smaller}
+##
 
 
 :::: {.columns}
@@ -668,9 +696,9 @@ A questão é que podem ser criadas várias máquinas (instâncias) a partir da 
 
 ::::
 
-. . .
+##
 
-Portanto, uma das principais funções de um atributo é **"lembrar" de informações externas** passadas para o objeto.
+Uma das principais funções de um atributo é **"lembrar" de informações externas** passadas para o objeto.
 
 - De forma que a informação continue disponível durante **todo o tempo de vida do objeto**.
 - Assim, atributos servem para guardar informações que duram (são mantidas) por um tempo maior.
@@ -681,7 +709,7 @@ Portanto, uma das principais funções de um atributo é **"lembrar" de informa�
 **Construtores** permitem que cada objeto seja configurado adequadamente quando é criado.
 :::
 
-## {.smaller}
+##
 
 :::: {.columns}
 
@@ -697,39 +725,39 @@ No diagrama ao lado, vemos a representação de um objeto máquina de ingressos,
 
 ::::
 
-## {.smaller}
+##
 
 
 Em Java, se um atributo não for inicializado explicitamente no código, ele é **inicializado automaticamente** com um [valor padrão]{.alert}.
 
 - Atributos **inteiros**, por exemplo, são inicializados automaticamente **com zero**.
 
-. . .
+##
+
+![](imagens/porque_inicializar_com_zero.png)
 
 :::: {.columns}
 
-::: {.column width="40%"}
-![](imagens/porque_inicializar_com_zero.png)
-:::
-
 ::: {.column width="60%"}
-::: {.fragment}
 Há duas **vantagens**:
 
-1. Quem lê a classe entende que realmente queremos inicializar com zero.
+1. Quem lê a classe vê que realmente queremos inicializar com zero.
   
-  - Se não tivéssemos colocado, a pessoa poderia ficar em dúvida se esquecemos de inicializar ou se queríamos deixar o valor padrão zero.
+  - Sem isso, poderia gerar dúvida se esquecemos de inicializar ou se queríamos deixar o valor padrão.
+:::
 
+::: {.column width="40%"}
+::: {.fragment}
 2. Quem lê a classe não precisa conhecer o valor padrão do Java para os atributos.
 :::
 :::
 
 ::::
 
-## Quiz 2.2 {background-color="#f7fad1" .smaller}
+## Quiz 2.2 {background-color="#f7fad1"}
 
 ::: {.nonincremental}
-[Marque a alternativa incorreta:]{.alert}
+[Marque a alternativa _incorreta_:]{.alert}
 
 a. Um construtor é chamado quando um objeto é criado.
 b. Construtores podem receber informações externas ao objeto.
@@ -739,7 +767,7 @@ d. Podemos chamar um construtor para um objeto depois que ele foi criado.
 
 # Parâmetros: recebendo dados {background-color="#40666e"}
 
-## {.smaller}
+##
 
 
 Construtores e métodos têm funções diferentes, mas ambos podem **receber valores de fora do objeto** da mesma maneira:
@@ -752,9 +780,9 @@ Nós vimos um pouco sobre parâmetros no capítulo anterior.
 
 - Parâmetros são variáveis **definidas na assinatura de um método ou construtor**.
 
-. . .
+##
 
-::: {.doublefontsize}
+::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
   public MaquinaIngressos(int custoIngresso)
 ```
@@ -769,25 +797,36 @@ Repare que diferentemente de um atributo, um parâmetro é usado para guardar um
 
 - Basicamente para carregar dados de fora do objeto para dentro do seu construtor ou método.
 
-## {.smaller}
+##
 
-![](imagens/diagrama_passagem_parametros.png){width=55%}
+![](imagens/diagrama_passagem_parametros.png){width=75%}
 
 No BlueJ, um usuário envia informação externa para o objeto através da caixa de diálogo, que aparece quando um objeto máquina de ingressos é criado.
 
-- O valor é copiado para o parâmetro `custoIngresso` do construtor da nova máquina (A).
-  - A caixa "MaquinaIngressos (construtor)" ilustra o espaço adicional que é criado para o objeto somente quando o construtor é chamado.
-  - Ele é chamado de *espaço do construtor*, e é usado para armazenar seus parâmetros.
+##
 
-## {.smaller}
+![](imagens/diagrama_passagem_parametros.png){width=50%}
+
+O valor é copiado para o parâmetro `custoIngresso` do construtor da nova máquina (_linha A_).
+
+- A caixa rosa ilustra o espaço adicional que é criado para o objeto somente quando o construtor é chamado.
+- Ele é chamado de *espaço do construtor*, e é usado para armazenar seus parâmetros.
+
+##
 
 Tecnicamente, nós chamamos de [parâmetro formal]{.alert} o [nome]{.alert} **do parâmetro declarado** na assinatura do construtor ou método.
 
 - Apesar de, na prática, chamarmos simplesmente de **parâmetro**.
 - Já o [valor]{.alert} passado de fora do objeto é chamado, tecnicamente, de [argumento]{.alert} ou [parâmetro real]{.alert}.
-- Portanto, no exemplo anterior, `custoIngresso` é o parâmetro formal e o valor `500` é o argumento.
 
 . . .
+
+Portanto, no exemplo anterior:
+
+- `custoIngresso` é o parâmetro formal 
+- e o valor `500` é o argumento.
+
+##
 
 :::: {.columns}
 
@@ -804,7 +843,7 @@ Um parâmetro formal está **disponível** para o objeto somente **dentro do cor
 
 ::::
 
-## {.smaller}
+##
 
 :::: {.columns}
 
@@ -822,9 +861,9 @@ Um parâmetro formal está **disponível** para o objeto somente **dentro do cor
 
 ::::
 
-. . .
+##
 
-Repare que é diferente do **tempo de vida de um atributo**.
+Repare que o tempo de vida de um parâmetro é diferente do **tempo de vida de um atributo**.
 
 - O tempo de vida de um atributo é o mesmo do objeto.
 - Ou seja, ele existe a partir do momento que o objeto é criado e até ele ser destruído.
@@ -867,7 +906,7 @@ public Livro(String titulo, double preco)
 Apenas pela assinatura do construtor do exercício anterior, você conseguiria chutar alguma coisa sobre os nomes e tipos dos atributos da classe `Livro`?
 :::
 
-## {.smaller}
+##
 
 ![](imagens/fica_a_dica.png)
 
@@ -877,7 +916,7 @@ Repare que os nomes que escolhemos para os atributos e parâmetros indicam para 
 
 - Portanto, apesar da linguagem Java permitir que você dê qualquer nome, evite nomes sem sentido como `a`, `b` ou `x1`, `x2`.
 
-## {.smaller}
+##
 
 Como vocês já aprenderam em disciplinas anteriores de programação, nós usamos o operador `=` para [atribuir]{.alert} valores a variáveis.
 
@@ -888,27 +927,31 @@ Como vocês já aprenderam em disciplinas anteriores de programação, nós usam
   preco = custoIngresso;
   ```
   :::
-  Indica que o valor do parâmetro `custoIngresso` será copiado para o atributo `preco`.
-- [Dica]{.alert}:
-  - Geralmente a gente lê o comando acima assim: *"preço igual a custo do ingresso"*
-  - Mas eu acho que fica **mais fácil entender** se usarmos a palavra ***recebe***.
-  - Repare a diferença: *"preço recebe custo do ingresso"*
+  Indica que o valor do parâmetro `custoIngresso` será copiado para o atributo `preco`.  
 
-. . .
+##
 
-:::: {.columns}
+::: {.halfincfontsize}
+  ```{.java code-line-numbers="false" } 
+  preco = custoIngresso;
+  ```
+:::
 
-::: {.column width="60%"}
+[Dica]{.alert}:
+
+- Geralmente a gente lê o comando acima assim: *"preço igual a custo do ingresso"*
+- Mas eu acho que fica **mais fácil entender** se usarmos a palavra ***recebe***.
+- Repare a diferença: *"preço recebe custo do ingresso"*
+
+##
+
 ![](imagens/diagrama_passagem_parametros.png){width=80%}
-:::
 
-::: {.column width="40%"}
-No diagrama, a atribuição é representada pela seta indica pela letra (B).
-:::
 
-::::
+No diagrama, a atribuição é representada pela seta indica pela _letra B_.
 
-## {.smaller}
+
+##
 
 O lado direito (o que vem depois do `=`) é chamado [expressão]{.alert}.
 
@@ -921,13 +964,13 @@ Em Java, o tipo do resultado da expressão tem que ser **o mesmo tipo** da vari�
 
 - Ex.: não podemos guardar um resultado inteiro em uma variável string.
 
-. . .
+##
 
 ::: {.callout-tip title="Conceito" icon=false}
 **Comandos de atribuição** guardam os valores representados pelo lado direito do comando na variável nomeada do lado esquerdo.
 :::
 
-## 
+. . . 
 
 ::: {.callout-note title="Exercício" icon=false}
 Suponha que uma classe `Cachorro` tem um atributo `nome`.
@@ -948,7 +991,7 @@ Você conseguiria escrever a assinatura do construtor da classe `Date`?
 Obs.: escolha nomes representativos para os parâmetros.
 :::
 
-## Quiz 2.3 {background-color="#f7fad1" .smaller}
+## Quiz 2.3 {background-color="#f7fad1"}
 
 ::: {.nonincremental}
 [Complete a frase: _______ têm tempo de vida igual ao do objeto:]{.alert}
@@ -961,20 +1004,19 @@ d. Classes.
 
 # Métodos {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Analisando o código-fonte da classe `MaquinaIngressos` podemos ver que ela tem quatro [métodos]{.alert}.
 
 - Os métodos são mostrados em caixas amarelas no BlueJ.
 
-. . .
+##
 
 Veja, por exemplo, a implementação do método `obterPreco`.
 
 - Vemos que os métodos têm duas partes: a **assinatura** e o **corpo** do método.
 - Vemos também que antes da assinatura há um comentáro que descreve o método.
 
-::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
 public class MaquinaIngressos
 {
@@ -989,9 +1031,8 @@ public class MaquinaIngressos
   }  
   // métodos restantes omitidos
 ```
-:::
 
-## {.smaller}
+##
 
 ::: {.callout-tip title="Conceito" icon=false}
 Métodos são formados por duas partes: assinatura e corpo.
@@ -1004,7 +1045,7 @@ Repare que a assinatura do método se parece um pouco com a declaração de atri
 - Como então sabemos que é um método e não um atributo?
   - Repare que a assinatura `public int obterPreco()` possui parênteses e não termina com ponto-e-vírgula.
 
-. . .
+##
 
 O corpo do método, que é o que fica entre chaves `{` `}`, pode conter **declarações** e **comandos**.
 
@@ -1012,7 +1053,7 @@ O corpo do método, que é o que fica entre chaves `{` `}`, pode conter **declar
 - Declarações servem para criar variáveis temporárias adicionais.
 - E os comandos são as ações feitas pelo método.
 
-## {.smaller}
+##
 
 Nós chamamos de [bloco de código]{.alert} o conjunto de declarações e comandos que ficam entre um par de chaves.
 
@@ -1021,7 +1062,7 @@ Nós chamamos de [bloco de código]{.alert} o conjunto de declarações e comand
 
 
 
-## {.smaller}
+##
 
 Tanto construtores quanto métodos podem ter **quaisquer quantidades de parâmetros** (inclusive nenhum).
 
@@ -1040,7 +1081,7 @@ Mas como podemos diferenciar um contrutor de um método?
   :::
 - Além disso, **construtores possuem o mesmo nome da classe**.
 
-## {.smaller}
+##
 
 O corpo do método `obterPreco` tem apenas um comando.
 
@@ -1055,7 +1096,7 @@ O corpo do método `obterPreco` tem apenas um comando.
 - E deve ser sempre o último comando do método
   - pois depois dele nenhum outro comando é executado no método.
 
-. . .
+##
 
 Podemos pensar em uma **chamada de método** como **uma pergunta** feita ao objeto.
 
@@ -1065,7 +1106,7 @@ Podemos pensar em uma **chamada de método** como **uma pergunta** feita ao obje
 
 # Métodos de acesso e modificadores {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Nós chamamos de [métodos de acesso]{.alert} os métodos que começam com **obter** (como `obterPreco` e `obterSaldo`).
 
@@ -1140,7 +1181,7 @@ Você acha que isso pode ter algo a ver com o fato de que o primeiro método tem
 :::
 
 
-## {.smaller}
+##
 
 Os métodos **obter** da classe `MaquinaIngressos` retornam valores dos atributos da classe.
 
@@ -1153,7 +1194,7 @@ Nós chamamos os métodos que **mudam o estado de seus objetos** de [métodos mo
 
 - Podemos pensar nesses métodos como pedidos feitos para os objetos alterarem seus estados.
 
-## {.smaller}
+##
 
 É muito comum que classes tenham métodos modificadores que recebem um novo valor para um de seus atributos.
 
@@ -1171,7 +1212,7 @@ Nós chamamos os métodos que **mudam o estado de seus objetos** de [métodos mo
 ```
 :::
 
-. . .
+##
 
 :::: {.columns}
 
@@ -1185,19 +1226,19 @@ Em inglês, assim como os métodos de acesso começam com `get`, os métodos mod
 
 - Poderíamos ter, por exemplo, o método `setName`.
 - Nesse caso é também comum usarmos a palavra `set` em códigos em português. Ex.: `setNome`.
+- Obs.: nesse material vou preferir usar sempre `definir`, mas fique à vontade para escolher o que prefere.
 :::
 :::
 
 ::::
 
-
-## 
+. . .
 
 ::: {.callout-tip title="Conceito" icon=false}
 **Métodos modificadores** mudam o estado de um objeto.
 :::
 
-. . .
+##
 
 ::: {.fragment .nonincremental}
 ::: {.callout-note title="Exercício" icon=false}
@@ -1209,13 +1250,12 @@ Crie uma máquina de ingressos e chame o método `obterSaldo`.
 :::
 :::
 
-## {.smaller}
+##
 
 Vamos analisar agora o código do método `inserirDinheiro`.
 
 . . .
 
-::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
   /**
    * Recebe uma quantidade de dinheiro de um cliente.
@@ -1225,7 +1265,6 @@ Vamos analisar agora o código do método `inserirDinheiro`.
       saldo = saldo + quantidade;
   }
 ```
-:::
 
 . . .
 
@@ -1253,7 +1292,7 @@ Avaliando apenas a assinatura abaixo, você saberia dizer se ela é de um constr
 Complete o código do método anterior de modo que ele atualize o valor de um atributo `preco`.
 :::
 
-## Quiz 2.4 {background-color="#f7fad1" .smaller}
+## Quiz 2.4 {background-color="#f7fad1"}
 
 ::: {.nonincremental}
 [Marque a alternativa incorreta:]{.alert}
@@ -1267,7 +1306,7 @@ d. Métodos com retorno do tipo `void` não retornam nenhum valor.
 
 # Imprimindo a partir de métodos {background-color="#40666e"}
 
-## {.smaller}
+##
 
 O método `imprimirIngresso` é o mais complexo da classe.
 
@@ -1295,7 +1334,7 @@ O método `imprimirIngresso` é o mais complexo da classe.
   }
 ```
 
-. . .
+##
 
 Você deve ter notado que, ao chamar o método, o seguinte texto aparece no terminal.
 
@@ -1307,7 +1346,7 @@ Você deve ter notado que, ao chamar o método, o seguinte texto aparece no term
 ##################
 ```
 
-## {.smaller}
+##
 
 Vamos avaliar o método passo a passo.
 
@@ -1333,11 +1372,59 @@ Vamos avaliar o método passo a passo.
   }
 ```
 1. A assinatura indica que o método tem retorno `void` e não espera nenhum parâmetro.
+
+##
+
+```{.java code-line-numbers="false"}
+  /**
+   * Imprime um ingresso.
+   * Atualiza o total coletado e reduz o saldo para zero.
+   */
+  public void imprimirIngresso()                     // <1>
+  {
+    // Simula a impressão de um ingresso
+    System.out.println("##################");        // <2>
+    System.out.println("# Ingressos & Cia ");        // <2>
+    System.out.println("# Ingresso");                // <2>
+    System.out.println("# " + preco + " centavos."); // <2>
+    System.out.println("##################");        // <2>  
+    System.out.println();
+
+    // Atualiza o total coletado com o saldo
+    total = total + saldo;                           // <3>
+    // Zera o saldo
+    saldo = 0;                                       // <4>
+  }
+```
 2. Os primeiros seis comandos imprimem o que vemos no terminal.
 3. O sétimo comando adiciona o saldo atual inserido pelo usuário ao total acumulado.
+
+##
+
+```{.java code-line-numbers="false"}
+  /**
+   * Imprime um ingresso.
+   * Atualiza o total coletado e reduz o saldo para zero.
+   */
+  public void imprimirIngresso()                     // <1>
+  {
+    // Simula a impressão de um ingresso
+    System.out.println("##################");        // <2>
+    System.out.println("# Ingressos & Cia ");        // <2>
+    System.out.println("# Ingresso");                // <2>
+    System.out.println("# " + preco + " centavos."); // <2>
+    System.out.println("##################");        // <2>  
+    System.out.println();
+
+    // Atualiza o total coletado com o saldo
+    total = total + saldo;                           // <3>
+    // Zera o saldo
+    saldo = 0;                                       // <4>
+  }
+```
 4. O último comando reinicializa o saldo como zero, esperando o próximo usuário.
 
-## {.smaller}
+##
 
 O método `imprimirIngresso` chama várias vezes o método `println` do objeto `System.out`.
 
@@ -1351,7 +1438,7 @@ A maioria das chamadas do método `println` passa uma string **literal**.
 - Ex.: `"# Ingressos & Cia "`.
 - Isso significa que o método simplesmente exibe na tela o texto passado entre aspas duplas.
 
-## {.smaller}
+##
 
 Mas veja que a linha abaixo é um pouco diferente.
 
@@ -1369,7 +1456,18 @@ Essa linha tem duas coisas diferentes.
   - Ex.: `"Tião" + " " + "Silva"` resulta em `"Tião Silva"`.
 - Mas, além disso, o atributo `preco` está sendo concatenado diretamente na string.
   - Java converte valores automaticamente para String quando o operador `+` é usado.
-  - Repare que se digitássemos `"preco"`, seria exibida a palavra *preco* e não o valor do atributo `preco`.
+
+## 
+
+O que seria exibido se digitássemos `"preco"` em vez de `preco`?
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    System.out.println("# " + "preco" + " centavos.");    
+```
+:::
+
+- Seria exibida a palavra _preco_ e não o valor do atributo `preco`.
 
 . . .
 
@@ -1416,23 +1514,4 @@ Onde no lugar de X deve aparecer o valor do atributo `preco`.
 Cria duas máquinas de ingressos com valores de ingresso diferentes.
 Ao chamar o método `imprimirPreco` para as duas máquinas, o texto exibido é igual ou diferente?
 Por que?
-:::
-
-# Entregas dessa Aula {background-color="#40666e"}
-
-## {.smaller}
-
-::: {.nonincremental}
-
-Como você já viu na aula anterior, para que você tenha a [presença]{.alert} 
-
-- considerada nas aula em [formato ANP]{.alert} (Atividade Não-Presencial), 
-- você precisa **demonstrar que** realmente **estudou** o conteúdo.
-
-::: {.callout-important title="Entregas no Campus Virtual"}
-Para ter presença nessa aula você deve responder, no Campus Virtual, aos quizes presentes nesses slides.
-
-Você deve também enviar o projeto `maquina-ingressos-ingenua` como ele ficou 
-após terem sido feitas todas as alterações pedidas ao longo da aula.
-:::
 :::
