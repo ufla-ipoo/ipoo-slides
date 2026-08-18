@@ -1789,7 +1789,7 @@
     "href": "cap2-1.html#principais-conceitos-do-capítulo",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "Principais Conceitos do Capítulo",
-    "text": "Principais Conceitos do Capítulo\n\nAtributos\nConstrutores\nParâmetros\nMétodos (de acesso e modificadores)\n\n\nConstruções Java do capítulo\n\nAtributo, construtor, comentário, parâmetro, atribuição (=), bloco, comando de retorno, void, operadores de atribuição compostos (+=, -=), comando if."
+    "text": "Principais Conceitos do Capítulo\n\n\nAtributos\nConstrutores\nParâmetros\nMétodos (de acesso e modificadores)\n\n\n\nConstruções Java do capítulo\n\n\nAtributo, construtor, comentário, parâmetro, atribuição (=), bloco, comando de retorno, void, operadores de atribuição compostos (+=, -=), comando if."
   },
   {
     "objectID": "cap2-1.html#section",
@@ -1929,7 +1929,7 @@
     "href": "cap2-1.html#quiz-2.1",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "Quiz 2.1",
-    "text": "Quiz 2.1\nAtributo também é chamado de:\n\nVariável de instância.\nVariável de classe.\nVariável local.\nVariável binária."
+    "text": "Quiz 2.1\n\nAtributo também é chamado de:\n\nVariável de instância.\nVariável de classe.\nVariável local.\nVariável binária."
   },
   {
     "objectID": "cap2-1.html#section-17",
@@ -1971,7 +1971,7 @@
     "href": "cap2-1.html#quiz-2.2",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "Quiz 2.2",
-    "text": "Quiz 2.2\nMarque a alternativa incorreta:\n\nUm construtor é chamado quando um objeto é criado.\nConstrutores podem receber informações externas ao objeto.\nConstrutores servem para definir valores válidos para os atributos do objeto.\nPodemos chamar um construtor para um objeto depois que ele foi criado."
+    "text": "Quiz 2.2\n\nMarque a alternativa incorreta:\n\nUm construtor é chamado quando um objeto é criado.\nConstrutores podem receber informações externas ao objeto.\nConstrutores servem para definir valores válidos para os atributos do objeto.\nPodemos chamar um construtor para um objeto depois que ele foi criado."
   },
   {
     "objectID": "cap2-1.html#section-22",
@@ -2041,7 +2041,7 @@
     "href": "cap2-1.html#quiz-2.3",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "Quiz 2.3",
-    "text": "Quiz 2.3\nComplete a frase: _______ têm tempo de vida igual ao do objeto:\n\nParâmetros.\nAtributos.\nMétodos.\nClasses."
+    "text": "Quiz 2.3\n\nComplete a frase: _______ têm tempo de vida igual ao do objeto:\n\nParâmetros.\nAtributos.\nMétodos.\nClasses."
   },
   {
     "objectID": "cap2-1.html#section-31",
@@ -2132,7 +2132,7 @@
     "href": "cap2-1.html#quiz-2.4",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "Quiz 2.4",
-    "text": "Quiz 2.4\nMarque a alternativa incorreta:\n\nMétodos de acesso geralmente retornam o valor de um atributo.\nMétodos modificadores mudam o estado do objeto.\nOs nomes dos métodos de acesso obrigatoriamente começam com a palavra get.\nMétodos com retorno do tipo void não retornam nenhum valor."
+    "text": "Quiz 2.4\n\nMarque a alternativa incorreta:\n\nMétodos de acesso geralmente retornam o valor de um atributo.\nMétodos modificadores mudam o estado do objeto.\nOs nomes dos métodos de acesso obrigatoriamente começam com a palavra get.\nMétodos com retorno do tipo void não retornam nenhum valor."
   },
   {
     "objectID": "cap2-1.html#section-43",
