@@ -413,9 +413,9 @@
     </div>
 </div>
 
-  <p class="date">20/08/2025</p>
+  <p class="date">19/08/2026</p>
 </section>
-<section id="como-estudar-precisa-repetir" class="slide level2 smaller">
+<section id="como-estudar-precisa-repetir" class="slide level2">
 <h2>Como estudar? Precisa repetir? :)</h2>
 <p>Como diz o ditado: <em>água mole em pedra dura tanto bate até que fura</em>.</p>
 <p>Então vamos relembrar as <span class="alert">dicas</span>:</p>
@@ -435,7 +435,7 @@
 <h1>Design da Máquina de Ingressos</h1>
 
 </section>
-<section id="section" class="slide level2 smaller">
+<section id="section" class="slide level2">
 <h2></h2>
 <p>Nas aulas anteriores você deve ter percebido que a <strong>classe <code>MaquinaIngressos</code></strong> não serviria muito no mundo real, já que ela <strong>tem vários problemas</strong>.</p>
 <ul>
@@ -446,16 +446,18 @@
 <li class="fragment">E o mesmo para o preço do ingresso (passado para o construtor).</li>
 </ul></li>
 </ul>
-<div class="fragment">
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
 <p>Corrigindo isso, teríamos um software que realmente poderia servir de base para uma máquina de ingressos real.</p>
 <ul>
 <li class="fragment">Vamos então avaliar o <strong>projeto <a href="https://github.com/ufla-ipoo/maquina-ingressos-melhor">maquina-ingressos-melhor</a></strong>, que tenta resolver os problemas apontados.</li>
 </ul>
-</div>
 <div class="fragment">
-<p>Antes de analisarmos o código, <strong>experimente</strong> criar uma máquina de ingressos e chamar seus métodos e <strong>verifique o que funciona de forma diferente</strong>.</p>
+<p>Antes de analisarmos o código, <strong>experimente</strong>:</p>
 <ul>
-<li class="fragment">Veja que há um novo método <code>retornarTroco</code>. Verifique o que acontece quando ele é chamado.</li>
+<li class="fragment">criar uma máquina de ingressos e chamar seus métodos, <strong>verificando o que funciona de forma diferente</strong>.</li>
+<li class="fragment">Veja, por exemplo, que há um novo método <code>retornarTroco</code>. Veja o que acontece quando ele é chamado.</li>
 </ul>
 </div>
 </section></section>
@@ -464,7 +466,7 @@
 <h1>Comando Condicional</h1>
 
 </section>
-<section id="section-1" class="slide level2 smaller">
+<section id="section-2" class="slide level2">
 <h2></h2>
 <p>Dê uma olhada no código da classe <code>MaquinaIngressos</code> do novo projeto.</p>
 <ul>
@@ -474,7 +476,9 @@
 <li class="fragment">Veja que o método possui um tratamento para evitar que o usuário insira quantidades negativas de dinheiro.</li>
 </ul></li>
 </ul>
-<div class="fragment">
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
 <p>Na disciplina anterior de algoritmos você já aprendeu a usar <span class="alert">comandos condicionais</span> (<code>if</code>/ <code>else</code>).</p>
 <ul>
 <li class="fragment">Note que a <strong>sintaxe do comando <code>if</code> em Java é a mesma do C++</strong>.</li>
@@ -484,9 +488,8 @@
 <li class="fragment">Se for falsa, o bloco de código executado é aquele logo após o <code>else</code>.</li>
 </ul></li>
 </ul>
-</div>
 </section>
-<section id="section-2" class="slide level2">
+<section id="section-4" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -514,7 +517,9 @@
 </div>
 </div>
 </div>
-<div class="fragment">
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -527,15 +532,16 @@
 </div>
 </div>
 </div>
-</div>
 </section>
-<section id="section-3" class="slide level2 smaller">
+<section id="section-6" class="slide level2">
 <h2></h2>
 <p>Ao avaliar o código de uma classe no BlueJ, você deve ter notado que ele mostra caixas coloridas ao redor de alguns elementos.</p>
 <ul>
 <li class="fragment">Como ao redor dos blocos e comandos condicionais, por exemplo.</li>
 </ul>
-<div class="fragment">
+</section>
+<section id="section-7" class="slide level2">
+<h2></h2>
 <p>Esses destaques coloridos são chamados de <span class="alert"><em>scope highlighting</em></span> (ou destaque de escopo).</p>
 <ul>
 <li class="fragment">Eles nos ajudam a atender as unidades lógicas do programa.</li>
@@ -547,20 +553,23 @@
 <li class="fragment">Portanto, podemos ter escopos aninhados (ou seja, um dentro do outro).</li>
 </ul></li>
 </ul>
-</div>
 </section>
-<section id="section-4" class="slide level2 smaller">
+<section id="section-8" class="slide level2">
 <h2></h2>
 <p>O BlueJ nos ajuda a identificar os escopos usando cores diferentes para cada um.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="imagens/print_bluej_escopo.png"></p>
+</div><div class="column" style="width:50%;">
 <ul>
 <li class="fragment">Na imagem vemos com fundo branco os escopos de cada bloco do <code>if</code> e <code>else</code>.</li>
 <li class="fragment">Com fundo roxo, o escopo do comando condicional.</li>
 <li class="fragment">Com fundo amarelo o escopo do método.</li>
 <li class="fragment">E com fundo verde o escopo da classe.</li>
 </ul>
-<p><img data-src="imagens/print_bluej_escopo.png"></p>
+</div></div>
 </section>
-<section id="section-5" class="slide level2 smaller">
+<section id="section-9" class="slide level2">
 <h2></h2>
 <p>Um erro muito comum para quem está começando é esquecer de fechar as chaves, ou colocar uma chave em um lugar errado.</p>
 <ul>
@@ -587,7 +596,7 @@
 </div></div>
 </div>
 </section>
-<section id="section-6" class="slide level2">
+<section id="section-10" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -615,16 +624,18 @@
 </div>
 </div>
 </div>
-<div class="fragment">
-<div title="Exercício">
+</section>
+<section id="section-11" class="slide level2">
+<h2></h2>
+<div title="Exercício (PARA CASA)">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício</strong></p>
+<p><strong>Exercício (PARA CASA)</strong></p>
 </div>
 <div class="callout-content">
-<p>Leia o anexo D.2 do livro do Barnes e Kölling para saber mais sobre os comandos condicionais da linguagem Java. Você verá mais detalhes sobre o comando <code>if</code> e também conhecerá o comando <code>switch</code>.</p>
-</div>
+<p>Leia o anexo D.2 do livro do Barnes e Kölling para saber mais sobre os comandos condicionais da linguagem Java.</p>
+<p>Você verá mais detalhes sobre o comando <code>if</code> e também conhecerá o comando <code>switch</code>.</p>
 </div>
 </div>
 </div>
@@ -635,7 +646,7 @@
 <h1>Variáveis locais</h1>
 
 </section>
-<section id="section-7" class="slide level2 smaller">
+<section id="section-12" class="slide level2">
 <h2></h2>
 <p>Até agora usamos dois tipos de variáveis: <strong>atributos</strong> (variáveis de instância) e <strong>parâmetros</strong>.</p>
 <ul>
@@ -645,7 +656,9 @@
 <li class="fragment">Todas eles servem para armazenar dados, mas cada um tem um objetivo diferente.</li>
 </ul></li>
 </ul>
-<div class="fragment">
+</section>
+<section id="section-13" class="slide level2">
+<h2></h2>
 <p>Repare o código do método <code>retornarTroco</code>.</p>
 <ul>
 <li class="fragment">Ele possui três comandos e uma declaração (da variável <code>troco</code>).</li>
@@ -659,9 +672,8 @@
 <span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> troco<span class="op">;</span></span>
 <span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
 </section>
-<section id="section-8" class="slide level2 smaller">
+<section id="section-14" class="slide level2">
 <h2></h2>
 <p>Como podemos saber que a variável <code>troco</code> não é um atributo?</p>
 <ul>
@@ -675,11 +687,15 @@
 </div>
 <div class="fragment">
 <p>A variável <code>troco</code> é de um terceiro tipo: ela é uma <span class="alert">variável local</span>.</p>
+</div>
+</section>
+<section id="section-15" class="slide level2">
+<h2></h2>
+<p>A variável <code>troco</code> é de um terceiro tipo: ela é uma <span class="alert">variável local</span>.</p>
 <ul>
 <li class="fragment">Tem esse nome porque ela é declarada dentro do corpo de um método.</li>
 <li class="fragment">E, portanto, tem um escopo <em>local</em> (do método).</li>
 </ul>
-</div>
 <div class="fragment">
 <p>Variáveis locais são declaradas como os atributos (mas sem os modificadores <em>public</em> e <em>private</em>).</p>
 <ul>
@@ -691,33 +707,42 @@
 </ul>
 </div>
 </section>
-<section id="section-9" class="slide level2 smaller">
+<section id="section-16" class="slide level2">
 <h2></h2>
 <p><img data-src="imagens/duvida_variaveis_locais.png"></p>
-<div class="fragment">
+</section>
+<section id="section-17" class="slide level2">
+<h2></h2>
 <p>Nós <strong>evitamos</strong> declarar como <strong>atributos</strong> variáveis que <strong>não precisam ser mantidas em memória</strong> depois que o método é chamado.</p>
 <ul>
 <li class="fragment">Repare que atributos são características dos objetos.</li>
 <li class="fragment">Já variáveis locais são apenas informações temporárias usadas para fazer algo durante a execução de um método.</li>
 <li class="fragment">Portanto, se algo só precisa existir durante a execução do método, declará-lo como atributo desperdiçaria memória e feriria o conceito de objetos.</li>
 </ul>
-</div>
 </section>
-<section id="section-10" class="slide level2 smaller">
+<section id="section-18" class="slide level2">
 <h2></h2>
-<p>Nós usamos <strong>variáveis locais</strong> mesmo quando dois métodos na mesma classe têm variáveis locais com o mesmo objetivo (muitas vezes com o mesmo nome).</p>
+<p>Nós usamos <strong>variáveis locais</strong> mesmo quando dois métodos na mesma classe têm variáveis locais com o mesmo objetivo.</p>
 <ul>
-<li class="fragment">É tentador declarar como atributo para <em>“reaproveitar”</em> a mesma declaração.</li>
-<li class="fragment">Mas, não devemos usar atributos para valores que não precisam existir depois da chamada dos métodos.</li>
+<li class="fragment">Muitas vezes até com o mesmo nome.</li>
 </ul>
 <div class="fragment">
+<p>É tentador declarar como atributo para <em>“reaproveitar”</em> a mesma declaração.</p>
+<ul>
+<li class="fragment">Mas, não devemos usar atributos para valores que não precisam existir depois da chamada dos métodos.</li>
+</ul>
+</div>
+</section>
+<section id="section-19" class="slide level2">
+<h2></h2>
 <p>Por exemplo:</p>
 <ul>
 <li class="fragment">No método <code>retornarTroco</code>, a variável <code>troco</code> é usada, temporariamente, apenas para guardar o valor do saldo antes dele ser zerado.</li>
 <li class="fragment">Depois que o método é finalizado, não faz mais sentido guardar o valor do troco.</li>
 </ul>
-</div>
-<div class="fragment">
+</section>
+<section id="section-20" class="slide level2">
+<h2></h2>
 <div class="halfincfontsize">
 <div title="Cuidado">
 <div class="callout callout-note no-icon callout-titled callout-style-simple">
@@ -732,9 +757,8 @@
 </div>
 </div>
 </div>
-</div>
 </section>
-<section id="section-11" class="slide level2">
+<section id="section-21" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -777,7 +801,7 @@
 </div>
 </div>
 </section>
-<section id="section-12" class="slide level2">
+<section id="section-22" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -804,7 +828,7 @@
 </div>
 </div>
 </section>
-<section id="quiz-2.5" class="slide level2 smaller" data-background-color="#f7fad1">
+<section id="quiz-2.5" class="slide level2" data-background-color="#f7fad1">
 <h2>Quiz 2.5</h2>
 <div>
 <p><span class="alert">O tempo de vida de uma variável local é:</span></p>
@@ -816,7 +840,7 @@
 </ol>
 </div>
 </section>
-<section id="quiz-2.6" class="slide level2 smaller" data-background-color="#f7fad1">
+<section id="quiz-2.6" class="slide level2" data-background-color="#f7fad1">
 <h2>Quiz 2.6</h2>
 <div>
 <p><span class="alert">Escolha a melhor opção para completar a frase: Uma variável local é acessível ________:</span></p>
@@ -833,16 +857,16 @@
 <h1>Atributos, parâmetros e variáveis locais</h1>
 
 </section>
-<section id="section-13" class="slide level2 smaller">
+<section id="section-23" class="slide level2">
 <h2></h2>
 <p>É importante entender as semelhanças e diferenças entre <strong>atributos, parâmetros e variáveis locais</strong>.</p>
 <ul>
 <li class="fragment">Os três servem para armazenar valores de acordo com seu tipo.</li>
+<li class="fragment">Mas possuem diferenças importantes, como mostrado na tabela a seguir.</li>
 </ul>
-<div class="fragment">
-<p>Mas possuem diferenças importantes:</p>
-</div>
-<div class="fragment">
+</section>
+<section id="section-24" class="slide level2">
+<h2></h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 16%">
@@ -881,13 +905,12 @@
 <td><strong>Valor padrão</strong></td>
 <td style="text-align: center;">Sim</td>
 <td style="text-align: center;">Não (valor é passado de fora do objeto)</td>
-<td style="text-align: center;">Não (precisa ser inicializada antes de usada)</td>
+<td style="text-align: center;">Não (precisa ser inicializada antes de ser usada)</td>
 </tr>
 </tbody>
 </table>
-</div>
 </section>
-<section id="section-14" class="slide level2">
+<section id="section-25" class="slide level2">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:20%;">
@@ -915,7 +938,7 @@
 </div>
 </div></div>
 </section>
-<section id="section-15" class="slide level2">
+<section id="section-26" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -945,26 +968,7 @@
 </div>
 </div>
 </section>
-<section id="section-16" class="slide level2">
-<h2></h2>
-<div title="Entrega no Campus Virtual">
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Entrega no Campus Virtual</strong></p>
-</div>
-<div class="callout-content">
-<p>Tire um print da implementação do método <code>imprimirIngresso</code> pedida no exercício anterior para enviar no Campus Virtual.</p>
-<p><strong>Importante</strong>: para tirar o print, inclua, na primeira linha do método, um comentário com o seu nome completo.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-17" class="slide level2">
+<section id="section-27" class="slide level2">
 <h2></h2>
 <div title="(Opcional) Exercício - [Desafio]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -987,7 +991,7 @@
 
 </section>
 
-<section id="section-18" class="title-slide slide level1 smaller center">
+<section id="section-28" class="title-slide slide level1 center">
 <h1></h1>
 <p>Para reforçar os novos conceitos que aprendemos, vamos revisitar o projeto <a href="https://github.com/ufla-ipoo/disciplina">disciplina</a> que estudamos no capítulo 1.</p>
 <div class="fragment">
@@ -1001,7 +1005,8 @@
 </div>
 </section>
 
-<section id="section-19" class="title-slide slide level1 smaller center">
+<section>
+<section id="section-29" class="title-slide slide level1 center">
 <h1></h1>
 <p>Veja que o nome, a matrícula e o número de créditos do estudante são as informações que devem <strong>ficar guardadas enquanto o objeto estudante existir</strong>.</p>
 <ul>
@@ -1013,20 +1018,20 @@
 <li class="fragment">Já o número de <code>creditos</code> é inicializado com um valor fixo.</li>
 </ul>
 </div>
-<div class="fragment">
+</section>
+<section id="section-30" class="slide level2">
+<h2></h2>
 <p>Os três atributos possuem <strong>métodos de acesso</strong> (métodos <em>obter</em>).</p>
 <ul>
 <li class="fragment">O número de matrícula não pode ser alterado (é <strong>imutável</strong>), já nome e número de créditos podem ser alterados por <strong>métodos modificadores</strong>.</li>
 </ul>
-</div>
-</section>
-
+</section></section>
 <section>
 <section id="chamando-métodos" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Chamando métodos</h1>
 
 </section>
-<section id="section-20" class="slide level2 smaller">
+<section id="section-31" class="slide level2">
 <h2></h2>
 <p>O método <code>obterLogin</code> da classe <code>Estudante</code> tem algo diferente que é interessante analisarmos.</p>
 <div class="halfincfontsize">
@@ -1035,13 +1040,15 @@
 <span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> nome<span class="op">.</span><span class="fu">substring</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span><span class="dv">4</span><span class="op">)</span> <span class="op">+</span> matricula<span class="op">.</span><span class="fu">substring</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span><span class="dv">3</span><span class="op">);</span></span>
 <span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="fragment">
 <p>Repare em dois pontos interessantes:</p>
 <ol type="1">
 <li class="fragment">Métodos de outros objetos são chamados, e eles retornam um resultado.</li>
 <li class="fragment">O resultado retornado é usado como parte de uma expressão.</li>
 </ol>
+</div>
 </section>
-<section id="section-21" class="slide level2 smaller">
+<section id="section-32" class="slide level2">
 <h2></h2>
 <p>Os atributos <code>nome</code> e <code>matricula</code> são objetos <code>String</code>.</p>
 <ul>
@@ -1059,17 +1066,18 @@
 <span id="cb6-7"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">String</span> <span class="fu">substring</span><span class="op">(</span><span class="dt">int</span> beginIndex<span class="op">,</span> <span class="dt">int</span> endIndex<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="fragment">
+</section>
+<section id="section-33" class="slide level2">
+<h2></h2>
 <p>Pelo comentário vemos que o método retorna uma string que é parte da string original.</p>
 <ul>
 <li class="fragment">A string retornada inclui os caracteres que estão da posição <code>beginIndex</code> (primeiro parâmetro) até a posição anterior a <code>endIndex</code> (segundo parâmetro).</li>
 </ul>
-</div>
 <div class="fragment">
 <p>Sabendo disso, vamos entender como o método <code>obterLogin</code> funciona.</p>
 </div>
 </section>
-<section id="section-22" class="slide level2 smaller">
+<section id="section-34" class="slide level2">
 <h2></h2>
 <p>A primeira parte da expressão implementada é <code>nome.substring(0,4)</code>.</p>
 <ul>
@@ -1081,15 +1089,16 @@
 <li class="fragment">Os três primeiros caracteres da matrícula.</li>
 </ul>
 </div>
-<div class="fragment">
+</section>
+<section id="section-35" class="slide level2">
+<h2></h2>
 <p>Portanto, para um aluno de nome <strong>“Sebastião da Silva”</strong> e matrícula <strong>435221</strong>, qual seria o valor retornado pelo método <code>obterLogin</code>?</p>
 <ul>
 <li class="fragment">Pense primeiro na resposta e depois valide criando um objeto no BlueJ.</li>
 <li class="fragment">Veja que o retorno seria <strong>“Seba435”</strong>.</li>
 </ul>
-</div>
 </section>
-<section id="section-23" class="slide level2">
+<section id="section-36" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1118,7 +1127,7 @@
 </div>
 </div>
 </section>
-<section id="section-24" class="slide level2">
+<section id="section-37" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1141,26 +1150,7 @@
 </div>
 </div>
 </section>
-<section id="section-25" class="slide level2">
-<h2></h2>
-<div title="Entrega no Campus Virtual">
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Entrega no Campus Virtual</strong></p>
-</div>
-<div class="callout-content">
-<p>Tire um print da implementação do construtor da classe <code>Estudante</code> pedida no exercício anterior para enviar no Campus Virtual.</p>
-<p><strong>Importante</strong>: para tirar o print, inclua, na primeira linha do construtor, um comentário com o seu nome completo.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-26" class="slide level2">
+<section id="section-38" class="slide level2">
 <h2></h2>
 <div title="(Opcional) Exercício - [Desafio]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1170,40 +1160,6 @@
 </div>
 <div class="callout-content">
 <p>Altere o método <code>obterLogin</code> da classe <code>Estudante</code> de forma que ele sempre retorne um login, mesmo que os atributos <code>nome</code> e <code>matricula</code> não tenham os tamanhos mínimos esperados. Caso algum atributo tenha tamanho insuficiente, use todos os caracteres do atributo.</p>
-</div>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="entregas-dessa-aula" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>Entregas dessa Aula</h1>
-
-</section>
-<section id="section-27" class="slide level2 smaller">
-<h2></h2>
-<div>
-<p>Como você já sabe das aulas anteriores, para que você tenha a <span class="alert">presença</span></p>
-<ul>
-<li>considerada nas aula em <span class="alert">formato ANP</span> (Atividade Não-Presencial),</li>
-<li>você precisa <strong>demonstrar que</strong> realmente <strong>estudou</strong> o conteúdo.</li>
-</ul>
-<div title="Entregas no Campus Virtual">
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Entregas no Campus Virtual</strong></p>
-</div>
-<div class="callout-content">
-<p>Para ter presença nessa aula você deve:</p>
-<ul>
-<li>Responder, no Campus Virtual, aos quizes presentes nesses slides.</li>
-<li>Enviar os prints solicitados referentes aos exercícios da aula.</li>
-</ul>
-</div>
 </div>
 </div>
 </div>
