@@ -146,7 +146,7 @@ O preço deve aparecer conforme o exemplo abaixo.
 ##################
 # Ingressos & Cia 
 # Ingresso
-# R$ 5,00
+# R$ 4,50
 ##################
 ```
 
@@ -154,6 +154,7 @@ Observações:
 
 - O valor do ingresso deve continuar sendo guardado em centavos. A alteração deve ser feita somente na hora de exibir os dados do ingresso na tela.
 - Pesquise na internet sobre como uma String pode ser formatada em Java de forma que o valor sempre apareça com duas casas decimais e com vírgula como separador dos decimais.
+- Lembre-se de testar casos de ingressos com valores que tenham centavos "quebrados", como R$ 4,50.
 :::
 
 :::

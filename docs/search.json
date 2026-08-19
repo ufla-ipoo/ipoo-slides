@@ -2671,7 +2671,7 @@
     "href": "cap2-2.html#section-6",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 1.7 - Desafio\n\n\nAltere o método imprimirIngresso de forma que o preço do ingresso seja exibido em reais, em vez de centavos. O preço deve aparecer conforme o exemplo abaixo.\n##################\n# Ingressos & Cia \n# Ingresso\n# R$ 5,00\n##################\nObservações:\n\nO valor do ingresso deve continuar sendo guardado em centavos. A alteração deve ser feita somente na hora de exibir os dados do ingresso na tela.\nPesquise na internet sobre como uma String pode ser formatada em Java de forma que o valor sempre apareça com duas casas decimais e com vírgula como separador dos decimais."
+    "text": "Exercício 1.7 - Desafio\n\n\nAltere o método imprimirIngresso de forma que o preço do ingresso seja exibido em reais, em vez de centavos. O preço deve aparecer conforme o exemplo abaixo.\n##################\n# Ingressos & Cia \n# Ingresso\n# R$ 4,50\n##################\nObservações:\n\nO valor do ingresso deve continuar sendo guardado em centavos. A alteração deve ser feita somente na hora de exibir os dados do ingresso na tela.\nPesquise na internet sobre como uma String pode ser formatada em Java de forma que o valor sempre apareça com duas casas decimais e com vírgula como separador dos decimais.\nLembre-se de testar casos de ingressos com valores que tenham centavos “quebrados”, como R$ 4,50."
   },
   {
     "objectID": "cap2-2.html#section-7",
