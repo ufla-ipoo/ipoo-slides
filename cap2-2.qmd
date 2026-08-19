@@ -11,25 +11,30 @@ subtitle: Aula 2.2 - Prática
 
 ::: {.nonincremental}
 
-As **aulas práticas são fundamentais** para que consigamos entender os conceitos e saber como aplicá-los em um programa real.
+As **aulas práticas são importantes** para que consigam entender os conceitos e saber como aplicá-los em um programa real.
 
-- E, para conseguirmos acompanhar a aula, é fundamental ter estudado o conteúdo da aula teórica anterior **antes da aula prática**.
+- E, para conseguir acompanhar a aula, é **fundamental ter estudado** o conteúdo da **aula teórica anterior** [antes]{.alert} **da aula prática**.
 - Portanto, se tiver faltado da aula teórica, estude o conteúdo em casa antes da aula prática.
+:::
+
+. . .
 
 :::: {.columns}
+
+::: {.nonincremental}
 
 ::: {.column width="20%"}
 ![](imagens/fica_a_dica.png)
 :::
 
 ::: {.column width="80%"}
-::: {.callout-note title="Convenção" appearance="simple" icon=false}
-Lembre-se que para ter presença na aula prática é necessário.
+::: {.callout-note title="Presença" appearance="simple" icon=false}
+Lembre-se que para **ter presença na aula** prática é necessário.
 
-- Responder à **chamada**;
-- e, **também**, entregar, no mínimo, 30% do exercícios propostos até o final da aula.
+- **Responder à chamada**;
+- e, [também]{.alert}, **entregar, no mínimo, 30% do exercícios** propostos até o final da aula.
 
-**E não se esqueça de enviar** suas atividades **ao terminar aula** (mesmo que não tiver terminado).
+E não se esqueça de enviar suas atividades ao terminar aula mesmo que não tiver terminado.
 
 - Para que possa terminar em casa.
 :::
@@ -38,30 +43,31 @@ Lembre-se que para ter presença na aula prática é necessário.
 ::::
 :::
 
+
 ## 
 
 ::: {.nonincremental}
 
 Para fazer os exercícios, baixe o projeto [maquina-ingressos-ingenua](https://github.com/ufla-ipoo/maquina-ingressos-ingenua) original da aula anterior.
 
-- Você pode estar se perguntando se não seria melhor usar o projeto que você alterou ao estudar a 
-  aula teórica ANP.
-- Se tiver acesso ao projeto pode utilizá-lo, mas como a entrega foi feita no Google Forms, não é
-  possível baixá-lo de lá.
-- De todo modo as alterações que faremos aqui nessa aula não dependem do que você tinha feito
-  na aula teórica.
+- Você pode estar se perguntando se não seria melhor usar o projeto com as alterações feitas 
+  durante a aula teórica.
+- É que as alterações que faremos aqui nessa aula não dependem das alterações que tínhamos feito lá.
 :::
 
 ##
-
-::: {.nonincremental}
 
 ::: {.callout-note title="Exercício 1.1" icon=false}
 Modifique o construtor da classe `MaquinaIngressos` de forma que ele não receba mais parâmetros.
 Em vez disso, o preço dos ingressos deve ser fixado em 1000 centavos (R$ 10,00).
 
 Com essa alteração, o que muda na hora de criar uma máquina de ingressos no BlueJ?
+
+Responda escrevendo um comentário dentro do corpo (bloco de código) do construtor.
 :::
+
+##
+
 
 ::: {.callout-note title="Exercício 1.2" icon=false}
 Altere agora a classe de forma que ela passe a ter dois construtores.
@@ -69,19 +75,21 @@ Um que recebe o preço do ingresso por parâmetro e outro que não recebe nenhum
 (neste caso, escolha um valor fixo padrão para o preço dos ingressos).
 
 Teste as alterações criando máquinas usando os dois construtores.
-:::
 
+Com essa alteração, o que muda na hora de criar uma máquina de ingressos no BlueJ?
+
+Responda escrevendo um comentário dentro do corpo (bloco de código) do segundo construtor.
 :::
 
 ##
-
-::: {.nonincremental}
 
 ::: {.callout-note title="Exercício 1.3" icon=false}
 Crie um método na classe `MaquinaIngressos` que retorne o valor do total de dinheiro arrecadado na máquina (o valor do atributo `total`). 
 Ao escolher o nome do método, siga a convenção de nomenclatura da classe.
 
-Acrescente um comentário no método dizendo se esse é um *método de acesso* ou um *método modificador* e justificando sua resposta.
+Acrescente um comentário no cabeçalho do método dizendo se esse é um **método de acesso** ou um **método modificador** e justificando sua resposta.
+
+Teste sua implementação!
 :::
 
 ##
@@ -91,16 +99,12 @@ Para simular a operação de remover dinheiro da máquina de ingressos, crie um 
 O método deve ter tipo de retorno `void` e deve somente mudar o valor do `total` para zero.
 Avalie se o método precisa receber algum parâmetro.
 
-Acrescente um comentário no método dizendo se esse é um *método de acesso* ou um *método modificador* e justificando sua resposta.
+Acrescente um comentário no cabeçalho do método dizendo se esse é um **método de acesso** ou um **método modificador** e justificando sua resposta.
 
 Por fim, teste sua implementação inserindo dinheiro na máquina, comprando ingresso, verificando o total e então esvaziando a máquina e verificando o total novamente. 
 :::
 
-:::
-
 ##
-
-
 
 ::: {.callout-note title="Exercício 1.5" icon=false}
 Ao imprimir um ingresso você deve ter notado que aparece o texto `Ingressos & Cia`, que seria o nome da empresa que vende os ingressos.
@@ -165,17 +169,26 @@ Observações:
 Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `maquina-ingressos-ingenua` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
 :::
 
+# Questionário de Revisão  {background-color="#40666e"}
+
+##
+
+::: {.callout-important title="Questionário no Campus Virtual"}
+Acesse e responda, no Campus Virtual, o **Questionário de Revisão** da Aula 2.2.
+:::
+
+# Apenas para os curiosos - Parte 2  {background-color="#40666e"}
+
 ## {.smaller}
 
 ::: {.nonincremental}
-Os exercícios a seguir são do **projeto da [nave](https://github.com/ufla-ipoo/nave)**, que você já trabalhou no capítulo anterior.
+Os exercícios a seguir são uma continuação dos exercícios opcionais do **projeto da [nave](https://github.com/ufla-ipoo/nave)**, tratados na aula anterior.
 
-- Eles servem para reforçar os conceitos e, ao mesmo tempo, para conhecer mais sobre a linguagem Java.
-:::
+- Esses exercícios também são opcionais (não precisam ser entregues).
+- Mas são muito interessantes para reforçar os conceitos e, ao mesmo tempo, para conhecer mais sobre a linguagem Java.
+  - E ainda vai se divertir jogando! 🚀
+- Obs.: se não tinha feito os exercícios na aula passada, comece por eles antes de continuar aqui.
 
-. . .
-
-::: {.nonincremental}
 Fazendo esses exercícios você terá um **jogo mais interessante**:
 
 - O nível de proteção vai variar a cada vez que começa o jogo.
@@ -187,7 +200,7 @@ Fazendo esses exercícios você terá um **jogo mais interessante**:
 
 ::: {.nonincremental}
 
-::: {.callout-note title="Exercício 2.1 - Nível de proteção variável" icon=false}
+::: {.callout-note title="(OPCIONAL) Exercício 2.1 - Nível de proteção variável" icon=false}
 Vamos deixar a dificuldade do jogo um pouco imprevisível.
 
 - Crie um método na classe `Nave` chamado `gerarNivelDeProtecao`.
@@ -207,7 +220,7 @@ Jogue o jogo e reinicie-o algumas vezes ao morrer.
 
 ::: {.nonincremental}
 
-::: {.callout-note title="Exercício 2.2 - Tiros variados" icon=false}
+::: {.callout-note title="(OPCIONAL) Exercício 2.2 - Tiros variados" icon=false}
 A gente tinha facilitado as coisas colocando o nível de proteção.
 
 - Agora vamos dificultar um pouco.
@@ -287,7 +300,7 @@ Vamos agora fazer com que o inimigo fique mais rápido a cada mudança de nível
 Quando o inimigo morre, o método `inicializar` da classe `Inimigo` é chamado para que ele viva novamente.
 
 - Vamos alterar esse método para que ele receba o nível atual do jogo e defina a velocidade do inimigo de acordo com o nível.
-  - Para isso: crie um parâmetro no método para receber o nível atual.
+  - Para isso: acrescente um parâmetro no método para receber o nível atual.
   - E altere a linha que define a velocidade de forma que ela seja igual a 10 no primeiro nível, 20 no segundo nível e assim sucessivamente.
 
 Precisaremos alterar agora as chamadas do método `inicializar` do inimigo, passando o nível atual.
@@ -304,9 +317,3 @@ Se você testar as alterações feitas até agora, verá que, quando o jogo rein
 
 :::
 
-
-## 
-
-::: {.callout-important title="Entrega no Campus Virtual"}
-Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `nave` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar);
-:::

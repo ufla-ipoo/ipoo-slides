@@ -4,7 +4,7 @@ subtitle: Aula 2.3 - Teórica
 ---
 
 
-## Como estudar? Precisa repetir? :) {.smaller}
+## Como estudar? Precisa repetir? :) 
 
 Como diz o ditado: *água mole em pedra dura tanto bate até que fura*.
 
@@ -29,7 +29,7 @@ Então vamos relembrar as [dicas]{.alert}:
 
 # Design da Máquina de Ingressos {background-color="#40666e"}
 
-## {.smaller}
+## 
 
 Nas aulas anteriores você deve ter percebido que a **classe `MaquinaIngressos`** não serviria muito no mundo real, já que ela **tem vários problemas**.
 
@@ -38,7 +38,7 @@ Nas aulas anteriores você deve ter percebido que a **classe `MaquinaIngressos`*
 - Não verifica se a quantidade de dinheiro faz sentido (aceita valor negativo, por exemplo).
   - E o mesmo para o preço do ingresso (passado para o construtor).
 
-. . .
+##
 
 Corrigindo isso, teríamos um software que realmente poderia servir de base para uma máquina de ingressos real.
 
@@ -46,13 +46,14 @@ Corrigindo isso, teríamos um software que realmente poderia servir de base para
 
 . . .
 
-Antes de analisarmos o código, **experimente** criar uma máquina de ingressos e chamar seus métodos e **verifique o que funciona de forma diferente**.
+Antes de analisarmos o código, **experimente**:
 
-- Veja que há um novo método `retornarTroco`. Verifique o que acontece quando ele é chamado.
+- criar uma máquina de ingressos e chamar seus métodos, **verificando o que funciona de forma diferente**.
+- Veja, por exemplo, que há um novo método `retornarTroco`. Veja o que acontece quando ele é chamado.
 
 # Comando Condicional {background-color="#40666e"}
 
-## {.smaller}
+## 
 
 Dê uma olhada no código da classe `MaquinaIngressos` do novo projeto.
 
@@ -60,7 +61,7 @@ Dê uma olhada no código da classe `MaquinaIngressos` do novo projeto.
 - A primeira mudança está no método `inserirDinheiro`.
   - Veja que o método possui um tratamento para evitar que o usuário insira quantidades negativas de dinheiro.
 
-. . .
+##
 
 Na disciplina anterior de algoritmos você já aprendeu a usar [comandos condicionais]{.alert} (`if`/ `else`).
 
@@ -84,7 +85,7 @@ Seria possível remover o bloco `else` do método `imprimirIngresso`?
 Qual seria o efeito para o usuário, quando ele tentasse imprimir um ingresso sem inserir quantidade suficiente de dinheiro.
 :::
 
-. . .
+##
 
 ::: {.callout-note title="Exercício" icon=false}
 Avalie a implementação do método `retornarTroco`.
@@ -92,13 +93,13 @@ Experimente colocar mais dinheiro que o necessário para um ingresso, imprima um
 Tente também chamar o método quando não há saldo de dinheiro disponível.
 :::
 
-## {.smaller}
+## 
 
 Ao avaliar o código de uma classe no BlueJ, você deve ter notado que ele mostra caixas coloridas ao redor de alguns elementos.
 
 - Como ao redor dos blocos e comandos condicionais, por exemplo.
 
-. . .
+##
 
 Esses destaques coloridos são chamados de [*scope highlighting*]{.alert} (ou destaque de escopo).
 
@@ -109,18 +110,26 @@ Esses destaques coloridos são chamados de [*scope highlighting*]{.alert} (ou de
   - E mesmo a parte do `if` de um comando condicional também é um escopo.
   - Portanto, podemos ter escopos aninhados (ou seja, um dentro do outro).
 
-## {.smaller}
+## 
 
 O BlueJ nos ajuda a identificar os escopos usando cores diferentes para cada um.
 
+:::: {.columns}
+
+::: {.column width="50%"}
+![](imagens/print_bluej_escopo.png)
+:::
+
+::: {.column width="50%"}
 - Na imagem vemos com fundo branco os escopos de cada bloco do `if` e `else`.
 - Com fundo roxo, o escopo do comando condicional.
 - Com fundo amarelo o escopo do método.
 - E com fundo verde o escopo da classe.
+:::
 
-![](imagens/print_bluej_escopo.png)
+::::
 
-## {.smaller}
+## 
 
 Um erro muito comum para quem está começando é esquecer de fechar as chaves, ou colocar uma chave em um lugar errado.
 
@@ -160,16 +169,18 @@ Se o preço estiver abaixo da estimativa, a mensagem exibida deve ser `Bora comp
 Por fim, se o preço for exatamente igual à estimativa, exiba a mensagem `Na mosca!`.
 :::
 
-. . .
+##
 
-::: {.callout-note title="Exercício" icon=false}
-Leia o anexo D.2 do livro do Barnes e Kölling para saber mais sobre os comandos condicionais da linguagem Java.
+::: {.callout-note title="Exercício (PARA CASA)" icon=false}
+Leia o anexo D.2 do livro do Barnes e Kölling para saber mais sobre os comandos condicionais 
+da linguagem Java.
+
 Você verá mais detalhes sobre o comando `if` e também conhecerá o comando `switch`.
 :::
 
 # Variáveis locais {background-color="#40666e"}
 
-## {.smaller}
+## 
 
 Até agora usamos dois tipos de variáveis: **atributos** (variáveis de instância) e **parâmetros**.
 
@@ -177,7 +188,7 @@ Até agora usamos dois tipos de variáveis: **atributos** (variáveis de instân
 - O que os três tipos têm em comum?
   - Todas eles servem para armazenar dados, mas cada um tem um objetivo diferente.
 
-. . .
+##
 
 Repare o código do método `retornarTroco`.
 
@@ -195,7 +206,7 @@ public int retornarTroco()
 ```
 :::
 
-## {.smaller}
+## 
 
 Como podemos saber que a variável `troco` não é um atributo?
 
@@ -211,6 +222,10 @@ E como sabemos que ela não é um parâmetro?
 
 A variável `troco` é de um terceiro tipo: ela é uma [variável local]{.alert}.
 
+##
+
+A variável `troco` é de um terceiro tipo: ela é uma [variável local]{.alert}.
+
 - Tem esse nome porque ela é declarada dentro do corpo de um método.
 - E, portanto, tem um escopo *local* (do método).
 
@@ -222,11 +237,11 @@ Variáveis locais são declaradas como os atributos (mas sem os modificadores *p
 - Variáves locais existem somente durante a execução do método.
   - Diferente dos atributos que existem na memória enquanto o objeto existir.
 
-## {.smaller}
+## 
 
 ![](imagens/duvida_variaveis_locais.png)
 
-. . .
+##
 
 Nós **evitamos** declarar como **atributos** variáveis que **não precisam ser mantidas em memória** depois que o método é chamado.
 
@@ -234,21 +249,26 @@ Nós **evitamos** declarar como **atributos** variáveis que **não precisam ser
 - Já variáveis locais são apenas informações temporárias usadas para fazer algo durante a execução de um método.
 - Portanto, se algo só precisa existir durante a execução do método, declará-lo como atributo desperdiçaria memória e feriria o conceito de objetos.
 
-## {.smaller}
+## 
 
-Nós usamos **variáveis locais** mesmo quando dois métodos na mesma classe têm variáveis locais com o mesmo objetivo (muitas vezes com o mesmo nome).
+Nós usamos **variáveis locais** mesmo quando dois métodos na mesma classe têm variáveis locais com o mesmo objetivo.
 
-- É tentador declarar como atributo para *"reaproveitar"* a mesma declaração.
-- Mas, não devemos usar atributos para valores que não precisam existir depois da chamada dos métodos.
+- Muitas vezes até com o mesmo nome.
 
 . . .
+
+É tentador declarar como atributo para *"reaproveitar"* a mesma declaração.
+
+- Mas, não devemos usar atributos para valores que não precisam existir depois da chamada dos métodos.
+
+##
 
 Por exemplo:
 
 - No método `retornarTroco`, a variável `troco` é usada, temporariamente, apenas para guardar o valor do saldo antes dele ser zerado.
 - Depois que o método é finalizado, não faz mais sentido guardar o valor do troco.
 
-. . .
+##
 
 ::: {.halfincfontsize}
 ::: {.callout-note title="Cuidado" appearance="simple" icon=false}
@@ -316,7 +336,7 @@ Consegue explicar o que aconteceu?
 :::
 
 
-## Quiz 2.5 {background-color="#f7fad1" .smaller}
+## Quiz 2.5 {background-color="#f7fad1"}
 
 ::: {.nonincremental}
 [O tempo de vida de uma variável local é:]{.alert}
@@ -327,7 +347,7 @@ c. O mesmo do objeto.
 d. O mesmo do método ou construtor.
 :::
 
-## Quiz 2.6 {background-color="#f7fad1" .smaller}
+## Quiz 2.6 {background-color="#f7fad1"}
 
 ::: {.nonincremental}
 [Escolha a melhor opção para completar a frase: Uma variável local é acessível ________:]{.alert}
@@ -340,24 +360,21 @@ d. no bloco de código onde é declarada.
 
 # Atributos, parâmetros e variáveis locais {background-color="#40666e"}
 
-## {.smaller}
+## 
 
 É importante entender as semelhanças e diferenças entre **atributos, parâmetros e variáveis locais**.
 
 - Os três servem para armazenar valores de acordo com seu tipo.
+- Mas possuem diferenças importantes, como mostrado na tabela a seguir.
 
-. . .
-
-Mas possuem diferenças importantes:
-
-. . .
+##
 
 |     | [Atributos]{.alert} | [Parâmetros]{.alert} | [Variáveis locais]{.alert} |
 | --- | :---: | :---: | :---: |
 | **Declaração**    | fora dos métodos e construtores | na assinatura de métodos/construtores | no corpo dos métodos/construtores |
 | **Tempo de vida** | do objeto | do método/construtor | do método/construtor |
 | **Escopo**        | acessível em qualquer lugar da classe | acessível no método/construtor | acessível no bloco onde é declarado |
-| **Valor padrão**  | Sim | Não (valor é passado de fora do objeto) | Não (precisa ser inicializada antes de usada) |
+| **Valor padrão**  | Sim | Não (valor é passado de fora do objeto) | Não (precisa ser inicializada antes de ser usada) |
 
 ##
 
@@ -401,14 +418,6 @@ Teste as alterações criando situações que caiam tanto no bloco `if` quanto n
 
 ##
 
-::: {.callout-important title="Entrega no Campus Virtual"}
-Tire um print da implementação do método `imprimirIngresso` pedida no exercício anterior para enviar no Campus Virtual.
-
-**Importante**: para tirar o print, inclua, na primeira linha do método, um comentário com o seu nome completo.
-:::
-
-##
-
 ::: {.callout-note title="(Opcional) Exercício - [Desafio]{.alert}" icon=false}
 Salve o projeto da máquina de ingressos com um novo nome (ex.: `maquina-ingressos-varios-precos`).
 
@@ -422,7 +431,7 @@ Você acha que seria necessário alterar muitos dos métodos que já existiam?
 
 # Reforçando conceitos {background-color="#40666e"}
 
-# {.smaller}
+# 
 
 Para reforçar os novos conceitos que aprendemos, vamos revisitar o projeto [disciplina](https://github.com/ufla-ipoo/disciplina) que estudamos no capítulo 1.
 
@@ -436,7 +445,7 @@ Abra o projeto e leia com cuidado o código da classe `Estudante`, tentando resp
 - E quais podem ser alteradas depois que o objeto é criado?
 
 
-# {.smaller}
+# 
 
 Veja que o nome, a matrícula e o número de créditos do estudante são as informações que devem **ficar guardadas enquanto o objeto estudante existir**.
 
@@ -448,7 +457,7 @@ Os atributos `nome` e `matricula` são inicializados no **construtor a partir** 
 
 - Já o número de `creditos` é inicializado com um valor fixo.
 
-. . .
+##
 
 Os três atributos possuem **métodos de acesso** (métodos *obter*).
 
@@ -456,7 +465,7 @@ Os três atributos possuem **métodos de acesso** (métodos *obter*).
 
 # Chamando métodos {background-color="#40666e"}
 
-## {.smaller}
+## 
 
 O método `obterLogin` da classe `Estudante` tem algo diferente que é interessante analisarmos.
 
@@ -469,12 +478,14 @@ O método `obterLogin` da classe `Estudante` tem algo diferente que é interessa
 ```
 :::
 
+. . .
+
 Repare em dois pontos interessantes:
 
 1. Métodos de outros objetos são chamados, e eles retornam um resultado.
 2. O resultado retornado é usado como parte de uma expressão.
 
-## {.smaller}
+## 
 
 Os atributos `nome` e `matricula` são objetos `String`.
 
@@ -496,7 +507,7 @@ public String substring(int beginIndex, int endIndex)
 ```
 :::
 
-. . .
+##
 
 Pelo comentário vemos que o método retorna uma string que é parte da string original.
 
@@ -506,7 +517,7 @@ Pelo comentário vemos que o método retorna uma string que é parte da string o
 
 Sabendo disso, vamos entender como o método `obterLogin` funciona.
 
-## {.smaller}
+## 
 
 A primeira parte da expressão implementada é `nome.substring(0,4)`.
 
@@ -518,14 +529,14 @@ Já a segunda parte da expressão é `matricula.substring(0,3)`. O que ela retor
 
 - Os três primeiros caracteres da matrícula.
 
-. . .
+##
 
 Portanto, para um aluno de nome **"Sebastião da Silva"** e matrícula **435221**, qual seria o valor retornado pelo método `obterLogin`?
 
 - Pense primeiro na resposta e depois valide criando um objeto no BlueJ.
 - Veja que o retorno seria **"Seba435"**.
 
-## 
+##
 
 ::: {.callout-note title="Exercício" icon=false}
 Qual seria o login retornado para uma estudante chamada **"Maria Pereira"**, com matrícula **332211**?
@@ -562,35 +573,8 @@ Obs.: mesmo que a mensagem seja exibida, o objeto deve ser criado normalmente co
 
 ##
 
-::: {.callout-important title="Entrega no Campus Virtual"}
-Tire um print da implementação do construtor da classe `Estudante` pedida no exercício anterior para enviar no Campus Virtual.
-
-**Importante**: para tirar o print, inclua, na primeira linha do construtor, um comentário com o seu nome completo.
-:::
-
-##
-
 ::: {.callout-note title="(Opcional) Exercício - [Desafio]{.alert}" icon=false}
 Altere o método `obterLogin` da classe `Estudante` de forma que ele sempre retorne um login, 
 mesmo que os atributos `nome` e `matricula` não tenham os tamanhos mínimos esperados.
 Caso algum atributo tenha tamanho insuficiente, use todos os caracteres do atributo.
-:::
-
-# Entregas dessa Aula {background-color="#40666e"}
-
-## {.smaller}
-
-::: {.nonincremental}
-
-Como você já sabe das aulas anteriores, para que você tenha a [presença]{.alert} 
-
-- considerada nas aula em [formato ANP]{.alert} (Atividade Não-Presencial), 
-- você precisa **demonstrar que** realmente **estudou** o conteúdo.
-
-::: {.callout-important title="Entregas no Campus Virtual"}
-Para ter presença nessa aula você deve:
-
-- Responder, no Campus Virtual, aos quizes presentes nesses slides.
-- Enviar os prints solicitados referentes aos exercícios da aula.
-:::
 :::

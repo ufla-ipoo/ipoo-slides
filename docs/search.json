@@ -1579,91 +1579,91 @@
     "href": "cap2-3.html#section",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Nas aulas anteriores você deve ter percebido que a classe MaquinaIngressos não serviria muito no mundo real, já que ela tem vários problemas.\n\nNão verifica se o cliente colocou dinheiro suficiente para comprar o ingresso.\nNão retorna troco se o cliente colocou mais dinheiro que o necessário.\nNão verifica se a quantidade de dinheiro faz sentido (aceita valor negativo, por exemplo).\n\nE o mesmo para o preço do ingresso (passado para o construtor).\n\n\n\nCorrigindo isso, teríamos um software que realmente poderia servir de base para uma máquina de ingressos real.\n\nVamos então avaliar o projeto maquina-ingressos-melhor, que tenta resolver os problemas apontados.\n\n\n\nAntes de analisarmos o código, experimente criar uma máquina de ingressos e chamar seus métodos e verifique o que funciona de forma diferente.\n\nVeja que há um novo método retornarTroco. Verifique o que acontece quando ele é chamado."
+    "text": "Nas aulas anteriores você deve ter percebido que a classe MaquinaIngressos não serviria muito no mundo real, já que ela tem vários problemas.\n\nNão verifica se o cliente colocou dinheiro suficiente para comprar o ingresso.\nNão retorna troco se o cliente colocou mais dinheiro que o necessário.\nNão verifica se a quantidade de dinheiro faz sentido (aceita valor negativo, por exemplo).\n\nE o mesmo para o preço do ingresso (passado para o construtor)."
   },
   {
     "objectID": "cap2-3.html#section-1",
     "href": "cap2-3.html#section-1",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Dê uma olhada no código da classe MaquinaIngressos do novo projeto.\n\nVeja que o nome da classe, os atributos, o construtor e os métodos de acesso são os mesmos da versão anterior.\nA primeira mudança está no método inserirDinheiro.\n\nVeja que o método possui um tratamento para evitar que o usuário insira quantidades negativas de dinheiro.\n\n\n\nNa disciplina anterior de algoritmos você já aprendeu a usar comandos condicionais (if/ else).\n\nNote que a sintaxe do comando if em Java é a mesma do C++.\nComo você deve se lembrar, colocamos no comando if uma expressão booleana que pode ser verdadeira (true) ou falsa (false).\n\nSe a expressão for verdadeira, o bloco de código (trecho entre chaves) logo após o if é executado.\nSe for falsa, o bloco de código executado é aquele logo após o else."
+    "text": "Corrigindo isso, teríamos um software que realmente poderia servir de base para uma máquina de ingressos real.\n\nVamos então avaliar o projeto maquina-ingressos-melhor, que tenta resolver os problemas apontados.\n\n\nAntes de analisarmos o código, experimente:\n\ncriar uma máquina de ingressos e chamar seus métodos, verificando o que funciona de forma diferente.\nVeja, por exemplo, que há um novo método retornarTroco. Veja o que acontece quando ele é chamado."
   },
   {
     "objectID": "cap2-3.html#section-2",
     "href": "cap2-3.html#section-2",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nCompare a implementação do método imprimirIngresso no projeto maquina-ingressos-melhor com o projeto anterior. Experimente com o BlueJ situações iguais nos dois projetos e compare o que acontece. Repare que, além de ter um comando condicional, o total e o saldo são atualizados de forma diferente.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nSeria possível remover o bloco else do método imprimirIngresso? Qual seria o efeito para o usuário, quando ele tentasse imprimir um ingresso sem inserir quantidade suficiente de dinheiro.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAvalie a implementação do método retornarTroco. Experimente colocar mais dinheiro que o necessário para um ingresso, imprima um ingresso e então chame o método retornarTroco. Tente também chamar o método quando não há saldo de dinheiro disponível."
+    "text": "Dê uma olhada no código da classe MaquinaIngressos do novo projeto.\n\nVeja que o nome da classe, os atributos, o construtor e os métodos de acesso são os mesmos da versão anterior.\nA primeira mudança está no método inserirDinheiro.\n\nVeja que o método possui um tratamento para evitar que o usuário insira quantidades negativas de dinheiro."
   },
   {
     "objectID": "cap2-3.html#section-3",
     "href": "cap2-3.html#section-3",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Ao avaliar o código de uma classe no BlueJ, você deve ter notado que ele mostra caixas coloridas ao redor de alguns elementos.\n\nComo ao redor dos blocos e comandos condicionais, por exemplo.\n\n\nEsses destaques coloridos são chamados de scope highlighting (ou destaque de escopo).\n\nEles nos ajudam a atender as unidades lógicas do programa.\nUm escopo, ou bloco, é o código que existe entre um par de chaves.\n\nO corpo de uma classe é um escopo.\nO corpo de cada método também é um escopo.\nE mesmo a parte do if de um comando condicional também é um escopo.\nPortanto, podemos ter escopos aninhados (ou seja, um dentro do outro)."
+    "text": "Na disciplina anterior de algoritmos você já aprendeu a usar comandos condicionais (if/ else).\n\nNote que a sintaxe do comando if em Java é a mesma do C++.\nComo você deve se lembrar, colocamos no comando if uma expressão booleana que pode ser verdadeira (true) ou falsa (false).\n\nSe a expressão for verdadeira, o bloco de código (trecho entre chaves) logo após o if é executado.\nSe for falsa, o bloco de código executado é aquele logo após o else."
   },
   {
     "objectID": "cap2-3.html#section-4",
     "href": "cap2-3.html#section-4",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "O BlueJ nos ajuda a identificar os escopos usando cores diferentes para cada um.\n\nNa imagem vemos com fundo branco os escopos de cada bloco do if e else.\nCom fundo roxo, o escopo do comando condicional.\nCom fundo amarelo o escopo do método.\nE com fundo verde o escopo da classe."
+    "text": "Exercício\n\n\nCompare a implementação do método imprimirIngresso no projeto maquina-ingressos-melhor com o projeto anterior. Experimente com o BlueJ situações iguais nos dois projetos e compare o que acontece. Repare que, além de ter um comando condicional, o total e o saldo são atualizados de forma diferente.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nSeria possível remover o bloco else do método imprimirIngresso? Qual seria o efeito para o usuário, quando ele tentasse imprimir um ingresso sem inserir quantidade suficiente de dinheiro."
   },
   {
     "objectID": "cap2-3.html#section-5",
     "href": "cap2-3.html#section-5",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Um erro muito comum para quem está começando é esquecer de fechar as chaves, ou colocar uma chave em um lugar errado.\n\nAs cores do BlueJ nos ajudam a identificar esse tipo de problema.\nAlém disso, é muito importante indentar o código, usando tabulação para cada bloco de código (cada trecho entre chaves).\n\n\n\n\n\n\n\n\n\n\nConvenção\n\n\nSe a sua indentação estiver ficando uma bagunça, o BlueJ pode te ajudar. Experimente alterar o código e forma que a indentação fique errada e depois a corriga automaticamente, acessando o menu Editar → Auto-indentação do editor de código do BlueJ."
+    "text": "Exercício\n\n\nAvalie a implementação do método retornarTroco. Experimente colocar mais dinheiro que o necessário para um ingresso, imprima um ingresso e então chame o método retornarTroco. Tente também chamar o método quando não há saldo de dinheiro disponível."
   },
   {
     "objectID": "cap2-3.html#section-6",
     "href": "cap2-3.html#section-6",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nExperimente remover uma chave do código da classe MaquinaIngressos e repare o que é alterado nas cores de fundo do editor de código. Experimente também inserir uma chave onde ela não seria esperada.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nEscreva um trecho de código em Java que compara o valor das variáveis preco e estimativa. Se o preço for maior que a estimativa, deve ser exibida a mensagem Muito caro.. Se o preço estiver abaixo da estimativa, a mensagem exibida deve ser Bora comprar, tá barato.. Por fim, se o preço for exatamente igual à estimativa, exiba a mensagem Na mosca!.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nLeia o anexo D.2 do livro do Barnes e Kölling para saber mais sobre os comandos condicionais da linguagem Java. Você verá mais detalhes sobre o comando if e também conhecerá o comando switch."
+    "text": "Ao avaliar o código de uma classe no BlueJ, você deve ter notado que ele mostra caixas coloridas ao redor de alguns elementos.\n\nComo ao redor dos blocos e comandos condicionais, por exemplo."
   },
   {
     "objectID": "cap2-3.html#section-7",
     "href": "cap2-3.html#section-7",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Até agora usamos dois tipos de variáveis: atributos (variáveis de instância) e parâmetros.\n\nVamos agora conhecer um terceiro tipo.\nO que os três tipos têm em comum?\n\nTodas eles servem para armazenar dados, mas cada um tem um objetivo diferente.\n\n\n\nRepare o código do método retornarTroco.\n\nEle possui três comandos e uma declaração (da variável troco).\n\n\npublic int retornarTroco()\n{\n    int troco;\n    troco = saldo;\n    saldo = 0;\n    return troco;\n}"
+    "text": "Esses destaques coloridos são chamados de scope highlighting (ou destaque de escopo).\n\nEles nos ajudam a atender as unidades lógicas do programa.\nUm escopo, ou bloco, é o código que existe entre um par de chaves.\n\nO corpo de uma classe é um escopo.\nO corpo de cada método também é um escopo.\nE mesmo a parte do if de um comando condicional também é um escopo.\nPortanto, podemos ter escopos aninhados (ou seja, um dentro do outro)."
   },
   {
     "objectID": "cap2-3.html#section-8",
     "href": "cap2-3.html#section-8",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Como podemos saber que a variável troco não é um atributo?\n\nPor que atributos são declarados fora dos métodos (diretamente no escopo da classe).\n\n\nE como sabemos que ela não é um parâmetro?\n\nPor que parâmetros são declarados na assinatura dos métodos e construtores.\n\n\n\nA variável troco é de um terceiro tipo: ela é uma variável local.\n\nTem esse nome porque ela é declarada dentro do corpo de um método.\nE, portanto, tem um escopo local (do método).\n\n\n\nVariáveis locais são declaradas como os atributos (mas sem os modificadores public e private).\n\nE a principal diferença é o tempo de vida.\nVariáves locais existem somente durante a execução do método.\n\nDiferente dos atributos que existem na memória enquanto o objeto existir."
+    "text": "O BlueJ nos ajuda a identificar os escopos usando cores diferentes para cada um.\n\n\n\n\n\nNa imagem vemos com fundo branco os escopos de cada bloco do if e else.\nCom fundo roxo, o escopo do comando condicional.\nCom fundo amarelo o escopo do método.\nE com fundo verde o escopo da classe."
   },
   {
     "objectID": "cap2-3.html#section-9",
     "href": "cap2-3.html#section-9",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Nós evitamos declarar como atributos variáveis que não precisam ser mantidas em memória depois que o método é chamado.\n\nRepare que atributos são características dos objetos.\nJá variáveis locais são apenas informações temporárias usadas para fazer algo durante a execução de um método.\nPortanto, se algo só precisa existir durante a execução do método, declará-lo como atributo desperdiçaria memória e feriria o conceito de objetos."
+    "text": "Um erro muito comum para quem está começando é esquecer de fechar as chaves, ou colocar uma chave em um lugar errado.\n\nAs cores do BlueJ nos ajudam a identificar esse tipo de problema.\nAlém disso, é muito importante indentar o código, usando tabulação para cada bloco de código (cada trecho entre chaves).\n\n\n\n\n\n\n\n\n\n\nConvenção\n\n\nSe a sua indentação estiver ficando uma bagunça, o BlueJ pode te ajudar. Experimente alterar o código e forma que a indentação fique errada e depois a corriga automaticamente, acessando o menu Editar → Auto-indentação do editor de código do BlueJ."
   },
   {
     "objectID": "cap2-3.html#section-10",
     "href": "cap2-3.html#section-10",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Nós usamos variáveis locais mesmo quando dois métodos na mesma classe têm variáveis locais com o mesmo objetivo (muitas vezes com o mesmo nome).\n\nÉ tentador declarar como atributo para “reaproveitar” a mesma declaração.\nMas, não devemos usar atributos para valores que não precisam existir depois da chamada dos métodos.\n\n\nPor exemplo:\n\nNo método retornarTroco, a variável troco é usada, temporariamente, apenas para guardar o valor do saldo antes dele ser zerado.\nDepois que o método é finalizado, não faz mais sentido guardar o valor do troco.\n\n\n\n\n\n\n\n\nCuidado\n\n\nSe você declarar uma variável local (ou um parâmetro) com o mesmo nome de um atributo, você não conseguirá acessar o atributo diretamente. No capítulo 3 aprenderemos um jeito de lidar com isso, se necessário."
+    "text": "Exercício\n\n\nExperimente remover uma chave do código da classe MaquinaIngressos e repare o que é alterado nas cores de fundo do editor de código. Experimente também inserir uma chave onde ela não seria esperada.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nEscreva um trecho de código em Java que compara o valor das variáveis preco e estimativa. Se o preço for maior que a estimativa, deve ser exibida a mensagem Muito caro.. Se o preço estiver abaixo da estimativa, a mensagem exibida deve ser Bora comprar, tá barato.. Por fim, se o preço for exatamente igual à estimativa, exiba a mensagem Na mosca!."
   },
   {
     "objectID": "cap2-3.html#section-11",
     "href": "cap2-3.html#section-11",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nPorque a implementação alternativa do método retornarTroco abaixo não dá o mesmo resultado da original? Faça testes que mostrem como o funcionamento é diferente.\n\npublic int retornarTroco()\n{\n    saldo = 0;\n    return saldo;\n}\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAltere o método retornarTroco usando a implementação abaixo. O código compila? Se não, explique porque não compila.\n\npublic int retornarTroco()\n{    \n    return saldo;\n    saldo = 0;\n}"
+    "text": "Exercício (PARA CASA)\n\n\nLeia o anexo D.2 do livro do Barnes e Kölling para saber mais sobre os comandos condicionais da linguagem Java.\nVocê verá mais detalhes sobre o comando if e também conhecerá o comando switch."
   },
   {
     "objectID": "cap2-3.html#section-12",
     "href": "cap2-3.html#section-12",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nO que há de errado com a implementação alternativa abaixo do construtor da classe MaquinaIngressos?\n\npublic MaquinaIngressos(int custoIngresso)\n{    \n    int preco = custoIngresso;\n    saldo = 0;\n    total = 0;\n}\n\nTente usar essa versão. O código compila?\nCrie um objeto e inspecione o valor dos atributos.\nHá algo de errado com o atributo preco?\nConsegue explicar o que aconteceu?"
+    "text": "Até agora usamos dois tipos de variáveis: atributos (variáveis de instância) e parâmetros.\n\nVamos agora conhecer um terceiro tipo.\nO que os três tipos têm em comum?\n\nTodas eles servem para armazenar dados, mas cada um tem um objetivo diferente."
   },
   {
     "objectID": "cap2-3.html#quiz-2.5",
@@ -1684,91 +1684,91 @@
     "href": "cap2-3.html#section-13",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "É importante entender as semelhanças e diferenças entre atributos, parâmetros e variáveis locais.\n\nOs três servem para armazenar valores de acordo com seu tipo.\n\n\nMas possuem diferenças importantes:\n\n\n\n\n\n\n\n\n\n\n\n\nAtributos\nParâmetros\nVariáveis locais\n\n\n\n\nDeclaração\nfora dos métodos e construtores\nna assinatura de métodos/construtores\nno corpo dos métodos/construtores\n\n\nTempo de vida\ndo objeto\ndo método/construtor\ndo método/construtor\n\n\nEscopo\nacessível em qualquer lugar da classe\nacessível no método/construtor\nacessível no bloco onde é declarado\n\n\nValor padrão\nSim\nNão (valor é passado de fora do objeto)\nNão (precisa ser inicializada antes de usada)"
+    "text": "Repare o código do método retornarTroco.\n\nEle possui três comandos e uma declaração (da variável troco).\n\n\npublic int retornarTroco()\n{\n    int troco;\n    troco = saldo;\n    saldo = 0;\n    return troco;\n}"
   },
   {
     "objectID": "cap2-3.html#section-14",
     "href": "cap2-3.html#section-14",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Dica\n\n\nSe estiver em dúvida se uma variável deve ser declarada como atributo ou variável local:\n\nDê preferência sempre a declará-la como variável local.\nSó declare como atributo se tiver certeza que:\n\nÉ uma informação que precisa ser mantida mesmo depois da chamada do método.\nÉ uma característica do objeto (algo que o descreve/representa)."
+    "text": "Como podemos saber que a variável troco não é um atributo?\n\nPor que atributos são declarados fora dos métodos (diretamente no escopo da classe).\n\n\nE como sabemos que ela não é um parâmetro?\n\nPor que parâmetros são declarados na assinatura dos métodos e construtores.\n\n\n\nA variável troco é de um terceiro tipo: ela é uma variável local."
   },
   {
     "objectID": "cap2-3.html#section-15",
     "href": "cap2-3.html#section-15",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nAdicione um novo método esvaziar à classe MaquinaIngressos. Você já tinha feito isso na aula passada no projeto anterior, mas, agora, além zerar o valor do atributo total, o método deve retornar o valor do total antes dele ser zerado.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAltere o método imprimirIngresso criando uma variável local chamada valorQueFalta. A variável deve receber a diferença entre o preço e o saldo, ou seja, o valor que falta para completar o preço de um ingresso. Altere o comando condicional para que o teste seja feito verificando o valor da variável valorQueFalta, e utilize a variável também na mensagem dada quando não há dinheiro suficiente para comprar um ingresso.\nTeste as alterações criando situações que caiam tanto no bloco if quanto no bloco else, para garantir que tudo está funcionando como deveria."
+    "text": "A variável troco é de um terceiro tipo: ela é uma variável local.\n\nTem esse nome porque ela é declarada dentro do corpo de um método.\nE, portanto, tem um escopo local (do método).\n\n\nVariáveis locais são declaradas como os atributos (mas sem os modificadores public e private).\n\nE a principal diferença é o tempo de vida.\nVariáves locais existem somente durante a execução do método.\n\nDiferente dos atributos que existem na memória enquanto o objeto existir."
   },
   {
     "objectID": "cap2-3.html#section-16",
     "href": "cap2-3.html#section-16",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Entrega no Campus Virtual\n\n\nTire um print da implementação do método imprimirIngresso pedida no exercício anterior para enviar no Campus Virtual.\nImportante: para tirar o print, inclua, na primeira linha do método, um comentário com o seu nome completo."
+    "text": "Nós evitamos declarar como atributos variáveis que não precisam ser mantidas em memória depois que o método é chamado.\n\nRepare que atributos são características dos objetos.\nJá variáveis locais são apenas informações temporárias usadas para fazer algo durante a execução de um método.\nPortanto, se algo só precisa existir durante a execução do método, declará-lo como atributo desperdiçaria memória e feriria o conceito de objetos."
   },
   {
     "objectID": "cap2-3.html#section-17",
     "href": "cap2-3.html#section-17",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "(Opcional) Exercício - Desafio\n\n\nSalve o projeto da máquina de ingressos com um novo nome (ex.: maquina-ingressos-varios-precos).\nAltere a classe MaquinaIngressos do novo projeto de forma que ela possa emitir ingressos de preços diferentes. Imagine que a máquina real tenha um botão que permite ao usuário escolher uma opção de ingresso com desconto, antes de solicitar a impressão do ingresso.\nQuais atributos e métodos precisariam ser adicionados à classe para tratar isso?\nVocê acha que seria necessário alterar muitos dos métodos que já existiam?"
+    "text": "Nós evitamos declarar como atributos variáveis que não precisam ser mantidas em memória depois que o método é chamado.\n\nRepare que atributos são características dos objetos.\nJá variáveis locais são apenas informações temporárias usadas para fazer algo durante a execução de um método.\nPortanto, se algo só precisa existir durante a execução do método, declará-lo como atributo desperdiçaria memória e feriria o conceito de objetos."
   },
   {
     "objectID": "cap2-3.html#section-20",
     "href": "cap2-3.html#section-20",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "O método obterLogin da classe Estudante tem algo diferente que é interessante analisarmos.\n\n  public String obterLogin()\n  {\n    return nome.substring(0,4) + matricula.substring(0,3);\n  }\n\nRepare em dois pontos interessantes:\n\nMétodos de outros objetos são chamados, e eles retornam um resultado.\nO resultado retornado é usado como parte de uma expressão."
+    "text": "Cuidado\n\n\nSe você declarar uma variável local (ou um parâmetro) com o mesmo nome de um atributo, você não conseguirá acessar o atributo diretamente. No capítulo 3 aprenderemos um jeito de lidar com isso, se necessário."
   },
   {
     "objectID": "cap2-3.html#section-21",
     "href": "cap2-3.html#section-21",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Os atributos nome e matricula são objetos String.\n\nE a classe String possui um método chamado substring.\n\n\nO método substring tem o seguinte comentário e assinatura.\n\n/*\n* Returns a string that is a substring of this string. \n* The substring begins at the specified beginIndex \n* and extends to the character at index endIndex - 1. \n* Thus the length of the substring is endIndex-beginIndex.\n*/\npublic String substring(int beginIndex, int endIndex)\n\n\n\nPelo comentário vemos que o método retorna uma string que é parte da string original.\n\nA string retornada inclui os caracteres que estão da posição beginIndex (primeiro parâmetro) até a posição anterior a endIndex (segundo parâmetro).\n\n\n\nSabendo disso, vamos entender como o método obterLogin funciona."
+    "text": "Exercício\n\n\nPorque a implementação alternativa do método retornarTroco abaixo não dá o mesmo resultado da original? Faça testes que mostrem como o funcionamento é diferente.\n\npublic int retornarTroco()\n{\n    saldo = 0;\n    return saldo;\n}\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAltere o método retornarTroco usando a implementação abaixo. O código compila? Se não, explique porque não compila.\n\npublic int retornarTroco()\n{    \n    return saldo;\n    saldo = 0;\n}"
   },
   {
     "objectID": "cap2-3.html#section-22",
     "href": "cap2-3.html#section-22",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "A primeira parte da expressão implementada é nome.substring(0,4).\n\nPelo que vimos do método substring, isso significa que são retornados os quatro primeiros caracteres do nome do estudante (da posição 0 até a posição 3).\n\n\nJá a segunda parte da expressão é matricula.substring(0,3). O que ela retorna?\n\nOs três primeiros caracteres da matrícula.\n\n\n\nPortanto, para um aluno de nome “Sebastião da Silva” e matrícula 435221, qual seria o valor retornado pelo método obterLogin?\n\nPense primeiro na resposta e depois valide criando um objeto no BlueJ.\nVeja que o retorno seria “Seba435”."
+    "text": "Exercício\n\n\nO que há de errado com a implementação alternativa abaixo do construtor da classe MaquinaIngressos?\n\npublic MaquinaIngressos(int custoIngresso)\n{    \n    int preco = custoIngresso;\n    saldo = 0;\n    total = 0;\n}\n\nTente usar essa versão. O código compila?\nCrie um objeto e inspecione o valor dos atributos.\nHá algo de errado com o atributo preco?\nConsegue explicar o que aconteceu?"
   },
   {
     "objectID": "cap2-3.html#section-23",
     "href": "cap2-3.html#section-23",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nQual seria o login retornado para uma estudante chamada “Maria Pereira”, com matrícula 332211?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nCrie um Estudante com o nome \"Teo\" e matrícula \"748392\". O que acontece quando o método obterLogin é chamado para este estudante? Por que você acha que isso acontece?"
+    "text": "É importante entender as semelhanças e diferenças entre atributos, parâmetros e variáveis locais.\n\nOs três servem para armazenar valores de acordo com seu tipo.\nMas possuem diferenças importantes, como mostrado na tabela a seguir."
   },
   {
     "objectID": "cap2-3.html#section-24",
     "href": "cap2-3.html#section-24",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício\n\n\nA classe String possui um método de acesso chamado length, com o seguinte cabeçalho:\n\n/**\n * Return the number of characters in this string.\n */\npublic int length()\n\nAdicione um comando condicional ao construtor da classe Estudante e imprima um erro na tela caso o parâmetro nomeCompleto tenha menos que quatro caracteres, ou o parâmetro matriculaEstudante tenha menos de três caracteres.\nObs.: mesmo que a mensagem seja exibida, o objeto deve ser criado normalmente com os valores passados."
+    "text": "Atributos\nParâmetros\nVariáveis locais\n\n\n\n\nDeclaração\nfora dos métodos e construtores\nna assinatura de métodos/construtores\nno corpo dos métodos/construtores\n\n\nTempo de vida\ndo objeto\ndo método/construtor\ndo método/construtor\n\n\nEscopo\nacessível em qualquer lugar da classe\nacessível no método/construtor\nacessível no bloco onde é declarado\n\n\nValor padrão\nSim\nNão (valor é passado de fora do objeto)\nNão (precisa ser inicializada antes de ser usada)"
   },
   {
     "objectID": "cap2-3.html#section-25",
     "href": "cap2-3.html#section-25",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Entrega no Campus Virtual\n\n\nTire um print da implementação do construtor da classe Estudante pedida no exercício anterior para enviar no Campus Virtual.\nImportante: para tirar o print, inclua, na primeira linha do construtor, um comentário com o seu nome completo."
+    "text": "Dica\n\n\nSe estiver em dúvida se uma variável deve ser declarada como atributo ou variável local:\n\nDê preferência sempre a declará-la como variável local.\nSó declare como atributo se tiver certeza que:\n\nÉ uma informação que precisa ser mantida mesmo depois da chamada do método.\nÉ uma característica do objeto (algo que o descreve/representa)."
   },
   {
     "objectID": "cap2-3.html#section-26",
     "href": "cap2-3.html#section-26",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "(Opcional) Exercício - Desafio\n\n\nAltere o método obterLogin da classe Estudante de forma que ele sempre retorne um login, mesmo que os atributos nome e matricula não tenham os tamanhos mínimos esperados. Caso algum atributo tenha tamanho insuficiente, use todos os caracteres do atributo."
+    "text": "Exercício\n\n\nAdicione um novo método esvaziar à classe MaquinaIngressos. Você já tinha feito isso na aula passada no projeto anterior, mas, agora, além zerar o valor do atributo total, o método deve retornar o valor do total antes dele ser zerado.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAltere o método imprimirIngresso criando uma variável local chamada valorQueFalta. A variável deve receber a diferença entre o preço e o saldo, ou seja, o valor que falta para completar o preço de um ingresso. Altere o comando condicional para que o teste seja feito verificando o valor da variável valorQueFalta, e utilize a variável também na mensagem dada quando não há dinheiro suficiente para comprar um ingresso.\nTeste as alterações criando situações que caiam tanto no bloco if quanto no bloco else, para garantir que tudo está funcionando como deveria."
   },
   {
     "objectID": "cap2-3.html#section-27",
     "href": "cap2-3.html#section-27",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Como você já sabe das aulas anteriores, para que você tenha a presença\n\nconsiderada nas aula em formato ANP (Atividade Não-Presencial),\nvocê precisa demonstrar que realmente estudou o conteúdo.\n\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nPara ter presença nessa aula você deve:\n\nResponder, no Campus Virtual, aos quizes presentes nesses slides.\nEnviar os prints solicitados referentes aos exercícios da aula."
+    "text": "(Opcional) Exercício - Desafio\n\n\nSalve o projeto da máquina de ingressos com um novo nome (ex.: maquina-ingressos-varios-precos).\nAltere a classe MaquinaIngressos do novo projeto de forma que ela possa emitir ingressos de preços diferentes. Imagine que a máquina real tenha um botão que permite ao usuário escolher uma opção de ingresso com desconto, antes de solicitar a impressão do ingresso.\nQuais atributos e métodos precisariam ser adicionados à classe para tratar isso?\nVocê acha que seria necessário alterar muitos dos métodos que já existiam?"
   },
   {
     "objectID": "cap2-1.html#como-estudar-esse-conteúdo",
@@ -2629,98 +2629,98 @@
     "href": "cap2-2.html#section",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Para fazer os exercícios, baixe o projeto maquina-ingressos-ingenua original da aula anterior.\n\nVocê pode estar se perguntando se não seria melhor usar o projeto que você alterou ao estudar a aula teórica ANP.\nSe tiver acesso ao projeto pode utilizá-lo, mas como a entrega foi feita no Google Forms, não é possível baixá-lo de lá.\nDe todo modo as alterações que faremos aqui nessa aula não dependem do que você tinha feito na aula teórica."
+    "text": "Para fazer os exercícios, baixe o projeto maquina-ingressos-ingenua original da aula anterior.\n\nVocê pode estar se perguntando se não seria melhor usar o projeto com as alterações feitas durante a aula teórica.\nÉ que as alterações que faremos aqui nessa aula não dependem das alterações que tínhamos feito lá."
   },
   {
     "objectID": "cap2-2.html#section-1",
     "href": "cap2-2.html#section-1",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 1.1\n\n\nModifique o construtor da classe MaquinaIngressos de forma que ele não receba mais parâmetros. Em vez disso, o preço dos ingressos deve ser fixado em 1000 centavos (R$ 10,00).\nCom essa alteração, o que muda na hora de criar uma máquina de ingressos no BlueJ?\n\n\n\n\n\n\n\n\nExercício 1.2\n\n\nAltere agora a classe de forma que ela passe a ter dois construtores. Um que recebe o preço do ingresso por parâmetro e outro que não recebe nenhum parâmetro (neste caso, escolha um valor fixo padrão para o preço dos ingressos).\nTeste as alterações criando máquinas usando os dois construtores."
+    "text": "Exercício 1.1\n\n\nModifique o construtor da classe MaquinaIngressos de forma que ele não receba mais parâmetros. Em vez disso, o preço dos ingressos deve ser fixado em 1000 centavos (R$ 10,00).\nCom essa alteração, o que muda na hora de criar uma máquina de ingressos no BlueJ?\nResponda escrevendo um comentário dentro do corpo (bloco de código) do construtor."
   },
   {
     "objectID": "cap2-2.html#section-2",
     "href": "cap2-2.html#section-2",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 1.3\n\n\nCrie um método na classe MaquinaIngressos que retorne o valor do total de dinheiro arrecadado na máquina (o valor do atributo total). Ao escolher o nome do método, siga a convenção de nomenclatura da classe.\nAcrescente um comentário no método dizendo se esse é um método de acesso ou um método modificador e justificando sua resposta.\n\n\n\n\n\n\n\n\n\n\nExercício 1.4\n\n\nPara simular a operação de remover dinheiro da máquina de ingressos, crie um método chamado esvaziar na classe MaquinaIngressos. O método deve ter tipo de retorno void e deve somente mudar o valor do total para zero. Avalie se o método precisa receber algum parâmetro.\nAcrescente um comentário no método dizendo se esse é um método de acesso ou um método modificador e justificando sua resposta.\nPor fim, teste sua implementação inserindo dinheiro na máquina, comprando ingresso, verificando o total e então esvaziando a máquina e verificando o total novamente."
+    "text": "Exercício 1.2\n\n\nAltere agora a classe de forma que ela passe a ter dois construtores. Um que recebe o preço do ingresso por parâmetro e outro que não recebe nenhum parâmetro (neste caso, escolha um valor fixo padrão para o preço dos ingressos).\nTeste as alterações criando máquinas usando os dois construtores.\nCom essa alteração, o que muda na hora de criar uma máquina de ingressos no BlueJ?\nResponda escrevendo um comentário dentro do corpo (bloco de código) do segundo construtor."
   },
   {
     "objectID": "cap2-2.html#section-3",
     "href": "cap2-2.html#section-3",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 1.4\n\n\nPara simular a operação de remover dinheiro da máquina de ingressos, crie um método chamado esvaziar na classe MaquinaIngressos. O método deve ter tipo de retorno void e deve somente mudar o valor do total para zero. Avalie se o método precisa receber algum parâmetro.\nAcrescente um comentário no método dizendo se esse é um método de acesso ou um método modificador e justificando sua resposta.\nPor fim, teste sua implementação inserindo dinheiro na máquina, comprando ingresso, verificando o total e então esvaziando a máquina e verificando o total novamente."
+    "text": "Exercício 1.3\n\n\nCrie um método na classe MaquinaIngressos que retorne o valor do total de dinheiro arrecadado na máquina (o valor do atributo total). Ao escolher o nome do método, siga a convenção de nomenclatura da classe.\nAcrescente um comentário no cabeçalho do método dizendo se esse é um método de acesso ou um método modificador e justificando sua resposta.\nTeste sua implementação!"
   },
   {
     "objectID": "cap2-2.html#section-4",
     "href": "cap2-2.html#section-4",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 1.5\n\n\nAo imprimir um ingresso você deve ter notado que aparece o texto Ingressos & Cia, que seria o nome da empresa que vende os ingressos. Vamos agora permitir que cada máquina possa vender ingressos de uma empresa diferente. Repare que, para isso, quando uma máquina é criada ela precisará guardar o nome da empresa.\nComo podemos fazer isso? (Pense na solução antes de continuar.)\n\nVeja que basta você alterar a classe MaquinaIngressos fazendo o seguinte:\n\nCrie um novo atributo para guardar o nome da empresa.\nReceba o nome da empresa por parâmetro nos dois construtores da classe e guarde a informação no novo atributo.\nAltere o método imprimirIngresso para que ele exiba o nome da empresa em vez do texto Ingressos & Cia.\nPara que o código fique mais completo, crie também um método de acesso que retorne o nome da empresa."
+    "text": "Exercício 1.4\n\n\nPara simular a operação de remover dinheiro da máquina de ingressos, crie um método chamado esvaziar na classe MaquinaIngressos. O método deve ter tipo de retorno void e deve somente mudar o valor do total para zero. Avalie se o método precisa receber algum parâmetro.\nAcrescente um comentário no cabeçalho do método dizendo se esse é um método de acesso ou um método modificador e justificando sua resposta.\nPor fim, teste sua implementação inserindo dinheiro na máquina, comprando ingresso, verificando o total e então esvaziando a máquina e verificando o total novamente."
   },
   {
     "objectID": "cap2-2.html#section-5",
     "href": "cap2-2.html#section-5",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 1.6\n\n\nPara evitar a ação de cambistas, as empresas que vendem ingressos pediram que o nome do comprador seja impresso junto com o ingresso.\nComo você pode tratar isso fazendo alterações apenas no método imprimirIngresso?\nFaça a implementação."
+    "text": "Exercício 1.5\n\n\nAo imprimir um ingresso você deve ter notado que aparece o texto Ingressos & Cia, que seria o nome da empresa que vende os ingressos. Vamos agora permitir que cada máquina possa vender ingressos de uma empresa diferente. Repare que, para isso, quando uma máquina é criada ela precisará guardar o nome da empresa.\nComo podemos fazer isso? (Pense na solução antes de continuar.)\n\nVeja que basta você alterar a classe MaquinaIngressos fazendo o seguinte:\n\nCrie um novo atributo para guardar o nome da empresa.\nReceba o nome da empresa por parâmetro nos dois construtores da classe e guarde a informação no novo atributo.\nAltere o método imprimirIngresso para que ele exiba o nome da empresa em vez do texto Ingressos & Cia.\nPara que o código fique mais completo, crie também um método de acesso que retorne o nome da empresa."
   },
   {
     "objectID": "cap2-2.html#section-6",
     "href": "cap2-2.html#section-6",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 1.7 - Desafio\n\n\nAltere o método imprimirIngresso de forma que o preço do ingresso seja exibido em reais, em vez de centavos. O preço deve aparecer conforme o exemplo abaixo.\n##################\n# Ingressos & Cia \n# Ingresso\n# R$ 4,50\n##################\nObservações:\n\nO valor do ingresso deve continuar sendo guardado em centavos. A alteração deve ser feita somente na hora de exibir os dados do ingresso na tela.\nPesquise na internet sobre como uma String pode ser formatada em Java de forma que o valor sempre apareça com duas casas decimais e com vírgula como separador dos decimais.\nLembre-se de testar casos de ingressos com valores que tenham centavos “quebrados”, como R$ 4,50."
+    "text": "Exercício 1.6\n\n\nPara evitar a ação de cambistas, as empresas que vendem ingressos pediram que o nome do comprador seja impresso junto com o ingresso.\nComo você pode tratar isso fazendo alterações apenas no método imprimirIngresso?\nFaça a implementação."
   },
   {
     "objectID": "cap2-2.html#section-7",
     "href": "cap2-2.html#section-7",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto maquina-ingressos-ingenua da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar);"
+    "text": "Exercício 1.7 - Desafio\n\n\nAltere o método imprimirIngresso de forma que o preço do ingresso seja exibido em reais, em vez de centavos. O preço deve aparecer conforme o exemplo abaixo.\n##################\n# Ingressos & Cia \n# Ingresso\n# R$ 4,50\n##################\nObservações:\n\nO valor do ingresso deve continuar sendo guardado em centavos. A alteração deve ser feita somente na hora de exibir os dados do ingresso na tela.\nPesquise na internet sobre como uma String pode ser formatada em Java de forma que o valor sempre apareça com duas casas decimais e com vírgula como separador dos decimais.\nLembre-se de testar casos de ingressos com valores que tenham centavos “quebrados”, como R$ 4,50."
   },
   {
     "objectID": "cap2-2.html#section-8",
     "href": "cap2-2.html#section-8",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Os exercícios a seguir são do projeto da nave, que você já trabalhou no capítulo anterior.\n\nEles servem para reforçar os conceitos e, ao mesmo tempo, para conhecer mais sobre a linguagem Java.\n\n\nFazendo esses exercícios você terá um jogo mais interessante:\n\nO nível de proteção vai variar a cada vez que começa o jogo.\nOs tiros do inimigo terão velocidades diferentes.\nE o inimigo ficará mais rápido a cada mudança de nível (a cada 500 pontos)."
+    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto maquina-ingressos-ingenua da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar);"
   },
   {
     "objectID": "cap2-2.html#section-9",
     "href": "cap2-2.html#section-9",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 2.1 - Nível de proteção variável\n\n\nVamos deixar a dificuldade do jogo um pouco imprevisível.\n\nCrie um método na classe Nave chamado gerarNivelDeProtecao.\nDentro desse método faça com que o atributo nivelDeProtecao receba um valor aleatório entre 0 e 140.\n\nDica: Estude como o objeto da classe Random é usado na classe Inimigo.\nRepare todos os lugares onde ele é usado na classe Inimigo e veja o que precisa ser feito de forma similar na classe Nave.\n\nAltere então a inicialização do atributo nivelDeProtecao, retirando o código atual que o inicializa com 100 e usando o retorno do método gerarNivelDeProtecao.\n\nJogue o jogo e reinicie-o algumas vezes ao morrer.\n\nDeu certo, conforme esperado? Senão, corrija o que ficou faltando."
+    "text": "Questionário no Campus Virtual\n\n\nAcesse e responda, no Campus Virtual, o Questionário de Revisão da Aula 2.2."
   },
   {
     "objectID": "cap2-2.html#section-10",
     "href": "cap2-2.html#section-10",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Exercício 2.2 - Tiros variados\n\n\nA gente tinha facilitado as coisas colocando o nível de proteção.\n\nAgora vamos dificultar um pouco.\n\nVamos fazer com que cada tiro do inimigo possa ter uma velocidade diferente.\n\nA classe Tiro sabe quando um tiro é do inimigo ou da nave.\nAltere então o construtor da classe Tiro de forma que a velocidade do tiro do inimigo (apenas dele) possa ser de 1 a 5 vezes mais rápida que a velocidade normal (valor sorteado aleatoriamente).\n\nJogue o jogo e teste a alteração.\n\nE aí, ficou mais divertido?"
+    "text": "Os exercícios a seguir são uma continuação dos exercícios opcionais do projeto da nave, tratados na aula anterior.\n\nEsses exercícios também são opcionais (não precisam ser entregues).\nMas são muito interessantes para reforçar os conceitos e, ao mesmo tempo, para conhecer mais sobre a linguagem Java.\n\nE ainda vai se divertir jogando! 🚀\n\nObs.: se não tinha feito os exercícios na aula passada, comece por eles antes de continuar aqui.\n\nFazendo esses exercícios você terá um jogo mais interessante:\n\nO nível de proteção vai variar a cada vez que começa o jogo.\nOs tiros do inimigo terão velocidades diferentes.\nE o inimigo ficará mais rápido a cada mudança de nível (a cada 500 pontos)."
   },
   {
     "objectID": "cap2-2.html#section-11",
     "href": "cap2-2.html#section-11",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Nosso objetivo agora é fazer com que o inimigo fique mais rápido à medida que avançamos no jogo.\n\nA ideia é que o jogador comece no nível 1 e mude de nível a cada 500 pontos.\nE, a cada nível, o inimigo fica mais rápido.\nPara tratar isso, vamos fazer os próximos dois exercícios.\n\n\nObs.: os exercícios seguintes são opcionais."
+    "text": "(OPCIONAL) Exercício 2.1 - Nível de proteção variável\n\n\nVamos deixar a dificuldade do jogo um pouco imprevisível.\n\nCrie um método na classe Nave chamado gerarNivelDeProtecao.\nDentro desse método faça com que o atributo nivelDeProtecao receba um valor aleatório entre 0 e 140.\n\nDica: Estude como o objeto da classe Random é usado na classe Inimigo.\nRepare todos os lugares onde ele é usado na classe Inimigo e veja o que precisa ser feito de forma similar na classe Nave.\n\nAltere então a inicialização do atributo nivelDeProtecao, retirando o código atual que o inicializa com 100 e usando o retorno do método gerarNivelDeProtecao.\n\nJogue o jogo e reinicie-o algumas vezes ao morrer.\n\nDeu certo, conforme esperado? Senão, corrija o que ficou faltando."
   },
   {
     "objectID": "cap2-2.html#section-12",
     "href": "cap2-2.html#section-12",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "(OPCIONAL) Exercício 2.3 - Tratando níveis\n\n\nFaça as alterações a seguir na classe Placar:\n\nCrie um novo atributo chamado nivelAtual.\nInicialize o novo atributo com valor 1 dentro do método inicializar.\nAltere o método contarMorteInimigo de forma que, a cada 500 pontos, o nível atual seja incrementado em 1.\n\nDica: basta acrescentar uma condição que verifique o resto da divisão por zero como mostrado abaixo.\n\n\n\nif (pontos % 500 == 0) {\n    nivelAtual = nivelAtual + 1\n}\n\n\nCrie um método de acesso que retorne o nível atual.\n\nAgora, precisamos que o jogador consiga saber em que nível está.\n\nPara isso, procure o método desenharPlacar na classe Cenario e encontre a linha abaixo:\n\n\ng.drawString(\"Pontos: \" + placar.getPontos(), posX, posY);\n\n\nVeja que o primeiro argumento passado para o método drawString é a String que aparece na tela com o valor do placar (ex: Pontos: 150).\n\nConcatene à String passada a palavra nivel e o valor do nível atual (usando o método de consulta que você criou na classe Placar).\n\n\nJogue o jogo e teste suas alterações."
+    "text": "(OPCIONAL) Exercício 2.2 - Tiros variados\n\n\nA gente tinha facilitado as coisas colocando o nível de proteção.\n\nAgora vamos dificultar um pouco.\n\nVamos fazer com que cada tiro do inimigo possa ter uma velocidade diferente.\n\nA classe Tiro sabe quando um tiro é do inimigo ou da nave.\nAltere então o construtor da classe Tiro de forma que a velocidade do tiro do inimigo (apenas dele) possa ser de 1 a 5 vezes mais rápida que a velocidade normal (valor sorteado aleatoriamente).\n\nJogue o jogo e teste a alteração.\n\nE aí, ficou mais divertido?"
   },
   {
     "objectID": "cap2-4.html#sobre-as-aulas-práticas",
     "href": "cap2-4.html#sobre-as-aulas-práticas",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "Sobre as Aulas Práticas",
-    "text": "Sobre as Aulas Práticas\nRelembrando:\n\nAulas práticas são importantes para o entendimento dos conceitos.\nMas, para isso, é fundamental que tenha estudado o conteúdo teórico ANP antes da aula prática."
+    "text": "Sobre as Aulas Práticas\n\nRelembrando:\n\nAulas práticas são importantes para o entendimento dos conceitos.\nMas, para isso, é fundamental que tenha estudado o conteúdo teórico ANP antes da aula prática."
   },
   {
     "objectID": "cap2-4.html#section",
@@ -4890,7 +4890,7 @@
     "href": "cap2-2.html#section-13",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "(OPCIONAL) Exercício 2.4 - Inimigo mais rápido\n\n\nVamos agora fazer com que o inimigo fique mais rápido a cada mudança de nível.\nQuando o inimigo morre, o método inicializar da classe Inimigo é chamado para que ele viva novamente.\n\nVamos alterar esse método para que ele receba o nível atual do jogo e defina a velocidade do inimigo de acordo com o nível.\n\nPara isso: crie um parâmetro no método para receber o nível atual.\nE altere a linha que define a velocidade de forma que ela seja igual a 10 no primeiro nível, 20 no segundo nível e assim sucessivamente.\n\n\nPrecisaremos alterar agora as chamadas do método inicializar do inimigo, passando o nível atual.\n\nNa própria classe Inimigo o método é chamado no construtor. Altere a chamada passando o valor 1 como o nível atual.\nO método inicializar do inimigo é chamado também dentro do método reiniciarInimigo da classe Cenario. Altere a chamada passando o valor do nível atual (usando o objeto placar).\n\nSe você testar as alterações feitas até agora, verá que, quando o jogo reinicia, a velocidade do inimigo no primeiro nível não fica correta.\n\nPara corrigir isso, basta alterar o método inicializar da classe Cenario de forma que o placar seja inicializado antes do inimigo.\n\nDica: enquanto estiver testando, para agilizar, faça com que o nível mude a cada 100 pontos em vez de 500. Mas não esqueça de voltar para 500 antes de terminar."
+    "text": "Nosso objetivo agora é fazer com que o inimigo fique mais rápido à medida que avançamos no jogo.\n\nA ideia é que o jogador comece no nível 1 e mude de nível a cada 500 pontos.\nE, a cada nível, o inimigo fica mais rápido.\nPara tratar isso, vamos fazer os próximos dois exercícios.\n\n\nObs.: os exercícios seguintes são opcionais."
   },
   {
     "objectID": "cap2-4.html#section-21",
@@ -5737,14 +5737,14 @@
     "href": "cap2-2.html#sobre-as-aulas-práticas-1",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "Sobre as Aulas Práticas",
-    "text": "Sobre as Aulas Práticas\nAs aulas práticas são fundamentais para que consigamos entender os conceitos e saber como aplicá-los em um programa real.\n\nE, para conseguirmos acompanhar a aula, é fundamental ter estudado o conteúdo da aula teórica anterior antes da aula prática.\nPortanto, se tiver faltado da aula teórica, estude o conteúdo em casa antes da aula prática.\n\n\n\n\n\n\n\n\n\nConvenção\n\n\nLembre-se que para ter presença na aula prática é necessário.\n\nResponder à chamada;\ne, também, entregar, no mínimo, 30% do exercícios propostos até o final da aula.\n\nE não se esqueça de enviar suas atividades ao terminar aula (mesmo que não tiver terminado).\n\nPara que possa terminar em casa."
+    "text": "Sobre as Aulas Práticas\nAs aulas práticas são importantes para que consigam entender os conceitos e saber como aplicá-los em um programa real.\n\nE, para conseguir acompanhar a aula, é fundamental ter estudado o conteúdo da aula teórica anterior antes da aula prática.\nPortanto, se tiver faltado da aula teórica, estude o conteúdo em casa antes da aula prática.\n\n\n\n\n\n\n\n\n\n\nPresença\n\n\nLembre-se que para ter presença na aula prática é necessário.\n\nResponder à chamada;\ne, também, entregar, no mínimo, 30% do exercícios propostos até o final da aula.\n\nE não se esqueça de enviar suas atividades ao terminar aula mesmo que não tiver terminado.\n\nPara que possa terminar em casa."
   },
   {
     "objectID": "cap2-2.html#section-14",
     "href": "cap2-2.html#section-14",
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
-    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto nave da forma que ficou após as suas alterações (compacte a pasta em um arquivo .zip para enviar);"
+    "text": "(OPCIONAL) Exercício 2.3 - Tratando níveis\n\n\nFaça as alterações a seguir na classe Placar:\n\nCrie um novo atributo chamado nivelAtual.\nInicialize o novo atributo com valor 1 dentro do método inicializar.\nAltere o método contarMorteInimigo de forma que, a cada 500 pontos, o nível atual seja incrementado em 1.\n\nDica: basta acrescentar uma condição que verifique o resto da divisão por zero como mostrado abaixo.\n\n\n\nif (pontos % 500 == 0) {\n    nivelAtual = nivelAtual + 1\n}\n\n\nCrie um método de acesso que retorne o nível atual.\n\nAgora, precisamos que o jogador consiga saber em que nível está.\n\nPara isso, procure o método desenharPlacar na classe Cenario e encontre a linha abaixo:\n\n\ng.drawString(\"Pontos: \" + placar.getPontos(), posX, posY);\n\n\nVeja que o primeiro argumento passado para o método drawString é a String que aparece na tela com o valor do placar (ex: Pontos: 150).\n\nConcatene à String passada a palavra nivel e o valor do nível atual (usando o método de consulta que você criou na classe Placar).\n\n\nJogue o jogo e teste suas alterações."
   },
   {
     "objectID": "cap2-1.html#section-55",
@@ -5948,5 +5948,117 @@
     "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
     "section": "",
     "text": "Como você já viu na aula anterior, para que você tenha a presença\n\nconsiderada nas aula em formato ANP (Atividade Não-Presencial),\nvocê precisa demonstrar que realmente estudou o conteúdo.\n\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nPara ter presença nessa aula você deve responder, no Campus Virtual, aos quizes presentes nesses slides.\nVocê deve também enviar o projeto maquina-ingressos-ingenua como ele ficou após terem sido feitas todas as alterações pedidas ao longo da aula."
+  },
+  {
+    "objectID": "cap2-2.html#section-15",
+    "href": "cap2-2.html#section-15",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "(OPCIONAL) Exercício 2.4 - Inimigo mais rápido\n\n\nVamos agora fazer com que o inimigo fique mais rápido a cada mudança de nível.\nQuando o inimigo morre, o método inicializar da classe Inimigo é chamado para que ele viva novamente.\n\nVamos alterar esse método para que ele receba o nível atual do jogo e defina a velocidade do inimigo de acordo com o nível.\n\nPara isso: acrescente um parâmetro no método para receber o nível atual.\nE altere a linha que define a velocidade de forma que ela seja igual a 10 no primeiro nível, 20 no segundo nível e assim sucessivamente.\n\n\nPrecisaremos alterar agora as chamadas do método inicializar do inimigo, passando o nível atual.\n\nNa própria classe Inimigo o método é chamado no construtor. Altere a chamada passando o valor 1 como o nível atual.\nO método inicializar do inimigo é chamado também dentro do método reiniciarInimigo da classe Cenario. Altere a chamada passando o valor do nível atual (usando o objeto placar).\n\nSe você testar as alterações feitas até agora, verá que, quando o jogo reinicia, a velocidade do inimigo no primeiro nível não fica correta.\n\nPara corrigir isso, basta alterar o método inicializar da classe Cenario de forma que o placar seja inicializado antes do inimigo.\n\nDica: enquanto estiver testando, para agilizar, faça com que o nível mude a cada 100 pontos em vez de 500. Mas não esqueça de voltar para 500 antes de terminar."
+  },
+  {
+    "objectID": "cap2-3.html#section-18",
+    "href": "cap2-3.html#section-18",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Nós usamos variáveis locais mesmo quando dois métodos na mesma classe têm variáveis locais com o mesmo objetivo.\n\nMuitas vezes até com o mesmo nome.\n\n\nÉ tentador declarar como atributo para “reaproveitar” a mesma declaração.\n\nMas, não devemos usar atributos para valores que não precisam existir depois da chamada dos métodos."
+  },
+  {
+    "objectID": "cap2-3.html#section-28",
+    "href": "cap2-3.html#section-28",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "(Opcional) Exercício - Desafio\n\n\nSalve o projeto da máquina de ingressos com um novo nome (ex.: maquina-ingressos-varios-precos).\nAltere a classe MaquinaIngressos do novo projeto de forma que ela possa emitir ingressos de preços diferentes. Imagine que a máquina real tenha um botão que permite ao usuário escolher uma opção de ingresso com desconto, antes de solicitar a impressão do ingresso.\nQuais atributos e métodos precisariam ser adicionados à classe para tratar isso?\nVocê acha que seria necessário alterar muitos dos métodos que já existiam?"
+  },
+  {
+    "objectID": "cap2-3.html#section-19",
+    "href": "cap2-3.html#section-19",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Por exemplo:\n\nNo método retornarTroco, a variável troco é usada, temporariamente, apenas para guardar o valor do saldo antes dele ser zerado.\nDepois que o método é finalizado, não faz mais sentido guardar o valor do troco."
+  },
+  {
+    "objectID": "cap2-3.html#section-29",
+    "href": "cap2-3.html#section-29",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "O método obterLogin da classe Estudante tem algo diferente que é interessante analisarmos.\n\n  public String obterLogin()\n  {\n    return nome.substring(0,4) + matricula.substring(0,3);\n  }\n\nRepare em dois pontos interessantes:\n\nMétodos de outros objetos são chamados, e eles retornam um resultado.\nO resultado retornado é usado como parte de uma expressão."
+  },
+  {
+    "objectID": "cap2-3.html#section-30",
+    "href": "cap2-3.html#section-30",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Os três atributos possuem métodos de acesso (métodos obter).\n\nO número de matrícula não pode ser alterado (é imutável), já nome e número de créditos podem ser alterados por métodos modificadores."
+  },
+  {
+    "objectID": "cap2-3.html#section-31",
+    "href": "cap2-3.html#section-31",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "O método obterLogin da classe Estudante tem algo diferente que é interessante analisarmos.\n\n  public String obterLogin()\n  {\n    return nome.substring(0,4) + matricula.substring(0,3);\n  }\n\n\nRepare em dois pontos interessantes:\n\nMétodos de outros objetos são chamados, e eles retornam um resultado.\nO resultado retornado é usado como parte de uma expressão."
+  },
+  {
+    "objectID": "cap2-3.html#section-32",
+    "href": "cap2-3.html#section-32",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Os atributos nome e matricula são objetos String.\n\nE a classe String possui um método chamado substring.\n\n\nO método substring tem o seguinte comentário e assinatura.\n\n/*\n* Returns a string that is a substring of this string. \n* The substring begins at the specified beginIndex \n* and extends to the character at index endIndex - 1. \n* Thus the length of the substring is endIndex-beginIndex.\n*/\npublic String substring(int beginIndex, int endIndex)"
+  },
+  {
+    "objectID": "cap2-3.html#section-33",
+    "href": "cap2-3.html#section-33",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Pelo comentário vemos que o método retorna uma string que é parte da string original.\n\nA string retornada inclui os caracteres que estão da posição beginIndex (primeiro parâmetro) até a posição anterior a endIndex (segundo parâmetro).\n\n\nSabendo disso, vamos entender como o método obterLogin funciona."
+  },
+  {
+    "objectID": "cap2-3.html#section-34",
+    "href": "cap2-3.html#section-34",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "A primeira parte da expressão implementada é nome.substring(0,4).\n\nPelo que vimos do método substring, isso significa que são retornados os quatro primeiros caracteres do nome do estudante (da posição 0 até a posição 3).\n\n\nJá a segunda parte da expressão é matricula.substring(0,3). O que ela retorna?\n\nOs três primeiros caracteres da matrícula."
+  },
+  {
+    "objectID": "cap2-3.html#section-35",
+    "href": "cap2-3.html#section-35",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Portanto, para um aluno de nome “Sebastião da Silva” e matrícula 435221, qual seria o valor retornado pelo método obterLogin?\n\nPense primeiro na resposta e depois valide criando um objeto no BlueJ.\nVeja que o retorno seria “Seba435”."
+  },
+  {
+    "objectID": "cap2-3.html#section-36",
+    "href": "cap2-3.html#section-36",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Exercício\n\n\nQual seria o login retornado para uma estudante chamada “Maria Pereira”, com matrícula 332211?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nCrie um Estudante com o nome \"Teo\" e matrícula \"748392\". O que acontece quando o método obterLogin é chamado para este estudante? Por que você acha que isso acontece?"
+  },
+  {
+    "objectID": "cap2-3.html#section-37",
+    "href": "cap2-3.html#section-37",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Exercício\n\n\nA classe String possui um método de acesso chamado length, com o seguinte cabeçalho:\n\n/**\n * Return the number of characters in this string.\n */\npublic int length()\n\nAdicione um comando condicional ao construtor da classe Estudante e imprima um erro na tela caso o parâmetro nomeCompleto tenha menos que quatro caracteres, ou o parâmetro matriculaEstudante tenha menos de três caracteres.\nObs.: mesmo que a mensagem seja exibida, o objeto deve ser criado normalmente com os valores passados."
+  },
+  {
+    "objectID": "cap2-3.html#section-38",
+    "href": "cap2-3.html#section-38",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "(Opcional) Exercício - Desafio\n\n\nAltere o método obterLogin da classe Estudante de forma que ele sempre retorne um login, mesmo que os atributos nome e matricula não tenham os tamanhos mínimos esperados. Caso algum atributo tenha tamanho insuficiente, use todos os caracteres do atributo."
+  },
+  {
+    "objectID": "cap2-3.html#section-39",
+    "href": "cap2-3.html#section-39",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Como você já sabe das aulas anteriores, para que você tenha a presença\n\nconsiderada nas aula em formato ANP (Atividade Não-Presencial),\nvocê precisa demonstrar que realmente estudou o conteúdo.\n\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nPara ter presença nessa aula você deve:\n\nResponder, no Campus Virtual, aos quizes presentes nesses slides.\nEnviar os prints solicitados referentes aos exercícios da aula."
+  },
+  {
+    "objectID": "cap2-3.html#section-40",
+    "href": "cap2-3.html#section-40",
+    "title": "IPOO - Cap. 2 Entendendo as Definições de Classe",
+    "section": "",
+    "text": "Como você já sabe das aulas anteriores, para que você tenha a presença\n\nconsiderada nas aula em formato ANP (Atividade Não-Presencial),\nvocê precisa demonstrar que realmente estudou o conteúdo.\n\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nPara ter presença nessa aula você deve:\n\nResponder, no Campus Virtual, aos quizes presentes nesses slides.\nEnviar os prints solicitados referentes aos exercícios da aula."
   }
 ]
