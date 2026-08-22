@@ -66,18 +66,101 @@ Dê uma olhada no código da classe `MaquinaIngressos` do novo projeto.
 
 - Veja que o nome da classe, os atributos, o construtor e os métodos de acesso são os mesmos da versão anterior.
 - A primeira mudança está no método `inserirDinheiro`.
-  - Veja que o método possui um tratamento para evitar que o usuário insira quantidades negativas de dinheiro.
 
 ##
 
-Na disciplina anterior de algoritmos você já aprendeu a usar [comandos condicionais]{.alert} (`if`/ `else`).
+Veja que o método possui um tratamento para evitar que o usuário insira quantidades negativas de dinheiro.
 
-- Note que a **sintaxe do comando `if` em Java é a mesma do C++**.
-- Como você deve se lembrar, colocamos no comando `if` uma expressão booleana que pode ser verdadeira (`true`) ou falsa (`false`).
-  - Se a expressão for verdadeira, o bloco de código (trecho entre chaves) logo após o `if` é executado.
-  - Se for falsa, o bloco de código executado é aquele logo após o `else`.
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public void inserirDinheiro(int quantidade)
+{
+    if (quantidade > 0) {
+        saldo = saldo + quantidade;
+    }
+    else {
+        System.out.println("Informe uma quantidade 
+            positiva em vez de : " + quantidade);
+    }
+}
+```
+:::
 
 ##
+
+Um outro exemplo de **comando condicional** pode ser encontrado no método `imprimirIngresso`.
+
+. . .
+
+```{.java code-line-numbers="false"}
+    if (saldo >= preco) {
+        // ... detalhes de impressão omitidos ...
+        // Atualiza o total coletado com o saldo
+        total = total + preco;
+        // Reduz o saldo de acordo com o preço do ingresso
+        saldo = saldo - preco;
+    }
+    else {
+        System.out.println("Você precisa inserir pelo menos mais : " +
+            (preco - saldo) + " centavos.");
+    }
+```
+
+. . .
+
+Com ele, corrigimos o problema da versão ingênua da máquina
+
+- de não verificar se o cliente tinha inserido quantidade suficiente de dinheiro antes de imprimir o ingresso.
+
+##
+
+```{.java code-line-numbers="false"}
+    if (saldo >= preco) {
+        // ... detalhes de impressão omitidos ...
+        // Atualiza o total coletado com o saldo
+        total = total + preco;
+        // Reduz o saldo de acordo com o preço do ingresso
+        saldo = saldo - preco;
+    }
+    else {
+        System.out.println("Você precisa inserir pelo menos mais : " +
+            (preco - saldo) + " centavos.");
+    }
+```
+
+Se o valor do atributo `saldo` é maior, ou pelo menos igual, ao atributo `preco`.
+
+- O ingresso é impresso.
+- Caso contrário, é exibida uma mensagem de erro.
+
+##
+
+Repare que a mensagem de erro segue o mesmo padrão que já vimos antes, é apenas mais _verboso_.
+
+```{.java code-line-numbers="false"}
+    System.out.println("Você precisa inserir pelo menos mais : " +
+        (preco - saldo) + " centavos.");
+```
+
+. . .
+
+Quantos parâmetro o método `println` está recebendo?
+
+- Apenas um!
+- Uma string formada pela concatenação do texto, mais o resultado da conta `preco - saldo`,
+  mais o final do texto.
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+No método `imprimirIngresso`, o que acontece se removermos os parênteses do cálculo `preco - saldo`?
+
+Por que isso acontece?
+:::
+
+. . .
 
 ::: {.callout-note title="Exercício" icon=false}
 Compare a implementação do método `imprimirIngresso` no projeto `maquina-ingressos-melhor` com o projeto anterior.
@@ -98,82 +181,6 @@ Qual seria o efeito para o usuário, quando ele tentasse imprimir um ingresso se
 Avalie a implementação do método `retornarTroco`.
 Experimente colocar mais dinheiro que o necessário para um ingresso, imprima um ingresso e então chame o método `retornarTroco`.
 Tente também chamar o método quando não há saldo de dinheiro disponível.
-:::
-
-## 
-
-Ao avaliar o código de uma classe no BlueJ, você deve ter notado que ele mostra caixas coloridas ao redor de alguns elementos.
-
-- Como ao redor dos blocos e comandos condicionais, por exemplo.
-
-##
-
-Esses destaques coloridos são chamados de [*scope highlighting*]{.alert} (ou destaque de escopo).
-
-- Eles nos ajudam a atender as unidades lógicas do programa.
-- Um escopo, ou bloco, é o código que existe entre um par de chaves.
-  - O corpo de uma classe é um escopo.
-  - O corpo de cada método também é um escopo.
-  - E mesmo a parte do `if` de um comando condicional também é um escopo.
-  - Portanto, podemos ter escopos aninhados (ou seja, um dentro do outro).
-
-## 
-
-O BlueJ nos ajuda a identificar os escopos usando cores diferentes para cada um.
-
-:::: {.columns}
-
-::: {.column width="50%"}
-![](imagens/print_bluej_escopo.png)
-:::
-
-::: {.column width="50%"}
-- Na imagem vemos com fundo branco os escopos de cada bloco do `if` e `else`.
-- Com fundo roxo, o escopo do comando condicional.
-- Com fundo amarelo o escopo do método.
-- E com fundo verde o escopo da classe.
-:::
-
-::::
-
-## 
-
-Um erro muito comum para quem está começando é esquecer de fechar as chaves, ou colocar uma chave em um lugar errado.
-
-- As cores do BlueJ nos ajudam a identificar esse tipo de problema.
-- Além disso, é muito importante [indentar]{.alert} o código, usando tabulação para cada bloco de código (cada trecho entre chaves).
-
-. . .
-
-:::: {.columns}
-
-::: {.column width="20%"}
-![](imagens/fica_a_dica.png)
-:::
-
-::: {.column width="80%"}
-::: {.callout-note title="Convenção" appearance="simple" icon=false}
-Se a sua indentação estiver ficando uma bagunça, o BlueJ pode te ajudar.
-Experimente alterar o código e forma que a indentação fique errada e depois a corriga automaticamente, acessando o menu **Editar &rarr; Auto-indentação** do editor de código do BlueJ.
-:::
-:::
-
-::::
-
-##
-
-::: {.callout-note title="Exercício" icon=false}
-Experimente remover uma chave do código da classe `MaquinaIngressos` e repare o que é alterado nas cores de fundo do editor de código.
-Experimente também inserir uma chave onde ela não seria esperada.
-:::
-
-. . .
-
-::: {.callout-note title="Exercício" icon=false}
-Escreva um trecho de código em Java que compara o valor das variáveis `preco` e `estimativa`.
-Se o preço for maior que a estimativa, deve ser exibida a mensagem `Muito caro.`.
-Se o preço estiver abaixo da estimativa, a mensagem exibida deve ser `Bora comprar, tá barato.`.
-Por fim, se o preço for exatamente igual à estimativa, exiba a mensagem `Na mosca!`.
 :::
 
 ##
@@ -400,6 +407,88 @@ switch(siglaDoDia.toLowerCase()) {
 }
 ```
 
+# _Scope Highlighting_ {background-color="#40666e"}
+
+##
+
+Ao avaliar o código de uma classe no BlueJ, você deve ter notado que ele mostra caixas coloridas ao redor de alguns elementos.
+
+- Como ao redor dos blocos e comandos condicionais, por exemplo.
+
+![](imagens/print_bluej_escopo.png){fig-alt="Print do método inserirDinheiro como é exibod no BlueJ."  width=80%}
+
+##
+
+Esses destaques coloridos são chamados de [*scope highlighting*]{.alert} (ou destaque de escopo).
+
+- Eles nos ajudam a entender as unidades lógicas do programa.
+- Um escopo, ou bloco, é o código que existe entre um par de chaves.
+  - O corpo de uma classe é um escopo.
+  - O corpo de cada método também é um escopo.
+  - E mesmo a parte do `if` de um comando condicional também é um escopo.
+  - Portanto, podemos ter escopos aninhados (ou seja, um dentro do outro).
+
+## 
+
+O BlueJ nos ajuda a identificar os escopos usando cores diferentes para cada um.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](imagens/print_bluej_escopo.png)
+:::
+
+::: {.column width="50%"}
+- Na imagem vemos com fundo branco os escopos de cada bloco do `if` e `else`.
+- Com fundo roxo, o escopo do comando condicional.
+- Com fundo amarelo o escopo do método.
+- E com fundo verde o escopo da classe.
+:::
+
+::::
+
+## 
+
+Um erro muito comum para quem está começando é esquecer de fechar as chaves, ou colocar uma chave em um lugar errado.
+
+- As cores do BlueJ nos ajudam a identificar esse tipo de problema.
+- Além disso, é muito importante [indentar]{.alert} o código, usando tabulação para cada bloco de código (cada trecho entre chaves).
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="20%"}
+![](imagens/fica_a_dica.png)
+:::
+
+::: {.column width="80%"}
+::: {.callout-note title="Convenção" appearance="simple" icon=false}
+Se a sua indentação estiver ficando uma bagunça, o BlueJ pode te ajudar.
+Experimente alterar o código e forma que a indentação fique errada e depois a corriga automaticamente, acessando o menu **Editar &rarr; Auto-indentação** do editor de código do BlueJ.
+:::
+:::
+
+::::
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Experimente remover uma chave do código da classe `MaquinaIngressos` e repare o que é alterado nas cores de fundo do editor de código.
+Experimente também inserir uma chave onde ela não seria esperada.
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Escreva um trecho de código em Java que compara o valor das variáveis `preco` e `estimativa`.
+Se o preço for maior que a estimativa, deve ser exibida a mensagem `Muito caro.`.
+Se o preço estiver abaixo da estimativa, a mensagem exibida deve ser `Bora comprar, tá barato.`.
+Por fim, se o preço for exatamente igual à estimativa, exiba a mensagem `Na mosca!`.
+:::
+
+
+
 # Variáveis locais {background-color="#40666e"}
 
 ## 
@@ -449,15 +538,21 @@ A variável `troco` é de um terceiro tipo: ela é uma [variável local]{.alert}
 A variável `troco` é de um terceiro tipo: ela é uma [variável local]{.alert}.
 
 - Tem esse nome porque ela é declarada dentro do corpo de um método.
-- E, portanto, tem um escopo *local* (do método).
+- E, portanto, tem um escopo *local*
+  - do método, ou do bloco onde é declarada.
+
+##
+
+Variáveis locais são declaradas como os atributos
+
+- mas sem os modificadores *public* e *private*.
 
 . . .
 
-Variáveis locais são declaradas como os atributos (mas sem os modificadores *public* e *private*).
+E a principal **diferença é o** [tempo de vida]{.alert}.
 
-- E a principal diferença é o **tempo de vida**.
 - Variáves locais existem somente durante a execução do método.
-  - Diferente dos atributos que existem na memória enquanto o objeto existir.
+- Diferente dos atributos que existem na memória enquanto o objeto existir.
 
 ## 
 
@@ -494,7 +589,9 @@ Por exemplo:
 
 ::: {.halfincfontsize}
 ::: {.callout-note title="Cuidado" appearance="simple" icon=false}
-Se você declarar uma variável local (ou um parâmetro) com o mesmo nome de um atributo, você não conseguirá acessar o atributo diretamente.
+Se você declarar uma variável local (ou um parâmetro) com o mesmo nome de um atributo, você não conseguirá acessar o atributo dentro
+do método ou construtor onde a variável local foi declarada.
+
 No capítulo 3 aprenderemos um jeito de lidar com isso, se necessário.
 :::
 :::
@@ -591,12 +688,14 @@ d. no bloco de código onde é declarada.
 
 ##
 
+::: {style="margin-left: 0 !important; position: relative; left: -80px; margin-right: auto;"}
 |     | [Atributos]{.alert} | [Parâmetros]{.alert} | [Variáveis locais]{.alert} |
 | --- | :---: | :---: | :---: |
 | **Declaração**    | fora dos métodos e construtores | na assinatura de métodos/construtores | no corpo dos métodos/construtores |
 | **Tempo de vida** | do objeto | do método/construtor | do método/construtor |
-| **Escopo**        | acessível em qualquer lugar da classe | acessível no método/construtor | acessível no bloco onde é declarado |
+| **Escopo**        | acessível em qualquer lugar da classe | acessível no método/construtor | acessível no bloco onde é declarada |
 | **Valor padrão**  | Sim | Não (valor é passado de fora do objeto) | Não (precisa ser inicializada antes de ser usada) |
+:::
 
 ##
 
@@ -671,19 +770,19 @@ Abra o projeto e leia com cuidado o código da classe `Estudante`, tentando resp
 
 Veja que o nome, a matrícula e o número de créditos do estudante são as informações que devem **ficar guardadas enquanto o objeto estudante existir**.
 
-- Portanto, essas informações devem ser declaradas como **atributos** da classe.
+- Portanto, essas informações devem ser declaradas como [atributos]{.alert} da classe.
 
 . . .
 
-Os atributos `nome` e `matricula` são inicializados no **construtor a partir** de valores recebidos por **parâmetro**.
+Os atributos `nome` e `matricula` são inicializados no **construtor a partir** de valores recebidos por [parâmetro]{.alert}.
 
 - Já o número de `creditos` é inicializado com um valor fixo.
 
 ##
 
-Os três atributos possuem **métodos de acesso** (métodos *obter*).
+Os três atributos possuem [métodos de acesso]{.alert} (métodos *obter*).
 
-- O número de matrícula não pode ser alterado (é **imutável**), já nome e número de créditos podem ser alterados por **métodos modificadores**.
+- O número de matrícula não pode ser alterado (é **imutável**), já nome e número de créditos podem ser alterados por [métodos modificadores]{.alert}.
 
 # Chamando métodos {background-color="#40666e"}
 
@@ -704,8 +803,8 @@ O método `obterLogin` da classe `Estudante` tem algo diferente que é interessa
 
 Repare em dois pontos interessantes:
 
-1. Métodos de outros objetos são chamados, e eles retornam um resultado.
-2. O resultado retornado é usado como parte de uma expressão.
+1. Estamos chamando métodos de outro objeto que retornam resultados.
+2. Os resultados retornados são usados como parte de uma expressão.
 
 ## 
 
@@ -733,7 +832,7 @@ public String substring(int beginIndex, int endIndex)
 
 Pelo comentário vemos que o método retorna uma string que é parte da string original.
 
-- A string retornada inclui os caracteres que estão da posição `beginIndex` (primeiro parâmetro) até a posição anterior a `endIndex` (segundo parâmetro).
+- A string retornada inclui os caracteres que estão da posição `beginIndex` (primeiro parâmetro) até a posição **anterior** a `endIndex` (segundo parâmetro).
 
 . . .
 
@@ -781,6 +880,7 @@ A classe `String` possui um método de acesso chamado `length`, com o seguinte c
 ```{.java code-line-numbers="false"}
 /**
  * Return the number of characters in this string.
+ * (tradução: retorna o número de caracteres nesta string.)
  */
 public int length()
 ```
@@ -795,8 +895,123 @@ Obs.: mesmo que a mensagem seja exibida, o objeto deve ser criado normalmente co
 
 ##
 
-::: {.callout-note title="(Opcional) Exercício - [Desafio]{.alert}" icon=false}
+::: {.callout-note title="Exercício - [Desafio]{.alert}" icon=false}
 Altere o método `obterLogin` da classe `Estudante` de forma que ele sempre retorne um login, 
 mesmo que os atributos `nome` e `matricula` não tenham os tamanhos mínimos esperados.
 Caso algum atributo tenha tamanho insuficiente, use todos os caracteres do atributo.
 :::
+
+# Experimentando o Bloco de Códigos (_Code Pad_) do BlueJ {background-color="#40666e"}
+
+## 
+
+É muito comum precisarmos implementar expressões em nossos códigos.
+
+- Como cálculos usando variáveis.
+- Ou chamadas de métodos de variáveis que são objetos.
+- O **Bloco de Códigos** do BlueJ pode ser muito útil para experimentarmos expressões antes de as implementarmos em nossas classes.
+
+##
+
+Tente adivinhar os resultados das expressões abaixo, antes de usar o Bloco de Códigos.
+
+- `2023 + 4`
+- `"passa" + "tempo"`
+- `"passa" + 9`
+- `7 + 2 + "tempo"`
+- `"tempo" + 7 + 2`
+- `"passatempo".substring(5,6)`
+- `"passatempo".substring(5,11)`
+
+. . .
+
+O que foi novidade para você nesse exercício?
+
+## 
+
+No Bloco de Códigos, quando o resultado de uma expressão é um objeto (como uma `String`), aparece um símbolo vermelho próximo ao resultado.
+
+- Você pode clicar duas vezes no símbolo para inspecionar o objeto.
+- Ou clicar uma vez para colocá-lo na bancada de objetos.
+- Experimente!
+
+##
+
+Você pode também declarar variáveis e escrever comandos completos no Bloco de Códigos.
+
+- Experimente os comandos abaixo:
+- `soma = 2023 + 4;`
+- `int soma = 0;`
+- `soma = 2023 + 4;`
+
+. . .
+
+Se você digitar o nome de uma variável sem ponto-e-vírgula, o Bloco de Códigos exibe seu valor.
+
+- Experimente digitar, por exemplo: `soma`
+
+## 
+
+::: {.callout-note title="Exercício" icon=false}
+Abra o projeto [maquina-ingressos-melhor](https://github.com/ufla-ipoo/maquina-ingressos-melhor) e digite o código abaixo.
+Veja que tem linhas que terminam com ponto-e-virgula e outras não.
+**Preste atenção** ao valor retornado pelo método `obterSaldo` em cada chamada.
+
+::: {.halfincfontsize}
+```{.java}
+MaquinaIngressos m1 = new MaquinaIngressos(1000);
+m1.obterSaldo()
+m1.inserirDinheiro(500);
+m1.obterSaldo()
+```
+:::
+:::
+
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
+Agora digite a linha abaixo no Bloco de Códigos.
+
+::: {.halfincfontsize}
+```{.java}
+MaquinaIngressos m2 = m1;
+```
+:::
+
+O que você acha que a chamada `m2.obterSaldo()` retornaria?
+
+Experimente!
+:::
+
+##
+
+::: {.callout-note title="Exercício" icon=false}
+Agora digite o comando abaixo
+
+::: {.halfincfontsize}
+```{.java}
+m1.inserirDinheiro(500);
+```
+:::
+
+Avalie a linha abaixo e tente adivinhar o que ela vai retornar antes de digitar o código no Bloco de Códigos.
+
+::: {.halfincfontsize}
+```{.java}
+m2.obterSaldo()
+```
+:::
+
+A resposta foi a que você esperava?
+
+Você consegue imaginar alguma ligação entre `m1` e `m2` que explique o que está acontecendo?
+:::
+
+## 
+
+O que parece ter acontecido no exercício anterior?
+
+- Veja que a atribuição `m2 = m1` faz com que as duas variáveis referenciem (ou apontem para) o mesmo objeto.
+- Isso porque variáveis de tipo objeto em Java são na verdade ponteiros.
+- Portanto, a atribuição copia o endereço de memória que a variável `m1` guarda, para a variável `m2`.
+- E assim, como agora `m2` guarda o mesmo endereço de `m1`, ambas estão apontando para o mesmo objeto.
