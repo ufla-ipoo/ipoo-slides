@@ -4,9 +4,16 @@ subtitle: Aula 2.3 - Teórica
 ---
 
 
-## Como estudar? Precisa repetir? :) 
+## Como estudar? 
 
-Como diz o ditado: *água mole em pedra dura tanto bate até que fura*.
+. . .
+
+Precisa repetir? :) 
+
+
+- Como diz o ditado: *água mole em pedra dura tanto bate até que fura*.
+
+##
 
 Então vamos relembrar as [dicas]{.alert}:
 
@@ -171,12 +178,227 @@ Por fim, se o preço for exatamente igual à estimativa, exiba a mensagem `Na mo
 
 ##
 
-::: {.callout-note title="Exercício (PARA CASA)" icon=false}
-Leia o anexo D.2 do livro do Barnes e Kölling para saber mais sobre os comandos condicionais 
-da linguagem Java.
+O **comando** [if-else]{.alert} tem duas formas
 
-Você verá mais detalhes sobre o comando `if` e também conhecerá o comando `switch`.
+- ambas são controladas pela avaliação de uma expressão booleana.
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+if (expressão) {
+    comandos
+}
+```
 :::
+:::
+
+::: {.column width="50%"}
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+if (expressão) {
+    comandos
+}
+else {
+    comandos
+}
+```
+:::
+:::
+
+::::
+
+##
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+if (expressão) {
+    comandos
+}
+```
+:::
+:::
+
+::: {.column width="40%"}
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+if (expressão) {
+    comandos
+}
+else {
+    comandos
+}
+```
+:::
+:::
+
+::::
+
+:::: {.columns}
+::: {.column width="40%"}
+- Na primeira forma, o valor da expressão booleana é usado para decidir se os comandos serão executados ou não.
+:::
+
+::: {.column width="50%"}
+- Na segunda, a expressão é usada para escolher entre duas alternativas, e somente uma delas é executada.
+:::
+::::
+
+## Exemplos
+
+. . .
+
+Do primero caso:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+if (texto.size() == 0) {
+    System.out.println("O texto está vazio.");
+}
+```
+:::
+
+. . .
+
+Do segundo:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+if (numero < 0) {
+    infomarErro();
+}
+else {
+    processarNumero();
+}
+```
+:::
+
+##
+
+É muito comum **juntar comandos** [`if-else`]{.alert} colocando um segundo `if-else` na bloco `else` do primeiro.
+
+- Isso pode ser feito várias vezes.
+- E é uma boa ideia sempre incluir uma parte `else` ao final.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+if (n < 0) {
+    tratarValorNegativo();
+}
+else if (n == 0) {
+    tratarZero();
+}
+else {
+    tratarValorPositivo();
+}
+```
+:::
+
+##
+
+Já o **comando** [switch]{.alert} permite avaliar um valor e, a partir dele, tratar qualquer número de casos.
+
+- Existem duas formas principais de uso.
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{.java code-line-numbers="false"}
+switch(expressão) {
+    case valor: 
+        comandos;
+        break;
+    case valor: 
+        comandos;
+        break;
+    // pode ter mais casos
+    default: 
+        comandos;
+        break;
+}
+```
+:::
+
+::: {.column width="50%"}
+```{.java code-line-numbers="false"}
+switch(expressão) {
+    case valor1:
+    case valor2:
+    case valor3:
+        comandos;
+        break;
+    case valor4: 
+    case valor5:
+        comandos;
+        break;
+    // pode ter mais casos
+    default: 
+        comandos;
+        break;
+}
+```
+:::
+
+::::
+
+##
+
+Algumas obsevações sobre o comando `switch`:
+
+- Ele pode ter qualquer número de casos (`case`).
+- O comando `break` é necessário para evitar que execução continue para o próximo caso.
+  - A segunda forma de uso apriveita disso para que os três primeiros valores levem ao mesmo bloco de comandos.
+- O comando `default` é opcional, ele evita que nada seja executado se o valor não for de nenhum dos casos anteriores.
+- Tanto a expressão do `switch` quanto os rótulos dos casos podem ser strings.
+
+## Exemplos
+
+```{.java code-line-numbers="false"}
+switch(dia) {
+    case 1: diaDaSemana = "domingo";
+        break;
+    case 2: diaDaSemana = "segunda-feira";
+        break;
+    case 3: diaDaSemana = "terça-feira";
+        break;
+    case 4: diaDaSemana = "quarta-feira";
+        break;
+    case 5: diaDaSemana = "quinta-feira";
+        break;
+    case 6: diaDaSemana = "sexta-feira";
+        break;
+    case 7: diaDaSemana = "sábado";
+        break;
+    default: diaDaSemana = "dia inválido";
+        break;
+}
+```
+
+## Exemplos
+
+```{.java code-line-numbers="false"}
+switch(siglaDoDia.toLowerCase()) {
+    case "seg":
+    case "ter":
+    case "qua":
+    case "qui":
+    case "sex":
+        vaiTrabalhar();
+        break;
+    case "sab":
+    case "dom":
+        ficaNaCama();
+        break;
+}
+```
 
 # Variáveis locais {background-color="#40666e"}
 

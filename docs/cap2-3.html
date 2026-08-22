@@ -215,11 +215,19 @@
     </div>
 </div>
 
-  <p class="date">19/08/2026</p>
+  <p class="date">22/08/2026</p>
 </section>
-<section id="como-estudar-precisa-repetir" class="slide level2">
-<h2>Como estudar? Precisa repetir? :)</h2>
-<p>Como diz o ditado: <em>água mole em pedra dura tanto bate até que fura</em>.</p>
+<section id="como-estudar" class="slide level2">
+<h2>Como estudar?</h2>
+<div class="fragment">
+<p>Precisa repetir? :)</p>
+<ul>
+<li class="fragment">Como diz o ditado: <em>água mole em pedra dura tanto bate até que fura</em>.</li>
+</ul>
+</div>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
 <p>Então vamos relembrar as <span class="alert">dicas</span>:</p>
 <div class="columns">
 <div class="column" style="width:70%;">
@@ -237,7 +245,7 @@
 <h1>Design da Máquina de Ingressos</h1>
 
 </section>
-<section id="section" class="slide level2">
+<section id="section-1" class="slide level2">
 <h2></h2>
 <p>Nas aulas anteriores você deve ter percebido que a <strong>classe <code>MaquinaIngressos</code></strong> não serviria muito no mundo real, já que ela <strong>tem vários problemas</strong>.</p>
 <ul>
@@ -249,7 +257,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-1" class="slide level2">
+<section id="section-2" class="slide level2">
 <h2></h2>
 <p>Corrigindo isso, teríamos um software que realmente poderia servir de base para uma máquina de ingressos real.</p>
 <ul>
@@ -268,7 +276,7 @@
 <h1>Comando Condicional</h1>
 
 </section>
-<section id="section-2" class="slide level2">
+<section id="section-3" class="slide level2">
 <h2></h2>
 <p>Dê uma olhada no código da classe <code>MaquinaIngressos</code> do novo projeto.</p>
 <ul>
@@ -279,7 +287,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-3" class="slide level2">
+<section id="section-4" class="slide level2">
 <h2></h2>
 <p>Na disciplina anterior de algoritmos você já aprendeu a usar <span class="alert">comandos condicionais</span> (<code>if</code>/ <code>else</code>).</p>
 <ul>
@@ -291,7 +299,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-4" class="slide level2">
+<section id="section-5" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -320,7 +328,7 @@
 </div>
 </div>
 </section>
-<section id="section-5" class="slide level2">
+<section id="section-6" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -335,14 +343,14 @@
 </div>
 </div>
 </section>
-<section id="section-6" class="slide level2">
+<section id="section-7" class="slide level2">
 <h2></h2>
 <p>Ao avaliar o código de uma classe no BlueJ, você deve ter notado que ele mostra caixas coloridas ao redor de alguns elementos.</p>
 <ul>
 <li class="fragment">Como ao redor dos blocos e comandos condicionais, por exemplo.</li>
 </ul>
 </section>
-<section id="section-7" class="slide level2">
+<section id="section-8" class="slide level2">
 <h2></h2>
 <p>Esses destaques coloridos são chamados de <span class="alert"><em>scope highlighting</em></span> (ou destaque de escopo).</p>
 <ul>
@@ -356,7 +364,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-8" class="slide level2">
+<section id="section-9" class="slide level2">
 <h2></h2>
 <p>O BlueJ nos ajuda a identificar os escopos usando cores diferentes para cada um.</p>
 <div class="columns">
@@ -371,7 +379,7 @@
 </ul>
 </div></div>
 </section>
-<section id="section-9" class="slide level2">
+<section id="section-10" class="slide level2">
 <h2></h2>
 <p>Um erro muito comum para quem está começando é esquecer de fechar as chaves, ou colocar uma chave em um lugar errado.</p>
 <ul>
@@ -398,7 +406,7 @@
 </div></div>
 </div>
 </section>
-<section id="section-10" class="slide level2">
+<section id="section-11" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -427,28 +435,199 @@
 </div>
 </div>
 </section>
-<section id="section-11" class="slide level2">
+<section id="section-12" class="slide level2">
 <h2></h2>
-<div title="Exercício (PARA CASA)">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício (PARA CASA)</strong></p>
+<p>O <strong>comando</strong> <span class="alert">if-else</span> tem duas formas</p>
+<ul>
+<li class="fragment">ambas são controladas pela avaliação de uma expressão booleana.</li>
+</ul>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>expressão<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>    comandos</span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-content">
-<p>Leia o anexo D.2 do livro do Barnes e Kölling para saber mais sobre os comandos condicionais da linguagem Java.</p>
-<p>Você verá mais detalhes sobre o comando <code>if</code> e também conhecerá o comando <code>switch</code>.</p>
+</div><div class="column" style="width:50%;">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>expressão<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a>    comandos</span>
+<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a>    comandos</span>
+<span id="cb2-6"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></div>
+</div>
+</section>
+<section id="section-13" class="slide level2">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>expressão<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a>    comandos</span>
+<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>expressão<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a>    comandos</span>
+<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb4-5"><a aria-hidden="true" tabindex="-1"></a>    comandos</span>
+<span id="cb4-6"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></div>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li class="fragment">Na primeira forma, o valor da expressão booleana é usado para decidir se os comandos serão executados ou não.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li class="fragment">Na segunda, a expressão é usada para escolher entre duas alternativas, e somente uma delas é executada.</li>
+</ul>
+</div></div>
+</section>
+<section id="exemplos" class="slide level2">
+<h2>Exemplos</h2>
+<div class="fragment">
+<p>Do primero caso:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb5"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>texto<span class="op">.</span><span class="fu">size</span><span class="op">()</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"O texto está vazio."</span><span class="op">);</span></span>
+<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
+<div class="fragment">
+<p>Do segundo:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>numero <span class="op">&lt;</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">infomarErro</span><span class="op">();</span></span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb6-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">processarNumero</span><span class="op">();</span></span>
+<span id="cb6-6"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
+</section>
+<section id="section-14" class="slide level2">
+<h2></h2>
+<p>É muito comum <strong>juntar comandos</strong> <span class="alert"><code>if-else</code></span> colocando um segundo <code>if-else</code> na bloco <code>else</code> do primeiro.</p>
+<ul>
+<li class="fragment">Isso pode ser feito várias vezes.</li>
+<li class="fragment">E é uma boa ideia sempre incluir uma parte <code>else</code> ao final.</li>
+</ul>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>n <span class="op">&lt;</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">tratarValorNegativo</span><span class="op">();</span></span>
+<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb7-4"><a aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>n <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">tratarZero</span><span class="op">();</span></span>
+<span id="cb7-6"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb7-7"><a aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb7-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">tratarValorPositivo</span><span class="op">();</span></span>
+<span id="cb7-9"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="section-15" class="slide level2">
+<h2></h2>
+<p>Já o <strong>comando</strong> <span class="alert">switch</span> permite avaliar um valor e, a partir dele, tratar qualquer número de casos.</p>
+<ul>
+<li class="fragment">Existem duas formas principais de uso.</li>
+</ul>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">switch</span><span class="op">(</span>expressão<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb8-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> valor<span class="op">:</span> </span>
+<span id="cb8-3"><a aria-hidden="true" tabindex="-1"></a>        comandos<span class="op">;</span></span>
+<span id="cb8-4"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb8-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> valor<span class="op">:</span> </span>
+<span id="cb8-6"><a aria-hidden="true" tabindex="-1"></a>        comandos<span class="op">;</span></span>
+<span id="cb8-7"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb8-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// pode ter mais casos</span></span>
+<span id="cb8-9"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">default</span><span class="op">:</span> </span>
+<span id="cb8-10"><a aria-hidden="true" tabindex="-1"></a>        comandos<span class="op">;</span></span>
+<span id="cb8-11"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb8-12"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="sourceCode" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">switch</span><span class="op">(</span>expressão<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb9-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> valor1<span class="op">:</span></span>
+<span id="cb9-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> valor2<span class="op">:</span></span>
+<span id="cb9-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> valor3<span class="op">:</span></span>
+<span id="cb9-5"><a aria-hidden="true" tabindex="-1"></a>        comandos<span class="op">;</span></span>
+<span id="cb9-6"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb9-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> valor4<span class="op">:</span> </span>
+<span id="cb9-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> valor5<span class="op">:</span></span>
+<span id="cb9-9"><a aria-hidden="true" tabindex="-1"></a>        comandos<span class="op">;</span></span>
+<span id="cb9-10"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb9-11"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// pode ter mais casos</span></span>
+<span id="cb9-12"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">default</span><span class="op">:</span> </span>
+<span id="cb9-13"><a aria-hidden="true" tabindex="-1"></a>        comandos<span class="op">;</span></span>
+<span id="cb9-14"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb9-15"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</div>
+</section>
+<section id="section-16" class="slide level2">
+<h2></h2>
+<p>Algumas obsevações sobre o comando <code>switch</code>:</p>
+<ul>
+<li class="fragment">Ele pode ter qualquer número de casos (<code>case</code>).</li>
+<li class="fragment">O comando <code>break</code> é necessário para evitar que execução continue para o próximo caso.
+<ul>
+<li class="fragment">A segunda forma de uso apriveita disso para que os três primeiros valores levem ao mesmo bloco de comandos.</li>
+</ul></li>
+<li class="fragment">O comando <code>default</code> é opcional, ele evita que nada seja executado se o valor não for de nenhum dos casos anteriores.</li>
+<li class="fragment">Tanto a expressão do <code>switch</code> quanto os rótulos dos casos podem ser strings.</li>
+</ul>
+</section>
+<section id="exemplos-1" class="slide level2">
+<h2>Exemplos</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">switch</span><span class="op">(</span>dia<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb10-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="dv">1</span><span class="op">:</span> diaDaSemana <span class="op">=</span> <span class="st">"domingo"</span><span class="op">;</span></span>
+<span id="cb10-3"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb10-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="dv">2</span><span class="op">:</span> diaDaSemana <span class="op">=</span> <span class="st">"segunda-feira"</span><span class="op">;</span></span>
+<span id="cb10-5"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb10-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="dv">3</span><span class="op">:</span> diaDaSemana <span class="op">=</span> <span class="st">"terça-feira"</span><span class="op">;</span></span>
+<span id="cb10-7"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb10-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="dv">4</span><span class="op">:</span> diaDaSemana <span class="op">=</span> <span class="st">"quarta-feira"</span><span class="op">;</span></span>
+<span id="cb10-9"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb10-10"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="dv">5</span><span class="op">:</span> diaDaSemana <span class="op">=</span> <span class="st">"quinta-feira"</span><span class="op">;</span></span>
+<span id="cb10-11"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb10-12"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="dv">6</span><span class="op">:</span> diaDaSemana <span class="op">=</span> <span class="st">"sexta-feira"</span><span class="op">;</span></span>
+<span id="cb10-13"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb10-14"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="dv">7</span><span class="op">:</span> diaDaSemana <span class="op">=</span> <span class="st">"sábado"</span><span class="op">;</span></span>
+<span id="cb10-15"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb10-16"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">default</span><span class="op">:</span> diaDaSemana <span class="op">=</span> <span class="st">"dia inválido"</span><span class="op">;</span></span>
+<span id="cb10-17"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb10-18"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="exemplos-2" class="slide level2">
+<h2>Exemplos</h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">switch</span><span class="op">(</span>siglaDoDia<span class="op">.</span><span class="fu">toLowerCase</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb11-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">"seg"</span><span class="op">:</span></span>
+<span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">"ter"</span><span class="op">:</span></span>
+<span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">"qua"</span><span class="op">:</span></span>
+<span id="cb11-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">"qui"</span><span class="op">:</span></span>
+<span id="cb11-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">"sex"</span><span class="op">:</span></span>
+<span id="cb11-7"><a aria-hidden="true" tabindex="-1"></a>        <span class="fu">vaiTrabalhar</span><span class="op">();</span></span>
+<span id="cb11-8"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb11-9"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">"sab"</span><span class="op">:</span></span>
+<span id="cb11-10"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">"dom"</span><span class="op">:</span></span>
+<span id="cb11-11"><a aria-hidden="true" tabindex="-1"></a>        <span class="fu">ficaNaCama</span><span class="op">();</span></span>
+<span id="cb11-12"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb11-13"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
 <section>
 <section id="variáveis-locais" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Variáveis locais</h1>
 
 </section>
-<section id="section-12" class="slide level2">
+<section id="section-17" class="slide level2">
 <h2></h2>
 <p>Até agora usamos dois tipos de variáveis: <strong>atributos</strong> (variáveis de instância) e <strong>parâmetros</strong>.</p>
 <ul>
@@ -459,23 +638,23 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-13" class="slide level2">
+<section id="section-18" class="slide level2">
 <h2></h2>
 <p>Repare o código do método <code>retornarTroco</code>.</p>
 <ul>
 <li class="fragment">Ele possui três comandos e uma declaração (da variável <code>troco</code>).</li>
 </ul>
 <div class="doublefontsize">
-<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">retornarTroco</span><span class="op">()</span></span>
-<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> troco<span class="op">;</span></span>
-<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a>    troco <span class="op">=</span> saldo<span class="op">;</span></span>
-<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> troco<span class="op">;</span></span>
-<span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">retornarTroco</span><span class="op">()</span></span>
+<span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb12-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> troco<span class="op">;</span></span>
+<span id="cb12-4"><a aria-hidden="true" tabindex="-1"></a>    troco <span class="op">=</span> saldo<span class="op">;</span></span>
+<span id="cb12-5"><a aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb12-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> troco<span class="op">;</span></span>
+<span id="cb12-7"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="section-14" class="slide level2">
+<section id="section-19" class="slide level2">
 <h2></h2>
 <p>Como podemos saber que a variável <code>troco</code> não é um atributo?</p>
 <ul>
@@ -491,7 +670,7 @@
 <p>A variável <code>troco</code> é de um terceiro tipo: ela é uma <span class="alert">variável local</span>.</p>
 </div>
 </section>
-<section id="section-15" class="slide level2">
+<section id="section-20" class="slide level2">
 <h2></h2>
 <p>A variável <code>troco</code> é de um terceiro tipo: ela é uma <span class="alert">variável local</span>.</p>
 <ul>
@@ -509,11 +688,11 @@
 </ul>
 </div>
 </section>
-<section id="section-16" class="slide level2">
+<section id="section-21" class="slide level2">
 <h2></h2>
 <p><img data-src="imagens/duvida_variaveis_locais.png"></p>
 </section>
-<section id="section-17" class="slide level2">
+<section id="section-22" class="slide level2">
 <h2></h2>
 <p>Nós <strong>evitamos</strong> declarar como <strong>atributos</strong> variáveis que <strong>não precisam ser mantidas em memória</strong> depois que o método é chamado.</p>
 <ul>
@@ -522,7 +701,7 @@
 <li class="fragment">Portanto, se algo só precisa existir durante a execução do método, declará-lo como atributo desperdiçaria memória e feriria o conceito de objetos.</li>
 </ul>
 </section>
-<section id="section-18" class="slide level2">
+<section id="section-23" class="slide level2">
 <h2></h2>
 <p>Nós usamos <strong>variáveis locais</strong> mesmo quando dois métodos na mesma classe têm variáveis locais com o mesmo objetivo.</p>
 <ul>
@@ -535,7 +714,7 @@
 </ul>
 </div>
 </section>
-<section id="section-19" class="slide level2">
+<section id="section-24" class="slide level2">
 <h2></h2>
 <p>Por exemplo:</p>
 <ul>
@@ -543,7 +722,7 @@
 <li class="fragment">Depois que o método é finalizado, não faz mais sentido guardar o valor do troco.</li>
 </ul>
 </section>
-<section id="section-20" class="slide level2">
+<section id="section-25" class="slide level2">
 <h2></h2>
 <div class="halfincfontsize">
 <div title="Cuidado">
@@ -560,7 +739,7 @@
 </div>
 </div>
 </section>
-<section id="section-21" class="slide level2">
+<section id="section-26" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -571,11 +750,11 @@
 <div class="callout-content">
 <p>Porque a implementação alternativa do método <code>retornarTroco</code> abaixo não dá o mesmo resultado da original? Faça testes que mostrem como o funcionamento é diferente.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">retornarTroco</span><span class="op">()</span></span>
-<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> saldo<span class="op">;</span></span>
-<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">retornarTroco</span><span class="op">()</span></span>
+<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb13-3"><a aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb13-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> saldo<span class="op">;</span></span>
+<span id="cb13-5"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -591,11 +770,11 @@
 <div class="callout-content">
 <p>Altere o método <code>retornarTroco</code> usando a implementação abaixo. O código compila? Se não, explique porque não compila.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">retornarTroco</span><span class="op">()</span></span>
-<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span>    </span>
-<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> saldo<span class="op">;</span></span>
-<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">retornarTroco</span><span class="op">()</span></span>
+<span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span>    </span>
+<span id="cb14-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> saldo<span class="op">;</span></span>
+<span id="cb14-4"><a aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb14-5"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -603,7 +782,7 @@
 </div>
 </div>
 </section>
-<section id="section-22" class="slide level2">
+<section id="section-27" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -614,12 +793,12 @@
 <div class="callout-content">
 <p>O que há de errado com a implementação alternativa abaixo do construtor da classe <code>MaquinaIngressos</code>?</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dt">int</span> custoIngresso<span class="op">)</span></span>
-<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span>    </span>
-<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> preco <span class="op">=</span> custoIngresso<span class="op">;</span></span>
-<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb4-5"><a aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb4-6"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="fu">MaquinaIngressos</span><span class="op">(</span><span class="dt">int</span> custoIngresso<span class="op">)</span></span>
+<span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span>    </span>
+<span id="cb15-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> preco <span class="op">=</span> custoIngresso<span class="op">;</span></span>
+<span id="cb15-4"><a aria-hidden="true" tabindex="-1"></a>    saldo <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb15-5"><a aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb15-6"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Tente usar essa versão. O código compila?</p>
 <p>Crie um objeto e inspecione o valor dos atributos.</p>
@@ -655,7 +834,7 @@
 <h1>Atributos, parâmetros e variáveis locais</h1>
 
 </section>
-<section id="section-23" class="slide level2">
+<section id="section-28" class="slide level2">
 <h2></h2>
 <p>É importante entender as semelhanças e diferenças entre <strong>atributos, parâmetros e variáveis locais</strong>.</p>
 <ul>
@@ -663,7 +842,7 @@
 <li class="fragment">Mas possuem diferenças importantes, como mostrado na tabela a seguir.</li>
 </ul>
 </section>
-<section id="section-24" class="slide level2">
+<section id="section-29" class="slide level2">
 <h2></h2>
 <table class="caption-top">
 <colgroup>
@@ -708,7 +887,7 @@
 </tbody>
 </table>
 </section>
-<section id="section-25" class="slide level2">
+<section id="section-30" class="slide level2">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:20%;">
@@ -736,7 +915,7 @@
 </div>
 </div></div>
 </section>
-<section id="section-26" class="slide level2">
+<section id="section-31" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -766,7 +945,7 @@
 </div>
 </div>
 </section>
-<section id="section-27" class="slide level2">
+<section id="section-32" class="slide level2">
 <h2></h2>
 <div title="(Opcional) Exercício - [Desafio]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -789,7 +968,7 @@
 
 </section>
 
-<section id="section-28" class="title-slide slide level1 center">
+<section id="section-33" class="title-slide slide level1 center">
 <h1></h1>
 <p>Para reforçar os novos conceitos que aprendemos, vamos revisitar o projeto <a href="https://github.com/ufla-ipoo/disciplina">disciplina</a> que estudamos no capítulo 1.</p>
 <div class="fragment">
@@ -804,7 +983,7 @@
 </section>
 
 <section>
-<section id="section-29" class="title-slide slide level1 center">
+<section id="section-34" class="title-slide slide level1 center">
 <h1></h1>
 <p>Veja que o nome, a matrícula e o número de créditos do estudante são as informações que devem <strong>ficar guardadas enquanto o objeto estudante existir</strong>.</p>
 <ul>
@@ -817,7 +996,7 @@
 </ul>
 </div>
 </section>
-<section id="section-30" class="slide level2">
+<section id="section-35" class="slide level2">
 <h2></h2>
 <p>Os três atributos possuem <strong>métodos de acesso</strong> (métodos <em>obter</em>).</p>
 <ul>
@@ -829,14 +1008,14 @@
 <h1>Chamando métodos</h1>
 
 </section>
-<section id="section-31" class="slide level2">
+<section id="section-36" class="slide level2">
 <h2></h2>
 <p>O método <code>obterLogin</code> da classe <code>Estudante</code> tem algo diferente que é interessante analisarmos.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb5"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">obterLogin</span><span class="op">()</span></span>
-<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
-<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> nome<span class="op">.</span><span class="fu">substring</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span><span class="dv">4</span><span class="op">)</span> <span class="op">+</span> matricula<span class="op">.</span><span class="fu">substring</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span><span class="dv">3</span><span class="op">);</span></span>
-<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">obterLogin</span><span class="op">()</span></span>
+<span id="cb16-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb16-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> nome<span class="op">.</span><span class="fu">substring</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span><span class="dv">4</span><span class="op">)</span> <span class="op">+</span> matricula<span class="op">.</span><span class="fu">substring</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span><span class="dv">3</span><span class="op">);</span></span>
+<span id="cb16-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Repare em dois pontos interessantes:</p>
@@ -846,7 +1025,7 @@
 </ol>
 </div>
 </section>
-<section id="section-32" class="slide level2">
+<section id="section-37" class="slide level2">
 <h2></h2>
 <p>Os atributos <code>nome</code> e <code>matricula</code> são objetos <code>String</code>.</p>
 <ul>
@@ -855,17 +1034,17 @@
 <div class="fragment">
 <p>O método substring tem o seguinte comentário e assinatura.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
-<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a><span class="co">* Returns a string that is a substring of this string. </span></span>
-<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a><span class="co">* The substring begins at the specified beginIndex </span></span>
-<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a><span class="co">* and extends to the character at index endIndex - 1. </span></span>
-<span id="cb6-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">* Thus the length of the substring is endIndex-beginIndex.</span></span>
-<span id="cb6-6"><a aria-hidden="true" tabindex="-1"></a><span class="co">*/</span></span>
-<span id="cb6-7"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">String</span> <span class="fu">substring</span><span class="op">(</span><span class="dt">int</span> beginIndex<span class="op">,</span> <span class="dt">int</span> endIndex<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
+<span id="cb17-2"><a aria-hidden="true" tabindex="-1"></a><span class="co">* Returns a string that is a substring of this string. </span></span>
+<span id="cb17-3"><a aria-hidden="true" tabindex="-1"></a><span class="co">* The substring begins at the specified beginIndex </span></span>
+<span id="cb17-4"><a aria-hidden="true" tabindex="-1"></a><span class="co">* and extends to the character at index endIndex - 1. </span></span>
+<span id="cb17-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">* Thus the length of the substring is endIndex-beginIndex.</span></span>
+<span id="cb17-6"><a aria-hidden="true" tabindex="-1"></a><span class="co">*/</span></span>
+<span id="cb17-7"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">String</span> <span class="fu">substring</span><span class="op">(</span><span class="dt">int</span> beginIndex<span class="op">,</span> <span class="dt">int</span> endIndex<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
-<section id="section-33" class="slide level2">
+<section id="section-38" class="slide level2">
 <h2></h2>
 <p>Pelo comentário vemos que o método retorna uma string que é parte da string original.</p>
 <ul>
@@ -875,7 +1054,7 @@
 <p>Sabendo disso, vamos entender como o método <code>obterLogin</code> funciona.</p>
 </div>
 </section>
-<section id="section-34" class="slide level2">
+<section id="section-39" class="slide level2">
 <h2></h2>
 <p>A primeira parte da expressão implementada é <code>nome.substring(0,4)</code>.</p>
 <ul>
@@ -888,7 +1067,7 @@
 </ul>
 </div>
 </section>
-<section id="section-35" class="slide level2">
+<section id="section-40" class="slide level2">
 <h2></h2>
 <p>Portanto, para um aluno de nome <strong>“Sebastião da Silva”</strong> e matrícula <strong>435221</strong>, qual seria o valor retornado pelo método <code>obterLogin</code>?</p>
 <ul>
@@ -896,7 +1075,7 @@
 <li class="fragment">Veja que o retorno seria <strong>“Seba435”</strong>.</li>
 </ul>
 </section>
-<section id="section-36" class="slide level2">
+<section id="section-41" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -925,7 +1104,7 @@
 </div>
 </div>
 </section>
-<section id="section-37" class="slide level2">
+<section id="section-42" class="slide level2">
 <h2></h2>
 <div title="Exercício">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -936,10 +1115,10 @@
 <div class="callout-content">
 <p>A classe <code>String</code> possui um método de acesso chamado <code>length</code>, com o seguinte cabeçalho:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
-<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> Return the number of characters in this string<span class="co">.</span></span>
-<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a> <span class="co">*/</span></span>
-<span id="cb7-4"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">length</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb18-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb18-2"><a aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> Return the number of characters in this string<span class="co">.</span></span>
+<span id="cb18-3"><a aria-hidden="true" tabindex="-1"></a> <span class="co">*/</span></span>
+<span id="cb18-4"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">length</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Adicione um comando condicional ao construtor da classe <code>Estudante</code> e imprima um erro na tela caso o parâmetro <code>nomeCompleto</code> tenha menos que quatro caracteres, ou o parâmetro <code>matriculaEstudante</code> tenha menos de três caracteres.</p>
 <p>Obs.: mesmo que a mensagem seja exibida, o objeto deve ser criado normalmente com os valores passados.</p>
@@ -948,7 +1127,7 @@
 </div>
 </div>
 </section>
-<section id="section-38" class="slide level2">
+<section id="section-43" class="slide level2">
 <h2></h2>
 <div title="(Opcional) Exercício - [Desafio]{.alert}">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
