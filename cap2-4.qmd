@@ -3,128 +3,50 @@ title: IPOO - Cap. 2 Entendendo as Definições de Classe
 subtitle: Aula 2.4 - Prática
 ---
 
-## Sobre as Aulas Práticas {.smaller}
+## Sobre as Aulas Práticas
 
 ::: {.nonincremental}
 
 Relembrando:
 
 - **Aulas práticas são importantes** para o entendimento dos conceitos.
-- Mas, para isso, é fundamental que tenha **estudado o conteúdo teórico ANP antes** da aula prática.
+- Mas, para isso, é fundamental que tenha **estudado o conteúdo teórico antes** da aula prática.
+- Lembre-se que para **ter presença na aula** prática é necessário **responder à chamada**,
+  e, [também]{.alert}, **entregar, no mínimo, 30% do exercícios** propostos até o final da aula.
 
 :::
 
-## {.smaller}
-
-É muito comum precisarmos implementar expressões em nossos códigos.
-
-- Como cálculos usando variáveis.
-- Ou chamadas de métodos de variáveis que são objetos.
-- O **Bloco de Códigos** do BlueJ pode ser muito útil para experimentarmos expressões antes de as implementarmos em nossas classes.
+# Parte 1: Exercício Livro {background-color="#40666e"} 
 
 ##
-
-Tente adivinhar os resultados das expressões abaixo, antes de usar o Bloco de Códigos.
-
-- `2023 + 4`
-- `"passa" + "tempo"`
-- `"passa" + 9`
-- `7 + 2 + "tempo"`
-- `"tempo" + 7 + 2`
-- `"passatempo".substring(5,6)`
-- `"passatempo".substring(5,11)`
-
-. . .
-
-O que foi novidade para você nesse exercício?
-
-## {.smaller}
-
-No Bloco de Códigos, quando o resultado de uma expressão é um objeto (como uma `String`), aparece um símbolo vermelho próximo ao resultado.
-
-- Você pode clicar duas vezes no símbolo para inspecionar o objeto.
-- Ou clicar uma vez para colocá-lo na bancada de objetos.
-- Experimente!
-
-. . .
-
-Você pode também declarar variáveis e escrever comandos completos no Bloco de Códigos.
-
-- Experimente os comandos abaixo:
-- `soma = 2023 + 4;`
-- `int soma = 0;`
-- `soma = 2023 + 4;`
-
-. . .
-
-Se você digitar o nome de uma variável sem ponto-e-vírgula, o Bloco de Códigos exibe seu valor.
-
-- Experimente digitar, por exemplo: `soma`
-
-## 
-
-::: {.callout-note title="Exercício" icon=false}
-Abra o projeto [maquina-ingressos-melhor](https://github.com/ufla-ipoo/maquina-ingressos-melhor) e digite o código abaixo.
-Veja que tem linhas que terminam com ponto-e-virgula e outras não.
-**Preste atenção** ao valor retornado pelo método `obterSaldo` em cada chamada.
-
-::: {.halfincfontsize}
-```{.java}
-MaquinaIngressos m1 = new MaquinaIngressos(1000);
-m1.obterSaldo()
-m1.inserirDinheiro(500);
-m1.obterSaldo()
-```
-:::
-:::
-
-::: {.callout-note title="Exercício" icon=false}
-Agora digite a linha abaixo no Bloco de Códigos.
-
-::: {.halfincfontsize}
-```{.java}
-MaquinaIngressos m2 = m1;
-```
-:::
-
-O que você acha que a chamada `m2.obterSaldo()` retornaria?
-
-Experimente!
-:::
-
-## 
-
-::: {.callout-note title="Exercício" icon=false}
-Agora digite o comando abaixo
-
-::: {.halfincfontsize}
-```{.java}
-m1.inserirDinheiro(500);
-```
-:::
-
-Avalie a linha abaixo e tente adivinhar o que ela vai retornar antes de digitar o código no Bloco de Códigos.
-
-::: {.halfincfontsize}
-```{.java}
-m2.obterSaldo()
-```
-:::
-
-A resposta foi a que você esperava?
-
-Você consegue imaginar alguma ligação entre `m1` e `m2` que explique o que está acontecendo?
-:::
-
-## {.smaller}
-
-Vamos agora começar os **exercícios de implementação** a serem [entregues]{.alert} nessa semana.
 
 Baixe o **projeto [exercicio-livro](https://github.com/ufla-ipoo/exercicio-livro)**.
 
 - Avalie o código da classe `Livro` antes de começar os exercícios.
 - Veja que ela tem apenas o rascunho inicial da classe, com dois atributos e um construtor.
 - Nos exercícios vamos completá-la.
+
+## Dica
+
+Alguns exercícios a seguir pedem que você faça métodos:
+
+- de acesso
+- ou que exibem informações no terminal.
+
+## Dica
+
+Lembre-se que **métodos de acesso**:
+
+- retornam informações para fora do objeto (portanto, têm comando `return`).
+- E, na disciplina, usamos a convenção de começar o nome desses métodos com a palavra `obter`.
+
+. . .
+
+Já **métodos que exibem informação no terminal**:
+
+- geralmente não retornam informação.
+- E, na disciplina, usamos a convenção de começar o nome desses métodos com a palavra `imprimir`.
+
 
 ##
 
@@ -172,6 +94,8 @@ Crie então um atributo para guardar essa informação (note que ele precisa ser
 O atributo deve ser inicializado com string vazia (`""`) no construtor.
 Crie um método modificador para o número de chamada, de forma que o usuário consiga defini-lo depois que o objeto estiver criado.
 Crie também um método de acesso para que o usuário consiga consultar o valor definido.
+
+**Dica**: não coloque espaço entre as aspas da string vazia, caso contrário, não será uma string vazia. 😉 
 :::
 
 ##
@@ -180,7 +104,10 @@ Crie também um método de acesso para que o usuário consiga consultar o valor 
 Modifique o método `imprimirDetalhes` para incluir o número de chamada do livro.
 Caso o livro ainda não tenha um número de chamada definido, o método deve exibir a informação `NDEF` (de "não definido").
 
-Dica: use um comando condicional e o método `length` da classe String para saber se o número de chamada já foi definido ou não.
+Você **deve** usar um comando condicional e o método `length` da classe String para saber se o número de chamada já foi definido ou não.
+
+[Atenção]{.alert}: não faça comparações de strings usando operadores `==` ou `!=`. 
+Como veremos mais adiante, comparar strings em Java dessa forma nem sempre funciona!
 :::
 
 . . .
@@ -209,20 +136,26 @@ Por fim, vamos alterar a classe `Livro` para que seja possível contabilizar qua
 Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `exercicio-livro` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar).
 :::
 
-##  {.smaller}
+# Parte 2: Exercício Aqueceder - Criando projeto do Zero {background-color="#40666e"}
+
+##  
 
 Agora, na segunda parte, vamos criar um novo projeto do zero no BlueJ.
 
-Como todos os exercícios que vocês fizeram até agora no BlueJ utilizaram projetos já criados,
-antes de começar os exercícios, veja nos slides a seguir como criar um novo projeto e uma nova classe no BlueJ.
+. . .
 
-## {.smaller}
+Todos os exercícios que vocês fizeram até agora no BlueJ utilizaram projetos já criados.
+
+- Neste exercício vamos aprender como criar um novo projeto e uma nova classe no BlueJ.
+- Vejam como fazer isso nas instruções dos slides a seguir.
+
+## 
 
 Acesse o menu **Projeto** &rarr; **Novo Projeto**.
 
 ![](imagens/BlueJ_novo_projeto_1.png){.r-stretch}
 
-## {.smaller}
+## 
 
 Aparecerá uma caixa de diálogo na qual você informará o **nome do projeto**.
 
@@ -232,7 +165,7 @@ Aparecerá uma caixa de diálogo na qual você informará o **nome do projeto**.
 
 ![](imagens/BlueJ_novo_projeto_2.png)
 
-## {.smaller}
+## 
 
 Clique no botão **Nova Classe...**.
 
@@ -240,7 +173,7 @@ Clique no botão **Nova Classe...**.
 
 ![](imagens/BlueJ_nova_classe.png){.r-stretch}
 
-## {.smaller}
+## 
 
 A nova classe aparecerá no diagrama do BlueJ.
 
@@ -248,7 +181,7 @@ A nova classe aparecerá no diagrama do BlueJ.
 
 ![](imagens/BlueJ_nova_classe_2.png){.r-stretch}
 
-## {.smaller}
+## 
 
 Clique duas vezes na classe no diagrama para abrir o código-fonte.
 
@@ -257,7 +190,7 @@ Clique duas vezes na classe no diagrama para abrir o código-fonte.
 
 ![](imagens/BlueJ_nova_classe_3.png){.r-stretch}
 
-## Resumo  {.smaller}
+## Resumo  
 
 - Acesse o menu **Projeto** &rarr; **Novo Projeto**.
   - Dê um nome para o projeto.
