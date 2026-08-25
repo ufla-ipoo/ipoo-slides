@@ -136,7 +136,7 @@ Por fim, vamos alterar a classe `Livro` para que seja possível contabilizar qua
 Acesse, no Campus Virtual, a atividade correspondente a essa parte dos exercícios e envie o código do projeto `exercicio-livro` da forma que ficou após as suas alterações (compacte a pasta em um arquivo `.zip` para enviar).
 :::
 
-# Parte 2: Exercício Aqueceder - Criando projeto do Zero {background-color="#40666e"}
+# Parte 2: Exercício Aquecedor {background-color="#40666e"}
 
 ##  
 
