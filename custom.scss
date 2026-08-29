@@ -24,6 +24,11 @@ $h1bgcolor: #f7fad1;
     font-size: 70%;
 }
 
+/* Smaller date only on the opening title slide */
+#title-slide .date {
+    font-size: 0.7em;
+}
+
 // Slide numbers to the bottom-left
 .slide-number, .reveal.has-logo .slide-number {
     bottom: 14px !important;

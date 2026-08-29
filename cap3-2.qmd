@@ -3,7 +3,7 @@ title: IPOO - Cap. 3 Interação entre Objetos
 subtitle: Aula 3.2 - Prática
 ---
 
-##  {.smaller}
+##
 
 ::: {.nonincremental}
 
@@ -14,7 +14,7 @@ Algumas coisas **para relembrar** e pensar:
 
 :::
 
-## Sobre essa aula {.smaller}
+## Sobre essa aula
 
 Na primeira parte da aula:
 
@@ -30,18 +30,18 @@ Na segunda parte:
 
 # Um outro exemplo de interação entre objetos {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Na aula teórica vimos um exemplo de interação entre objetos, no projeto `visor-relogio`.
 
 - Vimos que objetos podem criar objetos e chamar métodos de outros objetos
-- Aprendemos isso usando **leitura de código**.
-  - Ler e entender código é uma habilidade fundamental.
+- Aprendemos isso usando [leitura de código]{.alert}.
+  - Ler e entender código **é uma habilidade fundamental**.
   - Um desenvolvedor de software faz isso durante toda a carreira.
 - Mas, às vezes, vale muito a pena usar ferramentas adicionais.
   - Para entender mais profundamente como um programa funciona.
 
-. . .
+##
 
 :::: {.columns}
 
@@ -55,14 +55,14 @@ Uma dessas ferramentas, que vamos aprender a usar agora, é o [depurador]{.alert
 ::::
 
 
-## {.smaller}
+. . .
 
 Um **depurador** é um programa que permite que programadores possam executar seus programas um passo de cada vez.
 
 - Geralmente ele tem uma função de **parar** e **continuar a execução de um programa** em um ponto específico do código.
   - E permite **examinar os valores das variáveis**.
 
-. . .
+##
 
 IDEs mais avançadas têm depuradores complexos, com inúmeras funcionalidades.
 
@@ -83,7 +83,7 @@ IDEs mais avançadas têm depuradores complexos, com inúmeras funcionalidades.
 :::
 ::::
 
-## O exemplo do sistema de e-mail {.smaller}
+## O exemplo do sistema de e-mail
 
 Para aprender a usar o depurador, vamos trabalhar com o projeto de exemplo [sistema-de-email](https://github.com/ufla-ipoo/sistema-de-email).
 
@@ -110,18 +110,23 @@ Experimente a simulação do sistema de e-mails.
 - Experimente também criando mais clientes de e-mail.
 :::
 
-## {.smaller}
+##
 
 Ao fazer o exercício anterior vimos que:
 
-- O projeto tem três classes: `ServidorDeEmail`, `ClienteDeEmail` e `Email`.
-- Um objeto servidor de email deve ser criado primeiro para ser usado pelos clientes de e-mail.
+- O projeto tem **três classes**: `ServidorDeEmail`, `ClienteDeEmail` e `Email`.
+- Um **objeto servidor de email deve ser criado primeiro** para ser usado pelos clientes de e-mail.
   - É ele quem cuida da troca de mensagens.
 - Vários clientes de e-mail podem ser criados.
   - Cada cliente de e-mail está associado a um nome de usuário.
-- E-mails podem ser enviados de um cliente para outro usando um método da classe do cliente de e-mail.
-- E-mails podem ser recebidos, um de cada vez, do servidor, usando um método da classe do cliente de e-mail.
-- A classe `Email` nunca é instanciada explicitamente pelo usuário.
+
+##
+
+Ao fazer o exercício anterior vimos que:
+
+- E-mails podem ser **enviados** de um cliente para outro usando um método da classe do cliente de e-mail.
+- E-mails podem ser **recebidos**, um de cada vez, do servidor, usando um método da classe do cliente de e-mail.
+- A classe `Email` **nunca é instanciada explicitamente** pelo usuário.
   - Ela é usada internamente pelos clientes de e-mail e pelo servidor para criar, armazenar e trocar mensagens.
 
 . . .
@@ -130,22 +135,22 @@ Ao fazer o exercício anterior vimos que:
 Desenhe o diagrama de objetos representando a situação logo após a criação de um servidor de e-mail e três clientes de e-mail.
 :::
 
-## {.smaller}
+##
 
 Não vamos analisar todo o código do projeto.
 
 - A classe `ServidorDeEmail` usa conceitos que veremos apenas mais adiante na disciplina.
   - Vamos então usar **abstração**, assumindo que ela faz o que tem que fazer sem nos preocuparmos em entender seus detalhes.
 
-. . .
+##
 
-A classe `Email` é bem simples.
+Já a classe `Email` é bem simples.
 
 - Dê uma olhada no código e veja se tem alguma dúvida.
 - Repare que, no construtor, ela usa algo do Java que não tínhamos visto ainda.
   - A [palavra-chave `this`]{.alert}.
 
-## {.smaller}
+##
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="7-12"}
@@ -168,7 +173,7 @@ public class Email
 
 Vamos avaliar a primeira linha do construtor.
 
-## {.smaller}
+##
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="9"}
@@ -191,10 +196,33 @@ public class Email
 
 - Repare que é um comando de atribuição.
   - A variável do lado esquerdo (`this.remetente`), recebe o valor da variável do lado direito (`remetente`).
-- Precisarmos usar `this` aqui por causa da [sobrecarga de nomes]{.alert}.
-  - Um mesmo nome usado para coisas diferentes.
 
-## {.smaller}
+##
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="9"}
+public class Email
+{
+    private String remetente;
+    private String destinatario;
+    private String mensagem;
+    
+    public Email(String remetente, String destinatario, String mensagem)
+    {
+        this.remetente = remetente;
+        this.destinatario = destinatario;
+        this.mensagem = mensagem;
+    }
+
+    // métodos omitidos
+```
+:::
+
+Precisamos usar `this` aqui por causa da [sobrecarga de nomes]{.alert}.
+
+- Um mesmo nome usado para coisas diferentes.
+
+##
 
 Quantos atributos a classe tem?
 
@@ -213,7 +241,7 @@ Portanto, de quantas variáveis estamos falando?
 - 6 (3 parâmetros + 3 atributos).
 - Repare que apesar de terem o mesmo nome, os atributos e os parâmetros são coisas diferentes.
 
-## {.smaller}
+## {auto-animate=true}
 
 Suponha que tivéssemos a linha de código destacada abaixo no construtor:
 
@@ -234,12 +262,25 @@ Suponha que tivéssemos a linha de código destacada abaixo no construtor:
 
 Seria exibido o valor do **atributo `remetente`** ou do **parâmetro `remetente`**?
 
-- A especificação da linguagem Java indica o uso do **escopo mais próximo**.
-- O parâmetro foi declarado no construtor, e o atributo na classe.
-  - Logo, o parâmetro foi declarado "mais perto" da linha de código.
-  - Portanto, na linha de código acima, estamos referenciando o **parâmetro `remetente`**.
+## {auto-animate=true}
 
-## {.smaller}
+```{.java code-line-numbers="3"}
+    public Email(String remetente, String destinatario, String mensagem)
+    {
+        System.out.println(remetente);
+        this.remetente = remetente;
+        this.destinatario = destinatario;
+        this.mensagem = mensagem;
+    }
+```
+
+A especificação da linguagem Java indica o uso do **escopo mais próximo**.
+
+- O parâmetro foi declarado no construtor, e o atributo na classe.
+- Logo, o parâmetro foi declarado "mais perto" da linha de código.
+  - Portanto, na linha de código destacada acima, estamos referenciando o **parâmetro `remetente`**.
+
+##
 
 Portanto, para inicializarmos o **atributo `remetente`** precisamos de uma maneira de conseguir referenciá-lo.
 
@@ -251,9 +292,9 @@ Portanto, para inicializarmos o **atributo `remetente`** precisamos de uma manei
 
 - Assim, `this.remetente` se refere ao atributo `remetente` do objeto atual.
 
-. . .
+##
 
-Portanto:
+Assim, o comando
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
@@ -263,17 +304,20 @@ Portanto:
 
 . . .
 
-Pode ser lido como:
+pode ser lido como:
 
-::: {.halfincfontsize}
-```{.java code-line-numbers="false"}
-    atributo chamado remetente *recebe* parâmetro chamado remetente;
-```
-:::
+- **atributo** chamado `remetente` _recebe_ **parâmetro** chamado `remetente`.
 
-## {.smaller}
+
+## {auto-animate=true}
 
 ![](imagens/duvida_this.png)
+
+. . .
+
+O motivo de usarmos o mesmo nome é a **legibilidade**.
+
+## {auto-animate=true}
 
 O motivo de usarmos o mesmo nome é a **legibilidade**.
 
@@ -309,7 +353,6 @@ Nenhum dos atributos seria inicializado. Por que?
 
 ##
 
-::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
 public Email(String remetente, String destinatario, String Mensagem)
 {
@@ -324,12 +367,10 @@ public Email(String remetente, String destinatario, String Mensagem)
     this.mensagem = mensagem; 
 }
 ```
-:::
-
 
 # Usando um depurador {background-color="#40666e"}
 
-## {.smaller}
+##
 
 A classe mais interessante do sistema de e-mails é a de cliente de email.
 
@@ -345,26 +386,39 @@ Dica use nomes de variáveis `tiao` e `maria` para os clientes de e-mail para fa
 Envie um e-mail da Maria para o Tião usando o método `enviarEmail`. Não leia a mensagem ainda!
 ::::
 
-## {.smaller}
+##
 
 Depois do exercício, o servidor tem um e-mail armazenado para o Tião, esperando para ser buscado.
 
 - Você já sabe que o método `imprimirProximoEmail` vai pegar esse e-mail e exibi-lo no terminal.
 - Vamos entender como isso funciona exatamente, usando o depurador.
 
-## Definindo pontos de parada (*breakpoints*) {.smaller}
+## Definindo pontos de parada (*breakpoints*) {auto-animate=true}
 
-Um [*breakpoint*]{.alert} é uma marcação ligada a uma linha de código na qual o depurador para a execução do programa.
+. . .
+
+Um [*breakpoint*]{.alert} é uma marcação ligada a uma linha de código na qual o depurador pausa a execução do programa.
 
 - No BlueJ você pode definir um *breakpoint* selecionando uma linha e teclando `Ctrl+B`.
   - Ou clicando na barra na margem esquerda da linha.
-  - Aparece um marcador indicando que o *breakpoint* foi criado.
-    ![](imagens/breakpoint_bluej.png){width="50%"}    
-  - Obs.: a classe precisa estar compilada para que você consiga fazer isso.
+- Aparece um marcador indicando que o *breakpoint* foi criado.
+
+. . .
+
+![](imagens/breakpoint_bluej.png){.relative width="50%"}
+
+## Definindo pontos de parada (*breakpoints*) {auto-animate=true}
+
+
+![](imagens/breakpoint_bluej.png){.r-stretch}  
+
+- Breakpoints só podem ser colocados em linhas de código executáveis.
+  - Portanto, não é possível colocá-los em assinatura de métodos, por exemplo.
+- Obs.: a classe precisa estar compilada para que você consiga fazer isso.
 - Você pode remover o *breakpoint* clicando no marcador.
 
 
-## {.smaller}
+##
 
 :::: {.callout-tip title="Atividade em aula" icon=false}
 Crie um *breakpoint* na primeira linha do método `imprimirProximoEmail`.
@@ -378,11 +432,18 @@ Agora chame o método `imprimirProximoEmail` do cliente de e-mail do Tião.
 
 . . .
 
+:::: {.columns}
+
+::: {.column width="30%"}
 A **janela do depurador** do BlueJ é exibida.
+:::
 
+::: {.column width="70%"}
 ![](imagens/depurador_bluej.png){width="70%"}
+:::
+::::
 
-## {.smaller}
+##
 
 Do lado direito da janela do depurador podemos observar que:
 
@@ -396,26 +457,32 @@ Do lado direito da janela do depurador podemos observar que:
   - Isso porque a linha do *breakpoint* ainda não foi executada.
   - O programa parou antes de executar essa linha.
 
-. . .
+##
 
 Veja então que o depurador nos permite parar a execução do programa, ver os valores as variáveis
 
 - e, especialmente, a partir de agora executar o programa passo a passo.
 
-## Depuração passo a passo {.smaller}
+![](imagens/depurador_bluej.png){r-stretch}
+
+## Depuração passo a passo
+
+. . .
 
 Na parte inferior da janela do depurador há botões que nos permitem controlar a execução do programa.
 
+. . .
+
 :::: {.callout-tip title="Atividade em aula" icon=false}
-Use o botão **Avançar** uma vez para executar uma linha do método `imprimirProximoEmail`.
+Use o botão [Avançar]{.alert} **uma única vez** para executar uma linha do método `imprimirProximoEmail`.
 ::::
 
 . . .
 
-Veja que, no editor de código, a linha destacada agora é a próxima linha.
+No editor de código, a linha destacada agora é a próxima linha.
 
 - E, na janela do depurador, vemos que a variável local `email` foi criada.
-  - Você pode, inclusive, clicar duas vezes na variável para inspecionar o objeto.
+- Você pode até clicar duas vezes na variável para inspecionar o objeto.
 
 ## 
 
@@ -425,7 +492,7 @@ Depois, clique novamente em **Avançar** e veja se tinha acertado.
 Tente entender porque você acertou ou errou.
 ::::
 
-## {.smaller}
+##
 
 Podemos agora clicar em **Avançar** repetidamente até terminar o método.
 
@@ -441,7 +508,9 @@ Avance a execução passo a passo e observe o que acontece dessa vez.
 Explique porque o fluxo de execução foi diferente.
 ::::
 
-## Entrando em métodos {.smaller}
+## Entrando em métodos
+
+. . .
 
 Ao depurarmos as chamadas do método `imprimirProximoEmail`, você deve ter notado duas chamadas de métodos externos.
 
@@ -459,7 +528,7 @@ Na linha abaixo, é chamado um método do objeto `servidor`.
 ```
 :::
 
-## {.smaller}
+##
 
 Já na linha abaixo, o método `imprimir` é chamado para o objeto `email`.
 
@@ -472,14 +541,14 @@ Já na linha abaixo, o método `imprimir` é chamado para o objeto `email`.
 ```
 :::
 
-## {.smaller}
+##
 
 Veja que, ao usar o botão **Avançar**, estamos usando [abstração]{.alert}.
 
 - Isso porque estamos enxergando o método `imprimir`, por exemplo, como um único comando.
 - E vimos que o efeito dele é imprimir os detalhes da mensagem no terminal.
 
-. . .
+##
 
 Mas se estivermos interessados em mais detalhes, podemos aprofundar a análise.
 
@@ -496,14 +565,14 @@ Chame o método `imprimirProximoEmail` para o cliente de e-mail do Tião novamen
 
 Use o botão **Avançar** até chegar na linha: `email.imprimir()`.
 
-Chegando nela, use o botão **Entrar em** em vez de **Avançar**.
+Chegando nela, use o botão [Entrar em]{.alert} em vez de **Avançar**.
 
 O que você observa? Explique o que vê?
 ::::
 
 # Revisitando as chamadas de métodos {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Nos exercícios anteriores vimos um objeto chamando método de outro objeto.
 
@@ -512,7 +581,7 @@ Nos exercícios anteriores vimos um objeto chamando método de outro objeto.
 ##
 
 :::: {.callout-note title="Exercício" icon=false}
-Crie um *breakpoint* na primeira linha do método `enviarEmail` da classe `ClienteDeEmail` e, em seguida, chame o método.
+Crie um **breakpoint** na primeira linha do método `enviarEmail` da classe `ClienteDeEmail` e, em seguida, chame o método.
 
 Use o botão **Entrar em** para entrar no construtor do objeto e-mail.
 
@@ -567,7 +636,7 @@ Para isso, siga cuidadosamente as instruções abaixo:
 Teste suas alterações!
 ::::
 
-## {.smaller}
+##
 
 No próximo exercício você precisará utilizar uma **estrutura de repetição**.
 
