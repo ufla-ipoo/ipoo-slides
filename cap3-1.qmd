@@ -4,7 +4,7 @@ subtitle: Aula 3.1 - Teórica
 ---
 
 
-## Como estudar? {.smaller}
+## Como estudar?
 
 Será que preciso dizer de novo as [dicas]{.alert}? :)
 
@@ -25,7 +25,7 @@ Será que preciso dizer de novo as [dicas]{.alert}? :)
 
 ::::
 
-## Principais Conceitos do Capítulo {.smaller}
+## Principais Conceitos do Capítulo
 
 ::: {.nonincremental}
 - Abstração
@@ -40,20 +40,29 @@ Será que preciso dizer de novo as [dicas]{.alert}? :)
 Construções Java do capítulo
 
 ::: {.nonincremental}
-- Tipos de classe, operadores lógicos (`&&` e `||`), concatenação de strings, construção de objetos (operador `new`), chamadas de métodos, `this`.
+- Classes como tipos, operadores lógicos (`&&` e `||`), concatenação de strings, construção de objetos (operador `new`), chamadas de métodos, `this`.
 :::
+
+##
+
+Nós já temos uma boa noção do que são objetos, 
+
+- como são implementados através de classes 
+- e como são utilizados individualmente.
 
 . . .
 
-Nós já temos uma boa noção do que são objetos, como são implementados através de classes e como são utilizados individualmente.
+Nós agora vamos ver que, para criar aplicações interessantes, 
 
-- Nós agora vamos ver que, para criar aplicações interessantes, precisamos usar objetos que cooperam entre si para realizar alguma tarefa.
+- precisamos usar objetos que cooperam entre si para realizar alguma tarefa.
 
 # Abstração e Modularização {background-color="#40666e"}
 
-## {.smaller}
+##
 
-Para entender como podemos criar aplicações com **objetos que cooperam entre si**, vamos começar com um exemplo bem simples.
+Para entender como podemos criar aplicações com **objetos que cooperam entre si**, 
+
+- vamos começar com um exemplo bem simples.
 
 . . .
 
@@ -69,14 +78,14 @@ Um **visor de um relógio digital** que mostra horas e minutos, separados por do
 
 ::::
 
-. . .
+##
 
 Em um primeiro momento poderíamos pensar em criar uma única classe para representar o visor do relógio.
 
 - Mas vamos usar uma abordagem diferente.
 - O objetivo é usar esse exemplo bem simples para demonstrar como podemos tratar um problema, **dividindo-o em subproblemas** menores, que são **mais fáceis de resolver**.
 
-## {.smaller}
+##
 
 ![](imagens/duvida_modularizacao.png)
 
@@ -84,16 +93,19 @@ Em um primeiro momento poderíamos pensar em criar uma única classe para repres
 
 O motivo para criarmos mais de uma classe em vez de fazer tudo em uma só é a [complexidade]{.alert}.
 
-- À medida que avançarmos na disciplina, vamos criar programas cada vez mais complexos.
+## 
+
+À medida que avançarmos na disciplina, vamos criar programas cada vez mais complexos.
+
 - Problemas simples como o da máquina de ingressos podem ser resolvidos com uma única classe.
 - Mas para projetos maiores é muito **difícil** conseguir **tratar todos os detalhes ao mesmo tempo**.
 - O que fazemos então é **identificar subcomponentes** do problema que possam ser **tratados em classes separadas**.
 
-## {.smaller}
+##
 
 Para lidar com a complexidade, usamos a [abstração]{.alert}.
 
-## {.smaller auto-animate=true}
+## {auto-animate=true}
 
 ::: {.nonincremental}
 
@@ -104,95 +116,82 @@ O problema a ser resolvido, às vezes é muito grande.
 :::
 
 
-## {.smaller auto-animate=true}
+## {auto-animate=true}
 
 ::: {.nonincremental}
 
 O problema a ser resolvido, às vezes é muito grande.
 
-- Nós então dividimos o problema subproblemas.
+Nós então dividimos o problema subproblemas.
 
 ![](imagens/dividir-conquistar-2.png){.relative width="70%"}
 
 :::
 
 
-## {.smaller auto-animate=true}
+## {auto-animate=true}
 
 ::: {.nonincremental}
 
 O problema a ser resolvido, às vezes é muito grande.
 
-- Nós então dividimos o problema subproblemas.
-  - E dividimos novamente em problemas ainda menores.
+Nós então dividimos o problema subproblemas.
+
+E dividimos novamente em problemas ainda menores.
 
 ![](imagens/dividir-conquistar-3.png){.relative width="70%"}
 
 :::
 
-## {.smaller auto-animate=true}
+## {auto-animate=true}
 
 ::: {.nonincremental}
 
-O problema a ser resolvido, às vezes é muito grande.
-
-- Nós então dividimos o problema subproblemas.
-  - E dividimos novamente em problemas ainda menores.
-  - Fazemos isso até que eles sejam pequenos o suficiente para que consigamos lidar com eles.
+Fazemos isso até que eles sejam pequenos o suficiente para que consigamos lidar com eles.
 
 ![](imagens/dividir-conquistar-3.png){.relative width="70%"}
 
 :::
 
-## {.smaller auto-animate=true}
+## {auto-animate=true}
 
 ::: {.nonincremental}
 
-O problema a ser resolvido, às vezes é muito grande.
+Fazemos isso até que eles sejam pequenos o suficiente para que consigamos lidar com eles.
 
-- Nós então dividimos o problema subproblemas.
-  - E dividimos novamente em problemas ainda menores.
-  - Fazemos isso até que eles sejam pequenos o suficiente para que consigamos lidar com eles.
-- Depois dos subproblemas estarem resolvidos, não pensamos mais nos detalhes deles.
+Depois dos subproblemas estarem resolvidos, não pensamos mais nos detalhes deles.
 
 ![](imagens/dividir-conquistar-3.png){.relative width="70%"}
 
 :::
 
-## {.smaller auto-animate=true}
+## {auto-animate=true}
 
 ::: {.nonincremental}
 
-O problema a ser resolvido, às vezes é muito grande.
+Depois dos subproblemas estarem resolvidos, não pensamos mais nos detalhes deles.
 
-- Nós então dividimos o problema subproblemas.
-  - E dividimos novamente em problemas ainda menores.
-  - Fazemos isso até que eles sejam pequenos o suficiente para que consigamos lidar com eles.
-- Depois dos subproblemas estarem resolvidos, não pensamos mais nos detalhes deles.
-  - E os utilizamos como blocos (caixa-preta) para resolver os problemas maiores.
+E os utilizamos como blocos (caixa-preta) para resolver os problemas maiores.
 
 ![](imagens/dividir-conquistar-4.png){.relative width="70%"}
 
 :::
 
-## {.smaller auto-animate=true}
+## {auto-animate=true}
 
 ::: {.nonincremental}
 
-O problema a ser resolvido, às vezes é muito grande.
+Depois dos subproblemas estarem resolvidos, não pensamos mais nos detalhes deles.
 
-- Nós então dividimos o problema subproblemas.
-  - E dividimos novamente em problemas ainda menores.
-  - Fazemos isso até que eles sejam pequenos o suficiente para que consigamos lidar com eles.
-- Depois dos subproblemas estarem resolvidos, não pensamos mais nos detalhes deles.
-  - E os utilizamos como blocos (caixa-preta) para resolver os problemas maiores.
-  - Até termos todo o problema resolvido.
+E os utilizamos como blocos (caixa-preta) para resolver os problemas maiores.
+
+Até termos todo o problema resolvido.
 
 ![](imagens/dividir-conquistar-5.png){.relative width="70%"}
 
 :::
 
-## {.smaller}
+##
 
 Essa técnica de dividir o problema em problemas menores é chamada de [dividir para conquistar]{.alert}.
 
@@ -200,7 +199,7 @@ Essa técnica de dividir o problema em problemas menores é chamada de [dividir 
 
 Podemos entender isso melhor com um exemplo.
 
-## {.smaller}
+##
 
 Vamos pensar em uma equipe de engenheiros **projetando um carro**.
 
@@ -210,18 +209,17 @@ Vamos pensar em uma equipe de engenheiros **projetando um carro**.
 
 
 
-## {.smaller}
+##
 
 Outra equipe de engenheiros projeta o **motor**.
 
 - Eles pensam em cada **parte do motor**: as cilindradas, o mecanismo de injeção, a eletrônica, etc.
 - Para eles o motor não é uma peça única, e sim **um sistema complexo** de várias partes
+  - Uma delas pode ser a vela de ignição, por exemplo.
+
   ![](imagens/motor_carro.png){width="50%"}
 
-- Uma delas pode ser a vela de ignição.
-
-
-## {.smaller}
+##
 
 Há então uma terceira equipe de engenheiros (muitas vezes de outra empresa) que projeta a **vela de ignição**.
 
@@ -229,7 +227,7 @@ Há então uma terceira equipe de engenheiros (muitas vezes de outra empresa) qu
   ![](imagens/vela_ignicao.png){width="50%"}
 - Eles podem ter feito estudos complexos para saber o metal certo a ser usado, e como é o processo detalhado de fabricação e instalação.
 
-# {.smaller}
+#
 
 A mesma coisa acontece com as outras partes do carro.
 
@@ -254,26 +252,26 @@ Mas outro engenheiro estuda a **composição química ideal** para produzir o ma
 
 :::: 
 
-. . .
+##
 
 Já a empresa que fabrica o carro, vai apenas comprar o pneu da fabricante de pneus e enxergá-lo como uma única peça.
 
 - Isto é [abstração]{.alert}!
 
-# {.smaller}
+. . .
 
 Os engenheiros da fabricante de carros [abstraem]{.alert} (*ignoram*) os detalhes da fabricação dos pneus para conseguirem se concentrar nos detalhes de criação da roda, por exemplo.
 
 - Já os *designers* ignoram os detalhes da roda ou do motor para se concentrar no *design* do carro como um todo.
   - Eles se preocupam apenas com o tamanho do motor e das rodas.
 
-. . .
+##
 
 Repare que um carro é formado por tantas partes que é praticamente **impossível** uma pessoa só **saber todos os detalhes**, de todas as partes, ao mesmo tempo.
 
 - Se fosse assim, provavelmente carros nem seriam fabricados.
 
-# {.smaller}
+#
 
 Se os carros podem ser fabricados aos milhares hoje em dia é porque os engenheiros usam [modularização]{.alert} e abstração.
 
@@ -282,7 +280,7 @@ Se os carros podem ser fabricados aos milhares hoje em dia é porque os engenhei
 - Quando o módulo é construído, eles usam **abstração**.
   - Ou seja, eles enxergam o **módulo como uma peça única** e o utilizam para construir componentes mais complexos.
 
-# {.smaller}
+#
 
 Modularização e abstração se complementam.
 
@@ -300,14 +298,14 @@ Modularização e abstração se complementam.
 
 # Abstração em Software {background-color="#40666e"}
 
-## {.smaller}
+##
 
 A mesma ideia de **modularização e abstração** do exemplo do carro **é aplicada no desenvolvimento de software**.
 
 - Para conseguirmos implementar um sistema complexo, nós tentamos dividi-lo em subcomponentes que possamos programar de forma independente.
 - Depois tentamos usar esses componentes, como se eles fossem partes simples, sem nos preocuparmos com seus detalhes internos.
 
-. . .
+##
 
 Em **POO**, os componentes e subcomponentes são **objetos**.
 
@@ -315,13 +313,13 @@ Em **POO**, os componentes e subcomponentes são **objetos**.
 - Criaríamos objetos separados para motor, roda, caixa de marcha, etc.
 - E usaríamos esses objetos para construir um objeto carro.
 
-## {.smaller}
+##
 
 Não é simples pensar nos tipos de objetos (e, consequentemente, nas classes) que precisamos ter em um software.
 
 - Por isso, vamos começar com o exemplo simples do mostrador do relógio.
 
-## Quiz 3.1 {background-color="#f7fad1" .smaller}
+## Quiz 3.1 {background-color="#f7fad1"}
 
 ::: {.nonincremental}
 [O conceito de abstração tem relação com:]{.alert}
@@ -334,13 +332,23 @@ d. Criar atributos abstratos.
 
 # Modularização no exemplo do relógio {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Voltando ao exemplo do visor de relógio digital, qual seria a maneira mais direta de implementá-lo?
 
-- Poderíamos pensar em uma única classe que representasse os quatro dígitos do relógio, certo?
+. . .
 
+:::: {.columns}
+
+::: {.column width="50%"}
+Poderíamos pensar em uma única classe que representasse os quatro dígitos do relógio, certo?
+:::
+
+::: {.column width="50%"}
 ![](imagens/visor_relogio_digital.png)
+:::
+
+:::: 
 
 . . .
 
@@ -348,7 +356,7 @@ Mas vamos tentar usar **modularização**.
 
 - Como você poderia dividir o "problema" de representar o visor, em subproblemas?
 
-## {.smaller}
+##
 
 Repare como funcionam os dígitos das horas.
 
@@ -366,26 +374,32 @@ Repare que o comportamento dos dígitos das horas e dos minutos é exatamente o 
 
 - O que muda é apenas o valor limite que faz o valor voltar para zero.
 
-- Podemos pensar então em um objeto capaz de representar um visor de dois dígitos.
-  ![](imagens/visor_numeros.png)
-- E poderíamos usar dois objetos desse tipo, um para as horas e outro para os minutos, para representar o relógio.
+##
+
+Podemos pensar então em um objeto capaz de representar um visor de dois dígitos.
+
+![](imagens/visor_numeros.png)
+
+. . .
+
+E poderíamos usar dois objetos desse tipo, um para as horas e outro para os minutos, para representar o relógio.
 
 # Implementando o visor do relógio {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Precisamos então definir uma classe para representar um visor de número de dois dígitos.
 
-- Ela poderia ter um método de acesso para retornar seus valores.
+- Ela poderia ter um método de acesso para retornar seu valor.
 - E dois métodos modificadores:
-  - Para definir o valor.
-  - E para incrementá-lo (adicionar 1), zerando ao chegar no limite.
+  - um para definir o valor.
+  - e outro para incrementá-lo (adicionar 1), zerando ao chegar no limite.
 
 . . .
 
 Com a classe pronta, podemos criar dois objetos dela com limites diferentes para representar o relógio.
 
-## {.smaller}
+##
 
 Quais **atributos** são necessários na classe que representa números de dois dígitos?
 
@@ -410,7 +424,7 @@ public class VisorDeNumero
 ```
 :::
 
-## {.smaller}
+##
 
 Antes de pensar nos detalhes da classe `VisorDeNumero`, imagine que já temos a classe pronta.
 
@@ -426,7 +440,21 @@ public class VisorDeRelogio
 {
     private VisorDeNumero horas;
     private VisorDeNumero minutos;
+    // ...
+    // construtor e métodos omitidos.
+}
+```
+:::
 
+##
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public class VisorDeRelogio
+{
+    private VisorDeNumero horas;
+    private VisorDeNumero minutos;
+    // ...
     // construtor e métodos omitidos.
 }
 ```
@@ -436,7 +464,10 @@ public class VisorDeRelogio
 
 Repare que [classes definem tipos]{.alert}.
 
-## {.smaller}
+- Os atributos `horas` e `minutos` são do tipo `VisorDeNumero`.
+- Que é a classe que criamos para representar os objetos que mostram os números.
+
+##
 
 O **tipo de um atributo** determina o tipo dos valores que ele pode guardar.
 
@@ -451,7 +482,7 @@ Uma declaração de um atributo ou uma variável do tipo de uma classe não cria
 - Portanto, no construtor da classe `VisorDeRelogio` precisaremos criar os objetos a serem guardados pelos atributos.
 :::
 
-. . .
+##
 
 ::: {.callout-tip title="Conceito" icon=false}
 **Classes definem tipos**. Um nome de classe pode ser usado como tipo de uma variável. Variáveis de tipo de uma classe podem guardar objetos daquela classe.
@@ -459,7 +490,7 @@ Uma declaração de um atributo ou uma variável do tipo de uma classe não cria
 
 # Diagramas de classe vs. diagramas de objetos {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Compare as duas figuras abaixo:
 
@@ -478,11 +509,24 @@ Compare as duas figuras abaixo:
 
 :::: 
 
-. . .
+##
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](imagens/visor_relogio_diagrama_objetos.png)
+:::
+
+::: {.column width="50%"}
+![](imagens/visor_relogio_diagrama_classes.png)
+:::
+
+:::: 
+
 
 ![](imagens/duvida_2_classes_3_objetos.png){width="40%"}
 
-## {.smaller}
+##
 
 Repare que nós criamos dois objetos da mesma classe `VisorDeNumero`.
 
@@ -494,7 +538,7 @@ Os dois diagramas mostram diferentes visões do mesmo programa.
   - Ou seja, representa o **momento da programação**, quando estamos escrevendo o código.
   - Dizemos que `VisorDeRelogio` usa (ou depende) de `VisorDeNumero`.
 
-. . .
+##
 
 Quando o programa é iniciado, vamos criar um objeto `VisorDeRelogio`.
 
@@ -502,7 +546,7 @@ Quando o programa é iniciado, vamos criar um objeto `VisorDeRelogio`.
 - Portanto, o diagrama de objetos mostra uma [visão dinâmica]{.alert}.
 - Ele representa o **tempo de execução**, quando o programa está rodando.
 
-## {.smaller}
+##
 
 ![](imagens/visor_relogio_diagrama_objetos.png){width="40%"} 
 
@@ -511,7 +555,9 @@ Vamos avaliar o diagrama de objetos novamente, pois ele traz um detalhe importan
 - Repare que quando uma variável guarda um objeto, ela não o guarda diretamente.
 - Na verdade a variável guarda uma [referência]{.alert} (um ponteiro) [para o objeto]{.alert} .
 
-. . .
+##
+
+![](imagens/visor_relogio_diagrama_objetos.png){width="40%"} 
 
 No diagrama a variável é representada pela caixa branca.
 
@@ -534,18 +580,22 @@ Explique a diferença entre os diagramas.
 Quando um diagrama de classes é alterado? E como ele é alterado?
 :::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
 Quando um diagrama de objetos é alterado? E como ele é alterado?
 :::
+
+. . .
 
 ::: {.callout-note title="Exercício" icon=false}
 Escreva a declaração de um atributo `orientador` que guarde uma referência para um objeto `Professor`.
 :::
 
-## Quiz 3.2 {background-color="#f7fad1" .smaller}
+## Quiz 3.2 {background-color="#f7fad1"}
 
 ::: {.nonincremental}
-[Marque a alternativa incorreta:]{.alert}
+[Marque a alternativa _incorreta_:]{.alert}
 
 a. Classes definem tipos.
 b. Diagramas de classes dão uma visão estática do programa.
@@ -555,7 +605,7 @@ d. Visão estática se refere ao tempo de execução do programa.
 
 # Tipos primitivos e tipos objetos {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Java tem dois tipos diferentes de tipos :) 
 
@@ -579,20 +629,56 @@ Java tem dois tipos diferentes de tipos :)
 
 ::::
 
-. . .
+##
 
+Java tem dois tipos diferentes de tipos :) 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.fragment}
+[Tipos primitivos]{.alert}
+
+![](imagens/homem_cavernas.jpg){width="30%"} <!--^[Imagem de macrovector no Freepik]-->
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment}
 Tipos primitivos são predefinidos na linguagem Java
 
 - Ex.: `int`, `boolean`, `double`.
+:::
+:::
 
-. . .
+::::
 
+##
+
+Java tem dois tipos diferentes de tipos :) 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.fragment}
+[Tipos objeto]{.alert} (ou *tipos por referência*)
+
+![](imagens/o_objeto.png){width="40%"}
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment}
 Já os tipos objeto são definidos por classes.
 
 - Algumas classes fazem parte do Java padrão (como a `String`).
 - E podemos criar nossas próprias classes.
+:::
+:::
 
-## {.smaller}
+::::
+
+##
 
 Tipos objeto e tipos primitivos têm **semelhanças**:
 
@@ -607,7 +693,7 @@ Mas se comportam de forma **diferente**:
 - Já tipos objeto guardam apenas uma referência (ponteiro) para o objeto.
   - No diagrama representamos com uma seta.
 
-. . .
+##
 
 
 ::: {.callout-tip title="Conceito" icon=false}
@@ -616,7 +702,7 @@ Os **tipos primitivos** em Java não definem objetos. Tipos como `int`, `boolean
 
 # A classe `VisorDeNumero` {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Antes de vermos o exemplo do relógio, é importante entendermos a classe `VisorDeNumero`.
 
@@ -669,6 +755,8 @@ VisorDeNumero.obterValor();
 O que a mensagem de erro indica? 
 :::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
 Experimente agora a linha abaixo:
 
@@ -683,7 +771,7 @@ A mensagem de erro, nesse caso, te ajuda a identificar o problema?
 Tente corrigir o código e memorizar essa situação que é muito comum para quem está começando.
 :::
 
-## {.smaller}
+##
 
 Repare que o método `definirValor` utiliza uma expressão booleana
 
@@ -698,7 +786,7 @@ public void definirValor(int novoValor)
 ```
 :::
 
-. . .
+##
 
 Em **Java**, os [operadores lógicos]{.alert} são:
 
@@ -717,9 +805,13 @@ O que acontece quando o método `definirValor` é chamado com um valor inválido
 Você acha que da forma que foi feito é uma boa solução? Consegue pensar em uma solução melhor?
 :::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
 O que aconteceria se, no método `definirValor`, o operador `>=` fosse trocado por `>`?
 :::
+
+. . .
 
 ::: {.callout-note title="Exercício" icon=false}
 O que aconteceria se, no método `definirValor`, o operador `&&` fosse trocado por `||`?
@@ -732,6 +824,8 @@ Estude a implementação dos métodos `obterValorVisor` e `incrementar`.
 Caso tenha dúvidas, estude as páginas 56 a 59 do livro do Barnes e Kölling (4ª ed.).
 :::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
 O método `obterValorVisor` sempre funciona corretamente?
 Quais premissas ele assume?
@@ -740,7 +834,7 @@ O que acontece, por exemplo, se você criar um objeto com limite 800?
 
 # A classe `VisorDeRelogio` {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Agora que já entendemos como criar uma classe que define um visor de números de dois dígitos, vamos estudar o projeto [visor-relogio](https://github.com/ufla-ipoo/visor-relogio).
 
@@ -777,7 +871,7 @@ Quantas vezes você precisa chamar o método `tiqueTaque` no objeto `VisorDeRelo
 De que outra forma você poderia fazer o relógio mostrar esse mesmo horário?
 :::
 
-## {.smaller}
+##
 
 Vamos agora estudar a classe `VisorDeRelogio`.
 
@@ -790,22 +884,26 @@ Veja que o atributo `stringVisor` simula um visor físico real do relógio.
 - Se esse software rodasse em um relógio de verdade, nós mostraríamos a informação no visor físico.
 - Aqui, o atributo `stringVisor` serve para simular o visor real do relógio.
 
-. . .
+##
 
 A classe `VisorDeRelogio` tem mais dois atributos: `horas` e `minutos`.
 
 - Eles guardam **referências** para objetos do tipo `VisorDeNumero`.
 - O valor lógico do horário do relógio é guardado nesses dois atributos.
 
-## {.smaller}
+##
 
 O digrama de objetos abaixo mostra de forma mais completa um objeto `VisorDeRelogio`.
 
-- Veja que todos os atributos são referências para outros objetos.
-- Inclusive `stringVisor`, já que uma string é um objeto em Java.
-  - Obs.: por simplicidade, o diagrama não mostra a representação interna do objeto String.
+![](imagens/visor_relogio_diagrama_objetos2.png){.r-stretch}
+
+##
 
 ![](imagens/visor_relogio_diagrama_objetos2.png){.r-stretch}
+
+- Veja que todos os atributos são referências para outros objetos.
+- Inclusive `stringVisor`, já que uma string é um objeto em Java.
+  - [Obs.: por simplicidade, o diagrama não mostra a representação interna do objeto String.]{style="font-size: 70%;"}
 
 ##
 
@@ -817,13 +915,13 @@ Veja que ele possui uma classe a mais que você pode experimentar e ver o que fa
 
 # Objetos criando objetos {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Vimos que um visor de relógio possui dois visores de números, para horas e minutos.
 
 - Mas de onde vêm esses objetos no código?
 
-. . .
+##
 
 Veja que, **como usuários** do mostrador de relógio, nós criamos apenas o objeto da classe `VisorDeRelogio`.
 
@@ -836,7 +934,7 @@ Mas, **como programadores** da classe `VisorDeRelogio`, nós precisamos fazer is
 - Para isso, basta **criarmos os objetos `VisorDeNumero` dentro do construtor** da classe `VisorDeRelogio`.
 - Como o construtor é chamado quando um objeto `VisorDeRelogio` é criado, os visores de número serão criados automaticamente.
 
-## {.smaller}
+##
 
 Vamos analisar como o construtor de `VisorDeRelogio` faz isso:
 
@@ -861,9 +959,7 @@ public class VisorDeRelogio
 ```
 :::
 
-## {.smaller}
-
-Vamos analisar como o construtor de `VisorDeRelogio` faz isso:
+##
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="10-11"}
@@ -886,11 +982,9 @@ public class VisorDeRelogio
 ```
 :::
 
-As duas primeiras linhas do construtor criam objetos `VisorDeNumero`
+As duas primeiras linhas do construtor criam objetos `VisorDeNumero`, e os atribuem a variáveis de instância.
 
-- E os atribuem a variáveis.
-
-## {.smaller}
+##
 
 Repare a **sintaxe** do **comando** que **cria um novo objeto**:
 
@@ -913,7 +1007,7 @@ O operador [`new`]{.alert} faz duas coisas:
 
 **Se** o construtor da classe **tiver parâmetros**, os valores deles devem ser passados.
 
-## {.smaller}
+##
 
 Repare, por exemplo, que o construtor da classe `VisorDeNumero` espera um valor inteiro como parâmetro.
 
@@ -935,7 +1029,7 @@ Com isso, ao usarmos o operador `new` para criar um objeto `VisorDeNumero`, como
 
 - Note que a passagem de parâmetros funciona da mesma forma que já tínhamos visto para os métodos.
 
-## {.smaller}
+##
 
 Veja que da forma que fizemos, ficou como gostaríamos:
 
@@ -956,7 +1050,7 @@ Escreva comandos em Java que declarem uma variável chamada `janela`, do tipo `R
 Assuma que o construtor de `Retangulo` tem dois parâmetros do tipo `int`.
 :::
 
-## Quiz 3.3 {background-color="#f7fad1" .smaller}
+## Quiz 3.3 {background-color="#f7fad1"}
 
 ::: {.nonincremental}
 [Marque a alternativa correta:]{.alert}
@@ -970,7 +1064,7 @@ d. Objetos são criados usando o operador `create`.
 
 # Múltiplos construtores {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Ao criar objetos da classe `VisorDeRelogio`, usando o BlueJ, você deve ter notado que há duas opções no menu para criar o objeto.
 
@@ -989,7 +1083,7 @@ Isso acontece porque `VisorDeRelogio` tem [dois construtores]{.alert}.
   - Com o construtor sem parâmetros, criamos um relógio com hora inicial 00:00.
   - Já usando o segundo construtor, podemos criar um relógio com hora inicial diferente.
 
-. . .
+##
 
 É comum que classes tenham vários construtores para dar várias opções de criação dos seus objetos.
 
@@ -997,11 +1091,11 @@ Isso acontece porque `VisorDeRelogio` tem [dois construtores]{.alert}.
 - Damos a isso o nome de [sobrecarga]{.alert} de construtores.
 
 
-## {.smaller}
+##
 
 ![](imagens/sobrecarga_galvao.png)
 
-## {.smaller}
+##
 
 ![](imagens/sobrecarga_galvao_resposta.png)
 
@@ -1009,7 +1103,7 @@ Isso acontece porque `VisorDeRelogio` tem [dois construtores]{.alert}.
 
 Assim como os construtores, [métodos]{.alert} também [podem ser sobrecarregados]{.alert}.
 
-## {.smaller}
+##
 
 ![](imagens/duvida_metodos_sobrecarregados.png)
 
@@ -1017,7 +1111,7 @@ Assim como os construtores, [métodos]{.alert} também [podem ser sobrecarregado
 
 O que pode e o que não pode ser feito em termos de sobrecarga tem a ver com **o que o compilador consegue identificar**.
 
-. . .
+##
 
 Imagine a chamada abaixo:
 
@@ -1035,7 +1129,7 @@ Como o compilador conseguiria definir qual dos métodos está sendo chamado?
 - Portanto, não é possível criar dois métodos sobrecarregados dessa forma.
 
 
-## {.smaller}
+##
 
 ![](imagens/duvida_metodos_sobrecarregados_retorno.png)
 
@@ -1055,11 +1149,27 @@ Mais uma vez vamos pensar em um exemplo de chamada:
 
 Nesse caso, parece que seria possível pois o compilador sabe que a variável `a` é do tipo `int`.
 
-- Mas na verdade você não é obrigado a usar o valor retornado por uma chamada de método.
+##
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+	int a = meuCarro.acelerar();
+```
+:::
+
+Mas, na verdade, você não é obrigado a usar o valor retornado por uma chamada de método.
+
+::: {.halfincfontsize}
   ```{.java code-line-numbers="false"}
 	meuCarro.acelerar();
   ```
-- A chamada acima, por exemplo é válida, e, nesse caso, o compilador não consegue definir qual método será chamado.
+:::
+
+. . .
+
+A chamada acima, por exemplo, é válida, 
+
+- e, nesse caso, o compilador não consegue definir qual método será chamado.
 - Portanto, não é possível declarar métodos sobrecarregados dessa forma.
 
 
@@ -1081,7 +1191,7 @@ Porque o método `atualizarVisor` não é chamado no segundo construtor, por exe
 
 # Chamadas de métodos {background-color="#40666e"}
 
-## {.smaller}
+##
 
 A última linha do construtor de `VisorDeRelogio` tem o comando `atualizarVisor`.
 
@@ -1100,13 +1210,15 @@ A última linha do construtor de `VisorDeRelogio` tem o comando `atualizarVisor`
 
 Este comando é uma [chamada de método]{.alert}.
 
-- Você já deve ter visto que a classe `VisorDeRelogio` tem um método com a seguinte assinatura:
+##
+
+Você já deve ter visto que a classe `VisorDeRelogio` tem um método com a seguinte assinatura:
   
-  ::: {.halfincfontsize}
+::: {.halfincfontsize}
   ```{.java code-line-numbers="false"}
     private void atualizarVisor()
   ```
-  :::
+:::
 
 . . .
 
@@ -1114,9 +1226,9 @@ Portanto, o último comando no construtor, chama este método.
 
 - Como o método está na mesma classe, a essa operação damos o nome de [chamada de método interno]{.alert}.
 
-## {.smaller}
+##
 
-Uma chamada de método interno tem a seguinte **sintaxe**:
+Uma **chamada de método interno** tem a seguinte sintaxe:
 
 . . .
 
@@ -1138,7 +1250,7 @@ Métodos podem ter parâmetros ou não.
 
 - Nesse exemplo, como o método não tem parâmetros, não passamos nenhum valor na chamada do método.
 
-## {.smaller}
+##
 
 Quando há uma chamada de método, o **método correspondente é executado**.
 
@@ -1146,7 +1258,7 @@ Quando há uma chamada de método, o **método correspondente é executado**.
 - O método correspondente precisa ter o mesmo nome e a mesma sequência de tipos de parâmetros.
   - Já que podem existir métodos **sobrecarregados**.
 
-## {.smaller}
+##
 
 Vamos agora avaliar o código do método `tiqueTaque`:
 
@@ -1165,13 +1277,26 @@ Vamos agora avaliar o código do método `tiqueTaque`:
 ```
 :::
 
-. . .
+##
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    public void tiqueTaque()
+    {
+        minutos.incrementar();
+        if(minutos.obterValor() == 0) {  // minutos voltaram para zero
+            horas.incrementar();
+        }
+        atualizarVisor();
+    }
+```
+:::
 
 Se este visor estivesse conectado a um relógio de verdade, este método seria chamado a cada 60 segundos por um temporizador eletrônico do relógio.
 
 - Aqui, nós mesmos chamamos o método para testar o visor.
 
-## {.smaller}
+##
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="3"}
@@ -1190,13 +1315,11 @@ A primeira linha do método chama o comando `incrementar` do objeto `minutos`.
 
 - Veja então que, dessa forma, quando um dos métodos do `VisorDeRelogio` é chamado, ele, por sua vez, chama um método de outro objeto como parte da tarefa.
 
-. . .
+##
 
 Uma chamada a um método de outro objeto é uma [chamada de método externo]{.alert}.
 
-## {.smaller}
-
-Uma **chamada de método externo** tem a seguinte **sintaxe**:
+- Esse tipo de chamada tem a seguinte sintaxe:
 
 . . .
 
@@ -1214,7 +1337,7 @@ Essa sintaxe é conhecida como notação de ponto (*dot notation*).
 - Repare que usamos o nome do objeto e não da classe.
 
 
-## {.smaller}
+##
 
 Veja que, quando usamos o nome de objeto, temos uma chamada de método externo.
 
@@ -1223,12 +1346,12 @@ Veja que, quando usamos o nome de objeto, temos uma chamada de método externo.
 
 . . .
 
-Podemos dizer que a tarefa de manter as horas é dividida entre as classe `VisorDeRelogio` e `VisorDeNumero`.
+Podemos dizer que a tarefa de manter as horas é dividida entre as classes `VisorDeRelogio` e `VisorDeNumero`.
 
 - Este é um exemplo prático do princípio de **dividir e conquistar** que vimos no início do capítulo ao discutirmos sobre **abstração**.
 
 
-## {.smaller}
+##
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="4"}
@@ -1248,7 +1371,7 @@ Repare que a linha seguinte do método `tiqueTaque` faz outra chamada de método
 - O método retorna o valor atual dos minutos.
 - Se ele acabou de ir para zero, é hora de incrementar as horas, e isso é feito em seguida.
 
-## {.smaller}
+##
 
 Podemos agora entender os demais métodos da classe.
 
@@ -1283,6 +1406,8 @@ Suponha que exista uma variável chamada `imp1` do tipo `Impressora`, que refere
 Escreva duas possíveis chamadas para cada um desses métodos. 
 :::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
 Abra o projeto [`casa`](https://github.com/ufla-ipoo/casa) e avalie a classe `Figura`.
 Que tipos de objetos são criados no construtor de `Figura`?
@@ -1293,6 +1418,8 @@ Que tipos de objetos são criados no construtor de `Figura`?
 ::: {.callout-note title="Exercício" icon=false}
 Liste todas as chamadas de métodos externos que são feitas no método `desenhar` da classe `Figura` para o objeto `Triangulo` chamado `telhado`.
 :::
+
+. . .
 
 ::: {.callout-note title="Exercício" icon=false}
 Remova as duas linhas abaixo do método `desenhar` da classe `Figura`, fazendo com que a definição das cores seja feita através de uma chamada de um método interno chamado `definirCor` (que você precisará criar).
@@ -1306,10 +1433,10 @@ Remova as duas linhas abaixo do método `desenhar` da classe `Figura`, fazendo c
 
 :::
 
-## Quiz 3.4 {background-color="#f7fad1" .smaller}
+## Quiz 3.4 {background-color="#f7fad1"}
 
 ::: {.nonincremental}
-[Marque a alternativa incorreta:]{.alert}
+[Marque a alternativa _incorreta_:]{.alert}
 
 a. Construtores e métodos podem ser sobrecarregados.
 b. Métodos sobrecarregados são aqueles que têm muitos comandos.
@@ -1320,7 +1447,7 @@ d. Objetos podem chamar métodos de outros objetos através de chamadas de méto
 
 # Recapitulando o visor de relógio {background-color="#40666e"}
 
-## {.smaller}
+##
 
 É importante reforçarmos como o projeto do visor de relógio usa o conceito de **abstração** para dividir o problema em problemas menores.
 
@@ -1328,7 +1455,7 @@ d. Objetos podem chamar métodos de outros objetos através de chamadas de méto
 - Depois chamamos métodos (`incrementar` e `obterValor`) dos objetos para fazer o que precisamos.
   - Nesse ponto, assumimos que o método `incrementar` vai mudar corretamente o valor, **sem preocuparmos** com [como]{.alert} ele faz isso.
 
-## {.smaller}
+##
 
 Em projetos reais, muitas vezes classes diferentes são feitas por pessoas diferentes.
 
@@ -1337,12 +1464,12 @@ Em projetos reais, muitas vezes classes diferentes são feitas por pessoas difer
   - Não seria necessário discutir **como** eles fazem.
 - Feito isso, uma pessoa poderia implementar os métodos e a outra apenas os usaria.
 
-. . .
+##
 
 O conjunto dos métodos (assinaturas) que um objeto disponibiliza para outros objetos é chamado de [interface]{.alert}.
 
 - Esse conceito traz um poder enorme para a Orientação a Objetos.
-- Você poderá conhecê-lo melhor e utilizar todo o seu poder na disciplina PPOO ;)
+- Você poderá conhecê-lo melhor e utilizar todo o seu poder na disciplina de Práticas de POO. 😉
 
 ##
 
@@ -1350,8 +1477,10 @@ O conjunto dos métodos (assinaturas) que um objeto disponibiliza para outros ob
 Mude o relógio para que ele funcione como relógios americanos, mostrando 12 horas em vez de 24.
 
 Repare que isso pode ser mais difícil do que parece, depois da meia-noite e do meio-dia, o relógio deve mostrar 12:30 e não 00:30.
-Portanto, os minutos devem ir de 1 a 59, mas as horas devem ir de 1 a 12.
+Portanto, os minutos devem ir de 0 a 59, mas as horas devem ir de 1 a 12.
 :::
+
+##
 
 ::: {.callout-note title="(Opcional) Exercício de Implementação 2" icon=false}
 Há pelo menos duas formas de fazer o exercício anterior.
@@ -1374,27 +1503,11 @@ Usando o projeto [`figuras`](https://github.com/ufla-ipoo/casa), crie uma classe
 Neste exercício, não é necessário definir nenhum método, e nem tratar a forma da árvore.
 :::
 
+. . .
+
 ::: {.callout-note title="(Opcional) Exercício - [Desafio]{.alert}" icon=false}
 Agora complete a classe `Arvore` do exercício anterior.
 O construtor deve mover o tronco para debaixo das folhas e fazer ambos serem exibidos.
 Faça isso criando um método chamado `configurar` e incluindo uma chamada a este método no construtor.
 Mude o tamanho do triângulo de forma que a árvore se pareça um pinheiro.
-:::
-
-# Entregas dessa Aula {background-color="#40666e"}
-
-## {.smaller}
-
-::: {.nonincremental}
-
-Como você já sabe das aulas anteriores, para que você tenha a [presença]{.alert} 
-
-- considerada nas aula em [formato ANP]{.alert} (Atividade Não-Presencial), 
-- você precisa **demonstrar que** realmente **estudou** o conteúdo.
-
-::: {.callout-important title="Entregas no Campus Virtual"}
-Para ter presença nessa aula você deve:
-
-- Responder, no Campus Virtual, aos quizes presentes nesses slides e enviar o projeto do exercício de implementação 1.
-:::
 :::
