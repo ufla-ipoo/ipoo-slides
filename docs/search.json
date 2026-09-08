@@ -683,7 +683,7 @@
     "href": "cap4-1.html#section-1",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Entrega no Campus Virtual\n\n\nNesta aula não há quizes a responder.\nVocê deverá entregar a versão final de um projeto que contenha todos os 7 exercícios marcados para a entrega. Eles estão identificados como: Exercício."
+    "text": "O principal objetivo deste capítulo é mostrar algumas formas que temos de agrupar objetos em coleções.\n\nNesta aula vamos aprender sobre a classe ArrayList, que é um exempo de coleção de tamanho flexível.\nNa aula seguinte, veremos como usar vetores em Java.\n\n\nAo usar coleções, precisamos percorrer (ou iterar) sobre seus elementos.\n\nPara isso, utilizaremos estruturas de repetição: for-each, while e for."
   },
   {
     "objectID": "cap4-1.html#principais-conceitos-do-capítulo",
@@ -697,105 +697,105 @@
     "href": "cap4-1.html#section-2",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "O principal objetivo deste capítulo é mostrar algumas formas que temos de agrupar objetos em coleções.\n\nNesta aula vamos aprender sobre a classe ArrayList, que é um exempo de coleção de tamanho flexível.\nNa aula seguinte, veremos como usar vetores em Java.\n\n\nAo usar coleções, precisamos percorrer (ou iterar) sobre seus elementos.\n\nPara isso, utilizaremos estruturas de repetição: for-each, while e for."
+    "text": "Este capítulo tem mais conteúdo que os anteriores.\n\nE, portanto, demandará maior dedicação e esforço.\nMas os conceitos aqui são fundamentais para que se torne um bom programador.\nE para que entenda os conceitos dos capítulos seguintes."
   },
   {
     "objectID": "cap4-1.html#section-3",
     "href": "cap4-1.html#section-3",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Este capítulo tem mais conteúdo que os anteriores.\n\nE, portanto, demandará maior dedicação e esforço.\nMas os conceitos aqui são fundamentais para que se torne um bom programador.\nE para que entenda os conceitos dos capítulos seguintes."
+    "text": "Além de conhecermos os novos conceitos de coleção e iteradores,\n\nvamos revisitar os conceitos de abstração e interação entre objetos vistos anteriormente.\n\n\nVimos que abstração nos permite simplificar um problema:\n\nidentificando componentes como unidades completas, sem nos preocuparmos com seus detalhes."
   },
   {
     "objectID": "cap4-1.html#section-4",
     "href": "cap4-1.html#section-4",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Além de conhecermos os novos conceitos de coleção e iteradores,\n\nvamos revisitar os conceitos de abstração e interação entre objetos vistos anteriormente.\n\n\nVimos que abstração nos permite simplificar um problema:\n\nidentificando componentes como unidades completas, sem nos preocuparmos com seus detalhes."
+    "text": "Veremos o princípio da abstração, na prática, ao utilizarmos uma classe da Biblioteca de Classes do Java.\n\nAo implementar um programa, um bom desenvolvedor deve sempre procurar por classes disponíveis na biblioteca de classes da linguagem.\nCom isso, evitamos “reinventar a roda”, evitando retrabalho com coisas que já estão prontas e testadas.\nE, assim, podemos focar no que é a essência do problema que queremos resolver."
   },
   {
     "objectID": "cap4-1.html#section-5",
     "href": "cap4-1.html#section-5",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Veremos o princípio da abstração, na prática, ao utilizarmos uma classe da Biblioteca de Classes do Java.\n\nAo implementar um programa, um bom desenvolvedor deve sempre procurar por classes disponíveis na biblioteca de classes da linguagem.\nCom isso, evitamos “reinventar a roda”, evitando retrabalho com coisas que já estão prontas e testadas.\nE, assim, podemos focar no que é a essência do problema que queremos resolver."
+    "text": "Portanto, vale muito a pena, se familizarizar com as classes mais comuns da biblioteca do Java.\n\nO poder da abstração nos permite usar essas classes sem precisarmos saber praticamente nada sobre como elas são implementadas internamente.\n\n\nUsar essas classes se refere basicamente a:\n\nCriar objetos delas e chamar os métodos desses objetos.\nPortanto, teremos uma interação entre os nossos objetos e os objetos das classes da biblioteca."
   },
   {
     "objectID": "cap4-1.html#section-6",
     "href": "cap4-1.html#section-6",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Portanto, vale muito a pena, se familizarizar com as classes mais comuns da biblioteca do Java.\n\nO poder da abstração nos permite usar essas classes sem precisarmos saber praticamente nada sobre como elas são implementadas internamente.\n\n\nUsar essas classes se refere basicamente a:\n\nCriar objetos delas e chamar os métodos desses objetos.\nPortanto, teremos uma interação entre os nossos objetos e os objetos das classes da biblioteca."
+    "text": "Como foi citado no início da disciplina, esse material tem uma abordagem iterativa.\n\nO que significa que os conceitos são revisitados o tempo todo,\ncom o objetivo de aprofundarmos nosso entendimento sobre eles.\n\n\nNeste capítulo veremos também que abstração não se refere apenas a ignorar detalhes.\n\nMas também a identificar padrões que aparecem repetidamente no código.\nO que nos permite reutilizar em uma nova situação métodos e classes que já havíamos implementado e usado antes."
   },
   {
     "objectID": "cap4-1.html#section-7",
     "href": "cap4-1.html#section-7",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Como foi citado no início da disciplina, esse material tem uma abordagem iterativa.\n\nO que significa que os conceitos são revisitados o tempo todo,\ncom o objetivo de aprofundarmos nosso entendimento sobre eles.\n\n\nNeste capítulo veremos também que abstração não se refere apenas a ignorar detalhes.\n\nMas também a identificar padrões que aparecem repetidamente no código.\nO que nos permite reutilizar em uma nova situação métodos e classes que já havíamos implementado e usado antes."
+    "text": "O que é uma coleção?\n\nSegundo o dicionário Priberam, um dos significados é:\n“Reunião de objetos da mesma natureza.”"
   },
   {
     "objectID": "cap4-1.html#section-8",
     "href": "cap4-1.html#section-8",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "O que é uma coleção?\n\nSegundo o dicionário Priberam, um dos significados é:\n“Reunião de objetos da mesma natureza.”"
+    "text": "Uma coleção pode ser:\n\nGrande.\n\nEx.: todos os alunos da universidade.\n\nPequena.\n\nEx.: as disciplinas que um aluno está matriculado em um semestre.\n\nOu até mesmo vazia.\n\nEx.: os prêmios Nobel que eu já ganhei."
   },
   {
     "objectID": "cap4-1.html#section-9",
     "href": "cap4-1.html#section-9",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Uma coleção pode ser:\n\nGrande.\n\nEx.: todos os alunos da universidade.\n\nPequena.\n\nEx.: as disciplinas que um aluno está matriculado em um semestre.\n\nOu até mesmo vazia.\n\nEx.: os prêmios Nobel que eu já ganhei."
+    "text": "Se você tem uma coleção de alguma coisa (moedas, autógrafos, o que seja),\n\nhá algumas operações que você pode fazer com a sua coleção de tempos em tempos, como por ex.:\n\nAdicionar um novo item à coleção.\nRemover um item da coleção (por ter vendido, ou ser repetido, por ex.).\nOrganizar os itens de alguma forma (por tamanho ou valor, por ex.).\nListar um subconjunto dos itens para algum propósito (moedas do império romano, por ex.)."
   },
   {
     "objectID": "cap4-1.html#section-10",
     "href": "cap4-1.html#section-10",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Se você tem uma coleção de alguma coisa (moedas, autógrafos, o que seja),\n\nhá algumas operações que você pode fazer com a sua coleção de tempos em tempos, como por ex.:\n\nAdicionar um novo item à coleção.\nRemover um item da coleção (por ter vendido, ou ser repetido, por ex.).\nOrganizar os itens de alguma forma (por tamanho ou valor, por ex.).\nListar um subconjunto dos itens para algum propósito (moedas do império romano, por ex.)."
+    "text": "Adicionar um novo item à coleção.\nRemover um item da coleção (por ter vendido, ou ser repetido, por ex.).\nOrganizar os itens de alguma forma (por tamanho ou valor, por ex.).\nListar um subconjunto dos itens para algum propósito (moedas do império romano, por ex.)\n\nRepare que essas são operações comuns em coleções.\n\nIndependente dos objetos que elas guardam."
   },
   {
     "objectID": "cap4-1.html#section-11",
     "href": "cap4-1.html#section-11",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Adicionar um novo item à coleção.\nRemover um item da coleção (por ter vendido, ou ser repetido, por ex.).\nOrganizar os itens de alguma forma (por tamanho ou valor, por ex.).\nListar um subconjunto dos itens para algum propósito (moedas do império romano, por ex.)\n\nRepare que essas são operações comuns em coleções.\n\nIndependente dos objetos que elas guardam."
+    "text": "No contexto de POO, uma coleção pode ser representada por uma classe.\n\nE as operações sobre a coleção por métodos desta classe.\nUma coleção particular (minha coleção de músicas, por ex.) seria uma instância da classe, ou seja, um objeto da classe.\n\nNote que os itens da coleção (as moedas, por ex.) seriam objetos de outra classe."
   },
   {
     "objectID": "cap4-1.html#section-12",
     "href": "cap4-1.html#section-12",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "No contexto de POO, uma coleção pode ser representada por uma classe.\n\nE as operações sobre a coleção por métodos desta classe.\nUma coleção particular (minha coleção de músicas, por ex.) seria uma instância da classe, ou seja, um objeto da classe.\n\nNote que os itens da coleção (as moedas, por ex.) seriam objetos de outra classe."
+    "text": "Alguns exemplos de coleção comuns no contexto de programação seriam:\n\nO conjunto de estudantes da universidade no SIG:\n\nA cada semestre novos estudantes são adicionados, e alunos formados são removidos.\n\nFilmes e séries no catálogo da Netflix:\n\nO catálogo é continuamente atualizado, acrescentando novos filmes e séries e retirando outros.\n\nOs comentários de uma publicação em uma rede social:\n\nNovos comentários são postados e comentários também podem ser removidos."
   },
   {
     "objectID": "cap4-1.html#section-13",
     "href": "cap4-1.html#section-13",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Alguns exemplos de coleção comuns no contexto de programação seriam:\n\nO conjunto de estudantes da universidade no SIG:\n\nA cada semestre novos estudantes são adicionados, e alunos formados são removidos.\n\nFilmes e séries no catálogo da Netflix:\n\nO catálogo é continuamente atualizado, acrescentando novos filmes e séries e retirando outros.\n\nOs comentários de uma publicação em uma rede social:\n\nNovos comentários são postados e comentários também podem ser removidos."
+    "text": "Veja que a quantidade de itens armazenada em uma coleção pode variar com o tempo.\n\nUma solução ingênua para tratar isso em um código Java seria criar um atributo para cada objeto da coleção.\nMas veja que precisaríamos adivinhar quantos objetos a coleção precisaria.\nOu acabar declarando vários atributos que não seriam usados."
   },
   {
     "objectID": "cap4-1.html#section-14",
     "href": "cap4-1.html#section-14",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Veja que a quantidade de itens armazenada em uma coleção pode variar com o tempo.\n\nUma solução ingênua para tratar isso em um código Java seria criar um atributo para cada objeto da coleção.\nMas veja que precisaríamos adivinhar quantos objetos a coleção precisaria.\nOu acabar declarando vários atributos que não seriam usados."
+    "text": "Portanto, é muito mais prático se não precisarmos saber, antecipadamente, quantos objetos a coleção precisará ter.\n\nPara isso, vamos utilizar a forma mais simples possível de agrupar objetos em Java: a classe ArrayList.\nVamos usar como exemplo um projeto que nos permite organizar uma playlist de músicas.\n\n\n\n\n\n\nConceito\n\n\nUm objeto coleção pode guardar um número arbitário de outros objetos."
   },
   {
     "objectID": "cap4-1.html#section-15",
     "href": "cap4-1.html#section-15",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Portanto, é muito mais prático se não precisarmos saber, antecipadamente, quantos objetos a coleção precisará ter.\n\nPara isso, vamos utilizar a forma mais simples possível de agrupar objetos em Java: a classe ArrayList.\nVamos usar como exemplo um projeto que nos permite organizar uma playlist de músicas.\n\n\n\n\n\n\nConceito\n\n\nUm objeto coleção pode guardar um número arbitário de outros objetos."
+    "text": "Vamos criar uma classe para nos ajudar a organizar arquivos de músicas guardados no computador.\n\nNão é a nossa classe que vai guardar as músicas.\nEm vez disso, vamos usar a classe ArrayList da biblioteca de classes para nos poupar trabalho."
   },
   {
     "objectID": "cap4-1.html#section-16",
     "href": "cap4-1.html#section-16",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Vamos criar uma classe para nos ajudar a organizar arquivos de músicas guardados no computador.\n\nNão é a nossa classe que vai guardar as músicas.\nEm vez disso, vamos usar a classe ArrayList da biblioteca de classes para nos poupar trabalho."
+    "text": "A questão é que as classes da biblioteca de classes foram criadas para uso geral.\nE não para necessidades específicas.\nUm ArrayList pode ser usado para guardar dados de estudantes, ou de lembretes de eventos, por exemplo.\nA nossa classe específica é que precisará tratar de operações específicas relacionadas a arquivos de músicas."
   },
   {
     "objectID": "cap4-1.html#importando-uma-classe-da-biblioteca",
@@ -809,7 +809,7 @@
     "href": "cap4-1.html#section-17",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "A questão é que as classes da biblioteca de classes foram criadas para uso geral.\nE não para necessidades específicas.\nUm ArrayList pode ser usado para guardar dados de estudantes, ou de lembretes de eventos, por exemplo.\nA nossa classe específica é que precisará tratar de operações específicas relacionadas a arquivos de músicas."
+    "text": "Por razões didáticas, ou seja, para ficar mais fácil assimilarmos os conceitos:\n\nvamos começar com uma versão bem simples da classe,\nque lida apenas com os nomes dos arquivos de música.\n\nSem detalhes como título, artista, duração, etc."
   },
   {
     "objectID": "cap4-1.html#notação-diamante",
@@ -830,70 +830,70 @@
     "href": "cap4-1.html#section-18",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Por razões didáticas, ou seja, para ficar mais fácil assimilarmos os conceitos:\n\nvamos começar com uma versão bem simples da classe,\nque lida apenas com os nomes dos arquivos de música.\n\nSem detalhes como título, artista, duração, etc."
+    "text": "Nesse cenário, precisaremos que o ArrayList guarde objetos String que representem os nomes dos arquivos.\n\nA ideia é começar simples, para focarmos no conceito que vamos aprender agora: criação e uso de coleções.\nDepois vamos incrementar o projeto para que ele pareça com um organizador e tocador de músicas de verdade.\n\n\nA classe vai assumir que cada arquivo tem uma única música.\n\nE o nome do arquivo tem o nome do artista e da música (usaremos isso mais adiante)."
   },
   {
     "objectID": "cap4-1.html#section-19",
     "href": "cap4-1.html#section-19",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Nesse cenário, precisaremos que o ArrayList guarde objetos String que representem os nomes dos arquivos.\n\nA ideia é começar simples, para focarmos no conceito que vamos aprender agora: criação e uso de coleções.\nDepois vamos incrementar o projeto para que ele pareça com um organizador e tocador de músicas de verdade.\n\n\nA classe vai assumir que cada arquivo tem uma única música.\n\nE o nome do arquivo tem o nome do artista e da música (usaremos isso mais adiante)."
+    "text": "As operações básicas que queremos na primeira versão da classe são:\n\nAdicionar músicas na coleção.\nA coleção não deve ter limite de tamanho, exceto a memória do computador.\nRetornar a quantidade de músicas na coleção.\nListar todas as músicas.\n\n\nVeremos que a classe ArrayList torna bem fácil tratar essas operações."
   },
   {
     "objectID": "cap4-1.html#section-20",
     "href": "cap4-1.html#section-20",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "As operações básicas que queremos na primeira versão da classe são:\n\nAdicionar músicas na coleção.\nA coleção não deve ter limite de tamanho, exceto a memória do computador.\nRetornar a quantidade de músicas na coleção.\nListar todas as músicas.\n\n\nVeremos que a classe ArrayList torna bem fácil tratar essas operações."
+    "text": "Estamos adotando uma abordagem incremental.\n\nComeçamos com uma versão básica que mostra como criar e usar um ArrayList.\nE depois vamos melhorá-la até chegar ao ponto de nosso programa tocar a música de verdade.\n\n\n\n\n\n\n\nLembre-se que adotar uma abordagem incremental tem uma probabilidade de sucesso muito maior do que querer implementar tudo de uma vez."
   },
   {
     "objectID": "cap4-1.html#section-21",
     "href": "cap4-1.html#section-21",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Estamos adotando uma abordagem incremental.\n\nComeçamos com uma versão básica que mostra como criar e usar um ArrayList.\nE depois vamos melhorá-la até chegar ao ponto de nosso programa tocar a música de verdade.\n\n\n\n\n\n\n\nLembre-se que adotar uma abordagem incremental tem uma probabilidade de sucesso muito maior do que querer implementar tudo de uma vez."
+    "text": "Exercício 1\n\n\nAntes de analisarmos o código-fonte, vamos entender o funcionamento do organizador de músicas.\nAbra o probjeto organizador-musicas-v1 no BlueJ e crie um objeto OrganizadorDeMusicas. Guarde nomes de alguns arquivos de música nele (são simplesmente strings). Como não vamos tocar as músicas agora, qualquer nome de arquivo serve. Mas há um repositório com arquivos de músicas de verdade que você pode querer baixar e usar.\nConfira se o número de arquivos retornado pelo método obterQuantidadeDeArquivos bate com a quantidade que você armazenou. Ao usar o método listarArquivo você deve notar que você precisa passar o valor 0 para imprimir o primeiro nome de arquivo, 1 para o segundo, e assim por diante. Você imagina, por que?"
   },
   {
     "objectID": "cap4-1.html#section-22",
     "href": "cap4-1.html#section-22",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício\n\n\nAntes de analisarmos o código-fonte, vamos entender o funcionamento do organizador de músicas.\nAbra o probjeto organizador-musicas-v1 no BlueJ e crie um objeto OrganizadorDeMusicas. Guarde nomes de alguns arquivos de música nele (são simplesmente strings). Como não vamos tocar as músicas agora, qualquer nome de arquivo serve. Mas há um repositório com arquivos de músicas de verdade que você pode querer baixar e usar.\nConfira se o número de arquivos retornado pelo método obterQuantidadeDeArquivos bate com a quantidade que você armazenou. Ao usar o método listarArquivo você deve notar que você precisa passar o valor 0 para imprimir o primeiro nome de arquivo, 1 para o segundo, e assim por diante. Você imagina, por que?"
+    "text": "Exercício 2\n\n\nO que acontece se você criar um objeto OrganizadorDeMusicas e chamar removerArquivo(0) antes de ter adicionado qualquer música?\nOcorre algum erro? Você esperava que ocorresse algum erro?\n\n\n\n\n\n\n\n\n\nExercício 3\n\n\nCrie um OrganizadorDeMusicas e adicione dois nomes de arquivos a ele. Chame listarArquivo(0) e listarArquivo(1) para mostrar os dois arquivos. Agora chame removerArquivo(0) e depois listarArquivo(0).\nO que aconteceu? Era o que você esperava?\nVocê imagina alguma explicação para o que deve ter acontecido quando você removeu o primeiro arquivo da coleção?"
   },
   {
     "objectID": "cap4-1.html#section-23",
     "href": "cap4-1.html#section-23",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício\n\n\nO que acontece se você criar um objeto OrganizadorDeMusicas e chamar removerArquivo(0) antes de ter adicionado qualquer música?\nOcorre algum erro? Você esperava que ocorresse algum erro?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nCrie um OrganizadorDeMusicas e adicione dois nomes de arquivos a ele. Chame listarArquivo(0) e listarArquivo(1) para mostrar os dois arquivos. Agora chame removerArquivo(0) e depois listarArquivo(0).\nO que aconteceu? Era o que você esperava?\nVocê imagina alguma explicação para o que deve ter acontecido quando você removeu o primeiro arquivo da coleção?"
+    "text": "Leia o código da classe OrganizadorDeMusicas.\n\nRepare que ela usa a classe ArrayList.\nMas a classe ArrayList não aparece no diagrama de classes do BlueJ.\n\n\n\n\n\n\nBibliotecas de classes\n\n\nUma das coisas que torna as linguagens OO (Orientadas a Objetos) poderosas, é que elas geralmente trazem junto bibliotecas de classes.\n\nEssas bibliotecas geralmente têm centenas ou milhares de classes que são muito úteis para os desenvolvedores em diversos projetos.\nJava chama essas bibliotecas de pacotes.\nNós usamos as classes das bibliotecas exatamente do mesmo jeito que usamos nossas próprias classes.\nCriamos objetos usando new, e as classes têm atributos, construtores e métodos."
   },
   {
     "objectID": "cap4-1.html#section-24",
     "href": "cap4-1.html#section-24",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Leia o código da classe OrganizadorDeMusicas.\n\nRepare que ela usa a classe ArrayList.\nMas a classe ArrayList não aparece no diagrama de classes do BlueJ.\n\n\n\n\n\n\nBibliotecas de classes\n\n\nUma das coisas que torna as linguagens OO (Orientadas a Objetos) poderosas, é que elas geralmente trazem junto bibliotecas de classes.\n\nEssas bibliotecas geralmente têm centenas ou milhares de classes que são muito úteis para os desenvolvedores em diversos projetos.\nJava chama essas bibliotecas de pacotes.\nNós usamos as classes das bibliotecas exatamente do mesmo jeito que usamos nossas próprias classes.\nCriamos objetos usando new, e as classes têm atributos, construtores e métodos."
+    "text": "Repare que a declaração do atributo arquivos traz algo de diferente:\n\n&lt;String&gt;\n\n\nIsso é necessário porque, como vimos antes, a classe ArrayList foi criada para uso geral.\n\nOu seja, ela não restringe que objetos ela guarda.\nMas, quando criamos um objeto ArrayList, precisamos dizer qual o tipo dos objetos que serão guardados nele.\nClasses que são parametrizadas com um segundo tipo (como a ArrayList) são chamadas classes genéricas em Java.\n\nVeremos mais sobre isso mais adiante."
   },
   {
     "objectID": "cap4-1.html#section-25",
     "href": "cap4-1.html#section-25",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Repare que a declaração do atributo arquivos traz algo de diferente:\n\n&lt;String&gt;\n\n\nIsso é necessário porque, como vimos antes, a classe ArrayList foi criada para uso geral.\n\nOu seja, ela não restringe que objetos ela guarda.\nMas, quando criamos um objeto ArrayList, precisamos dizer qual o tipo dos objetos que serão guardados nele.\nClasses que são parametrizadas com um segundo tipo (como a ArrayList) são chamadas classes genéricas em Java.\n\nVeremos mais sobre isso mais adiante."
+    "text": "Portanto, sempre que usamos uma coleção precisamos especificar dois tipos:\n\nO tipo da coleção em si (nesse caso, ArrayList).\nE o tipo dos elementos que queremos guardar na coleção (nesse caso, String).\nAssim, uma declaração ArrayList&lt;String&gt; costuma ser lida como ArrayList de strings."
   },
   {
     "objectID": "cap4-1.html#section-26",
     "href": "cap4-1.html#section-26",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Portanto, sempre que usamos uma coleção precisamos especificar dois tipos:\n\nO tipo da coleção em si (nesse caso, ArrayList).\nE o tipo dos elementos que queremos guardar na coleção (nesse caso, String).\nAssim, uma declaração ArrayList&lt;String&gt; costuma ser lida como ArrayList de strings."
+    "text": "Para entendermos como uma coleção como a ArrayList funciona, é interessante analisarmos um diagrama de objetos."
   },
   {
     "objectID": "cap4-1.html#section-27",
     "href": "cap4-1.html#section-27",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Para entendermos como uma coleção como a ArrayList funciona, é interessante analisarmos um diagrama de objetos."
+    "text": "Compare a figura abaixo que mostra um OrganizadorDeMusicas com duas strings de nomes de arquivos, com a próxima que mostra com três."
   },
   {
     "objectID": "cap4-1.html#section-28",
@@ -907,49 +907,49 @@
     "href": "cap4-1.html#section-29",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Compare a figura abaixo que mostra um OrganizadorDeMusicas com duas strings de nomes de arquivos, com a próxima que mostra com três."
+    "text": "Há três características importantes sobre o ArrayList que precisamos saber:\n\nPodemos aumentar sua capacidade conforme a necessidade.\nEle mantém uma contagem privada da quantidade de itens armazenados (e o método size retorna essa informação).\nEle mantém a ordem dos elementos inseridos (e podemos obter os objetos na mesma ordem)."
   },
   {
     "objectID": "cap4-1.html#section-30",
     "href": "cap4-1.html#section-30",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Há três características importantes sobre o ArrayList que precisamos saber:\n\nPodemos aumentar sua capacidade conforme a necessidade.\nEle mantém uma contagem privada da quantidade de itens armazenados (e o método size retorna essa informação).\nEle mantém a ordem dos elementos inseridos (e podemos obter os objetos na mesma ordem)."
+    "text": "Veja que, ao utilizar um ArrayList, a classe OrganizadorDeMusica fica muito simples.\n\nTodo trabalho “pesado” é tratado na ArrayList.\n\nEssa é a grande vantagem de usar uma classe da biblioteca de classes.\nPoupamos trabalho aproveitando algo que alguém já teve o trabalho de fazer e testar."
   },
   {
     "objectID": "cap4-1.html#section-31",
     "href": "cap4-1.html#section-31",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Veja que, ao utilizar um ArrayList, a classe OrganizadorDeMusica fica muito simples.\n\nTodo trabalho “pesado” é tratado na ArrayList.\n\nEssa é a grande vantagem de usar uma classe da biblioteca de classes.\nPoupamos trabalho aproveitando algo que alguém já teve o trabalho de fazer e testar."
+    "text": "Veja que nós usamos a classe ArrayList sem nos preocuparmos exatamente sobre como a classe funciona.\n\nBasta sabermos o que ela faz e como utilizar seus métodos.\nVeja que estamos mais uma vez usando o conceito de abstração.\n\nSem precisar conhecer os detalhes da classe, podemos usá-las em diversas situações diferentes."
   },
   {
     "objectID": "cap4-1.html#section-32",
     "href": "cap4-1.html#section-32",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Veja que nós usamos a classe ArrayList sem nos preocuparmos exatamente sobre como a classe funciona.\n\nBasta sabermos o que ela faz e como utilizar seus métodos.\nVeja que estamos mais uma vez usando o conceito de abstração.\n\nSem precisar conhecer os detalhes da classe, podemos usá-las em diversas situações diferentes."
+    "text": "Outra coisa importante é que o fato do ArrayList guardar o número de objetos que ele armazena, traz consequências importantes.\n\nA classe OrganizadorDeMusicas não precisa guardar essa informação.\n\nMesmo tendo um método obterQuantidadeDeArquivos.\n\nRepare que o organizador de músicas delega a responsabilidade de manter essa informação para o objeto ArrayList.\n\nIsso significa que o organizador não duplica essa informação no programa."
   },
   {
     "objectID": "cap4-1.html#section-33",
     "href": "cap4-1.html#section-33",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Outra coisa importante é que o fato do ArrayList guardar o número de objetos que ele armazena, traz consequências importantes.\n\nA classe OrganizadorDeMusicas não precisa guardar essa informação.\n\nMesmo tendo um método obterQuantidadeDeArquivos.\n\nRepare que o organizador de músicas delega a responsabilidade de manter essa informação para o objeto ArrayList.\n\nIsso significa que o organizador não duplica essa informação no programa."
+    "text": "Duplicação de informações é algo que devemos nos esforçar para evitar.\n\nAlém de dar mais trabalho, por estarmos fazendo algo duas vezes,\n\ncorremos o risco de, por algum erro, as duas informações (que deveriam ser iguais) estarem diferentes.\n\n\n\nFalaremos bastante de duplicação nos próximos capítulos."
   },
   {
     "objectID": "cap4-1.html#section-34",
     "href": "cap4-1.html#section-34",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Duplicação de informações é algo que devemos nos esforçar para evitar.\n\nAlém de dar mais trabalho, por estarmos fazendo algo duas vezes,\n\ncorremos o risco de, por algum erro, as duas informações (que deveriam ser iguais) estarem diferentes.\n\n\n\nFalaremos bastante de duplicação nos próximos capítulos."
+    "text": "Vamos aprofundar um pouco a notação utilizada para declarar o tipo do atributo arquivos:\n\nArrayList&lt;String&gt;\n\n\nComo já comentamos, classes que dependem de um segundo tipo são chamadas de classes genéricas.\n\nUma classe genérica não define um único tipo, mas, na verdade, potencialmente, vários tipos.\nPodemos ter: ArrayList de Strings, ArrayList de Pessoas, ArrayList de Retângulos, enfim, de quaisquer objetos que precisarmos.\n\nCada um deles é um tipo diferente."
   },
   {
     "objectID": "cap4-1.html#section-35",
     "href": "cap4-1.html#section-35",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Vamos aprofundar um pouco a notação utilizada para declarar o tipo do atributo arquivos:\n\nArrayList&lt;String&gt;\n\n\nComo já comentamos, classes que dependem de um segundo tipo são chamadas de classes genéricas.\n\nUma classe genérica não define um único tipo, mas, na verdade, potencialmente, vários tipos.\nPodemos ter: ArrayList de Strings, ArrayList de Pessoas, ArrayList de Retângulos, enfim, de quaisquer objetos que precisarmos.\n\nCada um deles é um tipo diferente."
+    "text": "Por enquanto, vamos usar apenas a classe ArrayList,\n\nmas existem diversas outras coleções também implementadas como classes genéricas."
   },
   {
     "objectID": "cap4-1.html#resumo-do-organizador-de-músicas",
@@ -963,7 +963,7 @@
     "href": "cap4-1.html#section-36",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Por enquanto, vamos usar apenas a classe ArrayList,\n\nmas existem diversas outras coleções também implementadas como classes genéricas."
+    "text": "Veja as declarações abaixo, por exemplo:\n\n  private ArrayList&lt;Pessoa&gt; equipe;\n  private ArrayList&lt;MaquinaIngressos&gt; maquinas;  \n\n\nO atributo equipe pode armazenar objetos Pessoa.\n\nJá o atributo maquinas guarda objetos MaquinaIngressos.\nPortanto, ArrayList&lt;Pessoa&gt; e ArrayList&lt;MaquinaIngressos&gt; são tipos diferentes."
   },
   {
     "objectID": "cap4-1.html#o-loop-for-each",
@@ -977,28 +977,28 @@
     "href": "cap4-1.html#section-37",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Veja as declarações abaixo, por exemplo:\n\n  private ArrayList&lt;Pessoa&gt; equipe;\n  private ArrayList&lt;MaquinaIngressos&gt; maquinas;  \n\n\nO atributo equipe pode armazenar objetos Pessoa.\n\nJá o atributo maquinas guarda objetos MaquinaIngressos.\nPortanto, ArrayList&lt;Pessoa&gt; e ArrayList&lt;MaquinaIngressos&gt; são tipos diferentes."
+    "text": "Você acha que a linha de código abaixo seria válida?\n\n  equipe = maquinas;  \n\n\nNão!\n\nJustamente porque as variáveis são de tipos diferentes."
   },
   {
     "objectID": "cap4-1.html#section-38",
     "href": "cap4-1.html#section-38",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Você acha que a linha de código abaixo seria válida?\n\n  equipe = maquinas;  \n\n\nNão!\n\nJustamente porque as variáveis são de tipos diferentes."
+    "text": "Exercício 4\n\n\nEscreva a declaração de um atributo privado chamado biblioteca que guarda um ArrayList. Os elementos do ArrayList são do tipo Livro.\n\n\n\n\n\n\n\n\n\nExercício 5\n\n\nEscreva a declaração de uma variável local chamada ipoo que guarda um ArrayList de Estudante."
   },
   {
     "objectID": "cap4-1.html#section-39",
     "href": "cap4-1.html#section-39",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício\n\n\nEscreva a declaração de um atributo privado chamado biblioteca que guarda um ArrayList. Os elementos do ArrayList são do tipo Livro.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nEscreva a declaração de uma variável local chamada ipoo que guarda um ArrayList de Estudante."
+    "text": "Exercício 6\n\n\nEscreva a declaração de um atributo privado chamado musicas para guardar uma coleção de objetos Musica.\n\n\n\n\n\n\n\n\n\nExercício 7\n\n\nEscreva comandos para criar objetos ArrayList e atribuir às variáveis declaradas nos três exercícios anteriores."
   },
   {
     "objectID": "cap4-1.html#section-40",
     "href": "cap4-1.html#section-40",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício\n\n\nEscreva a declaração de um atributo privado chamado musicas para guardar uma coleção de objetos Musica.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nEscreva comandos para criar objetos ArrayList e atribuir às variáveis declaradas nos três exercícios anteriores."
+    "text": "Ao usar o projeto organizador-musicas-v1 você notou que, para listar e remover músicas,\n\nfoi necessário passar parâmetros começando em zero.\n\n\nIsso porque objetos armazenados em um ArrayList têm uma numeração implícita que começa em zero.\n\nGeralmente chamamos a posição do objeto na coleção de índice."
   },
   {
     "objectID": "cap4-1.html#processamento-seletivo-de-uma-coleção",
@@ -1012,21 +1012,21 @@
     "href": "cap4-1.html#section-41",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Ao usar o projeto organizador-musicas-v1 você notou que, para listar e remover músicas,\n\nfoi necessário passar parâmetros começando em zero.\n\n\nIsso porque objetos armazenados em um ArrayList têm uma numeração implícita que começa em zero.\n\nGeralmente chamamos a posição do objeto na coleção de índice."
+    "text": "Portanto, se um ArrayList tiver 20 objetos, qual é a posição do último elemento?\n\n19, certo?\n\nJá que o primeiro objeto fica na posição 0, o segundo na posição 1, e assim por diante."
   },
   {
     "objectID": "cap4-1.html#section-42",
     "href": "cap4-1.html#section-42",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Portanto, se um ArrayList tiver 20 objetos, qual é a posição do último elemento?\n\n19, certo?\n\nJá que o primeiro objeto fica na posição 0, o segundo na posição 1, e assim por diante."
+    "text": "Repare que os métodos listarArquivo e removerArquivo verificam o valor do índice antes de passá-lo para os métodos do ArrayList.\n\nEles conferem se o índice está no intervalo válido, entre 0 e size()-1.\nÉ um bom hábito fazer isso para evitar erros nas chamadas de métodos de classes da biblioteca.\n\n\n\n\n\n\nCuidado\n\n\nSe você não tomar cuidado, pode acabar tentando acessar uma posição inválida de um ArrayList.\nSe fizer isso, o programa exibirá uma mensagem de índice fora da faixa (IndexOutOfBoundsException) e o programa será terminado."
   },
   {
     "objectID": "cap4-1.html#section-43",
     "href": "cap4-1.html#section-43",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Repare que os métodos listarArquivo e removerArquivo verificam o valor do índice antes de passá-lo para os métodos do ArrayList.\n\nEles conferem se o índice está no intervalo válido, entre 0 e size()-1.\nÉ um bom hábito fazer isso para evitar erros nas chamadas de métodos de classes da biblioteca.\n\n\n\n\n\n\nCuidado\n\n\nSe você não tomar cuidado, pode acabar tentando acessar uma posição inválida de um ArrayList.\nSe fizer isso, o programa exibirá uma mensagem de índice fora da faixa (IndexOutOfBoundsException) e o programa será terminado."
+    "text": "É importante lembrar que, ao remover um objeto de um ArrayList,\n\nos objetos que estavam depois dele mudam de posição.\n\n\nSuponha, por exemplo, um ArrayList com 5 elementos.\n\nSe você remover o terceiro elemento (ou seja, o elemento da posição 2),\n\nO próximo elemento vai passar da posição 3 para a posição 2.\nE o último vai passar da posição 4 para a posição 3."
   },
   {
     "objectID": "cap4-1.html#limitação-do-uso-de-strings",
@@ -1040,7 +1040,7 @@
     "href": "cap4-1.html#section-44",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "É importante lembrar que, ao remover um objeto de um ArrayList,\n\nos objetos que estavam depois dele mudam de posição.\n\n\nSuponha, por exemplo, um ArrayList com 5 elementos.\n\nSe você remover o terceiro elemento (ou seja, o elemento da posição 2),\n\nO próximo elemento vai passar da posição 3 para a posição 2.\nE o último vai passar da posição 4 para a posição 3."
+    "text": "É importante nos acostumarmos a utilizar os índices de uma coleção.\n\nPois várias coleções têm essa mesma característica de começar em zero, e seguir sequencialmente, até size()-1."
   },
   {
     "objectID": "cap3-1.html#como-estudar",
@@ -6493,63 +6493,63 @@
     "href": "cap4-1.html#section-45",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "É importante nos acostumarmos a utilizar os índices de uma coleção.\n\nPois várias coleções têm essa mesma característica de começar em zero, e seguir sequencialmente, até size()-1."
+    "text": "Suponha, por exemplo, que uma variável p guarda a posição de um objeto na coleção.\n\nComo podemos acessar o próximo objeto?\n\nPela posição p+1.\n\nE o objeto anterior?\n\nPela posição p-1.\n\nE como podemos acessar os três primeiros objetos?\n\nPelas posições: 0, 1 e 2.\n\nE os quatro últimos?\n\nPelas posições: size()-4, size()-3, size()-2 e size()-1."
   },
   {
     "objectID": "cap4-1.html#section-46",
     "href": "cap4-1.html#section-46",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Suponha, por exemplo, que uma variável p guarda a posição de um objeto na coleção.\n\nComo podemos acessar o próximo objeto?\n\nPela posição p+1.\n\nE o objeto anterior?\n\nPela posição p-1.\n\nE como podemos acessar os três primeiros objetos?\n\nPelas posições: 0, 1 e 2.\n\nE os quatro últimos?\n\nPelas posições: size()-4, size()-3, size()-2 e size()-1."
+    "text": "Exercício 8\n\n\nCrie um novo método na classe OrganizadorDeMusicas chamado verificarIndice. O método deve receber um parâmetro inteiro e verificar se ele é um índice válido para o estado atual da coleção.\nSe o parâmetro não for válido, uma mensagem de erro deve ser exibida no terminal, informando qual é a faixa válida de índices (ex.: de 0 a 3). Teste o método usando um objeto da bancada de objetos, experimentando situações com índice válidos e inválidos.\nO que acontece se o método for chamado para uma coleção vazia?"
   },
   {
     "objectID": "cap4-1.html#section-47",
     "href": "cap4-1.html#section-47",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício\n\n\nCrie um novo método na classe OrganizadorDeMusicas chamado verificarIndice. O método deve receber um parâmetro inteiro e verificar se ele é um índice válido para o estado atual da coleção.\nSe o parâmetro não for válido, uma mensagem de erro deve ser exibida no terminal, informando qual é a faixa válida de índices (ex.: de 0 a 3). Teste o método usando um objeto da bancada de objetos, experimentando situações com índice válidos e inválidos.\nO que acontece se o método for chamado para uma coleção vazia?"
+    "text": "Exercício 9\n\n\nCrie um método similar ao anterior, chamado indiceEhValido. O método deve receber um parâmetro inteiro e retornar um boolean. O método não deve exibir nada no terminal, apenas retornar true se o índice for válido e false em caso contrário.\nTeste o método usando a bancada de objetos para índices válidos e inválidos (incluindo coleção vazia)."
   },
   {
     "objectID": "cap4-1.html#section-48",
     "href": "cap4-1.html#section-48",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício\n\n\nCrie um método similar ao anterior, chamado indiceEhValido. O método deve receber um parâmetro inteiro e retornar um boolean. O método não deve exibir nada no terminal, apenas retornar true se o índice for válido e false em caso contrário.\nTeste o método usando a bancada de objetos para índices válidos e inválidos (incluindo coleção vazia)."
+    "text": "Exercício 10\n\n\nModifique os métodos listarArquivo e removerArquivo da classe OrganizadorDeMusicas de forma que eles usem o método indiceEhValido para verificar seus parâmetros, em vez da expressão booleana atual.\nOs métodos get ou remove do ArrayList só devem ser chamados se o método indiceEhValido retornar true."
   },
   {
     "objectID": "cap4-1.html#section-49",
     "href": "cap4-1.html#section-49",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício\n\n\nModifique os métodos listarArquivo e removerArquivo da classe OrganizadorDeMusicas de forma que eles usem o método indiceEhValido para verificar seus parâmetros, em vez da expressão booleana atual.\nOs métodos get ou remove do ArrayList só devem ser chamados se o método indiceEhValido retornar true."
+    "text": "Seria interessante se nosso organizador não só guardasse uma lista de arquivos de música,\n\nMas se também tocasse realmente as músicas."
   },
   {
     "objectID": "cap4-1.html#section-50",
     "href": "cap4-1.html#section-50",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Seria interessante se nosso organizador não só guardasse uma lista de arquivos de música,\n\nMas se também tocasse realmente as músicas."
+    "text": "Se tivermos uma classe implementada para tocar arquivos de aúdio,\n\nnossa classe organizadora não precisa saber nada sobre como fazer isso.\n\n\nPoderia apenas lidar com o nome do arquivo e deixar a outra classe cuidar do resto."
   },
   {
     "objectID": "cap4-1.html#section-51",
     "href": "cap4-1.html#section-51",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Se tivermos uma classe implementada para tocar arquivos de aúdio,\n\nnossa classe organizadora não precisa saber nada sobre como fazer isso.\n\n\nPoderia apenas lidar com o nome do arquivo e deixar a outra classe cuidar do resto."
+    "text": "Infelizmente, a biblioteca padrão do Java não tem uma classe para tocar arquivos MP3.\n\nMas muitos programadores e empesas criam classes úteis o tempo todo.\n\nE as disponibilizam para outras pessoas usarem.\n\n\n\nÉ o que chamamos de bibliotecas de classes de terceiros (third-party libraries).\n\nElas podem ser importadas e usadas da mesma forma que as classes da biblioteca padrão Java.\nPrecisamos apenas ter o arquivo da biblioteca em nosso projeto (veremos mais sobre isso no futuro)."
   },
   {
     "objectID": "cap4-1.html#section-52",
     "href": "cap4-1.html#section-52",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Infelizmente, a biblioteca padrão do Java não tem uma classe para tocar arquivos MP3.\n\nMas muitos programadores e empesas criam classes úteis o tempo todo.\n\nE as disponibilizam para outras pessoas usarem.\n\n\n\nÉ o que chamamos de bibliotecas de classes de terceiros (third-party libraries).\n\nElas podem ser importadas e usadas da mesma forma que as classes da biblioteca padrão Java.\nPrecisamos apenas ter o arquivo da biblioteca em nosso projeto (veremos mais sobre isso no futuro)."
+    "text": "Em uma nova versão do projeto, usaremos classes da biblioteca javazoom.net\n\npara escrever a nossa própria classe tocadora de música.\n\n\nNós usaremos três métodos da nova classe TocadorDeMusica.\n\ntocarAmostra, comecarATocar e parar."
   },
   {
     "objectID": "cap4-1.html#section-53",
     "href": "cap4-1.html#section-53",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Em uma nova versão do projeto, usaremos classes da biblioteca javazoom.net\n\npara escrever a nossa própria classe tocadora de música.\n\n\nNós usaremos três métodos da nova classe TocadorDeMusica.\n\ntocarAmostra, comecarATocar e parar."
+    "text": "tocarAmostra, comecarATocar e parar.\n\nOs dois primeiros métodos recebem o nome do arquivo de música por parâmetro.\nO primeiro toca alguns segundos do início do arquivo e retorna quando termina de tocar.\nJá o segundo começa a tocar a música em segundo plano (background) e já retorna para o organizador.\n\nE, nesse caso, precisamos usar o método parar se quisermos parar de tocar a música."
   },
   {
     "objectID": "cap4-1.html#notação-diamante-1",
@@ -6563,140 +6563,140 @@
     "href": "cap4-1.html#section-54",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "tocarAmostra, comecarATocar e parar.\n\nOs dois primeiros métodos recebem o nome do arquivo de música por parâmetro.\nO primeiro toca alguns segundos do início do arquivo e retorna quando termina de tocar.\nJá o segundo começa a tocar a música em segundo plano (background) e já retorna para o organizador.\n\nE, nesse caso, precisamos usar o método parar se quisermos parar de tocar a música."
+    "text": "Avalie as modificações na classe OrganizadorDeMusica no projeto organizador-musicas-v2."
   },
   {
     "objectID": "cap4-1.html#section-55",
     "href": "cap4-1.html#section-55",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Avalie as modificações na classe OrganizadorDeMusica no projeto organizador-musicas-v2."
+    "text": "Exercício 11\n\n\nCrie um objeto OrganizadorDeMusica da segunda versão do projeto. Experimente adicionar alguns arquivos de música a ele e tocá-los.\nSe quiser, você pode usar as músicas do repositório amostras-musicas. Baixe o repositório, descompacte o arquivo e copie os arquivos de extensão .mp3 para a pasta do projeto organizador-musicas-v2. Ao adicionar os arquivos no organizador de músicas, use exatamente o mesmo nome do arquivo, incluindo a extensão .mp3 (ex.: Mactonite-MorningMysteries.mp3)\nVocê pode usar seus próprios arquivos MP3 também se preferir. Lembre-se apenas de colocar na pasta do projeto e digitar corretamente o nome do arquivo.\nExperimente também com arquivos que não existem. O que acontece quando você tenta utilizá-los?"
   },
   {
     "objectID": "cap4-1.html#section-56",
     "href": "cap4-1.html#section-56",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício\n\n\nCrie um objeto OrganizadorDeMusica da segunda versão do projeto. Experimente adicionar alguns arquivos de música a ele e tocá-los.\nSe quiser, você pode usar as músicas do repositório amostras-musicas. Baixe o repositório, descompacte o arquivo e copie os arquivos de extensão .mp3 para a pasta do projeto organizador-musicas-v2. Ao adicionar os arquivos no organizador de músicas, use exatamente o mesmo nome do arquivo, incluindo a extensão .mp3 (ex.: Mactonite-MorningMysteries.mp3)\nVocê pode usar seus próprios arquivos MP3 também se preferir. Lembre-se apenas de colocar na pasta do projeto e digitar corretamente o nome do arquivo.\nExperimente também com arquivos que não existem. O que acontece quando você tenta utilizá-los?"
+    "text": "Veja que, em ambos os casos, precisamos saber muito pouco sobre o funcionamento interno das classes.\n\nPrecisamos saber apenas informações sobre alguns métodos importantes.\n\nBasicamente seus nomes, tipos de parâmetro e tipo de retorno."
   },
   {
     "objectID": "cap4-1.html#section-57",
     "href": "cap4-1.html#section-57",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Veja que, em ambos os casos, precisamos saber muito pouco sobre o funcionamento interno das classes.\n\nPrecisamos saber apenas informações sobre alguns métodos importantes.\n\nBasicamente seus nomes, tipos de parâmetro e tipo de retorno."
+    "text": "Ainda faltam algumas coisas para nosso organizador ficar mais útil.\n\nEspecialmente, poder listar os nomes de todos os arquivos da coleção.\nÉ o que veremos a seguir."
   },
   {
     "objectID": "cap4-1.html#section-58",
     "href": "cap4-1.html#section-58",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Ainda faltam algumas coisas para nosso organizador ficar mais útil.\n\nEspecialmente, poder listar os nomes de todos os arquivos da coleção.\nÉ o que veremos a seguir."
+    "text": "A ideia agora é ter um método na classe OrganizadorDeMusicas\n\nque exiba no terminal todos os nomes de arquivos guardados na coleção.\n\n\nPodemos pensar em um método listarTodosOsArquivos para fazer isso.\n\nQual deve ser o tipo de retorno do método?\nEle precisa ter algum parâmetro?\nQuantas chamadas ao método System.out.println precisamos para mostrar todos os nomes de arquivo?"
   },
   {
     "objectID": "cap4-1.html#section-59",
     "href": "cap4-1.html#section-59",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "A ideia agora é ter um método na classe OrganizadorDeMusicas\n\nque exiba no terminal todos os nomes de arquivos guardados na coleção.\n\n\nPodemos pensar em um método listarTodosOsArquivos para fazer isso.\n\nQual deve ser o tipo de retorno do método?\nEle precisa ter algum parâmetro?\nQuantas chamadas ao método System.out.println precisamos para mostrar todos os nomes de arquivo?"
+    "text": "Veja que, claramente, precisamos de uma estrutura de repetição para implementar o método.\n\nVamos começar utilizando o loop for-each.\n\n\n\n\n\n\nConceito\n\n\nUm loop (ou laço) pode ser usado para executar repetidamente um bloco de comandos sem precisarmos escrevê-los várias vezes."
   },
   {
     "objectID": "cap4-1.html#section-60",
     "href": "cap4-1.html#section-60",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Veja que, claramente, precisamos de uma estrutura de repetição para implementar o método.\n\nVamos começar utilizando o loop for-each.\n\n\n\n\n\n\nConceito\n\n\nUm loop (ou laço) pode ser usado para executar repetidamente um bloco de comandos sem precisarmos escrevê-los várias vezes."
+    "text": "for (TipoDoElemento elemento : coleção) {\n    corpo do loop\n  }\n\nEsse código fica mais fácil de entender se o lermos assim:\n\n  Para cada elemento na coleção faça: {\n    corpo do loop\n  }"
   },
   {
     "objectID": "cap4-1.html#section-61",
     "href": "cap4-1.html#section-61",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "for (TipoDoElemento elemento : coleção) {\n    corpo do loop\n  }\n\nEsse código fica mais fácil de entender se o lermos assim:\n\n  Para cada elemento na coleção faça: {\n    corpo do loop\n  }"
+    "text": "for (TipoDoElemento elemento : coleção) {\n    corpo do loop\n  }\n\nRepare que a variável elemento está sendo declarada no cabeçalho do loop.\n\nPor isso, precisamos informar o tipo da variável.\nNós chamamos essa variável de variável do loop.\n\nE podemos usar o nome que quisermos para a variável."
   },
   {
     "objectID": "cap4-1.html#section-62",
     "href": "cap4-1.html#section-62",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "for (TipoDoElemento elemento : coleção) {\n    corpo do loop\n  }\n\nRepare que a variável elemento está sendo declarada no cabeçalho do loop.\n\nPor isso, precisamos informar o tipo da variável.\nNós chamamos essa variável de variável do loop.\n\nE podemos usar o nome que quisermos para a variável."
+    "text": "Abaixo está uma implementação do método listarTodosOsArquivos:\n\n  public void listarTodosOsArquivos() {\n      for(String nomeDoArquivo : arquivos) {\n          System.out.println(nomeDoArquivo);  \n      }\n  }"
   },
   {
     "objectID": "cap4-1.html#section-63",
     "href": "cap4-1.html#section-63",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Abaixo está uma implementação do método listarTodosOsArquivos:\n\n  public void listarTodosOsArquivos() {\n      for(String nomeDoArquivo : arquivos) {\n          System.out.println(nomeDoArquivo);  \n      }\n  }"
+    "text": "Repare que o método println é chamado para cada objeto presente no ArrayList arquivos.\n\nSe houver quatro músicas na coleção, ele será executado quatro vezes.\nEm cada execução, a variável nomeDoArquivo guarda um dos elementos da lista.\n\nNa primeira vez o elemento da posição 0, depois da posição 1, e assim por diante."
   },
   {
     "objectID": "cap4-1.html#section-64",
     "href": "cap4-1.html#section-64",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Repare que o método println é chamado para cada objeto presente no ArrayList arquivos.\n\nSe houver quatro músicas na coleção, ele será executado quatro vezes.\nEm cada execução, a variável nomeDoArquivo guarda um dos elementos da lista.\n\nNa primeira vez o elemento da posição 0, depois da posição 1, e assim por diante."
+    "text": "Exercício 12\n\n\nImplemente o método listarTodosOsArquivos no seu projeto.\nCrie um objeto OrganizadorDeMusicas, adicione alguns arquivos a ele e teste o método que você implementou.\nDica: use o depurador do BlueJ para reforçar o entendimento de como o loop for-each funciona."
   },
   {
     "objectID": "cap4-1.html#section-65",
     "href": "cap4-1.html#section-65",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício\n\n\nImplemente o método listarTodosOsArquivos no seu projeto.\nCrie um objeto OrganizadorDeMusicas, adicione alguns arquivos a ele e teste o método que você implementou.\nDica: use o depurador do BlueJ para reforçar o entendimento de como o loop for-each funciona."
+    "text": "Exercício 13\n\n\nCrie um ArrayList de Strings no bloco de códigos do BlueJ, digitando as duas linhas abaixo.\n\nimport java.util.ArrayList;\nnew ArrayList&lt;String&gt;()\n\nRepare que a segunda linha não tem ponto-e-vírgula e, por isso, aparecerá um ícone vermelho no bloco de códigos. Use-o para jogar o objeto ArrayList criado na bancada de objetos.\nClique no objeto e verifique os métodos disponíveis. Tente usar alguns dos métodos: add, remove, size e isEmpty. Tente chamar os mesmos métodos também pelo Bloco de Códigos."
   },
   {
     "objectID": "cap4-1.html#section-66",
     "href": "cap4-1.html#section-66",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício\n\n\nCrie um ArrayList de Strings no bloco de códigos do BlueJ, digitando as duas linhas abaixo.\n\nimport java.util.ArrayList;\nnew ArrayList&lt;String&gt;()\n\nRepare que a segunda linha não tem ponto-e-vírgula e, por isso, aparecerá um ícone vermelho no bloco de códigos. Use-o para jogar o objeto ArrayList criado na bancada de objetos.\nClique no objeto e verifique os métodos disponíveis. Tente usar alguns dos métodos: add, remove, size e isEmpty. Tente chamar os mesmos métodos também pelo Bloco de Códigos."
+    "text": "O que você acha que precisamos acrescentar no corpo do loop para fazer esse tipo de coisa?\n\nBasta usarmos um comando condicional (if) para selecionar os arquivos que queremos."
   },
   {
     "objectID": "cap4-1.html#section-67",
     "href": "cap4-1.html#section-67",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "O que você acha que precisamos acrescentar no corpo do loop para fazer esse tipo de coisa?\n\nBasta usarmos um comando condicional (if) para selecionar os arquivos que queremos."
+    "text": "O código abaixo mostra um exemplo de processamento seletivo.\n\n/**\n * Lista os nomes dos arquivos que batem com a string de busca passada\n * @param stringDeBusca A string a ser procurada.\n */\npublic void buscarMusicas(String stringDeBusca)\n{\n    for (String nomeDoArquivo : arquivos) {\n        // Se a string de busca existe no nome do arquivo\n        if (nomeDoArquivo.contains(stringDeBusca)) {\n            System.out.println(nomeDoArquivo);\n        }\n    }\n}"
   },
   {
     "objectID": "cap4-1.html#section-68",
     "href": "cap4-1.html#section-68",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "O código abaixo mostra um exemplo de processamento seletivo.\n\n/**\n * Lista os nomes dos arquivos que batem com a string de busca passada\n * @param stringDeBusca A string a ser procurada.\n */\npublic void buscarMusicas(String stringDeBusca)\n{\n    for (String nomeDoArquivo : arquivos) {\n        // Se a string de busca existe no nome do arquivo\n        if (nomeDoArquivo.contains(stringDeBusca)) {\n            System.out.println(nomeDoArquivo);\n        }\n    }\n}"
+    "text": "Usando o método contains da classe String, podemos filtrar os arquivos.\n\nE exibir apenas aqueles que têm a string de busca passada.\n\n\nSe o nome do arquivo não tem a string de busca, nós simplesmente o ignoramos.\n\nE, por isso, não há um bloco else no código."
   },
   {
     "objectID": "cap4-1.html#section-69",
     "href": "cap4-1.html#section-69",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Usando o método contains da classe String, podemos filtrar os arquivos.\n\nE exibir apenas aqueles que têm a string de busca passada.\n\n\nSe o nome do arquivo não tem a string de busca, nós simplesmente o ignoramos.\n\nE, por isso, não há um bloco else no código."
+    "text": "Exercício 14\n\n\nAdicione o método buscarMusicas à sua última versão da classe OrganizadorDeMusicas.\nConfira se o método exibe apenas os nomes de arquivo que possuem a string de busca. Experimente também usar uma string de busca que não exista em nenhum arquivo.\n\n\n\n\n\n\n\n\n\nExercício 15\n\n\nAltere o método buscarMusicas de forma que seja exibida uma mensagem caso nenhum arquivo tenha a string de busca passada.\nDica: você precisará declarar uma variável local do tipo boolean."
   },
   {
     "objectID": "cap4-1.html#section-70",
     "href": "cap4-1.html#section-70",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício\n\n\nAdicione o método buscarMusicas à sua última versão da classe OrganizadorDeMusicas.\nConfira se o método exibe apenas os nomes de arquivo que possuem a string de busca. Experimente também usar uma string de busca que não exista em nenhum arquivo.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAltere o método buscarMusicas de forma que seja exibida uma mensagem caso nenhum arquivo tenha a string de busca passada.\nDica: você precisará declarar uma variável local do tipo boolean."
+    "text": "Exercício 16\n\n\nCrie um novo método buscarETocarMusicas que toque uma amostra das músicas de um determinado artista. Para isso, os nomes dos arquivos precisam conter o nome do artista.\nO método é similar ao do exercício anterior mas, ao encontrar um arquivo que possui a string de busca (nome do artista, no caso), em vez de exibir o nome do arquivo, ele deve tocar uma amostra da música. Você precisará utilizar o método tocarAmostra do atributo tocador para fazer isso."
   },
   {
     "objectID": "cap4-1.html#section-71",
     "href": "cap4-1.html#section-71",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício\n\n\nCrie um novo método buscarETocarMusicas que toque uma amostra das músicas de um determinado artista. Para isso, os nomes dos arquivos precisam conter o nome do artista.\nO método é similar ao do exercício anterior mas, ao encontrar um arquivo que possui a string de busca (nome do artista, no caso), em vez de exibir o nome do arquivo, ele deve tocar uma amostra da música. Você precisará utilizar o método tocarAmostra do atributo tocador para fazer isso."
+    "text": "Supondo então que fosse criada uma classe Musica, qual deveria ser o tipo do nosso atributo arquivos?\n\nEm vez de ArrayList&lt;String&gt;, ele passaria a ser ArrayList&lt;Musica&gt;.\n\n\nFaremos essa melhoria mais adiante neste capítulo!"
   },
   {
     "objectID": "cap4-1.html#section-72",
     "href": "cap4-1.html#section-72",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Supondo então que fosse criada uma classe Musica, qual deveria ser o tipo do nosso atributo arquivos?\n\nEm vez de ArrayList&lt;String&gt;, ele passaria a ser ArrayList&lt;Musica&gt;.\n\n\nFaremos essa melhoria mais adiante neste capítulo!"
+    "text": "Nós vimos que o loop for-each é usado para processar uma coleção inteira.\n\nMas há situações na quais queremos percorrer uma coleção, mas sem necessariamente precisar passar por todos os elementos dela.\nÉ o que chamamos de interação indefinida."
   },
   {
     "objectID": "cap4-1.html#section-73",
     "href": "cap4-1.html#section-73",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Nós vimos que o loop for-each é usado para processar uma coleção inteira.\n\nMas há situações na quais queremos percorrer uma coleção, mas sem necessariamente precisar passar por todos os elementos dela.\nÉ o que chamamos de interação indefinida."
+    "text": "Suponha, por exemplo, que queremos encontrar a primeira música que tenha uma determinada string.\n\nNesses casos, o loop for-each não é a melhor opção, pois ele é projetado para iterar por todos os elemento da coleção.\n\nMas, ao encontrarmos a primeira música, não precisaríamos percorrer o restante da coleção.\n\nNós podemos então utilizar outro tipo de loop, com o comando while."
   },
   {
     "objectID": "cap4-1.html#limitação-do-uso-de-strings-1",
@@ -6759,14 +6759,14 @@
     "href": "cap4-1.html#section-74",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Suponha, por exemplo, que queremos encontrar a primeira música que tenha uma determinada string.\n\nNesses casos, o loop for-each não é a melhor opção, pois ele é projetado para iterar por todos os elemento da coleção.\n\nMas, ao encontrarmos a primeira música, não precisaríamos percorrer o restante da coleção.\n\nNós podemos então utilizar outro tipo de loop, com o comando while."
+    "text": "O código abaixo, por exemplo, exibe o índice das músicas\n\no que pode ajudar na hora de chamar os métodos de tocar ou remover uma música.\n\n\npublic void listarTodosOsArquivos() {\n    int indice = 0;\n    while (indice &lt; arquivos.size()) {\n        String nomeDoArquivo = arquivos.get(indice);\n        // inclui o índice da música na impressão\n        System.out.println(indice + \": \" + nomeDoArquivo); \n        indice++;\n    }\n}"
   },
   {
     "objectID": "cap4-1.html#section-75",
     "href": "cap4-1.html#section-75",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "O código abaixo, por exemplo, exibe o índice das músicas\n\no que pode ajudar na hora de chamar os métodos de tocar ou remover uma música.\n\n\npublic void listarTodosOsArquivos() {\n    int indice = 0;\n    while (indice &lt; arquivos.size()) {\n        String nomeDoArquivo = arquivos.get(indice);\n        // inclui o índice da música na impressão\n        System.out.println(indice + \": \" + nomeDoArquivo); \n        indice++;\n    }\n}"
+    "text": "Na próxima aula continuaremos evoluindo nosso projeto.\n\nEspecialmente através da criação de uma classe para representar músicas."
   },
   {
     "objectID": "cap4-1.html#section-76",

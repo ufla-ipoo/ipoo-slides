@@ -27,15 +27,6 @@ Algumas perguntas **para refletir** antes de começar a aula:
 
 ::::
 
-##
-
-::: {.callout-important title="Entrega no Campus Virtual"}
-Nesta aula não há quizes a responder.
-
-Você deverá entregar a versão final de um projeto que contenha todos os 7 exercícios marcados para a entrega.
-Eles estão identificados como: **Exercício**.
-:::
-
 ## Principais Conceitos do Capítulo
 
 ::: {.nonincremental}
@@ -295,7 +286,7 @@ Estamos adotando uma [abordagem incremental]{.alert}.
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 1" icon=false}
 Antes de analisarmos o código-fonte, vamos entender o funcionamento do organizador de músicas.
 
 Abra o probjeto [organizador-musicas-v1](https://github.com/ufla-ipoo/organizador-musicas-v1) no BlueJ e crie um objeto `OrganizadorDeMusicas`.
@@ -310,7 +301,7 @@ Você imagina, por que?
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 2" icon=false}
 O que acontece se você criar um objeto `OrganizadorDeMusicas` e chamar `removerArquivo(0)` antes de ter adicionado qualquer música?
 
 Ocorre algum erro? Você esperava que ocorresse algum erro?
@@ -318,7 +309,7 @@ Ocorre algum erro? Você esperava que ocorresse algum erro?
 
 . . .
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 3" icon=false}
 Crie um `OrganizadorDeMusicas` e adicione dois nomes de arquivos a ele.
 Chame `listarArquivo(0)` e `listarArquivo(1)` para mostrar os dois arquivos.
 Agora chame `removerArquivo(0)` e depois `listarArquivo(0)`.
@@ -560,26 +551,26 @@ Você acha que a linha de código abaixo seria válida?
 
 ## 
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 4" icon=false}
 Escreva a declaração de um atributo privado chamado `biblioteca` que guarda um `ArrayList`.
 Os elementos do `ArrayList` são do tipo `Livro`.
 :::
 
 . . .
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 5" icon=false}
 Escreva a declaração de uma variável local chamada `ipoo` que guarda um `ArrayList` de `Estudante`.
 :::
 
 ## 
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 6" icon=false}
 Escreva a declaração de um atributo privado chamado `musicas` para guardar uma coleção de objetos `Musica`.
 ::: 
 
 . . .
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 7" icon=false}
 Escreva comandos para criar objetos `ArrayList` e atribuir às variáveis declaradas nos três exercícios anteriores.
 :::
 
@@ -655,7 +646,7 @@ Suponha, por exemplo, que uma variável `p` guarda a posição de um objeto na c
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 8" icon=false}
 Crie um novo método na classe `OrganizadorDeMusicas` chamado `verificarIndice`.
 O método deve receber um parâmetro inteiro e verificar se ele é um índice válido para o estado atual da coleção.
 
@@ -667,7 +658,7 @@ O que acontece se o método for chamado para uma coleção vazia?
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 9" icon=false}
 Crie um método similar ao anterior, chamado `indiceEhValido`.
 O método deve receber um parâmetro inteiro e retornar um `boolean`.
 O método não deve exibir nada no terminal, apenas retornar `true` se o índice for válido e `false` em caso contrário.
@@ -677,7 +668,7 @@ Teste o método usando a bancada de objetos para índices válidos e inválidos 
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 10" icon=false}
 Modifique os métodos `listarArquivo` e `removerArquivo` da classe `OrganizadorDeMusicas` de forma que eles usem o método `indiceEhValido` para verificar seus parâmetros, em vez da expressão booleana atual.
 
 Os métodos `get` ou `remove` do `ArrayList` só devem ser chamados se o método `indiceEhValido` retornar `true`.
@@ -742,7 +733,7 @@ Avalie as modificações na classe `OrganizadorDeMusica` no projeto [organizador
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 11" icon=false}
 Crie um objeto `OrganizadorDeMusica` da segunda versão do projeto. Experimente adicionar alguns arquivos de música a ele e tocá-los.
 
 Se quiser, você pode usar as músicas do repositório [amostras-musicas](https://github.com/ufla-ipoo/amostras-musicas).
@@ -887,7 +878,7 @@ Repare que o método `println` é chamado para cada objeto presente no `ArrayLis
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 12" icon=false}
 Implemente o método `listarTodosOsArquivos` no seu projeto.
 
 Crie um objeto `OrganizadorDeMusicas`, adicione alguns arquivos a ele e teste o método que você implementou.
@@ -897,7 +888,7 @@ Dica: use o depurador do BlueJ para reforçar o entendimento de como o loop for-
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 13" icon=false}
 Crie um `ArrayList` de Strings no bloco de códigos do BlueJ, digitando as duas linhas abaixo.
 
 ::: {.halfincfontsize}
@@ -967,7 +958,7 @@ Se o nome do arquivo não tem a string de busca, nós simplesmente o ignoramos.
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 14" icon=false}
 Adicione o método `buscarMusicas` à sua última versão da classe `OrganizadorDeMusicas`.
 
 Confira se o método exibe apenas os nomes de arquivo que possuem a string de busca.
@@ -976,7 +967,7 @@ Experimente também usar uma string de busca que não exista em nenhum arquivo.
 
 . . . 
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 15" icon=false}
 Altere o método `buscarMusicas` de forma que seja exibida uma mensagem caso nenhum arquivo tenha a string de busca passada.
 
 **Dica**: você precisará declarar uma variável local do tipo `boolean`.
@@ -984,7 +975,7 @@ Altere o método `buscarMusicas` de forma que seja exibida uma mensagem caso nen
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 16" icon=false}
 Crie um novo método `buscarETocarMusicas` que toque uma amostra das músicas de um determinado artista. Para isso, os nomes dos arquivos precisam conter o nome do artista.
 
 O método é similar ao do exercício anterior mas, ao encontrar um arquivo que possui a string de busca (nome do artista, no caso), em vez de exibir o nome do arquivo, ele deve tocar uma amostra da música.
