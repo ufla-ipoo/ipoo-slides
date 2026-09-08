@@ -1445,10 +1445,160 @@
 <li class="fragment">Em vez de <code>ArrayList&lt;String&gt;</code>, ele passaria a ser <code>ArrayList&lt;Musica&gt;</code>.</li>
 </ul>
 <div class="fragment">
-<p>Faremos essa melhoria na próxima aula!</p>
-
-
+<p>Faremos essa melhoria mais adiante neste capítulo!</p>
 </div>
+</section></section>
+<section>
+<section id="buscando-em-uma-coleção" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Buscando em uma coleção</h1>
+
+</section>
+<section id="section-73" class="slide level2">
+<h2></h2>
+<p>Nós vimos que o loop <strong>for-each</strong> é usado para <strong>processar uma coleção inteira</strong>.</p>
+<ul>
+<li class="fragment">Mas há situações na quais queremos percorrer uma coleção, mas sem necessariamente precisar passar por todos os elementos dela.</li>
+<li class="fragment">É o que chamamos de <strong>interação indefinida</strong>.</li>
+</ul>
+</section>
+<section id="section-74" class="slide level2">
+<h2></h2>
+<p>Suponha, por exemplo, que queremos encontrar a primeira música que tenha uma determinada string.</p>
+<ul>
+<li class="fragment">Nesses casos, o loop <em>for-each</em> não é a melhor opção, pois ele é projetado para iterar por todos os elemento da coleção.
+<ul>
+<li class="fragment">Mas, ao encontrarmos a primeira música, não precisaríamos percorrer o restante da coleção.</li>
+</ul></li>
+<li class="fragment">Nós podemos então utilizar outro tipo de loop, com o comando <code>while</code>.</li>
+</ul>
+</section>
+<section id="o-loop-while" class="slide level2">
+<h2>O loop <code>while</code></h2>
+<div class="fragment">
+<p>A <strong>sintaxe</strong> do <span class="alert"><code>while</code></span> em Java é <strong>igual à do C++</strong> que vocês viram na disciplina IALG.</p>
+</div>
+<div class="fragment">
+<p>Como exemplo, os trechos de código do próximo slides fazem a mesma coisa,</p>
+<ul>
+<li class="fragment">mas um usando <strong>for-each</strong></li>
+<li class="fragment">e o outro <code>while</code>.</li>
+</ul>
+</div>
+</section>
+<section id="o-loop-while-1" class="slide level2">
+<h2>O loop <code>while</code></h2>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb14"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">listarTodosOsArquivos</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span><span class="op">(</span><span class="bu">String</span> nomeDoArquivo <span class="op">:</span> arquivos<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb14-3"><a aria-hidden="true" tabindex="-1"></a>          <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>nomeDoArquivo<span class="op">);</span>  </span>
+<span id="cb14-4"><a aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
+<span id="cb14-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb15"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">listarTodosOsArquivos</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a>      <span class="dt">int</span> indice <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb15-3"><a aria-hidden="true" tabindex="-1"></a>      <span class="cf">while</span> <span class="op">(</span>indice <span class="op">&lt;</span> arquivos<span class="op">.</span><span class="fu">size</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb15-4"><a aria-hidden="true" tabindex="-1"></a>          <span class="bu">String</span> nomeDoArquivo <span class="op">=</span> arquivos<span class="op">.</span><span class="fu">get</span><span class="op">(</span>indice<span class="op">);</span></span>
+<span id="cb15-5"><a aria-hidden="true" tabindex="-1"></a>          <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>nomeDoArquivo<span class="op">);</span></span>
+<span id="cb15-6"><a aria-hidden="true" tabindex="-1"></a>          indice<span class="op">++;</span></span>
+<span id="cb15-7"><a aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
+<span id="cb15-8"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="o-loop-while-2" class="slide level2 autoanimate">
+<h2>O loop <code>while</code></h2>
+<p>Repare que, <strong>neste caso</strong>, como estamos processando a coleção inteira, a opção <strong>com <em>for-each</em> é melhor</strong>:</p>
+<ul>
+<li class="fragment">Primeiro porque o código é mais simples de implementar.</li>
+<li class="fragment">Segundo porque não corremos o risco de cometer algum erro e provocar um loop infinito.</li>
+<li class="fragment">Além disso, o código do <em>for-each</em> é o mesmo para diversas coleções diferentes.
+<ul>
+<li class="fragment">Há coleções nas quais o acesso não é por índice ou não é com um método chamado <code>get</code>, por exemplo.</li>
+</ul></li>
+</ul>
+</section>
+<section id="o-loop-while-3" class="slide level2">
+<h2>O loop <code>while</code></h2>
+<p>Assim, você pode estar se perguntando, mas então para que usar o comando <code>while</code>?</p>
+<ul>
+<li class="fragment">Primeiro, porque podemos usar <code>while</code> para outras situações, que não sejam percorrer uma coleção.</li>
+<li class="fragment">E, no caso de coleções, porque podemos precisar parar as iterações antes de processar a coleção inteira.</li>
+<li class="fragment">Por fim, pode ser que precisemos do índice do elemento na coleção.</li>
+</ul>
+</section>
+<section id="section-75" class="slide level2">
+<h2></h2>
+<p>O código abaixo, por exemplo, exibe o índice das músicas</p>
+<ul>
+<li class="fragment">o que pode ajudar na hora de chamar os métodos de tocar ou remover uma música.</li>
+</ul>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb16"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">void</span> <span class="fu">listarTodosOsArquivos</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb16-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> indice <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb16-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>indice <span class="op">&lt;</span> arquivos<span class="op">.</span><span class="fu">size</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb16-4"><a aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> nomeDoArquivo <span class="op">=</span> arquivos<span class="op">.</span><span class="fu">get</span><span class="op">(</span>indice<span class="op">);</span></span>
+<span id="cb16-5"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// inclui o índice da música na impressão</span></span>
+<span id="cb16-6"><a aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>indice <span class="op">+</span> <span class="st">": "</span> <span class="op">+</span> nomeDoArquivo<span class="op">);</span> </span>
+<span id="cb16-7"><a aria-hidden="true" tabindex="-1"></a>        indice<span class="op">++;</span></span>
+<span id="cb16-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb16-9"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="exemplo-de-busca-com-while" class="slide level2">
+<h2>Exemplo de busca com <code>while</code></h2>
+<p>Na aula passada, vimos o método <code>buscarMusicas</code> que listava os nomes de todas as músicas que tinham uma string de busca.</p>
+<ul>
+<li class="fragment">Mas suponha que queiramos um método para encontrar a primeira música que tenha a string.</li>
+<li class="fragment">Este é um exemplo de situação na qual podemos interromper a interação sem precisar processar a coleção inteira.
+<ul>
+<li class="fragment"><em>Obs.: apesar de existir uma forma de parar a iteração de um <em>for-each</em> ela é considerada um estilo ruim de programação.</em></li>
+</ul></li>
+</ul>
+</section>
+<section id="exemplo-de-busca-com-while-1" class="slide level2">
+<h2>Exemplo de busca com <code>while</code></h2>
+<div class="sourceCode" id="cb17"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb17-2"><a aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> Busca o <span class="co">í</span>ndice da primeira m<span class="co">ú</span>sica que bate com a string passada<span class="co">.</span></span>
+<span id="cb17-3"><a aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> <span class="an">@param</span><span class="co"> </span><span class="an">stringDeBusca</span><span class="co"> </span>A string a ser procurada<span class="co">.</span></span>
+<span id="cb17-4"><a aria-hidden="true" tabindex="-1"></a> <span class="co">*</span> <span class="an">@return</span> O <span class="co">í</span>ndice da primeira ocorr<span class="co">ê</span>ncia<span class="co">,</span> ou <span class="co">-1</span> se nenhuma m<span class="co">ú</span>sica tem a string passada<span class="co">.</span></span>
+<span id="cb17-5"><a aria-hidden="true" tabindex="-1"></a> <span class="co">*/</span></span>
+<span id="cb17-6"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span> <span class="fu">buscarPrimeiraMusica</span><span class="op">(</span><span class="bu">String</span> stringDeBusca<span class="op">)</span></span>
+<span id="cb17-7"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb17-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> indice <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb17-9"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// Indica se a primeira música foi encontrada</span></span>
+<span id="cb17-10"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">boolean</span> encontrou <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb17-11"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// A busca continua enquanto a coleção não terminar e nenhuma música foi encontrada</span></span>
+<span id="cb17-12"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>indice <span class="op">&lt;</span> arquivos<span class="op">.</span><span class="fu">size</span><span class="op">()</span> <span class="op">&amp;&amp;</span> <span class="op">!</span>encontrou<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb17-13"><a aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> nomeDoArquivo <span class="op">=</span> arquivos<span class="op">.</span><span class="fu">get</span><span class="op">(</span>indice<span class="op">);</span></span>
+<span id="cb17-14"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>nomeDoArquivo<span class="op">.</span><span class="fu">contains</span><span class="op">(</span>stringDeBusca<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb17-15"><a aria-hidden="true" tabindex="-1"></a>            <span class="co">// Uma música foi encontrada, podemos parar a busca</span></span>
+<span id="cb17-16"><a aria-hidden="true" tabindex="-1"></a>            encontrou <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb17-17"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb17-18"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb17-19"><a aria-hidden="true" tabindex="-1"></a>            <span class="co">// Não encontramos a música ainda, podemos continuar a busca</span></span>
+<span id="cb17-20"><a aria-hidden="true" tabindex="-1"></a>            indice<span class="op">++;</span></span>
+<span id="cb17-21"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb17-22"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb17-23"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>encontrou<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb17-24"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// Retorna a posição onde a música foi encontrada</span></span>
+<span id="cb17-25"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> indice<span class="op">;</span></span>
+<span id="cb17-26"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb17-27"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb17-28"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// Não encontramos nenhuma música</span></span>
+<span id="cb17-29"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span><span class="op">;</span></span>
+<span id="cb17-30"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb17-31"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="section-76" class="slide level2">
+<h2></h2>
+<p>Na próxima aula continuaremos evoluindo nosso projeto.</p>
+<ul>
+<li class="fragment">Especialmente através da criação de uma classe para representar músicas.</li>
+</ul>
+
+
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

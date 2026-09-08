@@ -6689,14 +6689,14 @@
     "href": "cap4-1.html#section-72",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Supondo então que fosse criada uma classe Musica, qual deveria ser o tipo do nosso atributo arquivos?\n\nEm vez de ArrayList&lt;String&gt;, ele passaria a ser ArrayList&lt;Musica&gt;.\n\n\nFaremos essa melhoria na próxima aula!"
+    "text": "Supondo então que fosse criada uma classe Musica, qual deveria ser o tipo do nosso atributo arquivos?\n\nEm vez de ArrayList&lt;String&gt;, ele passaria a ser ArrayList&lt;Musica&gt;.\n\n\nFaremos essa melhoria mais adiante neste capítulo!"
   },
   {
     "objectID": "cap4-1.html#section-73",
     "href": "cap4-1.html#section-73",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Supondo então que fosse criada uma classe Musica, qual deveria ser o tipo do nosso atributo arquivos?\n\nEm vez de ArrayList&lt;String&gt;, ele passaria a ser ArrayList&lt;Musica&gt;.\n\n\nFaremos essa melhoria na próxima aula!"
+    "text": "Nós vimos que o loop for-each é usado para processar uma coleção inteira.\n\nMas há situações na quais queremos percorrer uma coleção, mas sem necessariamente precisar passar por todos os elementos dela.\nÉ o que chamamos de interação indefinida."
   },
   {
     "objectID": "cap4-1.html#limitação-do-uso-de-strings-1",
@@ -6704,5 +6704,75 @@
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "Limitação do uso de strings",
     "text": "Limitação do uso de strings\nVeja que, pensando em termos de orientação a objetos, o ideal era que tivéssemos uma classe para representar músicas.\n\nE essa classe poderia, por exemplo, guardar separadamente o nome do artista e o nome da música.\nE, assim, seria mais fácil buscar músicas por artista ou pelo nome."
+  },
+  {
+    "objectID": "cap4-1.html#o-loop-while",
+    "href": "cap4-1.html#o-loop-while",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "O loop while",
+    "text": "O loop while\n\nA sintaxe do while em Java é igual à do C++ que vocês viram na disciplina IALG.\n\n\nComo exemplo, os trechos de código do próximo slides fazem a mesma coisa,\n\nmas um usando for-each\ne o outro while."
+  },
+  {
+    "objectID": "cap4-1.html#o-loop-while-1",
+    "href": "cap4-1.html#o-loop-while-1",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "O loop while",
+    "text": "O loop while\n\n  public void listarTodosOsArquivos() {\n      for(String nomeDoArquivo : arquivos) {\n          System.out.println(nomeDoArquivo);  \n      }\n  }\n\n\n\n  public void listarTodosOsArquivos() {\n      int indice = 0;\n      while (indice &lt; arquivos.size()) {\n          String nomeDoArquivo = arquivos.get(indice);\n          System.out.println(nomeDoArquivo);\n          indice++;\n      }\n  }"
+  },
+  {
+    "objectID": "cap4-1.html#o-loop-while-2",
+    "href": "cap4-1.html#o-loop-while-2",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "O loop while",
+    "text": "O loop while\nRepare que, neste caso, como estamos processando a coleção inteira, a opção com for-each é melhor:\n\nPrimeiro porque o código é mais simples de implementar.\nSegundo porque não corremos o risco de cometer algum erro e provocar um loop infinito.\nAlém disso, o código do for-each é o mesmo para diversas coleções diferentes.\n\nHá coleções nas quais o acesso não é por índice ou não é com um método chamado get, por exemplo."
+  },
+  {
+    "objectID": "cap4-1.html#o-loop-while-3",
+    "href": "cap4-1.html#o-loop-while-3",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "O loop while",
+    "text": "O loop while\nAssim, você pode estar se perguntando, mas então para que usar o comando while?\n\nPrimeiro, porque podemos usar while para outras situações, que não sejam percorrer uma coleção.\nE, no caso de coleções, porque podemos precisar parar as iterações antes de processar a coleção inteira.\nPor fim, pode ser que precisemos do índice do elemento na coleção."
+  },
+  {
+    "objectID": "cap4-1.html#o-loop-while-4",
+    "href": "cap4-1.html#o-loop-while-4",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "O loop while",
+    "text": "O loop while\nO código abaixo, por exemplo, exibe o índice das músicas\n\no que pode ajudar na hora de chamar os métodos de tocar ou remover uma música.\n\n\npublic void listarTodosOsArquivos() {\n    int indice = 0;\n    while (indice &lt; arquivos.size()) {\n        String nomeDoArquivo = arquivos.get(indice);\n        // inclui o índice da música na impressão\n        System.out.println(indice + \": \" + nomeDoArquivo); \n        indice++;\n    }\n}"
+  },
+  {
+    "objectID": "cap4-1.html#exemplo-de-busca-com-while",
+    "href": "cap4-1.html#exemplo-de-busca-com-while",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "Exemplo de busca com while",
+    "text": "Exemplo de busca com while\nNa aula passada, vimos o método buscarMusicas que listava os nomes de todas as músicas que tinham uma string de busca.\n\nMas suponha que queiramos um método para encontrar a primeira música que tenha a string.\nEste é um exemplo de situação na qual podemos interromper a interação sem precisar processar a coleção inteira.\n\nObs.: apesar de existir uma forma de parar a iteração de um for-each ela é considerada um estilo ruim de programação."
+  },
+  {
+    "objectID": "cap4-1.html#exemplo-de-busca-com-while-1",
+    "href": "cap4-1.html#exemplo-de-busca-com-while-1",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "Exemplo de busca com while",
+    "text": "Exemplo de busca com while\n/**\n * Busca o índice da primeira música que bate com a string passada.\n * @param stringDeBusca A string a ser procurada.\n * @return O índice da primeira ocorrência, ou -1 se nenhuma música tem a string passada.\n */\npublic int buscarPrimeiraMusica(String stringDeBusca)\n{\n    int indice = 0;\n    // Indica se a primeira música foi encontrada\n    boolean encontrou = false;\n    // A busca continua enquanto a coleção não terminar e nenhuma música foi encontrada\n    while (indice &lt; arquivos.size() && !encontrou) {\n        String nomeDoArquivo = arquivos.get(indice);\n        if (nomeDoArquivo.contains(stringDeBusca)) {\n            // Uma música foi encontrada, podemos parar a busca\n            encontrou = true;\n        }\n        else {\n            // Não encontramos a música ainda, podemos continuar a busca\n            indice++;\n        }\n    }\n    if (encontrou) {\n        // Retorna a posição onde a música foi encontrada\n        return indice;\n    }\n    else {\n        // Não encontramos nenhuma música\n        return -1;\n    }\n}"
+  },
+  {
+    "objectID": "cap4-1.html#section-74",
+    "href": "cap4-1.html#section-74",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Suponha, por exemplo, que queremos encontrar a primeira música que tenha uma determinada string.\n\nNesses casos, o loop for-each não é a melhor opção, pois ele é projetado para iterar por todos os elemento da coleção.\n\nMas, ao encontrarmos a primeira música, não precisaríamos percorrer o restante da coleção.\n\nNós podemos então utilizar outro tipo de loop, com o comando while."
+  },
+  {
+    "objectID": "cap4-1.html#section-75",
+    "href": "cap4-1.html#section-75",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "O código abaixo, por exemplo, exibe o índice das músicas\n\no que pode ajudar na hora de chamar os métodos de tocar ou remover uma música.\n\n\npublic void listarTodosOsArquivos() {\n    int indice = 0;\n    while (indice &lt; arquivos.size()) {\n        String nomeDoArquivo = arquivos.get(indice);\n        // inclui o índice da música na impressão\n        System.out.println(indice + \": \" + nomeDoArquivo); \n        indice++;\n    }\n}"
+  },
+  {
+    "objectID": "cap4-1.html#section-76",
+    "href": "cap4-1.html#section-76",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Na próxima aula continuaremos evoluindo nosso projeto.\n\nEspecialmente através da criação de uma classe para representar músicas."
   }
 ]

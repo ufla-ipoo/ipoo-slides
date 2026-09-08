@@ -1013,5 +1013,149 @@ Supondo então que fosse criada uma classe `Musica`, qual deveria ser o tipo do 
 
 . . .
 
-Faremos essa melhoria na próxima aula!
+Faremos essa melhoria mais adiante neste capítulo!
+
+# Buscando em uma coleção {background-color="#40666e"}
+
+##
+
+Nós vimos que o loop **for-each** é usado para **processar uma coleção inteira**.
+
+- Mas há situações na quais queremos percorrer uma coleção, mas sem necessariamente precisar passar por todos os elementos dela.
+- É o que chamamos de **interação indefinida**.
+
+##
+
+Suponha, por exemplo, que queremos encontrar a primeira música que tenha uma determinada string.
+
+- Nesses casos, o loop *for-each* não é a melhor opção, pois ele é projetado para iterar por todos os elemento da coleção.
+  - Mas, ao encontrarmos a primeira música, não precisaríamos percorrer o restante da coleção.
+- Nós podemos então utilizar outro tipo de loop, com o comando `while`.
+
+## O loop `while`
+
+. . .
+
+A **sintaxe** do [`while`]{.alert} em Java é **igual à do C++** que vocês viram na disciplina IALG.
+
+. . .
+
+Como exemplo, os trechos de código do próximo slides fazem a mesma coisa, 
+
+- mas um usando **for-each** 
+- e o outro `while`.
+
+## O loop `while`
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  public void listarTodosOsArquivos() {
+      for(String nomeDoArquivo : arquivos) {
+          System.out.println(nomeDoArquivo);  
+      }
+  }
+```
+:::
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  public void listarTodosOsArquivos() {
+      int indice = 0;
+      while (indice < arquivos.size()) {
+          String nomeDoArquivo = arquivos.get(indice);
+          System.out.println(nomeDoArquivo);
+          indice++;
+      }
+  }
+```
+::: 
+
+## O loop `while` {.autoanimate}
+
+Repare que, **neste caso**, como estamos processando a coleção inteira, a opção **com *for-each* é melhor**:
+
+- Primeiro porque o código é mais simples de implementar.
+- Segundo porque não corremos o risco de cometer algum erro e provocar um loop infinito.
+- Além disso, o código do *for-each* é o mesmo para diversas coleções diferentes.
+  - Há coleções nas quais o acesso não é por índice ou não é com um método chamado `get`, por exemplo.
+
+## O loop `while`
+
+Assim, você pode estar se perguntando, mas então para que usar o comando `while`?
+
+- Primeiro, porque podemos usar `while` para outras situações, que não sejam percorrer uma coleção.
+- E, no caso de coleções, porque podemos precisar parar as iterações antes de processar a coleção inteira.
+- Por fim, pode ser que precisemos do índice do elemento na coleção.
+
+## 
+
+O código abaixo, por exemplo, exibe o índice das músicas
+
+- o que pode ajudar na hora de chamar os métodos de tocar ou remover uma música.
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public void listarTodosOsArquivos() {
+    int indice = 0;
+    while (indice < arquivos.size()) {
+        String nomeDoArquivo = arquivos.get(indice);
+        // inclui o índice da música na impressão
+        System.out.println(indice + ": " + nomeDoArquivo); 
+        indice++;
+    }
+}
+```
+::: 
+
+## Exemplo de busca com `while`
+
+Na aula passada, vimos o método `buscarMusicas` que listava os nomes de todas as músicas que tinham uma string de busca.
+
+- Mas suponha que queiramos um método para encontrar a primeira música que tenha a string.
+- Este é um exemplo de situação na qual podemos interromper a interação sem precisar processar a coleção inteira.
+  - *Obs.: apesar de existir uma forma de parar a iteração de um _for-each_ ela é considerada um estilo ruim de programação.*
+
+## Exemplo de busca com `while`
+
+```{.java code-line-numbers="false"}
+/**
+ * Busca o índice da primeira música que bate com a string passada.
+ * @param stringDeBusca A string a ser procurada.
+ * @return O índice da primeira ocorrência, ou -1 se nenhuma música tem a string passada.
+ */
+public int buscarPrimeiraMusica(String stringDeBusca)
+{
+    int indice = 0;
+    // Indica se a primeira música foi encontrada
+    boolean encontrou = false;
+    // A busca continua enquanto a coleção não terminar e nenhuma música foi encontrada
+    while (indice < arquivos.size() && !encontrou) {
+        String nomeDoArquivo = arquivos.get(indice);
+        if (nomeDoArquivo.contains(stringDeBusca)) {
+            // Uma música foi encontrada, podemos parar a busca
+            encontrou = true;
+        }
+        else {
+            // Não encontramos a música ainda, podemos continuar a busca
+            indice++;
+        }
+    }
+    if (encontrou) {
+        // Retorna a posição onde a música foi encontrada
+        return indice;
+    }
+    else {
+        // Não encontramos nenhuma música
+        return -1;
+    }
+}
+```
+
+##
+
+Na próxima aula continuaremos evoluindo nosso projeto.
+
+- Especialmente através da criação de uma classe para representar músicas.
 
