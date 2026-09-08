@@ -3175,7 +3175,7 @@
     "href": "cap4-3.html#section-1",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Na aula anterior nós aprendemos sobre o loop for-each que é usado para processar uma coleção inteira.\n\nMas há situações na quais queremos percorrer uma coleção, mas sem necessariamente precisar passar por todos os elementos dela.\nÉ o que chamamos de interação indefinida.\n\n\nSuponha, por exemplo, que queremos encontrar a primeira música que tenha uma determinada string.\n\nNesses casos, o loop for-each não é a melhor opção, pois ele é projetado para iterar por todos os elemento da coleção.\n\nMas, ao encontrarmos a primeira música, não precisaríamos percorrer o restante da coleção.\n\nNós podemos então utilizar outro tipo de loop, com o comando while."
+    "text": "Como vimos na aula passada, usar String para representar as músicas não é o ideal.\n\nQualquer tocador de música comercial permite, por exemplo, buscar por título, artista, álbum, gênero, etc.\n\nAlém de ter informações adicionais como a duração da música, por ex..\n\n\n\nUm dos poderes da Orientação a Objetos é justamente permitir que entidades do mundo real possam ser representadas como objetos em nossos programas."
   },
   {
     "objectID": "cap4-3.html#o-loop-while",
@@ -3231,14 +3231,14 @@
     "href": "cap4-3.html#section-2",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Como vimos no final da aula passada, usar String para representar as músicas não é o ideal.\n\nQualquer tocador de música comercial permite, por exemplo, buscar por título, artista, álbum, gênero, etc.\n\nAlém de ter informações adicionais como a duração da música, por ex..\n\n\n\nUm dos poderes da Orientação a Objetos é justamente permitir que entidades do mundo real possam ser representadas como objetos em nossos programas.\n\nComo já sabemos como criar classes, com construtores, atributos e métodos, podemos criar uma classe Musica que represente as músicas."
+    "text": "Como já sabemos como criar classes, com construtores, atributos e métodos,\n\npodemos criar uma classe Musica que represente as músicas.\n\n\nMas repare que, se quisermos ter todos os atributos mencionados para cada música (artista, título, gênero, álbum, etc.),\n\nprecisaríamos pedir ao usuário para fornecer todas essas informações."
   },
   {
     "objectID": "cap4-3.html#section-3",
     "href": "cap4-3.html#section-3",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Mas repare que, se quisermos ter todos os atributos mencionados para cada música (artista, título, gênero, álbum, etc.),\n\nprecisaríamos pedir ao usuário para fornecer todas essas informações.\n\n\nPara evitar esse trabalho, vamos ilustrar essa questão com um exemplo bem simples.\n\nVamos aproveitar o fato de que os arquivos de música fornecidos têm o nome do artista e da música no nome,\n\ne usar uma classe auxiliar, chamada LeitorDeMusica,\nque vai procurar todas as músicas .mp3 que estão em uma pasta, e usar os nomes dos arquivos para criar objetos da classe Musica."
+    "text": "Para evitar esse trabalho, vamos ilustrar essa questão com um exemplo bem simples.\n\nVamos aproveitar o fato de que os arquivos de música fornecidos têm o nome do artista e da música no nome,\n\ne usar uma classe auxiliar, chamada LeitorDeMusica,\nque vai procurar todas as músicas .mp3 que estão em uma pasta, e usar os nomes dos arquivos para criar objetos da classe Musica."
   },
   {
     "objectID": "cap4-3.html#section-4",
@@ -3252,126 +3252,126 @@
     "href": "cap4-3.html#section-5",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Você deve ter notado que as principais alterações são:\n\nA classe OrganizadorDeMusicas tem agora um ArrayList de Musicas em vez de um ArrayList de Strings.\n\nIsso afeta diversos métodos que tínhamos implementado.\n\nNo método listarTodasAsMusicas, pedimos ao objeto Musica que retorna uma String contendo seus detalhes.\n\nIsso indica que estamos deixando a classe Musica responsável por fornecer os detalhes a serem exibidos, como o título e o artista.\nEste é um exemplo de design baseado em responsabilidade que veremos em mais detalhes no Cap. 7.\n\nNo método tocarMusica, precisamos agora obter o nome do arquivo do objeto Musica para passá-lo para o tocador.\nForam adicionados também códigos para buscar todas as músicas que estão na pasta principal do projeto."
+    "text": "Você deve ter notado que as principais alterações são:\n\nA classe OrganizadorDeMusicas tem agora um ArrayList de objetos Musica em vez de um ArrayList de String.\nIsso afeta diversos métodos que tínhamos implementado."
   },
   {
     "objectID": "cap4-3.html#section-6",
     "href": "cap4-3.html#section-6",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Repare que ao utilizarmos a classe Musica alguns métodos ficaram um pouco mais complicados.\n\nMas a estrutura do programa é agora muito melhor.\nA classe Musica é mais bem estruturada que uma simples String\n\ne ainda nos permite guardar informações mais interessantes, como, por exemplo, uma imagem do artista ou do álbum de música, por exemplo.\n\n\n\nAlém disso, agora conseguimos evitar o problema mencionado no final da aula anterior,\n\nDe querermos buscar todas as músicas que tenham a palavra renda no título, mas isso acabar retornando músicas de uma cantora chamada Brenda."
+    "text": "No método listarTodasAsMusicas, pedimos ao objeto Musica que retorne uma String contendo seus detalhes.\n\nIsso indica que estamos deixando a classe Musica responsável por fornecer os detalhes a serem exibidos, como o título e o artista.\nEste é um exemplo de design baseado em responsabilidade que veremos em mais detalhes no Cap. 7.\n\n\nNo método tocarMusica, precisamos agora obter o nome do arquivo do objeto Musica para passá-lo para o tocador.\n\n\nForam adicionados também códigos para buscar todas as músicas que estão na pasta principal do projeto."
   },
   {
     "objectID": "cap4-3.html#section-7",
     "href": "cap4-3.html#section-7",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "No método abaixo resolvemos essa questão usando o fato de que a classe Musica tem a informação do título separada do nome do arquivo.\n\n/**\n * Lista todas as músicas que tenham uma string passada em seu título\n * @param stringDeBusca A string a ser procurada.\n */\npublic void buscarNoTitulo(String stringDeBusca)\n{\n    for (Musica musica : musicas) {\n        String titulo = musica.obterTitulo();\n        if (titulo.contains(stringDeBusca)) {\n            System.out.println(musica.obterDetalhes());\n        }\n    }\n}"
+    "text": "Repare que ao utilizarmos a classe Musica alguns métodos ficaram um pouco mais complicados.\n\nMas a estrutura do programa é agora muito melhor.\nA classe Musica é mais bem estruturada que uma simples String\n\ne ainda nos permitiria guardar informações mais interessantes, como, por exemplo, uma imagem do artista ou do álbum de música, por exemplo."
   },
   {
     "objectID": "cap4-3.html#section-8",
     "href": "cap4-3.html#section-8",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício (entrega)\n\n\nAdicione um atributo numeroDeExecucoes à classe Musica. Implemente métodos para reiniciar a contagem (voltando para zero) e para incrementá-la em um. Altere também o método obterDetalhes para que inclua essa informação.\nEm seguida, altere a classe OrganizadorDeMusicas de forma que toda vez que uma música for tocada, seja contabilizada mais uma execução dela.\n\n\n\n\n\n\n\n\nExercício (entrega)\n\n\nVocê deve ter notado que se você tocar duas músicas sem parar a primeira, elas ficam tocando simultaneamente. E, claro, isso não é muito útil. Implemente as alterações necessárias para que uma música pare de tocar automaticamente quando uma outra música começa a tocar."
+    "text": "Além disso, agora conseguimos evitar o problema mencionado na aula anterior,\n\nDe querermos buscar todas as músicas que tenham a palavra renda no título,\nmas isso acabar retornando músicas de uma cantora chamada Brenda.\n\n\nNo método apresentado a seguir esse problema é resolvido\n\nusando o fato de que a classe Musica tem a informação do título separada do nome do arquivo."
   },
   {
     "objectID": "cap4-3.html#section-9",
     "href": "cap4-3.html#section-9",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Existe uma terceira forma de iterar sobre uma coleção que é uma espécie de um meio-termo entre for-each e while.\n\nEla usa um loop while, mas com um objeto iterador em vez de uma variável inteira índice para guardar a posição na lista.\nA seguir usaremos Iterator, uma classe, e iterator um método. Repare a diferença pela letra i maiúscula e minúscula, respectivamente.\n\n\nA classe ArrayList tem um método iterator que retorna um objeto Iterator.\n\nPara usar a classe, precisamos importá-la do pacote java.util.\n\n\n\n\nimport java.util.ArrayList;\nimport java.util.Iterator;"
+    "text": "/**\n * Lista todas as músicas que tenham uma string passada \n * em seu título\n * @param stringDeBusca A string a ser procurada.\n */\npublic void buscarNoTitulo(String stringDeBusca)\n{\n    for (Musica musica : musicas) {\n        String titulo = musica.obterTitulo();\n        if (titulo.contains(stringDeBusca)) {\n            System.out.println(musica.obterDetalhes());\n        }\n    }\n}"
   },
   {
     "objectID": "cap4-3.html#section-10",
     "href": "cap4-3.html#section-10",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Um iterador tem apenas quatro métodos, e usamos dois deles para iterar sobre uma coleção.\n\nO método hasNext (temProximo) indica se há mais elementos na coleção.\nE o método next (proximo) retorna o próximo elemento.\n\n\nO pseudocódigo abaixo mostra como geralmente utilizamos iteradores para percorrer uma coleção\n\n  // Obtemos o iterador da coleção\n  // - Como Iterator é uma classe genérica, precisamos informar um segundo tipo \n  //   (que é o tipo dos elementos da coleção)\n  Iterator&lt;TipoDoElemento&gt; it = minhaColecao.iterator();\n  // Enquanto há elementos a processar\n  while (it.hasNext()) {      \n      // Chamamos it.next() para obter o próximo elemento\n      // Fazemos alguma coisa com o elemento\n  }"
+    "text": "Exercício 1\n\n\nAdicione um atributo numeroDeExecucoes à classe Musica. Implemente métodos para reiniciar a contagem (voltando para zero) e para incrementá-la em um. Altere também o método obterDetalhes para que inclua essa informação.\nEm seguida, altere a classe OrganizadorDeMusicas de forma que toda vez que uma música for tocada, seja contabilizada mais uma execução dela.\n\n\n\n\n\n\n\n\n\nExercício 2\n\n\nVocê deve ter notado que se você tocar duas músicas sem parar a primeira, elas ficam tocando simultaneamente. E, claro, isso não é muito útil. Implemente as alterações necessárias para que uma música pare de tocar automaticamente quando uma outra música começa a tocar."
   },
   {
     "objectID": "cap4-3.html#section-11",
     "href": "cap4-3.html#section-11",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Podemos fazer então uma terceira versão do método que lista todas as músicas, agora usando um Iterator.\n\n\n  public void listarTodasAsMusicas() {\n      Iterator&lt;Musica&gt; it = musicas.iterator();\n      while (it.hasNext()) {\n          Musica musica = it.next();\n          System.out.println(musica.obterDetalhes());\n      }\n  }\n\n\n\nQuais são as diferenças para as versões anteriores do método listarTodosOsArquivos?\n\nNós usamos um loop while, mas não precisamos nos preocupar com uma variável de índice.\nRepare que o principal ponto a entender é que o método next, além de retornar o próximo elemento, passa o iterador para frente.\nPortanto, chamadas sucessivas do método next retornam sempre elementos diferentes.\n\nMas cuidado, se terminarem os elementos, e o método next for chamado sem antes verificar se hasNext retorna true, ocorrerá um erro no programa."
+    "text": "Existe uma terceira forma de iterar sobre uma coleção que é uma espécie de um meio-termo entre for-each e while.\n\nEla usa um loop while, mas com um objeto iterador em vez de uma variável inteira índice para guardar a posição na lista.\n\n\nNós usamos uma classe Iterator e um método iterator.\n\nRepare a diferença pela letra i maiúscula e minúscula, respectivamente."
   },
   {
     "objectID": "cap4-3.html#section-12",
     "href": "cap4-3.html#section-12",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Conceito\n\n\nUm iterador é um objeto que permite iterar sobre todos os elementos de uma coleção.\n\n\n\n\n\n\n\n\nRealmente, o que fizemos até agora não traz vantagens. Mas há duas situações nas quais um Iterator é muito útil:\n\nPara coleções cujo acesso por posição não é possível, ou muito lento.\nPara a remoção de vários elementos de uma coleção."
+    "text": "A classe ArrayList tem um método iterator que retorna um objeto Iterator.\n\nPara usar a classe, precisamos importá-la do pacote java.util.\n\n\n\nimport java.util.ArrayList;\nimport java.util.Iterator;"
   },
   {
     "objectID": "cap4-3.html#acesso-por-índice-vs.-iteradores",
     "href": "cap4-3.html#acesso-por-índice-vs.-iteradores",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "Acesso por índice vs. iteradores",
-    "text": "Acesso por índice vs. iteradores\nQuando estamos usando um ArrayList, não faz nenhuma diferença utilizar while acessando por índice ou com iteradores.\n\nMas nem toda coleção funciona assim.\nVeremos coleções mais adiante que não permitem acesso por posição.\n\nOu esse acesso seria muito lento.\nE, portanto, seria inviável utilizar while acessando por índice.\n\n\n\nA solução de utilizar while com um Iterator funciona para todas as coleções da biblioteca de classes do Java.\n\nE, portanto, é um padrão de código que usaremos novamente mais adiante."
+    "text": "Acesso por índice vs. iteradores\n\nQuando estamos usando um ArrayList, não faz nenhuma diferença utilizar while acessando por índice ou com iteradores.\n\nMas nem toda coleção funciona assim.\nVeremos coleções mais adiante que não permitem acesso por posição.\n\nOu esse acesso seria muito lento.\nE, portanto, seria inviável utilizar while acessando por índice."
   },
   {
     "objectID": "cap4-3.html#section-13",
     "href": "cap4-3.html#section-13",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Remover elementos traz consequências importantes quando estamos iterando uma coleção.\n\nSuponha, por exemplo, que não estamos mais interessados em um artista e queremos remover todas as suas músicas.\nPode parecer bem simples implementar um método para isso, seguindo pseudocódigo abaixo.\npara cada música na colecao {\n    se musica.obterArtista() é o artista que não queremos mais {\n        colecao.remove(musica);\n    }\n}\n\n\nApesar dessa forma parecer perfeitamente razoável, não é possível remover elementos usando um loop for-each.\n\nSe você tentar fazer isso, ocorrerá um erro no programa (ConcurrentModificationException).\nIsso ocorre porque a remoção causa uma confusão sobre qual seria o próximo elemento nesta situação."
+    "text": "Um iterador tem apenas quatro métodos, e usamos dois deles para iterar sobre uma coleção.\n\nO método hasNext (temProximo) indica se há mais elementos na coleção.\nE o método next (proximo) retorna o próximo elemento."
   },
   {
     "objectID": "cap4-3.html#section-14",
     "href": "cap4-3.html#section-14",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "A solução para usar isso é usar um Iterator para remover elementos de uma coleção.\n\nAlém dos métodos hasNext e next, a classe tem um método remove.\nO método remove o elemento que foi retornado pela última chamada do método next.\n\n\nO trecho de código abaixo mostra como remover as músicas de um artista da coleção de músicas.\n\nRepare que chamamos o método remove do iterador e não do ArrayList.\n\n\n  Iterator&lt;Musica&gt; it = musicas.iterator();\n  while (it.hasNext()) {\n      Musica musica = it.next();\n      String artista = musica.obterArtista();\n      if (artista.equals(artistaARemover)) {\n          it.remove();\n      }\n  }"
+    "text": "O pseudocódigo abaixo mostra como geralmente utilizamos iteradores para percorrer uma coleção\n\n  // Obtemos o iterador da coleção\n  // - Como Iterator é uma classe genérica, precisamos \n  //   informar um segundo tipo (que é o tipo dos \n  //   elementos da coleção)\n  Iterator&lt;TipoDoElemento&gt; it = minhaColecao.iterator();\n  // Enquanto há elementos a processar\n  while (it.hasNext()) {      \n      // Chamamos it.next() para obter o próximo elemento\n      // Fazemos alguma coisa com o elemento\n  }"
   },
   {
     "objectID": "cap4-3.html#section-15",
     "href": "cap4-3.html#section-15",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Há outras formas de remover elementos de uma coleção.\n\nPor ex.: fazer um loop para encontrar a posição de um elemento.\nE depois do loop remover o elemento daquela posição.\n\n\nMas veja que há desvantagens:\n\nComo já mencionamos, nem toda coleção permite acessar elementos por posição, ou esse acesso é lento.\nAlém disso, com iterador podemos fazer a remoção já dentro do loop, sem precisar fazer uma operação separada.\n\n\n\nPortanto, é uma boa ideia saber como remover elementos de uma coleção usando um objeto Iterator. :)"
+    "text": "Podemos fazer então uma terceira versão do método que lista todas as músicas, agora usando um Iterator.\n\n\n  public void listarTodasAsMusicas() {\n      Iterator&lt;Musica&gt; it = musicas.iterator();\n      while (it.hasNext()) {\n          Musica musica = it.next();\n          System.out.println(musica.obterDetalhes());\n      }\n  }\n\n\n\nQuais são as diferenças para as versões anteriores do método listarTodosOsArquivos?"
   },
   {
     "objectID": "cap4-3.html#section-16",
     "href": "cap4-3.html#section-16",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício (entrega)\n\n\nImplemente um método na classe OrganizadorDeMusicas que receba uma string por parâmetro e remova todas as músicas cujos títulos tenham aquela string."
+    "text": "Quais são as diferenças para as versões anteriores do método listarTodosOsArquivos?\n\nNós usamos um loop while, mas não precisamos nos preocupar com uma variável de índice.\nRepare que o principal ponto a entender é que o método next, além de retornar o próximo elemento, passa o iterador para frente.\nPortanto, chamadas sucessivas do método next retornam sempre elementos diferentes.\n\nMas cuidado, se terminarem os elementos, e o método next for chamado sem antes verificar se hasNext retorna true, ocorrerá um erro no programa."
   },
   {
     "objectID": "cap4-3.html#section-17",
     "href": "cap4-3.html#section-17",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Apesar de coleções de tamanho flexível serem úteis na maioria dos casos,\n\nHá situações nas quais sabemos quantos elementos uma coleção terá durante todo o tempo de execução de um programa.\nNesses casos, é melhor utilizar uma coleção de tamanho fixo: um vetor (ou array).\n\n\nMas qual a vantagem de usarmos vetores?\n\nÉ que o acesso por índice (posição) é geralmente mais eficiente do que em uma coleção de tamanho flexível, como a ArrayList.\nOutra vantagem é que, em Java, podemos ter vetores de elementos que são tipos primitivos.\n\nEnquanto ArrayList, por exemplo, permite guardar apenas objetos.\nApesar de que, como veremos no próximo capítulo, há uma forma de lidarmos comn isso usando wrappers (classes empacotadoras)."
+    "text": "Conceito\n\n\nUm iterador é um objeto que permite iterar sobre todos os elementos de uma coleção."
   },
   {
     "objectID": "cap4-3.html#section-18",
     "href": "cap4-3.html#section-18",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Um vetor é um grupo de variáveis que contém elementos de um mesmo tipo.\n\nEm Java, vetores são considerados objetos, portanto, são considerados tipos por referência.\nComo já mencionado, os elementos de um vetor podem ser de tipos primitivos (int, double, boolean, etc.) ou de tipos por referência (objetos).\n\n\nExemplo de um vetor:"
+    "text": "Realmente, o que fizemos até agora não traz vantagens.\n\nMas há duas situações nas quais um Iterator é muito útil:\n\n\nPara coleções cujo acesso por posição não é possível, ou muito lento.\nPara a remoção de vários elementos de uma coleção."
   },
   {
     "objectID": "cap4-3.html#section-19",
     "href": "cap4-3.html#section-19",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Podemos declarar um vetor em Java, utilizando uma das seguintes formas:\n\nTipoDosElementos[] nomeDoVetor;\nTipoDosElementos nomeDoVetor[];\n\n\nExemplos:\n\ndouble[] notas;\nint meuVetorDeInteiros[];"
+    "text": "Remover elementos traz consequências importantes quando estamos iterando uma coleção.\n\nSuponha, por exemplo, que não estamos mais interessados em um artista e queremos remover todas as suas músicas.\nPode parecer bem simples implementar um método para isso, seguindo pseudocódigo abaixo.\n\n\npara cada música na colecao {\n    se musica.obterArtista() é o artista que não queremos mais {\n        colecao.remove(musica);\n    }\n}\n\n\nApesar dessa forma parecer perfeitamente razoável, não é possível remover elementos usando um loop for-each."
   },
   {
     "objectID": "cap4-3.html#section-20",
     "href": "cap4-3.html#section-20",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Como os demais objetos, os vetores são criados por meio da palavra-chave new:\n\nnomeDoVetor = new TipoDosElementos[capacidade];\n\n\nExemplos:\n\ndouble[] notas;\nnotas = new double[3];\n\nint meuVetorDeInteiros[];\nmeuVetorDeInteiros = new int[10];"
+    "text": "para cada música na colecao {\n    se musica.obterArtista() é o artista que não queremos mais {\n        colecao.remove(musica);\n    }\n}\nApesar dessa forma parecer perfeitamente razoável, não é possível remover elementos usando um loop for-each.\n\nSe você tentar fazer isso, ocorrerá um erro no programa (ConcurrentModificationException).\nIsso ocorre porque a remoção causa uma confusão sobre qual seria o próximo elemento nesta situação."
   },
   {
     "objectID": "cap4-3.html#section-21",
     "href": "cap4-3.html#section-21",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Há ainda outras duas formas alternativas de se instanciar um vetor.\n\n\n// Declara e instancia em uma única linha\nint meuVetorDeInteiros[] = new int[10];\n\n// Declara, instancia um vetor com 3 posições e já inicializa os seus valores\ndouble notas[] = {7.5, 8.0, 9.0};\n\n\n\nEm C++ um vetor criado, mas não inicializado, pode conter lixo de memória.\n\nMas em Java, vale a regra de inicialização igual a dos atributos.\n\nVetor de tipos numéricos tem todos os elementos inicializados com zero.\nVetor de booleanos tem todos os elementos inicializados com false.\nVetor de objetos tem todos os elementos inicializados com null."
+    "text": "A solução para usar isso é usar um Iterator para remover elementos de uma coleção.\n\nAlém dos métodos hasNext e next, a classe tem um método remove.\nO método remove o elemento que foi retornado pela última chamada do método next."
   },
   {
     "objectID": "cap4-3.html#o-loop-for",
@@ -3434,63 +3434,63 @@
     "href": "cap4-3.html#section-22",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Para ter presença nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nResponda às tarefas no Campus Virtual enviando o o seu projeto do organizador-musicas-v5, contendo as alterações solicitadas nos exercícios ao longo dos slides."
+    "text": "O trecho de código abaixo mostra como remover as músicas de um artista da coleção de músicas.\n\nRepare que chamamos o método remove do iterador e não do ArrayList.\n\n\n  Iterator&lt;Musica&gt; it = musicas.iterator();\n  while (it.hasNext()) {\n      Musica musica = it.next();\n      String artista = musica.obterArtista();\n      if (artista.equals(artistaARemover)) {\n          it.remove();\n      }\n  }"
   },
   {
     "objectID": "cap4-3.html#section-23",
     "href": "cap4-3.html#section-23",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Vamos criar uma classe MeuMundo e nela definir um mundo de 800x600 pixels com fundo preto.\n\npublic class MeuMundo extends World\n{\n    public MeuMundo()\n    {    \n        // Cria um novo mundo com 800x600 células,\n        // com células de tamanho 1x1 pixels.\n        super(800, 600, 1); \n        // Cria uma imagem do tamanho do mundo\n        GreenfootImage imagemFundoPreto = new GreenfootImage(800, 600);\n        // Desenha um retângulo preto em toda a imagem\n        imagemFundoPreto.setColor(Color.BLACK);\n        imagemFundoPreto.fillRect(0, 0, 800, 600);\n        // Define a imagem com o plano de fundo do mundo\n        setBackground(imagemFundoPreto);\n    }\n}"
+    "text": "Há outras formas de remover elementos de uma coleção.\n\nPor ex.: fazer um loop para encontrar a posição de um elemento.\nE depois do loop remover o elemento daquela posição.\n\n\nMas veja que há desvantagens:\n\nComo já mencionamos, nem toda coleção permite acessar elementos por posição, ou esse acesso é lento.\nAlém disso, com iterador podemos fazer a remoção já dentro do loop, sem precisar fazer uma operação separada."
   },
   {
     "objectID": "cap4-3.html#section-24",
     "href": "cap4-3.html#section-24",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício (entrega)\n\n\nCrie o projeto no Greenfoot e use o código do slide anterior para definir o mundo (altere a classe inicial MyWorld).\nCrie então um objeto da classe MeuMundo, clicando na caixa da classe e acessando a opção new MeuMundo(). Você verá que o jogo exibirá uma tela preta."
+    "text": "Portanto, é uma boa ideia saber como remover elementos de uma coleção usando um objeto Iterator. :)\n\n\n\n\n\nExercício 3\n\n\nImplemente um método na classe OrganizadorDeMusicas que receba uma string por parâmetro e remova todas as músicas cujos títulos tenham aquela string."
   },
   {
     "objectID": "cap4-3.html#section-25",
     "href": "cap4-3.html#section-25",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Vamos agora criar uma classe Cavaleiro.\n\nPara ficar claro o conceito das animações, vamos começar com uma imagem estática.\n\n\nAs imagens que vamos utilizar foram baixadas do site:\n\nhttps://www.gameart2d.com/the-knight-free-sprites.html\n\n\n\n\n\n\n\nExercício (entrega)\n\n\nBaixe as imagens do site citado, encontre a imagem Idle (1).png e copie-a para a pasta images do projeto do Greenfoot. Renomeie a imagem para knight.png."
+    "text": "Apesar de coleções de tamanho flexível serem úteis na maioria dos casos,\n\nHá situações nas quais sabemos quantos elementos uma coleção terá durante todo o tempo de execução de um programa.\nNesses casos, é melhor utilizar uma coleção de tamanho fixo: um vetor (ou array).\n\n\nMas qual a vantagem de usarmos vetores?\n\nÉ que o acesso por índice (posição) é geralmente mais eficiente do que em uma coleção de tamanho flexível, como a ArrayList.\nOutra vantagem é que, em Java, podemos ter vetores de elementos que são tipos primitivos.\n\nEnquanto ArrayList, por exemplo, permite guardar apenas objetos.\nApesar de que, como veremos no próximo capítulo, há uma forma de lidarmos comn isso usando wrappers (classes empacotadoras)."
   },
   {
     "objectID": "cap4-3.html#section-26",
     "href": "cap4-3.html#section-26",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "O código abaixo utiliza a imagem que copiamos como a imagem do cavaleiro.\n\npublic class Cavaleiro extends Actor\n{\n    public Cavaleiro()\n    {\n        // cria a imagem do cavaleiro\n        GreenfootImage imagem = new GreenfootImage(\"knight.png\");\n        // como a imagem é muito grande, vamos redimensioná-la para 120x140 pixels\n        imagem.scale(120,140);\n        // usamos a imagem como a imagem do cavaleiro\n        setImage(imagem);\n    }\n    \n    public void act() \n    { \n        // não faz nada, por enquanto\n    }\n}"
+    "text": "Um vetor é um grupo de variáveis que contém elementos de um mesmo tipo.\n\nEm Java, vetores são considerados objetos, portanto, são considerados tipos por referência.\nComo já mencionado, os elementos de um vetor podem ser de tipos primitivos (int, double, boolean, etc.) ou de tipos por referência (objetos).\n\n\nExemplo de um vetor:"
   },
   {
     "objectID": "cap4-3.html#section-27",
     "href": "cap4-3.html#section-27",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício (entrega)\n\n\nCrie uma classe Cavaleiro no seu projeto. Para isso, clique em Actor e acesse a opção Nova subclasse.... Use o nome Cavaleiro na janela que aparece e clique em OK.\nEm seguida, implemente o construtor da classe conforme apresentado no slide anterior.\nPara testar, crie um objeto da classe Cavaleiro e o coloque no mundo."
+    "text": "Podemos declarar um vetor em Java, utilizando uma das seguintes formas:\n\nTipoDosElementos[] nomeDoVetor;\nTipoDosElementos nomeDoVetor[];\n\n\nExemplos:\n\ndouble[] notas;\nint meuVetorDeInteiros[];"
   },
   {
     "objectID": "cap4-3.html#section-28",
     "href": "cap4-3.html#section-28",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Vamos agora adicionar código para que o cavaleiro possa caminhar na horizontal.\n\nPara isso, vamos alterar o método act do Cavaleiro.\nO método, basicamente, aumenta ou diminui o valor da posição do cavaleiro no eixo X (horizontal),\n\ndependendo da tecla que está sendo pressionada (seta para a esquerda ou para a direita).\n\n\n\n\n    public void act()\n    {\n        // se a tecla seta para a ESQUERDA estiver pressionada\n        if (Greenfoot.isKeyDown(\"left\")) {\n            // posição do cavaleiro DIMINUI 4 no eixo X e se mantém no eixo Y\n            setLocation(getX()-4, getY());            \n        }\n        // se a tecla seta para a DIREITA estiver pressionada\n        if (Greenfoot.isKeyDown(\"right\")) {\n            // posição do cavaleiro AUMENTA 4 no eixo X e se mantém no eixo Y\n            setLocation(getX()+4, getY());            \n        }\n    }"
+    "text": "Como os demais objetos, os vetores são criados por meio da palavra-chave new:\n\nnomeDoVetor = new TipoDosElementos[capacidade];\n\n\nExemplos:\n\ndouble[] notas;\nnotas = new double[3];\n\nint meuVetorDeInteiros[];\nmeuVetorDeInteiros = new int[10];"
   },
   {
     "objectID": "cap4-3.html#section-29",
     "href": "cap4-3.html#section-29",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício (entrega)\n\n\nAltere o método act da classe Cavaleiro de acordo com o slide anterior.\nCrie um objeto da classe, coloque-o no mundo e então clique no botão Executar.\nExperimente movimentar o cavaleiro usando as setas para a direita e para a esquerda.\nO que achou do movimento?"
+    "text": "Há ainda outras duas formas alternativas de se instanciar um vetor.\n\n\n// Declara e instancia em uma única linha\nint meuVetorDeInteiros[] = new int[10];\n\n// Declara, instancia um vetor com 3 posições e já inicializa os seus valores\ndouble notas[] = {7.5, 8.0, 9.0};\n\n\n\nEm C++ um vetor criado, mas não inicializado, pode conter lixo de memória.\n\nMas em Java, vale a regra de inicialização igual a dos atributos.\n\nVetor de tipos numéricos tem todos os elementos inicializados com zero.\nVetor de booleanos tem todos os elementos inicializados com false.\nVetor de objetos tem todos os elementos inicializados com null."
   },
   {
     "objectID": "cap4-3.html#section-30",
     "href": "cap4-3.html#section-30",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Repare que o movimento funciona, mas não é muito realista.\n\nParece que o cavaleiro está deslizando no chão sem mexer o corpo.\n\n\nMas você deve ter notado, nos arquivos que baixou, que há várias imagens do cavaleiro.\n\nAs imagens têm um nome seguido de um número.\nCada nome indica uma ação do personagem.\n\nEx.: idle (parado), walk (caminhando), run (correndo), etc.\n\nE o número é a sequência de imagens que fazem acontecer a animação.\n\nPor ex.: se exibirmos repetidamente, e em sequência, todas as imagens que começam com walk:\nteremos uma ilusão de movimento do personagem."
+    "text": "Para ter presença nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nResponda às tarefas no Campus Virtual enviando o o seu projeto do organizador-musicas-v5, contendo as alterações solicitadas nos exercícios ao longo dos slides."
   },
   {
     "objectID": "cap4-3.html#section-31",
@@ -6774,5 +6774,12 @@
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
     "text": "Na próxima aula continuaremos evoluindo nosso projeto.\n\nEspecialmente através da criação de uma classe para representar músicas."
+  },
+  {
+    "objectID": "cap4-3.html#acesso-por-índice-vs.-iteradores-1",
+    "href": "cap4-3.html#acesso-por-índice-vs.-iteradores-1",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "Acesso por índice vs. iteradores",
+    "text": "Acesso por índice vs. iteradores\nA solução de utilizar while com um Iterator funciona para todas as coleções da biblioteca de classes do Java.\n\nE, portanto, é um padrão de código que usaremos novamente mais adiante."
   }
 ]
