@@ -3,12 +3,12 @@ title: IPOO - Cap. 4 Agrupando Objetos
 subtitle: Aula 4.1 - Teórica
 ---
 
-## {.smaller}
+##
 
 Algumas perguntas **para refletir** antes de começar a aula:
 
 - Quantas **anotações** vocês fez no caderno ao estudar os três primeiros capítulos da disciplina?
-- Você estudou **todo o conteúdo** de todas as aulas teóricas ANP anteriores?
+- Você estudou em casa **todo o conteúdo** de todas as aulas **teóricas** anteriores?
 - Você **leu** alguma parte do **livro** da disciplina?
 
 . . .
@@ -27,16 +27,16 @@ Algumas perguntas **para refletir** antes de começar a aula:
 
 ::::
 
-## {.smaller}
+##
 
 ::: {.callout-important title="Entrega no Campus Virtual"}
 Nesta aula não há quizes a responder.
 
 Você deverá entregar a versão final de um projeto que contenha todos os 7 exercícios marcados para a entrega.
-Eles estão identificados como: **Exercício** [(entrega)]{.alert}.
+Eles estão identificados como: **Exercício**.
 :::
 
-## Principais Conceitos do Capítulo {.smaller}
+## Principais Conceitos do Capítulo
 
 ::: {.nonincremental}
 - Coleções
@@ -53,7 +53,7 @@ Construções Java do capítulo
 - `ArrayList`, `Iterator`, *for-each*, `while`,  `for`, `null`, objetos anônimos, vetor, `++`.
 :::
 
-## {.smaller}
+##
 
 O principal objetivo deste capítulo é mostrar algumas formas que temos de **agrupar objetos** em [coleções]{.alert}.
 
@@ -66,7 +66,7 @@ Ao usar coleções, precisamos percorrer (ou iterar) sobre seus elementos.
 
 - Para isso, utilizaremos estruturas de repetição: *for-each*, `while` e `for`.
 
-. . .
+##
 
 Este capítulo tem mais conteúdo que os anteriores.
 
@@ -76,7 +76,7 @@ Este capítulo tem mais conteúdo que os anteriores.
 
 # Usando os conceitos do Cap. 3 como base {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Além de conhecermos os novos conceitos de [coleção]{.alert} e [iteradores]{.alert},
 
@@ -88,15 +88,15 @@ Vimos que abstração nos permite simplificar um problema:
 
 - identificando componentes como unidades completas, sem nos preocuparmos com seus detalhes.
 
-. . .
+##
 
-Veremos esse princípio, na prática, ao utilizarmos uma classe da [Biblioteca de Classes]{.alert} do Java.
+Veremos o princípio da **abstração**, na prática, ao utilizarmos uma classe da [Biblioteca de Classes]{.alert} do Java.
 
 - Ao implementar um programa, um bom desenvolvedor deve sempre procurar por classes disponíveis na biblioteca de classes da linguagem.
 - Com isso, evitamos *"reinventar a roda"*, evitando retrabalho com coisas que já estão prontas e testadas.
 - E, assim, podemos focar no que é a essência do problema que queremos resolver.
 
-## {.smaller}
+##
 
 Portanto, **vale muito a pena**, se familizarizar com as classes mais comuns da biblioteca do Java.
 
@@ -109,7 +109,7 @@ Usar essas classes se refere basicamente a:
 - **Criar objetos** delas e **chamar os métodos** desses objetos.
 - Portanto, teremos uma [interação entre os nossos objetos e os objetos das classes]{.alert} da biblioteca.
 
-## {.smaller}
+##
 
 Como foi citado no início da disciplina, esse material tem uma **abordagem iterativa**.
 
@@ -126,7 +126,7 @@ Neste capítulo veremos também que [abstração]{.alert} não se refere apenas 
 
 # A abstração de coleção {background-color="#40666e"}
 
-## {.smaller}
+##
 
 O que é uma [coleção]{.alert}?
 
@@ -134,7 +134,7 @@ O que é uma [coleção]{.alert}?
   
   *"Reunião de  objetos da mesma natureza."*
 
-. . .
+##
 
 Uma coleção pode ser:
 
@@ -145,7 +145,7 @@ Uma coleção pode ser:
 - Ou até mesmo **vazia**.
   - Ex.: os prêmios Nobel que eu já ganhei.
 
-## {.smaller}
+##
 
 Se você tem uma coleção de alguma coisa (moedas, autógrafos, o que seja),
 
@@ -155,13 +155,20 @@ Se você tem uma coleção de alguma coisa (moedas, autógrafos, o que seja),
   - [Organizar]{.alert} os itens de alguma forma (por tamanho ou valor, por ex.).
   - [Listar um subconjunto]{.alert} dos itens para algum propósito (moedas do império romano, por ex.).
 
-. . .
+##
+
+::: {.nonincremental}
+- [Adicionar]{.alert} um novo item à coleção.
+- [Remover]{.alert} um item da coleção (por ter vendido, ou ser repetido, por ex.).
+- [Organizar]{.alert} os itens de alguma forma (por tamanho ou valor, por ex.).
+- [Listar um subconjunto]{.alert} dos itens para algum propósito (moedas do império romano, por ex.)
+:::
 
 Repare que essas são **operações comuns** em coleções.
 
 - Independente dos objetos que elas guardam.
 
-## {.smaller}
+##
 
 No contexto de POO, uma **coleção** pode ser **representada por uma** [classe]{.alert}. 
 
@@ -169,7 +176,7 @@ No contexto de POO, uma **coleção** pode ser **representada por uma** [classe]
 - Uma **coleção particular** (minha coleção de músicas, por ex.) seria uma [instância da classe]{.alert}, ou seja, um objeto da classe.
   - Note que os **itens** da coleção (as moedas, por ex.) seriam objetos **de outra classe**.
 
-. . .
+##
 
 Alguns exemplos de coleção comuns no contexto de programação seriam:
 
@@ -180,7 +187,7 @@ Alguns exemplos de coleção comuns no contexto de programação seriam:
 - Os comentários de uma publicação em uma rede social:
   - Novos comentários são postados e comentários também podem ser removidos.
 
-## {.smaller}
+##
 
 Veja que a **quantidade de itens** armazenada em uma coleção **pode variar** com o tempo.
 
@@ -188,7 +195,7 @@ Veja que a **quantidade de itens** armazenada em uma coleção **pode variar** c
 - Mas veja que precisaríamos adivinhar quantos objetos a coleção precisaria.
 - Ou acabar declarando vários atributos que não seriam usados.
 
-. . .
+##
 
 Portanto, é muito mais prático se não precisarmos saber, antecipadamente, quantos objetos a coleção precisará ter.
 
@@ -203,14 +210,14 @@ Um objeto **coleção** pode guardar um número arbitário de outros objetos.
 
 # Um organizador de músicas {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Vamos criar uma classe para nos ajudar a **organizar arquivos de músicas** guardados no computador.
 
-- Nossa classe não vai guardar os detalhes das músicas.
+- Não é a nossa classe que vai guardar as músicas.
 - Em vez disso, vamos **usar a classe `ArrayList`** da biblioteca de classes **para nos poupar trabalho**.
 
-. . .
+##
 
 :::: {.columns}
 
@@ -229,7 +236,7 @@ Vamos criar uma classe para nos ajudar a **organizar arquivos de músicas** guar
 
 ::::
 
-## {.smaller}
+##
 
 Por razões didáticas, ou seja, para ficar mais fácil assimilarmos os conceitos:
 
@@ -237,20 +244,20 @@ Por razões didáticas, ou seja, para ficar mais fácil assimilarmos os conceito
 - que lida apenas com os nomes dos arquivos de música.
   - Sem detalhes como título, artista, duração, etc.
 
-. . .
+##
 
 Nesse cenário, precisaremos que o **`ArrayList` guarde objetos String** que representem os nomes dos arquivos.
 
 - A ideia é começar simples, para focarmos no conceito que vamos aprender agora: criação e uso de coleções.
 - Depois vamos incrementar o projeto para que ele pareça com um organizador e tocador de músicas de verdade.
 
-## {.smaller}
+. . .
 
 A classe vai assumir que cada arquivo tem uma única música.
 
 - E o nome do arquivo tem o nome do artista e da música (usaremos isso mais adiante).
 
-. . .
+##
 
 As **operações** básicas que queremos na primeira versão da classe são:
 
@@ -263,7 +270,7 @@ As **operações** básicas que queremos na primeira versão da classe são:
 
 Veremos que a classe `ArrayList` torna bem fácil tratar essas operações.
 
-## {.smaller}
+##
 
 Estamos adotando uma [abordagem incremental]{.alert}.
 
@@ -309,6 +316,8 @@ O que acontece se você criar um objeto `OrganizadorDeMusicas` e chamar `remover
 Ocorre algum erro? Você esperava que ocorresse algum erro?
 :::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
 Crie um `OrganizadorDeMusicas` e adicione dois nomes de arquivos a ele.
 Chame `listarArquivo(0)` e `listarArquivo(1)` para mostrar os dois arquivos.
@@ -322,7 +331,7 @@ Você imagina alguma explicação para o que deve ter acontecido quando você re
 
 # Usando uma classe da biblioteca {background-color="#40666e"}
 
-## {.smaller}
+##
 
 **Leia o código** da classe `OrganizadorDeMusicas`.
 
@@ -340,9 +349,13 @@ Uma das coisas que torna as linguagens OO (Orientadas a Objetos) poderosas, é q
 - Criamos objetos usando `new`, e as classes têm atributos, construtores e métodos.
 :::
 
-## Importando uma classe da biblioteca {.smaller}
+## Importando uma classe da biblioteca
+
+. . .
 
 A primeira linha da classe `OrganizadorDeMusicas` mostra como acessar uma classe de biblioteca em Java.
+
+. . .
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
@@ -365,7 +378,7 @@ Este comando disponibiliza a classe `ArrayList` do pacote `java.util` para ser u
 ```
 :::
 
-## {.smaller}
+##
 
 Repare que a declaração do atributo `arquivos` traz algo de diferente: 
 
@@ -380,7 +393,7 @@ Isso é necessário porque, como vimos antes, a classe `ArrayList` foi criada pa
 - Classes que são parametrizadas com um segundo tipo (como a `ArrayList`) são chamadas [classes genéricas]{.alert} em Java.
   - Veremos mais sobre isso mais adiante.
 
-. . .
+##
 
 Portanto, sempre que usamos uma coleção precisamos especificar dois tipos:
 
@@ -388,7 +401,9 @@ Portanto, sempre que usamos uma coleção precisamos especificar dois tipos:
 - E o tipo dos elementos que queremos guardar na coleção (nesse caso, `String`).
 - Assim, uma declaração `ArrayList<String>` costuma ser lida como *ArrayList de strings*.
 
-## Notação diamante {.smaller}
+## Notação diamante {auto-animate=true}
+
+. . .
 
 Da mesma forma que vimos antes que o construtor da classe `VisorDeRelogio` criava objetos da classe `VisorDeNumero`,
 
@@ -404,12 +419,21 @@ Fazemos isso com o comando:
 ```
 :::
 
-- Nós chamamos essa sintaxe de **notação diamante** (por causa do sinais `<>` consecutivos).
+## Notação diamante {auto-animate=true}
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  arquivos = new ArrayList<>();
+```
+:::
+
+Nós chamamos essa sintaxe de **notação diamante** (por causa do sinais `<>` consecutivos).
+
 - Repare que poderíamos escrever `new ArrayList<String>()`
   - Mas podemos omitir o tipo dos objetos, porque o compilador usa a declaração da variável `arquivos` para saber qual tipo deve ser usado.
 - Portanto, usar `<>` é só um atalho para escrever código mais rápido.
 
-## Principais métodos da classe `ArrayList` {.smaller}
+## Principais métodos da classe `ArrayList`
 
 A classe `ArrayList` possui muitos métodos, mas, por enquanto, usaremos apenas quatro:
 
@@ -419,29 +443,25 @@ A classe `ArrayList` possui muitos métodos, mas, por enquanto, usaremos apenas 
 
 # Estruturas de objetos com coleções {background-color="#40666e"}
 
-## {.smaller auto-animate=true}
+## 
 
 Para entendermos como uma coleção como a ArrayList funciona, é interessante analisarmos um **diagrama de objetos**.
 
-- Compare a figura abaixo que mostra um `OrganizadorDeMusicas` com duas strings de nomes de arquivos, com a próxima que mostra com três.
+## {auto-animate=true}
+
+Compare a figura abaixo que mostra um `OrganizadorDeMusicas` com duas strings de nomes de arquivos, com a próxima que mostra com três.
 
 . . .
 
 ![](imagens/organizador_musicas_diagrama_objetos.png)
 
-## {.smaller auto-animate=true}
+## {auto-animate=true}
 
-::: {.nonincremental}
-
-Para entendermos como uma coleção como a ArrayList funciona, é interessante analisarmos um **diagrama de objetos**.
-
-- Compare a figura abaixo que mostra um `OrganizadorDeMusicas` com duas strings de nomes de arquivos, com a próxima que mostra com três.
-
-:::
+Compare a figura abaixo que mostra um `OrganizadorDeMusicas` com duas strings de nomes de arquivos, com a próxima que mostra com três.
 
 ![](imagens/organizador_musicas_diagrama_objetos2.png)
 
-## {.smaller}
+##
 
 Há três características importantes sobre o `ArrayList` que precisamos saber:
 
@@ -449,7 +469,7 @@ Há três características importantes sobre o `ArrayList` que precisamos saber:
 - Ele mantém uma contagem privada da quantidade de itens armazenados (e o método `size` retorna essa informação).
 - Ele mantém a ordem dos elementos inseridos (e podemos obter os objetos na mesma ordem).
 
-. . .
+##
 
 Veja que, ao utilizar um `ArrayList`, a classe `OrganizadorDeMusica` fica muito simples.
 
@@ -457,15 +477,15 @@ Veja que, ao utilizar um `ArrayList`, a classe `OrganizadorDeMusica` fica muito 
   - Essa é a grande vantagem de usar uma classe da biblioteca de classes.
   - Poupamos trabalho aproveitando algo que alguém já teve o trabalho de fazer e testar.
 
-## {.smaller}
+##
 
-Veja que nós usamos a classe `ArrayList` **sem nos preocuparmos** exatamente **como a classe funciona**.
+Veja que nós usamos a classe `ArrayList` **sem nos preocuparmos** exatamente sobre **como a classe funciona**.
 
 - Basta sabermos o que ela faz e como utilizar seus métodos.
 - Veja que estamos mais uma vez usando o conceito de [abstração]{.alert}.
   - Sem precisar conhecer os detalhes da classe, podemos usá-las em diversas situações diferentes.
 
-. . .
+##
 
 Outra coisa importante é que o fato do `ArrayList` guardar o número de objetos que ele armazena, traz consequências importantes.
 
@@ -474,7 +494,7 @@ Outra coisa importante é que o fato do `ArrayList` guardar o número de objetos
 - Repare que o organizador de músicas **delega** a responsabilidade de manter essa informação para o objeto `ArrayList`.
   - Isso significa que o organizador **não duplica** essa informação no programa. 
 
-## {.smaller}
+##
 
 **Duplicação de informações** é algo que **devemos** nos esforçar para **evitar**.
 
@@ -485,9 +505,9 @@ Outra coisa importante é que o fato do `ArrayList` guardar o número de objetos
 
 Falaremos bastante de duplicação nos próximos capítulos. 
 
-# Classes genéricas {background-color="#40666e"}
+# Classes Genéricas {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Vamos aprofundar um pouco a notação utilizada para declarar o tipo do atributo `arquivos`:
 
@@ -501,13 +521,13 @@ Como já comentamos, classes que dependem de um segundo tipo são chamadas de [c
 - Podemos ter: *ArrayList de Strings*, *ArrayList de Pessoas*, *ArrayList de Retângulos*, enfim, de quaisquer objetos que precisarmos.
   - Cada um deles é um tipo diferente.
 
-. . .
+##
 
 Por enquanto, vamos usar apenas a classe `ArrayList`, 
 
 - mas existem diversas outras coleções também implementadas como classes genéricas.
 
-## {.smaller}
+##
 
 Veja as declarações abaixo, por exemplo:
 
@@ -525,7 +545,7 @@ O atributo `equipe` pode armazenar objetos `Pessoa`.
 - Já o atributo `maquinas` guarda objetos `MaquinaIngressos`.
 - Portanto, `ArrayList<Pessoa>` e `ArrayList<MaquinaIngressos>` são tipos diferentes.
 
-. . . 
+##
 
 Você acha que a linha de código abaixo seria válida?
 
@@ -545,6 +565,8 @@ Escreva a declaração de um atributo privado chamado `biblioteca` que guarda um
 Os elementos do `ArrayList` são do tipo `Livro`.
 :::
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
 Escreva a declaração de uma variável local chamada `ipoo` que guarda um `ArrayList` de `Estudante`.
 :::
@@ -555,27 +577,34 @@ Escreva a declaração de uma variável local chamada `ipoo` que guarda um `Arra
 Escreva a declaração de um atributo privado chamado `musicas` para guardar uma coleção de objetos `Musica`.
 ::: 
 
+. . .
+
 ::: {.callout-note title="Exercício" icon=false}
 Escreva comandos para criar objetos `ArrayList` e atribuir às variáveis declaradas nos três exercícios anteriores.
 :::
 
 # Numeração dentro das coleções {background-color="#40666e"}
 
-## {.smaller}
+##
 
-Ao usar o projeto `organizador-musicas-v1` você notou que, para **listar e remover músicas**, foi necessário passar **parâmetros começando em zero**.
+Ao usar o projeto `organizador-musicas-v1` você notou que, para **listar e remover músicas**,
 
-- Isso porque objetos armazenados em um `ArrayList` têm uma numeração implícita que começa em zero.
-- Geralmente chamamos a **posição do objeto** na coleção de [índice]{.alert}.
+- foi necessário passar **parâmetros começando em zero**.
 
 . . .
+
+Isso porque objetos armazenados em um `ArrayList` têm uma numeração implícita que começa em zero.
+
+- Geralmente chamamos a **posição do objeto** na coleção de [índice]{.alert}.
+
+##
 
 Portanto, se um `ArrayList` tiver 20 objetos, qual é a posição do último elemento?
 
 - 19, certo?
   - Já que o primeiro objeto fica na posição 0, o segundo na posição 1, e assim por diante.
 
-## {.smaller}
+##
 
 Repare que os métodos `listarArquivo` e `removerArquivo` verificam o valor do índice antes de passá-lo para os métodos do `ArrayList`.
 
@@ -591,9 +620,11 @@ Se fizer isso, o programa exibirá uma mensagem de índice fora da faixa (`Index
 :::
 
 
-## {.smaller}
+##
 
-É importante lembrar que, ao **remover um objeto** de um `ArrayList`, os **objetos** que estavam **depois dele mudam de posição**.
+É importante lembrar que, ao **remover um objeto** de um `ArrayList`, 
+
+- os **objetos** que estavam **depois dele mudam de posição**.
 
 . . .
 
@@ -603,13 +634,13 @@ Suponha, por exemplo, um `ArrayList` com 5 elementos.
   - O próximo elemento vai passar da posição 3 para a posição 2.
   - E o último vai passar da posição 4 para a posição 3.
 
-. . .
+##
 
 É importante nos acostumarmos a utilizar os índices de uma coleção.
 
 - Pois várias coleções têm essa mesma característica de começar em zero, e seguir sequencialmente, até `size()-1`.
 
-## {.smaller}
+##
 
 Suponha, por exemplo, que uma variável `p` guarda a posição de um objeto na coleção.
 
@@ -624,7 +655,7 @@ Suponha, por exemplo, que uma variável `p` guarda a posição de um objeto na c
 
 ##
 
-::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+::: {.callout-note title="Exercício" icon=false}
 Crie um novo método na classe `OrganizadorDeMusicas` chamado `verificarIndice`.
 O método deve receber um parâmetro inteiro e verificar se ele é um índice válido para o estado atual da coleção.
 
@@ -634,7 +665,9 @@ Teste o método usando um objeto da bancada de objetos, experimentando situaçõ
 O que acontece se o método for chamado para uma coleção vazia?
 :::
 
-::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+##
+
+::: {.callout-note title="Exercício" icon=false}
 Crie um método similar ao anterior, chamado `indiceEhValido`.
 O método deve receber um parâmetro inteiro e retornar um `boolean`.
 O método não deve exibir nada no terminal, apenas retornar `true` se o índice for válido e `false` em caso contrário.
@@ -644,7 +677,7 @@ Teste o método usando a bancada de objetos para índices válidos e inválidos 
 
 ##
 
-::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+::: {.callout-note title="Exercício" icon=false}
 Modifique os métodos `listarArquivo` e `removerArquivo` da classe `OrganizadorDeMusicas` de forma que eles usem o método `indiceEhValido` para verificar seus parâmetros, em vez da expressão booleana atual.
 
 Os métodos `get` ou `remove` do `ArrayList` só devem ser chamados se o método `indiceEhValido` retornar `true`.
@@ -652,39 +685,58 @@ Os métodos `get` ou `remove` do `ArrayList` só devem ser chamados se o método
 
 # Tocando os arquivos de música {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Seria interessante se nosso organizador não só guardasse uma lista de arquivos de música,
 
 - Mas se também **tocasse realmente as músicas**.
 
+##
+
+Se tivermos uma **classe** implementada **para tocar arquivos de aúdio**,
+
+- nossa classe organizadora não precisa saber nada sobre como fazer isso.
+
 . . .
 
-Se tivermos uma **classe** implementada **para tocar arquivos de aúdio**, nossa classe organizadora não precisa saber nada sobre como fazer isso.
+Poderia apenas lidar com o nome do arquivo e deixar a outra classe cuidar do resto.
 
-- Poderia apenas lidar com o nome do arquivo e deixar a outra classe cuidar do resto.
-- Infelizmente, a biblioteca padrão do Java não tem uma classe para tocar arquivos MP3.
+## 
+
+Infelizmente, a biblioteca padrão do Java não tem uma classe para tocar arquivos MP3.
+
 - Mas muitos programadores e empesas criam classes úteis o tempo todo.
   - E as disponibilizam para outras pessoas usarem.
-  - É o que chamamos de **classes de terceiros** ([third-party libraries]{.alert}).
-  - Elas podem ser importadas e usadas da mesma forma que as classes da biblioteca padrão Java.
-    - Precisamos apenas ter o arquivo da biblioteca em nosso projeto (veremos mais sobre isso no futuro).
 
-## {.smaller}
+. . .
 
-Em uma nova versão do projeto, usaremos classes da biblioteca `javazoom.net` para escrever a nossa própria classe tocadora de música.
+É o que chamamos de **bibliotecas de classes de terceiros** ([third-party libraries]{.alert}).
+
+- Elas podem ser importadas e usadas da mesma forma que as classes da biblioteca padrão Java.
+- Precisamos apenas ter o arquivo da biblioteca em nosso projeto (veremos mais sobre isso no futuro).
+
+##
+
+Em uma nova versão do projeto, usaremos classes da biblioteca `javazoom.net` 
+
+- para escrever a nossa própria classe tocadora de música.
 
 . . .
 
 Nós usaremos três métodos da nova classe `TocadorDeMusica`.
 
 - `tocarAmostra`, `comecarATocar` e `parar`.
+
+##
+
+`tocarAmostra`, `comecarATocar` e `parar`.
+
 - Os dois primeiros métodos recebem o nome do arquivo de música por parâmetro.
-  - O primeiro toca alguns segundos do início do arquivo e retorna quando termina de tocar.
-  - Já o segundo começa a tocar a música em segundo plano (*background*) e já retorna para o organizador.
+- O primeiro toca alguns segundos do início do arquivo e retorna quando termina de tocar.
+- Já o segundo começa a tocar a música em segundo plano (*background*) e já retorna para o organizador.
   - E, nesse caso, precisamos usar o método `parar` se quisermos parar de tocar a música.
 
-. . .
+##
 
 Avalie as modificações na classe `OrganizadorDeMusica` no projeto [organizador-musicas-v2](https://github.com/ufla-ipoo/organizador-musicas-v2).
 
@@ -703,7 +755,7 @@ Experimente também com arquivos que não existem.
 O que acontece quando você tenta utilizá-los?
 :::
 
-## Resumo do organizador de músicas {.smaller}
+## Resumo do organizador de músicas
 
 . . .
 
@@ -713,14 +765,14 @@ Agora nós sabemos como usar o básico de uma coleção em Java.
 - Da mesma forma, nosso programa é capaz de tocar músicas, com pouco esforço.
   - Aproveitando o que já está implementado em uma classe de biblioteca de terceiros.
 
-. . .
+##
 
 Veja que, em ambos os casos, **precisamos saber** muito **pouco sobre o funcionamento interno das classes**.
 
 - Precisamos **saber apenas** informações sobre **alguns métodos importantes**.
   -  Basicamente seus nomes, tipos de parâmetro e tipo de retorno.
 
-. . .
+##
 
 Ainda faltam algumas coisas para nosso organizador ficar mais útil.
 
@@ -729,16 +781,21 @@ Ainda faltam algumas coisas para nosso organizador ficar mais útil.
 
 # Processando uma coleção inteira {background-color="#40666e"}
 
-## {.smaller}
+##
 
-A ideia agora é ter um método na classe `OrganizadorDeMusicas` que exiba no terminal todos os nomes de arquivos guardados na coleção.
+A ideia agora é ter um método na classe `OrganizadorDeMusicas` 
 
-- Podemos pensar em um método `listarTodosOsArquivos` para fazer isso.
-  - Qual deve ser o tipo de retorno do método?
-  - Ele precisa ter algum parâmetro?
-  - Quantas chamadas ao método `System.out.println` precisamos para mostrar todos os nomes de arquivo?
+- que exiba no terminal todos os nomes de arquivos guardados na coleção.
 
 . . .
+
+Podemos pensar em um método `listarTodosOsArquivos` para fazer isso.
+
+- Qual deve ser o tipo de retorno do método?
+- Ele precisa ter algum parâmetro?
+- Quantas chamadas ao método `System.out.println` precisamos para mostrar todos os nomes de arquivo?
+
+##
 
 Veja que, claramente, precisamos de uma **estrutura de repetição** para implementar o método.
 
@@ -750,7 +807,9 @@ Veja que, claramente, precisamos de uma **estrutura de repetição** para implem
 Um **loop** (ou laço) pode ser usado para executar repetidamente um bloco de comandos sem precisarmos escrevê-los várias vezes.
 :::
 
-## O loop for-each {.smaller}
+## O loop for-each {auto-animate=true}
+
+. . .
 
 Um [loop for-each]{.alert} (*para cada*) é uma forma de realizar ações **repetidamente nos itens de uma coleção**.
 
@@ -768,7 +827,15 @@ A sintaxe do for-each é mostrada no pseudo-código a seguir:
 ```
 :::
 
-. . .
+## {auto-animate=true}
+
+::: {.halfincfontsize}
+```
+  for (TipoDoElemento elemento : coleção) {
+    corpo do loop
+  }
+```
+:::
 
 Esse código fica mais fácil de entender se o lermos assim:
 
@@ -780,7 +847,7 @@ Esse código fica mais fácil de entender se o lermos assim:
 ```
 ::: 
 
-## {.smaller}
+##
 
 ::: {.halfincfontsize}
 ```
@@ -796,7 +863,7 @@ Repare que a **variável `elemento`** está sendo declarada no cabeçalho do loo
 - Nós chamamos essa variável de **variável do loop**.
   - E podemos usar o nome que quisermos para a variável.
 
-## {.smaller}
+##
 
 Abaixo está uma implementação do método `listarTodosOsArquivos`:
 
@@ -810,7 +877,7 @@ Abaixo está uma implementação do método `listarTodosOsArquivos`:
 ```
 ::: 
 
-. . . 
+##
 
 Repare que o método `println` é chamado para cada objeto presente no `ArrayList` arquivos.
 
@@ -820,7 +887,7 @@ Repare que o método `println` é chamado para cada objeto presente no `ArrayLis
 
 ##
 
-::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+::: {.callout-note title="Exercício" icon=false}
 Implemente o método `listarTodosOsArquivos` no seu projeto.
 
 Crie um objeto `OrganizadorDeMusicas`, adicione alguns arquivos a ele e teste o método que você implementou.
@@ -848,7 +915,7 @@ Tente usar alguns dos métodos: `add`, `remove`, `size` e `isEmpty`.
 Tente chamar os mesmos métodos também pelo Bloco de Códigos.
 :::
 
-## Processamento seletivo de uma coleção {.smaller}
+## Processamento seletivo de uma coleção
 
 . . .
 
@@ -858,13 +925,13 @@ Nós vimos que podemos usar um **loop for-each** para **percorrer todos os eleme
 - Podemos, por exemplo, **querer listar apenas** as músicas de um determinado cantor.
 - Ou buscarmos todas as músicas que têm uma certa palavra no título.
 
-. . .
+##
 
 O que você acha que precisamos acrescentar no corpo do loop para fazer esse tipo de coisa?
 
 - Basta usarmos um **comando condicional** (`if`) para selecionar os arquivos que queremos.
 
-## {.smaller}
+##
 
 O código abaixo mostra um exemplo de processamento seletivo.
 
@@ -886,21 +953,30 @@ public void buscarMusicas(String stringDeBusca)
 ```
 :::
 
-- Usando o método `contains` da classe String, podemos filtrar os arquivos.
-  - E exibir apenas aqueles que têm a string de busca passada.
-- Se o nome do arquivo não tem a string de busca, nós simplesmente o ignoramos.
-  - E, por isso, não há um bloco `else` no código.
+##
+
+Usando o método `contains` da classe String, podemos filtrar os arquivos.
+
+- E exibir apenas aqueles que têm a string de busca passada.
+
+. . .
+
+Se o nome do arquivo não tem a string de busca, nós simplesmente o ignoramos.
+
+- E, por isso, não há um bloco `else` no código.
 
 ##
 
-::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+::: {.callout-note title="Exercício" icon=false}
 Adicione o método `buscarMusicas` à sua última versão da classe `OrganizadorDeMusicas`.
 
 Confira se o método exibe apenas os nomes de arquivo que possuem a string de busca.
 Experimente também usar uma string de busca que não exista em nenhum arquivo.
 :::
 
-::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+. . . 
+
+::: {.callout-note title="Exercício" icon=false}
 Altere o método `buscarMusicas` de forma que seja exibida uma mensagem caso nenhum arquivo tenha a string de busca passada.
 
 **Dica**: você precisará declarar uma variável local do tipo `boolean`.
@@ -908,24 +984,28 @@ Altere o método `buscarMusicas` de forma que seja exibida uma mensagem caso nen
 
 ##
 
-::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+::: {.callout-note title="Exercício" icon=false}
 Crie um novo método `buscarETocarMusicas` que toque uma amostra das músicas de um determinado artista. Para isso, os nomes dos arquivos precisam conter o nome do artista.
 
 O método é similar ao do exercício anterior mas, ao encontrar um arquivo que possui a string de busca (nome do artista, no caso), em vez de exibir o nome do arquivo, ele deve tocar uma amostra da música.
 Você precisará utilizar o método `tocarAmostra` do atributo `tocador` para fazer isso.
 :::
 
-## Limitação do uso de strings {.smaller}
+## Limitação do uso de strings
 
 Quando começamos a fazer buscas nos nomes dos arquivos, começamos a perceber que tratar tudo como string não é ideal.
 
 - Ex.: podemos querer buscar todas as músicas que tenham a palavra `renda` no título.
   - Mas isso pode retornar músicas de uma cantora chamada `Brenda`.
-- Veja que, pensando em termos de orientação a objetos, o ideal era que tivéssemos uma classe para representar músicas.
-  - E essa classe poderia, por exemplo, guardar separadamente o nome do artista e o nome da música.
-  - E, assim, seria mais fácil buscar músicas por artista ou pelo nome.
 
-. . .
+## Limitação do uso de strings
+
+Veja que, pensando em termos de orientação a objetos, o ideal era que tivéssemos uma classe para representar músicas.
+
+- E essa classe poderia, por exemplo, guardar separadamente o nome do artista e o nome da música.
+- E, assim, seria mais fácil buscar músicas por artista ou pelo nome.
+
+##
 
 Supondo então que fosse criada uma classe `Musica`, qual deveria ser o tipo do nosso atributo `arquivos`?
 
@@ -935,19 +1015,3 @@ Supondo então que fosse criada uma classe `Musica`, qual deveria ser o tipo do 
 
 Faremos essa melhoria na próxima aula!
 
-
-# Entregas dessa Aula {background-color="#40666e"}
-
-## {.smaller}
-
-::: {.nonincremental}
-
-Para ter **presença** nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.
-
-::: {.callout-important title="Entregas no Campus Virtual"}
-Responda a tarefa no Campus Virtual enviando o seu projeto `organizador-musicas-v2` com o arquivo `OrganizadorDeMusicas.java` contendo as 7 alterações solicitadas nos exercícios ao longo dos slides.
-
-Obs.: copie os métodos dos primeiros exercícios feitos no projeto `organizador-musicas-v1` para o projeto `organizador-musicas-v2` e faça a entrega apenas do segundo projeto.
-:::
-
-:::
