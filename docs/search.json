@@ -3378,7 +3378,7 @@
     "href": "cap4-3.html#o-loop-for",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "O loop for",
-    "text": "O loop for\nGeralmente utilizamos um loop for para percorrer os elementos de um vetor.\n\nA sintaxe do loop for em Java é igual à do C++.\nUsamos o atributo length, que é constante e público, e retorna o tamanho do vetor.\n\n\n\nfor(int i = 0; i &lt; vetor.length; i++) {\n    // Usando vetor[i], estamos acessando a posição i do vetor.\n    vetor[i] = i;\n}"
+    "text": "O loop for\nGeralmente utilizamos um loop for para percorrer os elementos de um vetor.\n\nA sintaxe do loop for em Java é igual à do C++.\nUsamos o atributo length, que é constante e público, e retorna o tamanho do vetor.\n\n\n\nfor(int i = 0; i &lt; vetor.length; i++) {\n    // Usando vetor[i], estamos acessando a \n    // posição i do vetor.\n    vetor[i] = i;\n}"
   },
   {
     "objectID": "cap4-3.html#o-loop-for-1",
@@ -3392,7 +3392,7 @@
     "href": "cap4-3.html#usando-vetores-em-métodos",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "Usando vetores em métodos",
-    "text": "Usando vetores em métodos\nPodemos passar vetores como parâmetro de métodos.\n\nA passagem é por referência, ou seja, estamos passando o ponteiro para o vetor.\nPortanto, se o método alterar o vetor, ele estará alterando o vetor original passado por parâmetro\n\n\n\npublic void preencherVetor(int vet[]) {\n    for (int i = 0; i &lt; vet.length; i++) {\n        vet[i] = i;\n    }\n}"
+    "text": "Usando vetores em métodos\n\nPodemos passar vetores como parâmetro de métodos.\n\nA passagem é por referência, ou seja, estamos passando o ponteiro para o vetor.\nPortanto, se o método alterar o vetor, ele estará alterando o vetor original passado por parâmetro\n\n\n\n\npublic void preencherVetor(int vet[]) {\n    for (int i = 0; i &lt; vet.length; i++) {\n        vet[i] = i;\n    }\n}"
   },
   {
     "objectID": "cap4-3.html#usando-vetores-em-métodos-1",
@@ -3406,28 +3406,28 @@
     "href": "cap4-3.html#vetores-de-objetos",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "Vetores de objetos",
-    "text": "Vetores de objetos\nNós podemos também criar vetores para guardar objetos.\n\nSuponha, por exemplo, que queiramos poder criar e trabalhar com vários objetos de uma classe Carro.\n\n\n\n// Estamos declarando um vetor de carros, com capacidade de\n// guardar 10 objetos Carro\nCarro[] carros = new Carro[10];\n\n// Em cada posição do vetor, podemos colocar um objeto do tipo Carro.\ncarros[0] = new Carro(\"Gol\");\ncarros[1] = new Carro(\"Onix\");"
+    "text": "Vetores de objetos\nNós podemos também criar vetores para guardar objetos.\n\nSuponha, por exemplo, que queiramos poder criar e trabalhar com vários objetos de uma classe Carro.\n\n\n\n// Estamos declarando um vetor de carros, com \n// capacidade de guardar 10 objetos Carro\nCarro[] carros = new Carro[10];\n\n// Em cada posição do vetor, podemos colocar um\n// objeto do tipo Carro\ncarros[0] = new Carro(\"Gol\");\ncarros[1] = new Carro(\"Onix\");"
   },
   {
     "objectID": "cap4-3.html#vetores-de-objetos-1",
     "href": "cap4-3.html#vetores-de-objetos-1",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "Vetores de objetos",
-    "text": "Vetores de objetos\nNós podemos então acessar cada objeto Carro no vetor, a partir de sua posição.\n\n\nfor(int i = 0; i &lt; carros.length; i++) {\n    if (carros[i] != null) {\n        // Estamos exibindo nome do carro chamando o método obterNome\n        System.out.println(carros[i].obterNome());\n    }\n}\n\n\n\nRepare que a condição (if) da linha 2 é muito importante:\n\npois caso alguma posição do vetor não tenha sido inicializada, seu valor é null.\nE poderia então ocorrer um erro (NullPointerException) ao tentar chamar o método obterNome."
+    "text": "Vetores de objetos\nNós podemos então acessar cada objeto Carro no vetor, a partir de sua posição.\n\n\nfor(int i = 0; i &lt; carros.length; i++) {\n    if (carros[i] != null) {\n        // Estamos exibindo nome do carro chamando\n        // o método obterNome\n        System.out.println(carros[i].obterNome());\n    }\n}"
   },
   {
     "objectID": "cap4-3.html#usando-for-each-com-vetores",
     "href": "cap4-3.html#usando-for-each-com-vetores",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "Usando for-each com vetores",
-    "text": "Usando for-each com vetores\nNós também podemos usar um loop for-each para percorrer os elementos de um vetor.\n\n\nfor(Carro carro : carros) {\n    if (carro != null) {\n        // Estamos exibindo nome do carro chamando o método obterNome\n        System.out.println(carro.obterNome());\n    }\n}\n\n\n\nEste exemplo nos permite enfatizar uma das vantagens do loop for-each:\n\nRepare que esse código seria exatamente igual se a variável carros fosse um ArrayList em vez de um vetor.\nJá na opção anterior, usando loop for tradicional, os códigos seriam diferentes.\n\nPrimeiro porque consultamos o tamanho de um vetor usando o atributo length e de um ArrayList usando o método size.\nE segundo que acessamos um elemento por posição em um vetor usando [i] e em um ArrayList usando get(i)."
+    "text": "Usando for-each com vetores\nNós também podemos usar um loop for-each para percorrer os elementos de um vetor.\n\n\nfor(Carro carro : carros) {\n    if (carro != null) {\n        // Estamos exibindo nome do carro chamando \n        // o método obterNome\n        System.out.println(carro.obterNome());\n    }\n}"
   },
   {
     "objectID": "cap4-3.html#vetores-vs.-arraylist",
     "href": "cap4-3.html#vetores-vs.-arraylist",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "Vetores vs. ArrayList",
-    "text": "Vetores vs. ArrayList\nAgora que conhecemos tanto vetores quanto ArrayList, qual deles devemos utilizar?\n\nÉ melhor usar ArrayList se o número de elementos pode ser alterado durante a execução do programa.\n\nOu se você não sabe, antes de criar a coleção, quantos elementos serão usados.\n\nSeria melhor usar um vetor quando o número de elementos é pré-determinado.\n\nE a eficiência de acesso por posição é muito importante.\n\n\n\nNa prática acabamos usando ArrayList em muitas situações mesmo quando temos uma quantidade fixa de elementos.\n\nMas, de toda forma, precisamos saber utilizar vetores pois é comum precisarmos usar métodos de classes da biblioteca do Java (ou de terceiros) que trabalham com vetores."
+    "text": "Vetores vs. ArrayList\nAgora que conhecemos tanto vetores quanto ArrayList, qual deles devemos utilizar?\n\nÉ melhor usar ArrayList se o número de elementos pode ser alterado durante a execução do programa.\n\nOu se você não sabe, antes de criar a coleção, quantos elementos serão usados.\n\nSeria melhor usar um vetor quando o número de elementos é pré-determinado.\n\nE a eficiência de acesso por posição é muito importante."
   },
   {
     "objectID": "cap4-3.html#section-22",
@@ -3455,63 +3455,63 @@
     "href": "cap4-3.html#section-25",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Apesar de coleções de tamanho flexível serem úteis na maioria dos casos,\n\nHá situações nas quais sabemos quantos elementos uma coleção terá durante todo o tempo de execução de um programa.\nNesses casos, é melhor utilizar uma coleção de tamanho fixo: um vetor (ou array).\n\n\nMas qual a vantagem de usarmos vetores?\n\nÉ que o acesso por índice (posição) é geralmente mais eficiente do que em uma coleção de tamanho flexível, como a ArrayList.\nOutra vantagem é que, em Java, podemos ter vetores de elementos que são tipos primitivos.\n\nEnquanto ArrayList, por exemplo, permite guardar apenas objetos.\nApesar de que, como veremos no próximo capítulo, há uma forma de lidarmos comn isso usando wrappers (classes empacotadoras)."
+    "text": "Apesar de coleções de tamanho flexível serem úteis na maioria dos casos,\n\nHá situações nas quais sabemos quantos elementos uma coleção terá durante todo o tempo de execução de um programa.\nNesses casos, é melhor utilizar uma coleção de tamanho fixo: um vetor (ou array)."
   },
   {
     "objectID": "cap4-3.html#section-26",
     "href": "cap4-3.html#section-26",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Um vetor é um grupo de variáveis que contém elementos de um mesmo tipo.\n\nEm Java, vetores são considerados objetos, portanto, são considerados tipos por referência.\nComo já mencionado, os elementos de um vetor podem ser de tipos primitivos (int, double, boolean, etc.) ou de tipos por referência (objetos).\n\n\nExemplo de um vetor:"
+    "text": "Mas qual a vantagem de usarmos vetores?\n\nÉ que o acesso por índice (posição) é geralmente mais eficiente do que em uma coleção de tamanho flexível, como a ArrayList.\nOutra vantagem é que, em Java, podemos ter vetores de elementos que são tipos primitivos.\n\nEnquanto ArrayList, por exemplo, permite guardar apenas objetos.\nApesar de que, como veremos no próximo capítulo, há uma forma de lidarmos com isso usando wrappers (classes empacotadoras)."
   },
   {
     "objectID": "cap4-3.html#section-27",
     "href": "cap4-3.html#section-27",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Podemos declarar um vetor em Java, utilizando uma das seguintes formas:\n\nTipoDosElementos[] nomeDoVetor;\nTipoDosElementos nomeDoVetor[];\n\n\nExemplos:\n\ndouble[] notas;\nint meuVetorDeInteiros[];"
+    "text": "Um vetor é um grupo de variáveis que contém elementos de um mesmo tipo.\n\nEm Java, vetores são considerados objetos, portanto, são considerados tipos por referência.\nComo já mencionado, os elementos de um vetor podem ser de tipos primitivos ou de tipos por referência (objetos).\n\n\nExemplo de um vetor:"
   },
   {
     "objectID": "cap4-3.html#section-28",
     "href": "cap4-3.html#section-28",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Como os demais objetos, os vetores são criados por meio da palavra-chave new:\n\nnomeDoVetor = new TipoDosElementos[capacidade];\n\n\nExemplos:\n\ndouble[] notas;\nnotas = new double[3];\n\nint meuVetorDeInteiros[];\nmeuVetorDeInteiros = new int[10];"
+    "text": "Podemos declarar um vetor em Java, utilizando uma das seguintes formas:\n\nTipoDosElementos[] nomeDoVetor;\nTipoDosElementos nomeDoVetor[];\n\n\nExemplos:\n\ndouble[] notas;\nint meuVetorDeInteiros[];\n\n\n\nRecomendo usar a primeira opção por ter melhor legibilidade."
   },
   {
     "objectID": "cap4-3.html#section-29",
     "href": "cap4-3.html#section-29",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Há ainda outras duas formas alternativas de se instanciar um vetor.\n\n\n// Declara e instancia em uma única linha\nint meuVetorDeInteiros[] = new int[10];\n\n// Declara, instancia um vetor com 3 posições e já inicializa os seus valores\ndouble notas[] = {7.5, 8.0, 9.0};\n\n\n\nEm C++ um vetor criado, mas não inicializado, pode conter lixo de memória.\n\nMas em Java, vale a regra de inicialização igual a dos atributos.\n\nVetor de tipos numéricos tem todos os elementos inicializados com zero.\nVetor de booleanos tem todos os elementos inicializados com false.\nVetor de objetos tem todos os elementos inicializados com null."
+    "text": "Como os demais objetos, os vetores são criados por meio da palavra-chave new:\n\nnomeDoVetor = new TipoDosElementos[capacidade];\n\n\nExemplos:\n\ndouble[] notas;\nnotas = new double[3];\n\nint meuVetorDeInteiros[];\nmeuVetorDeInteiros = new int[10];"
   },
   {
     "objectID": "cap4-3.html#section-30",
     "href": "cap4-3.html#section-30",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Para ter presença nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nResponda às tarefas no Campus Virtual enviando o o seu projeto do organizador-musicas-v5, contendo as alterações solicitadas nos exercícios ao longo dos slides."
+    "text": "Há ainda outras duas formas alternativas de se instanciar um vetor.\n\n\n// Declara e instancia em uma única linha\nint meuVetorDeInteiros[] = new int[10];\n\n// Declara, instancia um vetor com 3 posições e \n// já inicializa os seus valores\ndouble notas[] = {7.5, 8.0, 9.0};"
   },
   {
     "objectID": "cap4-3.html#section-31",
     "href": "cap4-3.html#section-31",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Para fazer isso, vamos primeiro copiar todas as imagens que baixamos do cavaleiro para a pasta images do projeto no Greenfoot.\n\nVamos começar tratando a imagem do cavaleiro parado (idle).\nRepare que as imagens se chamam: Idle (1).png, Idle (2).png, …, até Idle (10).png.\n\n\nPara usar essas imagens, vamos declarar um vetor de imagens como atributo da classe Cavaleiro.\n\nE, no construtor da classe, vamos carregar as 10 imagens e guardá-las no vetor."
+    "text": "Em C++ um vetor criado, mas não inicializado, pode conter lixo de memória.\n\nMas em Java, vale a regra de inicialização igual a dos atributos.\n\nVetor de tipos numéricos tem todos os elementos inicializados com zero.\nVetor de booleanos tem todos os elementos inicializados com false.\nVetor de objetos tem todos os elementos inicializados com null."
   },
   {
     "objectID": "cap4-3.html#section-32",
     "href": "cap4-3.html#section-32",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "public class Cavaleiro extends Actor\n{\n    // declaramos um vetor de imagens\n    private GreenfootImage[] imagens;\n    public Cavaleiro() {\n        // criamos o vetor com 10 posições, pois temos 10 imagens\n        imagens = new GreenfootImage[10];\n        // usamos um loop for que rodará 10 vezes\n        for (int i = 0; i &lt; imagens.length; i++) {\n            // em cada iteração, carregamos uma imagem usando o\n            // valor i+1 para montar o nome da imagem.\n            // e a guardamos na posição i do vetor.\n            imagens[i] = new GreenfootImage(\"Idle (\" + (i+1) + \").png\");\n            // redimensionamos a imagem porque ela é muito grande.\n            imagens[i].scale(120,140);\n        }\n        // definimos a primeira imagem como a imagem inicial do cavaleiro\n        setImage(imagens[0]);\n    }\n    // restante da classe omitido\n}"
+    "text": "Este exemplo nos permite enfatizar uma das vantagens do loop for-each:\n\nRepare que esse código seria exatamente igual se a variável carros fosse um ArrayList em vez de um vetor.\nJá na opção anterior, usando loop for tradicional, os códigos seriam diferentes.\n\nPrimeiro porque consultamos o tamanho de um vetor usando o atributo length e de um ArrayList usando o método size.\nE segundo que acessamos um elemento por posição em um vetor usando [i] e em um ArrayList usando get(i)."
   },
   {
     "objectID": "cap4-3.html#section-33",
     "href": "cap4-3.html#section-33",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "A alteração no slide anterior apenas carregou as imagens para a memória, mas ainda não faz nenhuma animação.\n\nPara criar a animação, precisamos que seja exibida uma das imagens de cada vez.\nPodemos então usar o método act que é chamado várias vezes por segundo na execução do jogo.\n\nA princípio, parece que basta mudarmos para a imagem seguinte a cada chamada.\nE quando chegarmos na última imagem, voltamos para a primeira.\n\n\n\nRepare que para que consigamos mudar para a próxima imagem, precisaremos de um atributo que indique qual é a imagem atual.\n\nVamos então criar um atributo inteiro indiceImagemAtual, e inicializá-lo com 0 no construtor.\nFeito isso, podemos utilizá-lo no método act, como mostrado no slide a seguir."
+    "text": "Na prática acabamos usando ArrayList em muitas situações mesmo quando temos uma quantidade fixa de elementos.\n\nMas, de toda forma, precisamos saber utilizar vetores pois é comum precisarmos usar métodos de classes da biblioteca do Java (ou de terceiros) que trabalham com vetores."
   },
   {
     "objectID": "cap4-3.html#section-34",
@@ -6781,5 +6781,19 @@
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "Acesso por índice vs. iteradores",
     "text": "Acesso por índice vs. iteradores\nA solução de utilizar while com um Iterator funciona para todas as coleções da biblioteca de classes do Java.\n\nE, portanto, é um padrão de código que usaremos novamente mais adiante."
+  },
+  {
+    "objectID": "cap4-3.html#vetores-de-objetos-2",
+    "href": "cap4-3.html#vetores-de-objetos-2",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "Vetores de objetos",
+    "text": "Vetores de objetos\n\nfor(int i = 0; i &lt; carros.length; i++) {\n    if (carros[i] != null) {\n        // Estamos exibindo nome do carro chamando\n        // o método obterNome\n        System.out.println(carros[i].obterNome());\n    }\n}\n\nRepare que a condição (if) da linha 2 é muito importante:\n\npois caso alguma posição do vetor não tenha sido inicializada, seu valor é null.\nE poderia então ocorrer um erro (NullPointerException) ao tentar chamar o método obterNome."
+  },
+  {
+    "objectID": "cap4-3.html#usando-for-each-com-vetores-1",
+    "href": "cap4-3.html#usando-for-each-com-vetores-1",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "Usando for-each com vetores",
+    "text": "Usando for-each com vetores\n\nfor(Carro carro : carros) {\n    if (carro != null) {\n        // Estamos exibindo nome do carro chamando \n        // o método obterNome\n        System.out.println(carro.obterNome());\n    }\n}\n\nEste exemplo nos permite enfatizar uma das vantagens do loop for-each:\n\nRepare que esse código seria exatamente igual se a variável carros fosse um ArrayList em vez de um vetor.\nJá na opção anterior, usando loop for tradicional, os códigos seriam diferentes.\n\nPrimeiro porque consultamos o tamanho de um vetor usando o atributo length e de um ArrayList usando o método size.\nE segundo que acessamos um elemento por posição em um vetor usando [i] e em um ArrayList usando get(i)."
   }
 ]

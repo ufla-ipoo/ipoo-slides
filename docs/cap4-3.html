@@ -621,31 +621,32 @@
 <li class="fragment">Há situações nas quais sabemos quantos elementos uma coleção terá durante todo o tempo de execução de um programa.</li>
 <li class="fragment">Nesses casos, é melhor utilizar uma <strong>coleção de tamanho fixo</strong>: <span class="alert">um vetor</span> (ou <em>array</em>).</li>
 </ul>
-<div class="fragment">
+</section>
+<section id="section-26" class="slide level2">
+<h2></h2>
 <p>Mas qual a <strong>vantagem de usarmos vetores</strong>?</p>
 <ul>
 <li class="fragment">É que o acesso por índice (posição) é geralmente mais eficiente do que em uma coleção de tamanho flexível, como a <code>ArrayList</code>.</li>
 <li class="fragment">Outra vantagem é que, em Java, podemos ter vetores de elementos que são tipos primitivos.
 <ul>
 <li class="fragment">Enquanto <code>ArrayList</code>, por exemplo, permite guardar apenas objetos.</li>
-<li class="fragment">Apesar de que, como veremos no próximo capítulo, há uma forma de lidarmos comn isso usando <em>wrappers</em> (classes empacotadoras).</li>
+<li class="fragment">Apesar de que, como veremos no próximo capítulo, há uma forma de lidarmos com isso usando <em>wrappers</em> (classes empacotadoras).</li>
 </ul></li>
 </ul>
-</div>
 </section>
-<section id="section-26" class="slide level2">
+<section id="section-27" class="slide level2">
 <h2></h2>
 <p>Um <strong>vetor</strong> é um grupo de variáveis que contém <strong>elementos de um mesmo tipo</strong>.</p>
 <ul>
 <li class="fragment">Em Java, vetores são considerados objetos, portanto, são considerados tipos por referência.</li>
-<li class="fragment">Como já mencionado, os elementos de um vetor podem ser de tipos primitivos (<code>int</code>, <code>double</code>, <code>boolean</code>, etc.) ou de tipos por referência (objetos).</li>
+<li class="fragment">Como já mencionado, os elementos de um vetor podem ser de tipos primitivos ou de tipos por referência (objetos).</li>
 </ul>
 <div class="fragment">
 <p>Exemplo de um vetor:</p>
 <p><img data-src="imagens/exemplo_vetor.png"></p>
 </div>
 </section>
-<section id="section-27" class="slide level2">
+<section id="section-28" class="slide level2">
 <h2></h2>
 <p>Podemos <strong>declarar um vetor</strong> em Java, utilizando uma das seguintes formas:</p>
 <div class="halfincfontsize">
@@ -659,8 +660,11 @@
 <span id="cb9-2"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
+<div class="fragment">
+<p>Recomendo usar a primeira opção por ter melhor legibilidade.</p>
+</div>
 </section>
-<section id="section-28" class="slide level2">
+<section id="section-29" class="slide level2">
 <h2></h2>
 <p>Como os demais objetos, os <strong>vetores são criados</strong> por meio da palavra-chave <code>new</code>:</p>
 <div class="halfincfontsize">
@@ -677,7 +681,7 @@
 </div>
 </div>
 </section>
-<section id="section-29" class="slide level2">
+<section id="section-30" class="slide level2">
 <h2></h2>
 <p>Há ainda outras duas formas alternativas de se instanciar um vetor.</p>
 <div class="fragment">
@@ -685,11 +689,14 @@
 <div class="sourceCode" id="cb12"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Declara e instancia em uma única linha</span></span>
 <span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[]</span> <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
 <span id="cb12-3"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Declara, instancia um vetor com 3 posições e já inicializa os seus valores</span></span>
-<span id="cb12-5"><a aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> notas<span class="op">[]</span> <span class="op">=</span> <span class="op">{</span><span class="fl">7.5</span><span class="op">,</span> <span class="fl">8.0</span><span class="op">,</span> <span class="fl">9.0</span><span class="op">};</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-4"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Declara, instancia um vetor com 3 posições e </span></span>
+<span id="cb12-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">// já inicializa os seus valores</span></span>
+<span id="cb12-6"><a aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> notas<span class="op">[]</span> <span class="op">=</span> <span class="op">{</span><span class="fl">7.5</span><span class="op">,</span> <span class="fl">8.0</span><span class="op">,</span> <span class="fl">9.0</span><span class="op">};</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="fragment">
+</section>
+<section id="section-31" class="slide level2">
+<h2></h2>
 <p>Em C++ um vetor criado, mas não inicializado, pode conter lixo de memória.</p>
 <ul>
 <li class="fragment">Mas em Java, vale a regra de inicialização igual a dos atributos.
@@ -699,7 +706,6 @@
 <li class="fragment"><strong>Vetor de objetos</strong> tem todos os elementos <strong>inicializados com <code>null</code></strong>.</li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section id="o-loop-for" class="slide level2">
 <h2>O loop <code>for</code></h2>
@@ -711,9 +717,10 @@
 <div class="fragment">
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb13"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vetor<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
-<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// Usando vetor[i], estamos acessando a posição i do vetor.</span></span>
-<span id="cb13-3"><a aria-hidden="true" tabindex="-1"></a>    vetor<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> i<span class="op">;</span></span>
-<span id="cb13-4"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// Usando vetor[i], estamos acessando a </span></span>
+<span id="cb13-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// posição i do vetor.</span></span>
+<span id="cb13-4"><a aria-hidden="true" tabindex="-1"></a>    vetor<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> i<span class="op">;</span></span>
+<span id="cb13-5"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -730,11 +737,13 @@
 </section>
 <section id="usando-vetores-em-métodos" class="slide level2">
 <h2>Usando vetores em métodos</h2>
+<div class="fragment">
 <p>Podemos passar vetores como parâmetro de métodos.</p>
 <ul>
 <li class="fragment">A passagem é por referência, ou seja, estamos passando o ponteiro para o vetor.</li>
 <li class="fragment">Portanto, se o método alterar o vetor, ele estará alterando o vetor original passado por parâmetro</li>
 </ul>
+</div>
 <div class="fragment">
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb15"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">void</span> <span class="fu">preencherVetor</span><span class="op">(</span><span class="dt">int</span> vet<span class="op">[])</span> <span class="op">{</span></span>
@@ -765,51 +774,66 @@
 </ul>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb17"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Estamos declarando um vetor de carros, com capacidade de</span></span>
-<span id="cb17-2"><a aria-hidden="true" tabindex="-1"></a><span class="co">// guardar 10 objetos Carro</span></span>
+<div class="sourceCode" id="cb17"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Estamos declarando um vetor de carros, com </span></span>
+<span id="cb17-2"><a aria-hidden="true" tabindex="-1"></a><span class="co">// capacidade de guardar 10 objetos Carro</span></span>
 <span id="cb17-3"><a aria-hidden="true" tabindex="-1"></a>Carro<span class="op">[]</span> carros <span class="op">=</span> <span class="kw">new</span> Carro<span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
 <span id="cb17-4"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Em cada posição do vetor, podemos colocar um objeto do tipo Carro.</span></span>
-<span id="cb17-6"><a aria-hidden="true" tabindex="-1"></a>carros<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Carro</span><span class="op">(</span><span class="st">"Gol"</span><span class="op">);</span></span>
-<span id="cb17-7"><a aria-hidden="true" tabindex="-1"></a>carros<span class="op">[</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Carro</span><span class="op">(</span><span class="st">"Onix"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Em cada posição do vetor, podemos colocar um</span></span>
+<span id="cb17-6"><a aria-hidden="true" tabindex="-1"></a><span class="co">// objeto do tipo Carro</span></span>
+<span id="cb17-7"><a aria-hidden="true" tabindex="-1"></a>carros<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Carro</span><span class="op">(</span><span class="st">"Gol"</span><span class="op">);</span></span>
+<span id="cb17-8"><a aria-hidden="true" tabindex="-1"></a>carros<span class="op">[</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Carro</span><span class="op">(</span><span class="st">"Onix"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
-<section id="vetores-de-objetos-1" class="slide level2">
-<h2>Vetores de objetos</h2>
+<section id="vetores-de-objetos-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Vetores de objetos</h2>
 <p>Nós podemos então acessar cada objeto <code>Carro</code> no vetor, a partir de sua posição.</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb18-1"><a></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> carros<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
-<span id="cb18-2"><a></a>    <span class="cf">if</span> <span class="op">(</span>carros<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb18-3"><a></a>        <span class="co">// Estamos exibindo nome do carro chamando o método obterNome</span></span>
-<span id="cb18-4"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carros<span class="op">[</span>i<span class="op">].</span><span class="fu">obterNome</span><span class="op">());</span></span>
-<span id="cb18-5"><a></a>    <span class="op">}</span></span>
-<span id="cb18-6"><a></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource java number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb18-1" class="hljs-ln-code"><a></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> carros<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb18-2" class="hljs-ln-code"><a></a>    <span class="cf">if</span> <span class="op">(</span>carros<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb18-3" class="hljs-ln-code"><a></a>        <span class="co">// Estamos exibindo nome do carro chamando</span></span>
+<span id="cb18-4" class="hljs-ln-code"><a></a>        <span class="co">// o método obterNome</span></span>
+<span id="cb18-5" class="hljs-ln-code"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carros<span class="op">[</span>i<span class="op">].</span><span class="fu">obterNome</span><span class="op">());</span></span>
+<span id="cb18-6" class="hljs-ln-code"><a></a>    <span class="op">}</span></span>
+<span id="cb18-7" class="hljs-ln-code"><a></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="fragment">
+</section>
+<section id="vetores-de-objetos-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Vetores de objetos</h2>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource java number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb19-1" class="hljs-ln-code"><a></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> carros<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb19-2" class="hljs-ln-code"><a></a>    <span class="cf">if</span> <span class="op">(</span>carros<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb19-3" class="hljs-ln-code"><a></a>        <span class="co">// Estamos exibindo nome do carro chamando</span></span>
+<span id="cb19-4" class="hljs-ln-code"><a></a>        <span class="co">// o método obterNome</span></span>
+<span id="cb19-5" class="hljs-ln-code"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carros<span class="op">[</span>i<span class="op">].</span><span class="fu">obterNome</span><span class="op">());</span></span>
+<span id="cb19-6" class="hljs-ln-code"><a></a>    <span class="op">}</span></span>
+<span id="cb19-7" class="hljs-ln-code"><a></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Repare que a condição (<code>if</code>) da linha 2 é muito importante:</p>
 <ul>
 <li class="fragment">pois caso alguma posição do vetor não tenha sido inicializada, seu valor é <code>null</code>.</li>
 <li class="fragment">E poderia então ocorrer um erro (<code>NullPointerException</code>) ao tentar chamar o método <code>obterNome</code>.</li>
 </ul>
-</div>
 </section>
 <section id="usando-for-each-com-vetores" class="slide level2">
 <h2>Usando for-each com vetores</h2>
 <p>Nós também podemos usar um <strong>loop <em>for-each</em></strong> para percorrer os elementos de um vetor.</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb19"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb19-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span>Carro carro <span class="op">:</span> carros<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb19-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>carro <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb19-3"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// Estamos exibindo nome do carro chamando o método obterNome</span></span>
-<span id="cb19-4"><a aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carro<span class="op">.</span><span class="fu">obterNome</span><span class="op">());</span></span>
-<span id="cb19-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb19-6"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb20-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span>Carro carro <span class="op">:</span> carros<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb20-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>carro <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb20-3"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// Estamos exibindo nome do carro chamando </span></span>
+<span id="cb20-4"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// o método obterNome</span></span>
+<span id="cb20-5"><a aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carro<span class="op">.</span><span class="fu">obterNome</span><span class="op">());</span></span>
+<span id="cb20-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb20-7"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="fragment">
+</section>
+<section id="section-32" class="slide level2">
+<h2></h2>
 <p>Este exemplo nos permite enfatizar uma das vantagens do loop <em>for-each</em>:</p>
 <ul>
 <li class="fragment">Repare que esse código seria exatamente igual se a variável <code>carros</code> fosse um <code>ArrayList</code> em vez de um vetor.</li>
@@ -819,7 +843,6 @@
 <li class="fragment">E segundo que acessamos um elemento por posição em um vetor usando <code>[i]</code> e em um <code>ArrayList</code> usando <code>get(i)</code>.</li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section id="vetores-vs.-arraylist" class="slide level2">
 <h2>Vetores vs.&nbsp;ArrayList</h2>
@@ -834,14 +857,15 @@
 <li class="fragment">E a eficiência de acesso por posição é muito importante.</li>
 </ul></li>
 </ul>
-<div class="fragment">
+</section>
+<section id="section-33" class="slide level2">
+<h2></h2>
 <p>Na prática acabamos usando <code>ArrayList</code> em muitas situações mesmo quando temos uma quantidade fixa de elementos.</p>
 <ul>
 <li class="fragment">Mas, de toda forma, precisamos saber utilizar vetores pois é comum precisarmos usar métodos de classes da biblioteca do Java (ou de terceiros) que trabalham com vetores.</li>
 </ul>
 
 
-</div>
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

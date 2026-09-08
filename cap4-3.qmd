@@ -362,21 +362,21 @@ Apesar de coleções de tamanho flexível serem úteis na maioria dos casos,
 - Há situações nas quais sabemos quantos elementos uma coleção terá durante todo o tempo de execução de um programa.
 - Nesses casos, é melhor utilizar uma **coleção de tamanho fixo**: [um vetor]{.alert} (ou *array*).
 
-. . .
+##
 
 Mas qual a **vantagem de usarmos vetores**?
 
 - É que o acesso por índice (posição) é geralmente mais eficiente do que em uma coleção de tamanho flexível, como a `ArrayList`.
 - Outra vantagem é que, em Java, podemos ter vetores de elementos que são tipos primitivos.
   - Enquanto `ArrayList`, por exemplo, permite guardar apenas objetos.
-  - Apesar de que, como veremos no próximo capítulo, há uma forma de lidarmos comn isso usando *wrappers* (classes empacotadoras).
+  - Apesar de que, como veremos no próximo capítulo, há uma forma de lidarmos com isso usando *wrappers* (classes empacotadoras).
 
 ##
 
 Um **vetor** é um grupo de variáveis que contém **elementos de um mesmo tipo**.
 
 - Em Java, vetores são considerados objetos, portanto, são considerados tipos por referência.
-- Como já mencionado, os elementos de um vetor podem ser de tipos primitivos (`int`, `double`, `boolean`, etc.) ou de tipos por referência (objetos).
+- Como já mencionado, os elementos de um vetor podem ser de tipos primitivos ou de tipos por referência (objetos).
 
 . . .
 
@@ -405,6 +405,10 @@ double[] notas;
 int meuVetorDeInteiros[];
 ```
 :::
+
+. . . 
+
+Recomendo usar a primeira opção por ter melhor legibilidade.
 
 ##
 
@@ -441,12 +445,13 @@ Há ainda outras duas formas alternativas de se instanciar um vetor.
 // Declara e instancia em uma única linha
 int meuVetorDeInteiros[] = new int[10];
 
-// Declara, instancia um vetor com 3 posições e já inicializa os seus valores
+// Declara, instancia um vetor com 3 posições e 
+// já inicializa os seus valores
 double notas[] = {7.5, 8.0, 9.0};
 ```
 :::
 
-. . .
+##
 
 Em C++ um vetor criado, mas não inicializado, pode conter lixo de memória.
 
@@ -467,7 +472,8 @@ Geralmente utilizamos um [loop `for`]{.alert} para percorrer os elementos de um 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
 for(int i = 0; i < vetor.length; i++) {
-    // Usando vetor[i], estamos acessando a posição i do vetor.
+    // Usando vetor[i], estamos acessando a 
+    // posição i do vetor.
 	vetor[i] = i;
 }
 ```
@@ -488,6 +494,8 @@ for(int i = 0; i < vet.length; i++) {
 :::
 
 ## Usando vetores em métodos
+
+. . .
 
 Podemos passar vetores como parâmetro de métodos. 
 
@@ -531,17 +539,18 @@ Nós podemos também criar vetores para guardar objetos.
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-// Estamos declarando um vetor de carros, com capacidade de
-// guardar 10 objetos Carro
+// Estamos declarando um vetor de carros, com 
+// capacidade de guardar 10 objetos Carro
 Carro[] carros = new Carro[10];
 
-// Em cada posição do vetor, podemos colocar um objeto do tipo Carro.
+// Em cada posição do vetor, podemos colocar um
+// objeto do tipo Carro
 carros[0] = new Carro("Gol");
 carros[1] = new Carro("Onix");
 ```
 :::
 
-## Vetores de objetos
+## Vetores de objetos {auto-animate=true}
 
 Nós podemos então acessar cada objeto `Carro` no vetor, a partir de sua posição.
 
@@ -551,14 +560,27 @@ Nós podemos então acessar cada objeto `Carro` no vetor, a partir de sua posiç
 ```{.java}
 for(int i = 0; i < carros.length; i++) {
 	if (carros[i] != null) {
-        // Estamos exibindo nome do carro chamando o método obterNome
+        // Estamos exibindo nome do carro chamando
+        // o método obterNome
 	    System.out.println(carros[i].obterNome());
     }
 }
 ```
 :::
 
-. . .
+## Vetores de objetos {auto-animate=true}
+
+::: {.halfincfontsize}
+```{.java}
+for(int i = 0; i < carros.length; i++) {
+	if (carros[i] != null) {
+        // Estamos exibindo nome do carro chamando
+        // o método obterNome
+	    System.out.println(carros[i].obterNome());
+    }
+}
+```
+:::
 
 Repare que a condição (`if`) da linha 2 é muito importante:
 
@@ -576,14 +598,15 @@ Nós também podemos usar um **loop *for-each*** para percorrer os elementos de 
 ```{.java code-line-numbers="false"}
 for(Carro carro : carros) {
 	if (carro != null) {
-        // Estamos exibindo nome do carro chamando o método obterNome
+        // Estamos exibindo nome do carro chamando 
+        // o método obterNome
 	    System.out.println(carro.obterNome());
     }
 }
 ```
 :::
 
-. . .
+## 
 
 Este exemplo nos permite enfatizar uma das vantagens do loop *for-each*:
 
@@ -601,7 +624,7 @@ Agora que conhecemos tanto **vetores** quanto `ArrayList`, qual deles devemos ut
 - Seria melhor usar um vetor quando o número de elementos é pré-determinado.
   - E a eficiência de acesso por posição é muito importante.
 
-. . .
+## Vetores vs. ArrayList
 
 Na prática acabamos usando `ArrayList` em muitas situações mesmo quando temos uma quantidade fixa de elementos.
 
