@@ -3490,7 +3490,7 @@
     "href": "cap4-3.html#section-30",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Um objeto Leillao é o ponto de partida para o projeto.\n\nQuem quer vender itens os inserem no leilão através do método cadastrarLote,\n\nmas fornecem apenas uma descrição (string).\n\nO objeto Leilao cria então um objeto Lote cada cada lote cadastrado.\n\n\nIsso modela o funcionamento de um leilão no mundo real.\n\nNão é quem vende o item que define o código de identificação do lote."
+    "text": "Um objeto Leilao é o ponto de partida para o projeto.\n\nQuem quer vender itens os inserem no leilão através do método cadastrarLote,\n\nmas fornecem apenas uma descrição (string).\n\nO objeto Leilao cria então um objeto Lote cada cada lote cadastrado.\n\n\nIsso modela o funcionamento de um leilão no mundo real.\n\nNão é quem vende o item que define o código de identificação do lote."
   },
   {
     "objectID": "cap4-3.html#section-31",
@@ -3567,7 +3567,7 @@
     "href": "cap4-3.html#section-41",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "...."
+    "text": "public boolean ofertarLance(Lance lance)\n{\n    if(lanceMaisAlto == null) {\n        // Não há lance anterior.\n        lanceMaisAlto = lance;\n        return true;\n    }\n    else if(lance.obterValor() &gt; lanceMaisAlto.obterValor()) {\n        // O lance é melhor que o anterior.\n        lanceMaisAlto = lance;\n        return true;\n    }\n    else {\n        // O lance não é melhor.\n        return false;\n    }\n}"
   },
   {
     "objectID": "cap4-3.html#section-42",
@@ -6808,7 +6808,7 @@
     "href": "cap4-3.html#a-classe-lote",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "A classe Lote",
-    "text": "A classe Lote\n\nA classe lote armazena a descrição do lote, um número e o lance mais alto.\n\n\nO método receberLance trata o que acontece quando alguém dá um lante no lote.\n\nEle precisa verificar se o lance é válido ou não.\nEle é válido se for o maior lance dado até o momento.\nVeja a implementação a seguir e repare na verificação feita usando a palavra-chave null.\n\nSe o maior lance é null, esse é o primeiro lance e, portanto, o maior até agora."
+    "text": "A classe Lote\n\nA classe lote armazena a descrição do lote, um número e o lance mais alto.\n\n\nO método ofertarLance trata o que acontece quando alguém dá um lante no lote.\n\nEle precisa verificar se o lance é válido ou não.\nEle é válido se for o maior lance dado até o momento.\nVeja a implementação a seguir e repare na verificação feita usando a palavra-chave null.\n\nSe o maior lance é null, esse é o primeiro lance e, portanto, o maior até agora."
   },
   {
     "objectID": "cap4-3.html#a-classe-leilao",
@@ -6829,7 +6829,7 @@
     "href": "cap4-3.html#section-45",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício 5\n\n\nO método darUmLance inclui as duas instruções a seguir:\n\nLance lance = new Lance(ofertante, value);\nboolean lanceDeuCerto = loteSelecionado.receberLance(lance);\n\nA variável lance é usada aqui apenas como um espaço reservado para o objeto Lance recém-criado, antes de ser passado imediatamente para o método receberLance do lote.\nReescreva essas instruções para eliminar a variável lance usando um objeto anônimo, como visto no método cadastrarLote."
+    "text": "Exercício 5\n\n\nO método darUmLance inclui as duas instruções a seguir:\n\nLance lance = new Lance(ofertante, value);\nboolean bemSucedido = loteSelecionado.ofertarLance(lance);\n\nA variável lance é usada aqui apenas como um espaço reservado para o objeto Lance recém-criado, antes de ser passado imediatamente para o método ofertarLance do lote.\nReescreva essas instruções para eliminar a variável lance usando um objeto anônimo, como visto no método cadastrarLote."
   },
   {
     "objectID": "cap4-3.html#section-46",

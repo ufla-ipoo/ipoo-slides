@@ -376,7 +376,7 @@ O projeto possui as classes: `Leilao`, `Lance`, `Lote` e `Pessoa`.
 
 - O diagrama de classes do BlueJ mostra que os relacionamentos entre as classes é um pouco mais complicado do que os exemplos que vimos até agora.
 
-![](imagens/bluej_leilao_diagrama_classes.png)
+![](imagens/bluej_leilao_diagrama_classes.png){width="50%"}
 
 ##
 
@@ -399,7 +399,7 @@ Vamos avaliar o código do projeto.
 
 ##
 
-Um objeto `Leillao` é o ponto de partida para o projeto.
+Um objeto `Leilao` é o ponto de partida para o projeto.
 
 - Quem quer vender itens os inserem no leilão através do método `cadastrarLote`, 
   - mas fornecem apenas uma descrição (string).
@@ -554,7 +554,7 @@ A classe lote armazena a descrição do lote, um número e o lance mais alto.
 
 . . .
 
-O método `receberLance` trata o que acontece quando alguém dá um lante no lote.
+O método `ofertarLance` trata o que acontece quando alguém dá um lante no lote.
 
 - Ele precisa verificar se o lance é válido ou não.
 - Ele é válido se for o maior lance dado até o momento.
@@ -563,11 +563,25 @@ O método `receberLance` trata o que acontece quando alguém dá um lante no lot
 
 ## 
 
-::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-  .... 
+public boolean ofertarLance(Lance lance)
+{
+    if(lanceMaisAlto == null) {
+        // Não há lance anterior.
+        lanceMaisAlto = lance;
+        return true;
+    }
+    else if(lance.obterValor() > lanceMaisAlto.obterValor()) {
+        // O lance é melhor que o anterior.
+        lanceMaisAlto = lance;
+        return true;
+    }
+    else {
+        // O lance não é melhor.
+        return false;
+    }
+}
 ```
-:::
 
 ## A classe `Leilao`
 
@@ -637,11 +651,11 @@ O método `darUmLance` inclui as duas instruções a seguir:
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
 Lance lance = new Lance(ofertante, value);
-boolean lanceDeuCerto = loteSelecionado.receberLance(lance);
+boolean bemSucedido = loteSelecionado.ofertarLance(lance);
 ```
 :::
 
-A variável `lance` é usada aqui apenas como um espaço reservado para o objeto `Lance` recém-criado, antes de ser passado imediatamente para o método `receberLance` do lote. 
+A variável `lance` é usada aqui apenas como um espaço reservado para o objeto `Lance` recém-criado, antes de ser passado imediatamente para o método `ofertarLance` do lote. 
 
 Reescreva essas instruções para eliminar a variável `lance` usando um objeto anônimo, como visto no método `cadastrarLote`.
 :::

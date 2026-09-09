@@ -636,7 +636,7 @@
 <ul>
 <li class="fragment">O diagrama de classes do BlueJ mostra que os relacionamentos entre as classes é um pouco mais complicado do que os exemplos que vimos até agora.</li>
 </ul>
-<p><img data-src="imagens/bluej_leilao_diagrama_classes.png"></p>
+<p><img data-src="imagens/bluej_leilao_diagrama_classes.png" style="width:50.0%"></p>
 </section>
 <section id="section-28" class="slide level2">
 <h2></h2>
@@ -662,7 +662,7 @@
 </section>
 <section id="section-30" class="slide level2">
 <h2></h2>
-<p>Um objeto <code>Leillao</code> é o ponto de partida para o projeto.</p>
+<p>Um objeto <code>Leilao</code> é o ponto de partida para o projeto.</p>
 <ul>
 <li class="fragment">Quem quer vender itens os inserem no leilão através do método <code>cadastrarLote</code>,
 <ul>
@@ -843,7 +843,7 @@
 <p>A classe lote armazena a descrição do lote, um número e o lance mais alto.</p>
 </div>
 <div class="fragment">
-<p>O método <code>receberLance</code> trata o que acontece quando alguém dá um lante no lote.</p>
+<p>O método <code>ofertarLance</code> trata o que acontece quando alguém dá um lante no lote.</p>
 <ul>
 <li class="fragment">Ele precisa verificar se o lance é válido ou não.</li>
 <li class="fragment">Ele é válido se for o maior lance dado até o momento.</li>
@@ -856,9 +856,23 @@
 </section>
 <section id="section-41" class="slide level2">
 <h2></h2>
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">...</span><span class="op">.</span> </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">ofertarLance</span><span class="op">(</span>Lance lance<span class="op">)</span></span>
+<span id="cb9-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb9-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span><span class="op">(</span>lanceMaisAlto <span class="op">==</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb9-4"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// Não há lance anterior.</span></span>
+<span id="cb9-5"><a aria-hidden="true" tabindex="-1"></a>        lanceMaisAlto <span class="op">=</span> lance<span class="op">;</span></span>
+<span id="cb9-6"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb9-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb9-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span><span class="op">(</span>lance<span class="op">.</span><span class="fu">obterValor</span><span class="op">()</span> <span class="op">&gt;</span> lanceMaisAlto<span class="op">.</span><span class="fu">obterValor</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb9-9"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// O lance é melhor que o anterior.</span></span>
+<span id="cb9-10"><a aria-hidden="true" tabindex="-1"></a>        lanceMaisAlto <span class="op">=</span> lance<span class="op">;</span></span>
+<span id="cb9-11"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb9-12"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb9-13"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb9-14"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// O lance não é melhor.</span></span>
+<span id="cb9-15"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb9-16"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb9-17"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="a-classe-leilao" class="slide level2">
 <h2>A classe <code>Leilao</code></h2>
@@ -926,9 +940,9 @@
 <p>O método <code>darUmLance</code> inclui as duas instruções a seguir:</p>
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb13"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a>Lance lance <span class="op">=</span> <span class="kw">new</span> <span class="fu">Lance</span><span class="op">(</span>ofertante<span class="op">,</span> value<span class="op">);</span></span>
-<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> lanceDeuCerto <span class="op">=</span> loteSelecionado<span class="op">.</span><span class="fu">receberLance</span><span class="op">(</span>lance<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> bemSucedido <span class="op">=</span> loteSelecionado<span class="op">.</span><span class="fu">ofertarLance</span><span class="op">(</span>lance<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>A variável <code>lance</code> é usada aqui apenas como um espaço reservado para o objeto <code>Lance</code> recém-criado, antes de ser passado imediatamente para o método <code>receberLance</code> do lote.</p>
+<p>A variável <code>lance</code> é usada aqui apenas como um espaço reservado para o objeto <code>Lance</code> recém-criado, antes de ser passado imediatamente para o método <code>ofertarLance</code> do lote.</p>
 <p>Reescreva essas instruções para eliminar a variável <code>lance</code> usando um objeto anônimo, como visto no método <code>cadastrarLote</code>.</p>
 </div>
 </div>
