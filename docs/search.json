@@ -3322,14 +3322,14 @@
     "href": "cap4-3.html#section-14",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "O pseudocódigo abaixo mostra como geralmente utilizamos iteradores para percorrer uma coleção\n\n  // Obtemos o iterador da coleção\n  // - Como Iterator é uma classe genérica, precisamos \n  //   informar um segundo tipo (que é o tipo dos \n  //   elementos da coleção)\n  Iterator&lt;TipoDoElemento&gt; it = minhaColecao.iterator();\n  // Enquanto há elementos a processar\n  while (it.hasNext()) {      \n      // Chamamos it.next() para obter o próximo elemento\n      // Fazemos alguma coisa com o elemento\n  }"
+    "text": "O pseudocódigo abaixo mostra como geralmente utilizamos iteradores para percorrer uma coleção\n\n// Obtemos o iterador da coleção\n// - Como Iterator é uma classe genérica, precisamos \n//   informar um segundo tipo (que é o tipo dos \n//   elementos da coleção)\nIterator&lt;TipoDoElemento&gt; it = minhaColecao.iterator();\n// Enquanto há elementos a processar\nwhile (it.hasNext()) {      \n    // Chamamos it.next() para obter o próximo elemento\n    // Fazemos alguma coisa com o elemento\n}"
   },
   {
     "objectID": "cap4-3.html#section-15",
     "href": "cap4-3.html#section-15",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Podemos fazer então uma terceira versão do método que lista todas as músicas, agora usando um Iterator.\n\n\n  public void listarTodasAsMusicas() {\n      Iterator&lt;Musica&gt; it = musicas.iterator();\n      while (it.hasNext()) {\n          Musica musica = it.next();\n          System.out.println(musica.obterDetalhes());\n      }\n  }\n\n\n\nQuais são as diferenças para as versões anteriores do método listarTodosOsArquivos?"
+    "text": "Podemos fazer então uma terceira versão do método que lista todas as músicas, agora usando um Iterator.\n\n\npublic void listarTodasAsMusicas() {\n    Iterator&lt;Musica&gt; it = musicas.iterator();\n    while (it.hasNext()) {\n        Musica musica = it.next();\n        System.out.println(musica.obterDetalhes());\n    }\n}\n\n\n\nQuais são as diferenças para as versões anteriores do método listarTodosOsArquivos?"
   },
   {
     "objectID": "cap4-3.html#section-16",
@@ -3434,7 +3434,7 @@
     "href": "cap4-3.html#section-22",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "O trecho de código abaixo mostra como remover as músicas de um artista da coleção de músicas.\n\nRepare que chamamos o método remove do iterador e não do ArrayList.\n\n\n  Iterator&lt;Musica&gt; it = musicas.iterator();\n  while (it.hasNext()) {\n      Musica musica = it.next();\n      String artista = musica.obterArtista();\n      if (artista.equals(artistaARemover)) {\n          it.remove();\n      }\n  }"
+    "text": "O trecho de código abaixo mostra como remover as músicas de um artista da coleção de músicas.\n\nRepare que chamamos o método remove do iterador e não do ArrayList.\n\n\nIterator&lt;Musica&gt; it = musicas.iterator();\nwhile (it.hasNext()) {\n    Musica musica = it.next();\n    String artista = musica.obterArtista();\n    if (artista.equals(artistaARemover)) {\n        it.remove();\n    }\n}"
   },
   {
     "objectID": "cap4-3.html#section-23",
@@ -3539,7 +3539,7 @@
     "href": "cap4-3.html#section-37",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Portanto, inicializamos o atributo com o comando:\n\n  maiorLance = null;\n\n\nUm princípio muito importante é que, se uma variável tem valor null,\n\nela não pode ser usada para chamar métodos."
+    "text": "Portanto, inicializamos o atributo com o comando:\n\nmaiorLance = null;\n\n\nUm princípio muito importante é que, se uma variável tem valor null,\n\nela não pode ser usada para chamar métodos."
   },
   {
     "objectID": "cap4-3.html#section-38",
@@ -3574,7 +3574,7 @@
     "href": "cap4-3.html#section-42",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Veremos agora uma característica comum em programas OO ilustrados pela classe Leilao.\n\nO método cadastrarLote ilustra o uso de objetos anônimos:\n\n  lotes.add(new Lote(proximoNumeroDeLote, descricao));"
+    "text": "Veremos agora uma característica comum em programas OO ilustrados pela classe Leilao.\n\nO método cadastrarLote ilustra o uso de objetos anônimos:\n\nlotes.add(new Lote(proximoNumeroDeLote, descricao));"
   },
   {
     "objectID": "cap4-3.html#section-43",
@@ -3588,7 +3588,7 @@
     "href": "cap4-3.html#section-44",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Nós poderíamos ter feito o código separando as duas coisas:\n\n  Lote novoLote = new Lote(proximoNumeroDeLote, descricao);\n  lotes.add(novoLote);\n\n\nAs duas versões são equivalentes:\n\nMas se não usamos a variável novoLote para mais nada,\na versao original tem a vantagem de evitar a declaração de uma variável de uso limitado.\n\nChamamos de objeto anônimo (sem nome) pois é passado diretamente para o método."
+    "text": "Nós poderíamos ter feito o código separando as duas coisas:\n\nLote novoLote = new Lote(proximoNumeroDeLote, descricao);\nlotes.add(novoLote);\n\n\nAs duas versões são equivalentes:\n\nMas se não usamos a variável novoLote para mais nada,\na versao original tem a vantagem de evitar a declaração de uma variável de uso limitado.\n\nChamamos de objeto anônimo (sem nome) pois é passado diretamente para o método."
   },
   {
     "objectID": "cap5-2.html#section",
@@ -6829,7 +6829,7 @@
     "href": "cap4-3.html#section-45",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício 5\n\n\nO método darUmLance inclui as duas instruções a seguir:\n\n  Lance lance = new Lance(ofertante, value);\n  boolean lanceDeuCerto = loteSelecionado.receberLance(lance);\n\nA variável lance é usada aqui apenas como um espaço reservado para o objeto Lance recém-criado, antes de ser passado imediatamente para o método receberLance do lote.\nReescreva essas instruções para eliminar a variável lance usando um objeto anônimo, como visto no método cadastrarLote."
+    "text": "Exercício 5\n\n\nO método darUmLance inclui as duas instruções a seguir:\n\nLance lance = new Lance(ofertante, value);\nboolean lanceDeuCerto = loteSelecionado.receberLance(lance);\n\nA variável lance é usada aqui apenas como um espaço reservado para o objeto Lance recém-criado, antes de ser passado imediatamente para o método receberLance do lote.\nReescreva essas instruções para eliminar a variável lance usando um objeto anônimo, como visto no método cadastrarLote."
   },
   {
     "objectID": "cap4-3.html#section-46",
@@ -6864,7 +6864,7 @@
     "href": "cap4-3.html#section-50",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício 6\n\n\nAdicione um método close à classe Leilao. Este método deve iterar sobre a coleção de lotes e imprimir os detalhes de todos os lotes. Use um loop for-each. Qualquer lote que tenha recebido pelo menos um lance é considerado vendido, portanto, o que você está procurando são objetos Lote cujo atributo lanceMaisAlto não seja null. Use uma variável local dentro do loop para armazenar o valor retornado das chamadas ao método obterLanceMaisAlto e, em seguida, teste essa variável para verificar se o valor é null.\nPara lotes com um ofertante, os detalhes devem incluir o nome de quem arrematou e o valor do lance vencedor. Para lotes sem ofertantes, imprima um texto que indique isso."
+    "text": "Exercício 6\n\n\nAdicione um método fechar à classe Leilao. Este método deve iterar sobre a coleção de lotes e imprimir os detalhes de todos os lotes. Use um loop for-each. Qualquer lote que tenha recebido pelo menos um lance é considerado vendido, portanto, o que você está procurando são objetos Lote cujo atributo lanceMaisAlto não seja null. Use uma variável local dentro do loop para armazenar o valor retornado das chamadas ao método obterLanceMaisAlto e, em seguida, teste essa variável para verificar se o valor é null.\nPara lotes com um ofertante, os detalhes devem incluir o nome de quem arrematou e o valor do lance vencedor. Para lotes sem ofertantes, imprima um texto que indique isso."
   },
   {
     "objectID": "cap4-3.html#section-51",
@@ -6956,5 +6956,19 @@
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
     "text": "Este exemplo nos permite enfatizar uma das vantagens do loop for-each:\n\nRepare que esse código seria exatamente igual se a variável carros fosse um ArrayList em vez de um vetor.\nJá na opção anterior, usando loop for tradicional, os códigos seriam diferentes.\n\nPrimeiro porque consultamos o tamanho de um vetor usando o atributo length e de um ArrayList usando o método size.\nE segundo que acessamos um elemento por posição em um vetor usando [i] e em um ArrayList usando get(i)."
+  },
+  {
+    "objectID": "cap4-3.html#section-63",
+    "href": "cap4-3.html#section-63",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Na verdade a Aula 4.2 não é bem uma aula.\n\nO objetivo é reforçar a necessidade de estudarem em casa entre as aulas 4.1 e 4.3 para reforçar o entendimento do Capítulo 3.\n\n\nAlém de rever o material da primeira aula, é recomendável fazer o exercício do projeto canal,\n\nque será o primeiro da Aula Prática 4.4."
+  },
+  {
+    "objectID": "cap4-3.html#section-64",
+    "href": "cap4-3.html#section-64",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "O que foi visto na Aula 4.1 é suficiente para fazer os três primeiros exercícios.\n\nMas, caso se sinta confiante, tente fazer também dos demais exercícios.\nOs enunciados dos exercícios estão no arquivo README.md do projeto.\n\nDica: é mais fácil visualizá-los no próprio GitHub."
   }
 ]

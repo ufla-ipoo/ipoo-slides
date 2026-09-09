@@ -105,7 +105,6 @@ No método apresentado a seguir esse problema é resolvido
 
 ##
 
-::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
 /**
  * Lista todas as músicas que tenham uma string passada 
@@ -122,7 +121,6 @@ public void buscarNoTitulo(String stringDeBusca)
     }
 }
 ```
-:::
 
 ## 
 
@@ -184,16 +182,16 @@ O pseudocódigo abaixo mostra como geralmente utilizamos iteradores para percorr
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-  // Obtemos o iterador da coleção
-  // - Como Iterator é uma classe genérica, precisamos 
-  //   informar um segundo tipo (que é o tipo dos 
-  //   elementos da coleção)
-  Iterator<TipoDoElemento> it = minhaColecao.iterator();
-  // Enquanto há elementos a processar
-  while (it.hasNext()) {      
-      // Chamamos it.next() para obter o próximo elemento
-      // Fazemos alguma coisa com o elemento
-  }
+// Obtemos o iterador da coleção
+// - Como Iterator é uma classe genérica, precisamos 
+//   informar um segundo tipo (que é o tipo dos 
+//   elementos da coleção)
+Iterator<TipoDoElemento> it = minhaColecao.iterator();
+// Enquanto há elementos a processar
+while (it.hasNext()) {      
+    // Chamamos it.next() para obter o próximo elemento
+    // Fazemos alguma coisa com o elemento
+}
 ```
 :::
 
@@ -205,13 +203,13 @@ Podemos fazer então uma terceira versão do método que lista todas as músicas
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-  public void listarTodasAsMusicas() {
-      Iterator<Musica> it = musicas.iterator();
-      while (it.hasNext()) {
-          Musica musica = it.next();
-          System.out.println(musica.obterDetalhes());
-      }
-  }
+public void listarTodasAsMusicas() {
+    Iterator<Musica> it = musicas.iterator();
+    while (it.hasNext()) {
+        Musica musica = it.next();
+        System.out.println(musica.obterDetalhes());
+    }
+}
 ```
 ::: 
 
@@ -275,13 +273,13 @@ Remover elementos traz consequências importantes quando estamos iterando uma co
 
 . . .
 
-  ```{.java code-line-numbers="false"}
-  para cada música na colecao {
-      se musica.obterArtista() é o artista que não queremos mais {
-          colecao.remove(musica);
-      }
-  }
-  ```
+```{.java code-line-numbers="false"}
+para cada música na colecao {
+    se musica.obterArtista() é o artista que não queremos mais {
+        colecao.remove(musica);
+    }
+}
+```
 
 . . .
 
@@ -289,13 +287,13 @@ Apesar dessa forma parecer perfeitamente razoável, não é possível remover el
 
 ## {auto-animate=true}
 
-  ```{.java code-line-numbers="false"}
-  para cada música na colecao {
-      se musica.obterArtista() é o artista que não queremos mais {
-          colecao.remove(musica);
-      }
-  }
-  ```
+```{.java code-line-numbers="false"}
+para cada música na colecao {
+    se musica.obterArtista() é o artista que não queremos mais {
+        colecao.remove(musica);
+    }
+}
+```
 
 Apesar dessa forma parecer perfeitamente razoável, não é possível remover elementos usando um loop **for-each**.
 
@@ -317,14 +315,14 @@ O trecho de código abaixo mostra como remover as músicas de um artista da cole
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-  Iterator<Musica> it = musicas.iterator();
-  while (it.hasNext()) {
-      Musica musica = it.next();
-      String artista = musica.obterArtista();
-      if (artista.equals(artistaARemover)) {
-          it.remove();
-      }
-  }
+Iterator<Musica> it = musicas.iterator();
+while (it.hasNext()) {
+    Musica musica = it.next();
+    String artista = musica.obterArtista();
+    if (artista.equals(artistaARemover)) {
+        it.remove();
+    }
+}
 ```
 :::
 
@@ -501,7 +499,7 @@ Portanto, inicializamos o atributo com o comando:
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-  maiorLance = null;
+maiorLance = null;
 ```
 :::
 
@@ -595,7 +593,7 @@ O método `cadastrarLote` ilustra o uso de [objetos anônimos]{.alert}:
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-  lotes.add(new Lote(proximoNumeroDeLote, descricao));
+lotes.add(new Lote(proximoNumeroDeLote, descricao));
 ```
 :::
 
@@ -603,7 +601,7 @@ O método `cadastrarLote` ilustra o uso de [objetos anônimos]{.alert}:
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-  lotes.add(new Lote(proximoNumeroDeLote, descricao));
+lotes.add(new Lote(proximoNumeroDeLote, descricao));
 ```
 :::
 
@@ -618,8 +616,8 @@ Nós poderíamos ter feito o código separando as duas coisas:
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-  Lote novoLote = new Lote(proximoNumeroDeLote, descricao);
-  lotes.add(novoLote);
+Lote novoLote = new Lote(proximoNumeroDeLote, descricao);
+lotes.add(novoLote);
 ```
 :::
 
@@ -638,8 +636,8 @@ O método `darUmLance` inclui as duas instruções a seguir:
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
-  Lance lance = new Lance(ofertante, value);
-  boolean lanceDeuCerto = loteSelecionado.receberLance(lance);
+Lance lance = new Lance(ofertante, value);
+boolean lanceDeuCerto = loteSelecionado.receberLance(lance);
 ```
 :::
 
@@ -1060,3 +1058,24 @@ Na prática acabamos usando `ArrayList` em muitas situações mesmo quando temos
 
 - Mas, de toda forma, precisamos saber utilizar vetores pois é comum precisarmos usar métodos de classes da biblioteca do Java (ou de terceiros) que trabalham com vetores.
 
+# Sobre a Aula 4.2 (em casa) {background-color="#40666e"}
+
+##
+
+Na verdade a Aula 4.2 não é bem uma aula. 
+
+- O objetivo é reforçar a necessidade de estudarem em casa entre as aulas 4.1 e 4.3 para reforçar o entendimento do Capítulo 3. 
+
+. . .
+
+Além de rever o material da primeira aula, é recomendável fazer o exercício do **projeto `canal`**,
+
+- que será o primeiro da Aula Prática 4.4.
+
+##
+
+O que foi visto na Aula 4.1 é suficiente para fazer os três primeiros exercícios. 
+
+- Mas, caso se sinta confiante, tente fazer também dos demais exercícios.
+- Os enunciados dos exercícios estão no arquivo README.md do projeto.
+  - Dica: é mais fácil visualizá-los no próprio GitHub.
