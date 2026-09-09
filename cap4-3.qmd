@@ -352,6 +352,436 @@ Portanto, é uma boa ideia saber como remover elementos de uma coleção usando 
 Implemente um método na classe `OrganizadorDeMusicas` que receba uma string por parâmetro e remova todas as músicas cujos títulos tenham aquela string.
 :::
 
+# Um Sistema de Leilão {background-color="#40666e"}
+
+##
+
+Vamos dar continuidade aos novos conceitos que vimos neste capítulo em um contexto diferente.
+
+. . .
+
+O projeto [leilao](https://github.com/ufla-ipoo/leilao) modela parte da operação de um **sistema de leilão online**.
+
+## 
+
+Um leilão consiste de um conjunto de itens oferecidos para venda.
+
+- Esses itens são chamados de "lotes" e cada um tem um número único.
+- Uma pesssoa pode tentar comprar um lote dando um lance por ele.
+- A ideia é que o leilão tenha um limite de tempo (não implementado).
+- No final desse tempo, o lote é vendido para a pessoa que deu o maior lance.
+- Lotes sem nenhum lance continuam disponíveis para próximos leilões.
+
+##
+
+O projeto possui as classes: `Leilao`, `Lance`, `Lote` e `Pessoa`.
+
+- O diagrama de classes do BlueJ mostra que os relacionamentos entre as classes é um pouco mais complicado do que os exemplos que vimos até agora.
+
+![](imagens/bluej_leilao_diagrama_classes.png)
+
+##
+
+Vemos que objetos `Leilao` se relacionam com objetos das outras três classes.
+
+- Objetos `Lote` relacionam com objetos `Lance`.
+- E objetos `Lance` com objetos `Pessoa`.
+
+. . .
+
+Mas para saber quais informações os objetos acessam, precisaremos verificar o código-fonte.
+
+##
+
+Vamos avaliar o código do projeto.
+
+- Você verá coisas familiares, como o uso de `ArrayList` e loops.
+- E também várias coisas que você pode não entender a princípio,
+  - mas que são esperadas, já que a ideia é ver novas ideias e novas formas de fazer as coisas.
+
+##
+
+Um objeto `Leillao` é o ponto de partida para o projeto.
+
+- Quem quer vender itens os inserem no leilão através do método `cadastrarLote`, 
+  - mas fornecem apenas uma descrição (string).
+- O objeto `Leilao` cria então um objeto `Lote` cada cada lote cadastrado.
+
+. . .
+
+Isso modela o funcionamento de um leilão no mundo real.
+
+- Não é quem vende o item que define o código de identificação do lote.
+
+##
+
+Para dar lances, as pessoas devem se cadastrar na casa de leilões. 
+
+- Para isso, devemos primeiro criar objetos `Pessoa`.
+  - que tem apenas um nome no nosso projeto.
+- Quando alguém deseja dar um lance em um lote, deve chamar o método `darUmLance` do objeto `Leilao`, inserindo:
+  - o número do lote de seu interesse (e não o objeto lote!)
+  - o objeto `Pessoa` do comprador
+  - e o valor do lance.
+
+##
+
+Os objetos `Lote` permanecem internos ao objeto `Leilao` 
+
+- e são sempre referenciados externamente pelo seu número de lote.
+
+##
+
+O objeto `Leilao` transforma um valor monetário de lance em um objeto `Lance`
+
+- que registra o valor e a pessoa que ofereceu esse valor. 
+- É por isso que vemos uma ligação da classe `Lance` para a classe `Pessoa` no diagrama de classes.
+
+. . .
+
+No entanto, observe que não há ligação de `Lance` para `Lote`
+
+- a ligação é o inverso, porque um `Lote` registra qual é o lance mais alto atual para esse lote. 
+- Isso significa que o objeto `Lote` substituirá o objeto `Lance` que ele armazena cada vez que um lance mais alto for feito.
+
+
+##
+
+O que descrevemos aqui revela uma cadeia bastante aninhada de referências de objetos. 
+
+- Objetos `Leilao` armazenam objetos `Lote`; 
+- cada objeto `Lote` pode armazenar um objeto `Lance`; 
+- cada objeto `Lance` armazena um objeto `Pessoa`. 
+
+. . .
+
+Essas cadeias são muito comuns em programas, 
+
+- portanto, este projeto oferece uma boa oportunidade para explorar como elas funcionam na prática.
+
+##
+
+::: {.callout-note title="Exercício 4" icon=false}
+Crie um leilão com alguns lotes, pessoas e lances.
+Em seguida use o inspetor de objetos para investigar suas estruturas.
+Comece com o objeto leilão, e continue inspencionado a partir das referências que encontrar nos atributos dos objetos.
+:::
+
+. . .
+
+Vamos focar nossa atenção aqui nas classes `Leilao` e `Lote`.
+
+- Fica para casa o estudo das classes `Pessoa` e `Lance`
+
+## A palavra-chave `null`
+
+Vimos que um objeto `Lance` só é criado quando alguém realmente dá um `lance` no leilão.
+
+- E o construtor da classe `Lance` recebe a pessoa que fez o leilão
+- podendo assim inicializar seu atributo que referencia a pessoa que fez o lance.
+
+##
+
+Já um objeto `Lote` é criado quando ele é cadastrado no leilão
+ 
+- e, claro, não tem nenhum lance ainda.
+
+. . .
+
+Mesmo assim ele tem um atributo `Lance` para guardar o maior lance dado pelo lote.
+
+- Com que valor esse atributo deveria ser inicializado no construtor?
+- Precisamos de um valor que indique que "nenhum objeto" é referenciado pela variável.
+  - Em certo sentido, indicando que a variável está "vazia".
+- Em Java, indicamos isso com a [palavra-chave `null`]{.alert}.
+
+##
+
+Portanto, inicializamos o atributo com o comando:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  maiorLance = null;
+```
+:::
+
+. . .
+
+Um princípio **muito importante** é que, se uma variável tem valor `null`,
+
+- ela não pode ser usada para chamar métodos.
+
+##
+
+Isso acontece porque métodos pertencem a objetos.
+
+- E se a variável não referencia nenhum objeto, não há como chamar métodos.
+
+. . .
+
+Por isso, é muito comum (e recomendado), usar comandos `if` para verificar se uma variável tem valor `null`
+
+- antes de fazer uma chamada de método.
+
+. . .
+
+Sem isso, nosso programa pode gerar um erro de execução muito comum:
+
+- chamado `NullPointerException`.
+
+## 
+
+Muitas vezes, erros de `NullPointerException` ocorrem por falha na inicialização de atributos.
+
+- Por algum erro de implementação.
+
+. . .
+
+Mas não é o caso do projeto `leilao`.
+
+- Pois aqui, faz realmente sentido que um lote ainda não tenha um lance ao ser criado.
+
+##
+
+::: {.callout-tip title="Conceito" icon=false}
+A palavra reserva **null** do Java é usada para significar "nenhum objeto" quando uma variável não está referenciando nenhum objeto específico. Um atributo de tipo objeto que não tenha sido inicializado explicitamente tem o valor `null` por padrão.
+:::
+
+
+## A classe `Lote`
+
+. . .
+
+A classe lote armazena a descrição do lote, um número e o lance mais alto.
+
+. . .
+
+O método `receberLance` trata o que acontece quando alguém dá um lante no lote.
+
+- Ele precisa verificar se o lance é válido ou não.
+- Ele é válido se for o maior lance dado até o momento.
+- Veja a implementação a seguir e repare na verificação feita usando a palavra-chave `null`.
+  - Se o maior lance é `null`, esse é o primeiro lance e, portanto, o maior até agora.
+
+## 
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  .... 
+```
+:::
+
+## A classe `Leilao`
+
+A classe `Leilao` ilustra o uso de `ArrayList` e loop usando _for-each_.
+
+- Abra e avalie o código da classe.
+
+. . .
+
+Veja que o atributo `lotes` é um `ArrayList` usado para guardar os lotes oferecidos no leilão.
+
+- Ele são cadastrados através de uma descrição simples passada para o método `cadastrarLote`
+- Um novo lote é criado passando a descrição e um número de lote único para o construtor.
+- O novo lote é adicionado à coleção.
+
+## {auto-animate=true}
+
+Veremos agora uma característica comum em programas OO ilustrados pela classe `Leilao`.
+
+. . .
+
+O método `cadastrarLote` ilustra o uso de [objetos anônimos]{.alert}:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  lotes.add(new Lote(proximoNumeroDeLote, descricao));
+```
+:::
+
+## {auto-animate=true}
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  lotes.add(new Lote(proximoNumeroDeLote, descricao));
+```
+:::
+
+Aqui estamos fazendo duas coisas:
+
+- criando um novo objeto `Lote`.
+- E também passamos este novo objeto para o método `add` do `ArrayList`.
+
+##
+
+Nós poderíamos ter feito o código separando as duas coisas:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  Lote novoLote = new Lote(proximoNumeroDeLote, descricao);
+  lotes.add(novoLote);
+```
+:::
+
+. . .
+
+As duas versões são equivalentes:
+
+- Mas se não usamos a variável `novoLote` para mais nada,
+- a versao original tem a vantagem de evitar a declaração de uma variável de uso limitado.
+  - Chamamos de objeto anônimo (sem nome) pois é passado diretamente para o método.
+
+##
+
+::: {.callout-note title="Exercício 5" icon=false}
+O método `darUmLance` inclui as duas instruções a seguir:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+  Lance lance = new Lance(ofertante, value);
+  boolean lanceDeuCerto = loteSelecionado.receberLance(lance);
+```
+:::
+
+A variável `lance` é usada aqui apenas como um espaço reservado para o objeto `Lance` recém-criado, antes de ser passado imediatamente para o método `receberLance` do lote. 
+
+Reescreva essas instruções para eliminar a variável `lance` usando um objeto anônimo, como visto no método `cadastrarLote`.
+:::
+
+## Encadeamento de chamadas
+
+. . .
+
+Da forma como o projeto está implementado,
+
+- Como um objeto `Leilao` poderia identificar quem tem, no momento, o lance mais alto para um lote?
+
+. . .
+
+Ele precisará solicitar ao `Lote` que retorne o objeto `Lance` para esse lote, 
+
+- em seguida, solicitar ao objeto `Lance` a `Pessoa` que fez o lance e, 
+- por fim, solicitar ao objeto `Pessoa` o seu nome.
+
+##
+
+Ignorando a possibilidade de referências de objetos `null`, 
+
+- isso poderia ser feito com a seguinte sequência de chamadas.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+Lance lance = lote.obterLanceMaisAlto();
+Pessoa ofertante = lance.obterOfertante();
+String nome = ofertante.obterNome();
+System.out.println(nome);
+```
+:::
+
+##
+
+Como as variáveis `lance`, `ofertante` e `nome` estão sendo usadas 
+
+- simplesmente como estágios intermediários para chegar ao nome do ofertante,
+- é comum ver sequências como esta compactadas por meio do uso de referências a objetos anônimos. 
+
+. . .
+
+Por exemplo, podemos obter o mesmo efeito com o seguinte:
+
+```{.java code-line-numbers="false"}
+System.out.println(lote.obterLanceMaisAlto().obterOfertante().obterNome());
+```
+
+##
+
+```{.java code-line-numbers="false"}
+System.out.println(lote.obterLanceMaisAlto().obterOfertante().obterNome());
+```
+
+Pode dar a impressão que um método está chamando outro método, mas não é assim que deve ser lido. 
+
+- A chamada para `obterLanceMaisAlto` retorna um objeto `Lance` anônimo, 
+  - e o método `obterOfertante` é então chamado nesse objeto. 
+- Da mesma forma, `obterOfertante` retorna um objeto `Pessoa` anônimo,
+  - então `obterNome` é chamado nessa pessoa.
+
+##
+
+Essas cadeias de chamadas de métodos podem parecer complicadas, 
+
+- mas podem ser desvendadas se você entender as regras envolvidas. 
+
+. . .
+
+Mesmo que você opte por não escrever seu código dessa maneira mais concisa, 
+
+- é importante que você aprenda a ler códigos assim, 
+- porque você pode se deparar com ele no código criado por outro programador.
+
+##
+
+::: {.callout-note title="Exercício 6" icon=false}
+Adicione um método `fechar` à classe `Leilao`. 
+Este método deve iterar sobre a coleção de lotes e imprimir os detalhes de todos os lotes. 
+Use um loop _for-each_. 
+Qualquer lote que tenha recebido pelo menos um lance é considerado vendido, portanto, o que você está procurando são objetos `Lote` cujo atributo `lanceMaisAlto` não seja `null`. 
+Use uma variável local dentro do loop para armazenar o valor retornado das
+chamadas ao método `obterLanceMaisAlto` e, em seguida, teste essa variável para verificar se o valor é `null`.
+
+Para lotes com um ofertante, os detalhes devem incluir o nome de quem arrematou
+e o valor do lance vencedor. Para lotes sem ofertantes, imprima um texto que indique isso.
+:::
+
+##
+
+::: {.callout-note title="Exercício 7" icon=false}
+Adicione um método `obterNaoVendidos` à classe `Leilao` com o
+seguinte cabeçalho:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public ArrayList<Lote> obterNaoVendidos()
+```
+:::
+
+Este método deve iterar sobre o atributo `lotes`, armazenando os lotes não vendidos em uma nova variável local `ArrayList`. O que você está procurando são objetos `Lote` cujo campo `lanceMaisAlto` seja `null`. Ao final do método, retorne a lista de lotes não vendidos.
+:::
+
+##
+
+::: {.callout-note title="Exercício 8" icon=false}
+Suponha que a classe `Leilao` tivesse um método que permitisse remover um lote do leilão. Assumindo que os lotes restantes não tenham seus atributos `numeroDoLote` alterados quando um lote for removido, escreva qual
+você acha que seria o impacto no método `obterLote`.
+:::
+
+##
+
+::: {.callout-note title="Exercício 9" icon=false}
+Reescreva o método `obterLote` de forma que ele não dependa de um lote com um determinado número estar armazenado no índice (número–1) na coleção. Por exemplo, se o lote número 2 tiver sido removido, o lote número 3 terá sido movido do índice 2 para o índice 1, e todos os lotes de números superiores também terão sido movidos uma posição no índice. Você pode assumir que os lotes são sempre armazenados em ordem crescente de acordo com seus números de lote.
+:::
+
+##
+
+::: {.callout-note title="Exercício 10" icon=false}
+Adicione um método `removerLote` à classe `Leilao`, com o seguinte cabeçalho:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+/**
+* Remove o lote com o número fornecido.
+* @param number O número do lote a ser removido.
+* @return O lote com o número fornecido, ou `null` se
+* não houver tal lote.
+*/ public Lote removerLote(int numero)
+```
+:::
+
+Este método não deve pressupor que um lote com um determinado número esteja armazenado em qualquer local específico dentro da coleção.
+:::
+
 
 # Coleções de tamanho fixo {background-color="#40666e"}
 

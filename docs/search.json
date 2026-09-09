@@ -3455,140 +3455,140 @@
     "href": "cap4-3.html#section-25",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Apesar de coleções de tamanho flexível serem úteis na maioria dos casos,\n\nHá situações nas quais sabemos quantos elementos uma coleção terá durante todo o tempo de execução de um programa.\nNesses casos, é melhor utilizar uma coleção de tamanho fixo: um vetor (ou array)."
+    "text": "Vamos dar continuidade aos novos conceitos que vimos neste capítulo em um contexto diferente.\n\nO projeto leilao modela parte da operação de um sistema de leilão online."
   },
   {
     "objectID": "cap4-3.html#section-26",
     "href": "cap4-3.html#section-26",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Mas qual a vantagem de usarmos vetores?\n\nÉ que o acesso por índice (posição) é geralmente mais eficiente do que em uma coleção de tamanho flexível, como a ArrayList.\nOutra vantagem é que, em Java, podemos ter vetores de elementos que são tipos primitivos.\n\nEnquanto ArrayList, por exemplo, permite guardar apenas objetos.\nApesar de que, como veremos no próximo capítulo, há uma forma de lidarmos com isso usando wrappers (classes empacotadoras)."
+    "text": "Um leilão consiste de um conjunto de itens oferecidos para venda.\n\nEsses itens são chamados de “lotes” e cada um tem um número único.\nUma pesssoa pode tentar comprar um lote dando um lance por ele.\nA ideia é que o leilão tenha um limite de tempo (não implementado).\nNo final desse tempo, o lote é vendido para a pessoa que deu o maior lance.\nLotes sem nenhum lance continuam disponíveis para próximos leilões."
   },
   {
     "objectID": "cap4-3.html#section-27",
     "href": "cap4-3.html#section-27",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Um vetor é um grupo de variáveis que contém elementos de um mesmo tipo.\n\nEm Java, vetores são considerados objetos, portanto, são considerados tipos por referência.\nComo já mencionado, os elementos de um vetor podem ser de tipos primitivos ou de tipos por referência (objetos).\n\n\nExemplo de um vetor:"
+    "text": "O projeto possui as classes: Leilao, Lance, Lote e Pessoa.\n\nO diagrama de classes do BlueJ mostra que os relacionamentos entre as classes é um pouco mais complicado do que os exemplos que vimos até agora."
   },
   {
     "objectID": "cap4-3.html#section-28",
     "href": "cap4-3.html#section-28",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Podemos declarar um vetor em Java, utilizando uma das seguintes formas:\n\nTipoDosElementos[] nomeDoVetor;\nTipoDosElementos nomeDoVetor[];\n\n\nExemplos:\n\ndouble[] notas;\nint meuVetorDeInteiros[];\n\n\n\nRecomendo usar a primeira opção por ter melhor legibilidade."
+    "text": "Vemos que objetos Leilao se relacionam com objetos das outras três classes.\n\nObjetos Lote relacionam com objetos Lance.\nE objetos Lance com objetos Pessoa.\n\n\nMas para saber quais informações os objetos acessam, precisaremos verificar o código-fonte."
   },
   {
     "objectID": "cap4-3.html#section-29",
     "href": "cap4-3.html#section-29",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Como os demais objetos, os vetores são criados por meio da palavra-chave new:\n\nnomeDoVetor = new TipoDosElementos[capacidade];\n\n\nExemplos:\n\ndouble[] notas;\nnotas = new double[3];\n\nint meuVetorDeInteiros[];\nmeuVetorDeInteiros = new int[10];"
+    "text": "Vamos avaliar o código do projeto.\n\nVocê verá coisas familiares, como o uso de ArrayList e loops.\nE também várias coisas que você pode não entender a princípio,\n\nmas que são esperadas, já que a ideia é ver novas ideias e novas formas de fazer as coisas."
   },
   {
     "objectID": "cap4-3.html#section-30",
     "href": "cap4-3.html#section-30",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Há ainda outras duas formas alternativas de se instanciar um vetor.\n\n\n// Declara e instancia em uma única linha\nint meuVetorDeInteiros[] = new int[10];\n\n// Declara, instancia um vetor com 3 posições e \n// já inicializa os seus valores\ndouble notas[] = {7.5, 8.0, 9.0};"
+    "text": "Um objeto Leillao é o ponto de partida para o projeto.\n\nQuem quer vender itens os inserem no leilão através do método cadastrarLote,\n\nmas fornecem apenas uma descrição (string).\n\nO objeto Leilao cria então um objeto Lote cada cada lote cadastrado.\n\n\nIsso modela o funcionamento de um leilão no mundo real.\n\nNão é quem vende o item que define o código de identificação do lote."
   },
   {
     "objectID": "cap4-3.html#section-31",
     "href": "cap4-3.html#section-31",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Em C++ um vetor criado, mas não inicializado, pode conter lixo de memória.\n\nMas em Java, vale a regra de inicialização igual a dos atributos.\n\nVetor de tipos numéricos tem todos os elementos inicializados com zero.\nVetor de booleanos tem todos os elementos inicializados com false.\nVetor de objetos tem todos os elementos inicializados com null."
+    "text": "Para dar lances, as pessoas devem se cadastrar na casa de leilões.\n\nPara isso, devemos primeiro criar objetos Pessoa.\n\nque tem apenas um nome no nosso projeto.\n\nQuando alguém deseja dar um lance em um lote, deve chamar o método darUmLance do objeto Leilao, inserindo:\n\no número do lote de seu interesse (e não o objeto lote!)\no objeto Pessoa do comprador\ne o valor do lance."
   },
   {
     "objectID": "cap4-3.html#section-32",
     "href": "cap4-3.html#section-32",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Este exemplo nos permite enfatizar uma das vantagens do loop for-each:\n\nRepare que esse código seria exatamente igual se a variável carros fosse um ArrayList em vez de um vetor.\nJá na opção anterior, usando loop for tradicional, os códigos seriam diferentes.\n\nPrimeiro porque consultamos o tamanho de um vetor usando o atributo length e de um ArrayList usando o método size.\nE segundo que acessamos um elemento por posição em um vetor usando [i] e em um ArrayList usando get(i)."
+    "text": "Os objetos Lote permanecem internos ao objeto Leilao\n\ne são sempre referenciados externamente pelo seu número de lote."
   },
   {
     "objectID": "cap4-3.html#section-33",
     "href": "cap4-3.html#section-33",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Na prática acabamos usando ArrayList em muitas situações mesmo quando temos uma quantidade fixa de elementos.\n\nMas, de toda forma, precisamos saber utilizar vetores pois é comum precisarmos usar métodos de classes da biblioteca do Java (ou de terceiros) que trabalham com vetores."
+    "text": "O objeto Leilao transforma um valor monetário de lance em um objeto Lance\n\nque registra o valor e a pessoa que ofereceu esse valor.\nÉ por isso que vemos uma ligação da classe Lance para a classe Pessoa no diagrama de classes.\n\n\nNo entanto, observe que não há ligação de Lance para Lote\n\na ligação é o inverso, porque um Lote registra qual é o lance mais alto atual para esse lote.\nIsso significa que o objeto Lote substituirá o objeto Lance que ele armazena cada vez que um lance mais alto for feito."
   },
   {
     "objectID": "cap4-3.html#section-34",
     "href": "cap4-3.html#section-34",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Toda vez que o método act é chamado, a próxima imagem do vetor é exibida.\n\n    public void act()\n    {        \n        // início do método que trata eventos de teclado omitido\n        \n        // incrementamos o índice da imagem atual para que\n        // possamos usar a próxima imagem.\n        indiceImagemAtual++;\n        // mas se o índice chegou ao final do vetor, voltamos para a primeira posição\n        if (indiceImagemAtual &gt;= imagens.length) {\n            indiceImagemAtual = 0;\n        }\n        // usamos então a próxima imagem, como imagem do cavaleiro\n        setImage(imagens[indiceImagemAtual]);\n    }"
+    "text": "O que descrevemos aqui revela uma cadeia bastante aninhada de referências de objetos.\n\nObjetos Leilao armazenam objetos Lote;\ncada objeto Lote pode armazenar um objeto Lance;\ncada objeto Lance armazena um objeto Pessoa.\n\n\nEssas cadeias são muito comuns em programas,\n\nportanto, este projeto oferece uma boa oportunidade para explorar como elas funcionam na prática."
   },
   {
     "objectID": "cap4-3.html#section-35",
     "href": "cap4-3.html#section-35",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício (entrega)\n\n\nImplemente as últimas alterações apresentadas da classe Cavaleiro: a criação do atributo indiceImagemAtual e alterações no construtor e no método act.\nAgora crie um objeto Cavaleiro e execute o jogo.\nO que achou da animação?"
+    "text": "Exercício 4\n\n\nCrie um leilão com alguns lotes, pessoas e lances. Em seguida use o inspetor de objetos para investigar suas estruturas. Comece com o objeto leilão, e continue inspencionado a partir das referências que encontrar nos atributos dos objetos.\n\n\n\n\n\nVamos focar nossa atenção aqui nas classes Leilao e Lote.\n\nFica para casa o estudo das classes Pessoa e Lance"
   },
   {
     "objectID": "cap4-3.html#section-36",
     "href": "cap4-3.html#section-36",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Veja que a animação ficou muito acelerada.\n\nIsso porque a quantidade de vezes por segundo que o método act está sendo chamado é muito alta para as imagens que estamos usando.\n\n\nComo podemos resolver?\n\nPodemos fazer com que cada imagem seja usada por mais de uma execução do método act.\n\nOu dizendo, de outra forma, podemos fazer a atualização a cada X vezes que o método é chamado.\nEm vez de atualizar em toda chamada.\n\n\n\n\nE como podemos fazer isso?"
+    "text": "Já um objeto Lote é criado quando ele é cadastrado no leilão\n\ne, claro, não tem nenhum lance ainda.\n\n\nMesmo assim ele tem um atributo Lance para guardar o maior lance dado pelo lote.\n\nCom que valor esse atributo deveria ser inicializado no construtor?\nPrecisamos de um valor que indique que “nenhum objeto” é referenciado pela variável.\n\nEm certo sentido, indicando que a variável está “vazia”.\n\nEm Java, indicamos isso com a palavra-chave null."
   },
   {
     "objectID": "cap4-3.html#section-37",
     "href": "cap4-3.html#section-37",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Repare que podemos definir de quantos em quantos passos precisamos atualizar as imagens.\n\nE usarmos essa informação para saber se é hora de atualizar a imagem ou não.\n\nMas, para usá-lo, precisamos contar quantos passos foram dados desde a última atualização.\n\n\n\nVamos então definir esses dois atributos na classe Cavaleiro.\n\n\n\n    private int passosParaAtualizarImagem;\n    private int passosDesdeUltimaAtualizacaoImagem;\n\n\n\nE inicializá-los no construtor da classe.\n\nInicializamos passosDesdeUltimaAtualizacaoImagem com zero.\nMas qual valor devemos usar para passosDesdeUltimaAtualizacaoImagem?\n\nAqui vai um processo de tentativa e erro.\nVamos experimentando até achar um valor que a animação pareça razoável."
+    "text": "Portanto, inicializamos o atributo com o comando:\n\n  maiorLance = null;\n\n\nUm princípio muito importante é que, se uma variável tem valor null,\n\nela não pode ser usada para chamar métodos."
   },
   {
     "objectID": "cap4-3.html#section-38",
     "href": "cap4-3.html#section-38",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Por fim, vamos alterar o método act para usar os atributos que criamos\n\n\n    public void act()\n    {        \n        // início do método que trata eventos de teclado omitido\n\n        // contamos mais um passo desde a última atualização da imagem\n        passosDesdeUltimaAtualizacaoImagem++;\n        \n        // se já se passaram os passos necessários para atualizar a imagem\n        if (passosDesdeUltimaAtualizacaoImagem &gt;= passosParaAtualizarImagem) {\n            // a imagem será atualizada, então voltamos o valor da variável para zero\n            passosDesdeUltimaAtualizacaoImagem = 0;\n            \n            // e atualizamos a imagem (é o código que já tínhamos feito antes)\n            indiceImagemAtual++;\n            if (indiceImagemAtual &gt;= imagens.length) {\n                indiceImagemAtual = 0;\n            }\n            setImage(imagens[indiceImagemAtual]);\n        }\n    }"
+    "text": "Isso acontece porque métodos pertencem a objetos.\n\nE se a variável não referencia nenhum objeto, não há como chamar métodos.\n\n\nPor isso, é muito comum (e recomendado), usar comandos if para verificar se uma variável tem valor null\n\nantes de fazer uma chamada de método.\n\n\n\nSem isso, nosso programa pode gerar um erro de execução muito comum:\n\nchamado NullPointerException."
   },
   {
     "objectID": "cap4-3.html#section-39",
     "href": "cap4-3.html#section-39",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício (entrega)\n\n\nImplemente as últimas alterações para uso dos atributos passosParaAtualizarImagem e passosDesdeUltimaAtualizacaoImagem na classe Cavaleiro.\nExecute o jogo e veja o resultado. Altere o valor do atributo passosParaAtualizarImagem até encontrar um valor interessante. Qual valor achou melhor?"
+    "text": "Muitas vezes, erros de NullPointerException ocorrem por falha na inicialização de atributos.\n\nPor algum erro de implementação.\n\n\nMas não é o caso do projeto leilao.\n\nPois aqui, faz realmente sentido que um lote ainda não tenha um lance ao ser criado."
   },
   {
     "objectID": "cap4-3.html#section-40",
     "href": "cap4-3.html#section-40",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Repare que usamos um vetor para guardar as imagens porque sabemos que usaremos 10 imagens e isso não vai mudar durante a execução do jogo.\n\nEsse, portanto, é um exemplo prático da utilidade de vetores em Java."
+    "text": "Conceito\n\n\nA palavra reserva null do Java é usada para significar “nenhum objeto” quando uma variável não está referenciando nenhum objeto específico. Um atributo de tipo objeto que não tenha sido inicializado explicitamente tem o valor null por padrão."
   },
   {
     "objectID": "cap4-3.html#section-41",
     "href": "cap4-3.html#section-41",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Mas, pensando no jogo, repare que fizemos todo esse trabalho só para tratar o movimento de corpo do personagem parado.\n\nJá que quando ele se movimenta, ele continua deslizando pela tela.\nComo podemos tratar isso?\n\n\nVeja que, nas imagens que baixamos, há imagens para a ação de caminhar (walk).\n\nBasta, portanto, seguirmos a mesma ideia:\n\nCriarmos um novo vetor de imagens.\nFazermos com o que a imagem seja alterada a cada X passos (usando passosParaAtualizarImagem).\n\n\n\n\nMas há um “detalhe” importante:\n\nPrecisamos agora saber quando o cavaleiro está parado e quando está se movimentando.\nPara saber qual vetor de imagens usarmos."
+    "text": "...."
   },
   {
     "objectID": "cap4-3.html#section-42",
     "href": "cap4-3.html#section-42",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício - DESAFIO\n\n\nAltere a classe Cavaleiro de forma que ela use as imagens com prefixo Walk, quando o cavaleiro estiver se movimentando.\nVocê precisará criar outro atributo vetor de imagens e carregar nele as imagens.\nAlém disso, precisará de um atributo para indicar a ação atual do cavaleiro (se ele está parado ou caminhando). O atributo deve ser atualizado ao tratar os eventos do teclado, e deve ser usado para saber qual vetor de imagens utilizar.\nPor enquanto, não se preocupe com a movimentação para a esquerda."
+    "text": "Veremos agora uma característica comum em programas OO ilustrados pela classe Leilao.\n\nO método cadastrarLote ilustra o uso de objetos anônimos:\n\n  lotes.add(new Lote(proximoNumeroDeLote, descricao));"
   },
   {
     "objectID": "cap4-3.html#section-43",
     "href": "cap4-3.html#section-43",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Exercício - DESAFIO\n\n\nA ideia agora é tratar a movimentação para a esquerda.\nRepare que, nesse caso, o ideal seria mostrar o cavaleiro olhando para a esquerda. Uma forma de fazer isso é invertermos a imagem horizontalmente. A classe GreenfootImage tem um método chamado mirrorHorizontally que faz exatamente isso.\nPara tratar a movimentação para a esquerda, precisaremos ter agora quatro vetores de imagens: parado olhando para a direita, parado olhando para a esquerda, caminhando para a direita e caminhando para a esquerda. Os dois vetores para a direita você já tratou no exercício anterior. Já os outros dois você pode carregar as mesmas imagens e usar o método mirrorHorizontally para invertê-las.\nAlém disso, é necessário que o atributo que indica a ação do cavaleiro tenha quatro estados, assim como os vetores.\nE aí? Vai encarar o desafio?"
+    "text": "lotes.add(new Lote(proximoNumeroDeLote, descricao));\n\nAqui estamos fazendo duas coisas:\n\ncriando um novo objeto Lote.\nE também passamos este novo objeto para o método add do ArrayList."
   },
   {
     "objectID": "cap4-3.html#section-44",
     "href": "cap4-3.html#section-44",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Para ter presença nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nResponda às tarefas no Campus Virtual enviando o o seu projeto do organizador-musicas-v5 e o projeto criado no Greenfoot com a animação do cavaleiro, contendo as alterações solicitadas nos exercícios ao longo dos slides."
+    "text": "Nós poderíamos ter feito o código separando as duas coisas:\n\n  Lote novoLote = new Lote(proximoNumeroDeLote, descricao);\n  lotes.add(novoLote);\n\n\nAs duas versões são equivalentes:\n\nMas se não usamos a variável novoLote para mais nada,\na versao original tem a vantagem de evitar a declaração de uma variável de uso limitado.\n\nChamamos de objeto anônimo (sem nome) pois é passado diretamente para o método."
   },
   {
     "objectID": "cap5-2.html#section",
@@ -6795,5 +6795,166 @@
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "Usando for-each com vetores",
     "text": "Usando for-each com vetores\n\nfor(Carro carro : carros) {\n    if (carro != null) {\n        // Estamos exibindo nome do carro chamando \n        // o método obterNome\n        System.out.println(carro.obterNome());\n    }\n}\n\nEste exemplo nos permite enfatizar uma das vantagens do loop for-each:\n\nRepare que esse código seria exatamente igual se a variável carros fosse um ArrayList em vez de um vetor.\nJá na opção anterior, usando loop for tradicional, os códigos seriam diferentes.\n\nPrimeiro porque consultamos o tamanho de um vetor usando o atributo length e de um ArrayList usando o método size.\nE segundo que acessamos um elemento por posição em um vetor usando [i] e em um ArrayList usando get(i)."
+  },
+  {
+    "objectID": "cap4-3.html#a-palavra-chave-null",
+    "href": "cap4-3.html#a-palavra-chave-null",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "A palavra-chave null",
+    "text": "A palavra-chave null\nVimos que um objeto Lance só é criado quando alguém realmente dá um lance no leilão.\n\nE o construtor da classe Lance recebe a pessoa que fez o leilão\npodendo assim inicializar seu atributo que referencia a pessoa que fez o lance."
+  },
+  {
+    "objectID": "cap4-3.html#a-classe-lote",
+    "href": "cap4-3.html#a-classe-lote",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "A classe Lote",
+    "text": "A classe Lote\n\nA classe lote armazena a descrição do lote, um número e o lance mais alto.\n\n\nO método receberLance trata o que acontece quando alguém dá um lante no lote.\n\nEle precisa verificar se o lance é válido ou não.\nEle é válido se for o maior lance dado até o momento.\nVeja a implementação a seguir e repare na verificação feita usando a palavra-chave null.\n\nSe o maior lance é null, esse é o primeiro lance e, portanto, o maior até agora."
+  },
+  {
+    "objectID": "cap4-3.html#a-classe-leilao",
+    "href": "cap4-3.html#a-classe-leilao",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "A classe Leilao",
+    "text": "A classe Leilao\nA classe Leilao ilustra o uso de ArrayList e loop usando for-each.\n\nAbra e avalie o código da classe.\n\n\nVeja que o atributo lotes é um ArrayList usado para guardar os lotes oferecidos no leilão.\n\nEle são cadastrados através de uma descrição simples passada para o método cadastrarLote\nUm novo lote é criado passando a descrição e um número de lote único para o construtor.\nO novo lote é adicionado à coleção."
+  },
+  {
+    "objectID": "cap4-3.html#encadeamento-de-chamadas",
+    "href": "cap4-3.html#encadeamento-de-chamadas",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "Encadeamento de chamadas",
+    "text": "Encadeamento de chamadas\n\nDa forma como o projeto está implementado,\n\nComo um objeto Leilao poderia identificar quem tem, no momento, o lance mais alto para um lote?\n\n\n\nEle precisará solicitar ao Lote que retorne o objeto Lance para esse lote,\n\nem seguida, solicitar ao objeto Lance a Pessoa que fez o lance e,\npor fim, solicitar ao objeto Pessoa o seu nome."
+  },
+  {
+    "objectID": "cap4-3.html#section-45",
+    "href": "cap4-3.html#section-45",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Exercício 5\n\n\nO método darUmLance inclui as duas instruções a seguir:\n\n  Lance lance = new Lance(ofertante, value);\n  boolean lanceDeuCerto = loteSelecionado.receberLance(lance);\n\nA variável lance é usada aqui apenas como um espaço reservado para o objeto Lance recém-criado, antes de ser passado imediatamente para o método receberLance do lote.\nReescreva essas instruções para eliminar a variável lance usando um objeto anônimo, como visto no método cadastrarLote."
+  },
+  {
+    "objectID": "cap4-3.html#section-46",
+    "href": "cap4-3.html#section-46",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Ignorando a possibilidade de referências de objetos null,\n\nisso poderia ser feito com a seguinte sequência de chamadas.\n\n\n\nLance lance = lote.obterLanceMaisAlto();\nPessoa ofertante = lance.obterOfertante();\nString nome = ofertante.obterNome();\nSystem.out.println(nome);"
+  },
+  {
+    "objectID": "cap4-3.html#section-47",
+    "href": "cap4-3.html#section-47",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Como as variáveis lance, ofertante e nome estão sendo usadas\n\nsimplesmente como estágios intermediários para chegar ao nome do ofertante,\né comum ver sequências como esta compactadas por meio do uso de referências a objetos anônimos.\n\n\nPor exemplo, podemos obter o mesmo efeito com o seguinte:\nSystem.out.println(lote.obterLanceMaisAlto().obterOfertante().obterNome());"
+  },
+  {
+    "objectID": "cap4-3.html#section-48",
+    "href": "cap4-3.html#section-48",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "System.out.println(lote.obterLanceMaisAlto().obterOfertante().obterNome());\nPode dar a impressão que um método está chamando outro método, mas não é assim que deve ser lido.\n\nA chamada para obterLanceMaisAlto retorna um objeto Lance anônimo,\n\ne o método obterOfertante é então chamado nesse objeto.\n\nDa mesma forma, obterOfertante retorna um objeto Pessoa anônimo,\n\nentão obterNome é chamado nessa pessoa."
+  },
+  {
+    "objectID": "cap4-3.html#section-49",
+    "href": "cap4-3.html#section-49",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Essas cadeias de chamadas de métodos podem parecer complicadas,\n\nmas podem ser desvendadas se você entender as regras envolvidas.\n\n\nMesmo que você opte por não escrever seu código dessa maneira mais concisa,\n\né importante que você aprenda a ler códigos assim,\nporque você pode se deparar com ele no código criado por outro programador."
+  },
+  {
+    "objectID": "cap4-3.html#section-50",
+    "href": "cap4-3.html#section-50",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Exercício 6\n\n\nAdicione um método close à classe Leilao. Este método deve iterar sobre a coleção de lotes e imprimir os detalhes de todos os lotes. Use um loop for-each. Qualquer lote que tenha recebido pelo menos um lance é considerado vendido, portanto, o que você está procurando são objetos Lote cujo atributo lanceMaisAlto não seja null. Use uma variável local dentro do loop para armazenar o valor retornado das chamadas ao método obterLanceMaisAlto e, em seguida, teste essa variável para verificar se o valor é null.\nPara lotes com um ofertante, os detalhes devem incluir o nome de quem arrematou e o valor do lance vencedor. Para lotes sem ofertantes, imprima um texto que indique isso."
+  },
+  {
+    "objectID": "cap4-3.html#section-51",
+    "href": "cap4-3.html#section-51",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Exercício 7\n\n\nAdicione um método obterNaoVendidos à classe Leilao com o seguinte cabeçalho:\n\npublic ArrayList&lt;Lote&gt; obterNaoVendidos()\n\nEste método deve iterar sobre o atributo lotes, armazenando os lotes não vendidos em uma nova variável local ArrayList. O que você está procurando são objetos Lote cujo campo lanceMaisAlto seja null. Ao final do método, retorne a lista de lotes não vendidos."
+  },
+  {
+    "objectID": "cap4-3.html#section-52",
+    "href": "cap4-3.html#section-52",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Exercício 8\n\n\nSuponha que a classe Leilao tivesse um método que permitisse remover um lote do leilão. Assumindo que os lotes restantes não tenham seus atributos numeroDoLote alterados quando um lote for removido, escreva qual você acha que seria o impacto no método obterLote."
+  },
+  {
+    "objectID": "cap4-3.html#section-53",
+    "href": "cap4-3.html#section-53",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Exercício 9\n\n\nReescreva o método obterLote de forma que ele não dependa de um lote com um determinado número estar armazenado no índice (número–1) na coleção. Por exemplo, se o lote número 2 tiver sido removido, o lote número 3 terá sido movido do índice 2 para o índice 1, e todos os lotes de números superiores também terão sido movidos uma posição no índice. Você pode assumir que os lotes são sempre armazenados em ordem crescente de acordo com seus números de lote."
+  },
+  {
+    "objectID": "cap4-3.html#section-54",
+    "href": "cap4-3.html#section-54",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Exercício 10\n\n\nAdicione um método removerLote à classe Leilao, com o seguinte cabeçalho:\n\n/**\n* Remove o lote com o número fornecido.\n* @param number O número do lote a ser removido.\n* @return O lote com o número fornecido, ou `null` se\n* não houver tal lote.\n*/ public Lote removerLote(int numero)\n\nEste método não deve pressupor que um lote com um determinado número esteja armazenado em qualquer local específico dentro da coleção."
+  },
+  {
+    "objectID": "cap4-3.html#section-55",
+    "href": "cap4-3.html#section-55",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Apesar de coleções de tamanho flexível serem úteis na maioria dos casos,\n\nHá situações nas quais sabemos quantos elementos uma coleção terá durante todo o tempo de execução de um programa.\nNesses casos, é melhor utilizar uma coleção de tamanho fixo: um vetor (ou array)."
+  },
+  {
+    "objectID": "cap4-3.html#section-56",
+    "href": "cap4-3.html#section-56",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Mas qual a vantagem de usarmos vetores?\n\nÉ que o acesso por índice (posição) é geralmente mais eficiente do que em uma coleção de tamanho flexível, como a ArrayList.\nOutra vantagem é que, em Java, podemos ter vetores de elementos que são tipos primitivos.\n\nEnquanto ArrayList, por exemplo, permite guardar apenas objetos.\nApesar de que, como veremos no próximo capítulo, há uma forma de lidarmos com isso usando wrappers (classes empacotadoras)."
+  },
+  {
+    "objectID": "cap4-3.html#section-57",
+    "href": "cap4-3.html#section-57",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Um vetor é um grupo de variáveis que contém elementos de um mesmo tipo.\n\nEm Java, vetores são considerados objetos, portanto, são considerados tipos por referência.\nComo já mencionado, os elementos de um vetor podem ser de tipos primitivos ou de tipos por referência (objetos).\n\n\nExemplo de um vetor:"
+  },
+  {
+    "objectID": "cap4-3.html#section-58",
+    "href": "cap4-3.html#section-58",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Podemos declarar um vetor em Java, utilizando uma das seguintes formas:\n\nTipoDosElementos[] nomeDoVetor;\nTipoDosElementos nomeDoVetor[];\n\n\nExemplos:\n\ndouble[] notas;\nint meuVetorDeInteiros[];\n\n\n\nRecomendo usar a primeira opção por ter melhor legibilidade."
+  },
+  {
+    "objectID": "cap4-3.html#section-59",
+    "href": "cap4-3.html#section-59",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Como os demais objetos, os vetores são criados por meio da palavra-chave new:\n\nnomeDoVetor = new TipoDosElementos[capacidade];\n\n\nExemplos:\n\ndouble[] notas;\nnotas = new double[3];\n\nint meuVetorDeInteiros[];\nmeuVetorDeInteiros = new int[10];"
+  },
+  {
+    "objectID": "cap4-3.html#section-60",
+    "href": "cap4-3.html#section-60",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Há ainda outras duas formas alternativas de se instanciar um vetor.\n\n\n// Declara e instancia em uma única linha\nint meuVetorDeInteiros[] = new int[10];\n\n// Declara, instancia um vetor com 3 posições e \n// já inicializa os seus valores\ndouble notas[] = {7.5, 8.0, 9.0};"
+  },
+  {
+    "objectID": "cap4-3.html#section-61",
+    "href": "cap4-3.html#section-61",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Em C++ um vetor criado, mas não inicializado, pode conter lixo de memória.\n\nMas em Java, vale a regra de inicialização igual a dos atributos.\n\nVetor de tipos numéricos tem todos os elementos inicializados com zero.\nVetor de booleanos tem todos os elementos inicializados com false.\nVetor de objetos tem todos os elementos inicializados com null."
+  },
+  {
+    "objectID": "cap4-3.html#vetores-vs.-arraylist-1",
+    "href": "cap4-3.html#vetores-vs.-arraylist-1",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "Vetores vs. ArrayList",
+    "text": "Vetores vs. ArrayList\nNa prática acabamos usando ArrayList em muitas situações mesmo quando temos uma quantidade fixa de elementos.\n\nMas, de toda forma, precisamos saber utilizar vetores pois é comum precisarmos usar métodos de classes da biblioteca do Java (ou de terceiros) que trabalham com vetores."
+  },
+  {
+    "objectID": "cap4-3.html#section-62",
+    "href": "cap4-3.html#section-62",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "Este exemplo nos permite enfatizar uma das vantagens do loop for-each:\n\nRepare que esse código seria exatamente igual se a variável carros fosse um ArrayList em vez de um vetor.\nJá na opção anterior, usando loop for tradicional, os códigos seriam diferentes.\n\nPrimeiro porque consultamos o tamanho de um vetor usando o atributo length e de um ArrayList usando o método size.\nE segundo que acessamos um elemento por posição em um vetor usando [i] e em um ArrayList usando get(i)."
   }
 ]

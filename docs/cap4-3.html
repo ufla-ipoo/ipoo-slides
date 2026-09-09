@@ -6,13 +6,14 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/quarto-contrib/jquery-3.6.3/jquery-3.6.3.min.js"></script>
 <script src="site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.js" defer="true"></script>
 <link href="site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
 <script src="site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.33">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
   <meta name="dcterms.date" content="2026-08-09">
@@ -35,9 +36,8 @@
       vertical-align: middle;
     }
     /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -48,7 +48,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -101,7 +101,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-5858f4e81da34f86931d7ba7687d5e8e.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -109,6 +109,204 @@
   <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -610,11 +808,500 @@
 </div>
 </section></section>
 <section>
+<section id="um-sistema-de-leilão" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Um Sistema de Leilão</h1>
+
+</section>
+<section id="section-25" class="slide level2">
+<h2></h2>
+<p>Vamos dar continuidade aos novos conceitos que vimos neste capítulo em um contexto diferente.</p>
+<div class="fragment">
+<p>O projeto <a href="https://github.com/ufla-ipoo/leilao">leilao</a> modela parte da operação de um <strong>sistema de leilão online</strong>.</p>
+</div>
+</section>
+<section id="section-26" class="slide level2">
+<h2></h2>
+<p>Um leilão consiste de um conjunto de itens oferecidos para venda.</p>
+<ul>
+<li class="fragment">Esses itens são chamados de “lotes” e cada um tem um número único.</li>
+<li class="fragment">Uma pesssoa pode tentar comprar um lote dando um lance por ele.</li>
+<li class="fragment">A ideia é que o leilão tenha um limite de tempo (não implementado).</li>
+<li class="fragment">No final desse tempo, o lote é vendido para a pessoa que deu o maior lance.</li>
+<li class="fragment">Lotes sem nenhum lance continuam disponíveis para próximos leilões.</li>
+</ul>
+</section>
+<section id="section-27" class="slide level2">
+<h2></h2>
+<p>O projeto possui as classes: <code>Leilao</code>, <code>Lance</code>, <code>Lote</code> e <code>Pessoa</code>.</p>
+<ul>
+<li class="fragment">O diagrama de classes do BlueJ mostra que os relacionamentos entre as classes é um pouco mais complicado do que os exemplos que vimos até agora.</li>
+</ul>
+<p><img data-src="imagens/bluej_leilao_diagrama_classes.png"></p>
+</section>
+<section id="section-28" class="slide level2">
+<h2></h2>
+<p>Vemos que objetos <code>Leilao</code> se relacionam com objetos das outras três classes.</p>
+<ul>
+<li class="fragment">Objetos <code>Lote</code> relacionam com objetos <code>Lance</code>.</li>
+<li class="fragment">E objetos <code>Lance</code> com objetos <code>Pessoa</code>.</li>
+</ul>
+<div class="fragment">
+<p>Mas para saber quais informações os objetos acessam, precisaremos verificar o código-fonte.</p>
+</div>
+</section>
+<section id="section-29" class="slide level2">
+<h2></h2>
+<p>Vamos avaliar o código do projeto.</p>
+<ul>
+<li class="fragment">Você verá coisas familiares, como o uso de <code>ArrayList</code> e loops.</li>
+<li class="fragment">E também várias coisas que você pode não entender a princípio,
+<ul>
+<li class="fragment">mas que são esperadas, já que a ideia é ver novas ideias e novas formas de fazer as coisas.</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-30" class="slide level2">
+<h2></h2>
+<p>Um objeto <code>Leillao</code> é o ponto de partida para o projeto.</p>
+<ul>
+<li class="fragment">Quem quer vender itens os inserem no leilão através do método <code>cadastrarLote</code>,
+<ul>
+<li class="fragment">mas fornecem apenas uma descrição (string).</li>
+</ul></li>
+<li class="fragment">O objeto <code>Leilao</code> cria então um objeto <code>Lote</code> cada cada lote cadastrado.</li>
+</ul>
+<div class="fragment">
+<p>Isso modela o funcionamento de um leilão no mundo real.</p>
+<ul>
+<li class="fragment">Não é quem vende o item que define o código de identificação do lote.</li>
+</ul>
+</div>
+</section>
+<section id="section-31" class="slide level2">
+<h2></h2>
+<p>Para dar lances, as pessoas devem se cadastrar na casa de leilões.</p>
+<ul>
+<li class="fragment">Para isso, devemos primeiro criar objetos <code>Pessoa</code>.
+<ul>
+<li class="fragment">que tem apenas um nome no nosso projeto.</li>
+</ul></li>
+<li class="fragment">Quando alguém deseja dar um lance em um lote, deve chamar o método <code>darUmLance</code> do objeto <code>Leilao</code>, inserindo:
+<ul>
+<li class="fragment">o número do lote de seu interesse (e não o objeto lote!)</li>
+<li class="fragment">o objeto <code>Pessoa</code> do comprador</li>
+<li class="fragment">e o valor do lance.</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-32" class="slide level2">
+<h2></h2>
+<p>Os objetos <code>Lote</code> permanecem internos ao objeto <code>Leilao</code></p>
+<ul>
+<li class="fragment">e são sempre referenciados externamente pelo seu número de lote.</li>
+</ul>
+</section>
+<section id="section-33" class="slide level2">
+<h2></h2>
+<p>O objeto <code>Leilao</code> transforma um valor monetário de lance em um objeto <code>Lance</code></p>
+<ul>
+<li class="fragment">que registra o valor e a pessoa que ofereceu esse valor.</li>
+<li class="fragment">É por isso que vemos uma ligação da classe <code>Lance</code> para a classe <code>Pessoa</code> no diagrama de classes.</li>
+</ul>
+<div class="fragment">
+<p>No entanto, observe que não há ligação de <code>Lance</code> para <code>Lote</code></p>
+<ul>
+<li class="fragment">a ligação é o inverso, porque um <code>Lote</code> registra qual é o lance mais alto atual para esse lote.</li>
+<li class="fragment">Isso significa que o objeto <code>Lote</code> substituirá o objeto <code>Lance</code> que ele armazena cada vez que um lance mais alto for feito.</li>
+</ul>
+</div>
+</section>
+<section id="section-34" class="slide level2">
+<h2></h2>
+<p>O que descrevemos aqui revela uma cadeia bastante aninhada de referências de objetos.</p>
+<ul>
+<li class="fragment">Objetos <code>Leilao</code> armazenam objetos <code>Lote</code>;</li>
+<li class="fragment">cada objeto <code>Lote</code> pode armazenar um objeto <code>Lance</code>;</li>
+<li class="fragment">cada objeto <code>Lance</code> armazena um objeto <code>Pessoa</code>.</li>
+</ul>
+<div class="fragment">
+<p>Essas cadeias são muito comuns em programas,</p>
+<ul>
+<li class="fragment">portanto, este projeto oferece uma boa oportunidade para explorar como elas funcionam na prática.</li>
+</ul>
+</div>
+</section>
+<section id="section-35" class="slide level2">
+<h2></h2>
+<div title="Exercício 4">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 4</strong></p>
+</div>
+<div class="callout-content">
+<p>Crie um leilão com alguns lotes, pessoas e lances. Em seguida use o inspetor de objetos para investigar suas estruturas. Comece com o objeto leilão, e continue inspencionado a partir das referências que encontrar nos atributos dos objetos.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Vamos focar nossa atenção aqui nas classes <code>Leilao</code> e <code>Lote</code>.</p>
+<ul>
+<li class="fragment">Fica para casa o estudo das classes <code>Pessoa</code> e <code>Lance</code></li>
+</ul>
+</div>
+</section>
+<section id="a-palavra-chave-null" class="slide level2">
+<h2>A palavra-chave <code>null</code></h2>
+<p>Vimos que um objeto <code>Lance</code> só é criado quando alguém realmente dá um <code>lance</code> no leilão.</p>
+<ul>
+<li class="fragment">E o construtor da classe <code>Lance</code> recebe a pessoa que fez o leilão</li>
+<li class="fragment">podendo assim inicializar seu atributo que referencia a pessoa que fez o lance.</li>
+</ul>
+</section>
+<section id="section-36" class="slide level2">
+<h2></h2>
+<p>Já um objeto <code>Lote</code> é criado quando ele é cadastrado no leilão</p>
+<ul>
+<li class="fragment">e, claro, não tem nenhum lance ainda.</li>
+</ul>
+<div class="fragment">
+<p>Mesmo assim ele tem um atributo <code>Lance</code> para guardar o maior lance dado pelo lote.</p>
+<ul>
+<li class="fragment">Com que valor esse atributo deveria ser inicializado no construtor?</li>
+<li class="fragment">Precisamos de um valor que indique que “nenhum objeto” é referenciado pela variável.
+<ul>
+<li class="fragment">Em certo sentido, indicando que a variável está “vazia”.</li>
+</ul></li>
+<li class="fragment">Em Java, indicamos isso com a <span class="alert">palavra-chave <code>null</code></span>.</li>
+</ul>
+</div>
+</section>
+<section id="section-37" class="slide level2">
+<h2></h2>
+<p>Portanto, inicializamos o atributo com o comando:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a>  maiorLance <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Um princípio <strong>muito importante</strong> é que, se uma variável tem valor <code>null</code>,</p>
+<ul>
+<li class="fragment">ela não pode ser usada para chamar métodos.</li>
+</ul>
+</div>
+</section>
+<section id="section-38" class="slide level2">
+<h2></h2>
+<p>Isso acontece porque métodos pertencem a objetos.</p>
+<ul>
+<li class="fragment">E se a variável não referencia nenhum objeto, não há como chamar métodos.</li>
+</ul>
+<div class="fragment">
+<p>Por isso, é muito comum (e recomendado), usar comandos <code>if</code> para verificar se uma variável tem valor <code>null</code></p>
+<ul>
+<li class="fragment">antes de fazer uma chamada de método.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Sem isso, nosso programa pode gerar um erro de execução muito comum:</p>
+<ul>
+<li class="fragment">chamado <code>NullPointerException</code>.</li>
+</ul>
+</div>
+</section>
+<section id="section-39" class="slide level2">
+<h2></h2>
+<p>Muitas vezes, erros de <code>NullPointerException</code> ocorrem por falha na inicialização de atributos.</p>
+<ul>
+<li class="fragment">Por algum erro de implementação.</li>
+</ul>
+<div class="fragment">
+<p>Mas não é o caso do projeto <code>leilao</code>.</p>
+<ul>
+<li class="fragment">Pois aqui, faz realmente sentido que um lote ainda não tenha um lance ao ser criado.</li>
+</ul>
+</div>
+</section>
+<section id="section-40" class="slide level2">
+<h2></h2>
+<div title="Conceito">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Conceito</strong></p>
+</div>
+<div class="callout-content">
+<p>A palavra reserva <strong>null</strong> do Java é usada para significar “nenhum objeto” quando uma variável não está referenciando nenhum objeto específico. Um atributo de tipo objeto que não tenha sido inicializado explicitamente tem o valor <code>null</code> por padrão.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-classe-lote" class="slide level2">
+<h2>A classe <code>Lote</code></h2>
+<div class="fragment">
+<p>A classe lote armazena a descrição do lote, um número e o lance mais alto.</p>
+</div>
+<div class="fragment">
+<p>O método <code>receberLance</code> trata o que acontece quando alguém dá um lante no lote.</p>
+<ul>
+<li class="fragment">Ele precisa verificar se o lance é válido ou não.</li>
+<li class="fragment">Ele é válido se for o maior lance dado até o momento.</li>
+<li class="fragment">Veja a implementação a seguir e repare na verificação feita usando a palavra-chave <code>null</code>.
+<ul>
+<li class="fragment">Se o maior lance é <code>null</code>, esse é o primeiro lance e, portanto, o maior até agora.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-41" class="slide level2">
+<h2></h2>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">...</span><span class="op">.</span> </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="a-classe-leilao" class="slide level2">
+<h2>A classe <code>Leilao</code></h2>
+<p>A classe <code>Leilao</code> ilustra o uso de <code>ArrayList</code> e loop usando <em>for-each</em>.</p>
+<ul>
+<li class="fragment">Abra e avalie o código da classe.</li>
+</ul>
+<div class="fragment">
+<p>Veja que o atributo <code>lotes</code> é um <code>ArrayList</code> usado para guardar os lotes oferecidos no leilão.</p>
+<ul>
+<li class="fragment">Ele são cadastrados através de uma descrição simples passada para o método <code>cadastrarLote</code></li>
+<li class="fragment">Um novo lote é criado passando a descrição e um número de lote único para o construtor.</li>
+<li class="fragment">O novo lote é adicionado à coleção.</li>
+</ul>
+</div>
+</section>
+<section id="section-42" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<p>Veremos agora uma característica comum em programas OO ilustrados pela classe <code>Leilao</code>.</p>
+<div class="fragment">
+<p>O método <code>cadastrarLote</code> ilustra o uso de <span class="alert">objetos anônimos</span>:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb10"><pre class="sourceCode java code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb10-1" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>  lotes<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="kw">new</span> <span class="fu">Lote</span><span class="op">(</span>proximoNumeroDeLote<span class="op">,</span> descricao<span class="op">));</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-43" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb11"><pre class="sourceCode java code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb11-1" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>  lotes<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="kw">new</span> <span class="fu">Lote</span><span class="op">(</span>proximoNumeroDeLote<span class="op">,</span> descricao<span class="op">));</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Aqui estamos fazendo duas coisas:</p>
+<ul>
+<li class="fragment">criando um novo objeto <code>Lote</code>.</li>
+<li class="fragment">E também passamos este novo objeto para o método <code>add</code> do <code>ArrayList</code>.</li>
+</ul>
+</section>
+<section id="section-44" class="slide level2">
+<h2></h2>
+<p>Nós poderíamos ter feito o código separando as duas coisas:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb12"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a>  Lote novoLote <span class="op">=</span> <span class="kw">new</span> <span class="fu">Lote</span><span class="op">(</span>proximoNumeroDeLote<span class="op">,</span> descricao<span class="op">);</span></span>
+<span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a>  lotes<span class="op">.</span><span class="fu">add</span><span class="op">(</span>novoLote<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>As duas versões são equivalentes:</p>
+<ul>
+<li class="fragment">Mas se não usamos a variável <code>novoLote</code> para mais nada,</li>
+<li class="fragment">a versao original tem a vantagem de evitar a declaração de uma variável de uso limitado.
+<ul>
+<li class="fragment">Chamamos de objeto anônimo (sem nome) pois é passado diretamente para o método.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-45" class="slide level2">
+<h2></h2>
+<div title="Exercício 5">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 5</strong></p>
+</div>
+<div class="callout-content">
+<p>O método <code>darUmLance</code> inclui as duas instruções a seguir:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb13"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a>  Lance lance <span class="op">=</span> <span class="kw">new</span> <span class="fu">Lance</span><span class="op">(</span>ofertante<span class="op">,</span> value<span class="op">);</span></span>
+<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="dt">boolean</span> lanceDeuCerto <span class="op">=</span> loteSelecionado<span class="op">.</span><span class="fu">receberLance</span><span class="op">(</span>lance<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A variável <code>lance</code> é usada aqui apenas como um espaço reservado para o objeto <code>Lance</code> recém-criado, antes de ser passado imediatamente para o método <code>receberLance</code> do lote.</p>
+<p>Reescreva essas instruções para eliminar a variável <code>lance</code> usando um objeto anônimo, como visto no método <code>cadastrarLote</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="encadeamento-de-chamadas" class="slide level2">
+<h2>Encadeamento de chamadas</h2>
+<div class="fragment">
+<p>Da forma como o projeto está implementado,</p>
+<ul>
+<li class="fragment">Como um objeto <code>Leilao</code> poderia identificar quem tem, no momento, o lance mais alto para um lote?</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Ele precisará solicitar ao <code>Lote</code> que retorne o objeto <code>Lance</code> para esse lote,</p>
+<ul>
+<li class="fragment">em seguida, solicitar ao objeto <code>Lance</code> a <code>Pessoa</code> que fez o lance e,</li>
+<li class="fragment">por fim, solicitar ao objeto <code>Pessoa</code> o seu nome.</li>
+</ul>
+</div>
+</section>
+<section id="section-46" class="slide level2">
+<h2></h2>
+<p>Ignorando a possibilidade de referências de objetos <code>null</code>,</p>
+<ul>
+<li class="fragment">isso poderia ser feito com a seguinte sequência de chamadas.</li>
+</ul>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb14"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a>Lance lance <span class="op">=</span> lote<span class="op">.</span><span class="fu">obterLanceMaisAlto</span><span class="op">();</span></span>
+<span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a>Pessoa ofertante <span class="op">=</span> lance<span class="op">.</span><span class="fu">obterOfertante</span><span class="op">();</span></span>
+<span id="cb14-3"><a aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> nome <span class="op">=</span> ofertante<span class="op">.</span><span class="fu">obterNome</span><span class="op">();</span></span>
+<span id="cb14-4"><a aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>nome<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-47" class="slide level2">
+<h2></h2>
+<p>Como as variáveis <code>lance</code>, <code>ofertante</code> e <code>nome</code> estão sendo usadas</p>
+<ul>
+<li class="fragment">simplesmente como estágios intermediários para chegar ao nome do ofertante,</li>
+<li class="fragment">é comum ver sequências como esta compactadas por meio do uso de referências a objetos anônimos.</li>
+</ul>
+<div class="fragment">
+<p>Por exemplo, podemos obter o mesmo efeito com o seguinte:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>lote<span class="op">.</span><span class="fu">obterLanceMaisAlto</span><span class="op">().</span><span class="fu">obterOfertante</span><span class="op">().</span><span class="fu">obterNome</span><span class="op">());</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="section-48" class="slide level2">
+<h2></h2>
+<div class="sourceCode" id="cb16"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>lote<span class="op">.</span><span class="fu">obterLanceMaisAlto</span><span class="op">().</span><span class="fu">obterOfertante</span><span class="op">().</span><span class="fu">obterNome</span><span class="op">());</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Pode dar a impressão que um método está chamando outro método, mas não é assim que deve ser lido.</p>
+<ul>
+<li class="fragment">A chamada para <code>obterLanceMaisAlto</code> retorna um objeto <code>Lance</code> anônimo,
+<ul>
+<li class="fragment">e o método <code>obterOfertante</code> é então chamado nesse objeto.</li>
+</ul></li>
+<li class="fragment">Da mesma forma, <code>obterOfertante</code> retorna um objeto <code>Pessoa</code> anônimo,
+<ul>
+<li class="fragment">então <code>obterNome</code> é chamado nessa pessoa.</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-49" class="slide level2">
+<h2></h2>
+<p>Essas cadeias de chamadas de métodos podem parecer complicadas,</p>
+<ul>
+<li class="fragment">mas podem ser desvendadas se você entender as regras envolvidas.</li>
+</ul>
+<div class="fragment">
+<p>Mesmo que você opte por não escrever seu código dessa maneira mais concisa,</p>
+<ul>
+<li class="fragment">é importante que você aprenda a ler códigos assim,</li>
+<li class="fragment">porque você pode se deparar com ele no código criado por outro programador.</li>
+</ul>
+</div>
+</section>
+<section id="section-50" class="slide level2">
+<h2></h2>
+<div title="Exercício 6">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 6</strong></p>
+</div>
+<div class="callout-content">
+<p>Adicione um método close à classe <code>Leilao</code>. Este método deve iterar sobre a coleção de lotes e imprimir os detalhes de todos os lotes. Use um loop <em>for-each</em>. Qualquer lote que tenha recebido pelo menos um lance é considerado vendido, portanto, o que você está procurando são objetos <code>Lote</code> cujo atributo <code>lanceMaisAlto</code> não seja <code>null</code>. Use uma variável local dentro do loop para armazenar o valor retornado das chamadas ao método <code>obterLanceMaisAlto</code> e, em seguida, teste essa variável para verificar se o valor é <code>null</code>.</p>
+<p>Para lotes com um ofertante, os detalhes devem incluir o nome de quem arrematou e o valor do lance vencedor. Para lotes sem ofertantes, imprima um texto que indique isso.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-51" class="slide level2">
+<h2></h2>
+<div title="Exercício 7">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 7</strong></p>
+</div>
+<div class="callout-content">
+<p>Adicione um método <code>obterNaoVendidos</code> à classe <code>Leilao</code> com o seguinte cabeçalho:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb17"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">ArrayList</span><span class="op">&lt;</span>Lote<span class="op">&gt;</span> <span class="fu">obterNaoVendidos</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Este método deve iterar sobre o atributo <code>lotes</code>, armazenando os lotes não vendidos em uma nova variável local <code>ArrayList</code>. O que você está procurando são objetos <code>Lote</code> cujo campo <code>lanceMaisAlto</code> seja <code>null</code>. Ao final do método, retorne a lista de lotes não vendidos.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-52" class="slide level2">
+<h2></h2>
+<div title="Exercício 8">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 8</strong></p>
+</div>
+<div class="callout-content">
+<p>Suponha que a classe <code>Leilao</code> tivesse um método que permitisse remover um lote do leilão. Assumindo que os lotes restantes não tenham seus atributos <code>numeroDoLote</code> alterados quando um lote for removido, escreva qual você acha que seria o impacto no método <code>obterLote</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-53" class="slide level2">
+<h2></h2>
+<div title="Exercício 9">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 9</strong></p>
+</div>
+<div class="callout-content">
+<p>Reescreva o método <code>obterLote</code> de forma que ele não dependa de um lote com um determinado número estar armazenado no índice (número–1) na coleção. Por exemplo, se o lote número 2 tiver sido removido, o lote número 3 terá sido movido do índice 2 para o índice 1, e todos os lotes de números superiores também terão sido movidos uma posição no índice. Você pode assumir que os lotes são sempre armazenados em ordem crescente de acordo com seus números de lote.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-54" class="slide level2">
+<h2></h2>
+<div title="Exercício 10">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 10</strong></p>
+</div>
+<div class="callout-content">
+<p>Adicione um método <code>removerLote</code> à classe <code>Leilao</code>, com o seguinte cabeçalho:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb18"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb18-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb18-2"><a aria-hidden="true" tabindex="-1"></a><span class="co">*</span> Remove o lote com o n<span class="co">ú</span>mero fornecido<span class="co">.</span></span>
+<span id="cb18-3"><a aria-hidden="true" tabindex="-1"></a><span class="co">*</span> <span class="an">@param</span><span class="co"> </span><span class="an">number</span><span class="co"> </span>O n<span class="co">ú</span>mero do lote a ser removido<span class="co">.</span></span>
+<span id="cb18-4"><a aria-hidden="true" tabindex="-1"></a><span class="co">*</span> <span class="an">@return</span> O lote com o n<span class="co">ú</span>mero fornecido<span class="co">,</span> ou <span class="co">`</span>null<span class="co">`</span> se</span>
+<span id="cb18-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">*</span> n<span class="co">ã</span>o houver tal lote<span class="co">.</span></span>
+<span id="cb18-6"><a aria-hidden="true" tabindex="-1"></a><span class="co">*/</span> <span class="kw">public</span> Lote <span class="fu">removerLote</span><span class="op">(</span><span class="dt">int</span> numero<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Este método não deve pressupor que um lote com um determinado número esteja armazenado em qualquer local específico dentro da coleção.</p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
 <section id="coleções-de-tamanho-fixo" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Coleções de tamanho fixo</h1>
 
 </section>
-<section id="section-25" class="slide level2">
+<section id="section-55" class="slide level2">
 <h2></h2>
 <p>Apesar de coleções de tamanho flexível serem úteis na maioria dos casos,</p>
 <ul>
@@ -622,7 +1309,7 @@
 <li class="fragment">Nesses casos, é melhor utilizar uma <strong>coleção de tamanho fixo</strong>: <span class="alert">um vetor</span> (ou <em>array</em>).</li>
 </ul>
 </section>
-<section id="section-26" class="slide level2">
+<section id="section-56" class="slide level2">
 <h2></h2>
 <p>Mas qual a <strong>vantagem de usarmos vetores</strong>?</p>
 <ul>
@@ -634,7 +1321,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-27" class="slide level2">
+<section id="section-57" class="slide level2">
 <h2></h2>
 <p>Um <strong>vetor</strong> é um grupo de variáveis que contém <strong>elementos de um mesmo tipo</strong>.</p>
 <ul>
@@ -646,56 +1333,56 @@
 <p><img data-src="imagens/exemplo_vetor.png"></p>
 </div>
 </section>
-<section id="section-28" class="slide level2">
+<section id="section-58" class="slide level2">
 <h2></h2>
 <p>Podemos <strong>declarar um vetor</strong> em Java, utilizando uma das seguintes formas:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a>TipoDosElementos<span class="op">[]</span> nomeDoVetor<span class="op">;</span></span>
-<span id="cb8-2"><a aria-hidden="true" tabindex="-1"></a>TipoDosElementos nomeDoVetor<span class="op">[];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb19-1"><a aria-hidden="true" tabindex="-1"></a>TipoDosElementos<span class="op">[]</span> nomeDoVetor<span class="op">;</span></span>
+<span id="cb19-2"><a aria-hidden="true" tabindex="-1"></a>TipoDosElementos nomeDoVetor<span class="op">[];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Exemplos:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="dt">double</span><span class="op">[]</span> notas<span class="op">;</span></span>
-<span id="cb9-2"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb20-1"><a aria-hidden="true" tabindex="-1"></a><span class="dt">double</span><span class="op">[]</span> notas<span class="op">;</span></span>
+<span id="cb20-2"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
 <p>Recomendo usar a primeira opção por ter melhor legibilidade.</p>
 </div>
 </section>
-<section id="section-29" class="slide level2">
+<section id="section-59" class="slide level2">
 <h2></h2>
 <p>Como os demais objetos, os <strong>vetores são criados</strong> por meio da palavra-chave <code>new</code>:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb10"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a>nomeDoVetor <span class="op">=</span> <span class="kw">new</span> TipoDosElementos<span class="op">[</span>capacidade<span class="op">];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb21-1"><a aria-hidden="true" tabindex="-1"></a>nomeDoVetor <span class="op">=</span> <span class="kw">new</span> TipoDosElementos<span class="op">[</span>capacidade<span class="op">];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Exemplos:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb11"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a><span class="dt">double</span><span class="op">[]</span> notas<span class="op">;</span></span>
-<span id="cb11-2"><a aria-hidden="true" tabindex="-1"></a>notas <span class="op">=</span> <span class="kw">new</span> <span class="dt">double</span><span class="op">[</span><span class="dv">3</span><span class="op">];</span></span>
-<span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[];</span></span>
-<span id="cb11-5"><a aria-hidden="true" tabindex="-1"></a>meuVetorDeInteiros <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">10</span><span class="op">];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb22-1"><a aria-hidden="true" tabindex="-1"></a><span class="dt">double</span><span class="op">[]</span> notas<span class="op">;</span></span>
+<span id="cb22-2"><a aria-hidden="true" tabindex="-1"></a>notas <span class="op">=</span> <span class="kw">new</span> <span class="dt">double</span><span class="op">[</span><span class="dv">3</span><span class="op">];</span></span>
+<span id="cb22-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[];</span></span>
+<span id="cb22-5"><a aria-hidden="true" tabindex="-1"></a>meuVetorDeInteiros <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">10</span><span class="op">];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
-<section id="section-30" class="slide level2">
+<section id="section-60" class="slide level2">
 <h2></h2>
 <p>Há ainda outras duas formas alternativas de se instanciar um vetor.</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb12"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Declara e instancia em uma única linha</span></span>
-<span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[]</span> <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
-<span id="cb12-3"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Declara, instancia um vetor com 3 posições e </span></span>
-<span id="cb12-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">// já inicializa os seus valores</span></span>
-<span id="cb12-6"><a aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> notas<span class="op">[]</span> <span class="op">=</span> <span class="op">{</span><span class="fl">7.5</span><span class="op">,</span> <span class="fl">8.0</span><span class="op">,</span> <span class="fl">9.0</span><span class="op">};</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb23-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Declara e instancia em uma única linha</span></span>
+<span id="cb23-2"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[]</span> <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
+<span id="cb23-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Declara, instancia um vetor com 3 posições e </span></span>
+<span id="cb23-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">// já inicializa os seus valores</span></span>
+<span id="cb23-6"><a aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> notas<span class="op">[]</span> <span class="op">=</span> <span class="op">{</span><span class="fl">7.5</span><span class="op">,</span> <span class="fl">8.0</span><span class="op">,</span> <span class="fl">9.0</span><span class="op">};</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
-<section id="section-31" class="slide level2">
+<section id="section-61" class="slide level2">
 <h2></h2>
 <p>Em C++ um vetor criado, mas não inicializado, pode conter lixo de memória.</p>
 <ul>
@@ -716,11 +1403,11 @@
 </ul>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb13"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vetor<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
-<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// Usando vetor[i], estamos acessando a </span></span>
-<span id="cb13-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// posição i do vetor.</span></span>
-<span id="cb13-4"><a aria-hidden="true" tabindex="-1"></a>    vetor<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> i<span class="op">;</span></span>
-<span id="cb13-5"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb24-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vetor<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb24-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// Usando vetor[i], estamos acessando a </span></span>
+<span id="cb24-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// posição i do vetor.</span></span>
+<span id="cb24-4"><a aria-hidden="true" tabindex="-1"></a>    vetor<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> i<span class="op">;</span></span>
+<span id="cb24-5"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -729,9 +1416,9 @@
 <p>Como podemos então exibir todos os elementos de um vetor de inteiros chamado <code>vet</code>?</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb14"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vet<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
-<span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>vet<span class="op">[</span>i<span class="op">]);</span></span>
-<span id="cb14-3"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb25-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vet<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb25-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>vet<span class="op">[</span>i<span class="op">]);</span></span>
+<span id="cb25-3"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -746,11 +1433,11 @@
 </div>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb15"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">void</span> <span class="fu">preencherVetor</span><span class="op">(</span><span class="dt">int</span> vet<span class="op">[])</span> <span class="op">{</span></span>
-<span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vet<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
-<span id="cb15-3"><a aria-hidden="true" tabindex="-1"></a>        vet<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> i<span class="op">;</span></span>
-<span id="cb15-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb15-5"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb26-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">void</span> <span class="fu">preencherVetor</span><span class="op">(</span><span class="dt">int</span> vet<span class="op">[])</span> <span class="op">{</span></span>
+<span id="cb26-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vet<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb26-3"><a aria-hidden="true" tabindex="-1"></a>        vet<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> i<span class="op">;</span></span>
+<span id="cb26-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb26-5"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -759,10 +1446,10 @@
 <p>Podemos também criar métodos que retornam vetores.</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb16"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span><span class="op">[]</span> <span class="fu">criarVetor</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb16-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> v<span class="op">[]</span> <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
-<span id="cb16-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> v<span class="op">;</span></span>
-<span id="cb16-4"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb27-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span><span class="op">[]</span> <span class="fu">criarVetor</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb27-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> v<span class="op">[]</span> <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
+<span id="cb27-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> v<span class="op">;</span></span>
+<span id="cb27-4"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -774,14 +1461,14 @@
 </ul>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb17"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Estamos declarando um vetor de carros, com </span></span>
-<span id="cb17-2"><a aria-hidden="true" tabindex="-1"></a><span class="co">// capacidade de guardar 10 objetos Carro</span></span>
-<span id="cb17-3"><a aria-hidden="true" tabindex="-1"></a>Carro<span class="op">[]</span> carros <span class="op">=</span> <span class="kw">new</span> Carro<span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
-<span id="cb17-4"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Em cada posição do vetor, podemos colocar um</span></span>
-<span id="cb17-6"><a aria-hidden="true" tabindex="-1"></a><span class="co">// objeto do tipo Carro</span></span>
-<span id="cb17-7"><a aria-hidden="true" tabindex="-1"></a>carros<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Carro</span><span class="op">(</span><span class="st">"Gol"</span><span class="op">);</span></span>
-<span id="cb17-8"><a aria-hidden="true" tabindex="-1"></a>carros<span class="op">[</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Carro</span><span class="op">(</span><span class="st">"Onix"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb28-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Estamos declarando um vetor de carros, com </span></span>
+<span id="cb28-2"><a aria-hidden="true" tabindex="-1"></a><span class="co">// capacidade de guardar 10 objetos Carro</span></span>
+<span id="cb28-3"><a aria-hidden="true" tabindex="-1"></a>Carro<span class="op">[]</span> carros <span class="op">=</span> <span class="kw">new</span> Carro<span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
+<span id="cb28-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Em cada posição do vetor, podemos colocar um</span></span>
+<span id="cb28-6"><a aria-hidden="true" tabindex="-1"></a><span class="co">// objeto do tipo Carro</span></span>
+<span id="cb28-7"><a aria-hidden="true" tabindex="-1"></a>carros<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Carro</span><span class="op">(</span><span class="st">"Gol"</span><span class="op">);</span></span>
+<span id="cb28-8"><a aria-hidden="true" tabindex="-1"></a>carros<span class="op">[</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Carro</span><span class="op">(</span><span class="st">"Onix"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -790,26 +1477,26 @@
 <p>Nós podemos então acessar cada objeto <code>Carro</code> no vetor, a partir de sua posição.</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource java number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb18-1" class="hljs-ln-code"><a></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> carros<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
-<span id="cb18-2" class="hljs-ln-code"><a></a>    <span class="cf">if</span> <span class="op">(</span>carros<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb18-3" class="hljs-ln-code"><a></a>        <span class="co">// Estamos exibindo nome do carro chamando</span></span>
-<span id="cb18-4" class="hljs-ln-code"><a></a>        <span class="co">// o método obterNome</span></span>
-<span id="cb18-5" class="hljs-ln-code"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carros<span class="op">[</span>i<span class="op">].</span><span class="fu">obterNome</span><span class="op">());</span></span>
-<span id="cb18-6" class="hljs-ln-code"><a></a>    <span class="op">}</span></span>
-<span id="cb18-7" class="hljs-ln-code"><a></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource java number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb29-1" class="hljs-ln-code"><a></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> carros<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb29-2" class="hljs-ln-code"><a></a>    <span class="cf">if</span> <span class="op">(</span>carros<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb29-3" class="hljs-ln-code"><a></a>        <span class="co">// Estamos exibindo nome do carro chamando</span></span>
+<span id="cb29-4" class="hljs-ln-code"><a></a>        <span class="co">// o método obterNome</span></span>
+<span id="cb29-5" class="hljs-ln-code"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carros<span class="op">[</span>i<span class="op">].</span><span class="fu">obterNome</span><span class="op">());</span></span>
+<span id="cb29-6" class="hljs-ln-code"><a></a>    <span class="op">}</span></span>
+<span id="cb29-7" class="hljs-ln-code"><a></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
 <section id="vetores-de-objetos-2" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Vetores de objetos</h2>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource java number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb19-1" class="hljs-ln-code"><a></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> carros<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
-<span id="cb19-2" class="hljs-ln-code"><a></a>    <span class="cf">if</span> <span class="op">(</span>carros<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb19-3" class="hljs-ln-code"><a></a>        <span class="co">// Estamos exibindo nome do carro chamando</span></span>
-<span id="cb19-4" class="hljs-ln-code"><a></a>        <span class="co">// o método obterNome</span></span>
-<span id="cb19-5" class="hljs-ln-code"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carros<span class="op">[</span>i<span class="op">].</span><span class="fu">obterNome</span><span class="op">());</span></span>
-<span id="cb19-6" class="hljs-ln-code"><a></a>    <span class="op">}</span></span>
-<span id="cb19-7" class="hljs-ln-code"><a></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode numberSource java number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb30-1" class="hljs-ln-code"><a></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> carros<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb30-2" class="hljs-ln-code"><a></a>    <span class="cf">if</span> <span class="op">(</span>carros<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb30-3" class="hljs-ln-code"><a></a>        <span class="co">// Estamos exibindo nome do carro chamando</span></span>
+<span id="cb30-4" class="hljs-ln-code"><a></a>        <span class="co">// o método obterNome</span></span>
+<span id="cb30-5" class="hljs-ln-code"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carros<span class="op">[</span>i<span class="op">].</span><span class="fu">obterNome</span><span class="op">());</span></span>
+<span id="cb30-6" class="hljs-ln-code"><a></a>    <span class="op">}</span></span>
+<span id="cb30-7" class="hljs-ln-code"><a></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Repare que a condição (<code>if</code>) da linha 2 é muito importante:</p>
 <ul>
@@ -822,17 +1509,17 @@
 <p>Nós também podemos usar um <strong>loop <em>for-each</em></strong> para percorrer os elementos de um vetor.</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb20"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb20-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span>Carro carro <span class="op">:</span> carros<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb20-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>carro <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb20-3"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// Estamos exibindo nome do carro chamando </span></span>
-<span id="cb20-4"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// o método obterNome</span></span>
-<span id="cb20-5"><a aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carro<span class="op">.</span><span class="fu">obterNome</span><span class="op">());</span></span>
-<span id="cb20-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb20-7"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb31-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span>Carro carro <span class="op">:</span> carros<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb31-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>carro <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb31-3"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// Estamos exibindo nome do carro chamando </span></span>
+<span id="cb31-4"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// o método obterNome</span></span>
+<span id="cb31-5"><a aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carro<span class="op">.</span><span class="fu">obterNome</span><span class="op">());</span></span>
+<span id="cb31-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb31-7"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
-<section id="section-32" class="slide level2">
+<section id="section-62" class="slide level2">
 <h2></h2>
 <p>Este exemplo nos permite enfatizar uma das vantagens do loop <em>for-each</em>:</p>
 <ul>
@@ -858,22 +1545,22 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-33" class="slide level2">
-<h2></h2>
+<section id="vetores-vs.-arraylist-1" class="slide level2">
+<h2>Vetores vs.&nbsp;ArrayList</h2>
 <p>Na prática acabamos usando <code>ArrayList</code> em muitas situações mesmo quando temos uma quantidade fixa de elementos.</p>
 <ul>
 <li class="fragment">Mas, de toda forma, precisamos saber utilizar vetores pois é comum precisarmos usar métodos de classes da biblioteca do Java (ou de terceiros) que trabalham com vetores.</li>
 </ul>
 
-
-</section></section>
-    </div>
-  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="quarto-auto-generated-content">
 <p><img src="imagens/logo_UFLA.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
-</div></div>
+</div>
+</section></section>
+    </div>
+  </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="site_libs/revealjs/dist/reveal.js"></script>
@@ -904,8 +1591,7 @@
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true},
 'pointer': {"key":"q","color":"red","pointerSize":16,"alwaysVisible":false},
 'smaller': false,
@@ -1061,7 +1747,7 @@
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -1088,172 +1774,192 @@
       });
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
-      window.document.addEventListener("DOMContentLoaded", function (event) {
-        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-        tabsets.forEach(function(tabset) {
-          const tabby = new Tabby('#' + tabset.id);
-        });
-        const isCodeAnnotation = (el) => {
-          for (const clz of el.classList) {
-            if (clz.startsWith('code-annotation-')) {                     
-              return true;
-            }
-          }
-          return false;
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
         }
-        const onCopySuccess = function(e) {
-          // button target
-          const button = e.trigger;
-          // don't keep focus
-          button.blur();
-          // flash "checked"
-          button.classList.add('code-copy-button-checked');
-          var currentTitle = button.getAttribute("title");
-          button.setAttribute("title", "Copiada");
-          let tooltip;
-          if (window.bootstrap) {
-            button.setAttribute("data-bs-toggle", "tooltip");
-            button.setAttribute("data-bs-placement", "left");
-            button.setAttribute("data-bs-title", "Copiada");
-            tooltip = new bootstrap.Tooltip(button, 
-              { trigger: "manual", 
-                customClass: "code-copy-button-tooltip",
-                offset: [0, -8]});
-            tooltip.show();    
-          }
-          setTimeout(function() {
-            if (tooltip) {
-              tooltip.hide();
-              button.removeAttribute("data-bs-title");
-              button.removeAttribute("data-bs-toggle");
-              button.removeAttribute("data-bs-placement");
-            }
-            button.setAttribute("title", currentTitle);
-            button.classList.remove('code-copy-button-checked');
-          }, 1000);
-          // clear code selection
-          e.clearSelection();
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
         }
-        const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
-            }
-            return codeEl.innerText;
-        }
-        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-          text: getTextToCopy
-        });
-        clipboard.on('success', onCopySuccess);
-        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-            text: getTextToCopy,
-            container: window.document.getElementById('quarto-embedded-source-code-modal')
-          });
-          clipboardModal.on('success', onCopySuccess);
-        }
-          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-          var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
-          var isInternal = (href) => {
-              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-          }
-          // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-          for (var i=0; i<links.length; i++) {
-            const link = links[i];
-            if (!isInternal(link.href)) {
-              // undo the damage that might have been done by quarto-nav.js in the case of
-              // links that we want to consider external
-              if (link.dataset.originalHref !== undefined) {
-                link.href = link.dataset.originalHref;
-              }
-            }
-          }
-        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-          const config = {
-            allowHTML: true,
-            maxWidth: 500,
-            delay: 100,
-            arrow: false,
-            appendTo: function(el) {
-                return el.closest('section.slide') || el.parentElement;
-            },
-            interactive: true,
-            interactiveBorder: 10,
-            theme: 'light-border',
-            placement: 'bottom-start',
-          };
-          if (contentFn) {
-            config.content = contentFn;
-          }
-          if (onTriggerFn) {
-            config.onTrigger = onTriggerFn;
-          }
-          if (onUntriggerFn) {
-            config.onUntrigger = onUntriggerFn;
-          }
-            config['offset'] = [0,0];
-            config['maxWidth'] = 700;
-          window.tippy(el, config); 
-        }
-        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-        for (var i=0; i<noterefs.length; i++) {
-          const ref = noterefs[i];
-          tippyHover(ref, function() {
-            // use id or data attribute instead here
-            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-            try { href = new URL(href).hash; } catch {}
-            const id = href.replace(/^#\/?/, "");
-            const note = window.document.getElementById(id);
-            if (note) {
-              return note.innerHTML;
-            } else {
-              return "";
-            }
-          });
-        }
-        const findCites = (el) => {
-          const parentEl = el.parentElement;
-          if (parentEl) {
-            const cites = parentEl.dataset.cites;
-            if (cites) {
-              return {
-                el,
-                cites: cites.split(' ')
-              };
-            } else {
-              return findCites(el.parentElement)
-            }
-          } else {
-            return undefined;
-          }
-        };
-        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-        for (var i=0; i<bibliorefs.length; i++) {
-          const ref = bibliorefs[i];
-          const citeInfo = findCites(ref);
-          if (citeInfo) {
-            tippyHover(citeInfo.el, function() {
-              var popup = window.document.createElement('div');
-              citeInfo.cites.forEach(function(cite) {
-                var citeDiv = window.document.createElement('div');
-                citeDiv.classList.add('hanging-indent');
-                citeDiv.classList.add('csl-entry');
-                var biblioDiv = window.document.getElementById('ref-' + cite);
-                if (biblioDiv) {
-                  citeDiv.innerHTML = biblioDiv.innerHTML;
-                }
-                popup.appendChild(citeDiv);
-              });
-              return popup.innerHTML;
-            });
-          }
-        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
       });
-      </script>
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copiada");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copiada");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
     
 
 </body></html>
