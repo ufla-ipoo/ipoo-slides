@@ -15,7 +15,7 @@
   <meta name="generator" content="quarto-1.7.33">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2026-09-09">
+  <meta name="dcterms.date" content="2026-12-09">
   <title>GAC125 - Introdução à Programação Orientada a Objetos – IPOO - Cap. 4 Agrupando Objetos</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -216,7 +216,7 @@
     </div>
 </div>
 
-  <p class="date">09/09/2026</p>
+  <p class="date">12/09/2026</p>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
@@ -419,7 +419,8 @@
 </section>
 <section id="section-14" class="slide level2">
 <h2></h2>
-<p>O pseudocódigo abaixo mostra como geralmente utilizamos iteradores para percorrer uma coleção</p>
+<p>O pseudocódigo abaixo mostra como geralmente utilizamos iteradores para percorrer uma coleção.</p>
+<div class="fragment">
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Obtemos o iterador da coleção</span></span>
 <span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a><span class="co">// - Como Iterator é uma classe genérica, precisamos </span></span>
@@ -431,6 +432,7 @@
 <span id="cb3-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// Chamamos it.next() para obter o próximo elemento</span></span>
 <span id="cb3-9"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// Fazemos alguma coisa com o elemento</span></span>
 <span id="cb3-10"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </section>
 <section id="section-15" class="slide level2" data-auto-animate="true">
@@ -664,7 +666,7 @@
 <h2></h2>
 <p>Um objeto <code>Leilao</code> é o ponto de partida para o projeto.</p>
 <ul>
-<li class="fragment">Quem quer vender itens os inserem no leilão através do método <code>cadastrarLote</code>,
+<li class="fragment">Quem quer vender itens, insere-os no leilão através do método <code>cadastrarLote</code>,
 <ul>
 <li class="fragment">mas fornecem apenas uma descrição (string).</li>
 </ul></li>
@@ -818,7 +820,7 @@
 <div class="fragment">
 <p>Mas não é o caso do projeto <code>leilao</code>.</p>
 <ul>
-<li class="fragment">Pois aqui, faz realmente sentido que um lote ainda não tenha um lance ao ser criado.</li>
+<li class="fragment">Pois aqui faz realmente sentido que um lote ainda não tenha um lance ao ser criado.</li>
 </ul>
 </div>
 </section>
@@ -876,7 +878,7 @@
 </section>
 <section id="a-classe-leilao" class="slide level2">
 <h2>A classe <code>Leilao</code></h2>
-<p>A classe <code>Leilao</code> ilustra o uso de <code>ArrayList</code> e loop usando <em>for-each</em>.</p>
+<p>A classe ilustra o uso de <code>ArrayList</code> e loop usando <em>for-each</em>.</p>
 <ul>
 <li class="fragment">Abra e avalie o código da classe.</li>
 </ul>
@@ -891,9 +893,11 @@
 </section>
 <section id="section-42" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
-<p>Veremos agora uma característica comum em programas OO ilustrados pela classe <code>Leilao</code>.</p>
+<p>Veremos agora uma característica comum em programas OO:</p>
+<ul>
+<li class="fragment">O método <code>cadastrarLote</code> ilustra o uso de <span class="alert">objetos anônimos</span>:</li>
+</ul>
 <div class="fragment">
-<p>O método <code>cadastrarLote</code> ilustra o uso de <span class="alert">objetos anônimos</span>:</p>
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb10"><pre class="sourceCode java code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb10-1" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>lotes<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="kw">new</span> <span class="fu">Lote</span><span class="op">(</span>proximoNumeroDeLote<span class="op">,</span> descricao<span class="op">));</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -902,31 +906,38 @@
 <section id="section-43" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb11"><pre class="sourceCode java code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb11-1" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>lotes<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="kw">new</span> <span class="fu">Lote</span><span class="op">(</span>proximoNumeroDeLote<span class="op">,</span> descricao<span class="op">));</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a>lotes<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="kw">new</span> <span class="fu">Lote</span><span class="op">(</span>proximoNumeroDeLote<span class="op">,</span> descricao<span class="op">));</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Aqui estamos fazendo duas coisas:</p>
 <ul>
 <li class="fragment">criando um novo objeto <code>Lote</code>.</li>
 <li class="fragment">E também passamos este novo objeto para o método <code>add</code> do <code>ArrayList</code>.</li>
 </ul>
-</section>
-<section id="section-44" class="slide level2">
-<h2></h2>
+<div class="fragment">
 <p>Nós poderíamos ter feito o código separando as duas coisas:</p>
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb12"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a>Lote novoLote <span class="op">=</span> <span class="kw">new</span> <span class="fu">Lote</span><span class="op">(</span>proximoNumeroDeLote<span class="op">,</span> descricao<span class="op">);</span></span>
 <span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a>lotes<span class="op">.</span><span class="fu">add</span><span class="op">(</span>novoLote<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="fragment">
+</div>
+</section>
+<section id="section-44" class="slide level2">
+<h2></h2>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb13"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a>lotes<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="kw">new</span> <span class="fu">Lote</span><span class="op">(</span>proximoNumeroDeLote<span class="op">,</span> descricao<span class="op">));</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb14"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a>Lote novoLote <span class="op">=</span> <span class="kw">new</span> <span class="fu">Lote</span><span class="op">(</span>proximoNumeroDeLote<span class="op">,</span> descricao<span class="op">);</span></span>
+<span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a>lotes<span class="op">.</span><span class="fu">add</span><span class="op">(</span>novoLote<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>As duas versões são equivalentes:</p>
 <ul>
 <li class="fragment">Mas se não usamos a variável <code>novoLote</code> para mais nada,</li>
 <li class="fragment">a versao original tem a vantagem de evitar a declaração de uma variável de uso limitado.
 <ul>
-<li class="fragment">Chamamos de objeto anônimo (sem nome) pois é passado diretamente para o método.</li>
+<li class="fragment">Nessa versão, chamamos o objeto de <strong>anônimo</strong> (sem nome) pois ele é passado diretamente para o método.</li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section id="section-45" class="slide level2">
 <h2></h2>
@@ -939,8 +950,8 @@
 <div class="callout-content">
 <p>O método <code>darUmLance</code> inclui as duas instruções a seguir:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb13"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a>Lance lance <span class="op">=</span> <span class="kw">new</span> <span class="fu">Lance</span><span class="op">(</span>ofertante<span class="op">,</span> value<span class="op">);</span></span>
-<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> bemSucedido <span class="op">=</span> loteSelecionado<span class="op">.</span><span class="fu">ofertarLance</span><span class="op">(</span>lance<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a>Lance lance <span class="op">=</span> <span class="kw">new</span> <span class="fu">Lance</span><span class="op">(</span>ofertante<span class="op">,</span> value<span class="op">);</span></span>
+<span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a><span class="dt">boolean</span> bemSucedido <span class="op">=</span> loteSelecionado<span class="op">.</span><span class="fu">ofertarLance</span><span class="op">(</span>lance<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A variável <code>lance</code> é usada aqui apenas como um espaço reservado para o objeto <code>Lance</code> recém-criado, antes de ser passado imediatamente para o método <code>ofertarLance</code> do lote.</p>
 <p>Reescreva essas instruções para eliminar a variável <code>lance</code> usando um objeto anônimo, como visto no método <code>cadastrarLote</code>.</p>
@@ -973,28 +984,27 @@
 </ul>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb14"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a>Lance lance <span class="op">=</span> lote<span class="op">.</span><span class="fu">obterLanceMaisAlto</span><span class="op">();</span></span>
-<span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a>Pessoa ofertante <span class="op">=</span> lance<span class="op">.</span><span class="fu">obterOfertante</span><span class="op">();</span></span>
-<span id="cb14-3"><a aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> nome <span class="op">=</span> ofertante<span class="op">.</span><span class="fu">obterNome</span><span class="op">();</span></span>
-<span id="cb14-4"><a aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>nome<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a>Lance lance <span class="op">=</span> lote<span class="op">.</span><span class="fu">obterLanceMaisAlto</span><span class="op">();</span></span>
+<span id="cb16-2"><a aria-hidden="true" tabindex="-1"></a>Pessoa ofertante <span class="op">=</span> lance<span class="op">.</span><span class="fu">obterOfertante</span><span class="op">();</span></span>
+<span id="cb16-3"><a aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> nome <span class="op">=</span> ofertante<span class="op">.</span><span class="fu">obterNome</span><span class="op">();</span></span>
+<span id="cb16-4"><a aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>nome<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
 <section id="section-47" class="slide level2">
 <h2></h2>
-<p>Como as variáveis <code>lance</code>, <code>ofertante</code> e <code>nome</code> estão sendo usadas</p>
+<p>Como as variáveis <code>lance</code>, <code>ofertante</code> e <code>nome</code> estão sendo usadas simplesmente como estágios intermediários para chegar ao nome do ofertante,</p>
 <ul>
-<li class="fragment">simplesmente como estágios intermediários para chegar ao nome do ofertante,</li>
 <li class="fragment">é comum ver sequências como esta compactadas por meio do uso de referências a objetos anônimos.</li>
 </ul>
 <div class="fragment">
 <p>Por exemplo, podemos obter o mesmo efeito com o seguinte:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>lote<span class="op">.</span><span class="fu">obterLanceMaisAlto</span><span class="op">().</span><span class="fu">obterOfertante</span><span class="op">().</span><span class="fu">obterNome</span><span class="op">());</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>lote<span class="op">.</span><span class="fu">obterLanceMaisAlto</span><span class="op">().</span><span class="fu">obterOfertante</span><span class="op">().</span><span class="fu">obterNome</span><span class="op">());</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="section-48" class="slide level2">
 <h2></h2>
-<div class="sourceCode" id="cb16"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>lote<span class="op">.</span><span class="fu">obterLanceMaisAlto</span><span class="op">().</span><span class="fu">obterOfertante</span><span class="op">().</span><span class="fu">obterNome</span><span class="op">());</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb18-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>lote<span class="op">.</span><span class="fu">obterLanceMaisAlto</span><span class="op">().</span><span class="fu">obterOfertante</span><span class="op">().</span><span class="fu">obterNome</span><span class="op">());</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Pode dar a impressão que um método está chamando outro método, mas não é assim que deve ser lido.</p>
 <ul>
 <li class="fragment">A chamada para <code>obterLanceMaisAlto</code> retorna um objeto <code>Lance</code> anônimo,
@@ -1048,7 +1058,7 @@
 <div class="callout-content">
 <p>Adicione um método <code>obterNaoVendidos</code> à classe <code>Leilao</code> com o seguinte cabeçalho:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb17"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">ArrayList</span><span class="op">&lt;</span>Lote<span class="op">&gt;</span> <span class="fu">obterNaoVendidos</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb19-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">ArrayList</span><span class="op">&lt;</span>Lote<span class="op">&gt;</span> <span class="fu">obterNaoVendidos</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Este método deve iterar sobre o atributo <code>lotes</code>, armazenando os lotes não vendidos em uma nova variável local <code>ArrayList</code>. O que você está procurando são objetos <code>Lote</code> cujo campo <code>lanceMaisAlto</code> seja <code>null</code>. Ao final do método, retorne a lista de lotes não vendidos.</p>
 </div>
@@ -1097,12 +1107,12 @@
 <div class="callout-content">
 <p>Adicione um método <code>removerLote</code> à classe <code>Leilao</code>, com o seguinte cabeçalho:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb18"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb18-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
-<span id="cb18-2"><a aria-hidden="true" tabindex="-1"></a><span class="co">*</span> Remove o lote com o n<span class="co">ú</span>mero fornecido<span class="co">.</span></span>
-<span id="cb18-3"><a aria-hidden="true" tabindex="-1"></a><span class="co">*</span> <span class="an">@param</span><span class="co"> </span><span class="an">number</span><span class="co"> </span>O n<span class="co">ú</span>mero do lote a ser removido<span class="co">.</span></span>
-<span id="cb18-4"><a aria-hidden="true" tabindex="-1"></a><span class="co">*</span> <span class="an">@return</span> O lote com o n<span class="co">ú</span>mero fornecido<span class="co">,</span> ou <span class="co">`</span>null<span class="co">`</span> se</span>
-<span id="cb18-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">*</span> n<span class="co">ã</span>o houver tal lote<span class="co">.</span></span>
-<span id="cb18-6"><a aria-hidden="true" tabindex="-1"></a><span class="co">*/</span> <span class="kw">public</span> Lote <span class="fu">removerLote</span><span class="op">(</span><span class="dt">int</span> numero<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb20-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">/**</span></span>
+<span id="cb20-2"><a aria-hidden="true" tabindex="-1"></a><span class="co">*</span> Remove o lote com o n<span class="co">ú</span>mero fornecido<span class="co">.</span></span>
+<span id="cb20-3"><a aria-hidden="true" tabindex="-1"></a><span class="co">*</span> <span class="an">@param</span><span class="co"> </span><span class="an">number</span><span class="co"> </span>O n<span class="co">ú</span>mero do lote a ser removido<span class="co">.</span></span>
+<span id="cb20-4"><a aria-hidden="true" tabindex="-1"></a><span class="co">*</span> <span class="an">@return</span> O lote com o n<span class="co">ú</span>mero fornecido<span class="co">,</span> ou <span class="co">`</span>null<span class="co">`</span> se</span>
+<span id="cb20-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">*</span> n<span class="co">ã</span>o houver tal lote<span class="co">.</span></span>
+<span id="cb20-6"><a aria-hidden="true" tabindex="-1"></a><span class="co">*/</span> <span class="kw">public</span> Lote <span class="fu">removerLote</span><span class="op">(</span><span class="dt">int</span> numero<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Este método não deve pressupor que um lote com um determinado número esteja armazenado em qualquer local específico dentro da coleção.</p>
 </div>
@@ -1151,14 +1161,14 @@
 <h2></h2>
 <p>Podemos <strong>declarar um vetor</strong> em Java, utilizando uma das seguintes formas:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb19"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb19-1"><a aria-hidden="true" tabindex="-1"></a>TipoDosElementos<span class="op">[]</span> nomeDoVetor<span class="op">;</span></span>
-<span id="cb19-2"><a aria-hidden="true" tabindex="-1"></a>TipoDosElementos nomeDoVetor<span class="op">[];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb21-1"><a aria-hidden="true" tabindex="-1"></a>TipoDosElementos<span class="op">[]</span> nomeDoVetor<span class="op">;</span></span>
+<span id="cb21-2"><a aria-hidden="true" tabindex="-1"></a>TipoDosElementos nomeDoVetor<span class="op">[];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Exemplos:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb20"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb20-1"><a aria-hidden="true" tabindex="-1"></a><span class="dt">double</span><span class="op">[]</span> notas<span class="op">;</span></span>
-<span id="cb20-2"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb22-1"><a aria-hidden="true" tabindex="-1"></a><span class="dt">double</span><span class="op">[]</span> notas<span class="op">;</span></span>
+<span id="cb22-2"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
@@ -1169,16 +1179,16 @@
 <h2></h2>
 <p>Como os demais objetos, os <strong>vetores são criados</strong> por meio da palavra-chave <code>new</code>:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb21"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb21-1"><a aria-hidden="true" tabindex="-1"></a>nomeDoVetor <span class="op">=</span> <span class="kw">new</span> TipoDosElementos<span class="op">[</span>capacidade<span class="op">];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb23-1"><a aria-hidden="true" tabindex="-1"></a>nomeDoVetor <span class="op">=</span> <span class="kw">new</span> TipoDosElementos<span class="op">[</span>capacidade<span class="op">];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Exemplos:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb22"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb22-1"><a aria-hidden="true" tabindex="-1"></a><span class="dt">double</span><span class="op">[]</span> notas<span class="op">;</span></span>
-<span id="cb22-2"><a aria-hidden="true" tabindex="-1"></a>notas <span class="op">=</span> <span class="kw">new</span> <span class="dt">double</span><span class="op">[</span><span class="dv">3</span><span class="op">];</span></span>
-<span id="cb22-3"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-4"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[];</span></span>
-<span id="cb22-5"><a aria-hidden="true" tabindex="-1"></a>meuVetorDeInteiros <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">10</span><span class="op">];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb24-1"><a aria-hidden="true" tabindex="-1"></a><span class="dt">double</span><span class="op">[]</span> notas<span class="op">;</span></span>
+<span id="cb24-2"><a aria-hidden="true" tabindex="-1"></a>notas <span class="op">=</span> <span class="kw">new</span> <span class="dt">double</span><span class="op">[</span><span class="dv">3</span><span class="op">];</span></span>
+<span id="cb24-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-4"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[];</span></span>
+<span id="cb24-5"><a aria-hidden="true" tabindex="-1"></a>meuVetorDeInteiros <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">10</span><span class="op">];</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -1187,12 +1197,12 @@
 <p>Há ainda outras duas formas alternativas de se instanciar um vetor.</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb23"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb23-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Declara e instancia em uma única linha</span></span>
-<span id="cb23-2"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[]</span> <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
-<span id="cb23-3"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-4"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Declara, instancia um vetor com 3 posições e </span></span>
-<span id="cb23-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">// já inicializa os seus valores</span></span>
-<span id="cb23-6"><a aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> notas<span class="op">[]</span> <span class="op">=</span> <span class="op">{</span><span class="fl">7.5</span><span class="op">,</span> <span class="fl">8.0</span><span class="op">,</span> <span class="fl">9.0</span><span class="op">};</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb25-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Declara e instancia em uma única linha</span></span>
+<span id="cb25-2"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> meuVetorDeInteiros<span class="op">[]</span> <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
+<span id="cb25-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Declara, instancia um vetor com 3 posições e </span></span>
+<span id="cb25-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">// já inicializa os seus valores</span></span>
+<span id="cb25-6"><a aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> notas<span class="op">[]</span> <span class="op">=</span> <span class="op">{</span><span class="fl">7.5</span><span class="op">,</span> <span class="fl">8.0</span><span class="op">,</span> <span class="fl">9.0</span><span class="op">};</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -1217,11 +1227,11 @@
 </ul>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb24"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb24-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vetor<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
-<span id="cb24-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// Usando vetor[i], estamos acessando a </span></span>
-<span id="cb24-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// posição i do vetor.</span></span>
-<span id="cb24-4"><a aria-hidden="true" tabindex="-1"></a>    vetor<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> i<span class="op">;</span></span>
-<span id="cb24-5"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb26-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vetor<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb26-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// Usando vetor[i], estamos acessando a </span></span>
+<span id="cb26-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// posição i do vetor.</span></span>
+<span id="cb26-4"><a aria-hidden="true" tabindex="-1"></a>    vetor<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> i<span class="op">;</span></span>
+<span id="cb26-5"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -1230,9 +1240,9 @@
 <p>Como podemos então exibir todos os elementos de um vetor de inteiros chamado <code>vet</code>?</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb25"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb25-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vet<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
-<span id="cb25-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>vet<span class="op">[</span>i<span class="op">]);</span></span>
-<span id="cb25-3"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb27-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vet<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb27-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>vet<span class="op">[</span>i<span class="op">]);</span></span>
+<span id="cb27-3"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -1247,11 +1257,11 @@
 </div>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb26"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb26-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">void</span> <span class="fu">preencherVetor</span><span class="op">(</span><span class="dt">int</span> vet<span class="op">[])</span> <span class="op">{</span></span>
-<span id="cb26-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vet<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
-<span id="cb26-3"><a aria-hidden="true" tabindex="-1"></a>        vet<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> i<span class="op">;</span></span>
-<span id="cb26-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb26-5"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb28-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">void</span> <span class="fu">preencherVetor</span><span class="op">(</span><span class="dt">int</span> vet<span class="op">[])</span> <span class="op">{</span></span>
+<span id="cb28-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> vet<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb28-3"><a aria-hidden="true" tabindex="-1"></a>        vet<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> i<span class="op">;</span></span>
+<span id="cb28-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb28-5"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -1260,10 +1270,10 @@
 <p>Podemos também criar métodos que retornam vetores.</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb27"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb27-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span><span class="op">[]</span> <span class="fu">criarVetor</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb27-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> v<span class="op">[]</span> <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
-<span id="cb27-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> v<span class="op">;</span></span>
-<span id="cb27-4"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb29-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">int</span><span class="op">[]</span> <span class="fu">criarVetor</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb29-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> v<span class="op">[]</span> <span class="op">=</span> <span class="kw">new</span> <span class="dt">int</span><span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
+<span id="cb29-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> v<span class="op">;</span></span>
+<span id="cb29-4"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -1275,14 +1285,14 @@
 </ul>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb28"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb28-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Estamos declarando um vetor de carros, com </span></span>
-<span id="cb28-2"><a aria-hidden="true" tabindex="-1"></a><span class="co">// capacidade de guardar 10 objetos Carro</span></span>
-<span id="cb28-3"><a aria-hidden="true" tabindex="-1"></a>Carro<span class="op">[]</span> carros <span class="op">=</span> <span class="kw">new</span> Carro<span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
-<span id="cb28-4"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Em cada posição do vetor, podemos colocar um</span></span>
-<span id="cb28-6"><a aria-hidden="true" tabindex="-1"></a><span class="co">// objeto do tipo Carro</span></span>
-<span id="cb28-7"><a aria-hidden="true" tabindex="-1"></a>carros<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Carro</span><span class="op">(</span><span class="st">"Gol"</span><span class="op">);</span></span>
-<span id="cb28-8"><a aria-hidden="true" tabindex="-1"></a>carros<span class="op">[</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Carro</span><span class="op">(</span><span class="st">"Onix"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb30-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Estamos declarando um vetor de carros, com </span></span>
+<span id="cb30-2"><a aria-hidden="true" tabindex="-1"></a><span class="co">// capacidade de guardar 10 objetos Carro</span></span>
+<span id="cb30-3"><a aria-hidden="true" tabindex="-1"></a>Carro<span class="op">[]</span> carros <span class="op">=</span> <span class="kw">new</span> Carro<span class="op">[</span><span class="dv">10</span><span class="op">];</span></span>
+<span id="cb30-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-5"><a aria-hidden="true" tabindex="-1"></a><span class="co">// Em cada posição do vetor, podemos colocar um</span></span>
+<span id="cb30-6"><a aria-hidden="true" tabindex="-1"></a><span class="co">// objeto do tipo Carro</span></span>
+<span id="cb30-7"><a aria-hidden="true" tabindex="-1"></a>carros<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Carro</span><span class="op">(</span><span class="st">"Gol"</span><span class="op">);</span></span>
+<span id="cb30-8"><a aria-hidden="true" tabindex="-1"></a>carros<span class="op">[</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Carro</span><span class="op">(</span><span class="st">"Onix"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -1291,26 +1301,26 @@
 <p>Nós podemos então acessar cada objeto <code>Carro</code> no vetor, a partir de sua posição.</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource java number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb29-1" class="hljs-ln-code"><a></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> carros<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
-<span id="cb29-2" class="hljs-ln-code"><a></a>    <span class="cf">if</span> <span class="op">(</span>carros<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb29-3" class="hljs-ln-code"><a></a>        <span class="co">// Estamos exibindo nome do carro chamando</span></span>
-<span id="cb29-4" class="hljs-ln-code"><a></a>        <span class="co">// o método obterNome</span></span>
-<span id="cb29-5" class="hljs-ln-code"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carros<span class="op">[</span>i<span class="op">].</span><span class="fu">obterNome</span><span class="op">());</span></span>
-<span id="cb29-6" class="hljs-ln-code"><a></a>    <span class="op">}</span></span>
-<span id="cb29-7" class="hljs-ln-code"><a></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode numberSource java number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb31-1" class="hljs-ln-code"><a></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> carros<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb31-2" class="hljs-ln-code"><a></a>    <span class="cf">if</span> <span class="op">(</span>carros<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb31-3" class="hljs-ln-code"><a></a>        <span class="co">// Estamos exibindo nome do carro chamando</span></span>
+<span id="cb31-4" class="hljs-ln-code"><a></a>        <span class="co">// o método obterNome</span></span>
+<span id="cb31-5" class="hljs-ln-code"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carros<span class="op">[</span>i<span class="op">].</span><span class="fu">obterNome</span><span class="op">());</span></span>
+<span id="cb31-6" class="hljs-ln-code"><a></a>    <span class="op">}</span></span>
+<span id="cb31-7" class="hljs-ln-code"><a></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
 <section id="vetores-de-objetos-2" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Vetores de objetos</h2>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb30"><pre class="sourceCode numberSource java number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb30-1" class="hljs-ln-code"><a></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> carros<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
-<span id="cb30-2" class="hljs-ln-code"><a></a>    <span class="cf">if</span> <span class="op">(</span>carros<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb30-3" class="hljs-ln-code"><a></a>        <span class="co">// Estamos exibindo nome do carro chamando</span></span>
-<span id="cb30-4" class="hljs-ln-code"><a></a>        <span class="co">// o método obterNome</span></span>
-<span id="cb30-5" class="hljs-ln-code"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carros<span class="op">[</span>i<span class="op">].</span><span class="fu">obterNome</span><span class="op">());</span></span>
-<span id="cb30-6" class="hljs-ln-code"><a></a>    <span class="op">}</span></span>
-<span id="cb30-7" class="hljs-ln-code"><a></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode numberSource java number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb32-1" class="hljs-ln-code"><a></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> carros<span class="op">.</span><span class="fu">length</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb32-2" class="hljs-ln-code"><a></a>    <span class="cf">if</span> <span class="op">(</span>carros<span class="op">[</span>i<span class="op">]</span> <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb32-3" class="hljs-ln-code"><a></a>        <span class="co">// Estamos exibindo nome do carro chamando</span></span>
+<span id="cb32-4" class="hljs-ln-code"><a></a>        <span class="co">// o método obterNome</span></span>
+<span id="cb32-5" class="hljs-ln-code"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carros<span class="op">[</span>i<span class="op">].</span><span class="fu">obterNome</span><span class="op">());</span></span>
+<span id="cb32-6" class="hljs-ln-code"><a></a>    <span class="op">}</span></span>
+<span id="cb32-7" class="hljs-ln-code"><a></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Repare que a condição (<code>if</code>) da linha 2 é muito importante:</p>
 <ul>
@@ -1323,13 +1333,13 @@
 <p>Nós também podemos usar um <strong>loop <em>for-each</em></strong> para percorrer os elementos de um vetor.</p>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb31"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb31-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span>Carro carro <span class="op">:</span> carros<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb31-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>carro <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb31-3"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// Estamos exibindo nome do carro chamando </span></span>
-<span id="cb31-4"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// o método obterNome</span></span>
-<span id="cb31-5"><a aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carro<span class="op">.</span><span class="fu">obterNome</span><span class="op">());</span></span>
-<span id="cb31-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb31-7"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb33-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span>Carro carro <span class="op">:</span> carros<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb33-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>carro <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb33-3"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// Estamos exibindo nome do carro chamando </span></span>
+<span id="cb33-4"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// o método obterNome</span></span>
+<span id="cb33-5"><a aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>carro<span class="op">.</span><span class="fu">obterNome</span><span class="op">());</span></span>
+<span id="cb33-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb33-7"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>

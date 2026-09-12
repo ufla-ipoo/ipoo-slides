@@ -3322,7 +3322,7 @@
     "href": "cap4-3.html#section-14",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "O pseudocódigo abaixo mostra como geralmente utilizamos iteradores para percorrer uma coleção\n\n// Obtemos o iterador da coleção\n// - Como Iterator é uma classe genérica, precisamos \n//   informar um segundo tipo (que é o tipo dos \n//   elementos da coleção)\nIterator&lt;TipoDoElemento&gt; it = minhaColecao.iterator();\n// Enquanto há elementos a processar\nwhile (it.hasNext()) {      \n    // Chamamos it.next() para obter o próximo elemento\n    // Fazemos alguma coisa com o elemento\n}"
+    "text": "O pseudocódigo abaixo mostra como geralmente utilizamos iteradores para percorrer uma coleção.\n\n\n// Obtemos o iterador da coleção\n// - Como Iterator é uma classe genérica, precisamos \n//   informar um segundo tipo (que é o tipo dos \n//   elementos da coleção)\nIterator&lt;TipoDoElemento&gt; it = minhaColecao.iterator();\n// Enquanto há elementos a processar\nwhile (it.hasNext()) {      \n    // Chamamos it.next() para obter o próximo elemento\n    // Fazemos alguma coisa com o elemento\n}"
   },
   {
     "objectID": "cap4-3.html#section-15",
@@ -3490,7 +3490,7 @@
     "href": "cap4-3.html#section-30",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Um objeto Leilao é o ponto de partida para o projeto.\n\nQuem quer vender itens os inserem no leilão através do método cadastrarLote,\n\nmas fornecem apenas uma descrição (string).\n\nO objeto Leilao cria então um objeto Lote cada cada lote cadastrado.\n\n\nIsso modela o funcionamento de um leilão no mundo real.\n\nNão é quem vende o item que define o código de identificação do lote."
+    "text": "Um objeto Leilao é o ponto de partida para o projeto.\n\nQuem quer vender itens, insere-os no leilão através do método cadastrarLote,\n\nmas fornecem apenas uma descrição (string).\n\nO objeto Leilao cria então um objeto Lote cada cada lote cadastrado.\n\n\nIsso modela o funcionamento de um leilão no mundo real.\n\nNão é quem vende o item que define o código de identificação do lote."
   },
   {
     "objectID": "cap4-3.html#section-31",
@@ -3553,7 +3553,7 @@
     "href": "cap4-3.html#section-39",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Muitas vezes, erros de NullPointerException ocorrem por falha na inicialização de atributos.\n\nPor algum erro de implementação.\n\n\nMas não é o caso do projeto leilao.\n\nPois aqui, faz realmente sentido que um lote ainda não tenha um lance ao ser criado."
+    "text": "Muitas vezes, erros de NullPointerException ocorrem por falha na inicialização de atributos.\n\nPor algum erro de implementação.\n\n\nMas não é o caso do projeto leilao.\n\nPois aqui faz realmente sentido que um lote ainda não tenha um lance ao ser criado."
   },
   {
     "objectID": "cap4-3.html#section-40",
@@ -3574,21 +3574,21 @@
     "href": "cap4-3.html#section-42",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Veremos agora uma característica comum em programas OO ilustrados pela classe Leilao.\n\nO método cadastrarLote ilustra o uso de objetos anônimos:\n\nlotes.add(new Lote(proximoNumeroDeLote, descricao));"
+    "text": "Veremos agora uma característica comum em programas OO:\n\nO método cadastrarLote ilustra o uso de objetos anônimos:\n\n\n\nlotes.add(new Lote(proximoNumeroDeLote, descricao));"
   },
   {
     "objectID": "cap4-3.html#section-43",
     "href": "cap4-3.html#section-43",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "lotes.add(new Lote(proximoNumeroDeLote, descricao));\n\nAqui estamos fazendo duas coisas:\n\ncriando um novo objeto Lote.\nE também passamos este novo objeto para o método add do ArrayList."
+    "text": "lotes.add(new Lote(proximoNumeroDeLote, descricao));\n\nAqui estamos fazendo duas coisas:\n\ncriando um novo objeto Lote.\nE também passamos este novo objeto para o método add do ArrayList.\n\n\nNós poderíamos ter feito o código separando as duas coisas:\n\nLote novoLote = new Lote(proximoNumeroDeLote, descricao);\nlotes.add(novoLote);"
   },
   {
     "objectID": "cap4-3.html#section-44",
     "href": "cap4-3.html#section-44",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Nós poderíamos ter feito o código separando as duas coisas:\n\nLote novoLote = new Lote(proximoNumeroDeLote, descricao);\nlotes.add(novoLote);\n\n\nAs duas versões são equivalentes:\n\nMas se não usamos a variável novoLote para mais nada,\na versao original tem a vantagem de evitar a declaração de uma variável de uso limitado.\n\nChamamos de objeto anônimo (sem nome) pois é passado diretamente para o método."
+    "text": "lotes.add(new Lote(proximoNumeroDeLote, descricao));\n\n\nLote novoLote = new Lote(proximoNumeroDeLote, descricao);\nlotes.add(novoLote);\n\nAs duas versões são equivalentes:\n\nMas se não usamos a variável novoLote para mais nada,\na versao original tem a vantagem de evitar a declaração de uma variável de uso limitado.\n\nNessa versão, chamamos o objeto de anônimo (sem nome) pois ele é passado diretamente para o método."
   },
   {
     "objectID": "cap5-2.html#section",
@@ -6766,14 +6766,14 @@
     "href": "cap4-1.html#section-75",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Na próxima aula continuaremos evoluindo nosso projeto.\n\nEspecialmente através da criação de uma classe para representar músicas."
+    "text": "Na próxima aula teórica continuaremos evoluindo nosso projeto.\n\nEspecialmente através da criação de uma classe para representar músicas."
   },
   {
     "objectID": "cap4-1.html#section-76",
     "href": "cap4-1.html#section-76",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Na próxima aula continuaremos evoluindo nosso projeto.\n\nEspecialmente através da criação de uma classe para representar músicas."
+    "text": "Na verdade a Aula 4.2 não é bem uma aula.\n\nO objetivo é reforçar a necessidade de estudarem em casa entre as aulas 4.1 e 4.3 para reforçar o entendimento do Capítulo 3.\n\n\nAlém de rever o material da primeira aula, é recomendável fazer o exercício do projeto canal,\n\nque será o primeiro da Aula Prática 4.4."
   },
   {
     "objectID": "cap4-3.html#acesso-por-índice-vs.-iteradores-1",
@@ -6815,7 +6815,7 @@
     "href": "cap4-3.html#a-classe-leilao",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "A classe Leilao",
-    "text": "A classe Leilao\nA classe Leilao ilustra o uso de ArrayList e loop usando for-each.\n\nAbra e avalie o código da classe.\n\n\nVeja que o atributo lotes é um ArrayList usado para guardar os lotes oferecidos no leilão.\n\nEle são cadastrados através de uma descrição simples passada para o método cadastrarLote\nUm novo lote é criado passando a descrição e um número de lote único para o construtor.\nO novo lote é adicionado à coleção."
+    "text": "A classe Leilao\nA classe ilustra o uso de ArrayList e loop usando for-each.\n\nAbra e avalie o código da classe.\n\n\nVeja que o atributo lotes é um ArrayList usado para guardar os lotes oferecidos no leilão.\n\nEle são cadastrados através de uma descrição simples passada para o método cadastrarLote\nUm novo lote é criado passando a descrição e um número de lote único para o construtor.\nO novo lote é adicionado à coleção."
   },
   {
     "objectID": "cap4-3.html#encadeamento-de-chamadas",
@@ -6843,7 +6843,7 @@
     "href": "cap4-3.html#section-47",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
-    "text": "Como as variáveis lance, ofertante e nome estão sendo usadas\n\nsimplesmente como estágios intermediários para chegar ao nome do ofertante,\né comum ver sequências como esta compactadas por meio do uso de referências a objetos anônimos.\n\n\nPor exemplo, podemos obter o mesmo efeito com o seguinte:\nSystem.out.println(lote.obterLanceMaisAlto().obterOfertante().obterNome());"
+    "text": "Como as variáveis lance, ofertante e nome estão sendo usadas simplesmente como estágios intermediários para chegar ao nome do ofertante,\n\né comum ver sequências como esta compactadas por meio do uso de referências a objetos anônimos.\n\n\nPor exemplo, podemos obter o mesmo efeito com o seguinte:\nSystem.out.println(lote.obterLanceMaisAlto().obterOfertante().obterNome());"
   },
   {
     "objectID": "cap4-3.html#section-48",
@@ -6967,6 +6967,13 @@
   {
     "objectID": "cap4-3.html#section-64",
     "href": "cap4-3.html#section-64",
+    "title": "IPOO - Cap. 4 Agrupando Objetos",
+    "section": "",
+    "text": "O que foi visto na Aula 4.1 é suficiente para fazer os três primeiros exercícios.\n\nMas, caso se sinta confiante, tente fazer também dos demais exercícios.\nOs enunciados dos exercícios estão no arquivo README.md do projeto.\n\nDica: é mais fácil visualizá-los no próprio GitHub."
+  },
+  {
+    "objectID": "cap4-1.html#section-77",
+    "href": "cap4-1.html#section-77",
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
     "text": "O que foi visto na Aula 4.1 é suficiente para fazer os três primeiros exercícios.\n\nMas, caso se sinta confiante, tente fazer também dos demais exercícios.\nOs enunciados dos exercícios estão no arquivo README.md do projeto.\n\nDica: é mais fácil visualizá-los no próprio GitHub."

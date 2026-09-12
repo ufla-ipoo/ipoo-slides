@@ -178,7 +178,9 @@ Um iterador tem apenas quatro métodos, e usamos dois deles para iterar sobre um
 
 ##
 
-O pseudocódigo abaixo mostra como geralmente utilizamos iteradores para percorrer uma coleção
+O pseudocódigo abaixo mostra como geralmente utilizamos iteradores para percorrer uma coleção.
+
+. . .
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
@@ -401,7 +403,7 @@ Vamos avaliar o código do projeto.
 
 Um objeto `Leilao` é o ponto de partida para o projeto.
 
-- Quem quer vender itens os inserem no leilão através do método `cadastrarLote`, 
+- Quem quer vender itens, insere-os no leilão através do método `cadastrarLote`, 
   - mas fornecem apenas uma descrição (string).
 - O objeto `Leilao` cria então um objeto `Lote` cada cada lote cadastrado.
 
@@ -537,7 +539,7 @@ Muitas vezes, erros de `NullPointerException` ocorrem por falha na inicializaç�
 
 Mas não é o caso do projeto `leilao`.
 
-- Pois aqui, faz realmente sentido que um lote ainda não tenha um lance ao ser criado.
+- Pois aqui faz realmente sentido que um lote ainda não tenha um lance ao ser criado.
 
 ##
 
@@ -585,7 +587,7 @@ public boolean ofertarLance(Lance lance)
 
 ## A classe `Leilao`
 
-A classe `Leilao` ilustra o uso de `ArrayList` e loop usando _for-each_.
+A classe ilustra o uso de `ArrayList` e loop usando _for-each_.
 
 - Abra e avalie o código da classe.
 
@@ -599,11 +601,11 @@ Veja que o atributo `lotes` é um `ArrayList` usado para guardar os lotes oferec
 
 ## {auto-animate=true}
 
-Veremos agora uma característica comum em programas OO ilustrados pela classe `Leilao`.
+Veremos agora uma característica comum em programas OO:
+
+- O método `cadastrarLote` ilustra o uso de [objetos anônimos]{.alert}:
 
 . . .
-
-O método `cadastrarLote` ilustra o uso de [objetos anônimos]{.alert}:
 
 ::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
@@ -624,7 +626,7 @@ Aqui estamos fazendo duas coisas:
 - criando um novo objeto `Lote`.
 - E também passamos este novo objeto para o método `add` do `ArrayList`.
 
-##
+. . .
 
 Nós poderíamos ter feito o código separando as duas coisas:
 
@@ -635,13 +637,26 @@ lotes.add(novoLote);
 ```
 :::
 
-. . .
+##
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+lotes.add(new Lote(proximoNumeroDeLote, descricao));
+```
+:::
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+Lote novoLote = new Lote(proximoNumeroDeLote, descricao);
+lotes.add(novoLote);
+```
+:::
 
 As duas versões são equivalentes:
 
 - Mas se não usamos a variável `novoLote` para mais nada,
 - a versao original tem a vantagem de evitar a declaração de uma variável de uso limitado.
-  - Chamamos de objeto anônimo (sem nome) pois é passado diretamente para o método.
+  - Nessa versão, chamamos o objeto de **anônimo** (sem nome) pois ele é passado diretamente para o método.
 
 ##
 
@@ -694,14 +709,14 @@ System.out.println(nome);
 
 ##
 
-Como as variáveis `lance`, `ofertante` e `nome` estão sendo usadas 
+Como as variáveis `lance`, `ofertante` e `nome` estão sendo usadas simplesmente como estágios intermediários 
+para chegar ao nome do ofertante,
 
-- simplesmente como estágios intermediários para chegar ao nome do ofertante,
 - é comum ver sequências como esta compactadas por meio do uso de referências a objetos anônimos. 
 
 . . .
 
-Por exemplo, podemos obter o mesmo efeito com o seguinte:
+Por exemplo, podemos obter o mesmo efeito com o seguinte código:
 
 ```{.java code-line-numbers="false"}
 System.out.println(lote.obterLanceMaisAlto().obterOfertante().obterNome());
@@ -1071,25 +1086,3 @@ Agora que conhecemos tanto **vetores** quanto `ArrayList`, qual deles devemos ut
 Na prática acabamos usando `ArrayList` em muitas situações mesmo quando temos uma quantidade fixa de elementos.
 
 - Mas, de toda forma, precisamos saber utilizar vetores pois é comum precisarmos usar métodos de classes da biblioteca do Java (ou de terceiros) que trabalham com vetores.
-
-# Sobre a Aula 4.2 (em casa) {background-color="#40666e"}
-
-##
-
-Na verdade a Aula 4.2 não é bem uma aula. 
-
-- O objetivo é reforçar a necessidade de estudarem em casa entre as aulas 4.1 e 4.3 para reforçar o entendimento do Capítulo 3. 
-
-. . .
-
-Além de rever o material da primeira aula, é recomendável fazer o exercício do **projeto `canal`**,
-
-- que será o primeiro da Aula Prática 4.4.
-
-##
-
-O que foi visto na Aula 4.1 é suficiente para fazer os três primeiros exercícios. 
-
-- Mas, caso se sinta confiante, tente fazer também dos demais exercícios.
-- Os enunciados dos exercícios estão no arquivo README.md do projeto.
-  - Dica: é mais fácil visualizá-los no próprio GitHub.
