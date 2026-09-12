@@ -1146,7 +1146,28 @@ public int buscarPrimeiraMusica(String stringDeBusca)
 
 ##
 
-Na próxima aula continuaremos evoluindo nosso projeto.
+Na próxima aula teórica continuaremos evoluindo nosso projeto.
 
 - Especialmente através da criação de uma classe para representar músicas.
 
+# Sobre a Aula 4.2 (em casa) {background-color="#40666e"}
+
+##
+
+Na verdade a Aula 4.2 não é bem uma aula. 
+
+- O objetivo é reforçar a necessidade de estudarem em casa entre as aulas 4.1 e 4.3 para reforçar o entendimento do Capítulo 3. 
+
+. . .
+
+Além de rever o material da primeira aula, é recomendável fazer o exercício do **projeto `canal`**,
+
+- que será o primeiro da Aula Prática 4.4.
+
+##
+
+O que foi visto na Aula 4.1 é suficiente para fazer os três primeiros exercícios. 
+
+- Mas, caso se sinta confiante, tente fazer também dos demais exercícios.
+- Os enunciados dos exercícios estão no arquivo README.md do projeto.
+  - Dica: é mais fácil visualizá-los no próprio GitHub.
