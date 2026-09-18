@@ -3,7 +3,7 @@ title: IPOO - Cap. 5 Comportamento Mais Sofisticado
 subtitle: Aula 5.1 - Teórica
 ---
 
-## {.smaller}
+##
 
 Os tópicos abaixo te lembram alguma coisa? :)
 
@@ -16,9 +16,9 @@ Os tópicos abaixo te lembram alguma coisa? :)
 ![](imagens/livro_bluej.png){.r-stretch}
 
 
-## {.smaller}
+##
 
-## Principais Conceitos do Capítulo {.smaller}
+## Principais Conceitos do Capítulo
 
 ::: {.nonincremental}
 - Encapsulamento
@@ -36,7 +36,7 @@ Construções Java do capítulo
 - `String`, `Random`, `static`, `final`,  autoboxing, classes empacotadoras.
 :::
 
-## {.smaller}
+##
 
 ![](imagens/aviso_importante.png)
 
@@ -47,7 +47,7 @@ O conceito de **encapsulamento** é fundamental na Programação Orientada a Obj
 - E será apresentado no final do capítulo.
 - Não deixe de estudar esse conteúdo!!!
 
-## {.smaller}
+##
 
 No capítulo anterior conhecemos a classe `ArrayList` da biblioteca de classes do Java.
 
@@ -61,32 +61,31 @@ Mas ela é apenas um exemplo de classe da biblioteca.
 - Existem muitas que serão muito úteis em nossos softwares.
 - E outras que, possivelmente, nunca usaremos.
 
-. . .
+##
 
 Um **bom programador** Java precisa **conseguir trabalhar com as classes da biblioteca**.
 
 - E saber quando utilizar cada uma.
 - De forma a tornar a implementação de um programa mais fácil.
 
-## {.smaller}
+. . .
 
 Muitas classes da biblioteca têm certas características comuns entre si.
 
 - Especialmente as coleções, são classes que compartilham muitos atributos.
 - E, usando a abstração, podemos tratar de classes de coleções de uma maneira mais geral.
 
-. . .
+##
 
 Neste capítulo, vamos trabalhar com um **sistema de Suporte Técnico**.
 
 - Começaremos com uma versão rudimentar.
-- E ela será melhorado, incrementalmente, utilizando diferentes classes da biblioteca Java.
+- E ele será melhorado, incrementalmente, utilizando diferentes classes da biblioteca Java.
 
-## {.smaller}
 
 # Documentação das classes de biblioteca {background-color="#40666e"}
 
-## {.smaller}
+##
 
 A biblioteca de classes do Java tem centenas de classes, com muitas opções de métodos.
 
@@ -99,21 +98,22 @@ Na verdade, um bom programador deveria:
 - Conhecer **pelo nome as classes mais importantes e seus métodos** (`ArrayList` é uma delas).
 - Saber **como encontrar informações das demais classes** (tais como métodos e parâmetros).
 
-## {.smaller}
+##
 
 O livro da disciplina recomenda que um programador conheça a **documentação do Java** para essas classes.
 
 - A documentação é formada por páginas HTML bem detalhadas sobre todas as classes da biblioteca.
 - Mas para quem não é fluente em inglês, isso pode gerar uma barreira inicial.
-  - Portanto, uma sugestão é usar também outras fontes para saber como usar as classes (como buscas no Google ou o ChatGPT).
+  - Portanto, uma sugestão é usar também outras fontes para saber como usar as classes,
+  - como buscas no Google ou ferramentas de IA, como ChatGPT ou Gemini.
 
-. . .
+##
 
 De toda forma, à medida que você fique mais experiente, saber usar a documentação pode ser muito útil.
 
 - Essa é uma das coisas que separam o programador juninho do bom programador.
 
-## {.smaller}
+##
 
 Um ponto importante sobre o uso da classe `ArrayList` é que nós já a utilizamos sem nunca termos visto o código da classe.
 
@@ -128,7 +128,7 @@ Tudo o que precisamos saber é:
 - As assinaturas dos seus métodos (nomes, parâmetros e tipos de retorno).
 - E o que exatamente esses métodos fazem.
 
-## {.smaller}
+##
 
 A mesma coisa acontece em projetos de software grandes de uma empresa.
 
@@ -136,11 +136,10 @@ A mesma coisa acontece em projetos de software grandes de uma empresa.
 - Cada programador deveria se concentrar em sua parte, sem ter que entender detalhes das outras partes.
   - Como discutimos ao falar sobre *abstração* e *modularização*.
 
-. . .
+##
 
-Na verdade, cada programador deveria:
+Cada programador deveria conseguir usar as classes das outras equipes como se elas fossem classes de biblioteca.
 
-- Conseguir usar as classes das outras equipes como se elas fossem classes de biblioteca.
 - Sabendo o que elas fazem, mas sem precisar saber como elas funcionam internamente.
 
 . . .
@@ -148,11 +147,12 @@ Na verdade, cada programador deveria:
 Mas, para isso funcionar, cada membro de equipe deveria documentar sua classe assim como é feito para as classes da biblioteca
 
 - Permitindo que outros programadores usem a classe sem precisar ler o código.
-- Veremos como fazer isso na próxima aula.
+- Veremos como fazer isso mais adiante neste capítulo.
+
 
 # O sistema de suporte técnico {background-color="#40666e"}
 
-## {.smaller}
+##
 
 A ideia do **sistema de Suporte Técnico** é que ele seja um **chat de atendimento** aos clientes.
 
@@ -167,7 +167,7 @@ Antigamente a empresa tinha funcionários que faziam atendimento por telefone.
 - E agora ela quer criar um sistema de suporte para dar a impressão que ela atende os clientes.
 - A ideia é que o sistema imite o atendimento que uma pessoa faria ao telefone.
 
-## {.smaller}
+##
 
 Vamos começar com uma versão bem rudimentar do sistema, disponível no projeto [suporte-tecnico1](https://github.com/ufla-ipoo/suporte-tecnico1).
 
@@ -197,7 +197,7 @@ Faça o mesmo com um objeto da classe `Respondedor`.
 Agora leia o código da classe `SistemaDeSuporte` e tente entender como ela funciona.
 :::
 
-## {.smaller}
+##
 
 Você deve ter notado que o sistema é realmente muito rudimentar.
 
@@ -210,7 +210,7 @@ Você deve ter notado que o sistema é realmente muito rudimentar.
 
 # Lendo documentação de classes {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Experimente usar o sistema de suporte técnico e digitar `"Tchau"` ou `" tchau"` (com espaço) para sair.
 
@@ -218,14 +218,14 @@ Experimente usar o sistema de suporte técnico e digitar `"Tchau"` ou `" tchau"`
 - Para o usuário isso é muito chato, certo?
   - Mas nós podemos usar a documentação da classe String para melhorar isso.
 
-. . .
+##
 
 A classe String é uma das classes da biblioteca padrão do Java.
 
-- Nós podemos acessar a documentação da classe, no BlueJ, no menu `Ajuda` &rarr; `Biblioteca de classes do Java`.
+- Nós podemos acessar a documentação da classe, no BlueJ, no menu `Ajuda` &rarr; `Biblioteca de classes de Java`.
 - Será aberta a documentação online do Java no seu navegador web.
   - Na parte superior direita há uma caixa de busca.
-  - Digite string e escolha primeira opção (`java.lang.String`).    
+  - Digite `string` e escolha primeira opção (`java.lang.String`).    
 
 ##
 
@@ -257,7 +257,7 @@ Procure se existe algum método na classe String que verifica se uma string term
 Se existir, como o método se chama, e quais são seus parâmetros e tipo de retorno?
 :::
 
-## Interface vs. Implementação {.smaller}
+## Interface vs. Implementação {auto-animate=True}
 
 Você deve ter notado que a documentação tem diferentes tipos de informação:
 
@@ -265,21 +265,25 @@ Você deve ter notado que a documentação tem diferentes tipos de informação:
 - uma descrição geral do objetivo da classe;
 - uma lista dos construtores e métodos da classe;
 - os parâmetros e tipos de retorno de cada construtor e cada método;
-- e uma descrição do objetivo de cada construtor e cada método.
+- e uma descrição do objetivo de cada construtor e método.
 
 . . .
 
 Todas essas informações formam o que chamamos de [interface de uma classe]{.alert}.
 
-- Repare que que a interface **não** mostra o código que implementa a classe.
+## Interface vs. Implementação {auto-animate=True}
+
+Todas essas informações formam o que chamamos de [interface de uma classe]{.alert}.
+
+- Repare que que **a interface não mostra o código** que implementa a classe.
 - Se uma classe é bem descrita (ou seja, sua interface é bem escrita),
   - um programador não precisa ver o código da classe para conseguir utilizá-la.
 - A interface já tem toda a informação que ele precisa.
   - (olha a **abstração** aí de novo!)
 
-## {.smaller}
+## Interface vs. Implementação
 
-O código que não vemos, que é o que faz a classe funcionar, é chamado de [implementação da classe]{.alert}.
+**O código** que não vemos, que é o que faz a classe funcionar, é chamado de [implementação da classe]{.alert}.
 
 - Geralmente um programador trabalha na implementação de uma classe de cada vez,
   - e, para isso, usa várias outras classes através de suas interfaces.
@@ -290,15 +294,15 @@ Essa diferenciação entre **interface** e **implementação** é um conceito mu
 
 - E vamos ver isso repetidamente nessa disciplina (e em disciplinas avançadas de POO).
 
-. . .
+##
 
 ::: {.callout-note title="Nota" appearance="simple" icon=false}
 A palavra **interface** tem diferentes significados em POO.
 Pode se referir a parte pública visível de uma classe (que é o que acabamos de aprender).
-Mas pode também se referir a interface gráfica de usuário ou a um tipo especial de classe que você conhecerá se puxar PPOO como eletiva :)
+Mas pode também se referir a interface gráfica de usuário ou a um tipo especial de classe que você conhecerá se puxar a disciplina Práticas de POO como eletiva. :)
 :::
 
-## {.smaller}
+##
 
 Nós também podemos falar de interface de um método específico.
 
@@ -309,18 +313,24 @@ Nós também podemos falar de interface de um método específico.
 ![](imagens/java-doc-String-length.png)
 
 
-## {.smaller}
+##
 
-![](imagens/java-doc-String-length.png)
+![](imagens/java-doc-String-length.png){.r-stretch}
 
-A interface de um método consiste em sua **assinatura e um comentário**. E a assinatura de um método contém:
+A interface de um método consiste em sua **assinatura e um comentário**.
+
+. . .
+
+E a assinatura de um método contém:
 
 - Um modificador de acesso (`public`, nesse caso).
 - O tipo de retorno do método (`int`, nesse caso).
 - O nome do método.
 - Uma lista de parâmetros (vazia, nesse caso).
 
-. . .
+##
+
+![](imagens/java-doc-String-length.png)
 
 Repare que a interface do método tem tudo que precisamos saber para conseguirmos usá-lo. 
 
@@ -330,11 +340,13 @@ Repare que a interface do método tem tudo que precisamos saber para conseguirmo
 A **interface** de uma classe descreve o que a classe faz e como ela pode ser usada sem mostrar a implementação.
 :::
 
+. . .
+
 ::: {.callout-tip title="Conceito" icon=false}
 O código-fonte completo que define uma classe é chamado de **implementação** da classe.
 :::
 
-## Usando métodos de classes da biblioteca {.smaller}
+## Usando métodos de classes da biblioteca
 
 Em nosso sistema de suporte, já vimos que o sistema não aceita que o usuário digite `"Tchau"` ou `" tchau"`.
 
@@ -347,7 +359,7 @@ Encontre o método `trim` na documentação da classe `String`.
 Escreva com suas palavras o que ele faz, e como ele poderia ser chamado usando uma variável `String` chamada `texto`.
 :::
 
-## {.smaller}
+##
 
 Um importante detalhe sobre objetos String em Java, é que eles são **imutáveis**.
 
@@ -380,7 +392,7 @@ Portanto, se queremos alterar a variável `texto`, precisamos descartar o objeto
 
 ::::
 
-## {.smaller}
+##
 
 Pelo que você leu sobre o método `trim` na documentação, como podemos usá-lo no sistema de suporte?
 
@@ -404,7 +416,7 @@ O código da classe `SistemaDeSuporte` poderia ser então alterado da seguinte f
 ```
 :::
 
-## {.smaller}
+##
 
 Você acha que haveria diferença entre escrever essas duas linhas de código:
 
@@ -447,7 +459,7 @@ Um objeto é chamado **imutável** se seu conteúdo ou estado não pode ser alte
 
 . . .
 
-::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+::: {.callout-note title="Exercício" icon=false}
 Implemente a alteração na classe `SistemaDeSuporte` usando o método `trim` da classe String.
 Teste a alteração digitando espaço antes da palavra tchau.
 :::
@@ -455,18 +467,18 @@ Teste a alteração digitando espaço antes da palavra tchau.
 ##
 
 
-::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+::: {.callout-note title="Exercício" icon=false}
 O exercício anterior ainda não resolveu o problema do usuário digitar `"Tchau"` com letra maiúscula.
 
 Veja na documentação da classe String como funciona o método `toLowerCase` e o utilize de forma que o programa saia independente do usuário digitar tchau com letras maiúsculas ou minúsculas.
 :::
 
-::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+::: {.callout-note title="Exercício" icon=false}
 Encontre o método `equals` na documentação da classe String.
 Utilize o método `equals` em vez do método `startsWith` na implementação da classe `SuporteTecnico`
 :::
 
-## {.smaller} 
+## 
 
 ::: {.nonincremental}
 
@@ -492,7 +504,7 @@ Lembre-se que, como já foi dito em aulas práticas anteriores, não podemos com
 
 # Adicionando comportamento aleatório {background-color="#40666e"}
 
-## {.smaller}
+##
 
 No início da disciplina, nós utilizamos um objeto da classe `Random` no exercício da Nave para acrescentar aleatoriedade em nosso jogo.
 
@@ -511,7 +523,7 @@ Nós podemos fazer isso, alterando a classe `Respondedor` seguindo os passos aba
 
 ##
 
-::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+::: {.callout-note title="Exercício" icon=false}
 Melhore a classe `Respondedor` de forma que ela gere respostas aleatórias como descrito no slide anterior.
 
 Veja que, para gerar respostas aleatórias, basta sortearmos uma posição do `ArrayList` e usarmos essa posição para obter uma mensagem.
@@ -526,7 +538,7 @@ Podemos sortear uma posição usando o método `nextInt` da classe `Random`, e o
 :::
 :::
 
-## {.smaller}
+##
 
 Exemplos de frases de resposta do sistema de suporte técnico:
 
@@ -546,7 +558,7 @@ Exemplos de frases de resposta do sistema de suporte técnico:
 
 # Melhorando o sistema de suporte {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Nosso sistema ficou mais dinâmico, mas ainda é muito ruim, pois as respostas são independentes do que o usuário escreve.
 
@@ -561,7 +573,7 @@ A ideia é identificar alguma palavra-chave na pergunta feita pelo usuário.
 
 - e fornecer uma resposta que tenha algo a ver com essa palavra-chave.
 
-## {.smaller}
+##
 
 Por exemplo, suponha que na pergunta do usuário apareça a palavra `"lento"`.
 
@@ -595,7 +607,7 @@ Já se na pergunta do usuário aparecer a palava `"bug"`, a resposta poderia ser
 
 Como podemos implementar isso?
 
-## {.smaller}
+##
 
 **Atenção**:
 
@@ -605,7 +617,7 @@ Como podemos implementar isso?
 
 ##
 
-::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+::: {.callout-note title="Exercício" icon=false}
 ::: {.nonincremental}
 Vamos implementar a ideia discutida nos slides anteriores.  Neste exercício, faça o seguinte:
 
@@ -629,7 +641,7 @@ Vamos implementar a ideia discutida nos slides anteriores.  Neste exercício, fa
 :::
 :::
 
-## {.smaller}
+##
 
 ::: {.fontsize70}
 
@@ -653,7 +665,7 @@ Vamos implementar a ideia discutida nos slides anteriores.  Neste exercício, fa
 
 # Autoboxing e classes empacotadoras {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Nós vimos que um `ArrayList` consegue guardar qualquer tipo de objeto.
 
@@ -667,7 +679,7 @@ Isso é possível através das [classes empacotadoras (*wrapper classes*)]{.aler
   - Mas que é um objeto de verdade.
 - A classe empacotadora para `int`, por exemplo, se chama `Integer`.
 
-## {.smaller}
+##
 
 Nós poderíamos criar explicitamente um objeto do tipo `Integer`:
 
@@ -687,7 +699,7 @@ E poderíamos então declarar um `ArrayList<Integer>` e guardar nele o `objetoIn
   - o compilador converte o valor automaticamente em um objeto empacotador correspondente.
   - Essa funcionalidade se chama [*autoboxing*]{.alert} (algo como, auto-empacotamento).
 
-## {.smaller}
+##
 
 Portanto, na prática, podemos escrever código como mostrado abaixo:
 
@@ -705,7 +717,7 @@ Portanto, na prática, podemos escrever código como mostrado abaixo:
 
 Repare que estamos guardando o valor da variável `nota`, do tipo `int`, em um `ArrayList<Integer>`.
 
-## {.smaller}
+##
 
 Seguindo a mesma ideia, o compilador realiza o [unboxing]{.alert} quando obtemos um valor da coleção:
 
@@ -722,7 +734,7 @@ Veja portanto que, em termos práticos, a única coisa que precisamos lembrar é
 - Mas na hora de usar o `ArrayList` podemos tratar todos os dados como se fossem do tipo `int`.
 
 
-## {.smaller}
+##
 
 Veja no Apêndice B do livro uma lista completa dos tipos primitivos e suas classes empacotadoras.
 
@@ -737,7 +749,7 @@ Veja no Apêndice B do livro uma lista completa dos tipos primitivos e suas clas
 
 # Encapsulamento {background-color="#40666e"}
 
-## Público vs. Privado {.smaller}
+## Público vs. Privado
 
 Vocês já notaram que usamos a todo momento as palavras-chave `public` e `private` em nossos programas em Java, como mostrado no exemplo abaixo:
 
@@ -761,7 +773,7 @@ Vocês já notaram que usamos a todo momento as palavras-chave `public` e `priva
 
 Chegou a hora de entendermos para que essas palavras-chaves servem.
 
-## {.smaller}
+##
 
 Nós chamamos essas palavras-chave de [modificadores de acesso]{.alert}.
 
@@ -780,7 +792,7 @@ Já métodos **privados**, por outro lado,
 - **Só** podem ser chamados de **dentro** da mesma classe onde foram declarados.
 - Eles não são visíveis para as outras classes.
 
-## {.smaller}
+##
 
 Como agora já conhecemos os conceitos de **interface** e **implementação** fica mais fácil entendermos o objetivo dessas palavras-chave.
 
@@ -793,7 +805,7 @@ Lembre-se que a **interface de uma classe** é o conjunto de detalhes que um pro
 - Nós também dizemos que a **interface** é a [parte pública]{.alert} da classe.
 - Seu objetivo é definir [o que]{.alert} **a classe faz**.
 
-## {.smaller}
+##
 
 Já a **implementação** é a parte da classe que define precisamente [como]{.alert} **a classe funciona**.
 
@@ -802,7 +814,7 @@ Já a **implementação** é a parte da classe que define precisamente [como]{.a
 - Quem usa a classe não precisa conhecer a implementação.
 - Inclusive, há boas razões para que o programador não possa fazer uso desse conhecimento (como veremos mais adiante).
 
-## {.smaller}
+##
 
 Portanto, podemos dizer que:
 
@@ -819,7 +831,7 @@ Elementos públicos são acessíveis de dentro da classe e a partir de outras cl
 já elementos privados são acessíveis somente de dentro da mesma classe.
 :::
 
-## Encapsulamento {.smaller}
+## Encapsulamento
 
 Em muitas linguagens OO, a implementação de uma classe (seus detalhes internos) é ocultada de outras classes.
 
@@ -836,7 +848,7 @@ Isso tem a ver com duas questões.
 - Apesar de também ter a ver com modularização, a ideia aqui é que a linguagem não deveria permitir o acesso à parte privada de uma classe a partir de comandos em outras classes.
 - Isso garante que uma classe não dependa de **como** exatamente uma outra classe está implementada.
 
-## {.smaller}
+##
 
 Esta última questão é muito importante para a manutenção de sistemas.
 
@@ -847,7 +859,7 @@ Esta última questão é muito importante para a manutenção de sistemas.
   - E isso é muito bom, porque torna o trabalho de manutenção muito mais fácil.
   - Já que em vez de entender e alterar várias classes, o programador precisa trabalhar em apenas em uma.
 
-## {.smaller}
+##
 
 Suponha, por exemplo, que a equipe que mantém a linguagem Java faça uma melhoria na implementação da classe `ArrayList`.
 
@@ -864,7 +876,7 @@ Para ficar mais claro, quando uma classe A utiliza um objeto de uma classe B.
   - Mas de toda forma, as classes ainda deveriam ter **baixo acoplamento**.
 
 
-## {.smaller}
+##
 
 Esta questão de **acoplamento** é tão importante que vamos discuti-la, em detalhes, no Capítulo 7.
 
@@ -879,7 +891,7 @@ Nós também podemos chamar o *princípio da ocultação de informações* de [e
 - Esse **conceito** é **fundamental na Programação Orientada a Objetos**.
 - E talvez seja a única parte do livro que não gosto muito, pois acho que ele não dá a ênfase necessária a esse conceito.
 
-## {.smaller}
+##
 
 O termo **encapsulamento** vem da palavra *cápsula*, que é definida no dicionário como:
 
@@ -891,7 +903,7 @@ A ideia é que a implementação da classe (seus detalhes internos) sejam encaps
 
 - E a classe exponha apenas sua interface.
 
-## {.smaller}
+##
 
 :::: {.columns}
 
@@ -925,7 +937,7 @@ A mesma analogia pode ser feita com um caixa eletrônico.
 ::::
 
 
-## Métodos privados {.smaller}
+## Métodos privados
 
 Muitos dos métodos que vimos até agora eram públicos.
 
@@ -941,7 +953,7 @@ Nós declaramos um método como **público** para fornecer operações para quem
   - Veja que não faria sentido chamar o método `imprimirBoasVindas` de fora da classe `SistemaDeSuporte`.
   - Mas o código do método `iniciar` fica mais claro quando separamos sua tarefa em subtarefas.
 
-## Métodos privados {.smaller}
+## Métodos privados
 
 Nós também usamos métodos privados quando um trecho de código é usado em mais de um lugar na classe.
 
@@ -949,7 +961,7 @@ Nós também usamos métodos privados quando um trecho de código é usado em ma
 - E, em vez disso, chamamos o método privado em mais de um lugar.
 
 
-## Atributos privados! {.smaller}
+## Atributos privados!
 
 A linguagem Java permite que atributos sejam declarados como privados ou públicos.
 
@@ -965,7 +977,7 @@ Declarar atributos públicos quebra o *princípio da ocultação das informaçõ
   - Enquanto outras não implementam completamente o conceito de encapsulamento, o que viola a teoria de POO.
   - Esse é o principal motivo para eu não adotar a linguagem Python na disciplina :)
 
-## Atributos privados! {.smaller}
+## Atributos privados!
 
 Outro motivo para manter os atributos privados é permitir que a **classe tenha** um maior **controle sobre o estado** dos seus objetos.
 
@@ -989,7 +1001,7 @@ circulo.diametro = 30;
 ```
 :::
 
-## Atributos privados! {.smaller}
+## Atributos privados!
 
 Mas repare que isso abre brecha para a seguinte situação:
 
@@ -1010,7 +1022,7 @@ O que aconteceria se, por algum erro, o método `calcularNovoDiametro` retornass
 
 E como isso poderia ser corrigido?
 
-## Atributos privados! {.smaller}
+## Atributos privados!
 
 Além, é claro, de corrigir o método de cálculo, seria uma boa ideia colocar um `if` antes de alterar o diâmetro:
 
@@ -1033,7 +1045,7 @@ Mas repare que podem existir diversos trechos de código no programa que alteram
 - Outro problema é que tudo isso está acontecendo sem o conhecimento da classe `Circulo`.
   - Mas é ela quem deveria ser responsável por garantir que o estado dos seus objetos é sempre válido.
 
-## Atributos privados! {.smaller}
+## Atributos privados!
 
 Vamos comparar com uma versão bem implementada da classe `Circulo`:
 
@@ -1078,7 +1090,7 @@ Isso permite uma melhor modularização de uma aplicação.
 
 # Entregas dessa Aula {background-color="#40666e"}
 
-## {.smaller}
+##
 
 ::: {.nonincremental}
 

@@ -256,7 +256,7 @@
     "href": "cap5-1.html#principais-conceitos-do-capítulo",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "Principais Conceitos do Capítulo",
-    "text": "Principais Conceitos do Capítulo\n\n\nEncapsulamento\nAtributos e métodos estáticos\nConstantes\nUso de classes de biblioteca\nDocumentação de classes\n\n\n\nConstruções Java do capítulo\n\n\nString, Random, static, final, autoboxing, classes empacotadoras."
+    "text": "Principais Conceitos do Capítulo\n\nEncapsulamento\nAtributos e métodos estáticos\nConstantes\nUso de classes de biblioteca\nDocumentação de classes\n\n\nConstruções Java do capítulo\n\nString, Random, static, final, autoboxing, classes empacotadoras."
   },
   {
     "objectID": "cap5-1.html#section-2",
@@ -270,14 +270,14 @@
     "href": "cap5-1.html#section-3",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "No capítulo anterior conhecemos a classe ArrayList da biblioteca de classes do Java.\n\nCom ela, ficou mais fácil fazer programas para guardar uma quantidade qualquer de objetos.\nO que sem ela seria bem mais complicado.\n\n\nMas ela é apenas um exemplo de classe da biblioteca.\n\nExistem muitas que serão muito úteis em nossos softwares.\nE outras que, possivelmente, nunca usaremos.\n\n\n\nUm bom programador Java precisa conseguir trabalhar com as classes da biblioteca.\n\nE saber quando utilizar cada uma.\nDe forma a tornar a implementação de um programa mais fácil."
+    "text": "No capítulo anterior conhecemos a classe ArrayList da biblioteca de classes do Java.\n\nCom ela, ficou mais fácil fazer programas para guardar uma quantidade qualquer de objetos.\nO que sem ela seria bem mais complicado.\n\n\nMas ela é apenas um exemplo de classe da biblioteca.\n\nExistem muitas que serão muito úteis em nossos softwares.\nE outras que, possivelmente, nunca usaremos."
   },
   {
     "objectID": "cap5-1.html#section-4",
     "href": "cap5-1.html#section-4",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Muitas classes da biblioteca têm certas características comuns entre si.\n\nEspecialmente as coleções, são classes que compartilham muitos atributos.\nE, usando a abstração, podemos tratar de classes de coleções de uma maneira mais geral.\n\n\nNeste capítulo, vamos trabalhar com um sistema de Suporte Técnico.\n\nComeçaremos com uma versão rudimentar.\nE ela será melhorado, incrementalmente, utilizando diferentes classes da biblioteca Java."
+    "text": "Um bom programador Java precisa conseguir trabalhar com as classes da biblioteca.\n\nE saber quando utilizar cada uma.\nDe forma a tornar a implementação de um programa mais fácil.\n\n\nMuitas classes da biblioteca têm certas características comuns entre si.\n\nEspecialmente as coleções, são classes que compartilham muitos atributos.\nE, usando a abstração, podemos tratar de classes de coleções de uma maneira mais geral."
   },
   {
     "objectID": "cap5-1.html#section-6",
@@ -291,105 +291,105 @@
     "href": "cap5-1.html#section-7",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "O livro da disciplina recomenda que um programador conheça a documentação do Java para essas classes.\n\nA documentação é formada por páginas HTML bem detalhadas sobre todas as classes da biblioteca.\nMas para quem não é fluente em inglês, isso pode gerar uma barreira inicial.\n\nPortanto, uma sugestão é usar também outras fontes para saber como usar as classes (como buscas no Google ou o ChatGPT).\n\n\n\nDe toda forma, à medida que você fique mais experiente, saber usar a documentação pode ser muito útil.\n\nEssa é uma das coisas que separam o programador juninho do bom programador."
+    "text": "O livro da disciplina recomenda que um programador conheça a documentação do Java para essas classes.\n\nA documentação é formada por páginas HTML bem detalhadas sobre todas as classes da biblioteca.\nMas para quem não é fluente em inglês, isso pode gerar uma barreira inicial.\n\nPortanto, uma sugestão é usar também outras fontes para saber como usar as classes,\ncomo buscas no Google ou ferramentas de IA, como ChatGPT ou Gemini."
   },
   {
     "objectID": "cap5-1.html#section-8",
     "href": "cap5-1.html#section-8",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Um ponto importante sobre o uso da classe ArrayList é que nós já a utilizamos sem nunca termos visto o código da classe.\n\nNós não conferimos como ela foi implementada.\nE isso não foi necessário para utilizarmos suas funcionalidades.\n\n\nTudo o que precisamos saber é:\n\nO nome da classe.\nAs assinaturas dos seus métodos (nomes, parâmetros e tipos de retorno).\nE o que exatamente esses métodos fazem."
+    "text": "De toda forma, à medida que você fique mais experiente, saber usar a documentação pode ser muito útil.\n\nEssa é uma das coisas que separam o programador juninho do bom programador."
   },
   {
     "objectID": "cap5-1.html#section-9",
     "href": "cap5-1.html#section-9",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "A mesma coisa acontece em projetos de software grandes de uma empresa.\n\nGeralmente, várias pessoas trabalham em diferentes partes do sistema.\nCada programador deveria se concentrar em sua parte, sem ter que entender detalhes das outras partes.\n\nComo discutimos ao falar sobre abstração e modularização.\n\n\n\nNa verdade, cada programador deveria:\n\nConseguir usar as classes das outras equipes como se elas fossem classes de biblioteca.\nSabendo o que elas fazem, mas sem precisar saber como elas funcionam internamente.\n\n\n\nMas, para isso funcionar, cada membro de equipe deveria documentar sua classe assim como é feito para as classes da biblioteca\n\nPermitindo que outros programadores usem a classe sem precisar ler o código.\nVeremos como fazer isso na próxima aula."
+    "text": "Um ponto importante sobre o uso da classe ArrayList é que nós já a utilizamos sem nunca termos visto o código da classe.\n\nNós não conferimos como ela foi implementada.\nE isso não foi necessário para utilizarmos suas funcionalidades.\n\n\nTudo o que precisamos saber é:\n\nO nome da classe.\nAs assinaturas dos seus métodos (nomes, parâmetros e tipos de retorno).\nE o que exatamente esses métodos fazem."
   },
   {
     "objectID": "cap5-1.html#section-10",
     "href": "cap5-1.html#section-10",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "A ideia do sistema de Suporte Técnico é que ele seja um chat de atendimento aos clientes.\n\nde uma empresa fictícia, chamada DesonestosSistemas.\n\n\nAntigamente a empresa tinha funcionários que faziam atendimento por telefone.\n\nMas ela passou por problemas financeiros e demitiu a equipe.\n\nE não tem dinheiro para criar um chatbot de verdade.\n\nE agora ela quer criar um sistema de suporte para dar a impressão que ela atende os clientes.\nA ideia é que o sistema imite o atendimento que uma pessoa faria ao telefone."
+    "text": "A mesma coisa acontece em projetos de software grandes de uma empresa.\n\nGeralmente, várias pessoas trabalham em diferentes partes do sistema.\nCada programador deveria se concentrar em sua parte, sem ter que entender detalhes das outras partes.\n\nComo discutimos ao falar sobre abstração e modularização."
   },
   {
     "objectID": "cap5-1.html#section-11",
     "href": "cap5-1.html#section-11",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Vamos começar com uma versão bem rudimentar do sistema, disponível no projeto suporte-tecnico1.\n\nA ideia é que, ao longo da aula, possamos melhorar o sistema.\nE, ao longo do processo, vamos aprender diversos conceitos."
+    "text": "Cada programador deveria conseguir usar as classes das outras equipes como se elas fossem classes de biblioteca.\n\nSabendo o que elas fazem, mas sem precisar saber como elas funcionam internamente.\n\n\nMas, para isso funcionar, cada membro de equipe deveria documentar sua classe assim como é feito para as classes da biblioteca\n\nPermitindo que outros programadores usem a classe sem precisar ler o código.\nVeremos como fazer isso mais adiante neste capítulo."
   },
   {
     "objectID": "cap5-1.html#section-12",
     "href": "cap5-1.html#section-12",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\nExperimente a versão rudimentar do sistema de suporte técnico.\nCrie um objeto da classe SistemaDeSuporte e chame o método iniciar. Experimente conversar com o sistema pelo terminal e repare como é atendido.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nPara conhecermos melhor o projeto, crie um objeto da classe LeitorDeEntrada e experimente seu(s) método(s).\nFaça o mesmo com um objeto da classe Respondedor.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAgora leia o código da classe SistemaDeSuporte e tente entender como ela funciona."
+    "text": "A ideia do sistema de Suporte Técnico é que ele seja um chat de atendimento aos clientes.\n\nde uma empresa fictícia, chamada DesonestosSistemas.\n\n\nAntigamente a empresa tinha funcionários que faziam atendimento por telefone.\n\nMas ela passou por problemas financeiros e demitiu a equipe.\n\nE não tem dinheiro para criar um chatbot de verdade.\n\nE agora ela quer criar um sistema de suporte para dar a impressão que ela atende os clientes.\nA ideia é que o sistema imite o atendimento que uma pessoa faria ao telefone."
   },
   {
     "objectID": "cap5-1.html#section-13",
     "href": "cap5-1.html#section-13",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Você deve ter notado que o sistema é realmente muito rudimentar.\n\nA classe LeitorDeEntrada basicamente retorna uma string digitada pelo usuário no terminal.\nA classe Respondedor tem um método que sempre retorna a mesma resposta.\nJá a classe SistemaDeSuporte tem um objeto de cada uma das duas classes anteriores.\n\nE um loop while que, repetidamente, obtém um texto do usuário e exibe uma resposta.\nIsso é repetido até que o usuário digite qualquer string que comece com tchau."
+    "text": "Vamos começar com uma versão bem rudimentar do sistema, disponível no projeto suporte-tecnico1.\n\nA ideia é que, ao longo da aula, possamos melhorar o sistema.\nE, ao longo do processo, vamos aprender diversos conceitos."
   },
   {
     "objectID": "cap5-1.html#section-14",
     "href": "cap5-1.html#section-14",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Experimente usar o sistema de suporte técnico e digitar \"Tchau\" ou \" tchau\" (com espaço) para sair.\n\nO que acontece?\nPara o usuário isso é muito chato, certo?\n\nMas nós podemos usar a documentação da classe String para melhorar isso.\n\n\n\nA classe String é uma das classes da biblioteca padrão do Java.\n\nNós podemos acessar a documentação da classe, no BlueJ, no menu Ajuda → Biblioteca de classes do Java.\nSerá aberta a documentação online do Java no seu navegador web.\n\nNa parte superior direita há uma caixa de busca.\nDigite string e escolha primeira opção (java.lang.String)."
+    "text": "Exercício\n\n\nExperimente a versão rudimentar do sistema de suporte técnico.\nCrie um objeto da classe SistemaDeSuporte e chame o método iniciar. Experimente conversar com o sistema pelo terminal e repare como é atendido.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nPara conhecermos melhor o projeto, crie um objeto da classe LeitorDeEntrada e experimente seu(s) método(s).\nFaça o mesmo com um objeto da classe Respondedor.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nAgora leia o código da classe SistemaDeSuporte e tente entender como ela funciona."
   },
   {
     "objectID": "cap5-1.html#section-15",
     "href": "cap5-1.html#section-15",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\nAbra a documentação de alguma outra classe do Java e compare a estrutura da documentação das duas classes. O que as páginas têm em comum?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nProcure pelo método startsWith na documentação da classe String. Veja que o método é sobrecarregado, há duas versões.\nEscreva com suas palavras o que as duas versões fazem e a diferença entre eles.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nHá algum método na classe String que retorna quantos caracteres ela tem? Como o método se chama e quais são seus parâmetros?"
+    "text": "Você deve ter notado que o sistema é realmente muito rudimentar.\n\nA classe LeitorDeEntrada basicamente retorna uma string digitada pelo usuário no terminal.\nA classe Respondedor tem um método que sempre retorna a mesma resposta.\nJá a classe SistemaDeSuporte tem um objeto de cada uma das duas classes anteriores.\n\nE um loop while que, repetidamente, obtém um texto do usuário e exibe uma resposta.\nIsso é repetido até que o usuário digite qualquer string que comece com tchau."
   },
   {
     "objectID": "cap5-1.html#section-16",
     "href": "cap5-1.html#section-16",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\nProcure se existe algum método na classe String que verifica se uma string termina com um dado sufixo. Se existir, como o método se chama, e quais são seus parâmetros e tipo de retorno?"
+    "text": "Experimente usar o sistema de suporte técnico e digitar \"Tchau\" ou \" tchau\" (com espaço) para sair.\n\nO que acontece?\nPara o usuário isso é muito chato, certo?\n\nMas nós podemos usar a documentação da classe String para melhorar isso."
   },
   {
     "objectID": "cap5-1.html#interface-vs.-implementação",
     "href": "cap5-1.html#interface-vs.-implementação",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "Interface vs. Implementação",
-    "text": "Interface vs. Implementação\nVocê deve ter notado que a documentação tem diferentes tipos de informação:\n\no nome da classe;\numa descrição geral do objetivo da classe;\numa lista dos construtores e métodos da classe;\nos parâmetros e tipos de retorno de cada construtor e cada método;\ne uma descrição do objetivo de cada construtor e cada método.\n\n\nTodas essas informações formam o que chamamos de interface de uma classe.\n\nRepare que que a interface não mostra o código que implementa a classe.\nSe uma classe é bem descrita (ou seja, sua interface é bem escrita),\n\num programador não precisa ver o código da classe para conseguir utilizá-la.\n\nA interface já tem toda a informação que ele precisa.\n\n(olha a abstração aí de novo!)"
+    "text": "Interface vs. Implementação\nVocê deve ter notado que a documentação tem diferentes tipos de informação:\n\no nome da classe;\numa descrição geral do objetivo da classe;\numa lista dos construtores e métodos da classe;\nos parâmetros e tipos de retorno de cada construtor e cada método;\ne uma descrição do objetivo de cada construtor e método.\n\n\nTodas essas informações formam o que chamamos de interface de uma classe."
   },
   {
     "objectID": "cap5-1.html#section-17",
     "href": "cap5-1.html#section-17",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "O código que não vemos, que é o que faz a classe funcionar, é chamado de implementação da classe.\n\nGeralmente um programador trabalha na implementação de uma classe de cada vez,\n\ne, para isso, usa várias outras classes através de suas interfaces.\n\n\n\nEssa diferenciação entre interface e implementação é um conceito muito importante.\n\nE vamos ver isso repetidamente nessa disciplina (e em disciplinas avançadas de POO).\n\n\n\n\n\n\n\nNota\n\n\nA palavra interface tem diferentes significados em POO. Pode se referir a parte pública visível de uma classe (que é o que acabamos de aprender). Mas pode também se referir a interface gráfica de usuário ou a um tipo especial de classe que você conhecerá se puxar PPOO como eletiva :)"
+    "text": "A classe String é uma das classes da biblioteca padrão do Java.\n\nNós podemos acessar a documentação da classe, no BlueJ, no menu Ajuda → Biblioteca de classes de Java.\nSerá aberta a documentação online do Java no seu navegador web.\n\nNa parte superior direita há uma caixa de busca.\nDigite string e escolha primeira opção (java.lang.String)."
   },
   {
     "objectID": "cap5-1.html#section-18",
     "href": "cap5-1.html#section-18",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nós também podemos falar de interface de um método específico.\n\nVeja, por exemplo, a documentação do método length da classe String."
+    "text": "Exercício\n\n\nAbra a documentação de alguma outra classe do Java e compare a estrutura da documentação das duas classes. O que as páginas têm em comum?\n\n\n\n\n\n\n\n\n\nExercício\n\n\nProcure pelo método startsWith na documentação da classe String. Veja que o método é sobrecarregado, há duas versões.\nEscreva com suas palavras o que as duas versões fazem e a diferença entre eles.\n\n\n\n\n\n\n\n\n\n\nExercício\n\n\nHá algum método na classe String que retorna quantos caracteres ela tem? Como o método se chama e quais são seus parâmetros?"
   },
   {
     "objectID": "cap5-1.html#section-19",
     "href": "cap5-1.html#section-19",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "A interface de um método consiste em sua assinatura e um comentário. E a assinatura de um método contém:\n\nUm modificador de acesso (public, nesse caso).\nO tipo de retorno do método (int, nesse caso).\nO nome do método.\nUma lista de parâmetros (vazia, nesse caso).\n\n\nRepare que a interface do método tem tudo que precisamos saber para conseguirmos usá-lo."
+    "text": "Exercício\n\n\nProcure se existe algum método na classe String que verifica se uma string termina com um dado sufixo. Se existir, como o método se chama, e quais são seus parâmetros e tipo de retorno?"
   },
   {
     "objectID": "cap5-1.html#section-20",
     "href": "cap5-1.html#section-20",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Conceito\n\n\nA interface de uma classe descreve o que a classe faz e como ela pode ser usada sem mostrar a implementação.\n\n\n\n\n\n\n\n\nConceito\n\n\nO código-fonte completo que define uma classe é chamado de implementação da classe."
+    "text": "Nota\n\n\nA palavra interface tem diferentes significados em POO. Pode se referir a parte pública visível de uma classe (que é o que acabamos de aprender). Mas pode também se referir a interface gráfica de usuário ou a um tipo especial de classe que você conhecerá se puxar a disciplina Práticas de POO como eletiva. :)"
   },
   {
     "objectID": "cap5-1.html#usando-métodos-de-classes-da-biblioteca",
@@ -403,133 +403,133 @@
     "href": "cap5-1.html#section-21",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Um importante detalhe sobre objetos String em Java, é que eles são imutáveis.\n\nIsso significa que esses objetos não podem ser alterados depois de criados.\nRepare que o método trim, por exemplo, retorna uma nova String.\n\nEle não modifica a String original.\n\n\n\n\n\n\n\nÉ um erro comum em Java, tentar alterar uma String usando chamadas como:\ntexto.toUpperCase();\nEssa chamada não provoca nenhum erro, mas também não causa nenhum efeito. Isso porque o método retorna uma nova String, ele não altera a original.\nPortanto, se queremos alterar a variável texto, precisamos descartar o objeto String original, atribuindo à variável texto a nova String gerada:\ntexto = texto.toUpperCase();"
+    "text": "Nós também podemos falar de interface de um método específico.\n\nVeja, por exemplo, a documentação do método length da classe String."
   },
   {
     "objectID": "cap5-1.html#section-22",
     "href": "cap5-1.html#section-22",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Pelo que você leu sobre o método trim na documentação, como podemos usá-lo no sistema de suporte?\n\nVocê deve ter visto que podemos usá-lo para remover espaços no início e no final da string.\n\n\nO código da classe SistemaDeSuporte poderia ser então alterado da seguinte forma:\n\n    String entrada = leitor.obterEntrada();\n    entrada = entrada.trim();\n    if(entrada.startsWith(\"tchau\")) {\n        terminou = true;\n    }\n    else {\n        String resposta = respondedor.generateResponse();\n        System.out.println(resposta);\n    }"
+    "text": "A interface de um método consiste em sua assinatura e um comentário.\n\nE a assinatura de um método contém:\n\nUm modificador de acesso (public, nesse caso).\nO tipo de retorno do método (int, nesse caso).\nO nome do método.\nUma lista de parâmetros (vazia, nesse caso)."
   },
   {
     "objectID": "cap5-1.html#section-23",
     "href": "cap5-1.html#section-23",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Você acha que haveria diferença entre escrever essas duas linhas de código:\n\n    String entrada = leitor.obterEntrada();\n    entrada = entrada.trim();\n\nou escrever assim?\n\n    String entrada = leitor.obterEntrada().trim();\n\n\nO efeito é exatamente o mesmo.\n\nVocê pode escolher a forma que acha mais fácil de entender.\nVeja que na segunda opção, a ordem de execução é como se existissem os parênteses como mostrado abaixo.\n\n\n\n\n  String entrada = (leitor.obterEntrada()).trim();"
+    "text": "Repare que a interface do método tem tudo que precisamos saber para conseguirmos usá-lo."
   },
   {
     "objectID": "cap5-1.html#section-24",
     "href": "cap5-1.html#section-24",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Conceito\n\n\nUm objeto é chamado imutável se seu conteúdo ou estado não pode ser alterado depois que ele foi criado. Strings são exemplos de objetos imutáveis.\n\n\n\n\n\n\n\n\n\nExercício (entrega)\n\n\nImplemente a alteração na classe SistemaDeSuporte usando o método trim da classe String. Teste a alteração digitando espaço antes da palavra tchau."
+    "text": "Conceito\n\n\nA interface de uma classe descreve o que a classe faz e como ela pode ser usada sem mostrar a implementação.\n\n\n\n\n\n\n\n\nConceito\n\n\nO código-fonte completo que define uma classe é chamado de implementação da classe."
   },
   {
     "objectID": "cap5-1.html#section-25",
     "href": "cap5-1.html#section-25",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício (entrega)\n\n\nO exercício anterior ainda não resolveu o problema do usuário digitar \"Tchau\" com letra maiúscula.\nVeja na documentação da classe String como funciona o método toLowerCase e o utilize de forma que o programa saia independente do usuário digitar tchau com letras maiúsculas ou minúsculas.\n\n\n\n\n\n\n\n\nExercício (entrega)\n\n\nEncontre o método equals na documentação da classe String. Utilize o método equals em vez do método startsWith na implementação da classe SuporteTecnico"
+    "text": "Um importante detalhe sobre objetos String em Java, é que eles são imutáveis.\n\nIsso significa que esses objetos não podem ser alterados depois de criados.\nRepare que o método trim, por exemplo, retorna uma nova String.\n\nEle não modifica a String original.\n\n\n\n\n\n\n\nÉ um erro comum em Java, tentar alterar uma String usando chamadas como:\ntexto.toUpperCase();\nEssa chamada não provoca nenhum erro, mas também não causa nenhum efeito. Isso porque o método retorna uma nova String, ele não altera a original.\nPortanto, se queremos alterar a variável texto, precisamos descartar o objeto String original, atribuindo à variável texto a nova String gerada:\ntexto = texto.toUpperCase();"
   },
   {
     "objectID": "cap5-1.html#section-26",
     "href": "cap5-1.html#section-26",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Lembre-se que, como já foi dito em aulas práticas anteriores, não podemos comparar objetos String em Java utilizando o operador ==.\n\nUsando o operador estamos verificando se é o mesmo objeto, e não se os dois objetos têm o mesmo conteúdo.\nPara comparar se dois objetos String têm o mesmo conteúdo, devemos utilizar o método equals."
+    "text": "Pelo que você leu sobre o método trim na documentação, como podemos usá-lo no sistema de suporte?\n\nVocê deve ter visto que podemos usá-lo para remover espaços no início e no final da string.\n\n\nO código da classe SistemaDeSuporte poderia ser então alterado da seguinte forma:\n\n    String entrada = leitor.obterEntrada();\n    entrada = entrada.trim();\n    if(entrada.startsWith(\"tchau\")) {\n        terminou = true;\n    }\n    else {\n        String resposta = respondedor.generateResponse();\n        System.out.println(resposta);\n    }"
   },
   {
     "objectID": "cap5-1.html#section-27",
     "href": "cap5-1.html#section-27",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "No início da disciplina, nós utilizamos um objeto da classe Random no exercício da Nave para acrescentar aleatoriedade em nosso jogo.\n\nNós podemos agora utilizar a mesma classe para mudar o comportamento do Respondedor do nosso sistema de suporte.\nA ideia é que o sistema exiba respostas aleatórias, em vez de sempre responder a mesma coisa.\n\n\nNós podemos fazer isso, alterando a classe Respondedor seguindo os passos abaixo:\n\ndeclarando um atributo do tipo Random para guardar um gerador de números aleatórios;\ndeclarando um atributo do tipo ArrayList para guardar nossas possíveis respostas;\ncriando os objetos Random e ArrayList no construtor da classe Respondedor;\npreenchendo a lista com algumas frases de resposta;\nselecionando e retornando uma frase aleatória quando o método gerarResposta é chamado."
+    "text": "Você acha que haveria diferença entre escrever essas duas linhas de código:\n\n    String entrada = leitor.obterEntrada();\n    entrada = entrada.trim();\n\nou escrever assim?\n\n    String entrada = leitor.obterEntrada().trim();\n\n\nO efeito é exatamente o mesmo.\n\nVocê pode escolher a forma que acha mais fácil de entender.\nVeja que na segunda opção, a ordem de execução é como se existissem os parênteses como mostrado abaixo.\n\n\n\n\n  String entrada = (leitor.obterEntrada()).trim();"
   },
   {
     "objectID": "cap5-1.html#section-28",
     "href": "cap5-1.html#section-28",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício (entrega)\n\n\nMelhore a classe Respondedor de forma que ela gere respostas aleatórias como descrito no slide anterior.\nVeja que, para gerar respostas aleatórias, basta sortearmos uma posição do ArrayList e usarmos essa posição para obter uma mensagem. Podemos sortear uma posição usando o método nextInt da classe Random, e o método size da classe ArrayList.\n\nDicas:\n\nVeja no próximo slide alguns exemplos de frase de resposta (mas não precisam ser exatamente essas, use sua criatividade!).\nReveja o exercício da Nave para se lembrar como usar a classe Random.\nLeia a seção 5.4 do livro da disciplina."
+    "text": "Conceito\n\n\nUm objeto é chamado imutável se seu conteúdo ou estado não pode ser alterado depois que ele foi criado. Strings são exemplos de objetos imutáveis.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nImplemente a alteração na classe SistemaDeSuporte usando o método trim da classe String. Teste a alteração digitando espaço antes da palavra tchau."
   },
   {
     "objectID": "cap5-1.html#section-29",
     "href": "cap5-1.html#section-29",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exemplos de frases de resposta do sistema de suporte técnico:\n\n\"Isso parece estranho. Você poderia descrever com mais detalhes?\"\n\"Nenhum outro cliente reclamou disso antes. Qual é a configuração do seu sistema?\"\n\"Poderia me dar mais informações sobre o problema?\"\n\"Isso é abordado no manual. Você já leu o manual?\"\n\"Sua descrição é um pouco ruim. Você tem um especialista com você que poderia descrever isso melhor?\"\n\"Isso não é um bug, é uma funcionalidade!\"\n\"Você poderia detalhar melhor isso?\"\n\"Você já tentou executar o aplicativo no seu telefone?\"\n\"Já verifiquei no StatckOverflow e ChatGPT e nem eles sabem como responder :(\""
+    "text": "Exercício\n\n\nO exercício anterior ainda não resolveu o problema do usuário digitar \"Tchau\" com letra maiúscula.\nVeja na documentação da classe String como funciona o método toLowerCase e o utilize de forma que o programa saia independente do usuário digitar tchau com letras maiúsculas ou minúsculas.\n\n\n\n\n\n\n\n\nExercício\n\n\nEncontre o método equals na documentação da classe String. Utilize o método equals em vez do método startsWith na implementação da classe SuporteTecnico"
   },
   {
     "objectID": "cap5-1.html#section-30",
     "href": "cap5-1.html#section-30",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nosso sistema ficou mais dinâmico, mas ainda é muito ruim, pois as respostas são independentes do que o usuário escreve.\n\nNós podemos melhorar um pouco isso, fazendo algo pelo menos próximo do que o usuário perguntou.\nO livro apresenta uma solução usando a classe HashMap já aqui.\n\nMas vamos tratar essa classe na próxima aula teórica.\nEntão vamos implementar aqui primeiro uma solução com blocos if e else para ter um resultado similar.\n\n\n\nA ideia é identificar alguma palavra-chave na pergunta feita pelo usuário.\n\ne fornecer uma resposta que tenha algo a ver com essa palavra-chave."
+    "text": "Lembre-se que, como já foi dito em aulas práticas anteriores, não podemos comparar objetos String em Java utilizando o operador ==.\n\nUsando o operador estamos verificando se é o mesmo objeto, e não se os dois objetos têm o mesmo conteúdo.\nPara comparar se dois objetos String têm o mesmo conteúdo, devemos utilizar o método equals."
   },
   {
     "objectID": "cap5-1.html#section-31",
     "href": "cap5-1.html#section-31",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Por exemplo, suponha que na pergunta do usuário apareça a palavra \"lento\".\n\nA resposta poderia ser então algo como:\n\n\n\n\"Acredito que isso tem a ver com o seu hardware. \" +\n\"Atualizar seu processador deve resolver todos os problemas de desempenho. \" + \n\"Você tem algum problema com nosso software?\"\"\n\n\n\nJá se na pergunta do usuário aparecer a palava \"bug\", a resposta poderia ser:\n\n\n\n\"Bem, você sabe, todo software tem alguns bugs. \" +\n\"Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. \" +\n\"Você pode descrever o problema com mais detalhes?\"\n\n\n\nComo podemos implementar isso?"
+    "text": "No início da disciplina, nós utilizamos um objeto da classe Random no exercício da Nave para acrescentar aleatoriedade em nosso jogo.\n\nNós podemos agora utilizar a mesma classe para mudar o comportamento do Respondedor do nosso sistema de suporte.\nA ideia é que o sistema exiba respostas aleatórias, em vez de sempre responder a mesma coisa.\n\n\nNós podemos fazer isso, alterando a classe Respondedor seguindo os passos abaixo:\n\ndeclarando um atributo do tipo Random para guardar um gerador de números aleatórios;\ndeclarando um atributo do tipo ArrayList para guardar nossas possíveis respostas;\ncriando os objetos Random e ArrayList no construtor da classe Respondedor;\npreenchendo a lista com algumas frases de resposta;\nselecionando e retornando uma frase aleatória quando o método gerarResposta é chamado."
   },
   {
     "objectID": "cap5-1.html#section-32",
     "href": "cap5-1.html#section-32",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Atenção:\n\nO próximo exercício pede para alterar o método gerarResposta da classe Respondedor.\nMas para que o professor consiga corrigir seu exercício anterior (de respostas aleatórias) você não pode apagar o código que tinha feito antes.\n\nPortanto, ao fazer o próximo exercício deixe o código anterior comentado em vez de apagá-lo."
+    "text": "Exercício\n\n\nMelhore a classe Respondedor de forma que ela gere respostas aleatórias como descrito no slide anterior.\nVeja que, para gerar respostas aleatórias, basta sortearmos uma posição do ArrayList e usarmos essa posição para obter uma mensagem. Podemos sortear uma posição usando o método nextInt da classe Random, e o método size da classe ArrayList.\nDicas:\n\nVeja no próximo slide alguns exemplos de frase de resposta (mas não precisam ser exatamente essas, use sua criatividade!).\nReveja o exercício da Nave para se lembrar como usar a classe Random.\nLeia a seção 5.4 do livro da disciplina."
   },
   {
     "objectID": "cap5-1.html#section-33",
     "href": "cap5-1.html#section-33",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício (entrega)\n\n\n\nVamos implementar a ideia discutida nos slides anteriores. Neste exercício, faça o seguinte:\n\nAltere o método gerarResposta da classe Respondedor para que ele receba por parâmetro a pergunta feita pelo usuário.\n\nVocê precisará, claro, alterar a chamada do método na classe SistemaDeSuporte para passar a entrada do usuário.\n\nNo método gerarResposta, faça uma sequência de if/else if para verificar se as palavras-chave existem na pergunta do usuário.\n\nPara isso, você pode usar o método contains da classe String.\nE no bloco de cada if, retornar um texto correspondente àquela palavra-chave (veja sugestões no próximo slide).\nExemplo:\n\n\n    if (entrada.contains(\"lento\")) {\n        return \"Acredito que isso tem a ver com o seu hardware. \" +\n               \"Atualizar seu processador deve resolver todos os \" +\n               \"problemas de desempenho. Você tem algum problema \" + \n               \"com nosso software?\"\n    }\n    else if (entrada.contains(\"bug\")) {\n        ..."
+    "text": "Exemplos de frases de resposta do sistema de suporte técnico:\n\n\"Isso parece estranho. Você poderia descrever com mais detalhes?\"\n\"Nenhum outro cliente reclamou disso antes. Qual é a configuração do seu sistema?\"\n\"Poderia me dar mais informações sobre o problema?\"\n\"Isso é abordado no manual. Você já leu o manual?\"\n\"Sua descrição é um pouco ruim. Você tem um especialista com você que poderia descrever isso melhor?\"\n\"Isso não é um bug, é uma funcionalidade!\"\n\"Você poderia detalhar melhor isso?\"\n\"Você já tentou executar o aplicativo no seu telefone?\"\n\"Já verifiquei no StatckOverflow e ChatGPT e nem eles sabem como responder :(\""
   },
   {
     "objectID": "cap5-1.html#section-34",
     "href": "cap5-1.html#section-34",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Palavra-chave\nSugestão de resposta\n\n\n\n\n“travou”\n“Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração.”\n\n\n“travando”\n“Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração.”\n\n\n“lento”\n“Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?”\n\n\n“desempenho”\n“O desempenho foi bastante adequado em todos os nossos testes. Você está executando outros processos em segundo plano?”\n\n\n“bug”\n“Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?”\n\n\n“erro”\n“Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?”\n\n\n“windows”\n“Este é um bug conhecido relacionado ao sistema operacional Windows. Por favor, informe à Microsoft. Não há nada que possamos fazer a respeito.”\n\n\n“mac”\n“Este é um bug conhecido relacionado ao sistema operacional Mac. Por favor, informe à Apple. Não há nada que possamos fazer a respeito.”\n\n\n“caro”\n“O custo de nosso produto é bastante competitivo. Você deu uma olhada e realmente comparou nossos recursos?”\n\n\n“instalação”\n“A instalação é realmente bastante simples. Temos muitos assistentes que fazem todo o trabalho para você. Você leu as instruções de instalação?”\n\n\n“memória”\n“Se você ler atentamente os requisitos do sistema, verá que os requisitos de memória especificados são de 6 gigabytes. Você realmente deve atualizar sua memória. Mais alguma coisa que você gostaria de saber?”\n\n\n“linux”\n“Levamos o suporte ao Linux muito a sério. Mas há alguns problemas. A maioria está relacionada a versões incompatíveis do glibc. Você pode ser um pouco mais preciso?”\n\n\n“bluej”\n“Ah, o BlueJ, sim. Tentamos comprá-los há muito tempo, mas eles simplesmente não vendem… São pessoas teimosas. Não há nada que possamos fazer a respeito, desculpe.”"
+    "text": "Nosso sistema ficou mais dinâmico, mas ainda é muito ruim, pois as respostas são independentes do que o usuário escreve.\n\nNós podemos melhorar um pouco isso, fazendo algo pelo menos próximo do que o usuário perguntou.\nO livro apresenta uma solução usando a classe HashMap já aqui.\n\nMas vamos tratar essa classe na próxima aula teórica.\nEntão vamos implementar aqui primeiro uma solução com blocos if e else para ter um resultado similar.\n\n\n\nA ideia é identificar alguma palavra-chave na pergunta feita pelo usuário.\n\ne fornecer uma resposta que tenha algo a ver com essa palavra-chave."
   },
   {
     "objectID": "cap5-1.html#section-35",
     "href": "cap5-1.html#section-35",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nós vimos que um ArrayList consegue guardar qualquer tipo de objeto.\n\nMas como int não é um objeto, não é possível usar um ArrayList para guardar uma lista de números inteiros?\n\n\nIsso é possível através das classes empacotadoras (wrapper classes).\n\nCada tipo primitivo em Java tem uma classe empacotadora que representa o mesmo tipo,\n\nMas que é um objeto de verdade.\n\nA classe empacotadora para int, por exemplo, se chama Integer."
+    "text": "Por exemplo, suponha que na pergunta do usuário apareça a palavra \"lento\".\n\nA resposta poderia ser então algo como:\n\n\n\n\"Acredito que isso tem a ver com o seu hardware. \" +\n\"Atualizar seu processador deve resolver todos os problemas de desempenho. \" + \n\"Você tem algum problema com nosso software?\"\"\n\n\n\nJá se na pergunta do usuário aparecer a palava \"bug\", a resposta poderia ser:\n\n\n\n\"Bem, você sabe, todo software tem alguns bugs. \" +\n\"Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. \" +\n\"Você pode descrever o problema com mais detalhes?\"\n\n\n\nComo podemos implementar isso?"
   },
   {
     "objectID": "cap5-1.html#section-36",
     "href": "cap5-1.html#section-36",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nós poderíamos criar explicitamente um objeto do tipo Integer:\n\n    int n = 10;\n    Integer objetoInt = new Integer(n);\n\n\nE poderíamos então declarar um ArrayList&lt;Integer&gt; e guardar nele o objetoInt.\n\nMas, na verdade, nós nunca fazemos isso, pois podemos guardar valores de tipo primitivo no ArrayList!\nIsso porque sempre que um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (wrapper),\n\no compilador converte o valor automaticamente em um objeto empacotador correspondente.\nEssa funcionalidade se chama autoboxing (algo como, auto-empacotamento)."
+    "text": "Atenção:\n\nO próximo exercício pede para alterar o método gerarResposta da classe Respondedor.\nMas para que o professor consiga corrigir seu exercício anterior (de respostas aleatórias) você não pode apagar o código que tinha feito antes.\n\nPortanto, ao fazer o próximo exercício deixe o código anterior comentado em vez de apagá-lo."
   },
   {
     "objectID": "cap5-1.html#section-37",
     "href": "cap5-1.html#section-37",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Portanto, na prática, podemos escrever código como mostrado abaixo:\n\n    private ArrayList&lt;Integer&gt; notas;\n    ...\n    public void guardarNotasNaLista(int nota) {\n        notas.add(nota);\n    }\n\n\nRepare que estamos guardando o valor da variável nota, do tipo int, em um ArrayList&lt;Integer&gt;."
+    "text": "Exercício\n\n\nVamos implementar a ideia discutida nos slides anteriores. Neste exercício, faça o seguinte:\n\nAltere o método gerarResposta da classe Respondedor para que ele receba por parâmetro a pergunta feita pelo usuário.\n\nVocê precisará, claro, alterar a chamada do método na classe SistemaDeSuporte para passar a entrada do usuário.\n\nNo método gerarResposta, faça uma sequência de if/else if para verificar se as palavras-chave existem na pergunta do usuário.\n\nPara isso, você pode usar o método contains da classe String.\nE no bloco de cada if, retornar um texto correspondente àquela palavra-chave (veja sugestões no próximo slide).\nExemplo:\n\n\n    if (entrada.contains(\"lento\")) {\n        return \"Acredito que isso tem a ver com o seu hardware. \" +\n               \"Atualizar seu processador deve resolver todos os \" +\n               \"problemas de desempenho. Você tem algum problema \" + \n               \"com nosso software?\"\n    }\n    else if (entrada.contains(\"bug\")) {\n        ..."
   },
   {
     "objectID": "cap5-1.html#section-38",
     "href": "cap5-1.html#section-38",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Seguindo a mesma ideia, o compilador realiza o unboxing quando obtemos um valor da coleção:\n\n    int primeiraNota = notas.get(0);\n\n\nVeja portanto que, em termos práticos, a única coisa que precisamos lembrar é de declarar o ArrayList usando a classe empacotadora (como a Integer).\n\nMas na hora de usar o ArrayList podemos tratar todos os dados como se fossem do tipo int."
+    "text": "Palavra-chave\nSugestão de resposta\n\n\n\n\n“travou”\n“Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração.”\n\n\n“travando”\n“Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração.”\n\n\n“lento”\n“Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?”\n\n\n“desempenho”\n“O desempenho foi bastante adequado em todos os nossos testes. Você está executando outros processos em segundo plano?”\n\n\n“bug”\n“Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?”\n\n\n“erro”\n“Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?”\n\n\n“windows”\n“Este é um bug conhecido relacionado ao sistema operacional Windows. Por favor, informe à Microsoft. Não há nada que possamos fazer a respeito.”\n\n\n“mac”\n“Este é um bug conhecido relacionado ao sistema operacional Mac. Por favor, informe à Apple. Não há nada que possamos fazer a respeito.”\n\n\n“caro”\n“O custo de nosso produto é bastante competitivo. Você deu uma olhada e realmente comparou nossos recursos?”\n\n\n“instalação”\n“A instalação é realmente bastante simples. Temos muitos assistentes que fazem todo o trabalho para você. Você leu as instruções de instalação?”\n\n\n“memória”\n“Se você ler atentamente os requisitos do sistema, verá que os requisitos de memória especificados são de 6 gigabytes. Você realmente deve atualizar sua memória. Mais alguma coisa que você gostaria de saber?”\n\n\n“linux”\n“Levamos o suporte ao Linux muito a sério. Mas há alguns problemas. A maioria está relacionada a versões incompatíveis do glibc. Você pode ser um pouco mais preciso?”\n\n\n“bluej”\n“Ah, o BlueJ, sim. Tentamos comprá-los há muito tempo, mas eles simplesmente não vendem… São pessoas teimosas. Não há nada que possamos fazer a respeito, desculpe.”"
   },
   {
     "objectID": "cap5-1.html#section-39",
     "href": "cap5-1.html#section-39",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Veja no Apêndice B do livro uma lista completa dos tipos primitivos e suas classes empacotadoras.\n\nVale ressaltar também que o mesmo conceito é aplicado para as demais coleções, como a classe HashMap.\n\n\n\n\n\n\nConceito\n\n\nAutoboxing é realizado automaticamente quando um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (wrapper)."
+    "text": "Nós vimos que um ArrayList consegue guardar qualquer tipo de objeto.\n\nMas como int não é um objeto, não é possível usar um ArrayList para guardar uma lista de números inteiros?\n\n\nIsso é possível através das classes empacotadoras (wrapper classes).\n\nCada tipo primitivo em Java tem uma classe empacotadora que representa o mesmo tipo,\n\nMas que é um objeto de verdade.\n\nA classe empacotadora para int, por exemplo, se chama Integer."
   },
   {
     "objectID": "cap5-1.html#público-vs.-privado",
@@ -543,28 +543,28 @@
     "href": "cap5-1.html#section-40",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nós chamamos essas palavras-chave de modificadores de acesso.\n\nelas definem a visibilidade de atributos, construtores e métodos.\n\n\nSe um método, por exemplo, é público:\n\nEle pode ser chamado de dentro da mesma classe e também a partir de outra classe.\n\n\n\nJá métodos privados, por outro lado,\n\nSó podem ser chamados de dentro da mesma classe onde foram declarados.\nEles não são visíveis para as outras classes."
+    "text": "Nós poderíamos criar explicitamente um objeto do tipo Integer:\n\n    int n = 10;\n    Integer objetoInt = new Integer(n);\n\n\nE poderíamos então declarar um ArrayList&lt;Integer&gt; e guardar nele o objetoInt.\n\nMas, na verdade, nós nunca fazemos isso, pois podemos guardar valores de tipo primitivo no ArrayList!\nIsso porque sempre que um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (wrapper),\n\no compilador converte o valor automaticamente em um objeto empacotador correspondente.\nEssa funcionalidade se chama autoboxing (algo como, auto-empacotamento)."
   },
   {
     "objectID": "cap5-1.html#section-41",
     "href": "cap5-1.html#section-41",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Como agora já conhecemos os conceitos de interface e implementação fica mais fácil entendermos o objetivo dessas palavras-chave.\n\nLembre-se que a interface de uma classe é o conjunto de detalhes que um programador que vai usar a classe precisa ver.\n\nEla fornece informações sobre como usar a classe.\n\nE inclui assinaturas e comentários de construtores e métodos.\n\nNós também dizemos que a interface é a parte pública da classe.\nSeu objetivo é definir o que a classe faz."
+    "text": "Portanto, na prática, podemos escrever código como mostrado abaixo:\n\n    private ArrayList&lt;Integer&gt; notas;\n    ...\n    public void guardarNotasNaLista(int nota) {\n        notas.add(nota);\n    }\n\n\nRepare que estamos guardando o valor da variável nota, do tipo int, em um ArrayList&lt;Integer&gt;."
   },
   {
     "objectID": "cap5-1.html#section-42",
     "href": "cap5-1.html#section-42",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Já a implementação é a parte da classe que define precisamente como a classe funciona.\n\nOs corpos dos métodos, contendo comandos Java, e muitos atributos são parte da implementação.\nNós também podemos dizer que ela é a parte privada da classe.\nQuem usa a classe não precisa conhecer a implementação.\nInclusive, há boas razões para que o programador não possa fazer uso desse conhecimento (como veremos mais adiante)."
+    "text": "Seguindo a mesma ideia, o compilador realiza o unboxing quando obtemos um valor da coleção:\n\n    int primeiraNota = notas.get(0);\n\n\nVeja portanto que, em termos práticos, a única coisa que precisamos lembrar é de declarar o ArrayList usando a classe empacotadora (como a Integer).\n\nMas na hora de usar o ArrayList podemos tratar todos os dados como se fossem do tipo int."
   },
   {
     "objectID": "cap5-1.html#section-43",
     "href": "cap5-1.html#section-43",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Portanto, podemos dizer que:\n\nA palavra-chave public declara que um elemento de uma classe (atributo ou método) faz parte de sua interface.\n\nOu seja, é visível publicamente.\n\nJá a palavra-chave private declara que um elemento é parte da implementação.\n\nOu seja, está escondida de acesso externo.\n\n\n\n\n\n\n\nConceito\n\n\nModificadores de acesso definem a visibilidade de um atributo, construtor ou método. Elementos públicos são acessíveis de dentro da classe e a partir de outras classes; já elementos privados são acessíveis somente de dentro da mesma classe."
+    "text": "Veja no Apêndice B do livro uma lista completa dos tipos primitivos e suas classes empacotadoras.\n\nVale ressaltar também que o mesmo conceito é aplicado para as demais coleções, como a classe HashMap.\n\n\n\n\n\n\nConceito\n\n\nAutoboxing é realizado automaticamente quando um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (wrapper)."
   },
   {
     "objectID": "cap5-1.html#encapsulamento-1",
@@ -578,35 +578,35 @@
     "href": "cap5-1.html#section-44",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Esta última questão é muito importante para a manutenção de sistemas.\n\nQuando precisamos incluir novas funcionalidades ou corrigir bugs é muito comum precisarmos alterar ou aumentar uma classe.\nO ideal é que a alteração de uma classe não provoque alterações em outras classes.\n\nIsso tem a ver com o que chamamos de acoplamento.\nSe a alteração em uma classe não provoca alterações em outras classes, temos um baixo acoplamento.\nE isso é muito bom, porque torna o trabalho de manutenção muito mais fácil.\nJá que em vez de entender e alterar várias classes, o programador precisa trabalhar em apenas em uma."
+    "text": "Nós chamamos essas palavras-chave de modificadores de acesso.\n\nelas definem a visibilidade de atributos, construtores e métodos.\n\n\nSe um método, por exemplo, é público:\n\nEle pode ser chamado de dentro da mesma classe e também a partir de outra classe.\n\n\n\nJá métodos privados, por outro lado,\n\nSó podem ser chamados de dentro da mesma classe onde foram declarados.\nEles não são visíveis para as outras classes."
   },
   {
     "objectID": "cap5-1.html#section-45",
     "href": "cap5-1.html#section-45",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Suponha, por exemplo, que a equipe que mantém a linguagem Java faça uma melhoria na implementação da classe ArrayList.\n\nO ideal é que essa melhoria não afete os nossos códigos que usam a classe ArrayList.\nRepare que isso só é possível porque nosso código não faz referência à implementação da classe ArrayList.\n\n\nPara ficar mais claro, quando uma classe A utiliza um objeto de uma classe B.\n\nNão é bem o programador que não pode conhecer a parte interna (implementação) da classe B.\nNa verdade é a classe A que não pode conhecer (ou seja, depender) dos detalhes internos da classe B.\nRepare que pode acontecer do mesmo programador implementar tanto a classe A quanto a classe B.\n\nMas de toda forma, as classes ainda deveriam ter baixo acoplamento."
+    "text": "Como agora já conhecemos os conceitos de interface e implementação fica mais fácil entendermos o objetivo dessas palavras-chave.\n\nLembre-se que a interface de uma classe é o conjunto de detalhes que um programador que vai usar a classe precisa ver.\n\nEla fornece informações sobre como usar a classe.\n\nE inclui assinaturas e comentários de construtores e métodos.\n\nNós também dizemos que a interface é a parte pública da classe.\nSeu objetivo é definir o que a classe faz."
   },
   {
     "objectID": "cap5-1.html#section-46",
     "href": "cap5-1.html#section-46",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Esta questão de acoplamento é tão importante que vamos discuti-la, em detalhes, no Capítulo 7.\n\nPor enquanto, o mais importante é entender que a palavra-chave private garante o princípio da ocultação de informações\n\nao impedir que outras classes acessem a parte privada da classe.\n\nIsso garante o baixo acoplamento, tornando a aplicação mais modular e facilitando a manutenção.\n\n\nNós também podemos chamar o princípio da ocultação de informações de encapsulamento.\n\nEsse conceito é fundamental na Programação Orientada a Objetos.\nE talvez seja a única parte do livro que não gosto muito, pois acho que ele não dá a ênfase necessária a esse conceito."
+    "text": "Já a implementação é a parte da classe que define precisamente como a classe funciona.\n\nOs corpos dos métodos, contendo comandos Java, e muitos atributos são parte da implementação.\nNós também podemos dizer que ela é a parte privada da classe.\nQuem usa a classe não precisa conhecer a implementação.\nInclusive, há boas razões para que o programador não possa fazer uso desse conhecimento (como veremos mais adiante)."
   },
   {
     "objectID": "cap5-1.html#section-47",
     "href": "cap5-1.html#section-47",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "O termo encapsulamento vem da palavra cápsula, que é definida no dicionário como:\n\n\nA ideia é que a implementação da classe (seus detalhes internos) sejam encapsulados (protegidos).\n\nE a classe exponha apenas sua interface."
+    "text": "Portanto, podemos dizer que:\n\nA palavra-chave public declara que um elemento de uma classe (atributo ou método) faz parte de sua interface.\n\nOu seja, é visível publicamente.\n\nJá a palavra-chave private declara que um elemento é parte da implementação.\n\nOu seja, está escondida de acesso externo.\n\n\n\n\n\n\n\nConceito\n\n\nModificadores de acesso definem a visibilidade de um atributo, construtor ou método. Elementos públicos são acessíveis de dentro da classe e a partir de outras classes; já elementos privados são acessíveis somente de dentro da mesma classe."
   },
   {
     "objectID": "cap5-1.html#section-48",
     "href": "cap5-1.html#section-48",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Um bom exemplo que ilustra o encapsulamento é um telefone fixo comum.\n\nVocê usa o telefone através de sua interface (os botões) e não precisa saber como é o funcionamento interno.\n\n\n\n\n\n\n\n\n\nA mesma analogia pode ser feita com um caixa eletrônico.\n\nVocê usa as opções que aparecem pra você (interface) mas não precisa saber como isso funciona internamente.\nE você só tem acesso aos dados que a interface disponibiliza."
+    "text": "Esta última questão é muito importante para a manutenção de sistemas.\n\nQuando precisamos incluir novas funcionalidades ou corrigir bugs é muito comum precisarmos alterar ou aumentar uma classe.\nO ideal é que a alteração de uma classe não provoque alterações em outras classes.\n\nIsso tem a ver com o que chamamos de acoplamento.\nSe a alteração em uma classe não provoca alterações em outras classes, temos um baixo acoplamento.\nE isso é muito bom, porque torna o trabalho de manutenção muito mais fácil.\nJá que em vez de entender e alterar várias classes, o programador precisa trabalhar em apenas em uma."
   },
   {
     "objectID": "cap5-1.html#métodos-privados",
@@ -662,14 +662,14 @@
     "href": "cap5-1.html#section-49",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Em resumo:\n\nAtributos deveriam ser sempre privados!\n\n\n\n\n\n\nConceito\n\n\nEncapsulamento (ou ocultamento de informações) é um princípio que define que os detalhes internos da implementação de uma classe deveriam ser ocultados das outras classes. Isso permite uma melhor modularização de uma aplicação."
+    "text": "Suponha, por exemplo, que a equipe que mantém a linguagem Java faça uma melhoria na implementação da classe ArrayList.\n\nO ideal é que essa melhoria não afete os nossos códigos que usam a classe ArrayList.\nRepare que isso só é possível porque nosso código não faz referência à implementação da classe ArrayList.\n\n\nPara ficar mais claro, quando uma classe A utiliza um objeto de uma classe B.\n\nNão é bem o programador que não pode conhecer a parte interna (implementação) da classe B.\nNa verdade é a classe A que não pode conhecer (ou seja, depender) dos detalhes internos da classe B.\nRepare que pode acontecer do mesmo programador implementar tanto a classe A quanto a classe B.\n\nMas de toda forma, as classes ainda deveriam ter baixo acoplamento."
   },
   {
     "objectID": "cap5-1.html#section-50",
     "href": "cap5-1.html#section-50",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Para ter presença nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nResponda a tarefa no Campus Virtual enviando o seu projeto suporte-tecnico1 com as alterações dos 5 exercícios solicitados ao longo dos slides.\nAtenção: não se esqueça do aviso dado nos slides sobre o professor ter como corrigir a geração de reposta aleatória!"
+    "text": "Esta questão de acoplamento é tão importante que vamos discuti-la, em detalhes, no Capítulo 7.\n\nPor enquanto, o mais importante é entender que a palavra-chave private garante o princípio da ocultação de informações\n\nao impedir que outras classes acessem a parte privada da classe.\n\nIsso garante o baixo acoplamento, tornando a aplicação mais modular e facilitando a manutenção.\n\n\nNós também podemos chamar o princípio da ocultação de informações de encapsulamento.\n\nEsse conceito é fundamental na Programação Orientada a Objetos.\nE talvez seja a única parte do livro que não gosto muito, pois acho que ele não dá a ênfase necessária a esse conceito."
   },
   {
     "objectID": "cap4-1.html#section",
@@ -6977,5 +6977,68 @@
     "title": "IPOO - Cap. 4 Agrupando Objetos",
     "section": "",
     "text": "O que foi visto na Aula 4.1 é suficiente para fazer os três primeiros exercícios.\n\nMas, caso se sinta confiante, tente fazer também dos demais exercícios.\nOs enunciados dos exercícios estão no arquivo README.md do projeto.\n\nDica: é mais fácil visualizá-los no próprio GitHub."
+  },
+  {
+    "objectID": "cap5-1.html#section-5",
+    "href": "cap5-1.html#section-5",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Neste capítulo, vamos trabalhar com um sistema de Suporte Técnico.\n\nComeçaremos com uma versão rudimentar.\nE ele será melhorado, incrementalmente, utilizando diferentes classes da biblioteca Java."
+  },
+  {
+    "objectID": "cap5-1.html#section-51",
+    "href": "cap5-1.html#section-51",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "O termo encapsulamento vem da palavra cápsula, que é definida no dicionário como:\n\n\nA ideia é que a implementação da classe (seus detalhes internos) sejam encapsulados (protegidos).\n\nE a classe exponha apenas sua interface."
+  },
+  {
+    "objectID": "cap5-1.html#section-52",
+    "href": "cap5-1.html#section-52",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Um bom exemplo que ilustra o encapsulamento é um telefone fixo comum.\n\nVocê usa o telefone através de sua interface (os botões) e não precisa saber como é o funcionamento interno.\n\n\n\n\n\n\n\n\n\nA mesma analogia pode ser feita com um caixa eletrônico.\n\nVocê usa as opções que aparecem pra você (interface) mas não precisa saber como isso funciona internamente.\nE você só tem acesso aos dados que a interface disponibiliza."
+  },
+  {
+    "objectID": "cap5-1.html#section-53",
+    "href": "cap5-1.html#section-53",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Em resumo:\n\nAtributos deveriam ser sempre privados!\n\n\n\n\n\n\nConceito\n\n\nEncapsulamento (ou ocultamento de informações) é um princípio que define que os detalhes internos da implementação de uma classe deveriam ser ocultados das outras classes. Isso permite uma melhor modularização de uma aplicação."
+  },
+  {
+    "objectID": "cap5-1.html#interface-vs.-implementação-1",
+    "href": "cap5-1.html#interface-vs.-implementação-1",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Interface vs. Implementação",
+    "text": "Interface vs. Implementação\nTodas essas informações formam o que chamamos de interface de uma classe.\n\nRepare que que a interface não mostra o código que implementa a classe.\nSe uma classe é bem descrita (ou seja, sua interface é bem escrita),\n\num programador não precisa ver o código da classe para conseguir utilizá-la.\n\nA interface já tem toda a informação que ele precisa.\n\n(olha a abstração aí de novo!)"
+  },
+  {
+    "objectID": "cap5-1.html#interface-vs.-implementação-2",
+    "href": "cap5-1.html#interface-vs.-implementação-2",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Interface vs. Implementação",
+    "text": "Interface vs. Implementação\nO código que não vemos, que é o que faz a classe funcionar, é chamado de implementação da classe.\n\nGeralmente um programador trabalha na implementação de uma classe de cada vez,\n\ne, para isso, usa várias outras classes através de suas interfaces.\n\n\n\nEssa diferenciação entre interface e implementação é um conceito muito importante.\n\nE vamos ver isso repetidamente nessa disciplina (e em disciplinas avançadas de POO)."
+  },
+  {
+    "objectID": "cap5-1.html#interface-vs.-implementação-.auto-animatetrue",
+    "href": "cap5-1.html#interface-vs.-implementação-.auto-animatetrue",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Interface vs. Implementação {.auto-animate=True}",
+    "text": "Interface vs. Implementação {.auto-animate=True}\nVocê deve ter notado que a documentação tem diferentes tipos de informação:\n\no nome da classe;\numa descrição geral do objetivo da classe;\numa lista dos construtores e métodos da classe;\nos parâmetros e tipos de retorno de cada construtor e cada método;\ne uma descrição do objetivo de cada construtor e método.\n\n\nTodas essas informações formam o que chamamos de interface de uma classe."
+  },
+  {
+    "objectID": "cap5-1.html#interface-vs.-implementação-.auto-animatetrue-1",
+    "href": "cap5-1.html#interface-vs.-implementação-.auto-animatetrue-1",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Interface vs. Implementação {.auto-animate=True}",
+    "text": "Interface vs. Implementação {.auto-animate=True}\nTodas essas informações formam o que chamamos de interface de uma classe.\n\nRepare que que a interface não mostra o código que implementa a classe.\nSe uma classe é bem descrita (ou seja, sua interface é bem escrita),\n\num programador não precisa ver o código da classe para conseguir utilizá-la.\n\nA interface já tem toda a informação que ele precisa.\n\n(olha a abstração aí de novo!)"
+  },
+  {
+    "objectID": "cap5-1.html#section-54",
+    "href": "cap5-1.html#section-54",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Para ter presença nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nResponda a tarefa no Campus Virtual enviando o seu projeto suporte-tecnico1 com as alterações dos 5 exercícios solicitados ao longo dos slides.\nAtenção: não se esqueça do aviso dado nos slides sobre o professor ter como corrigir a geração de reposta aleatória!"
   }
 ]
