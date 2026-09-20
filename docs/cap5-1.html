@@ -215,7 +215,7 @@
     </div>
 </div>
 
-  <p class="date">19/09/2026</p>
+  <p class="date">20/09/2026</p>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
@@ -1002,7 +1002,7 @@
 <li class="fragment">pois as respostas são independentes do que o usuário escreve.</li>
 </ul>
 <div class="fragment">
-<p>Nós podemos melhorar um pouco isso, respondendo algo pelo menos próximo do que o usuário perguntou.</p>
+<p>Nós podemos melhorar um pouco isso, tentando responder algo pelo menos próximo do que o usuário perguntou.</p>
 <ul>
 <li class="fragment">A ideia é identificar alguma palavra-chave na pergunta feita pelo usuário.</li>
 <li class="fragment">e fornecer uma resposta que tenha algo a ver com essa palavra-chave.</li>
@@ -1016,24 +1016,21 @@
 <li class="fragment">A resposta poderia ser então algo como:</li>
 </ul>
 <div class="fragment">
-<div class="halfincfontsize">
-<pre><code>Acredito que isso tem a ver com o seu hardware.
-Atualizar seu processador deve resolver todos os problemas de desempenho. 
-Você tem algum problema com nosso software?</code></pre>
-</div>
-</div>
-<div class="fragment">
-<p>Já se na pergunta do usuário aparecer a palava <code>"bug"</code>, a resposta poderia ser:</p>
-</div>
-<div class="fragment">
-<div class="halfincfontsize">
-<pre><code>Bem, você sabe, todo software tem alguns bugs.
-Mas nossos engenheiros de software estão trabalhando muito para corrigi-los.
-Você pode descrever o problema com mais detalhes?</code></pre>
-</div>
+<blockquote>
+<p>Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?</p>
+</blockquote>
 </div>
 </section>
 <section id="section-45" class="slide level2">
+<h2></h2>
+<p>Já se na pergunta do usuário aparecer a palava <code>"bug"</code>, a resposta poderia ser:</p>
+<div class="fragment">
+<blockquote>
+<p>Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?</p>
+</blockquote>
+</div>
+</section>
+<section id="section-46" class="slide level2">
 <h2></h2>
 <p>Mas como podemos implementar isso?</p>
 <ul>
@@ -1046,12 +1043,12 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 </ul>
 </div>
 </section>
-<section id="section-46" class="slide level2">
+<section id="section-47" class="slide level2">
 <h2></h2>
 <p>Um <span class="alert">Mapa</span> é uma <strong>coleção de pares de objetos chave-valor</strong>.</p>
 <ul>
 <li class="fragment">Assim como um <code>ArrayList</code>, um Mapa pode guardar uma quantidade flexível de entradas.</li>
-<li class="fragment">Mas uma diferença importante é que em um Mapa, uma entrada não é um objeto, e sim um <strong>par de objetos</strong>.
+<li class="fragment">Mas uma diferença importante é que em um Mapa, <strong>uma entrada</strong> não é um objeto, e sim <strong>um par de objetos</strong>.
 <ul>
 <li class="fragment">Este par é formado por um objeto <strong>chave</strong> e um objeto <strong>valor</strong>.</li>
 </ul></li>
@@ -1063,7 +1060,7 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 </ul>
 </div>
 </section>
-<section id="section-47" class="slide level2">
+<section id="section-48" class="slide level2">
 <h2></h2>
 <p>Você consegue pensar em um exemplo de Mapa, ou seja, de coleção de dados organizados na forma de pares chave/valor?</p>
 <ul>
@@ -1078,7 +1075,7 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 </ul>
 </div>
 </section>
-<section id="section-48" class="slide level2">
+<section id="section-49" class="slide level2">
 <h2></h2>
 <p>Na lista de contatos de um celular poderíamos ter uma coleção como a seguinte:</p>
 <table class="caption-top">
@@ -1113,7 +1110,7 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 </ul>
 </div>
 </section>
-<section id="section-49" class="slide level2">
+<section id="section-50" class="slide level2">
 <h2></h2>
 <p>Você consegue pensar em outros exemplos de coleções na forma de Mapa que usamos no dia a dia?</p>
 <div class="fragment">
@@ -1129,7 +1126,7 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 </ul>
 </div>
 </section>
-<section id="section-50" class="slide level2">
+<section id="section-51" class="slide level2">
 <h2></h2>
 <p><strong>Uma coleção de alunos</strong>:</p>
 <ul>
@@ -1150,7 +1147,7 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 </div>
 </div>
 </section>
-<section id="section-51" class="slide level2">
+<section id="section-52" class="slide level2">
 <h2></h2>
 <img data-src="imagens/balao_como_usar_estrutura_mapa.png" class="r-stretch">
 <div class="fragment">
@@ -1160,7 +1157,7 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 </ul>
 </div>
 </section>
-<section id="section-52" class="slide level2">
+<section id="section-53" class="slide level2">
 <h2></h2>
 <p>Os métodos mais importantes da classe <code>HashMap</code> são: <code>put</code> e <code>get</code>.</p>
 <ul>
@@ -1168,51 +1165,51 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 <li class="fragment">Já o método <code>get</code> recupera o valor associado a uma chave.</li>
 </ul>
 </section>
-<section id="section-53" class="slide level2">
+<section id="section-54" class="slide level2">
 <h2></h2>
 <p>O trecho de código abaixo cria um <code>HashMap</code> e insere nele três entradas.</p>
 <ul>
 <li class="fragment">Cada entrada é um par chave/valor consistindo de um nome e um número de telefone.</li>
 </ul>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb12"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">HashMap</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span><span class="bu">String</span><span class="op">&gt;</span> contatos <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
-<span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a>    contatos<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"Tiao"</span><span class="op">,</span> <span class="st">"(35) 9999 1111"</span><span class="op">);</span></span>
-<span id="cb12-3"><a aria-hidden="true" tabindex="-1"></a>    contatos<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"Maria"</span><span class="op">,</span> <span class="st">"(35) 8888 1234"</span><span class="op">);</span></span>
-<span id="cb12-4"><a aria-hidden="true" tabindex="-1"></a>    contatos<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"Joaquim"</span><span class="op">,</span> <span class="st">"(31) 9876 5432"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="section-54" class="slide level2">
-<h2></h2>
-<p>Quando declaramos uma variável do tipo <code>HashMap</code> e quando criamos um objeto <code>HashMap</code></p>
-<ul>
-<li class="fragment">precisamos informar o tipo dos objetos que serão guardados.</li>
-<li class="fragment">Assim como fazemos com <code>ArrayList</code>.</li>
-</ul>
-<div class="fragment">
-<p>No caso do <code>HashMap</code>, precisamos informar dois tipos:</p>
-<ul>
-<li class="fragment">o tipo dos objetos chave e o tipo dos objetos valor.</li>
-</ul>
-</div>
-<div class="fragment">
-<p>No caso da lista de contatos, por exemplo, definimos que tanto a chave quanto o valor são objetos do tipo <code>String</code>.</p>
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb13"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">HashMap</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span><span class="bu">String</span><span class="op">&gt;</span> contatos <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">HashMap</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span><span class="bu">String</span><span class="op">&gt;</span> contatos <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
+<span id="cb10-2"><a aria-hidden="true" tabindex="-1"></a>    contatos<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"Tiao"</span><span class="op">,</span> <span class="st">"(35) 9999 1111"</span><span class="op">);</span></span>
+<span id="cb10-3"><a aria-hidden="true" tabindex="-1"></a>    contatos<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"Maria"</span><span class="op">,</span> <span class="st">"(35) 8888 1234"</span><span class="op">);</span></span>
+<span id="cb10-4"><a aria-hidden="true" tabindex="-1"></a>    contatos<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"Joaquim"</span><span class="op">,</span> <span class="st">"(31) 9876 5432"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="section-55" class="slide level2">
 <h2></h2>
+<p>Quando declaramos uma variável do tipo <code>HashMap</code>, e quando criamos um objeto <code>HashMap</code>,</p>
+<ul>
+<li class="fragment">precisamos informar os tipos dos objetos que serão guardados.</li>
+<li class="fragment">Assim como fazemos com <code>ArrayList</code>.</li>
+</ul>
+<div class="fragment">
+<p>No caso do <code>HashMap</code>, precisamos informar <strong>dois tipos</strong>:</p>
+<ul>
+<li class="fragment">o tipo dos objetos chave e o tipo dos objetos valor.</li>
+</ul>
+</div>
+</section>
+<section id="section-56" class="slide level2">
+<h2></h2>
+<p>No caso da lista de contatos, por exemplo, definimos que tanto a chave quanto o valor são objetos do tipo <code>String</code>.</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb11"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">HashMap</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span><span class="bu">String</span><span class="op">&gt;</span> contatos <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
 <p>O trecho de código abaixo encontra e exibe o telefone da Maria.</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb14"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> telefone <span class="op">=</span> contatos<span class="op">.</span><span class="fu">get</span><span class="op">(</span><span class="st">"Maria"</span><span class="op">);</span></span>
-<span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Telefone da Maria: "</span> <span class="op">+</span> telefone<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> telefone <span class="op">=</span> contatos<span class="op">.</span><span class="fu">get</span><span class="op">(</span><span class="st">"Maria"</span><span class="op">);</span></span>
+<span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Telefone da Maria: "</span> <span class="op">+</span> telefone<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <div class="fragment">
 <p>Repare que passamos a chave (o nome <code>"Maria"</code>) para o método <code>get</code> e ele nos retorna o valor (o número do telefone dela).</p>
 </div>
 </section>
-<section id="section-56" class="slide level2">
+<section id="section-57" class="slide level2">
 <h2></h2>
 <div title="Exercício 13">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1227,7 +1224,7 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 </div>
 </div>
 </section>
-<section id="section-57" class="slide level2">
+<section id="section-58" class="slide level2">
 <h2></h2>
 <div title="Exercício 14">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1240,22 +1237,20 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 <p>Crie uma classe chamada <code>Contatos</code> e use um <code>HashMap</code> para implementar uma lista de contatos similar à que vimos anteriormente. Lembre-se que você deve importar <code>java.util.HashMap</code>.</p>
 <p>Na classe, implemente dois métodos:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb15"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">cadastrarNumero</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">,</span> <span class="bu">String</span> numero<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">cadastrarNumero</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">,</span> <span class="bu">String</span> numero<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>e</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb16"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">buscarNumero</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">buscarNumero</span><span class="op">(</span><span class="bu">String</span> nome<span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Os métodos devem usar os métodos <code>put</code> e <code>get</code> da classe <code>HashMap</code> para implementar suas funcionalidades.</p>
+<p>Esses novos métodos devem usar os métodos <code>put</code> e <code>get</code> da classe <code>HashMap</code> para implementar suas funcionalidades.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="section-58" class="slide level2">
+<section id="section-59" class="slide level2">
 <h2></h2>
-<p>Para os exercícios a seguir, você pode usar a <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html">documentação</a> oficial da classe <code>HashMap</code> do Java.</p>
-<div class="fragment">
 <div title="Exercício 15">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1263,8 +1258,7 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 <p><strong>Exercício 15</strong></p>
 </div>
 <div class="callout-content">
-<p>Verifique na documentação como podemos saber quantas entradas estão guardadas em um <code>HashMap</code>.</p>
-</div>
+<p>Experimente com o BlueJ o que acontece quando você adiciona uma entrada em uma mapa com uma chave que já existia no mapa.</p>
 </div>
 </div>
 </div>
@@ -1277,7 +1271,7 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 <p><strong>Exercício 16</strong></p>
 </div>
 <div class="callout-content">
-<p>Experimente com o BlueJ o que acontece quando você adiciona uma entrada em uma mapa com uma chave que já existia no mapa.</p>
+<p>Experimente com o BlueJ o que acontece quando você adiciona duas entradas em um mapa com o mesmo valor, mas com chaves diferentes.</p>
 </div>
 </div>
 </div>
@@ -1291,14 +1285,22 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 <p><strong>Exercício 17</strong></p>
 </div>
 <div class="callout-content">
-<p>Experimente com o BlueJ o que acontece quando você adiciona duas entradas em um mapa com o mesmo valor, mas com chaves diferentes.</p>
+<p>Experimente com o BlueJ o que acontece quando você tenta procurar um valor e a chave fornecida não existe no mapa.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="section-59" class="slide level2">
+<section id="section-60" class="slide level2">
+<h2></h2>
+<p>Para os exercícios a seguir, você pode usar a <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html">documentação</a> oficial da classe <code>HashMap</code> do Java.</p>
+<ul>
+<li class="fragment">Ou pode usar uma ferramenta de IA para obter as respostas.</li>
+<li class="fragment">De todo modo, quanto mais familiarizado estiver com a documentação oficial, melhor.</li>
+</ul>
+</section>
+<section id="section-61" class="slide level2">
 <h2></h2>
 <div title="Exercício 18">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1307,7 +1309,7 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 <p><strong>Exercício 18</strong></p>
 </div>
 <div class="callout-content">
-<p>Como você pode verificar se uma chave existe em um mapa? Escreva um código Java de exemplo.</p>
+<p>Descubra como podemos saber quantas entradas estão guardadas em um <code>HashMap</code>.</p>
 </div>
 </div>
 </div>
@@ -1320,7 +1322,7 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 <p><strong>Exercício 19</strong></p>
 </div>
 <div class="callout-content">
-<p>Experimente com o BlueJ o que acontece quando você tenta procurar um valor e a chave fornecida não existe no mapa.</p>
+<p>Como você pode verificar se uma chave existe em um mapa? Escreva um código Java de exemplo.</p>
 </div>
 </div>
 </div>
@@ -1336,7 +1338,7 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 <div class="callout-content">
 <p>Como podemos imprimir todas as chaves que estão armazenadas em um <code>HashMap</code>.</p>
 <ul>
-<li>Atenção, não vale aqui construções de programação funcional que usem o operador <code>-&gt;</code>.</li>
+<li>Atenção, não vale aqui construções de programação funcional (que usam o operador <code>-&gt;</code>, por exemplo).</li>
 </ul>
 </div>
 </div>
@@ -1349,11 +1351,11 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 <h1>Usando um mapa no sistema de suporte</h1>
 
 </section>
-<section id="section-60" class="slide level2">
+<section id="section-62" class="slide level2">
 <h2></h2>
-<p>Agora que conhecemos o conceito de Mapa, podemos fazer a melhoria que converamos antes.</p>
+<p>Agora que conhecemos o conceito de Mapa, podemos fazer a melhoria que conversamos antes:</p>
 <ul>
-<li class="fragment">De dar uma resposta para o usuário que tenha alguma relação com sua dúvida.</li>
+<li class="fragment">dar uma resposta para o usuário que tenha alguma relação com sua dúvida.</li>
 </ul>
 <div class="fragment">
 <p>Podemos fazer a implementação usando um <code>HashMap</code>.</p>
@@ -1363,80 +1365,105 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 </ul>
 </div>
 </section>
-<section id="section-61" class="slide level2">
+<section id="section-63" class="slide level2">
 <h2></h2>
 <p>Vamos começar, criando uma atributo na classe <code>Respondedor</code>, chamado <code>mapaDeRespostas</code>.</p>
 <ul>
-<li class="fragment">E criando um método <code>preencherMapaDeRespostas</code> para tratar as respostas.</li>
+<li class="fragment">E, no construtor, vamos criar o <code>HashMap</code> e chamar um novo método <code>preencherMapaDeRespostas</code>, para colocar no objeto todas as respostas que tivermos.</li>
 </ul>
 <div class="fragment">
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb17"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">HashMap</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">String</span><span class="op">&gt;</span> mapaDeRespostas<span class="op">;</span></span>
-<span id="cb17-2"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> Respondedor <span class="op">{</span></span>
-<span id="cb17-4"><a aria-hidden="true" tabindex="-1"></a>    mapaDeRespostas <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
-<span id="cb17-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">preencherMapaDeRespostas</span><span class="op">();</span></span>
-<span id="cb17-6"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</section>
-<section id="section-62" class="slide level2">
-<h2></h2>
-<p>Nos próximos exercícios vamos fazer essa implementação.</p>
-<ul>
-<li class="fragment">Nós vamos colocar as entradas do <code>HashMap</code> diretamente no código.</li>
-</ul>
-<div class="fragment">
-<p>Alguém poderia argumentar que isso não é muito diferente de usar <code>if\else if</code>.</p>
-<ul>
-<li class="fragment">Mas, a inclusão das entradas no <code>HashMap</code> poderia ser feita a partir de um arquivo, por exemplo.
-<ul>
-<li class="fragment">E, assim, poderíamos acrescentar novas palavras-chave no arquivo sem precisar recompilar o sistema.</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="section-63" class="slide level2">
-<h2></h2>
-<div class="r-fit-text" title="Exercício [(entrega)]{.alert}">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício <span class="alert">(entrega)</span></strong></p>
-</div>
-<div class="callout-content">
-<p>Altere a classe a classe <code>Respondedor</code> do projeto <a href="https://github.com/ufla-ipoo/suporte-tecnico1">suporte-tecnico1</a> para que ela tenha um atributo mapa para guardar as palavras-chaves e as respostas.</p>
-<p>Crie um método chamado <code>preencherMapaDeRespostas</code> que preenche o mapa com as respostas que você tinha tratado como <code>if\else if</code> na aula anterior. Chame o método no construtor da classe.</p>
-<p>Por fim, altere o método <code>gerarResposta</code> da seguinte forma:</p>
-<ul>
-<li>Ele deve ter um loop para percorrer as chaves do mapa.</li>
-<li>Dentro do loop deve verificar se a variável <code>entrada</code> contém a chave.
-<ul>
-<li>Se sim, ele deve retornar o valor associado a esta chave.</li>
-</ul></li>
-<li>Se o loop terminar e a <code>entrada</code> não tiver nenhuma das chaves, ele deve retornar uma resposta padrão.
-<ul>
-<li>Por exemplo, “Desculpe, não entendi o que você quis dizer. Poderia reformular a pergunta?”.</li>
-</ul></li>
-</ul>
-<p>Atenção: não vale usar construções de programação funcional (como o operador <code>-&gt;</code>).</p>
-</div>
-</div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">HashMap</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">String</span><span class="op">&gt;</span> mapaDeRespostas<span class="op">;</span></span>
+<span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> Respondedor <span class="op">{</span></span>
+<span id="cb15-4"><a aria-hidden="true" tabindex="-1"></a>    mapaDeRespostas <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
+<span id="cb15-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">preencherMapaDeRespostas</span><span class="op">();</span></span>
+<span id="cb15-6"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
 <section id="section-64" class="slide level2">
 <h2></h2>
-<p><strong>Atenção</strong>:</p>
+<p>Vamos então implementar o método <code>preencherMapaDeRespostas</code> acrescentando todas as repostas que nosso sistema será capaz de fornecer.</p>
+<div class="fragment">
+<div class="sourceCode" id="cb16"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">void</span> <span class="fu">preencherMapaDeRespostas</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb16-2"><a aria-hidden="true" tabindex="-1"></a>    mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"lento"</span><span class="op">,</span> </span>
+<span id="cb16-3"><a aria-hidden="true" tabindex="-1"></a>      <span class="st">"Acredito que isso tem a ver com o seu hardware. "</span> <span class="op">+</span></span>
+<span id="cb16-4"><a aria-hidden="true" tabindex="-1"></a>      <span class="st">"Atualizar seu processador deve resolver todos os problemas de desempenho. "</span> <span class="op">+</span></span>
+<span id="cb16-5"><a aria-hidden="true" tabindex="-1"></a>      <span class="st">"Você tem algum problema com nosso software?"</span><span class="op">);</span></span>
+<span id="cb16-6"><a aria-hidden="true" tabindex="-1"></a>    mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"bug"</span><span class="op">,</span></span>
+<span id="cb16-7"><a aria-hidden="true" tabindex="-1"></a>      <span class="st">"Bem, você sabe, todo software tem alguns bugs. "</span> <span class="op">+</span></span>
+<span id="cb16-8"><a aria-hidden="true" tabindex="-1"></a>      <span class="st">"Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. "</span> <span class="op">+</span></span>
+<span id="cb16-9"><a aria-hidden="true" tabindex="-1"></a>      <span class="st">"Você pode descrever o problema com mais detalhes?"</span><span class="op">);</span></span>
+<span id="cb16-10"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// continue preenchendo as demais respostas possíveis</span></span>
+<span id="cb16-11"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li class="fragment">O próximo exercício pede para alterar o método <code>gerarResposta</code> da classe <code>Respondedor</code>.</li>
-<li class="fragment">Mas para que o professor consiga corrigir seu exercício anterior (de respostas aleatórias) você não pode apagar o código que tinha feito antes.
-<ul>
-<li class="fragment">Portanto, ao fazer o próximo exercício deixe o código anterior comentado em vez de apagá-lo.</li>
-</ul></li>
+<li class="fragment">Repare que o método é privado, pois foi criado para ser acessado apenas dentro da própria classe <code>Respondedor</code>.</li>
 </ul>
+</div>
 </section>
 <section id="section-65" class="slide level2">
+<h2></h2>
+<p>Aqui está um exemplo de implementação mais completa.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> <span class="dt">void</span> <span class="fu">preencherMapaDeRespostas</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb17-2"><a aria-hidden="true" tabindex="-1"></a>  mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"lento"</span><span class="op">,</span> </span>
+<span id="cb17-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?"</span><span class="op">);</span></span>
+<span id="cb17-4"><a aria-hidden="true" tabindex="-1"></a>  mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"bug"</span><span class="op">,</span></span>
+<span id="cb17-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?"</span><span class="op">);</span></span>
+<span id="cb17-6"><a aria-hidden="true" tabindex="-1"></a>  mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"travou"</span><span class="op">,</span></span>
+<span id="cb17-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração."</span><span class="op">);</span></span>
+<span id="cb17-8"><a aria-hidden="true" tabindex="-1"></a>  mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"travando"</span><span class="op">,</span></span>
+<span id="cb17-9"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração."</span><span class="op">);</span></span>
+<span id="cb17-10"><a aria-hidden="true" tabindex="-1"></a>  mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"lento"</span><span class="op">,</span></span>
+<span id="cb17-11"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?"</span><span class="op">);</span></span>
+<span id="cb17-12"><a aria-hidden="true" tabindex="-1"></a>  mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"desempenho"</span><span class="op">,</span></span>
+<span id="cb17-13"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"O desempenho foi bastante adequado em todos os nossos testes. Você está executando outros processos em segundo plano?"</span><span class="op">);</span></span>
+<span id="cb17-14"><a aria-hidden="true" tabindex="-1"></a>  mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"bug"</span><span class="op">,</span></span>
+<span id="cb17-15"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?"</span><span class="op">);</span></span>
+<span id="cb17-16"><a aria-hidden="true" tabindex="-1"></a>  mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"erro"</span><span class="op">,</span></span>
+<span id="cb17-17"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?"</span><span class="op">);</span></span>
+<span id="cb17-18"><a aria-hidden="true" tabindex="-1"></a>  mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"windows"</span><span class="op">,</span></span>
+<span id="cb17-19"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"Este é um bug conhecido relacionado ao sistema operacional Windows. Por favor, informe à Microsoft. Não há nada que possamos fazer a respeito."</span><span class="op">);</span></span>
+<span id="cb17-20"><a aria-hidden="true" tabindex="-1"></a>  mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"mac"</span><span class="op">,</span></span>
+<span id="cb17-21"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"Este é um bug conhecido relacionado ao sistema operacional Mac. Por favor, informe à Apple. Não há nada que possamos fazer a respeito."</span><span class="op">);</span></span>
+<span id="cb17-22"><a aria-hidden="true" tabindex="-1"></a>  mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"caro"</span><span class="op">,</span></span>
+<span id="cb17-23"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"O custo de nosso produto é bastante competitivo. Você deu uma olhada e realmente comparou nossos recursos?"</span><span class="op">);</span></span>
+<span id="cb17-24"><a aria-hidden="true" tabindex="-1"></a>  mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"instalação"</span><span class="op">,</span></span>
+<span id="cb17-25"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"A instalação é realmente bastante simples. Temos muitos assistentes que fazem todo o trabalho para você. Você leu as instruções de instalação?"</span><span class="op">);</span></span>
+<span id="cb17-26"><a aria-hidden="true" tabindex="-1"></a>  mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"memória"</span><span class="op">,</span></span>
+<span id="cb17-27"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"Se você ler atentamente os requisitos do sistema, verá que os requisitos de memória especificados são de 6 gigabytes. Você realmente deve atualizar sua memória. Mais alguma coisa que você gostaria de saber?"</span><span class="op">);</span></span>
+<span id="cb17-28"><a aria-hidden="true" tabindex="-1"></a>  mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"linux"</span><span class="op">,</span></span>
+<span id="cb17-29"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"Levamos o suporte ao Linux muito a sério. Mas há alguns problemas. A maioria está relacionada a versões incompatíveis do glibc. Você pode ser um pouco mais preciso?"</span><span class="op">);</span></span>
+<span id="cb17-30"><a aria-hidden="true" tabindex="-1"></a>  mapaDeRespostas<span class="op">.</span><span class="fu">put</span><span class="op">(</span><span class="st">"bluej"</span><span class="op">,</span></span>
+<span id="cb17-31"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"Ah, o BlueJ, sim. Tentamos comprá-los há muito tempo, mas eles simplesmente não vendem... São pessoas teimosas. Não há nada que possamos fazer a respeito, desculpe."</span><span class="op">);</span></span>
+<span id="cb17-32"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="section-66" class="slide level2">
+<h2></h2>
+<p>Abaixo temos uma primeira tentativa de alteração do método <code>gerarResposta</code> para usar as respostas que criamos.</p>
+<ul>
+<li class="fragment">Vamos começar simplificando as coisas:
+<ul>
+<li class="fragment">assumindo que o usuário digitará uma única palavra.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="sourceCode" id="cb18"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb18-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">String</span> <span class="fu">gerarResposta</span><span class="op">(</span><span class="bu">String</span> palavra<span class="op">)</span></span>
+<span id="cb18-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb18-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> resposta <span class="op">=</span> mapaDeRespostas<span class="op">.</span><span class="fu">get</span><span class="op">(</span>palavra<span class="op">);</span></span>
+<span id="cb18-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>resposta <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb18-5"><a aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> resposta<span class="op">;</span></span>
+<span id="cb18-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb18-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb18-8"><a aria-hidden="true" tabindex="-1"></a>      <span class="co">// Se chegamos aqui, é porque a palavra não foi reconhecida.</span></span>
+<span id="cb18-9"><a aria-hidden="true" tabindex="-1"></a>      <span class="co">// Neste caso, pegamos uma de nossas respostas aleatórias</span></span>
+<span id="cb18-10"><a aria-hidden="true" tabindex="-1"></a>      <span class="co">// que tínhamos criado antes.</span></span>
+<span id="cb18-11"><a aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="fu">pegarRespostaPadrao</span><span class="op">();</span></span>
+<span id="cb18-12"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb18-13"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="section-67" class="slide level2">
 <h2></h2>
 <div title="Exercício 21">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
@@ -1445,101 +1472,338 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 <p><strong>Exercício 21</strong></p>
 </div>
 <div class="callout-content">
-<p>Vamos implementar a ideia discutida nos slides anteriores. Neste exercício, faça o seguinte:</p>
-<ul>
-<li>Altere o método <code>gerarResposta</code> da classe <code>Respondedor</code> para que ele receba por parâmetro a pergunta feita pelo usuário.
-<ul>
-<li>Você precisará, claro, alterar a chamada do método na classe <code>SistemaDeSuporte</code> para passar a entrada do usuário.</li>
-</ul></li>
-<li>No método <code>gerarResposta</code>, faça uma sequência de <code>if</code>/<code>else if</code> para verificar se as palavras-chave existem na pergunta do usuário.
-<ul>
-<li>Para isso, você pode usar o método <code>contains</code> da classe String.</li>
-<li>E no bloco de cada <code>if</code>, retornar um texto correspondente àquela palavra-chave (veja sugestões no próximo slide).</li>
-<li>Exemplo:</li>
-</ul></li>
-</ul>
-<div class="sourceCode" id="cb18"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb18-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>entrada<span class="op">.</span><span class="fu">contains</span><span class="op">(</span><span class="st">"lento"</span><span class="op">))</span> <span class="op">{</span></span>
-<span id="cb18-2"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Acredito que isso tem a ver com o seu hardware. "</span> <span class="op">+</span></span>
-<span id="cb18-3"><a aria-hidden="true" tabindex="-1"></a>               <span class="st">"Atualizar seu processador deve resolver todos os "</span> <span class="op">+</span></span>
-<span id="cb18-4"><a aria-hidden="true" tabindex="-1"></a>               <span class="st">"problemas de desempenho. Você tem algum problema "</span> <span class="op">+</span> </span>
-<span id="cb18-5"><a aria-hidden="true" tabindex="-1"></a>               <span class="st">"com nosso software?"</span></span>
-<span id="cb18-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb18-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>entrada<span class="op">.</span><span class="fu">contains</span><span class="op">(</span><span class="st">"bug"</span><span class="op">))</span> <span class="op">{</span></span>
-<span id="cb18-8"><a aria-hidden="true" tabindex="-1"></a>        <span class="kw">...</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Aplique as últimas alterações ao projeto de suporte técnico.</p>
+<p>Você precisará alterar também a chamada ao método <code>gerarResposta</code> feita na classe <code>SistemaDeSuporte</code>.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="section-66" class="slide level2">
+<section id="section-68" class="slide level2">
 <h2></h2>
-<div class="fontsize70">
-<table class="caption-top">
-<colgroup>
-<col style="width: 10%">
-<col style="width: 89%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Palavra-chave</th>
-<th>Sugestão de resposta</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>“travou”</td>
-<td>“Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração.”</td>
-</tr>
-<tr class="even">
-<td>“travando”</td>
-<td>“Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração.”</td>
-</tr>
-<tr class="odd">
-<td>“lento”</td>
-<td>“Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?”</td>
-</tr>
-<tr class="even">
-<td>“desempenho”</td>
-<td>“O desempenho foi bastante adequado em todos os nossos testes. Você está executando outros processos em segundo plano?”</td>
-</tr>
-<tr class="odd">
-<td>“bug”</td>
-<td>“Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?”</td>
-</tr>
-<tr class="even">
-<td>“erro”</td>
-<td>“Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?”</td>
-</tr>
-<tr class="odd">
-<td>“windows”</td>
-<td>“Este é um bug conhecido relacionado ao sistema operacional Windows. Por favor, informe à Microsoft. Não há nada que possamos fazer a respeito.”</td>
-</tr>
-<tr class="even">
-<td>“mac”</td>
-<td>“Este é um bug conhecido relacionado ao sistema operacional Mac. Por favor, informe à Apple. Não há nada que possamos fazer a respeito.”</td>
-</tr>
-<tr class="odd">
-<td>“caro”</td>
-<td>“O custo de nosso produto é bastante competitivo. Você deu uma olhada e realmente comparou nossos recursos?”</td>
-</tr>
-<tr class="even">
-<td>“instalação”</td>
-<td>“A instalação é realmente bastante simples. Temos muitos assistentes que fazem todo o trabalho para você. Você leu as instruções de instalação?”</td>
-</tr>
-<tr class="odd">
-<td>“memória”</td>
-<td>“Se você ler atentamente os requisitos do sistema, verá que os requisitos de memória especificados são de 6 gigabytes. Você realmente deve atualizar sua memória. Mais alguma coisa que você gostaria de saber?”</td>
-</tr>
-<tr class="even">
-<td>“linux”</td>
-<td>“Levamos o suporte ao Linux muito a sério. Mas há alguns problemas. A maioria está relacionada a versões incompatíveis do glibc. Você pode ser um pouco mais preciso?”</td>
-</tr>
-<tr class="odd">
-<td>“bluej”</td>
-<td>“Ah, o BlueJ, sim. Tentamos comprá-los há muito tempo, mas eles simplesmente não vendem… São pessoas teimosas. Não há nada que possamos fazer a respeito, desculpe.”</td>
-</tr>
-</tbody>
-</table>
+<p>O sistema está respodendo bem melhor agora,</p>
+<ul>
+<li class="fragment">mas desde que o usuário digite apenas uma palavra, em vez de uma pergunta completa.</li>
+</ul>
+<div class="fragment">
+<p>O ideal é deixarmos o usuário digitar uma pergunta inteira,</p>
+<ul>
+<li class="fragment">e tentar reconhecer nela alguma das palavras tratadas.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Para isso, precisaremos alterar a classe <code>LeitorDeEntrada</code> para que ela retorne a entrada como um conjunto de palavras</p>
+<ul>
+<li class="fragment">em vez de retornar uma única String.</li>
+<li class="fragment">É o que veremos a seguir.</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="usando-conjuntos" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Usando conjuntos</h1>
+
+</section>
+<section id="section-69" class="slide level2">
+<h2></h2>
+<p>A biblioteca de classes do Java possui diferentes tipos de <a href=".alert">conjuntos</a> implementados em diferentes classes.</p>
+<ul>
+<li class="fragment">Uma delas é chamada <code>HashSet</code>.</li>
+</ul>
+<div class="fragment">
+<div title="Exercício 22">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 22</strong></p>
+</div>
+<div class="callout-content">
+<p>Busque na documentação do Java, ou usando uma ferramenta de IA, quais são as similaridades e as diferenças entre um <code>HashSet</code> e um <code>ArrayList</code>.</p>
+<p>Para os curiosos: tente entender porque <code>ArrayList</code> é um caso especial de <code>List</code> e <code>HashSet</code> é um caso especial de <code>Set</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-70" class="slide level2">
+<h2></h2>
+<p>A declaração de um <code>HashSet</code>,</p>
+<ul>
+<li class="fragment">a criação do objeto</li>
+<li class="fragment">e a adição de elementos é feita da mesma forma que um <code>ArrayList</code>.</li>
+</ul>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb19"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb19-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">HashSet</span><span class="op">;</span></span>
+<span id="cb19-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span> <span class="op">.</span> <span class="op">.</span></span>
+<span id="cb19-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">HashSet</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> conjunto <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashSet</span><span class="op">&lt;&gt;();</span></span>
+<span id="cb19-4"><a aria-hidden="true" tabindex="-1"></a>    conjunto<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="st">"um"</span><span class="op">);</span></span>
+<span id="cb19-5"><a aria-hidden="true" tabindex="-1"></a>    conjunto<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="st">"dois"</span><span class="op">);</span></span>
+<span id="cb19-6"><a aria-hidden="true" tabindex="-1"></a>    conjunto<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="st">"três"</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-71" class="slide level2">
+<h2></h2>
+<p>Para percorrer um <code>HashSet</code> podemos usar um <code>for-each</code>,</p>
+<ul>
+<li class="fragment">igualzinho ao que usamos para <code>ArrayList</code>.</li>
+</ul>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb20"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb20-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span><span class="op">(</span><span class="bu">String</span> elemento <span class="op">:</span> conjunto<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb20-2"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// faz alguma coisa com o elemento.</span></span>
+<span id="cb20-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Repare, portanto, que <strong>usar diferentes coleções</strong> em Java <strong>é</strong> sempre <strong>muito parecido</strong>.</p>
+<ul>
+<li class="fragment">Se você entender como usar uma delas, você conseguirá usar as outras com facilidade.</li>
+</ul>
+</div>
+</section>
+<section id="section-72" class="slide level2">
+<h2></h2>
+<p>As <strong>diferenças</strong> entre as coleções <strong>estão nos</strong> seus <strong>comportamentos</strong>.</p>
+<ul>
+<li class="fragment">Uma lista, por exemplo, mantém a ordem dos elementos, permite acesso aos elementos por posição, e permite elementos repetidos.</li>
+<li class="fragment">Já um conjunto não mantém a ordem dos elementos, e garante que não existem elementos repetidos.
+<ul>
+<li class="fragment">Portanto, os elementos podem ser percorridos no <code>for-each</code> em ordem diferente da que eles foram inseridos.</li>
+<li class="fragment">E inserir um mesmo elemento uma segunda vez, simplesmente não tem nenhum efeito.</li>
+</ul></li>
+</ul>
+</section>
+<section id="dividindo-strings" class="slide level2">
+<h2>Dividindo Strings</h2>
+<p>Agora que sabemos como usar um <code>set</code>,</p>
+<ul>
+<li class="fragment">vamos verificar como podemos pegar a entrada do usuário,</li>
+<li class="fragment">quebrá-la,</li>
+<li class="fragment">e guardar as palavras em um conjunto de string.</li>
+</ul>
+<div class="fragment">
+<p>Vamos fazer isso alterando o método <code>obterEntrada</code> da classe <code>LeitorDeEntrada</code>.</p>
+</div>
+</section>
+<section id="section-73" class="slide level2">
+<h2></h2>
+<div class="sourceCode" id="cb21"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb21-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">HashSet</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> <span class="fu">obterEntrada</span><span class="op">()</span></span>
+<span id="cb21-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb21-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"&gt; "</span><span class="op">);</span>         <span class="co">// imprime o prompt</span></span>
+<span id="cb21-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span> linhaDeEntrada <span class="op">=</span> leitor<span class="op">.</span><span class="fu">nextLine</span><span class="op">().</span><span class="fu">trim</span><span class="op">().</span><span class="fu">toLowerCase</span><span class="op">();</span></span>
+<span id="cb21-5"><a aria-hidden="true" tabindex="-1"></a>                                    <span class="co">// quebra nos espaços</span></span>
+<span id="cb21-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">String</span><span class="op">[]</span> vetorDePalavras <span class="op">=</span> linhaDeEntrada<span class="op">.</span><span class="fu">split</span><span class="op">(</span><span class="st">" "</span><span class="op">);</span> </span>
+<span id="cb21-7"><a aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb21-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// adiciona palavras de um vetor em um HashSet</span></span>
+<span id="cb21-9"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">HashSet</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> palavras <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashSet</span><span class="op">&lt;&gt;();</span></span>
+<span id="cb21-10"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span><span class="op">(</span><span class="bu">String</span> palavra <span class="op">:</span> vetorDePalavras<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb21-11"><a aria-hidden="true" tabindex="-1"></a>      palavras<span class="op">.</span><span class="fu">add</span><span class="op">(</span>palavra<span class="op">);</span></span>
+<span id="cb21-12"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb21-13"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-14"><a aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> palavras<span class="op">;</span></span>
+<span id="cb21-15"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li class="fragment">Estamos usando os métodos <code>trim</code> e <code>toLowerCase</code> que vimos anteriormente.</li>
+<li class="fragment">O método <code>split</code> usa o parâmetro passado para dividir uma string e um vetor de substrings.</li>
+</ul>
+</section>
+<section id="section-74" class="slide level2">
+<h2></h2>
+<div title="Exercício 23">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 23</strong></p>
+</div>
+<div class="callout-content">
+<p>O método <code>split</code> é mais poderoso do que pode parecer pelo nosso exemplo. Como você pode definir exatamente como uma string deve ser quebrada? Dê alguns exemplos.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício 24">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 24</strong></p>
+</div>
+<div class="callout-content">
+<p>Escreva como seria possível quebrar uma string armazenada em uma variável <code>linha</code> contendo palavras separadas por ponto-e-vírgula.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício 25">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 25</strong></p>
+</div>
+<div class="callout-content">
+<p>Qual seria a diferença no resultado retornado pelo método <code>obterEntrada</code>, se o retorno fosse um <code>ArrayList</code> em vez de um <code>HashSet</code>?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="finalizando-o-sistema-de-suporte" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Finalizando o Sistema de Suporte</h1>
+
+</section>
+<section id="section-75" class="slide level2">
+<h2></h2>
+<p>Precisamos agora alterar as classes <code>SistemaDeSuporte</code> e <code>Respondedor</code></p>
+<ul>
+<li class="fragment">para que lidem com um conjunto de palavras em vez de uma única string.</li>
+</ul>
+</section>
+<section id="section-76" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<p>Vamos começar alterando o método <code>iniciar</code> da classe <code>SistemaDeSuporte</code>.</p>
+<div class="sourceCode" id="annotated-cell-6"><pre class="sourceCode java code-annotation-code code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="annotated-cell-6-1" class="hljs-ln-code"><a href="#annotated-cell-6-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">iniciar</span><span class="op">()</span></span>
+<span id="annotated-cell-6-2" class="hljs-ln-code"><a href="#annotated-cell-6-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="annotated-cell-6-3" class="hljs-ln-code"><a href="#annotated-cell-6-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">boolean</span> terminou <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="annotated-cell-6-4" class="hljs-ln-code"><a href="#annotated-cell-6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-6-5" class="hljs-ln-code"><a href="#annotated-cell-6-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">imprimirBoasVindas</span><span class="op">();</span></span>
+<span id="annotated-cell-6-6" class="hljs-ln-code"><a href="#annotated-cell-6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-6-7" class="hljs-ln-code"><a href="#annotated-cell-6-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span><span class="op">(!</span>terminou<span class="op">)</span> <span class="op">{</span></span>
+<span id="annotated-cell-6-8" class="hljs-ln-code"><a href="#annotated-cell-6-8" aria-hidden="true" tabindex="-1"></a>      <span class="bu">HashSet</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> entrada <span class="op">=</span> leitor<span class="op">.</span><span class="fu">obterEntrada</span><span class="op">();</span></span>
+<span id="annotated-cell-6-9" class="hljs-ln-code"><a href="#annotated-cell-6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-6-10" class="hljs-ln-code"><a href="#annotated-cell-6-10" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span><span class="op">(</span>entrada<span class="op">.</span><span class="fu">contains</span><span class="op">(</span><span class="st">"tchau"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="annotated-cell-6-11" class="hljs-ln-code"><a href="#annotated-cell-6-11" aria-hidden="true" tabindex="-1"></a>        terminou <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="annotated-cell-6-12" class="hljs-ln-code"><a href="#annotated-cell-6-12" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
+<span id="annotated-cell-6-13" class="hljs-ln-code"><a href="#annotated-cell-6-13" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span> <span class="op">{</span></span>
+<span id="annotated-cell-6-14" class="hljs-ln-code"><a href="#annotated-cell-6-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> resposta <span class="op">=</span> respondedor<span class="op">.</span><span class="fu">gerarResposta</span><span class="op">(</span>entrada<span class="op">);</span></span>
+<span id="annotated-cell-6-15" class="hljs-ln-code"><a href="#annotated-cell-6-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>resposta<span class="op">);</span></span>
+<span id="annotated-cell-6-16" class="hljs-ln-code"><a href="#annotated-cell-6-16" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
+<span id="annotated-cell-6-17" class="hljs-ln-code"><a href="#annotated-cell-6-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="annotated-cell-6-18" class="hljs-ln-code"><a href="#annotated-cell-6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-6-19" class="hljs-ln-code"><a href="#annotated-cell-6-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">imprimirDespedida</span><span class="op">();</span></span>
+<span id="annotated-cell-6-20" class="hljs-ln-code"><a href="#annotated-cell-6-20" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="section-77" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div class="sourceCode" id="annotated-cell-7" data-code-line-numbers="8,10"><pre class="sourceCode java code-annotation-code code-with-copy code-annotated" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="annotated-cell-7-1" class="hljs-ln-code"><a href="#annotated-cell-7-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">iniciar</span><span class="op">()</span></span>
+<span id="annotated-cell-7-2" class="hljs-ln-code"><a href="#annotated-cell-7-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="annotated-cell-7-3" class="hljs-ln-code"><a href="#annotated-cell-7-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">boolean</span> terminou <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="annotated-cell-7-4" class="hljs-ln-code"><a href="#annotated-cell-7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-7-5" class="hljs-ln-code"><a href="#annotated-cell-7-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">imprimirBoasVindas</span><span class="op">();</span></span>
+<span id="annotated-cell-7-6" class="hljs-ln-code"><a href="#annotated-cell-7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-7-7" class="hljs-ln-code"><a href="#annotated-cell-7-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span><span class="op">(!</span>terminou<span class="op">)</span> <span class="op">{</span></span>
+<a class="code-annotation-anchor hljs-ln-code" data-target-cell="annotated-cell-7" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-7-8" class="code-annotation-target hljs-ln-code"><a href="#annotated-cell-7-8" aria-hidden="true" tabindex="-1"></a>      <span class="bu">HashSet</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> entrada <span class="op">=</span> leitor<span class="op">.</span><span class="fu">obterEntrada</span><span class="op">();</span></span>
+<span id="annotated-cell-7-9" class="hljs-ln-code"><a href="#annotated-cell-7-9" aria-hidden="true" tabindex="-1"></a></span>
+<a class="code-annotation-anchor hljs-ln-code" data-target-cell="annotated-cell-7" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-7-10" class="code-annotation-target hljs-ln-code"><a href="#annotated-cell-7-10" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span><span class="op">(</span>entrada<span class="op">.</span><span class="fu">contains</span><span class="op">(</span><span class="st">"tchau"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="annotated-cell-7-11" class="hljs-ln-code"><a href="#annotated-cell-7-11" aria-hidden="true" tabindex="-1"></a>        terminou <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="annotated-cell-7-12" class="hljs-ln-code"><a href="#annotated-cell-7-12" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
+<span id="annotated-cell-7-13" class="hljs-ln-code"><a href="#annotated-cell-7-13" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span> <span class="op">{</span></span>
+<span id="annotated-cell-7-14" class="hljs-ln-code"><a href="#annotated-cell-7-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> resposta <span class="op">=</span> respondedor<span class="op">.</span><span class="fu">gerarResposta</span><span class="op">(</span>entrada<span class="op">);</span></span>
+<span id="annotated-cell-7-15" class="hljs-ln-code"><a href="#annotated-cell-7-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>resposta<span class="op">);</span></span>
+<span id="annotated-cell-7-16" class="hljs-ln-code"><a href="#annotated-cell-7-16" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
+<span id="annotated-cell-7-17" class="hljs-ln-code"><a href="#annotated-cell-7-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="annotated-cell-7-18" class="hljs-ln-code"><a href="#annotated-cell-7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-7-19" class="hljs-ln-code"><a href="#annotated-cell-7-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">imprimirDespedida</span><span class="op">();</span></span>
+<span id="annotated-cell-7-20" class="hljs-ln-code"><a href="#annotated-cell-7-20" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span><div class="code-annotation-gutter-bg hljs-ln-code"></div><div class="code-annotation-gutter hljs-ln-code"></div></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<dl class="code-annotation-container-grid">
+<dt class="fragment" data-target-cell="annotated-cell-7" data-target-annotation="1">1</dt>
+<dd class="fragment">
+<span data-code-cell="annotated-cell-7" data-code-lines="8" data-code-annotation="1">alteramos o tipo da variável <code>entrada</code> para que seja um <code>HashSet</code> (precisamos importar a classe).</span>
+</dd>
+<dt class="fragment" data-target-cell="annotated-cell-7" data-target-annotation="2">2</dt>
+<dd class="fragment">
+<span data-code-cell="annotated-cell-7" data-code-lines="10" data-code-annotation="2">mudamos a verificação que finaliza o sistema, passando a usar o método <code>contains</code>.</span>
+</dd>
+</dl>
+</section>
+<section id="section-78" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<p>Por fim, vamos alterar o método <code>gerarResposta</code> da classe <code>Respondedor</code></p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode java code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb22-1" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">gerarResposta</span><span class="op">(</span><span class="bu">HashSet</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> palavras<span class="op">)</span></span>
+<span id="cb22-2" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb22-3" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="bu">String</span> palavra <span class="op">:</span> palavras<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb22-4" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>            <span class="bu">String</span> resposta <span class="op">=</span> mapaDeRespostas<span class="op">.</span><span class="fu">get</span><span class="op">(</span>palavra<span class="op">);</span></span>
+<span id="cb22-5" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(</span>resposta <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb22-6" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> resposta<span class="op">;</span></span>
+<span id="cb22-7" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb22-8" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb22-9" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// Se chegamos aqui, é porque a palavra não foi reconhecida.</span></span>
+<span id="cb22-10" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// Neste caso, pegamos uma de nossas respostas aleatórias</span></span>
+<span id="cb22-11" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// que tínhamos criado antes.</span></span>
+<span id="cb22-12" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="fu">pegarRespostaPadrao</span><span class="op">();</span></span>
+<span id="cb22-13" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="section-79" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div class="sourceCode" id="annotated-cell-9" data-code-line-numbers="1,3-8"><pre class="sourceCode java code-annotation-code code-with-copy code-annotated" data-id="quarto-animate-code"><code class="sourceCode java hljs"><a class="code-annotation-anchor hljs-ln-code" data-target-cell="annotated-cell-9" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-9-1" class="code-annotation-target hljs-ln-code"><a href="#annotated-cell-9-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">gerarResposta</span><span class="op">(</span><span class="bu">HashSet</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> palavras<span class="op">)</span></span>
+<span id="annotated-cell-9-2" class="hljs-ln-code"><a href="#annotated-cell-9-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<a class="code-annotation-anchor hljs-ln-code" data-target-cell="annotated-cell-9" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-9-3" class="code-annotation-target hljs-ln-code"><a href="#annotated-cell-9-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="bu">String</span> palavra <span class="op">:</span> palavras<span class="op">)</span> <span class="op">{</span></span>
+<span id="annotated-cell-9-4" class="hljs-ln-code"><a href="#annotated-cell-9-4" aria-hidden="true" tabindex="-1"></a>            <span class="bu">String</span> resposta <span class="op">=</span> mapaDeRespostas<span class="op">.</span><span class="fu">get</span><span class="op">(</span>palavra<span class="op">);</span></span>
+<span id="annotated-cell-9-5" class="hljs-ln-code"><a href="#annotated-cell-9-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(</span>resposta <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="annotated-cell-9-6" class="hljs-ln-code"><a href="#annotated-cell-9-6" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> resposta<span class="op">;</span></span>
+<span id="annotated-cell-9-7" class="hljs-ln-code"><a href="#annotated-cell-9-7" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="annotated-cell-9-8" class="hljs-ln-code"><a href="#annotated-cell-9-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="annotated-cell-9-9" class="hljs-ln-code"><a href="#annotated-cell-9-9" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Se chegamos aqui, é porque a palavra não foi reconhecida.</span></span>
+<span id="annotated-cell-9-10" class="hljs-ln-code"><a href="#annotated-cell-9-10" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Neste caso, pegamos uma de nossas respostas aleatórias</span></span>
+<span id="annotated-cell-9-11" class="hljs-ln-code"><a href="#annotated-cell-9-11" aria-hidden="true" tabindex="-1"></a>        <span class="co">// que tínhamos criado antes.</span></span>
+<span id="annotated-cell-9-12" class="hljs-ln-code"><a href="#annotated-cell-9-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="fu">pegarRespostaPadrao</span><span class="op">();</span></span>
+<span id="annotated-cell-9-13" class="hljs-ln-code"><a href="#annotated-cell-9-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span><div class="code-annotation-gutter-bg hljs-ln-code"></div><div class="code-annotation-gutter hljs-ln-code"></div></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<dl class="code-annotation-container-grid">
+<dt class="fragment" data-target-cell="annotated-cell-9" data-target-annotation="1">1</dt>
+<dd class="fragment">
+<span data-code-cell="annotated-cell-9" data-code-lines="1" data-code-annotation="1">O método agora recebe um <code>HashSet</code> em vez de uma <code>String</code>.</span>
+</dd>
+<dt class="fragment" data-target-cell="annotated-cell-9" data-target-annotation="2">2</dt>
+<dd class="fragment">
+<span data-code-cell="annotated-cell-9" data-code-lines="3" data-code-annotation="2">Percorremos as palavras do <code>HashSet</code> e a primeira que for uma das palavras que tratamos, nós retornamos a resposta.</span>
+</dd>
+</dl>
+</section>
+<section id="para-reforçar-em-casa" class="slide level2">
+<h2>Para reforçar (em casa)</h2>
+<div title="Exercício 26">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 26</strong></p>
+</div>
+<div class="callout-content">
+<p>Adicione pelo menos mais uma resposta ao sistema de suporte técnico.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício 27">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 27</strong></p>
+</div>
+<div class="callout-content">
+<p>Garanta que uma resposta padrão nunca é retornada duas vezes seguidas.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício 28">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 28</strong></p>
+</div>
+<div class="callout-content">
+<p>Altere o código para que, em vez de retornar a resposta para a primeira palavra identicada, o programa identifique todas as palavras presentes na pergunta do usuário e tente responder da forma mais apropriada.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section></section>
 <section>
@@ -1547,7 +1811,7 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 <h1>Autoboxing e classes empacotadoras</h1>
 
 </section>
-<section id="section-67" class="slide level2">
+<section id="section-80" class="slide level2">
 <h2></h2>
 <p>Nós vimos que um <code>ArrayList</code> consegue guardar qualquer tipo de objeto.</p>
 <ul>
@@ -1564,44 +1828,50 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 </ul>
 </div>
 </section>
-<section id="section-68" class="slide level2">
+<section id="section-81" class="slide level2">
 <h2></h2>
 <p>Nós poderíamos criar explicitamente um objeto do tipo <code>Integer</code>:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb19"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb19-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> n <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
-<span id="cb19-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">Integer</span> objetoInt <span class="op">=</span> <span class="kw">new</span> <span class="bu">Integer</span><span class="op">(</span>n<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb23-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> n <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
+<span id="cb23-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="bu">Integer</span> objetoInt <span class="op">=</span> <span class="kw">new</span> <span class="bu">Integer</span><span class="op">(</span>n<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>E poderíamos então declarar um <code>ArrayList&lt;Integer&gt;</code> e guardar nele o <code>objetoInt</code>.</p>
+</div>
+</section>
+<section id="section-82" class="slide level2">
+<h2></h2>
+<p>Mas, na verdade, nós nunca fazemos isso, pois podemos guardar valores de tipo primitivo no <code>ArrayList</code>!</p>
 <ul>
-<li class="fragment">Mas, na verdade, nós nunca fazemos isso, pois podemos guardar valores de tipo primitivo no <code>ArrayList</code>!</li>
-<li class="fragment">Isso porque sempre que um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (<em>wrapper</em>),
-<ul>
+<li class="fragment">Isso porque sempre que um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (<em>wrapper</em>),</li>
 <li class="fragment">o compilador converte o valor automaticamente em um objeto empacotador correspondente.</li>
-<li class="fragment">Essa funcionalidade se chama <span class="alert"><em>autoboxing</em></span> (algo como, auto-empacotamento).</li>
-</ul></li>
+</ul>
+<div class="fragment">
+<p>Essa funcionalidade se chama <span class="alert"><em>autoboxing</em></span></p>
+<ul>
+<li class="fragment">(algo como, auto-empacotamento).</li>
 </ul>
 </div>
 </section>
-<section id="section-69" class="slide level2">
+<section id="section-83" class="slide level2">
 <h2></h2>
 <p>Portanto, na prática, podemos escrever código como mostrado abaixo:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb20"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb20-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">ArrayList</span><span class="op">&lt;</span><span class="bu">Integer</span><span class="op">&gt;</span> notas<span class="op">;</span></span>
-<span id="cb20-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">...</span></span>
-<span id="cb20-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">guardarNotasNaLista</span><span class="op">(</span><span class="dt">int</span> nota<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb20-4"><a aria-hidden="true" tabindex="-1"></a>        notas<span class="op">.</span><span class="fu">add</span><span class="op">(</span>nota<span class="op">);</span></span>
-<span id="cb20-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb24-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">ArrayList</span><span class="op">&lt;</span><span class="bu">Integer</span><span class="op">&gt;</span> notas<span class="op">;</span></span>
+<span id="cb24-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">...</span></span>
+<span id="cb24-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">guardarNotasNaLista</span><span class="op">(</span><span class="dt">int</span> nota<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb24-4"><a aria-hidden="true" tabindex="-1"></a>        notas<span class="op">.</span><span class="fu">add</span><span class="op">(</span>nota<span class="op">);</span></span>
+<span id="cb24-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Repare que estamos guardando o valor da variável <code>nota</code>, do tipo <code>int</code>, em um <code>ArrayList&lt;Integer&gt;</code>.</p>
 </div>
 </section>
-<section id="section-70" class="slide level2">
+<section id="section-84" class="slide level2">
 <h2></h2>
 <p>Seguindo a mesma ideia, o compilador realiza o <span class="alert">unboxing</span> quando obtemos um valor da coleção:</p>
 <div class="halfincfontsize">
-<div class="sourceCode" id="cb21"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb21-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> primeiraNota <span class="op">=</span> notas<span class="op">.</span><span class="fu">get</span><span class="op">(</span><span class="dv">0</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb25-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> primeiraNota <span class="op">=</span> notas<span class="op">.</span><span class="fu">get</span><span class="op">(</span><span class="dv">0</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Veja portanto que, em termos práticos, a única coisa que precisamos lembrar é de declarar o <code>ArrayList</code> usando a classe empacotadora (como a <code>Integer</code>).</p>
@@ -1610,7 +1880,7 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 </ul>
 </div>
 </section>
-<section id="section-71" class="slide level2">
+<section id="section-85" class="slide level2">
 <h2></h2>
 <p>Veja no Apêndice B do livro uma lista completa dos tipos primitivos e suas classes empacotadoras.</p>
 <ul>
@@ -1630,366 +1900,107 @@ Você pode descrever o problema com mais detalhes?</code></pre>
 </div>
 </div>
 </div>
-</section></section>
-<section>
-<section id="encapsulamento" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>Encapsulamento</h1>
-
 </section>
-<section id="público-vs.-privado" class="slide level2">
-<h2>Público vs.&nbsp;Privado</h2>
-<p>Vocês já notaram que usamos a todo momento as palavras-chave <code>public</code> e <code>private</code> em nossos programas em Java, como mostrado no exemplo abaixo:</p>
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb22"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb22-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// declaração de atributos</span></span>
-<span id="cb22-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> numeroDeAssentos<span class="op">;</span></span>
-<span id="cb22-3"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// métodos</span></span>
-<span id="cb22-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">definirIdade</span><span class="op">(</span><span class="dt">int</span> novaIdade<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb22-6"><a aria-hidden="true" tabindex="-1"></a>      <span class="kw">...</span></span>
-<span id="cb22-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb22-8"><a aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb22-9"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> <span class="fu">calcularMedia</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb22-10"><a aria-hidden="true" tabindex="-1"></a>      <span class="kw">...</span></span>
-<span id="cb22-11"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="fazendo-contabilidade-de-uso-de-objetos" class="slide level2">
+<h2>Fazendo contabilidade de uso de objetos</h2>
+<p>Combinando um mapa com <em>autoboxing</em>, conseguimos uma maneira simples de contabilizar o uso de objetos.</p>
 <div class="fragment">
-<p>Chegou a hora de entendermos para que essas palavras-chaves servem.</p>
+<p>Suponha, por exemplo, que a empresa responsável pelo Sistema de Suporte queira contar quantas vezes cada palavra não tratada é utilizada.</p>
+<ul>
+<li class="fragment">Dessa forma, ela poderia identificar palavras muito usadas.</li>
+<li class="fragment">E aumentar o seu mapa de respostas para que o usuário seja “melhor” respondido.</li>
+</ul>
 </div>
 </section>
-<section id="section-72" class="slide level2">
+<section id="section-86" class="slide level2">
 <h2></h2>
-<p>Nós chamamos essas palavras-chave de <span class="alert">modificadores de acesso</span>.</p>
+<p>Para isso, vamos criar uma classe <code>ContadorDePalavras</code>.</p>
 <ul>
-<li class="fragment">elas definem a visibilidade de atributos, construtores e métodos.</li>
+<li class="fragment">A classe vai ter um <code>HashMap</code> que associa da palavra a um contador inteiro.</li>
+<li class="fragment">E um método que recebe o <code>HashSet</code> da entrada do usuário e atualiza a contagem das palavras.</li>
 </ul>
 <div class="fragment">
-<p>Se um método, por exemplo, é <strong>público</strong>:</p>
+<p>Vamos usar o método <code>getOrDefault</code> da classe <code>HashMap</code>.</p>
 <ul>
-<li class="fragment">Ele pode ser chamado de dentro da mesma classe <strong>e também</strong> a partir de outra classe.</li>
-</ul>
-</div>
-<div class="fragment">
-<p>Já métodos <strong>privados</strong>, por outro lado,</p>
-<ul>
-<li class="fragment"><strong>Só</strong> podem ser chamados de <strong>dentro</strong> da mesma classe onde foram declarados.</li>
-<li class="fragment">Eles não são visíveis para as outras classes.</li>
+<li class="fragment">Esse método é parecido com o <code>get</code>, mas quando a chave não está presente no <code>HashMap</code></li>
+<li class="fragment">em vez de retornar <code>null</code>, ele retorna o valor padrão passado como segundo parâmetro do método.</li>
 </ul>
 </div>
 </section>
-<section id="section-73" class="slide level2">
+<section id="section-87" class="slide level2">
 <h2></h2>
-<p>Como agora já conhecemos os conceitos de <strong>interface</strong> e <strong>implementação</strong> fica mais fácil entendermos o objetivo dessas palavras-chave.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb26-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ContadorDePalavras</span>
+<span id="cb26-2"><a aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb26-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">HashMap</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">Integer</span><span class="op">&gt;</span> contagem<span class="op">;</span></span>
+<span id="cb26-4"><a aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb26-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">ContadorDePalavras</span><span class="op">()</span></span>
+<span id="cb26-6"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb26-7"><a aria-hidden="true" tabindex="-1"></a>    contagem <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
+<span id="cb26-8"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb26-9"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-10"><a aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">contabilizarPalavras</span><span class="op">(</span><span class="bu">HashSet</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> entrada<span class="op">)</span></span>
+<span id="cb26-11"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span></span>
+<span id="cb26-12"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span><span class="op">(</span><span class="bu">String</span> palavra <span class="op">:</span> entrada<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb26-13"><a aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> contador <span class="op">=</span> contagem<span class="op">.</span><span class="fu">getOrDefault</span><span class="op">(</span>palavra<span class="op">,</span> <span class="dv">0</span><span class="op">);</span></span>
+<span id="cb26-14"><a aria-hidden="true" tabindex="-1"></a>        contagem<span class="op">.</span><span class="fu">put</span><span class="op">(</span>palavra<span class="op">,</span> contador<span class="op">+</span><span class="dv">1</span><span class="op">);</span></span>
+<span id="cb26-15"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb26-16"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb26-17"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="section-88" class="slide level2">
+<h2></h2>
+<p>Repare que o trecho que usa o método <code>getOrDefault</code>,</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb27-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> contador <span class="op">=</span> contagem<span class="op">.</span><span class="fu">getOrDefault</span><span class="op">(</span>palavra<span class="op">,</span> <span class="dv">0</span><span class="op">);</span></span>
+<span id="cb27-2"><a aria-hidden="true" tabindex="-1"></a>  contagem<span class="op">.</span><span class="fu">put</span><span class="op">(</span>palavra<span class="op">,</span> contador<span class="op">+</span><span class="dv">1</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<p>Lembre-se que a <strong>interface de uma classe</strong> é o conjunto de detalhes que um programador que vai usar a classe precisa ver.</p>
-<ul>
-<li class="fragment">Ela fornece informações sobre como usar a classe.
-<ul>
-<li class="fragment">E inclui assinaturas e comentários de construtores e métodos.</li>
-</ul></li>
-<li class="fragment">Nós também dizemos que a <strong>interface</strong> é a <span class="alert">parte pública</span> da classe.</li>
-<li class="fragment">Seu objetivo é definir <span class="alert">o que</span> <strong>a classe faz</strong>.</li>
-</ul>
+<p>faz o mesmo que o trecho a seguir, mas de maneira mais prática.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb28-1"><a aria-hidden="true" tabindex="-1"></a>  <span class="bu">Integer</span> contador <span class="op">=</span> contagem<span class="op">.</span><span class="fu">get</span><span class="op">(</span>palavra<span class="op">);</span></span>
+<span id="cb28-2"><a aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(</span>contador <span class="op">==</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb28-3"><a aria-hidden="true" tabindex="-1"></a>    contagem<span class="op">.</span><span class="fu">put</span><span class="op">(</span>palavra<span class="op">,</span> <span class="dv">1</span><span class="op">);</span></span>
+<span id="cb28-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb28-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb28-6"><a aria-hidden="true" tabindex="-1"></a>    contagem<span class="op">.</span><span class="fu">put</span><span class="op">(</span>palavra<span class="op">,</span> contador<span class="op">+</span><span class="dv">1</span><span class="op">);</span></span>
+<span id="cb28-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="section-74" class="slide level2">
+<section id="section-89" class="slide level2">
 <h2></h2>
-<p>Já a <strong>implementação</strong> é a parte da classe que define precisamente <span class="alert">como</span> <strong>a classe funciona</strong>.</p>
-<ul>
-<li class="fragment">Os corpos dos métodos, contendo comandos Java, e muitos atributos são parte da implementação.</li>
-<li class="fragment">Nós também podemos dizer que ela é a <span class="alert">parte privada</span> da classe.</li>
-<li class="fragment">Quem usa a classe não precisa conhecer a implementação.</li>
-<li class="fragment">Inclusive, há boas razões para que o programador não possa fazer uso desse conhecimento (como veremos mais adiante).</li>
-</ul>
-</section>
-<section id="section-75" class="slide level2">
-<h2></h2>
-<p>Portanto, podemos dizer que:</p>
-<ul>
-<li class="fragment">A palavra-chave <code>public</code> declara que um elemento de uma classe (atributo ou método) faz parte de sua <strong>interface</strong>.
-<ul>
-<li class="fragment">Ou seja, é visível publicamente.</li>
-</ul></li>
-<li class="fragment">Já a palavra-chave <code>private</code> declara que um elemento é parte da implementação.
-<ul>
-<li class="fragment">Ou seja, está escondida de acesso externo.</li>
-</ul></li>
-</ul>
-<div class="fragment">
-<div title="Conceito">
-<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div title="Exercício 29">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Conceito</strong></p>
+<p><strong>Exercício 29</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Modificadores de acesso</strong> definem a visibilidade de um atributo, construtor ou método. Elementos públicos são acessíveis de dentro da classe e a partir de outras classes; já elementos privados são acessíveis somente de dentro da mesma classe.</p>
+<p>Altere o sistema de suporte para incluir a classe <code>ContadorDePalavras</code>.</p>
+<p>A ideia é contabilizar as palavras das interações com o usuário que levaram a uma resposta padrão.</p>
 </div>
 </div>
-</div>
-</div>
-</div>
-</section>
-<section id="encapsulamento-1" class="slide level2">
-<h2>Encapsulamento</h2>
-<p>Em muitas linguagens OO, a implementação de uma classe (seus detalhes internos) é ocultada de outras classes.</p>
-<div class="fragment">
-<p>Isso tem a ver com duas questões.</p>
-<ol type="1">
-<li class="fragment">Ao <strong>usar uma classe</strong> um programador <strong>não deveria <span class="alert">precisar conhecer</span></strong> seus detalhes internos.</li>
-</ol>
-<ul>
-<li class="fragment">Isso tem a ver com a <strong>modularização</strong> e <strong>abstração</strong> que já discutimos antes.</li>
-<li class="fragment">Se fosse necessário saber os detalhes de todas as classes, seria impossível desenvolver grandes sistemas.</li>
-</ul>
-<ol start="2" type="1">
-<li class="fragment">Outra questão é que, ao <strong>usar uma classe</strong>, um programador <strong>não deveria <span class="alert">ter permissão de conhecer</span></strong> seus detalhes internos.</li>
-</ol>
-<ul>
-<li class="fragment">Apesar de também ter a ver com modularização, a ideia aqui é que a linguagem não deveria permitir o acesso à parte privada de uma classe a partir de comandos em outras classes.</li>
-<li class="fragment">Isso garante que uma classe não dependa de <strong>como</strong> exatamente uma outra classe está implementada.</li>
-</ul>
-</div>
-</section>
-<section id="section-76" class="slide level2">
-<h2></h2>
-<p>Esta última questão é muito importante para a manutenção de sistemas.</p>
-<ul>
-<li class="fragment">Quando precisamos incluir novas funcionalidades ou corrigir bugs é muito comum precisarmos alterar ou aumentar uma classe.</li>
-<li class="fragment">O ideal é que a alteração de uma classe não provoque alterações em outras classes.
-<ul>
-<li class="fragment">Isso tem a ver com o que chamamos de <strong>acoplamento</strong>.</li>
-<li class="fragment">Se a alteração em uma classe não provoca alterações em outras classes, temos um baixo acoplamento.</li>
-<li class="fragment">E isso é muito bom, porque torna o trabalho de manutenção muito mais fácil.</li>
-<li class="fragment">Já que em vez de entender e alterar várias classes, o programador precisa trabalhar em apenas em uma.</li>
-</ul></li>
-</ul>
-</section>
-<section id="section-77" class="slide level2">
-<h2></h2>
-<p>Suponha, por exemplo, que a equipe que mantém a linguagem Java faça uma melhoria na implementação da classe <code>ArrayList</code>.</p>
-<ul>
-<li class="fragment">O ideal é que essa melhoria não afete os nossos códigos que usam a classe <code>ArrayList</code>.</li>
-<li class="fragment">Repare que isso só é possível porque nosso código não faz referência à implementação da classe <code>ArrayList</code>.</li>
-</ul>
-<div class="fragment">
-<p>Para ficar mais claro, quando uma classe A utiliza um objeto de uma classe B.</p>
-<ul>
-<li class="fragment">Não é bem o programador que não pode conhecer a parte interna (implementação) da classe B.</li>
-<li class="fragment">Na verdade é a classe A que não pode conhecer (ou seja, depender) dos detalhes internos da classe B.</li>
-<li class="fragment">Repare que pode acontecer do mesmo programador implementar tanto a classe A quanto a classe B.
-<ul>
-<li class="fragment">Mas de toda forma, as classes ainda deveriam ter <strong>baixo acoplamento</strong>.</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="section-78" class="slide level2">
-<h2></h2>
-<p>Esta questão de <strong>acoplamento</strong> é tão importante que vamos discuti-la, em detalhes, no Capítulo 7.</p>
-<ul>
-<li class="fragment">Por enquanto, o mais importante é entender que a palavra-chave <code>private</code> garante o <span class="alert"><em>princípio da ocultação de informações</em></span>
-<ul>
-<li class="fragment">ao impedir que outras classes acessem a parte privada da classe.</li>
-</ul></li>
-<li class="fragment">Isso garante o baixo acoplamento, tornando a aplicação mais modular e facilitando a manutenção.</li>
-</ul>
-<div class="fragment">
-<p>Nós também podemos chamar o <em>princípio da ocultação de informações</em> de <span class="alert">encapsulamento</span>.</p>
-<ul>
-<li class="fragment">Esse <strong>conceito</strong> é <strong>fundamental na Programação Orientada a Objetos</strong>.</li>
-<li class="fragment">E talvez seja a única parte do livro que não gosto muito, pois acho que ele não dá a ênfase necessária a esse conceito.</li>
-</ul>
-</div>
-</section>
-<section id="section-79" class="slide level2">
-<h2></h2>
-<p>O termo <strong>encapsulamento</strong> vem da palavra <em>cápsula</em>, que é definida no dicionário como:</p>
-<p><img data-src="imagens/capsula_significado.png"></p>
-<div class="fragment">
-<p>A ideia é que a implementação da classe (seus detalhes internos) sejam encapsulados (protegidos).</p>
-<ul>
-<li class="fragment">E a classe exponha apenas sua interface.</li>
-</ul>
-</div>
-</section>
-<section id="section-80" class="slide level2">
-<h2></h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p>Um bom exemplo que ilustra o encapsulamento é um telefone fixo comum.</p>
-<ul>
-<li class="fragment">Você usa o telefone através de sua interface (os botões) e não precisa saber como é o funcionamento interno.</li>
-</ul>
-</div><div class="column" style="width:30%;">
-<p><img data-src="imagens/telefone_fixo.png"></p>
-</div></div>
-<div class="fragment">
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img data-src="imagens/caixa_eletronico_charge.png"></p>
-</div><div class="column" style="width:70%;">
-<p>A mesma analogia pode ser feita com um caixa eletrônico.</p>
-<ul>
-<li class="fragment">Você usa as opções que aparecem pra você (interface) mas não precisa saber como isso funciona internamente.</li>
-<li class="fragment">E você só tem acesso aos dados que a interface disponibiliza.</li>
-</ul>
-</div></div>
-</div>
-</section>
-<section id="métodos-privados" class="slide level2">
-<h2>Métodos privados</h2>
-<p>Muitos dos métodos que vimos até agora eram públicos.</p>
-<ul>
-<li class="fragment">Isso garante que eles podem ser chamados a partir de outras classes.</li>
-<li class="fragment">Mas <strong>podemos</strong> também <strong>ter métodos privados</strong>.
-<ul>
-<li class="fragment">Como os métodos <code>imprimirBoasVindas</code> e <code>imprimirDespedida</code> da classe <code>SistemaDeSuporte</code>.</li>
-</ul></li>
-</ul>
-<div class="fragment">
-<p>Nós declaramos um método como <strong>público</strong> para fornecer operações para quem usa a classe.</p>
-<ul>
-<li class="fragment">E declaramos como <strong>privado</strong> para dividir o código em trechos menores, facilitando o entendimento e a leitura.
-<ul>
-<li class="fragment">Veja que não faria sentido chamar o método <code>imprimirBoasVindas</code> de fora da classe <code>SistemaDeSuporte</code>.</li>
-<li class="fragment">Mas o código do método <code>iniciar</code> fica mais claro quando separamos sua tarefa em subtarefas.</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="métodos-privados-1" class="slide level2">
-<h2>Métodos privados</h2>
-<p>Nós também usamos métodos privados quando um trecho de código é usado em mais de um lugar na classe.</p>
-<ul>
-<li class="fragment">Pois, dessa forma, evitamos escrever o mesmo trecho de código mais de uma vez.</li>
-<li class="fragment">E, em vez disso, chamamos o método privado em mais de um lugar.</li>
-</ul>
-</section>
-<section id="atributos-privados" class="slide level2">
-<h2>Atributos privados!</h2>
-<p>A linguagem Java permite que atributos sejam declarados como privados ou públicos.</p>
-<ul>
-<li class="fragment">Mas você deve ter notado que nos exemplos <strong>sempre declaramos os atributos como privados</strong>.</li>
-<li class="fragment">Isso é fundamental para respeitar o conceito de <strong>encapsulamento</strong>.</li>
-</ul>
-<div class="fragment">
-<p>Declarar atributos públicos quebra o <em>princípio da ocultação das informações</em>.</p>
-<ul>
-<li class="fragment">Portanto, mesmo que a linguagem Java permita atributos públicos, isso é considerado um estilo ruim de programação.</li>
-<li class="fragment">Há linguagens que nem permitem a existência de atributos públicos.
-<ul>
-<li class="fragment">Enquanto outras não implementam completamente o conceito de encapsulamento, o que viola a teoria de POO.</li>
-<li class="fragment">Esse é o principal motivo para eu não adotar a linguagem Python na disciplina :)</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="atributos-privados-1" class="slide level2">
-<h2>Atributos privados!</h2>
-<p>Outro motivo para manter os atributos privados é permitir que a <strong>classe tenha</strong> um maior <strong>controle sobre o estado</strong> dos seus objetos.</p>
-<ul>
-<li class="fragment">Se o atributo é encapsulado e só é acessível através de métodos de acesso (obter/get) e modificadores (definir/set),</li>
-<li class="fragment">a classe pode garantir que o atributo nunca tenha um valor inválido ou inconsistente.</li>
-</ul>
-<div class="fragment">
-<p>Para deixar o conceito mais claro, suponha que uma classe <code>Circulo</code> tenha um atributo chamado <code>diametro</code>.</p>
-<ul>
-<li class="fragment">E, como o programador faltou às aulas de POO, ele definiu o atributo como público.</li>
-<li class="fragment">Com isso, qualquer classe consegue acessar e alterar o valor do diâmetro de um círculo.
-<ul>
-<li class="fragment">Fazendo, por exemplo:</li>
-</ul></li>
-</ul>
-</div>
-<div class="fragment">
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb23"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb23-1"><a aria-hidden="true" tabindex="-1"></a>Circulo circulo <span class="op">=</span> <span class="kw">new</span> <span class="fu">Circulo</span><span class="op">(</span><span class="dv">10</span><span class="op">);</span></span>
-<span id="cb23-2"><a aria-hidden="true" tabindex="-1"></a>circulo<span class="op">.</span><span class="fu">diametro</span> <span class="op">=</span> <span class="dv">30</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</section>
-<section id="atributos-privados-2" class="slide level2">
-<h2>Atributos privados!</h2>
-<p>Mas repare que isso abre brecha para a seguinte situação:</p>
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb24"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb24-1"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> d <span class="op">=</span> <span class="fu">calcularNovoDiametro</span><span class="op">();</span></span>
-<span id="cb24-2"><a aria-hidden="true" tabindex="-1"></a>circulo<span class="op">.</span><span class="fu">diametro</span> <span class="op">=</span> d<span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<p>O que aconteceria se, por algum erro, o método <code>calcularNovoDiametro</code> retornasse um valor negativo?</p>
-<ul>
-<li class="fragment">O círculo acabaria ficando com um diâmetro negativo, mas isso não faz sentido.</li>
-</ul>
-</div>
-<div class="fragment">
-<p>E como isso poderia ser corrigido?</p>
-</div>
-</section>
-<section id="atributos-privados-3" class="slide level2">
-<h2>Atributos privados!</h2>
-<p>Além, é claro, de corrigir o método de cálculo, seria uma boa ideia colocar um <code>if</code> antes de alterar o diâmetro:</p>
-<ul>
-<li class="fragment">Para garantir que o círculo nunca ficasse com valor negativo por algum outro erro.</li>
-</ul>
-<div class="fragment">
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb25"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb25-1"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> d <span class="op">=</span> <span class="fu">calcularNovoDiametro</span><span class="op">();</span></span>
-<span id="cb25-2"><a aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>d <span class="op">&gt;</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb25-3"><a aria-hidden="true" tabindex="-1"></a>    circulo<span class="op">.</span><span class="fu">diametro</span> <span class="op">=</span> d<span class="op">;</span></span>
-<span id="cb25-4"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Mas repare que podem existir diversos trechos de código no programa que alteram o valor do diâmetro.</p>
-<ul>
-<li class="fragment">E seria necessário colocar essa verificação em todos esses lugares.</li>
-<li class="fragment">Outro problema é que tudo isso está acontecendo sem o conhecimento da classe <code>Circulo</code>.
-<ul>
-<li class="fragment">Mas é ela quem deveria ser responsável por garantir que o estado dos seus objetos é sempre válido.</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="atributos-privados-4" class="slide level2">
-<h2>Atributos privados!</h2>
-<p>Vamos comparar com uma versão bem implementada da classe <code>Circulo</code>:</p>
-<ul>
-<li class="fragment">ela teria o atributo <code>diametro</code> privado;</li>
-<li class="fragment">e um método modificador para alterar o diâmetro.</li>
-</ul>
-<div class="fragment">
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb26"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb26-1"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Circulo <span class="op">{</span></span>
-<span id="cb26-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> diametro<span class="op">;</span></span>
-<span id="cb26-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">...</span></span>
-<span id="cb26-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">definirDiametro</span><span class="op">(</span><span class="dt">int</span> diametro<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb26-5"><a aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">diametro</span> <span class="op">=</span> diametro<span class="op">;</span></span>
-<span id="cb26-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb26-7"><a aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
-<p>Repare que, com isso, o diâmetro só pode ser alterado através da chamada do método <code>mudarDiametro</code>.</p>
-<ul>
-<li class="fragment">E agora fica mais fácil evitar o problema anterior.</li>
-<li class="fragment">Pois basta colocarmos a verificação (<code>if</code>) no método <code>definirDiametro</code>.</li>
-<li class="fragment">Não é necessário tratar todos os lugares que chamam o método <code>mudarDiametro</code>.</li>
-</ul>
-</div>
-</section>
-<section id="section-81" class="slide level2">
-<h2></h2>
-<p>Em resumo:</p>
-<ul>
-<li class="fragment"><span class="alert">Atributos deveriam ser sempre privados!</span></li>
-</ul>
-<div class="fragment">
-<div title="Conceito">
-<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div title="Exercício 30">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Conceito</strong></p>
+<p><strong>Exercício 30</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Encapsulamento</strong> (ou <em>ocultamento de informações</em>) é um princípio que define que os detalhes internos da implementação de uma classe deveriam ser ocultados das outras classes. Isso permite uma melhor modularização de uma aplicação.</p>
+<p>Adicione um método à classe <code>ContadorDePalavras</code> para exibir no terminal a contagem de uso de cada palavra. Chame o método antes da mensagem de despedida ser exibida.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício 31">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 31</strong></p>
+</div>
+<div class="callout-content">
+<p>Pesquise para que serve o método <code>putIfAbasent</code> da classe <code>HashMap</code>.</p>
 </div>
 </div>
 </div>

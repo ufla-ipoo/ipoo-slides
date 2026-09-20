@@ -3,96 +3,9 @@ title: IPOO - Cap. 5 Comportamento Mais Sofisticado
 subtitle: Aula 5.2 - Teórica
 ---
 
-# Usando um mapa no sistema de suporte {background-color="#40666e"}
-
-## {.smaller}
-
-Na aula passada você fez um exercício para que o sistema de suporte desse respostas que tivessem relação com a reclamação do usuário.
-
-```{.java code-line-numbers="false"}
-    if (entrada.contains("lento")) {
-        return "Acredito que isso tem a ver com o seu hardware. " +
-               "Atualizar seu processador deve resolver todos os " +
-               "problemas de desempenho. Você tem algum problema " + 
-               "com nosso software?"
-    }
-    else if (entrada.contains("bug")) {
-        ...
-``` 
-
-. . .
-
-Mas tratar isso usando blocos `if\else if` não é a melhor forma implementar.
-
-- Isso porque a cada nova palavra-chave tratada, teríamos que alterar o código e recompilar o sistema.
-
-
-
-
-# Conjuntos (`sets`) {background-color="#40666e"}
-
-## {.smaller}
-
-A biblioteca de classes do Java possui diferentes tipos de [conjuntos](.alert) implementados em diferentes classes.
-
-- Uma delas é a classe `HashSet`.
-
-. . .
-
-
-::: {.callout-note title="Exercício" icon=false}
-Busque na documentação do Java, ou em outras fontes, quais são as similaridades e as diferenças enre
-um `HashSet` e um `ArrayList`.
-
-Tente entender porque `ArrayList` é um caso especial de `List` e `HashSet` é um caso especial de `Set`.
-:::
-
-## {.smaller}
-
-A declaração de um `HashSet`, a criação do objeto e a adição de elementos é feita da mesma forma que um `ArrayList`.
-
-::: {.halfincfontsize}
-```{.java code-line-numbers="false"}
-    import java.util.HashSet;
-    . . .
-    HashSet<String> conjunto = new HashSet<>();
-    conjunto.add("um");
-    conjunto.add("dois");
-    conjunto.add("três");
-```
-:::
-
-. . . 
-
-Para percorrer um `HashSet` podemos usar um for-each, igualzinho ao que usamos para `ArrayList`.
-
-::: {.halfincfontsize}
-```{.java code-line-numbers="false"}
-    for(String elemento : conjunto) {
-        // faz alguma coisa com o elemento.
-    }
-```
-:::
-
-## {.smaller}
-
-Repare, portanto, que **usar diferentes coleções** em Java **é** sempre **muito parecido**.
-
-- Se você entender como usar uma delas, você conseguirá usar as outras com facilidade.
-
-. . .
-
-As **diferenças** entre as coleções **estão nos** seus **comportamentos**.
-
-- Uma lista, por exemplo, mantém a ordem dos elementos, permite acesso aos elementos por posição, e permite elementos repetidos.
-- Já um conjunto não mantém a ordem dos elementos, e garante que não existem elementos repetidos.
-  - Portanto, os elementos podem ser percorridos no for-each em ordem diferente da que eles foram inseridos.
-  - E inserir um mesmo elemento uma segunda vez, simplesmente não tem nenhum efeito.
-
-
 # Escrevendo documentação de classes {background-color="#40666e"}
 
-## {.smaller}
+##
 
 Quando estamos trabalhando em nossos projetos, 
 
@@ -106,23 +19,23 @@ Se você não fornecer documentação suficiente, pode ser difícil para outro p
 
 - Muitas vezes esse outro programador pode ser você mesmo :)
 
-. . .
+##
 
 Sem documentação, precisamos ler o código da classe para tentar entender como ela funciona.
 
 - Isso pode funcionar em um projeto pequeno de estudante.
 - Mas cria problemas em projetos do mundo real.
 
-## {.smaller}
+. . .
 
 É muito comum que sistemas comerciais tenham centenas de milhares de linhas de código.
 
 - Imagine que você tivesse que ler todas essas linhas para entender como o código funciona.
 - Seria impossível!
 
-. . . 
+## 
 
-Nós conseguimos usar as classes da biblioteca Java, como `HashSet` e `Random`, olhando apenas a documentação delas.
+É possível usar as classes da biblioteca Java, como `HashSet` e `Random`, olhando apenas a documentação delas.
 
 - Nós nunca precisamos olhar o código-fonte destas classes.
 
@@ -132,22 +45,25 @@ Isso funciona porque as classes estão suficientemente bem documentadas.
 
 - Seria muito mais difícil usar essas classes, se precisássemos ler e entender o código-fonte delas primeiro.
 
-## {.smaller}
+##
 
 Em uma equipe de desenvolvimento de software, a implementação das classes é geralmente dividida entre vários programadores.
 
 - Um programador poderia implementar a classe `SistemaDeSuporte`, por exemplo, e outro a classe `LeitorDeEntrada`.
 - Portanto, você pode precisar implementar uma classe enquanto chama métodos de outras classes.
 
-. . .
+##
 
 Assim, o mesmo argumento usado para as classes da biblioteca Java vale para as classes que você escreve.
 
 - Se podemos usar as classes sem ter que ler e entender toda a implementação, nossa tarefa fica mais fácil.
 - Nós precisamos apenas da interface das classes e não da implementação.
-- Portanto, precisamos escrever boa documentação de classes também para as nossas próprias classes.
 
-## {.smaller}
+. . .
+
+Portanto, precisamos escrever boa documentação de classes também para as nossas próprias classes.
+
+##
 
 ::: {.callout-tip title="Conceito" icon=false}
 A **documentação** de uma classe deve ser detalhada o suficiente para que outros programadores
@@ -160,7 +76,7 @@ O Java tem uma ferramenta chamada [javadoc](.alert) que gera documentação a pa
 
 - Toda a documentação oficial das classes da biblioteca Java é gerada com o javadoc.
 
-. . .
+##
 
 O BlueJ usa o javadoc para gerar documentação das classes.
 
@@ -176,11 +92,9 @@ Experimente acessar a documentação da classe `SistemaDeSuporte` no BlueJ.
 
 . . .
 
-::: {.fontsize70}
 Os arquivos HTML gerados ficam em uma pasta `doc` dentro do projeto e podem ser abertos em qualquer navegador.
-:::
 
-## {.smaller}
+##
 
 A **documentação de uma classe** deveria incluir, no mínimo:
 
@@ -190,7 +104,7 @@ A **documentação de uma classe** deveria incluir, no mínimo:
 - O nome do(s) autor(es).
 - Documentação para cada construtor e para cada método.
 
-## {.smaller}
+##
 
 A **documentação de todo construtor e método** deve incluir, no mínimo:
 
@@ -201,7 +115,7 @@ A **documentação de todo construtor e método** deve incluir, no mínimo:
 - Uma descrição de cada parâmetro.
 - Uma descrição do valor retornado.
 
-. . .
+##
 
 Além disso, cada projeto deveria ter um comentário geral sobre o projeto.
 
@@ -209,14 +123,14 @@ Além disso, cada projeto deveria ter um comentário geral sobre o projeto.
 - No BlueJ podemos fazer esse comentário de projeto abrindo o arquivo que fica no 
 canto superior esquerdo do diagrama de classses. 
 
-## {.smaller}
+##
 
 Alguns elementos da documentação podem ser sempre extraídos do código-fonte.
 
 - Como os nomes e parâmetros dos métodos, por exemplo.
 - Já a descrição da classe e dos métodos demanda mais atenção já que pode ser facilmente esquecida, ou ficar incompleta.
 
-. . .
+##
 
 No Java, comentários `Javadoc` são escritos com um símbolo especial de comentário.
 
@@ -229,7 +143,7 @@ No Java, comentários `Javadoc` são escritos com um símbolo especial de coment
 ```
 :::
 
-## {.smaller}
+##
 
 O comentário deve ter `/**` no início e `*/` no final para ser reconhecido como um comentário `javadoc`.
 
@@ -241,7 +155,7 @@ O comentário deve ter `/**` no início e `*/` no final para ser reconhecido com
 Como exatamente o comentário deve ser formatado para gerar a documentação pode variar de acordo com as
 ferramentas de cada linguagem de programação.
 
-. . .
+##
 
 No caso do `javadoc` várias palavras-chave especiais estão disponíveis para formatar a documentação.
 
@@ -260,26 +174,375 @@ verifique como eles influenciam a formatação da documentação.
 Experimente fazer alterações e conferir o resultado na documentação gerada.
 :::
 
-::: {.callout-note title="Exercício [(entrega)]{.alert}" icon=false}
+. . .
+
+::: {.callout-note title="Exercício" icon=false}
 ::: {.nonincremental}
 Documente adequadamente as classes do projeto de suporte técnico e gere a documentação
 usando o BlueJ.
-
-Confira se a documentação gerada está completa antes de enviar o projeto.
 :::
 :::
 
 
-# Entregas dessa Aula {background-color="#40666e"}
+# Encapsulamento {background-color="#40666e"}
 
-## {.smaller}
+## Público vs. Privado
 
-::: {.nonincremental}
+. . .
 
-Para ter **presença** nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.
+Vocês já notaram que usamos a todo momento as palavras-chave `public` e `private` em nossos programas em Java, como mostrado no exemplo abaixo:
 
-::: {.callout-important title="Entregas no Campus Virtual"}
-Responda às duas tarefas no Campus Virtual enviando os seus projetos `contatos-hashmap` e `suporte-tecnico1` com as alterações dos exercícios solicitados ao longo dos slides.
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+    // declaração de atributos
+    private int numeroDeAssentos;
+    // métodos
+    public void definirIdade(int novaIdade) {
+      ...
+    }    
+    private int calcularMedia() {
+      ...
+    }
+```
 :::
 
+##
+
+Chegou a hora de entendermos para que essas palavras-chaves servem.
+
+. . .
+
+Nós chamamos essas palavras-chave de [modificadores de acesso]{.alert}.
+
+- elas definem a visibilidade de atributos, construtores e métodos.
+
+##
+
+Se um método, por exemplo, é **público**:
+
+- Ele pode ser chamado de dentro da mesma classe **e também** a partir de outra classe.
+
+. . .
+
+Já métodos **privados**, por outro lado,
+
+- **Só** podem ser chamados de **dentro** da mesma classe onde foram declarados.
+- Eles não são visíveis para as outras classes.
+
+##
+
+Como agora já conhecemos os conceitos de **interface** e **implementação** fica mais fácil entendermos o objetivo dessas palavras-chave.
+
+. . .
+
+Lembre-se que a **interface de uma classe** é o conjunto de detalhes que um programador que vai usar a classe precisa ver.
+
+- Ela fornece informações sobre como usar a classe.
+  - E inclui assinaturas e comentários de construtores e métodos.
+- Nós também dizemos que a **interface** é a [parte pública]{.alert} da classe.
+- Seu objetivo é definir [o que]{.alert} **a classe faz**.
+
+##
+
+Já a **implementação** é a parte da classe que define precisamente [como]{.alert} **a classe funciona**.
+
+- Os corpos dos métodos, contendo comandos Java, e muitos atributos são parte da implementação.
+- Nós também podemos dizer que ela é a [parte privada]{.alert} da classe.
+- Quem usa a classe não precisa conhecer a implementação.
+- Inclusive, há boas razões para que o programador não possa fazer uso desse conhecimento (como veremos mais adiante).
+
+##
+
+Portanto, podemos dizer que:
+
+- A palavra-chave `public` declara que um elemento de uma classe (atributo ou método) faz parte de sua **interface**.
+  - Ou seja, é visível publicamente.
+- Já a palavra-chave `private` declara que um elemento é parte da implementação.
+  - Ou seja, está escondida de acesso externo.
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+**Modificadores de acesso** definem a visibilidade de um atributo, construtor ou método.
+Elementos públicos são acessíveis de dentro da classe e a partir de outras classes;
+já elementos privados são acessíveis somente de dentro da mesma classe.
+:::
+
+## Encapsulamento
+
+Em muitas linguagens OO, a implementação de uma classe (seus detalhes internos) é ocultada de outras classes.
+
+. . .
+
+Isso tem a ver com duas questões.
+
+1. Ao **usar uma classe** um programador **não deveria [precisar conhecer]{.alert}** seus detalhes internos.
+  - Isso tem a ver com a **modularização** e **abstração** que já discutimos antes.
+  - Se fosse necessário saber os detalhes de todas as classes, seria impossível desenvolver grandes sistemas.
+
+##
+
+2. Outra questão é que, ao **usar uma classe**, um programador **não deveria [ter permissão de conhecer]{.alert}** seus detalhes internos.
+
+- Apesar de também ter a ver com modularização, a ideia aqui é que a linguagem não deveria permitir o acesso à parte privada de uma classe a partir de comandos em outras classes.
+- Isso garante que uma classe não dependa de **como** exatamente uma outra classe está implementada.
+
+## {auto-animate=true}
+
+Esta última questão é muito importante para a manutenção de sistemas.
+
+- Quando precisamos incluir novas funcionalidades ou corrigir bugs é muito comum precisarmos alterar uma classe.
+- O ideal é que a alteração de uma classe não provoque alterações em outras classes.
+  - Isso tem a ver com o que chamamos de **acoplamento**.
+
+## {auto-animate=true}
+
+Isso tem a ver com o que chamamos de **acoplamento**.
+
+- Se a alteração em uma classe não provoca alterações em outras classes, temos um baixo acoplamento.
+- E isso é muito bom, porque torna o trabalho de manutenção muito mais fácil.
+- Já que em vez de entender e alterar várias classes, o programador precisa trabalhar em apenas em uma.
+
+##
+
+Suponha, por exemplo, que a equipe que mantém a linguagem Java faça uma melhoria na implementação da classe `ArrayList`.
+
+- O ideal é que essa melhoria não afete os nossos códigos que usam a classe `ArrayList`.
+- Repare que isso só é possível porque nosso código não faz referência à implementação da classe `ArrayList`.
+
+##
+
+Para ficar mais claro, quando uma classe A utiliza um objeto de uma classe B.
+
+- Não é bem o programador que não pode conhecer a parte interna (implementação) da classe B.
+- Na verdade é a classe A que não pode conhecer (ou seja, depender) dos detalhes internos da classe B.
+- Repare que pode acontecer do mesmo programador implementar tanto a classe A quanto a classe B.
+  - Mas de toda forma, as classes ainda deveriam ter **baixo acoplamento**.
+
+
+##
+
+Esta questão de **acoplamento** é tão importante que vamos discuti-la, em detalhes, no Capítulo 7.
+
+- Por enquanto, o mais importante é entender que a palavra-chave `private` garante o [*princípio da ocultação de informações*]{.alert}
+  - ao impedir que outras classes acessem a parte privada da classe.
+- Isso garante o baixo acoplamento, tornando a aplicação mais modular e facilitando a manutenção.
+
+##
+
+Nós também podemos chamar o *princípio da ocultação de informações* de [encapsulamento]{.alert}.
+
+- Esse **conceito** é **fundamental na Programação Orientada a Objetos**.
+- E talvez seja a única parte do livro que não gosto muito, pois acho que ele não dá a ênfase necessária a esse conceito.
+
+##
+
+O termo **encapsulamento** vem da palavra *cápsula*, que é definida no dicionário como:
+
+![](imagens/capsula_significado.png)
+
+. . .
+
+A ideia é que a implementação da classe (seus detalhes internos) sejam encapsulados (protegidos).
+
+- E a classe exponha apenas sua interface.
+
+##
+
+:::: {.columns}
+
+::: {.column width="70%"}
+Um bom exemplo que ilustra o encapsulamento é um telefone fixo comum.
+
+- Você usa o telefone através de sua interface (os botões) e não precisa saber como é o funcionamento interno.
+:::
+
+::: {.column width="30%"}
+![](imagens/telefone_fixo.png)
+:::
+
+::::
+
+. . .
+
+:::: {.columns}
+
+::: {.column width="20%"}
+![](imagens/caixa_eletronico_charge.png)
+:::
+
+::: {.column width="80%"}
+A mesma analogia pode ser feita com um caixa eletrônico.
+
+- Você usa as opções que aparecem pra você (interface) mas não precisa saber como isso funciona internamente.
+- Você só vê o que a interface disponibiliza.
+:::
+
+::::
+
+
+## Métodos privados
+
+Muitos dos métodos que vimos até agora eram públicos.
+
+- Isso garante que eles podem ser chamados a partir de outras classes.
+- Mas **podemos** também **ter métodos privados**.
+  - Como os métodos `imprimirBoasVindas` e `imprimirDespedida` da classe `SistemaDeSuporte`.
+
+##
+
+Nós declaramos um método como **público** para fornecer operações para quem usa a classe.
+
+- E declaramos como **privado** para dividir o código em trechos menores, facilitando o entendimento e a leitura.
+  - Veja que não faria sentido chamar o método `imprimirBoasVindas` de fora da classe `SistemaDeSuporte`.
+  - Mas o código do método `iniciar` fica mais claro quando separamos sua tarefa em subtarefas.
+
+## Métodos privados
+
+Nós também usamos métodos privados quando um trecho de código é usado em mais de um lugar na classe.
+
+- Pois, dessa forma, evitamos escrever o mesmo trecho de código mais de uma vez.
+- E, em vez disso, chamamos o método privado em mais de um lugar.
+
+
+## Atributos sempre privados!
+
+A linguagem Java permite que atributos sejam declarados como privados ou públicos.
+
+- Mas você deve ter notado que nos exemplos **sempre declaramos os atributos como privados**.
+- Isso é fundamental para respeitar o conceito de **encapsulamento**.
+
+##
+
+Declarar atributos públicos quebra o *princípio da ocultação das informações*.
+
+- Portanto, mesmo que a linguagem Java permita atributos públicos, isso é considerado um estilo ruim de programação.
+- Há linguagens que nem permitem a existência de atributos públicos.
+  - Enquanto outras não implementam completamente o conceito de encapsulamento, o que viola a teoria de POO.
+  - Esse é o principal motivo para eu não adotar a linguagem Python na disciplina :)
+
+##
+
+Outro motivo para manter os atributos privados é permitir que a **classe tenha** um maior **controle sobre o estado** dos seus objetos.
+
+- Se o atributo é encapsulado e só é acessível através de métodos de acesso (obter/get) e modificadores (definir/set),
+- a classe pode garantir que o atributo nunca tenha um valor inválido ou inconsistente.
+
+##
+
+Para deixar o conceito mais claro, suponha que uma classe `Circulo` tenha um atributo chamado `diametro`.
+
+- E, como o programador faltou às aulas de POO, ele definiu o atributo como público.
+- Com isso, qualquer classe consegue acessar e alterar o valor do diâmetro de um círculo.
+  - Fazendo, por exemplo:
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+Circulo circulo = new Circulo(10);
+circulo.diametro = 30;
+```
+:::
+
+##
+
+Mas repare que isso abre brecha para a seguinte situação:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+int d = calcularNovoDiametro();
+circulo.diametro = d;
+```
+:::
+
+. . .
+
+O que aconteceria se, por algum erro, o método `calcularNovoDiametro` retornasse um valor negativo?
+
+- O círculo acabaria ficando com um diâmetro negativo, mas isso não faz sentido.
+
+. . .
+
+E como isso poderia ser corrigido?
+
+## {auto-animate=true}
+
+Além, é claro, de corrigir o método de cálculo, seria uma boa ideia colocar um `if` antes de alterar o diâmetro:
+
+- Para garantir que o círculo nunca ficasse com valor negativo por algum outro erro.
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+int d = calcularNovoDiametro();
+if (d > 0) {
+    circulo.diametro = d;
+}
+```
+:::
+
+. . .
+
+Mas repare que podem existir diversos trechos de código no programa que alteram o valor do diâmetro.
+
+## {auto-animate=true}
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+int d = calcularNovoDiametro();
+if (d > 0) {
+    circulo.diametro = d;
+}
+```
+:::
+
+Mas repare que podem existir diversos trechos de código no programa que alteram o valor do diâmetro.
+
+- E seria necessário colocar essa verificação em todos esses lugares.
+- Outro problema é que tudo isso está acontecendo sem o conhecimento da classe `Circulo`.
+  - Mas é ela quem deveria ser responsável por garantir que o estado dos seus objetos é sempre válido.
+
+## 
+
+Vamos comparar com uma versão bem implementada da classe `Circulo`:
+
+- ela teria o atributo `diametro` privado;
+- e um método modificador para alterar o diâmetro.
+
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public class Circulo {
+    private int diametro;
+    ...
+    public void definirDiametro(int diametro) {
+        this.diametro = diametro;
+    }
+}
+```
+:::
+
+##
+
+Repare que, com isso, o diâmetro só pode ser alterado através da chamada do método `mudarDiametro`.
+
+- E agora fica mais fácil evitar o problema anterior.
+- Pois basta colocarmos a verificação (`if`) no método `definirDiametro`.
+- Não é necessário tratar todos os lugares que chamam o método `mudarDiametro`.
+
+## 
+
+Em resumo:
+
+- [Atributos deveriam ser sempre privados!]{.alert}
+
+. . .
+
+::: {.callout-tip title="Conceito" icon=false}
+**Encapsulamento** (ou *ocultamento de informações*) é um princípio que define que os detalhes internos da implementação de uma classe deveriam ser ocultados das outras classes.
+Isso permite uma melhor modularização de uma aplicação.
 :::

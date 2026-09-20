@@ -564,7 +564,7 @@
     "href": "cap5-1.html#section-43",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nosso sistema ficou mais dinâmico, mas ainda não é nada convincente,\n\npois as respostas são independentes do que o usuário escreve.\n\n\nNós podemos melhorar um pouco isso, respondendo algo pelo menos próximo do que o usuário perguntou.\n\nA ideia é identificar alguma palavra-chave na pergunta feita pelo usuário.\ne fornecer uma resposta que tenha algo a ver com essa palavra-chave."
+    "text": "Nosso sistema ficou mais dinâmico, mas ainda não é nada convincente,\n\npois as respostas são independentes do que o usuário escreve.\n\n\nNós podemos melhorar um pouco isso, tentando responder algo pelo menos próximo do que o usuário perguntou.\n\nA ideia é identificar alguma palavra-chave na pergunta feita pelo usuário.\ne fornecer uma resposta que tenha algo a ver com essa palavra-chave."
   },
   {
     "objectID": "cap5-1.html#encapsulamento-1",
@@ -578,35 +578,35 @@
     "href": "cap5-1.html#section-44",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Por exemplo, suponha que na pergunta do usuário apareça a palavra \"lento\".\n\nA resposta poderia ser então algo como:\n\n\n\nAcredito que isso tem a ver com o seu hardware.\nAtualizar seu processador deve resolver todos os problemas de desempenho. \nVocê tem algum problema com nosso software?\n\n\n\nJá se na pergunta do usuário aparecer a palava \"bug\", a resposta poderia ser:\n\n\n\nBem, você sabe, todo software tem alguns bugs.\nMas nossos engenheiros de software estão trabalhando muito para corrigi-los.\nVocê pode descrever o problema com mais detalhes?"
+    "text": "Por exemplo, suponha que na pergunta do usuário apareça a palavra \"lento\".\n\nA resposta poderia ser então algo como:\n\n\n\nAcredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?"
   },
   {
     "objectID": "cap5-1.html#section-45",
     "href": "cap5-1.html#section-45",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Mas como podemos implementar isso?\n\nBasicamente, nós precisamos associar uma resposta a uma palvra-chave.\n\n\nPoderíamos tratar isso com uma sequência de if-else if.\n\nMas, aproveitaremos a oportunidade para conhecer um novo tipo de coleção: mapas."
+    "text": "Já se na pergunta do usuário aparecer a palava \"bug\", a resposta poderia ser:\n\n\nBem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?"
   },
   {
     "objectID": "cap5-1.html#section-46",
     "href": "cap5-1.html#section-46",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Um Mapa é uma coleção de pares de objetos chave-valor.\n\nAssim como um ArrayList, um Mapa pode guardar uma quantidade flexível de entradas.\nMas uma diferença importante é que em um Mapa, uma entrada não é um objeto, e sim um par de objetos.\n\nEste par é formado por um objeto chave e um objeto valor.\n\n\n\nEnquanto com ArrayList buscamos objetos pela sua posição,\n\ncom um Mapa, usamos o objeto chave para buscar o objeto valor associado a ele."
+    "text": "Mas como podemos implementar isso?\n\nBasicamente, nós precisamos associar uma resposta a uma palvra-chave.\n\n\nPoderíamos tratar isso com uma sequência de if-else if.\n\nMas, aproveitaremos a oportunidade para conhecer um novo tipo de coleção: mapas."
   },
   {
     "objectID": "cap5-1.html#section-47",
     "href": "cap5-1.html#section-47",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Você consegue pensar em um exemplo de Mapa, ou seja, de coleção de dados organizados na forma de pares chave/valor?\n\nUm exemplo bem comum de um Mapa é a lista de contatos de um celular.\nA lista de contatos tem entradas, e cada entrada é um par: um nome e um número de telefone.\n\n\nUsamos a lista de contatos procurando por um nome e, ao encontrá-lo, obtemos o número de telefone associado a ele.\n\nNós não procuramos os contatos por um índice ou posição.\nPortanto, nós buscamos um valor (o número de telefone), a partir de uma chave (o nome)."
+    "text": "Um Mapa é uma coleção de pares de objetos chave-valor.\n\nAssim como um ArrayList, um Mapa pode guardar uma quantidade flexível de entradas.\nMas uma diferença importante é que em um Mapa, uma entrada não é um objeto, e sim um par de objetos.\n\nEste par é formado por um objeto chave e um objeto valor.\n\n\n\nEnquanto com ArrayList buscamos objetos pela sua posição,\n\ncom um Mapa, usamos o objeto chave para buscar o objeto valor associado a ele."
   },
   {
     "objectID": "cap5-1.html#section-48",
     "href": "cap5-1.html#section-48",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Na lista de contatos de um celular poderíamos ter uma coleção como a seguinte:\n\n\n\nNome\nNúmero\n\n\n\n\nTião\n(35) 9999 1111\n\n\nMaria\n(35) 8888 1234\n\n\nJoaquim\n(31) 9876 5432\n\n\n\n\nNeste exemplo, a primeira entrada tem a chave \"Tião\" e o valor \"(35) 9999 1111\".\n\nPoderíamos buscar um número a partir da chave \"Maria\".\n\nE a resposta a esta busca seria \"(35) 8888 1234\"."
+    "text": "Você consegue pensar em um exemplo de Mapa, ou seja, de coleção de dados organizados na forma de pares chave/valor?\n\nUm exemplo bem comum de um Mapa é a lista de contatos de um celular.\nA lista de contatos tem entradas, e cada entrada é um par: um nome e um número de telefone.\n\n\nUsamos a lista de contatos procurando por um nome e, ao encontrá-lo, obtemos o número de telefone associado a ele.\n\nNós não procuramos os contatos por um índice ou posição.\nPortanto, nós buscamos um valor (o número de telefone), a partir de uma chave (o nome)."
   },
   {
     "objectID": "cap5-1.html#métodos-privados",
@@ -662,14 +662,14 @@
     "href": "cap5-1.html#section-49",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Você consegue pensar em outros exemplos de coleções na forma de Mapa que usamos no dia a dia?\n\nUm dicionário:\n\nBuscamos um significado (valor) a partir de uma palavra (chave).\n\n\n\nSiglas e nomes de estados:\n\nPodemos buscar o nome de um estado (valor) a partir de sua sigla (chave)."
+    "text": "Na lista de contatos de um celular poderíamos ter uma coleção como a seguinte:\n\n\n\nNome\nNúmero\n\n\n\n\nTião\n(35) 9999 1111\n\n\nMaria\n(35) 8888 1234\n\n\nJoaquim\n(31) 9876 5432\n\n\n\n\nNeste exemplo, a primeira entrada tem a chave \"Tião\" e o valor \"(35) 9999 1111\".\n\nPoderíamos buscar um número a partir da chave \"Maria\".\n\nE a resposta a esta busca seria \"(35) 8888 1234\"."
   },
   {
     "objectID": "cap5-1.html#section-50",
     "href": "cap5-1.html#section-50",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Uma coleção de alunos:\n\nPodemos buscar um objeto aluno (valor) a partir da sua matrícula (chave).\n\n\n\n\n\n\nConceito\n\n\nUm mapa é uma coleção que guarda pares chave/valor como entradas. Valores podem ser buscados forncendo-se a chave correspondente."
+    "text": "Você consegue pensar em outros exemplos de coleções na forma de Mapa que usamos no dia a dia?\n\nUm dicionário:\n\nBuscamos um significado (valor) a partir de uma palavra (chave).\n\n\n\nSiglas e nomes de estados:\n\nPodemos buscar o nome de um estado (valor) a partir de sua sigla (chave)."
   },
   {
     "objectID": "cap4-1.html#section",
@@ -3595,259 +3595,259 @@
     "href": "cap5-2.html#section",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Na aula teórica anterior nós melhoramos as respostas do sistema de suporte acrescentando uma sequência de if\\else if no método gerarResposta.\n\nfazendo com que a resposta dada tivesse relação com a pergunta do usuário.\nE isso foi feito verificando-se palavras-chave como: lento, bug, etc.\n\n\nMas repare que essa forma de implementação tem uma desvantagem importante:\n\nSe quisermos evoluir o sistema acrescentando novas respostas (para novas palavras-chave), teríamos que modificar o método gerarResposta e recompilar o sistema.\nO ideal era que essas informações viessem de um arquivo e pudéssemos utilizá-las sem precisar modificar o código e recompilar o sistema."
+    "text": "Quando estamos trabalhando em nossos projetos,\n\né importante escrevermos a documentação de nossas classes, à medida que desenvolvemos o código.\nMuitas vezes programadores não levam a sério a documentação, o que pode levar a sérios problemas.\n\n\nSe você não fornecer documentação suficiente, pode ser difícil para outro programador entender suas classes.\n\nMuitas vezes esse outro programador pode ser você mesmo :)"
   },
   {
     "objectID": "cap5-2.html#section-1",
     "href": "cap5-2.html#section-1",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Supondo que tivéssemos uma forma de ler os dados de arquivo, nós poderíamos tratar essas informações utilizando a classe HashMap.\n\nNesta aula vamos conhecer os conceitos que envolvem essa classe.\nE como ela pode ser bem útil em nossos sistemas.\n\n\nMas antes disso, vamos entender um pouquinho mais sobre a palavra-chave import."
+    "text": "Sem documentação, precisamos ler o código da classe para tentar entender como ela funciona.\n\nIsso pode funcionar em um projeto pequeno de estudante.\nMas cria problemas em projetos do mundo real.\n\n\nÉ muito comum que sistemas comerciais tenham centenas de milhares de linhas de código.\n\nImagine que você tivesse que ler todas essas linhas para entender como o código funciona.\nSeria impossível!"
   },
   {
     "objectID": "cap5-2.html#section-2",
     "href": "cap5-2.html#section-2",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nos exercícios da aula teórica anterior, você provavelmente usou as linhas de código abaixo:\n\nimport java.util.ArrayList;\nimport java.util.Random;\n\n\nNós já usamos import antes, mas vamos agora entender um pouco mais sobre ele."
+    "text": "É possível usar as classes da biblioteca Java, como HashSet e Random, olhando apenas a documentação delas.\n\nNós nunca precisamos olhar o código-fonte destas classes.\n\n\nIsso funciona porque as classes estão suficientemente bem documentadas.\n\nSeria muito mais difícil usar essas classes, se precisássemos ler e entender o código-fonte delas primeiro."
   },
   {
     "objectID": "cap5-2.html#section-3",
     "href": "cap5-2.html#section-3",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "As classes da biblioteca de classes do Java não ficam disponíveis automaticamente, como as outras classes do projeto.\n\nPara usá-las precisamos informar isso para o compilador.\nEsse processo é chamado de importação de classe.\n\nE é feito usando a palavra-chave import.\n\n\n\nO comando import tem o seguinte formato:\n\nimport nome_qualificado_da_classe;"
+    "text": "Em uma equipe de desenvolvimento de software, a implementação das classes é geralmente dividida entre vários programadores.\n\nUm programador poderia implementar a classe SistemaDeSuporte, por exemplo, e outro a classe LeitorDeEntrada.\nPortanto, você pode precisar implementar uma classe enquanto chama métodos de outras classes."
   },
   {
     "objectID": "cap5-2.html#section-4",
     "href": "cap5-2.html#section-4",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Como a biblioteca de classes do Java possui milhares de classes,\n\né necessário ter alguma forma de organização que facilite a utilização delas.\n\n\nJava usa pacotes para organizar as classes em grupos.\n\nE os pacotes podem ser aninhados (ou seja, os pacotes podem conter outros pacotes)."
+    "text": "Assim, o mesmo argumento usado para as classes da biblioteca Java vale para as classes que você escreve.\n\nSe podemos usar as classes sem ter que ler e entender toda a implementação, nossa tarefa fica mais fácil.\nNós precisamos apenas da interface das classes e não da implementação.\n\n\nPortanto, precisamos escrever boa documentação de classes também para as nossas próprias classes."
   },
   {
     "objectID": "cap5-2.html#section-5",
     "href": "cap5-2.html#section-5",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "As classes ArrayList e Random, por exemplo, fazem parte do pacote java.util.\n\nNós podemos ver essa informação na documentação das classes.\n\n\nO nome completo ou nome qualificado de uma classe é:\n\no nome do seu pacote, seguido de um ponto, seguido do nome da classe.\nAssim, o nome completo da classe ArrayList, por exemplo, é: java.util.ArrayList."
+    "text": "Conceito\n\n\nA documentação de uma classe deve ser detalhada o suficiente para que outros programadores consigam usar a classe sem precisar ler o código fonte.\n\n\n\n\n\nO Java tem uma ferramenta chamada javadoc que gera documentação a partir de comentários no código.\n\nToda a documentação oficial das classes da biblioteca Java é gerada com o javadoc."
   },
   {
     "objectID": "cap5-2.html#section-6",
     "href": "cap5-2.html#section-6",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Java também nos permite importar pacotes completos com o comando:\n\nimport nome_do_pacote.*;\n\n\nPortanto, o comando abaixo importaria todas as classes do pacote java.util:\n\nimport java.util.*;\n\n\n\nMas, apesar da linguagem permitir isso, é uma boa prática importar apenas as classes que você realmente vai usar.\n\nA vantagem é a legibilidade, pois fica claro quais classes são realmente necessárias."
+    "text": "O BlueJ usa o javadoc para gerar documentação das classes.\n\nCom o código de uma classe aberto no BlueJ, podemos acessar a caixa de opções no canto superior direito e mudar de código-fonte para documentação.\nOu podemos também usar o menu Ferramentas → Documentaçao do Projeto para gerar a documentação de todas as classes do projeto."
   },
   {
     "objectID": "cap5-2.html#section-7",
     "href": "cap5-2.html#section-7",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Há uma exceção a essas regras de pacotes:\n\nAlgumas classes são tão usadas que seriam importadas em quase todas as classes que implementamos.\nEssas classes pertecem ao pacote java.lang.\n\n\nEsse pacote é importado automaticamente pelo compilador em todas as classes.\n\nPortanto, não precisamos usar o comando import para esse pacote.\nA classe String é um exemplo de classe desse pacote."
+    "text": "Exercício\n\n\nExperimente acessar a documentação da classe SistemaDeSuporte no BlueJ.\n\n\n\n\n\nOs arquivos HTML gerados ficam em uma pasta doc dentro do projeto e podem ser abertos em qualquer navegador."
   },
   {
     "objectID": "cap5-2.html#section-8",
     "href": "cap5-2.html#section-8",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Um Mapa é uma coleção de pares de objetos chave-valor.\n\nAssim como um ArrayList, um Mapa pode guardar uma quantidade flexível de entradas.\nMas uma diferença importante é que em um Mapa, uma entrada não é um objeto, e sim um par de objetos.\n\nEste par é formado por um objeto chave e um objeto valor.\n\n\n\nEnquanto com ArrayList buscamos objetos pela sua posição,\n\ncom um Mapa, usamos o objeto chave para buscar o objeto valor associado a ele."
+    "text": "A documentação de uma classe deveria incluir, no mínimo:\n\nO nome da classe.\nUm comentário descrevendo o objetivo e as características da classe.\nUm número de versão.\nO nome do(s) autor(es).\nDocumentação para cada construtor e para cada método."
   },
   {
     "objectID": "cap5-2.html#section-9",
     "href": "cap5-2.html#section-9",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Você consegue pensar em um exemplo de Mapa, ou seja, de coleção de dados organizados na forma de pares chave/valor?\n\nUm exemplo bem comum de um Mapa é a lista de contatos de um celular.\nA lista de contatos tem entradas, e cada entrada é um par: um nome e um número de telefone.\n\n\nUsamos a lista de contatos procurando por um nome e, ao encontrá-lo, obtemos o número de telefone associado a ele.\n\nNós não procuramos os contatos por um índice ou posição.\nPortanto, nós buscamos um valor (o número de telefone), a partir de uma chave (o nome)"
+    "text": "A documentação de todo construtor e método deve incluir, no mínimo:\n\nO nome do método.\nO tipo de retorno.\nOs nomes e tipos dos parâmetros.\nUma descrição do objetivo e função do método.\nUma descrição de cada parâmetro.\nUma descrição do valor retornado."
   },
   {
     "objectID": "cap5-2.html#section-10",
     "href": "cap5-2.html#section-10",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Na lista de contatos de um celular poderíamos ter uma coleção como a seguinte:\n\n\n\nNome\nNúmero\n\n\n\n\nTião\n9999 1111\n\n\nMaria\n8888 1234\n\n\nJoaquim\n9876 5432\n\n\n\n\nNeste exemplo:\n\nA primeira entrada tem a chave \"Tião\" e o valor \"9999 1111\".\nEu poderia buscar um número a partir da chave \"Maria\".\n\nE a resposta a esta busca seria \"8888 1234\"."
+    "text": "Além disso, cada projeto deveria ter um comentário geral sobre o projeto.\n\nGeralmente dentro de um arquivo README na pasta raiz do projeto.\nNo BlueJ podemos fazer esse comentário de projeto abrindo o arquivo que fica no canto superior esquerdo do diagrama de classses."
   },
   {
     "objectID": "cap5-2.html#section-11",
     "href": "cap5-2.html#section-11",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Você consegue pensar em outros exemplos de coleções na forma de Mapa que usamos no dia a dia?\n\nUm dicionário:\n\nBuscamos um significado (valor) a partir de uma palavra (chave).\n\n\n\nSiglas e nomes de estados:\n\nPodemos buscar o nome de um estado (valor) a partir de sua sigla (chave).\n\n\n\nUma coleção de alunos:\n\nPodemos buscar um objeto aluno (valor) a partir da sua matrícula (chave).\n\n\n\n\n\n\n\nConceito\n\n\nUm mapa é uma coleção que guarda pares chave/valor como entradas. Valores podem ser buscados forncendo-se a chave correspondente."
+    "text": "Alguns elementos da documentação podem ser sempre extraídos do código-fonte.\n\nComo os nomes e parâmetros dos métodos, por exemplo.\nJá a descrição da classe e dos métodos demanda mais atenção já que pode ser facilmente esquecida, ou ficar incompleta."
   },
   {
     "objectID": "cap5-2.html#section-12",
     "href": "cap5-2.html#section-12",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "A forma mais simples de usar essa estrutura é através da classe HashMap.\n\nHashMap é uma implementação particular de Mapa."
+    "text": "No Java, comentários Javadoc são escritos com um símbolo especial de comentário.\n\n/**\n * Este é um comentário Javadoc.\n * Ele pode ter várias linhas.\n */"
   },
   {
     "objectID": "cap5-2.html#section-13",
     "href": "cap5-2.html#section-13",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Os métodos mais importantes da classe HashMap são: put e get.\n\nO método put insere uma entrada no mapa (um par de objetos chave/valor).\nJá o método get recupera o valor associado a uma chave.\n\n\nO trecho de código abaixo cria um HashMap e insere nele três entradas.\n\nCada entrada é um par chave/valor consistindo de um nome e um número de telefone.\n\n\n    HashMap&lt;String,String&gt; contatos = new HashMap&lt;&gt;();\n    contatos.put(\"Tiao\", \"9999 1111\");\n    contatos.put(\"Maria\", \"8888 1234\");\n    contatos.put(\"Joaquim\", \"9876 5432\");"
+    "text": "O comentário deve ter /** no início e */ no final para ser reconhecido como um comentário javadoc.\n\nSe o comentário vem imediatamente antes da declaração da classe, ele é lido como a descrição da classe.\nSe ele está logo acima de uma assinatura de método, é considerado como um comentário do método.\n\n\nComo exatamente o comentário deve ser formatado para gerar a documentação pode variar de acordo com as ferramentas de cada linguagem de programação."
   },
   {
     "objectID": "cap5-2.html#section-14",
     "href": "cap5-2.html#section-14",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Quando declaramos uma variável do tipo HashMap e quando criamos um objeto HashMap\n\nprecisamos informar o tipo dos objetos que serão guardados.\nAssim como fazemos com ArrayList.\n\n\nNo caso do HashMap, precisamos informar dois tipos:\n\no tipo dos objetos chave e o tipo dos objetos valor.\n\n\n\nNo caso da lista de contatos, por exemplo, definimos que tanto a chave quanto o valor são objetos do tipo String.\n\n    HashMap&lt;String,String&gt; contatos = new HashMap&lt;&gt;();"
+    "text": "No caso do javadoc várias palavras-chave especiais estão disponíveis para formatar a documentação.\n\nEssas chaves começam com @, como, por exemplo:\n\n@version\n@author\n@param\n@return"
   },
   {
     "objectID": "cap5-2.html#section-15",
     "href": "cap5-2.html#section-15",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "O trecho de código abaixo encontra e exibe o telefone da Maria.\n\n    String telefone = contatos.get(\"Maria\");\n    System.out.println(\"Telefone da Maria: \" + telefone);\n\n\nRepare que passamos a chave (o nome \"Maria\") para o método get e ele nos retorna o valor (o número do telefone dela).\n\n\n\n\n\n\nExercício\n\n\nLeia a documentação dos métodos get e put da classe HashMap e veja se a explicação bate com o que você está entendendo até o momento."
+    "text": "Exercício\n\n\nEncontre exemplos de palavras-chave javadoc no projeto do sistema de suporte e verifique como eles influenciam a formatação da documentação.\nExperimente fazer alterações e conferir o resultado na documentação gerada.\n\n\n\n\n\n\n\n\n\nExercício\n\n\nDocumente adequadamente as classes do projeto de suporte técnico e gere a documentação usando o BlueJ."
   },
   {
     "objectID": "cap5-2.html#section-16",
     "href": "cap5-2.html#section-16",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício (entrega)\n\n\n\nCrie no BlueJ um projeto chamado contatos-hashmap.\nCrie uma classe chamada Contatos e use um HashMap para implementar uma lista de contatos similar à que vimos anteriormente. Lembre-se que você deve importar java.util.HashMap.\nNa classe, implemente dois métodos:\n\n    public void cadastrarNumero(String nome, String numero)\n\ne\n\n    public String buscarNumero(String nome)\n\nOs métodos devem usar os métodos put e get da classe HashMap para implementar suas funcionalidades."
+    "text": "Chegou a hora de entendermos para que essas palavras-chaves servem.\n\nNós chamamos essas palavras-chave de modificadores de acesso.\n\nelas definem a visibilidade de atributos, construtores e métodos."
   },
   {
     "objectID": "cap5-2.html#section-17",
     "href": "cap5-2.html#section-17",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Para os exercícios a seguir, você pode usar a documentação oficial da classe HashMap do Java.\n\n\n\n\n\nExercício\n\n\nVerifique na documentação como podemos saber quantas entradas estão guardadas em um HashMap.\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente com o BlueJ o que acontece quando você adiciona uma entrada em uma mapa com uma chave que já existia no mapa.\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente com o BlueJ o que acontece quando você adiciona duas entradas em uma mapa com o mesmo valor, mas com chaves diferentes."
+    "text": "Se um método, por exemplo, é público:\n\nEle pode ser chamado de dentro da mesma classe e também a partir de outra classe.\n\n\nJá métodos privados, por outro lado,\n\nSó podem ser chamados de dentro da mesma classe onde foram declarados.\nEles não são visíveis para as outras classes."
   },
   {
     "objectID": "cap5-2.html#section-18",
     "href": "cap5-2.html#section-18",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\nComo você pode verificar se uma chave existe em um mapa? Escreva um código Java de exemplo.\n\n\n\n\n\n\n\n\nExercício\n\n\nExperimente com o BlueJ o que acontece quando você tenta procurar um valor e a chave fornecida não existe no mapa.\n\n\n\n\n\n\n\n\nExercício\n\n\nComo podemos imprimir todas as chaves que estão armazenadas em um HashMap.\n\nAtenção, não vale aqui construções de programação funcional que usem o operador -&gt;."
+    "text": "Como agora já conhecemos os conceitos de interface e implementação fica mais fácil entendermos o objetivo dessas palavras-chave.\n\nLembre-se que a interface de uma classe é o conjunto de detalhes que um programador que vai usar a classe precisa ver.\n\nEla fornece informações sobre como usar a classe.\n\nE inclui assinaturas e comentários de construtores e métodos.\n\nNós também dizemos que a interface é a parte pública da classe.\nSeu objetivo é definir o que a classe faz."
   },
   {
     "objectID": "cap5-2.html#section-19",
     "href": "cap5-2.html#section-19",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício (entrega)\n\n\nAltere o projeto contatos-hashmap, criando uma classe chamada TestesHashMap.\nNesta classe, implemente um método chamado testar que demonstre todas as funcionalidades que você experimentou nos exercícios dos slides anteriores."
+    "text": "Já a implementação é a parte da classe que define precisamente como a classe funciona.\n\nOs corpos dos métodos, contendo comandos Java, e muitos atributos são parte da implementação.\nNós também podemos dizer que ela é a parte privada da classe.\nQuem usa a classe não precisa conhecer a implementação.\nInclusive, há boas razões para que o programador não possa fazer uso desse conhecimento (como veremos mais adiante)."
   },
   {
     "objectID": "cap5-2.html#section-20",
     "href": "cap5-2.html#section-20",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Na aula passada você fez um exercício para que o sistema de suporte desse respostas que tivessem relação com a reclamação do usuário.\n    if (entrada.contains(\"lento\")) {\n        return \"Acredito que isso tem a ver com o seu hardware. \" +\n               \"Atualizar seu processador deve resolver todos os \" +\n               \"problemas de desempenho. Você tem algum problema \" + \n               \"com nosso software?\"\n    }\n    else if (entrada.contains(\"bug\")) {\n        ...\n\nMas tratar isso usando blocos if\\else if não é a melhor forma implementar.\n\nIsso porque a cada nova palavra-chave tratada, teríamos que alterar o código e recompilar o sistema."
+    "text": "Portanto, podemos dizer que:\n\nA palavra-chave public declara que um elemento de uma classe (atributo ou método) faz parte de sua interface.\n\nOu seja, é visível publicamente.\n\nJá a palavra-chave private declara que um elemento é parte da implementação.\n\nOu seja, está escondida de acesso externo.\n\n\n\n\n\n\n\nConceito\n\n\nModificadores de acesso definem a visibilidade de um atributo, construtor ou método. Elementos públicos são acessíveis de dentro da classe e a partir de outras classes; já elementos privados são acessíveis somente de dentro da mesma classe."
   },
   {
     "objectID": "cap5-2.html#section-21",
     "href": "cap5-2.html#section-21",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nós podemos melhorar essa implementação usando um HashMap.\n\nA ideia é ter um mapa que relacione palavras como \"lento\" e \"bug\" com as respostas correspondentes a estas palavras.\nPortanto, o mapa terá como chave uma String e como valor também uma String.\n\n\nNos próximos exercícios vamos fazer essa implementação.\n\nNós vamos colocar as entradas do HashMap diretamente no código.\n\n\n\nAlguém poderia argumentar que isso não é muito diferente de usar if\\else if.\n\nMas, a inclusão das entradas no HashMap poderia ser feita a partir de um arquivo, por exemplo.\n\nE, assim, poderíamos acrescentar novas palavras-chave no arquivo sem precisar recompilar o sistema."
+    "text": "Outra questão é que, ao usar uma classe, um programador não deveria ter permissão de conhecer seus detalhes internos.\n\n\nApesar de também ter a ver com modularização, a ideia aqui é que a linguagem não deveria permitir o acesso à parte privada de uma classe a partir de comandos em outras classes.\nIsso garante que uma classe não dependa de como exatamente uma outra classe está implementada."
   },
   {
     "objectID": "cap5-2.html#section-22",
     "href": "cap5-2.html#section-22",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício (entrega)\n\n\n\nAltere a classe a classe Respondedor do projeto suporte-tecnico1 para que ela tenha um atributo mapa para guardar as palavras-chaves e as respostas.\nCrie um método chamado preencherMapaDeRespostas que preenche o mapa com as respostas que você tinha tratado como if\\else if na aula anterior. Chame o método no construtor da classe.\nPor fim, altere o método gerarResposta da seguinte forma:\n\nEle deve ter um loop para percorrer as chaves do mapa.\nDentro do loop deve verificar se a variável entrada contém a chave.\n\nSe sim, ele deve retornar o valor associado a esta chave.\n\nSe o loop terminar e a entrada não tiver nenhuma das chaves, ele deve retornar uma resposta padrão.\n\nPor exemplo, “Desculpe, não entendi o que você quis dizer. Poderia reformular a pergunta?”.\n\n\nAtenção: não vale usar construções de programação funcional (como o operador -&gt;)."
+    "text": "Esta última questão é muito importante para a manutenção de sistemas.\n\nQuando precisamos incluir novas funcionalidades ou corrigir bugs é muito comum precisarmos alterar uma classe.\nO ideal é que a alteração de uma classe não provoque alterações em outras classes.\n\nIsso tem a ver com o que chamamos de acoplamento."
   },
   {
     "objectID": "cap5-2.html#section-23",
     "href": "cap5-2.html#section-23",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "A biblioteca de classes do Java possui diferentes tipos de conjuntos implementados em diferentes classes.\n\nUma delas é a classe HashSet.\n\n\n\n\n\n\nExercício\n\n\nBusque na documentação do Java, ou em outras fontes, quais são as similaridades e as diferenças enre um HashSet e um ArrayList.\nTente entender porque ArrayList é um caso especial de List e HashSet é um caso especial de Set."
+    "text": "Isso tem a ver com o que chamamos de acoplamento.\n\nSe a alteração em uma classe não provoca alterações em outras classes, temos um baixo acoplamento.\nE isso é muito bom, porque torna o trabalho de manutenção muito mais fácil.\nJá que em vez de entender e alterar várias classes, o programador precisa trabalhar em apenas em uma."
   },
   {
     "objectID": "cap5-2.html#section-24",
     "href": "cap5-2.html#section-24",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "A declaração de um HashSet, a criação do objeto e a adição de elementos é feita da mesma forma que um ArrayList.\n\n    import java.util.HashSet;\n    . . .\n    HashSet&lt;String&gt; conjunto = new HashSet&lt;&gt;();\n    conjunto.add(\"um\");\n    conjunto.add(\"dois\");\n    conjunto.add(\"três\");\n\n\nPara percorrer um HashSet podemos usar um for-each, igualzinho ao que usamos para ArrayList.\n\n    for(String elemento : conjunto) {\n        // faz alguma coisa com o elemento.\n    }"
+    "text": "Suponha, por exemplo, que a equipe que mantém a linguagem Java faça uma melhoria na implementação da classe ArrayList.\n\nO ideal é que essa melhoria não afete os nossos códigos que usam a classe ArrayList.\nRepare que isso só é possível porque nosso código não faz referência à implementação da classe ArrayList."
   },
   {
     "objectID": "cap5-2.html#section-25",
     "href": "cap5-2.html#section-25",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Repare, portanto, que usar diferentes coleções em Java é sempre muito parecido.\n\nSe você entender como usar uma delas, você conseguirá usar as outras com facilidade.\n\n\nAs diferenças entre as coleções estão nos seus comportamentos.\n\nUma lista, por exemplo, mantém a ordem dos elementos, permite acesso aos elementos por posição, e permite elementos repetidos.\nJá um conjunto não mantém a ordem dos elementos, e garante que não existem elementos repetidos.\n\nPortanto, os elementos podem ser percorridos no for-each em ordem diferente da que eles foram inseridos.\nE inserir um mesmo elemento uma segunda vez, simplesmente não tem nenhum efeito."
+    "text": "Para ficar mais claro, quando uma classe A utiliza um objeto de uma classe B.\n\nNão é bem o programador que não pode conhecer a parte interna (implementação) da classe B.\nNa verdade é a classe A que não pode conhecer (ou seja, depender) dos detalhes internos da classe B.\nRepare que pode acontecer do mesmo programador implementar tanto a classe A quanto a classe B.\n\nMas de toda forma, as classes ainda deveriam ter baixo acoplamento."
   },
   {
     "objectID": "cap5-2.html#section-26",
     "href": "cap5-2.html#section-26",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Quando estamos trabalhando em nossos projetos,\n\né importante escrevermos a documentação de nossas classes, à medida que desenvolvemos o código.\nMuitas vezes programadores não levam a sério a documentação, o que pode levar a sérios problemas.\n\n\nSe você não fornecer documentação suficiente, pode ser difícil para outro programador entender suas classes.\n\nMuitas vezes esse outro programador pode ser você mesmo :)\n\n\n\nSem documentação, precisamos ler o código da classe para tentar entender como ela funciona.\n\nIsso pode funcionar em um projeto pequeno de estudante.\nMas cria problemas em projetos do mundo real."
+    "text": "Esta questão de acoplamento é tão importante que vamos discuti-la, em detalhes, no Capítulo 7.\n\nPor enquanto, o mais importante é entender que a palavra-chave private garante o princípio da ocultação de informações\n\nao impedir que outras classes acessem a parte privada da classe.\n\nIsso garante o baixo acoplamento, tornando a aplicação mais modular e facilitando a manutenção."
   },
   {
     "objectID": "cap5-2.html#section-27",
     "href": "cap5-2.html#section-27",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "É muito comum que sistemas comerciais tenham centenas de milhares de linhas de código.\n\nImagine que você tivesse que ler todas essas linhas para entender como o código funciona.\nSeria impossível!\n\n\nNós conseguimos usar as classes da biblioteca Java, como HashSet e Random, olhando apenas a documentação delas.\n\nNós nunca precisamos olhar o código-fonte destas classes.\n\n\n\nIsso funciona porque as classes estão suficientemente bem documentadas.\n\nSeria muito mais difícil usar essas classes, se precisássemos ler e entender o código-fonte delas primeiro."
+    "text": "Nós também podemos chamar o princípio da ocultação de informações de encapsulamento.\n\nEsse conceito é fundamental na Programação Orientada a Objetos.\nE talvez seja a única parte do livro que não gosto muito, pois acho que ele não dá a ênfase necessária a esse conceito."
   },
   {
     "objectID": "cap5-2.html#section-28",
     "href": "cap5-2.html#section-28",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Em uma equipe de desenvolvimento de software, a implementação das classes é geralmente dividida entre vários programadores.\n\nUm programador poderia implementar a classe SistemaDeSuporte, por exemplo, e outro a classe LeitorDeEntrada.\nPortanto, você pode precisar implementar uma classe enquanto chama métodos de outras classes.\n\n\nAssim, o mesmo argumento usado para as classes da biblioteca Java vale para as classes que você escreve.\n\nSe podemos usar as classes sem ter que ler e entender toda a implementação, nossa tarefa fica mais fácil.\nNós precisamos apenas da interface das classes e não da implementação.\nPortanto, precisamos escrever boa documentação de classes também para as nossas próprias classes."
+    "text": "O termo encapsulamento vem da palavra cápsula, que é definida no dicionário como:\n\n\nA ideia é que a implementação da classe (seus detalhes internos) sejam encapsulados (protegidos).\n\nE a classe exponha apenas sua interface."
   },
   {
     "objectID": "cap5-2.html#section-29",
     "href": "cap5-2.html#section-29",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Conceito\n\n\nA documentação de uma classe deve ser detalhada o suficiente para que outros programadores consigam usar a classe sem precisar ler o código fonte.\n\n\n\n\n\nO Java tem uma ferramenta chamada javadoc que gera documentação a partir de comentários no código.\n\nToda a documentação oficial das classes da biblioteca Java é gerada com o javadoc.\n\n\n\nO BlueJ usa o javadoc para gerar documentação das classes.\n\nCom o código de uma classe aberto no BlueJ, podemos acessar a caixa de opções no canto superior direito e mudar de código-fonte para documentação.\nOu podemos também usar o menu Ferramentas → Documentaçao do Projeto para gerar a documentação de todas as classes do projeto."
+    "text": "Um bom exemplo que ilustra o encapsulamento é um telefone fixo comum.\n\nVocê usa o telefone através de sua interface (os botões) e não precisa saber como é o funcionamento interno.\n\n\n\n\n\n\n\n\n\nA mesma analogia pode ser feita com um caixa eletrônico.\n\nVocê usa as opções que aparecem pra você (interface) mas não precisa saber como isso funciona internamente.\nVocê só vê o que a interface disponibiliza."
   },
   {
     "objectID": "cap5-2.html#section-30",
     "href": "cap5-2.html#section-30",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\nExperimente acessar a documentação da classe SistemaDeSuporte no BlueJ.\n\n\n\n\n\n\nOs arquivos HTML gerados ficam em uma pasta doc dentro do projeto e podem ser abertos em qualquer navegador."
+    "text": "Nós declaramos um método como público para fornecer operações para quem usa a classe.\n\nE declaramos como privado para dividir o código em trechos menores, facilitando o entendimento e a leitura.\n\nVeja que não faria sentido chamar o método imprimirBoasVindas de fora da classe SistemaDeSuporte.\nMas o código do método iniciar fica mais claro quando separamos sua tarefa em subtarefas."
   },
   {
     "objectID": "cap5-2.html#section-31",
     "href": "cap5-2.html#section-31",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "A documentação de uma classe deveria incluir, no mínimo:\n\nO nome da classe.\nUm comentário descrevendo o objetivo e as características da classe.\nUm número de versão.\nO nome do(s) autor(es).\nDocumentação para cada construtor e para cada método."
+    "text": "Declarar atributos públicos quebra o princípio da ocultação das informações.\n\nPortanto, mesmo que a linguagem Java permita atributos públicos, isso é considerado um estilo ruim de programação.\nHá linguagens que nem permitem a existência de atributos públicos.\n\nEnquanto outras não implementam completamente o conceito de encapsulamento, o que viola a teoria de POO.\nEsse é o principal motivo para eu não adotar a linguagem Python na disciplina :)"
   },
   {
     "objectID": "cap5-2.html#section-32",
     "href": "cap5-2.html#section-32",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "A documentação de todo construtor e método deve incluir, no mínimo:\n\nO nome do método.\nO tipo de retorno.\nOs nomes e tipos dos parâmetros.\nUma descrição do objetivo e função do método.\nUma descrição de cada parâmetro.\nUma descrição do valor retornado.\n\n\nAlém disso, cada projeto deveria ter um comentário geral sobre o projeto.\n\nGeralmente dentro de um arquivo README na pasta raiz do projeto.\nNo BlueJ podemos fazer esse comentário de projeto abrindo o arquivo que fica no canto superior esquerdo do diagrama de classses."
+    "text": "Outro motivo para manter os atributos privados é permitir que a classe tenha um maior controle sobre o estado dos seus objetos.\n\nSe o atributo é encapsulado e só é acessível através de métodos de acesso (obter/get) e modificadores (definir/set),\na classe pode garantir que o atributo nunca tenha um valor inválido ou inconsistente."
   },
   {
     "objectID": "cap5-2.html#section-33",
     "href": "cap5-2.html#section-33",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Alguns elementos da documentação podem ser sempre extraídos do código-fonte.\n\nComo os nomes e parâmetros dos métodos, por exemplo.\nJá a descrição da classe e dos métodos demanda mais atenção já que pode ser facilmente esquecida, ou ficar incompleta.\n\n\nNo Java, comentários Javadoc são escritos com um símbolo especial de comentário.\n\n/**\n * Este é um comentário Javadoc.\n * Ele pode ter várias linhas.\n */"
+    "text": "Para deixar o conceito mais claro, suponha que uma classe Circulo tenha um atributo chamado diametro.\n\nE, como o programador faltou às aulas de POO, ele definiu o atributo como público.\nCom isso, qualquer classe consegue acessar e alterar o valor do diâmetro de um círculo.\n\nFazendo, por exemplo:\n\n\n\n\nCirculo circulo = new Circulo(10);\ncirculo.diametro = 30;"
   },
   {
     "objectID": "cap5-2.html#section-34",
     "href": "cap5-2.html#section-34",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "O comentário deve ter /** no início e */ no final para ser reconhecido como um comentário javadoc.\n\nSe o comentário vem imediatamente antes da declaração da classe, ele é lido como a descrição da classe.\nSe ele está acima de uma assinatura de método, é considerado como um comentário do método.\n\n\nComo exatamente o comentário deve ser formatado para gerar a documentação pode variar de acordo com as ferramentas de cada linguagem de programação.\n\n\nNo caso do javadoc várias palavras-chave especiais estão disponíveis para formatar a documentação.\n\nEssas chaves começam com @, como, por exemplo:\n\n@version\n@author\n@param\n@return"
+    "text": "Mas repare que isso abre brecha para a seguinte situação:\n\nint d = calcularNovoDiametro();\ncirculo.diametro = d;\n\n\nO que aconteceria se, por algum erro, o método calcularNovoDiametro retornasse um valor negativo?\n\nO círculo acabaria ficando com um diâmetro negativo, mas isso não faz sentido.\n\n\n\nE como isso poderia ser corrigido?"
   },
   {
     "objectID": "cap5-2.html#section-35",
     "href": "cap5-2.html#section-35",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\nEncontre exemplos de palavras-chave javadoc no projeto do sistema de suporte e verifique como eles influenciam a formatação da documentação.\nExperimente fazer alterações e conferir o resultado na documentação gerada.\n\n\n\n\n\n\n\n\nExercício (entrega)\n\n\n\nDocumente adequadamente as classes do projeto de suporte técnico e gere a documentação usando o BlueJ.\nConfira se a documentação gerada está completa antes de enviar o projeto."
+    "text": "Além, é claro, de corrigir o método de cálculo, seria uma boa ideia colocar um if antes de alterar o diâmetro:\n\nPara garantir que o círculo nunca ficasse com valor negativo por algum outro erro.\n\n\n\nint d = calcularNovoDiametro();\nif (d &gt; 0) {\n    circulo.diametro = d;\n}\n\n\n\nMas repare que podem existir diversos trechos de código no programa que alteram o valor do diâmetro."
   },
   {
     "objectID": "cap5-2.html#section-36",
     "href": "cap5-2.html#section-36",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Para ter presença nessa aula teórica ANP, demostrando que você estudou o conteúdo, você deve fazer a atividade abaixo.\n\n\n\n\n\n\n\nEntregas no Campus Virtual\n\n\nResponda às duas tarefas no Campus Virtual enviando os seus projetos contatos-hashmap e suporte-tecnico1 com as alterações dos exercícios solicitados ao longo dos slides."
+    "text": "int d = calcularNovoDiametro();\nif (d &gt; 0) {\n    circulo.diametro = d;\n}\n\nMas repare que podem existir diversos trechos de código no programa que alteram o valor do diâmetro.\n\nE seria necessário colocar essa verificação em todos esses lugares.\nOutro problema é que tudo isso está acontecendo sem o conhecimento da classe Circulo.\n\nMas é ela quem deveria ser responsável por garantir que o estado dos seus objetos é sempre válido."
   },
   {
     "objectID": "cap6-1.html#section",
@@ -6990,21 +6990,21 @@
     "href": "cap5-1.html#section-51",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "A forma mais simples de usar essa estrutura é através da classe HashMap.\n\nHashMap é uma implementação particular de Mapa."
+    "text": "Uma coleção de alunos:\n\nPodemos buscar um objeto aluno (valor) a partir da sua matrícula (chave).\n\n\n\n\n\n\nConceito\n\n\nUm mapa é uma coleção que guarda pares chave/valor como entradas. Valores podem ser buscados forncendo-se a chave correspondente."
   },
   {
     "objectID": "cap5-1.html#section-52",
     "href": "cap5-1.html#section-52",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Os métodos mais importantes da classe HashMap são: put e get.\n\nO método put insere uma entrada no mapa (um par de objetos chave/valor).\nJá o método get recupera o valor associado a uma chave."
+    "text": "A forma mais simples de usar essa estrutura é através da classe HashMap.\n\nHashMap é uma implementação particular de Mapa."
   },
   {
     "objectID": "cap5-1.html#section-53",
     "href": "cap5-1.html#section-53",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "O trecho de código abaixo cria um HashMap e insere nele três entradas.\n\nCada entrada é um par chave/valor consistindo de um nome e um número de telefone.\n\n\n    HashMap&lt;String,String&gt; contatos = new HashMap&lt;&gt;();\n    contatos.put(\"Tiao\", \"(35) 9999 1111\");\n    contatos.put(\"Maria\", \"(35) 8888 1234\");\n    contatos.put(\"Joaquim\", \"(31) 9876 5432\");"
+    "text": "Os métodos mais importantes da classe HashMap são: put e get.\n\nO método put insere uma entrada no mapa (um par de objetos chave/valor).\nJá o método get recupera o valor associado a uma chave."
   },
   {
     "objectID": "cap5-1.html#interface-vs.-implementação-1",
@@ -7039,193 +7039,403 @@
     "href": "cap5-1.html#section-54",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Quando declaramos uma variável do tipo HashMap e quando criamos um objeto HashMap\n\nprecisamos informar o tipo dos objetos que serão guardados.\nAssim como fazemos com ArrayList.\n\n\nNo caso do HashMap, precisamos informar dois tipos:\n\no tipo dos objetos chave e o tipo dos objetos valor.\n\n\n\nNo caso da lista de contatos, por exemplo, definimos que tanto a chave quanto o valor são objetos do tipo String.\n\n    HashMap&lt;String,String&gt; contatos = new HashMap&lt;&gt;();"
+    "text": "O trecho de código abaixo cria um HashMap e insere nele três entradas.\n\nCada entrada é um par chave/valor consistindo de um nome e um número de telefone.\n\n\n    HashMap&lt;String,String&gt; contatos = new HashMap&lt;&gt;();\n    contatos.put(\"Tiao\", \"(35) 9999 1111\");\n    contatos.put(\"Maria\", \"(35) 8888 1234\");\n    contatos.put(\"Joaquim\", \"(31) 9876 5432\");"
   },
   {
     "objectID": "cap5-1.html#section-55",
     "href": "cap5-1.html#section-55",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "O trecho de código abaixo encontra e exibe o telefone da Maria.\n\n    String telefone = contatos.get(\"Maria\");\n    System.out.println(\"Telefone da Maria: \" + telefone);\n\n\nRepare que passamos a chave (o nome \"Maria\") para o método get e ele nos retorna o valor (o número do telefone dela)."
+    "text": "Quando declaramos uma variável do tipo HashMap, e quando criamos um objeto HashMap,\n\nprecisamos informar os tipos dos objetos que serão guardados.\nAssim como fazemos com ArrayList.\n\n\nNo caso do HashMap, precisamos informar dois tipos:\n\no tipo dos objetos chave e o tipo dos objetos valor."
   },
   {
     "objectID": "cap5-1.html#section-56",
     "href": "cap5-1.html#section-56",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício 13\n\n\nFaça uma busca na internet sobre a documentação dos métodos get e put da classe HashMap e veja se a explicação bate com o que você está entendendo até o momento."
+    "text": "No caso da lista de contatos, por exemplo, definimos que tanto a chave quanto o valor são objetos do tipo String.\n\n    HashMap&lt;String,String&gt; contatos = new HashMap&lt;&gt;();\n\n\nO trecho de código abaixo encontra e exibe o telefone da Maria.\n\n    String telefone = contatos.get(\"Maria\");\n    System.out.println(\"Telefone da Maria: \" + telefone);\n\n\n\nRepare que passamos a chave (o nome \"Maria\") para o método get e ele nos retorna o valor (o número do telefone dela)."
   },
   {
     "objectID": "cap5-1.html#section-57",
     "href": "cap5-1.html#section-57",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício 14\n\n\nCrie no BlueJ um projeto chamado contatos-hashmap.\nCrie uma classe chamada Contatos e use um HashMap para implementar uma lista de contatos similar à que vimos anteriormente. Lembre-se que você deve importar java.util.HashMap.\nNa classe, implemente dois métodos:\n\n    public void cadastrarNumero(String nome, String numero)\n\ne\n\n    public String buscarNumero(String nome)\n\nOs métodos devem usar os métodos put e get da classe HashMap para implementar suas funcionalidades."
+    "text": "Exercício 13\n\n\nFaça uma busca na internet sobre a documentação dos métodos get e put da classe HashMap e veja se a explicação bate com o que você está entendendo até o momento."
   },
   {
     "objectID": "cap5-1.html#section-58",
     "href": "cap5-1.html#section-58",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Para os exercícios a seguir, você pode usar a documentação oficial da classe HashMap do Java.\n\n\n\n\n\nExercício 15\n\n\nVerifique na documentação como podemos saber quantas entradas estão guardadas em um HashMap.\n\n\n\n\n\n\n\n\n\n\nExercício 16\n\n\nExperimente com o BlueJ o que acontece quando você adiciona uma entrada em uma mapa com uma chave que já existia no mapa.\n\n\n\n\n\n\n\n\n\n\nExercício 17\n\n\nExperimente com o BlueJ o que acontece quando você adiciona duas entradas em um mapa com o mesmo valor, mas com chaves diferentes."
+    "text": "Exercício 14\n\n\nCrie no BlueJ um projeto chamado contatos-hashmap.\nCrie uma classe chamada Contatos e use um HashMap para implementar uma lista de contatos similar à que vimos anteriormente. Lembre-se que você deve importar java.util.HashMap.\nNa classe, implemente dois métodos:\n\n    public void cadastrarNumero(String nome, String numero)\n\ne\n\n    public String buscarNumero(String nome)\n\nEsses novos métodos devem usar os métodos put e get da classe HashMap para implementar suas funcionalidades."
   },
   {
     "objectID": "cap5-1.html#section-59",
     "href": "cap5-1.html#section-59",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício 18\n\n\nComo você pode verificar se uma chave existe em um mapa? Escreva um código Java de exemplo.\n\n\n\n\n\n\n\n\n\nExercício 19\n\n\nExperimente com o BlueJ o que acontece quando você tenta procurar um valor e a chave fornecida não existe no mapa.\n\n\n\n\n\n\n\n\n\n\nExercício 20\n\n\nComo podemos imprimir todas as chaves que estão armazenadas em um HashMap.\n\nAtenção, não vale aqui construções de programação funcional que usem o operador -&gt;."
+    "text": "Exercício 15\n\n\nExperimente com o BlueJ o que acontece quando você adiciona uma entrada em uma mapa com uma chave que já existia no mapa.\n\n\n\n\n\n\n\n\n\nExercício 16\n\n\nExperimente com o BlueJ o que acontece quando você adiciona duas entradas em um mapa com o mesmo valor, mas com chaves diferentes.\n\n\n\n\n\n\n\n\n\n\nExercício 17\n\n\nExperimente com o BlueJ o que acontece quando você tenta procurar um valor e a chave fornecida não existe no mapa."
   },
   {
     "objectID": "cap5-1.html#section-60",
     "href": "cap5-1.html#section-60",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Agora que conhecemos o conceito de Mapa, podemos fazer a melhoria que converamos antes.\n\nDe dar uma resposta para o usuário que tenha alguma relação com sua dúvida.\n\n\nPodemos fazer a implementação usando um HashMap.\n\nA ideia é ter um mapa que relacione palavras como \"lento\" e \"bug\" com as respostas correspondentes a estas palavras.\nPortanto, o mapa terá como chave uma String e como valor também uma String."
+    "text": "Para os exercícios a seguir, você pode usar a documentação oficial da classe HashMap do Java.\n\nOu pode usar uma ferramenta de IA para obter as respostas.\nDe todo modo, quanto mais familiarizado estiver com a documentação oficial, melhor."
   },
   {
     "objectID": "cap5-1.html#section-61",
     "href": "cap5-1.html#section-61",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Vamos começar, criando uma atributo na classe Respondedor, chamado mapaDeRespostas.\n\nE criando um método preencherMapaDeRespostas para tratar as respostas.\n\n\n\n  private HashMap&lt;String, String&gt; mapaDeRespostas;\n\n  public Respondedor {\n    mapaDeRespostas = new HashMap&lt;&gt;();\n    preencherMapaDeRespostas();\n  }"
+    "text": "Exercício 18\n\n\nDescubra como podemos saber quantas entradas estão guardadas em um HashMap.\n\n\n\n\n\n\n\n\n\nExercício 19\n\n\nComo você pode verificar se uma chave existe em um mapa? Escreva um código Java de exemplo.\n\n\n\n\n\n\n\n\n\n\nExercício 20\n\n\nComo podemos imprimir todas as chaves que estão armazenadas em um HashMap.\n\nAtenção, não vale aqui construções de programação funcional (que usam o operador -&gt;, por exemplo)."
   },
   {
     "objectID": "cap5-1.html#section-62",
     "href": "cap5-1.html#section-62",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nos próximos exercícios vamos fazer essa implementação.\n\nNós vamos colocar as entradas do HashMap diretamente no código.\n\n\nAlguém poderia argumentar que isso não é muito diferente de usar if\\else if.\n\nMas, a inclusão das entradas no HashMap poderia ser feita a partir de um arquivo, por exemplo.\n\nE, assim, poderíamos acrescentar novas palavras-chave no arquivo sem precisar recompilar o sistema."
+    "text": "Agora que conhecemos o conceito de Mapa, podemos fazer a melhoria que conversamos antes:\n\ndar uma resposta para o usuário que tenha alguma relação com sua dúvida.\n\n\nPodemos fazer a implementação usando um HashMap.\n\nA ideia é ter um mapa que relacione palavras como \"lento\" e \"bug\" com as respostas correspondentes a estas palavras.\nPortanto, o mapa terá como chave uma String e como valor também uma String."
   },
   {
     "objectID": "cap5-1.html#section-63",
     "href": "cap5-1.html#section-63",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício (entrega)\n\n\nAltere a classe a classe Respondedor do projeto suporte-tecnico1 para que ela tenha um atributo mapa para guardar as palavras-chaves e as respostas.\nCrie um método chamado preencherMapaDeRespostas que preenche o mapa com as respostas que você tinha tratado como if\\else if na aula anterior. Chame o método no construtor da classe.\nPor fim, altere o método gerarResposta da seguinte forma:\n\nEle deve ter um loop para percorrer as chaves do mapa.\nDentro do loop deve verificar se a variável entrada contém a chave.\n\nSe sim, ele deve retornar o valor associado a esta chave.\n\nSe o loop terminar e a entrada não tiver nenhuma das chaves, ele deve retornar uma resposta padrão.\n\nPor exemplo, “Desculpe, não entendi o que você quis dizer. Poderia reformular a pergunta?”.\n\n\nAtenção: não vale usar construções de programação funcional (como o operador -&gt;)."
+    "text": "Vamos começar, criando uma atributo na classe Respondedor, chamado mapaDeRespostas.\n\nE, no construtor, vamos criar o HashMap e chamar um novo método preencherMapaDeRespostas, para colocar no objeto todas as respostas que tivermos.\n\n\n\n  private HashMap&lt;String, String&gt; mapaDeRespostas;\n\n  public Respondedor {\n    mapaDeRespostas = new HashMap&lt;&gt;();\n    preencherMapaDeRespostas();\n  }"
   },
   {
     "objectID": "cap5-1.html#section-64",
     "href": "cap5-1.html#section-64",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Atenção:\n\nO próximo exercício pede para alterar o método gerarResposta da classe Respondedor.\nMas para que o professor consiga corrigir seu exercício anterior (de respostas aleatórias) você não pode apagar o código que tinha feito antes.\n\nPortanto, ao fazer o próximo exercício deixe o código anterior comentado em vez de apagá-lo."
+    "text": "Vamos então implementar o método preencherMapaDeRespostas acrescentando todas as repostas que nosso sistema será capaz de fornecer.\n\n  private void preencherMapaDeRespostas() {\n    mapaDeRespostas.put(\"lento\", \n      \"Acredito que isso tem a ver com o seu hardware. \" +\n      \"Atualizar seu processador deve resolver todos os problemas de desempenho. \" +\n      \"Você tem algum problema com nosso software?\");\n    mapaDeRespostas.put(\"bug\",\n      \"Bem, você sabe, todo software tem alguns bugs. \" +\n      \"Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. \" +\n      \"Você pode descrever o problema com mais detalhes?\");\n    // continue preenchendo as demais respostas possíveis\n  }\n\nRepare que o método é privado, pois foi criado para ser acessado apenas dentro da própria classe Respondedor."
   },
   {
     "objectID": "cap5-1.html#section-65",
     "href": "cap5-1.html#section-65",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício 21\n\n\nVamos implementar a ideia discutida nos slides anteriores. Neste exercício, faça o seguinte:\n\nAltere o método gerarResposta da classe Respondedor para que ele receba por parâmetro a pergunta feita pelo usuário.\n\nVocê precisará, claro, alterar a chamada do método na classe SistemaDeSuporte para passar a entrada do usuário.\n\nNo método gerarResposta, faça uma sequência de if/else if para verificar se as palavras-chave existem na pergunta do usuário.\n\nPara isso, você pode usar o método contains da classe String.\nE no bloco de cada if, retornar um texto correspondente àquela palavra-chave (veja sugestões no próximo slide).\nExemplo:\n\n\n    if (entrada.contains(\"lento\")) {\n        return \"Acredito que isso tem a ver com o seu hardware. \" +\n               \"Atualizar seu processador deve resolver todos os \" +\n               \"problemas de desempenho. Você tem algum problema \" + \n               \"com nosso software?\"\n    }\n    else if (entrada.contains(\"bug\")) {\n        ..."
+    "text": "Aqui está um exemplo de implementação mais completa.\nprivate void preencherMapaDeRespostas() {\n  mapaDeRespostas.put(\"lento\", \n    \"Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?\");\n  mapaDeRespostas.put(\"bug\",\n    \"Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?\");\n  mapaDeRespostas.put(\"travou\",\n    \"Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração.\");\n  mapaDeRespostas.put(\"travando\",\n    \"Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração.\");\n  mapaDeRespostas.put(\"lento\",\n    \"Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?\");\n  mapaDeRespostas.put(\"desempenho\",\n    \"O desempenho foi bastante adequado em todos os nossos testes. Você está executando outros processos em segundo plano?\");\n  mapaDeRespostas.put(\"bug\",\n    \"Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?\");\n  mapaDeRespostas.put(\"erro\",\n    \"Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?\");\n  mapaDeRespostas.put(\"windows\",\n    \"Este é um bug conhecido relacionado ao sistema operacional Windows. Por favor, informe à Microsoft. Não há nada que possamos fazer a respeito.\");\n  mapaDeRespostas.put(\"mac\",\n    \"Este é um bug conhecido relacionado ao sistema operacional Mac. Por favor, informe à Apple. Não há nada que possamos fazer a respeito.\");\n  mapaDeRespostas.put(\"caro\",\n    \"O custo de nosso produto é bastante competitivo. Você deu uma olhada e realmente comparou nossos recursos?\");\n  mapaDeRespostas.put(\"instalação\",\n    \"A instalação é realmente bastante simples. Temos muitos assistentes que fazem todo o trabalho para você. Você leu as instruções de instalação?\");\n  mapaDeRespostas.put(\"memória\",\n    \"Se você ler atentamente os requisitos do sistema, verá que os requisitos de memória especificados são de 6 gigabytes. Você realmente deve atualizar sua memória. Mais alguma coisa que você gostaria de saber?\");\n  mapaDeRespostas.put(\"linux\",\n    \"Levamos o suporte ao Linux muito a sério. Mas há alguns problemas. A maioria está relacionada a versões incompatíveis do glibc. Você pode ser um pouco mais preciso?\");\n  mapaDeRespostas.put(\"bluej\",\n    \"Ah, o BlueJ, sim. Tentamos comprá-los há muito tempo, mas eles simplesmente não vendem... São pessoas teimosas. Não há nada que possamos fazer a respeito, desculpe.\");\n}"
   },
   {
     "objectID": "cap5-1.html#section-66",
     "href": "cap5-1.html#section-66",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Palavra-chave\nSugestão de resposta\n\n\n\n\n“travou”\n“Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração.”\n\n\n“travando”\n“Bem, nunca trava em nosso sistema. Deve ter algo a ver com o seu sistema. Conte mais sobre sua configuração.”\n\n\n“lento”\n“Acredito que isso tem a ver com o seu hardware. Atualizar seu processador deve resolver todos os problemas de desempenho. Você tem algum problema com nosso software?”\n\n\n“desempenho”\n“O desempenho foi bastante adequado em todos os nossos testes. Você está executando outros processos em segundo plano?”\n\n\n“bug”\n“Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?”\n\n\n“erro”\n“Bem, você sabe, todo software tem alguns bugs. Mas nossos engenheiros de software estão trabalhando muito para corrigi-los. Você pode descrever o problema com mais detalhes?”\n\n\n“windows”\n“Este é um bug conhecido relacionado ao sistema operacional Windows. Por favor, informe à Microsoft. Não há nada que possamos fazer a respeito.”\n\n\n“mac”\n“Este é um bug conhecido relacionado ao sistema operacional Mac. Por favor, informe à Apple. Não há nada que possamos fazer a respeito.”\n\n\n“caro”\n“O custo de nosso produto é bastante competitivo. Você deu uma olhada e realmente comparou nossos recursos?”\n\n\n“instalação”\n“A instalação é realmente bastante simples. Temos muitos assistentes que fazem todo o trabalho para você. Você leu as instruções de instalação?”\n\n\n“memória”\n“Se você ler atentamente os requisitos do sistema, verá que os requisitos de memória especificados são de 6 gigabytes. Você realmente deve atualizar sua memória. Mais alguma coisa que você gostaria de saber?”\n\n\n“linux”\n“Levamos o suporte ao Linux muito a sério. Mas há alguns problemas. A maioria está relacionada a versões incompatíveis do glibc. Você pode ser um pouco mais preciso?”\n\n\n“bluej”\n“Ah, o BlueJ, sim. Tentamos comprá-los há muito tempo, mas eles simplesmente não vendem… São pessoas teimosas. Não há nada que possamos fazer a respeito, desculpe.”"
+    "text": "Abaixo temos uma primeira tentativa de alteração do método gerarResposta para usar as respostas que criamos.\n\nVamos começar simplificando as coisas:\n\nassumindo que o usuário digitará uma única palavra.\n\n\n\n  public String gerarResposta(String palavra)\n  {\n    String resposta = mapaDeRespostas.get(palavra);\n    if (resposta != null) {\n      return resposta;\n    }\n    else {\n      // Se chegamos aqui, é porque a palavra não foi reconhecida.\n      // Neste caso, pegamos uma de nossas respostas aleatórias\n      // que tínhamos criado antes.\n      return pegarRespostaPadrao();\n    }\n  }"
   },
   {
     "objectID": "cap5-1.html#section-67",
     "href": "cap5-1.html#section-67",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nós vimos que um ArrayList consegue guardar qualquer tipo de objeto.\n\nMas como int não é um objeto, não é possível usar um ArrayList para guardar uma lista de números inteiros?\n\n\nIsso é possível através das classes empacotadoras (wrapper classes).\n\nCada tipo primitivo em Java tem uma classe empacotadora que representa o mesmo tipo,\n\nMas que é um objeto de verdade.\n\nA classe empacotadora para int, por exemplo, se chama Integer."
+    "text": "Exercício 21\n\n\nAplique as últimas alterações ao projeto de suporte técnico.\nVocê precisará alterar também a chamada ao método gerarResposta feita na classe SistemaDeSuporte."
   },
   {
     "objectID": "cap5-1.html#section-68",
     "href": "cap5-1.html#section-68",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nós poderíamos criar explicitamente um objeto do tipo Integer:\n\n    int n = 10;\n    Integer objetoInt = new Integer(n);\n\n\nE poderíamos então declarar um ArrayList&lt;Integer&gt; e guardar nele o objetoInt.\n\nMas, na verdade, nós nunca fazemos isso, pois podemos guardar valores de tipo primitivo no ArrayList!\nIsso porque sempre que um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (wrapper),\n\no compilador converte o valor automaticamente em um objeto empacotador correspondente.\nEssa funcionalidade se chama autoboxing (algo como, auto-empacotamento)."
+    "text": "O sistema está respodendo bem melhor agora,\n\nmas desde que o usuário digite apenas uma palavra, em vez de uma pergunta completa.\n\n\nO ideal é deixarmos o usuário digitar uma pergunta inteira,\n\ne tentar reconhecer nela alguma das palavras tratadas.\n\n\n\nPara isso, precisaremos alterar a classe LeitorDeEntrada para que ela retorne a entrada como um conjunto de palavras\n\nem vez de retornar uma única String.\nÉ o que veremos a seguir."
   },
   {
     "objectID": "cap5-1.html#section-69",
     "href": "cap5-1.html#section-69",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Portanto, na prática, podemos escrever código como mostrado abaixo:\n\n    private ArrayList&lt;Integer&gt; notas;\n    ...\n    public void guardarNotasNaLista(int nota) {\n        notas.add(nota);\n    }\n\n\nRepare que estamos guardando o valor da variável nota, do tipo int, em um ArrayList&lt;Integer&gt;."
+    "text": "A biblioteca de classes do Java possui diferentes tipos de conjuntos implementados em diferentes classes.\n\nUma delas é chamada HashSet.\n\n\n\n\n\n\nExercício 22\n\n\nBusque na documentação do Java, ou usando uma ferramenta de IA, quais são as similaridades e as diferenças entre um HashSet e um ArrayList.\nPara os curiosos: tente entender porque ArrayList é um caso especial de List e HashSet é um caso especial de Set."
   },
   {
     "objectID": "cap5-1.html#section-70",
     "href": "cap5-1.html#section-70",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Seguindo a mesma ideia, o compilador realiza o unboxing quando obtemos um valor da coleção:\n\n    int primeiraNota = notas.get(0);\n\n\nVeja portanto que, em termos práticos, a única coisa que precisamos lembrar é de declarar o ArrayList usando a classe empacotadora (como a Integer).\n\nMas na hora de usar o ArrayList podemos tratar todos os dados como se fossem do tipo int."
+    "text": "A declaração de um HashSet,\n\na criação do objeto\ne a adição de elementos é feita da mesma forma que um ArrayList.\n\n\n\n    import java.util.HashSet;\n    . . .\n    HashSet&lt;String&gt; conjunto = new HashSet&lt;&gt;();\n    conjunto.add(\"um\");\n    conjunto.add(\"dois\");\n    conjunto.add(\"três\");"
   },
   {
     "objectID": "cap5-1.html#section-71",
     "href": "cap5-1.html#section-71",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Veja no Apêndice B do livro uma lista completa dos tipos primitivos e suas classes empacotadoras.\n\nVale ressaltar também que o mesmo conceito é aplicado para as demais coleções, como a classe HashMap.\n\n\n\n\n\n\nConceito\n\n\nAutoboxing é realizado automaticamente quando um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (wrapper)."
+    "text": "Para percorrer um HashSet podemos usar um for-each,\n\nigualzinho ao que usamos para ArrayList.\n\n\n    for(String elemento : conjunto) {\n        // faz alguma coisa com o elemento.\n    }\n\n\nRepare, portanto, que usar diferentes coleções em Java é sempre muito parecido.\n\nSe você entender como usar uma delas, você conseguirá usar as outras com facilidade."
   },
   {
     "objectID": "cap5-1.html#section-72",
     "href": "cap5-1.html#section-72",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nós chamamos essas palavras-chave de modificadores de acesso.\n\nelas definem a visibilidade de atributos, construtores e métodos.\n\n\nSe um método, por exemplo, é público:\n\nEle pode ser chamado de dentro da mesma classe e também a partir de outra classe.\n\n\n\nJá métodos privados, por outro lado,\n\nSó podem ser chamados de dentro da mesma classe onde foram declarados.\nEles não são visíveis para as outras classes."
+    "text": "As diferenças entre as coleções estão nos seus comportamentos.\n\nUma lista, por exemplo, mantém a ordem dos elementos, permite acesso aos elementos por posição, e permite elementos repetidos.\nJá um conjunto não mantém a ordem dos elementos, e garante que não existem elementos repetidos.\n\nPortanto, os elementos podem ser percorridos no for-each em ordem diferente da que eles foram inseridos.\nE inserir um mesmo elemento uma segunda vez, simplesmente não tem nenhum efeito."
   },
   {
     "objectID": "cap5-1.html#section-73",
     "href": "cap5-1.html#section-73",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Como agora já conhecemos os conceitos de interface e implementação fica mais fácil entendermos o objetivo dessas palavras-chave.\n\nLembre-se que a interface de uma classe é o conjunto de detalhes que um programador que vai usar a classe precisa ver.\n\nEla fornece informações sobre como usar a classe.\n\nE inclui assinaturas e comentários de construtores e métodos.\n\nNós também dizemos que a interface é a parte pública da classe.\nSeu objetivo é definir o que a classe faz."
+    "text": "public HashSet&lt;String&gt; obterEntrada()\n  {\n    System.out.print(\"&gt; \");         // imprime o prompt\n    String linhaDeEntrada = leitor.nextLine().trim().toLowerCase();\n                                    // quebra nos espaços\n    String[] vetorDePalavras = linhaDeEntrada.split(\" \"); \n    \n    // adiciona palavras de um vetor em um HashSet\n    HashSet&lt;String&gt; palavras = new HashSet&lt;&gt;();\n    for(String palavra : vetorDePalavras) {\n      palavras.add(palavra);\n    }\n\n      return palavras;\n  }\n\nEstamos usando os métodos trim e toLowerCase que vimos anteriormente.\nO método split usa o parâmetro passado para dividir uma string e um vetor de substrings."
   },
   {
     "objectID": "cap5-1.html#section-74",
     "href": "cap5-1.html#section-74",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Já a implementação é a parte da classe que define precisamente como a classe funciona.\n\nOs corpos dos métodos, contendo comandos Java, e muitos atributos são parte da implementação.\nNós também podemos dizer que ela é a parte privada da classe.\nQuem usa a classe não precisa conhecer a implementação.\nInclusive, há boas razões para que o programador não possa fazer uso desse conhecimento (como veremos mais adiante)."
+    "text": "Exercício 23\n\n\nO método split é mais poderoso do que pode parecer pelo nosso exemplo. Como você pode definir exatamente como uma string deve ser quebrada? Dê alguns exemplos.\n\n\n\n\n\n\n\n\n\nExercício 24\n\n\nEscreva como seria possível quebrar uma string armazenada em uma variável linha contendo palavras separadas por ponto-e-vírgula.\n\n\n\n\n\n\n\n\n\n\nExercício 25\n\n\nQual seria a diferença no resultado retornado pelo método obterEntrada, se o retorno fosse um ArrayList em vez de um HashSet?"
   },
   {
     "objectID": "cap5-1.html#section-75",
     "href": "cap5-1.html#section-75",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Portanto, podemos dizer que:\n\nA palavra-chave public declara que um elemento de uma classe (atributo ou método) faz parte de sua interface.\n\nOu seja, é visível publicamente.\n\nJá a palavra-chave private declara que um elemento é parte da implementação.\n\nOu seja, está escondida de acesso externo.\n\n\n\n\n\n\n\nConceito\n\n\nModificadores de acesso definem a visibilidade de um atributo, construtor ou método. Elementos públicos são acessíveis de dentro da classe e a partir de outras classes; já elementos privados são acessíveis somente de dentro da mesma classe."
+    "text": "Precisamos agora alterar as classes SistemaDeSuporte e Respondedor\n\npara que lidem com um conjunto de palavras em vez de uma única string."
   },
   {
     "objectID": "cap5-1.html#section-76",
     "href": "cap5-1.html#section-76",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Esta última questão é muito importante para a manutenção de sistemas.\n\nQuando precisamos incluir novas funcionalidades ou corrigir bugs é muito comum precisarmos alterar ou aumentar uma classe.\nO ideal é que a alteração de uma classe não provoque alterações em outras classes.\n\nIsso tem a ver com o que chamamos de acoplamento.\nSe a alteração em uma classe não provoca alterações em outras classes, temos um baixo acoplamento.\nE isso é muito bom, porque torna o trabalho de manutenção muito mais fácil.\nJá que em vez de entender e alterar várias classes, o programador precisa trabalhar em apenas em uma."
+    "text": "Vamos começar alterando o método iniciar da classe SistemaDeSuporte.\n  public void iniciar()\n  {\n    boolean terminou = false;\n\n    imprimirBoasVindas();\n\n    while(!terminou) {\n      HashSet&lt;String&gt; entrada = leitor.obterEntrada();\n\n      if(entrada.contains(\"tchau\")) {\n        terminou = true;\n      }\n      else {\n        String resposta = respondedor.gerarResposta(entrada);\n        System.out.println(resposta);\n      }\n    }\n\n    imprimirDespedida();\n  }"
   },
   {
     "objectID": "cap5-1.html#section-77",
     "href": "cap5-1.html#section-77",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Suponha, por exemplo, que a equipe que mantém a linguagem Java faça uma melhoria na implementação da classe ArrayList.\n\nO ideal é que essa melhoria não afete os nossos códigos que usam a classe ArrayList.\nRepare que isso só é possível porque nosso código não faz referência à implementação da classe ArrayList.\n\n\nPara ficar mais claro, quando uma classe A utiliza um objeto de uma classe B.\n\nNão é bem o programador que não pode conhecer a parte interna (implementação) da classe B.\nNa verdade é a classe A que não pode conhecer (ou seja, depender) dos detalhes internos da classe B.\nRepare que pode acontecer do mesmo programador implementar tanto a classe A quanto a classe B.\n\nMas de toda forma, as classes ainda deveriam ter baixo acoplamento."
+    "text": "public void iniciar()\n  {\n    boolean terminou = false;\n\n    imprimirBoasVindas();\n\n    while(!terminou) {\n1      HashSet&lt;String&gt; entrada = leitor.obterEntrada();\n\n2      if(entrada.contains(\"tchau\")) {\n        terminou = true;\n      }\n      else {\n        String resposta = respondedor.gerarResposta(entrada);\n        System.out.println(resposta);\n      }\n    }\n\n    imprimirDespedida();\n  }\n\n1\n\nalteramos o tipo da variável entrada para que seja um HashSet (precisamos importar a classe).\n\n2\n\nmudamos a verificação que finaliza o sistema, passando a usar o método contains."
   },
   {
     "objectID": "cap5-1.html#section-78",
     "href": "cap5-1.html#section-78",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Esta questão de acoplamento é tão importante que vamos discuti-la, em detalhes, no Capítulo 7.\n\nPor enquanto, o mais importante é entender que a palavra-chave private garante o princípio da ocultação de informações\n\nao impedir que outras classes acessem a parte privada da classe.\n\nIsso garante o baixo acoplamento, tornando a aplicação mais modular e facilitando a manutenção.\n\n\nNós também podemos chamar o princípio da ocultação de informações de encapsulamento.\n\nEsse conceito é fundamental na Programação Orientada a Objetos.\nE talvez seja a única parte do livro que não gosto muito, pois acho que ele não dá a ênfase necessária a esse conceito."
+    "text": "Por fim, vamos alterar o método gerarResposta da classe Respondedor\n    public String gerarResposta(HashSet&lt;String&gt; palavras)\n    {\n        for (String palavra : palavras) {\n            String resposta = mapaDeRespostas.get(palavra);\n            if (resposta != null) {\n                return resposta;\n            }\n        }\n        // Se chegamos aqui, é porque a palavra não foi reconhecida.\n        // Neste caso, pegamos uma de nossas respostas aleatórias\n        // que tínhamos criado antes.\n        return pegarRespostaPadrao();\n    }"
   },
   {
     "objectID": "cap5-1.html#section-79",
     "href": "cap5-1.html#section-79",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "O termo encapsulamento vem da palavra cápsula, que é definida no dicionário como:\n\n\nA ideia é que a implementação da classe (seus detalhes internos) sejam encapsulados (protegidos).\n\nE a classe exponha apenas sua interface."
+    "text": "1    public String gerarResposta(HashSet&lt;String&gt; palavras)\n    {\n2        for (String palavra : palavras) {\n            String resposta = mapaDeRespostas.get(palavra);\n            if (resposta != null) {\n                return resposta;\n            }\n        }\n        // Se chegamos aqui, é porque a palavra não foi reconhecida.\n        // Neste caso, pegamos uma de nossas respostas aleatórias\n        // que tínhamos criado antes.\n        return pegarRespostaPadrao();\n    }\n\n1\n\nO método agora recebe um HashSet em vez de uma String.\n\n2\n\nPercorremos as palavras do HashSet e a primeira que for uma das palavras que tratamos, nós retornamos a resposta."
   },
   {
     "objectID": "cap5-1.html#section-80",
     "href": "cap5-1.html#section-80",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Um bom exemplo que ilustra o encapsulamento é um telefone fixo comum.\n\nVocê usa o telefone através de sua interface (os botões) e não precisa saber como é o funcionamento interno.\n\n\n\n\n\n\n\n\n\nA mesma analogia pode ser feita com um caixa eletrônico.\n\nVocê usa as opções que aparecem pra você (interface) mas não precisa saber como isso funciona internamente.\nE você só tem acesso aos dados que a interface disponibiliza."
+    "text": "Nós vimos que um ArrayList consegue guardar qualquer tipo de objeto.\n\nMas como int não é um objeto, não é possível usar um ArrayList para guardar uma lista de números inteiros?\n\n\nIsso é possível através das classes empacotadoras (wrapper classes).\n\nCada tipo primitivo em Java tem uma classe empacotadora que representa o mesmo tipo,\n\nMas que é um objeto de verdade.\n\nA classe empacotadora para int, por exemplo, se chama Integer."
   },
   {
     "objectID": "cap5-1.html#section-81",
     "href": "cap5-1.html#section-81",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Nós poderíamos criar explicitamente um objeto do tipo Integer:\n\n    int n = 10;\n    Integer objetoInt = new Integer(n);\n\n\nE poderíamos então declarar um ArrayList&lt;Integer&gt; e guardar nele o objetoInt."
+  },
+  {
+    "objectID": "cap5-1.html#section-82",
+    "href": "cap5-1.html#section-82",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Mas, na verdade, nós nunca fazemos isso, pois podemos guardar valores de tipo primitivo no ArrayList!\n\nIsso porque sempre que um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (wrapper),\no compilador converte o valor automaticamente em um objeto empacotador correspondente.\n\n\nEssa funcionalidade se chama autoboxing\n\n(algo como, auto-empacotamento)."
+  },
+  {
+    "objectID": "cap5-1.html#section-83",
+    "href": "cap5-1.html#section-83",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Portanto, na prática, podemos escrever código como mostrado abaixo:\n\n    private ArrayList&lt;Integer&gt; notas;\n    ...\n    public void guardarNotasNaLista(int nota) {\n        notas.add(nota);\n    }\n\n\nRepare que estamos guardando o valor da variável nota, do tipo int, em um ArrayList&lt;Integer&gt;."
+  },
+  {
+    "objectID": "cap5-1.html#section-84",
+    "href": "cap5-1.html#section-84",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Seguindo a mesma ideia, o compilador realiza o unboxing quando obtemos um valor da coleção:\n\n    int primeiraNota = notas.get(0);\n\n\nVeja portanto que, em termos práticos, a única coisa que precisamos lembrar é de declarar o ArrayList usando a classe empacotadora (como a Integer).\n\nMas na hora de usar o ArrayList podemos tratar todos os dados como se fossem do tipo int."
+  },
+  {
+    "objectID": "cap5-1.html#section-85",
+    "href": "cap5-1.html#section-85",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Veja no Apêndice B do livro uma lista completa dos tipos primitivos e suas classes empacotadoras.\n\nVale ressaltar também que o mesmo conceito é aplicado para as demais coleções, como a classe HashMap.\n\n\n\n\n\n\nConceito\n\n\nAutoboxing é realizado automaticamente quando um valor de tipo primitivo é usado em um contexto que requer um tipo empacotador (wrapper)."
+  },
+  {
+    "objectID": "cap5-1.html#section-86",
+    "href": "cap5-1.html#section-86",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Para isso, vamos criar uma classe ContadorDePalavras.\n\nA classe vai ter um HashMap que associa da palavra a um contador inteiro.\nE um método que recebe o HashSet da entrada do usuário e atualiza a contagem das palavras.\n\n\nVamos usar o método getOrDefault da classe HashMap.\n\nEsse método é parecido com o get, mas quando a chave não está presente no HashMap\nem vez de retornar null, ele retorna o valor padrão passado como segundo parâmetro do método."
+  },
+  {
+    "objectID": "cap5-1.html#section-87",
+    "href": "cap5-1.html#section-87",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "public class ContadorDePalavras\n{\n  private HashMap&lt;String, Integer&gt; contagem;\n  \n  public ContadorDePalavras()\n  {\n    contagem = new HashMap&lt;&gt;();\n  }\n\n  public void contabilizarPalavras(HashSet&lt;String&gt; entrada)\n  {\n    for(String palavra : entrada) {\n        int contador = contagem.getOrDefault(palavra, 0);\n        contagem.put(palavra, contador+1);\n    }\n  }\n}"
+  },
+  {
+    "objectID": "cap5-1.html#section-88",
+    "href": "cap5-1.html#section-88",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Repare que o trecho que usa o método getOrDefault,\n  int contador = contagem.getOrDefault(palavra, 0);\n  contagem.put(palavra, contador+1);\n\nfaz o mesmo que o trecho a seguir, mas de maneira mais prática.\n  Integer contador = contagem.get(palavra);\n  if (contador == null) {\n    contagem.put(palavra, 1);\n  }\n  else {\n    contagem.put(palavra, contador+1);\n  }"
+  },
+  {
+    "objectID": "cap5-1.html#section-89",
+    "href": "cap5-1.html#section-89",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Exercício 29\n\n\nAltere o sistema de suporte para incluir a classe ContadorDePalavras.\nA ideia é contabilizar as palavras das interações com o usuário que levaram a uma resposta padrão.\n\n\n\n\n\n\n\n\n\nExercício 30\n\n\nAdicione um método à classe ContadorDePalavras para exibir no terminal a contagem de uso de cada palavra. Chame o método antes da mensagem de despedida ser exibida.\n\n\n\n\n\n\n\n\n\n\nExercício 31\n\n\nPesquise para que serve o método putIfAbasent da classe HashMap."
+  },
+  {
+    "objectID": "cap5-1.html#section-90",
+    "href": "cap5-1.html#section-90",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Esta última questão é muito importante para a manutenção de sistemas.\n\nQuando precisamos incluir novas funcionalidades ou corrigir bugs é muito comum precisarmos alterar ou aumentar uma classe.\nO ideal é que a alteração de uma classe não provoque alterações em outras classes.\n\nIsso tem a ver com o que chamamos de acoplamento.\nSe a alteração em uma classe não provoca alterações em outras classes, temos um baixo acoplamento.\nE isso é muito bom, porque torna o trabalho de manutenção muito mais fácil.\nJá que em vez de entender e alterar várias classes, o programador precisa trabalhar em apenas em uma."
+  },
+  {
+    "objectID": "cap5-1.html#section-91",
+    "href": "cap5-1.html#section-91",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Suponha, por exemplo, que a equipe que mantém a linguagem Java faça uma melhoria na implementação da classe ArrayList.\n\nO ideal é que essa melhoria não afete os nossos códigos que usam a classe ArrayList.\nRepare que isso só é possível porque nosso código não faz referência à implementação da classe ArrayList.\n\n\nPara ficar mais claro, quando uma classe A utiliza um objeto de uma classe B.\n\nNão é bem o programador que não pode conhecer a parte interna (implementação) da classe B.\nNa verdade é a classe A que não pode conhecer (ou seja, depender) dos detalhes internos da classe B.\nRepare que pode acontecer do mesmo programador implementar tanto a classe A quanto a classe B.\n\nMas de toda forma, as classes ainda deveriam ter baixo acoplamento."
+  },
+  {
+    "objectID": "cap5-1.html#section-92",
+    "href": "cap5-1.html#section-92",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Esta questão de acoplamento é tão importante que vamos discuti-la, em detalhes, no Capítulo 7.\n\nPor enquanto, o mais importante é entender que a palavra-chave private garante o princípio da ocultação de informações\n\nao impedir que outras classes acessem a parte privada da classe.\n\nIsso garante o baixo acoplamento, tornando a aplicação mais modular e facilitando a manutenção.\n\n\nNós também podemos chamar o princípio da ocultação de informações de encapsulamento.\n\nEsse conceito é fundamental na Programação Orientada a Objetos.\nE talvez seja a única parte do livro que não gosto muito, pois acho que ele não dá a ênfase necessária a esse conceito."
+  },
+  {
+    "objectID": "cap5-1.html#dividindo-strings",
+    "href": "cap5-1.html#dividindo-strings",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Dividindo Strings",
+    "text": "Dividindo Strings\nAgora que sabemos como usar um set,\n\nvamos verificar como podemos pegar a entrada do usuário,\nquebrá-la,\ne guardar as palavras em um conjunto de string.\n\n\nVamos fazer isso alterando o método obterEntrada da classe LeitorDeEntrada."
+  },
+  {
+    "objectID": "cap5-1.html#section-93",
+    "href": "cap5-1.html#section-93",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "O termo encapsulamento vem da palavra cápsula, que é definida no dicionário como:\n\n\nA ideia é que a implementação da classe (seus detalhes internos) sejam encapsulados (protegidos).\n\nE a classe exponha apenas sua interface."
+  },
+  {
+    "objectID": "cap5-1.html#section-94",
+    "href": "cap5-1.html#section-94",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Um bom exemplo que ilustra o encapsulamento é um telefone fixo comum.\n\nVocê usa o telefone através de sua interface (os botões) e não precisa saber como é o funcionamento interno.\n\n\n\n\n\n\n\n\n\nA mesma analogia pode ser feita com um caixa eletrônico.\n\nVocê usa as opções que aparecem pra você (interface) mas não precisa saber como isso funciona internamente.\nE você só tem acesso aos dados que a interface disponibiliza."
+  },
+  {
+    "objectID": "cap5-1.html#para-reforçar-em-casa",
+    "href": "cap5-1.html#para-reforçar-em-casa",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Para reforçar (em casa)",
+    "text": "Para reforçar (em casa)\n\n\n\n\nExercício 26\n\n\nAdicione pelo menos mais uma resposta ao sistema de suporte técnico.\n\n\n\n\n\n\n\n\n\nExercício 27\n\n\nGaranta que uma resposta padrão nunca é retornada duas vezes seguidas.\n\n\n\n\n\n\n\n\n\n\nExercício 28\n\n\nAltere o código para que, em vez de retornar a resposta para a primeira palavra identicada, o programa identifique todas as palavras presentes na pergunta do usuário e tente responder da forma mais apropriada."
+  },
+  {
+    "objectID": "cap5-1.html#section-95",
+    "href": "cap5-1.html#section-95",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Em resumo:\n\nAtributos deveriam ser sempre privados!\n\n\n\n\n\n\nConceito\n\n\nEncapsulamento (ou ocultamento de informações) é um princípio que define que os detalhes internos da implementação de uma classe deveriam ser ocultados das outras classes. Isso permite uma melhor modularização de uma aplicação."
+  },
+  {
+    "objectID": "cap5-1.html#fazendo-contabilidade-de-uso-de-objetos",
+    "href": "cap5-1.html#fazendo-contabilidade-de-uso-de-objetos",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Fazendo contabilidade de uso de objetos",
+    "text": "Fazendo contabilidade de uso de objetos\nCombinando um mapa com autoboxing, conseguimos uma maneira simples de contabilizar o uso de objetos.\n\nSuponha, por exemplo, que a empresa responsável pelo Sistema de Suporte queira contar quantas vezes cada palavra não tratada é utilizada.\n\nDessa forma, ela poderia identificar palavras muito usadas.\nE aumentar o seu mapa de respostas para que o usuário seja “melhor” respondido."
+  },
+  {
+    "objectID": "cap5-2.html#público-vs.-privado",
+    "href": "cap5-2.html#público-vs.-privado",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Público vs. Privado",
+    "text": "Público vs. Privado\n\nVocês já notaram que usamos a todo momento as palavras-chave public e private em nossos programas em Java, como mostrado no exemplo abaixo:\n\n    // declaração de atributos\n    private int numeroDeAssentos;\n    // métodos\n    public void definirIdade(int novaIdade) {\n      ...\n    }    \n    private int calcularMedia() {\n      ...\n    }"
+  },
+  {
+    "objectID": "cap5-2.html#encapsulamento-1",
+    "href": "cap5-2.html#encapsulamento-1",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Encapsulamento",
+    "text": "Encapsulamento\nEm muitas linguagens OO, a implementação de uma classe (seus detalhes internos) é ocultada de outras classes.\n\nIsso tem a ver com duas questões.\n\nAo usar uma classe um programador não deveria precisar conhecer seus detalhes internos.\n\n\nIsso tem a ver com a modularização e abstração que já discutimos antes.\nSe fosse necessário saber os detalhes de todas as classes, seria impossível desenvolver grandes sistemas."
+  },
+  {
+    "objectID": "cap5-2.html#métodos-privados",
+    "href": "cap5-2.html#métodos-privados",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Métodos privados",
+    "text": "Métodos privados\nMuitos dos métodos que vimos até agora eram públicos.\n\nIsso garante que eles podem ser chamados a partir de outras classes.\nMas podemos também ter métodos privados.\n\nComo os métodos imprimirBoasVindas e imprimirDespedida da classe SistemaDeSuporte."
+  },
+  {
+    "objectID": "cap5-2.html#métodos-privados-1",
+    "href": "cap5-2.html#métodos-privados-1",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Métodos privados",
+    "text": "Métodos privados\nNós também usamos métodos privados quando um trecho de código é usado em mais de um lugar na classe.\n\nPois, dessa forma, evitamos escrever o mesmo trecho de código mais de uma vez.\nE, em vez disso, chamamos o método privado em mais de um lugar."
+  },
+  {
+    "objectID": "cap5-2.html#atributos-privados",
+    "href": "cap5-2.html#atributos-privados",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Atributos privados!",
+    "text": "Atributos privados!\nVamos comparar com uma versão bem implementada da classe Circulo:\n\nela teria o atributo diametro privado;\ne um método modificador para alterar o diâmetro.\n\n\n\npublic class Circulo {\n    private int diametro;\n    ...\n    public void definirDiametro(int diametro) {\n        this.diametro = diametro;\n    }\n}\n\n\n\nRepare que, com isso, o diâmetro só pode ser alterado através da chamada do método mudarDiametro.\n\nE agora fica mais fácil evitar o problema anterior.\nPois basta colocarmos a verificação (if) no método definirDiametro.\nNão é necessário tratar todos os lugares que chamam o método mudarDiametro."
+  },
+  {
+    "objectID": "cap5-2.html#atributos-privados-1",
+    "href": "cap5-2.html#atributos-privados-1",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Atributos privados!",
+    "text": "Atributos privados!\nOutro motivo para manter os atributos privados é permitir que a classe tenha um maior controle sobre o estado dos seus objetos.\n\nSe o atributo é encapsulado e só é acessível através de métodos de acesso (obter/get) e modificadores (definir/set),\na classe pode garantir que o atributo nunca tenha um valor inválido ou inconsistente."
+  },
+  {
+    "objectID": "cap5-2.html#atributos-privados-2",
+    "href": "cap5-2.html#atributos-privados-2",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Atributos privados!",
+    "text": "Atributos privados!\nVamos comparar com uma versão bem implementada da classe Circulo:\n\nela teria o atributo diametro privado;\ne um método modificador para alterar o diâmetro.\n\n\n\npublic class Circulo {\n    private int diametro;\n    ...\n    public void definirDiametro(int diametro) {\n        this.diametro = diametro;\n    }\n}\n\n\n\nRepare que, com isso, o diâmetro só pode ser alterado através da chamada do método mudarDiametro.\n\nE agora fica mais fácil evitar o problema anterior.\nPois basta colocarmos a verificação (if) no método definirDiametro.\nNão é necessário tratar todos os lugares que chamam o método mudarDiametro."
+  },
+  {
+    "objectID": "cap5-2.html#atributos-privados-3",
+    "href": "cap5-2.html#atributos-privados-3",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Atributos privados!",
+    "text": "Atributos privados!\nAlém, é claro, de corrigir o método de cálculo, seria uma boa ideia colocar um if antes de alterar o diâmetro:\n\nPara garantir que o círculo nunca ficasse com valor negativo por algum outro erro.\n\n\n\nint d = calcularNovoDiametro();\nif (d &gt; 0) {\n    circulo.diametro = d;\n}\n\nMas repare que podem existir diversos trechos de código no programa que alteram o valor do diâmetro.\n\nE seria necessário colocar essa verificação em todos esses lugares.\nOutro problema é que tudo isso está acontecendo sem o conhecimento da classe Circulo.\n\nMas é ela quem deveria ser responsável por garantir que o estado dos seus objetos é sempre válido."
+  },
+  {
+    "objectID": "cap5-2.html#atributos-privados-4",
+    "href": "cap5-2.html#atributos-privados-4",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Atributos privados!",
+    "text": "Atributos privados!\nVamos comparar com uma versão bem implementada da classe Circulo:\n\nela teria o atributo diametro privado;\ne um método modificador para alterar o diâmetro.\n\n\n\npublic class Circulo {\n    private int diametro;\n    ...\n    public void definirDiametro(int diametro) {\n        this.diametro = diametro;\n    }\n}\n\n\n\nRepare que, com isso, o diâmetro só pode ser alterado através da chamada do método mudarDiametro.\n\nE agora fica mais fácil evitar o problema anterior.\nPois basta colocarmos a verificação (if) no método definirDiametro.\nNão é necessário tratar todos os lugares que chamam o método mudarDiametro."
+  },
+  {
+    "objectID": "cap5-2.html#atributos-sempre-privados",
+    "href": "cap5-2.html#atributos-sempre-privados",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Atributos sempre privados!",
+    "text": "Atributos sempre privados!\nA linguagem Java permite que atributos sejam declarados como privados ou públicos.\n\nMas você deve ter notado que nos exemplos sempre declaramos os atributos como privados.\nIsso é fundamental para respeitar o conceito de encapsulamento."
+  },
+  {
+    "objectID": "cap5-2.html#section-37",
+    "href": "cap5-2.html#section-37",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Vamos comparar com uma versão bem implementada da classe Circulo:\n\nela teria o atributo diametro privado;\ne um método modificador para alterar o diâmetro.\n\n\n\npublic class Circulo {\n    private int diametro;\n    ...\n    public void definirDiametro(int diametro) {\n        this.diametro = diametro;\n    }\n}"
+  },
+  {
+    "objectID": "cap5-2.html#section-38",
+    "href": "cap5-2.html#section-38",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Repare que, com isso, o diâmetro só pode ser alterado através da chamada do método mudarDiametro.\n\nE agora fica mais fácil evitar o problema anterior.\nPois basta colocarmos a verificação (if) no método definirDiametro.\nNão é necessário tratar todos os lugares que chamam o método mudarDiametro."
+  },
+  {
+    "objectID": "cap5-2.html#section-39",
+    "href": "cap5-2.html#section-39",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
     "text": "Em resumo:\n\nAtributos deveriam ser sempre privados!\n\n\n\n\n\n\nConceito\n\n\nEncapsulamento (ou ocultamento de informações) é um princípio que define que os detalhes internos da implementação de uma classe deveriam ser ocultados das outras classes. Isso permite uma melhor modularização de uma aplicação."
