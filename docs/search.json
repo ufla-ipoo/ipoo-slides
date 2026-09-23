@@ -4169,98 +4169,98 @@
     "href": "greenfoot-tutorial.html#colocando-objetos-no-mundo",
     "title": "Tutorial do Greenfoot",
     "section": "Colocando objetos no mundo",
-    "text": "Colocando objetos no mundo\nClique com o botão direito na classe Urso e acesse a opção new Urso().\n\nE então clique em qualquer lugar do mundo.\nVocê acabou de criar um objeto Urso.\n\n\nFaça o mesmo tipo de operação com as folhas, colocando algumas folhas no mundo.\n\n\nDica:\n\nExiste um atalho para colocar objetos no mundo.\nSelecione uma classe, e clique no mundo segurando a tecla Shift do teclado."
+    "text": "Colocando objetos no mundo\nClique com o botão direito na classe Urso e acesse a opção new Urso().\n\nE então clique em qualquer lugar do mundo.\nVocê acabou de criar um objeto Urso.\n\n\nFaça o mesmo tipo de operação com as folhas, colocando algumas folhas no mundo."
   },
   {
     "objectID": "greenfoot-tutorial.html#fazendo-objetos-agirem",
     "href": "greenfoot-tutorial.html#fazendo-objetos-agirem",
     "title": "Tutorial do Greenfoot",
     "section": "Fazendo objetos agirem",
-    "text": "Fazendo objetos agirem\nClique no botão Executar uma vez (obs.: no Greenfoot em inglês o botão se chama Act).\n\nAo clicar no botão, cada objeto age.\nOu seja, faz o que foi programado para fazer.\n\n\nNeste exemplo, as folhas não fazem nada.\n\nE os ursos são programados para andar para frente.\nExperimente criar dois ursos e clicar de novo no botão Executar uma vez.\n\nOs dois ursos vão se mover.\n\n\n\n\nUrsos também comem folhas.\n\nExperimente colocar uma folha na frente de um urso e clicar no botão Executar uma vez."
+    "text": "Fazendo objetos agirem\nClique no botão Executar uma vez.\n\nObs.: no Greenfoot em inglês o botão se chama Act.\n\n\nAo clicar no botão, cada objeto age.\n\nOu seja, faz o que foi programado para fazer.\n\n\n\nNeste exemplo, as folhas não fazem nada.\n\nE os ursos são programados para andar para frente."
   },
   {
     "objectID": "greenfoot-tutorial.html#chamar-métodos-diretamente",
     "href": "greenfoot-tutorial.html#chamar-métodos-diretamente",
     "title": "Tutorial do Greenfoot",
     "section": "Chamar métodos diretamente",
-    "text": "Chamar métodos diretamente\nEm vez de executar todo o cenário, você pode chamar métodos para cada objeto separadamente.\n\nExperimente clicar em um urso colocado no mundo.\nVocê verá as opções de chamar os métodos, da mesma forma que vemos no BlueJ.\n\n\nExperimente chamar o método virarAEsquerda para algum urso.\n\nE depois o método mover.\n\n\n\nRepare que há um método chamado act.\n\nÉ este método que é chamado toda vez que clicamos no botão Executar uma vez."
+    "text": "Chamar métodos diretamente\nEm vez de executar todo o cenário, você pode chamar métodos para cada objeto separadamente.\n\nExperimente clicar em um urso colocado no mundo.\nVocê verá as opções de chamar os métodos, da mesma forma que vemos no BlueJ.\n\n\nExperimente chamar o método virarAEsquerda para algum urso.\n\nE depois o método mover."
   },
   {
     "objectID": "greenfoot-tutorial.html#criar-um-novo-mundo",
     "href": "greenfoot-tutorial.html#criar-um-novo-mundo",
     "title": "Tutorial do Greenfoot",
     "section": "Criar um novo mundo",
-    "text": "Criar um novo mundo\nVocê pode recomeçar tudo, criando um novo mundo.\n\nPara isso use o obtão Reiniciar.\nO objeto do mundo será descartado (junto com os objetos adicionados nele).\nE um novo mundo será criado.\n\nObs.: Só pode existir um mundo ativo por vez."
+    "text": "Criar um novo mundo\nVocê pode recomeçar tudo, criando um novo mundo.\n\nPara isso use o obtão Reiniciar.\nO objeto do mundo será descartado\n\njunto com os objetos adicionados nele.\n\nE um novo mundo será criado.\n\n\nObs.: no Greenfoot só pode existir um mundo ativo por vez."
   },
   {
     "objectID": "greenfoot-tutorial.html#chamando-um-método-do-mundo",
     "href": "greenfoot-tutorial.html#chamando-um-método-do-mundo",
     "title": "Tutorial do Greenfoot",
     "section": "Chamando um método do mundo",
-    "text": "Chamando um método do mundo\nÉ possível também chamar métodos do mundo.\n\nBasta clicar em uma área vazia do mundo (sem ursos, nem folhas),\n\nou na área cinza ao redor do mundo.\n\nE serão exibidos os seus métodos.\n\n\nExperimente chamar o método povoar.\n\nEste método cria vários ursos e folhas.\nExecute então o jogo.\n\n\n\nExperimente agora o método folhasAleatorias.\n\nA quantidade de folhas pode ser passada por parâmetro.\nObs.: às vezes pode parecer que não apareceram todas as folhas.\n\nMas é que pode acontecer de duas folhas acabarem caindo na mesma célula."
+    "text": "Chamando um método do mundo\nÉ possível também chamar métodos do mundo.\n\nBasta clicar em uma área vazia do mundo (sem ursos, nem folhas),\n\nou na área cinza ao redor do mundo.\n\nE serão exibidos os seus métodos.\n\n\nExperimente chamar o método povoar.\n\nEste método cria vários ursos e folhas.\nExecute então o jogo."
   },
   {
     "objectID": "greenfoot-tutorial.html#section",
     "href": "greenfoot-tutorial.html#section",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Nós estamos usando o Greenfoot na aula porque\n\no trabalho da disciplina terá como tema a implementação de um jogo com gráficos em 2D,\ndesenvolvido em Java, com a IDE Greenfoot.\n\n\nEm casa, você pode baixar e instalar o greenfoot acessando o site: https://greenfoot.org/download\n\n\nEste material se baseia no tutorial disponibilizado no site do Greenfoot: https://www.greenfoot.org/doc/tut-1\n\nMas ele foi estendido esse semestre, trazendo mais conteúdo."
+    "text": "Nós estamos usando o Greenfoot na aula porque\n\no trabalho da disciplina terá como tema a implementação de um jogo com gráficos em 2D,\ndesenvolvido em Java, com a IDE Greenfoot.\n\n\nEm casa, você pode baixar e instalar o greenfoot acessando o site: https://greenfoot.org/download\n\n\nEste material se baseia no tutorial disponibilizado no site do Greenfoot: https://www.greenfoot.org/doc/tut-1\n\nMas tem mais conteúdo do que o tutorial da ferramenta."
   },
   {
     "objectID": "greenfoot-tutorial.html#o-cenário-caranguejo",
     "href": "greenfoot-tutorial.html#o-cenário-caranguejo",
     "title": "Tutorial do Greenfoot",
     "section": "O cenário caranguejo",
-    "text": "O cenário caranguejo\nBaixe o projeto greenfoot-caranguejo e abra-o no Greenfoot.\n\nVocê verá um mundo de areia.\n\n\nCrie um caranguejo e coloque-o no mundo.\n\nClique então em Executar.\nAconteceu alguma coisa?"
+    "text": "O cenário caranguejo\nBaixe o projeto greenfoot-caranguejo e abra-o no Greenfoot.\n\nVocê verá um mundo de areia.\n\n\nCrie um caranguejo e coloque-o no mundo.\n\nClique então em Executar.\nAconteceu alguma coisa?\n\n\n\nO caranguejo não fez nada porque não tem nada programado para ele fazer.\n\nVamos mudar isso!"
   },
   {
     "objectID": "greenfoot-tutorial.html#section-1",
     "href": "greenfoot-tutorial.html#section-1",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Bom, chega de ursos andando em círculos…\n\nVamos agora para outro exemplo no qual faremos algo mais interessante: programar!"
+    "text": "Dica:\n\nExiste um atalho para colocar objetos no mundo.\nSelecione uma classe, e clique no mundo segurando a tecla Shift do teclado."
   },
   {
     "objectID": "greenfoot-tutorial.html#só-para-os-curiosos",
     "href": "greenfoot-tutorial.html#só-para-os-curiosos",
     "title": "Tutorial do Greenfoot",
     "section": "Só para os curiosos",
-    "text": "Só para os curiosos\nMas de onde veio esse método move?\n\nE por que estamos chamando o método sem usar nenhum objeto?\n\n\nNós vamos entender isso melhor ao estudarmos o conceito de Herança.\n\n\nMas, para os curiosos, vai aqui um spoiler:\n\nO método move (e outros que usaremos da mesma forma) está definido na classe Actor.\nA classe Caranguejo é uma subclasse de Actor.\n\nIsso significa que ela herda os métodos da classe Actor.\nE assim, podemos chamar os métodos da classe Actor dentro da classe Caranguejo como se eles estivessem definidos na própria classe Caranguejo."
+    "text": "Só para os curiosos\nMas de onde veio esse método move?\n\nE por que estamos chamando o método sem usar nenhum objeto?\n\n\nNós vamos entender isso melhor ao estudarmos o conceito de Herança."
   },
   {
     "objectID": "greenfoot-tutorial.html#section-2",
     "href": "greenfoot-tutorial.html#section-2",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "O caranguejo não fez nada porque não tem nada programado para ele fazer.\n\nVamos mudar isso!\n\n\nAbra a classe Caranguejo (clicando duas vezes na caixa da classe).\n\nVeja que a classe tem um método act (agir) vazio, por isso o caranguejo não faz nada.\nExperimente colocar o comando move(4) dentro do método act.\n\nCompile a classe, coloque um caranguejo no mundo e clique em executar.\nVeja que o caranguejo se move para a direita até parar na borda do mundo.\nVocê pode até pausar o mundo e arrastar o caranguejo para que ele ande novamente."
+    "text": "Experimente agora o método folhasAleatorias.\n\nA quantidade de folhas pode ser passada por parâmetro.\n\n\nÀs vezes pode parecer que não apareceram todas as folhas.\n\nMas é que pode acontecer de duas folhas acabarem caindo na mesma célula."
   },
   {
     "objectID": "greenfoot-tutorial.html#section-3",
     "href": "greenfoot-tutorial.html#section-3",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Experimente agora colocar dois caranguejos e chamar o método Executar.\n\nOs dois caranguejos fazem a mesma coisa, pois são objetos da mesma classe.\n\n\nExperimente passar valores diferentes para o método move.\n\nVocê pode testar valores menores, maiores e até negativos.\n\n\n\nO método move faz um ator se mover para frente pela quantidade passada.\n\nUm ator sempre começa “olhando” para a direita da tela.\nPortanto, a princípio, ele se move para a direita da tela."
+    "text": "Bom, chega de ursos andando em círculos…\n\nVamos agora para outro exemplo no qual faremos algo mais interessante: programar!"
   },
   {
     "objectID": "greenfoot-tutorial.html#controle-usando-o-teclado",
     "href": "greenfoot-tutorial.html#controle-usando-o-teclado",
     "title": "Tutorial do Greenfoot",
     "section": "Controle usando o teclado",
-    "text": "Controle usando o teclado\nFica mais interessante se pudermos controlar o caranguejo.\n\npara isso, podemos usar o método estático isKeyDown da classe Greenfoot.\n\n\nPor exemplo, podemos verificar se a tecla seta para a esquerda está pressionada assim:\n\n    if (Greenfoot.isKeyDown(\"left\")) {\n        // implementamos aqui o que deve acontecer se a tecla seta para\n        // a esquerda estiver pressionada\n    }"
+    "text": "Controle usando o teclado\nFica mais interessante se pudermos controlar o caranguejo.\n\npara isso, podemos usar o método estático isKeyDown da classe Greenfoot.\n\n\nPor exemplo, podemos verificar se a tecla seta para a esquerda está pressionada assim:\n    if (Greenfoot.isKeyDown(\"left\")) {\n        // implementamos aqui o que deve acontecer \n        // se a tecla seta para a esquerda estiver \n        // pressionada\n    }"
   },
   {
     "objectID": "greenfoot-tutorial.html#section-4",
     "href": "greenfoot-tutorial.html#section-4",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Acrescente agora mais uma linha no método act, de forma que ele fique como mostrado abaixo:\n\n    move(4);\n    turn(3);\n\n\nExecute o jogo, com alguns caranguejos e veja o que acontece.\n\nExperimente passar valores diferentes para o método turn.\n\nMais uma vez, valores maiores, menores e até negativos.\n\n\n\n\nNote que o método turn gira o ator pelo ângulo passado (em graus)."
+    "text": "Abra a classe Caranguejo (clicando duas vezes na caixa da classe).\n\nVeja que a classe tem um método act (agir) vazio, por isso o caranguejo não faz nada.\nExperimente colocar o comando move(4) no método act.\n\nCompile a classe, coloque um caranguejo no mundo e clique em executar.\n\n\n\nVeja que o caranguejo se move para a direita até parar na borda do mundo.\n\nVocê pode até pausar o mundo e arrastar o caranguejo para que ele ande novamente."
   },
   {
     "objectID": "greenfoot-tutorial.html#section-5",
     "href": "greenfoot-tutorial.html#section-5",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Experimente, por exemplo, implementar o método act conforme mostrado abaixo:\n\nTeste o jogo com um e com vários caranguejos.\nUse seta para a esquerda e seta para a direita para controlar os caranguejos.\n\n\n    public void act() \n    {\n        move(4);\n        \n        if (Greenfoot.isKeyDown(\"left\")) {    \n            turn(-3);   \n        }\n        if (Greenfoot.isKeyDown(\"right\")) {    \n            turn(3);   \n        }\n    }"
+    "text": "Experimente agora colocar dois caranguejos e chamar o método Executar.\n\nOs dois caranguejos fazem a mesma coisa, pois são objetos da mesma classe.\n\n\nExperimente passar valores diferentes para o método move.\n\nVocê pode testar valores menores, maiores e até negativos."
   },
   {
     "objectID": "greenfoot-tutorial.html#opcional-controlando-um-carro",
@@ -4274,42 +4274,42 @@
     "href": "greenfoot-tutorial.html#comendo-larvas",
     "title": "Tutorial do Greenfoot",
     "section": "Comendo larvas",
-    "text": "Comendo larvas\nVamos criar uma classe para representar larvas que serão a comida dos caranguejos.\n\nPara isso clique com o botão direito na classe Actor e vá na opção Nova subclasse....\n\n\nNa janela que se abre dê o nome Larva para a classe (lembre-se de usar L maiúsculo).\n\nE escolha a imagem larva.png para representar as larvas.\nAo clicar em OK, a classe Larva aparecerá no diagrama do Greenfoot.\n\n\n\nSe abrir o código da classe verá que ela ainda não faz nada.\n\nMas nós vamos deixar assim.\nAs larvas desse jogo são preguiçosas e só ficam paradas mesmo."
+    "text": "Comendo larvas\n\nVamos criar uma classe para representar larvas que serão a comida dos caranguejos.\n\nPara isso clique com o botão direito na classe Actor e vá na opção Nova subclasse....\n\n\n\nNa janela que se abre dê o nome Larva para a classe (lembre-se de usar L maiúsculo).\n\nE escolha a imagem larva.png para representar as larvas.\nAo clicar em OK, a classe Larva aparecerá no diagrama do Greenfoot."
   },
   {
     "objectID": "greenfoot-tutorial.html#section-6",
     "href": "greenfoot-tutorial.html#section-6",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Você pode alterar os valores passados para o método turn para mudar o quanto os caranguejos giram.\n\nE pode também alterar as teclas utilizadas para controlar o caranguejo.\nVocê pode usar as letras ou caracteres para indicar as teclas (ex.: \"a\").\n\nOu os nomes das teclas (ex.: \"space\" ou \"control\").\n\n\n\nPara pensar:\n\nComo você pode tratar para que o jogo possa ser jogado tanto nas teclas de direção quanto usando as teclas ASDW?"
+    "text": "O método move faz um ator se mover para frente pela quantidade passada.\n\nUm ator sempre começa “olhando” para a direita da tela.\nPortanto, a princípio, ele se move para a direita da tela."
   },
   {
     "objectID": "greenfoot-tutorial.html#section-7",
     "href": "greenfoot-tutorial.html#section-7",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "A ideia agora é modificar a classe Caranguejo para que um caranguejo coma uma larva sempre que passar sobre ela.\n\nPara fazer isso, vamos usar o método getOneIntersectingObject.\n\nPodemos acrescentar o seguinte trecho de código ao final do método act.\n\n\n\n\n    // se o caranguejo estiver colidindo (tocando) uma larva, a larva será\n    // retornada. Se não estiver colidindo com nenhuma, o método retornará null.\n    Actor larva = getOneIntersectingObject(Larva.class);\n    // Se havia colisão com alguma larva\n    if (larva != null) {\n        // Obtemos uma referência (ponteiro) para o mundo\n        World mundo = getWorld();\n        // Removemos a larva do mundo\n        mundo.removeObject(larva);\n    }"
+    "text": "Acrescente agora mais uma linha no método act, de forma que ele fique como mostrado abaixo:\n\n    move(4);\n    turn(3);\n\n\nExecute o jogo, com alguns caranguejos e veja o que acontece.\n\nExperimente passar valores diferentes para o método turn.\n\nMais uma vez, valores maiores, menores e até negativos.\n\n\n\n\nNote que o método turn gira o ator pelo ângulo passado.\n\nO ângulo é informado em graus."
   },
   {
     "objectID": "greenfoot-tutorial.html#coesão-de-método",
     "href": "greenfoot-tutorial.html#coesão-de-método",
     "title": "Tutorial do Greenfoot",
     "section": "Coesão de método",
-    "text": "Coesão de método\nRepare que nosso método act está ficando um pouco confuso.\n\nIsso porque ele agora faz duas coisas: movimenta o caranguejo e o faz comer larvas.\n\n\nComo podemos melhorar isso?\n\nPodemos criar um método movimentar e outro tentarComer.\nLevando para esses métodos os trechos de código que hoje estão no método act.\nO método act passaria então a ter apenas duas linhas:\n\n\n\n\n    public void act() {\n        movimentar();\n        tentarComer();\n    }"
+    "text": "Coesão de método\nRepare que nosso método act está ficando um pouco confuso.\n\nIsso porque ele agora faz duas coisas: movimenta o caranguejo e o faz comer larvas.\n\n\nComo podemos melhorar isso?\n\nPodemos criar um método movimentar e outro tentarComer.\nLevando para esses métodos os trechos de código que hoje estão no método act."
   },
   {
     "objectID": "greenfoot-tutorial.html#salvando-o-mundo",
     "href": "greenfoot-tutorial.html#salvando-o-mundo",
     "title": "Tutorial do Greenfoot",
     "section": "Salvando o mundo",
-    "text": "Salvando o mundo\nVocê deve ter ficado cansado de tanto colocar caranguejos e larvas no mundo.\n\nMas nós podemos adicionar código para que isso seja feito automaticamente.\nOu melhor ainda, pedir ao Greenfoot para fazer esse código para nós.\n\n\nPara isso, faça o seguinte:\n\nAcrescente alguns caranguejos e algumas larvas no mundo.\nAntes de clicar em Executar, clique com o botão direito no mundo e acesse a opção Salvar o mundo.\n\nO Greenfoot colocará trechos de código na classe do mundo.\nQue criam e posicionam os atores nos mesmos lugares onde você tinha colocado.\nDê uma olhada no código!\n\n\n\n\nDepois disso, toda vez que o mundo for criado, ele já terá os caranguejos e as larvas como você os tinha posicionado ao salvar."
+    "text": "Salvando o mundo\nVocê deve ter ficado cansado de tanto colocar caranguejos e larvas no mundo.\n\nMas nós podemos adicionar código para que isso seja feito automaticamente.\nOu melhor ainda, pedir ao Greenfoot para fazer esse código para nós."
   },
   {
     "objectID": "greenfoot-tutorial.html#tocando-sons",
     "href": "greenfoot-tutorial.html#tocando-sons",
     "title": "Tutorial do Greenfoot",
     "section": "Tocando sons",
-    "text": "Tocando sons\nÉ bem simples tocar sons no Greenfoot.\n\nBasta que você tenha um arquivo de som na pasta sounds do seu projeto.\nE use o método estático playSound da classe Greenfoot para tocar o arquivo.\n\n\nO projeto caranguejo já tem um arquivo comendo.wav na pasta sounds.\n\nExperimente então acrescentar a linha de código abaixo na classe Caranguejo, logo após remover uma larva do mundo:\n\nGreenfoot.playSound(\"comendo.wav\");\n\nTeste o jogo!"
+    "text": "Tocando sons\nÉ bem simples tocar sons no Greenfoot.\n\nBasta que você tenha um arquivo de som na pasta sounds do seu projeto.\nE use o método estático playSound da classe Greenfoot para tocar o arquivo."
   },
   {
     "objectID": "greenfoot-tutorial.html#criando-sons",
@@ -4330,42 +4330,42 @@
     "href": "greenfoot-tutorial.html#section-8",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Altere o método act conforme mostrado no slide anterior.\n\nColoque várias larvas e vários caranguejos no mundo.\nE testes as alterações. Conseguiu capturar todas as larvas?"
+    "text": "Experimente, por exemplo, implementar o método act conforme mostrado abaixo:\n\n    public void act() \n    {\n        move(4);        \n        if (Greenfoot.isKeyDown(\"left\")) {    \n            turn(-3);   \n        }\n        if (Greenfoot.isKeyDown(\"right\")) {    \n            turn(3);   \n        }\n    }  \n\n\nTeste o jogo com um e com vários caranguejos.\n\nUse seta para a esquerda e seta para a direita para controlar os caranguejos."
   },
   {
     "objectID": "greenfoot-tutorial.html#aleatoriedade",
     "href": "greenfoot-tutorial.html#aleatoriedade",
     "title": "Tutorial do Greenfoot",
     "section": "Aleatoriedade",
-    "text": "Aleatoriedade\nBom, o jogo ainda está muito fácil. Vamos deixá-lo menos previsível.\n\nA ideia é que as lagostas possam girar a cada hora por um ângulo diferente.\nPodemos fazer isso usando o método estático getRandomNumber da classe Greenfoot.\n\nExemplo: int angulo = Greenfoot.getRandomNumber(90);.\n\nE então usamos o ângulo como parâmetro do método turn.\n\nExemplo: turn(angulo);.\n\nImplemente e teste o jogo.\n\n\nO que achou do resultado?\n\nA lagosta não é um oponente desafiador ainda, certo? :)"
+    "text": "Aleatoriedade\nBom, o jogo ainda está muito fácil.\n\nVamos deixá-lo menos previsível.\n\n\nA ideia é que as lagostas possam girar a cada hora por um ângulo diferente."
   },
   {
     "objectID": "greenfoot-tutorial.html#section-9",
     "href": "greenfoot-tutorial.html#section-9",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Veja que, com a alteração que fizemos, o código fica mais fácil de entender e de se alterar.\n\nMais adiante na disciplina aprofundaremos essa questão, ao estudarmos o conceito coesão de métodos."
+    "text": "Você pode alterar os valores passados para o método turn para mudar o quanto os caranguejos giram.\n\nE pode também alterar as teclas utilizadas para controlar o caranguejo.\nVocê pode usar as letras ou caracteres para indicar as teclas (ex.: \"a\").\n\nOu os nomes das teclas (ex.: \"space\" ou \"control\").\n\n\n\nPara pensar:\n\nComo você pode tratar para que o jogo possa ser jogado tanto nas teclas de direção quanto usando as teclas ASDW?"
   },
   {
     "objectID": "greenfoot-tutorial.html#section-10",
     "href": "greenfoot-tutorial.html#section-10",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Vamos criar uma lagosta que se move em linha reta e que pode comer caranguejos.\n\nCrie uma classe Lagosta clicando com o botão direito em Actor e depois em Nova subclasse....\nEscolha a imagem da lagosta que já existe no projeto.\n\nObs.: quando você quiser usar uma imagem que não tem no Greenfoot, basta colocá-la na pasta images do projeto.\n\n\n\nNas partes anteriores do tutorial já vimos como movimentar um ator e como remover um ator do mundo.\n\nEntão você mesmo pode implementar a ação da lagosta.\nEla deve se movimentar sempre para a direita e,\n\nSe colidir com um caranguejo, o caranguejo deve ser removido do mundo.\nPara ficar mais interessante, grave o seu próprio som e use-o quando isso acontecer."
+    "text": "Se abrir o código da classe verá que ela ainda não faz nada.\n\nMas nós vamos deixar assim.\nAs larvas desse jogo são preguiçosas e só ficam paradas mesmo."
   },
   {
     "objectID": "greenfoot-tutorial.html#section-11",
     "href": "greenfoot-tutorial.html#section-11",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Um dos problemas é que a lagosta gira toda hora, com isso ela fica só rodopiando.\n\nSeria melhor se ela virasse apenas de vez em quando.\nPodemos implementar isso, fazendo com que o método turn não seja chamado toda hora que o act é executado.\n\n\nUma das formas de fazer isso é mostrada abaixo.\n\nExperimente implementar e ver a diferença no comportamento da lagosta.\n\n\n    move(4);\n    if (Greenfoot.getRandomNumber(100) &lt; 10) {\n        int angulo = Greenfoot.getRandomNumber(90);\n        turn(angulo);\n    }"
+    "text": "A ideia agora é modificar a classe Caranguejo para que um caranguejo coma uma larva sempre que passar sobre ela.\n\nPara fazer isso, vamos usar o método getOneIntersectingObject."
   },
   {
     "objectID": "greenfoot-tutorial.html#section-12",
     "href": "greenfoot-tutorial.html#section-12",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Mas o que exatamente foi feito?\n\nVeja que o comando Greenfoot.getRandomNumber(100) retorna um número aleatório entre 0 a 99.\nSe esse método for chamado muitas vezes ele vai retornar cada numéro possível a mesma quantidade de vezes (em média).\n\nPortanto, em média, ele retorna 0 em 1% das vezes, retorna 1 em 1% das vezes e assim por diante.\nLogo, ele retorna um valor menor que 10 em 10% das vezes, certo?\n\nCom isso, a expressão do comando if (Greenfoot.getRandomNumber(100) &lt; 10), retornará true, em média, a cada 10 vezes que for chamado.\n\nIsso faz com que cada lagosta se movimente de forma diferente, girando só de vez em quando."
+    "text": "Podemos acrescentar o seguinte trecho de código ao final do método act.\n\n    // se o caranguejo estiver colidindo (tocando) uma larva, \n    // a larva será retornada. Se não estiver colidindo com \n    // nenhuma, o método retornará null.\n    Actor larva = getOneIntersectingObject(Larva.class);\n    // Se havia colisão com alguma larva\n    if (larva != null) {\n        // Obtemos uma referência (ponteiro) para o mundo\n        World mundo = getWorld();\n        // Removemos a larva do mundo\n        mundo.removeObject(larva);\n    }"
   },
   {
     "objectID": "greenfoot-tutorial.html#desafio-opcional",
@@ -4379,7 +4379,7 @@
     "href": "greenfoot-tutorial.html#section-13",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Repare que podemos deixar a lagosta ainda melhor fazendo com que ela possa girar para os dois lados.\n\nComo estamos passando sempre um número positivo, ela está girando sempre para o mesmo lado.\nComo podemos fazê-la girar para os dois lados?\n\n\nPodemos mudar a forma que o ângulo é definido:\n\nAgora teremos valores variando entre:\n\n0 - 45 = -45\ne 89 - 45 = 44.\n\n\n\n        int angulo = Greenfoot.getRandomNumber(90) - 45;"
+    "text": "Altere o método act conforme mostrado no slide anterior.\n\nColoque várias larvas e vários caranguejos no mundo.\nE testes as alterações. Conseguiu capturar todas as larvas?"
   },
   {
     "objectID": "cap5-3.html#section-12",
@@ -5282,70 +5282,70 @@
     "href": "greenfoot-tutorial.html#section-14",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Faça as últimas alterações no seu código e coloque várias lagostas e larvas, e alguns caranguejos no mundo.\n\nNão esqueça de salvar o mundo!\nJogue e veja como a lagosta é agora um inimigo bem mais desafiador.\n\n\nMas você deve ter reparado que a lagosta ainda não sabe lidar bem com as bordas do mundo.\n\nComo podemos melhorar isso?\nBasta acrescentarmos um código para que ela gire 180 graus sempre que chegar perto da borda do mundo.\n\nObs.: você pode chamar o método isAtEdge para verificar se um ator está na borda do mundo."
+    "text": "O método act passaria então a ter apenas duas linhas:\n\n\n    public void act() {\n        movimentar();\n        tentarComer();\n    }\n\n\n\nVeja que, com a alteração que fizemos, o código fica mais fácil de entender e de se alterar.\n\nMais adiante na disciplina aprofundaremos essa questão, ao estudarmos o conceito coesão de métodos."
   },
   {
     "objectID": "greenfoot-tutorial.html#section-15",
     "href": "greenfoot-tutorial.html#section-15",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "A implementação que fizemos funciona, mas não é eficiente.\n\nIsso porque, depois que o jogador vence o jogo, a cada iteração do Greenfoot, um novo texto \"Voce venceu!\" é colocado no lugar do anterior.\nSeria melhor se o texto fosse colocado apenas uma vez.\n\n\nComo podemos fazer isso?\n\nVeja que podemos criar um atributo booleano para indicar se o jogo terminou.\nE usá-lo para escrever a mensagem apenas uma vez.\n\n\n\nAltere então a classe MundoDoCaranguejo acrescentando um booleano chamado jogoTerminou.\n\nO atributo deve ser inicializado com valor false no construtor.\nE o método act deve ser alterado para utilizá-lo."
+    "text": "Vamos criar uma lagosta que se move em linha reta e que pode comer caranguejos.\n\nCrie uma classe Lagosta clicando com o botão direito em Actor e depois em Nova subclasse....\nEscolha a imagem da lagosta que já existe no projeto.\n\nObs.: quando você quiser usar uma imagem que não tem no Greenfoot, basta colocá-la na pasta images do projeto."
   },
   {
     "objectID": "greenfoot-tutorial.html#section-16",
     "href": "greenfoot-tutorial.html#section-16",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Vamos então alterar o método act como mostrado abaixo.\n\nVeja que foi acrescentado um if para que a lista de larvas só seja verificada se o jogo ainda não terminou.\nAlém disso, depois que o texto é mostrado, o booleano jogoTerminou é alterado para true.\nCom isso, o texto \"Voce venceu\" é inserido na tela uma única vez.\n\n\n    public void act() {\n        if (!jogoTerminou) {\n            List&lt;Larva&gt; larvas = getObjects(Larva.class);\n            if (larvas.size() == 0) {\n                showText(\"Voce venceu!\", 200, 300);\n                jogoTerminou = true;\n            }\n        }\n    }"
+    "text": "Nas partes anteriores do tutorial já vimos como movimentar um ator e como remover um ator do mundo.\n\nEntão você mesmo pode implementar a ação da lagosta.\n\n\nEla deve se movimentar sempre para a direita e,\n\nSe colidir com um caranguejo, o caranguejo deve ser removido do mundo.\nPara ficar mais interessante, grave o seu próprio som e use-o quando isso acontecer."
   },
   {
     "objectID": "greenfoot-tutorial.html#section-17",
     "href": "greenfoot-tutorial.html#section-17",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "A pontuação ainda não aparece, porque precisamos agora chamar o método contarPontos toda vez que o caranguejo comer uma larva.\nPara isso, altere o método act da classe Caranguejo.\n\nLocalize o trecho de código que remove a larva comida do jogo.\nLogo após a remoção da larva, chame do método contarPontos de MundoDoCaranguejo.\n\nPara isso, precisaremos obter uma referência do mundo como uma instância da classe MundoDoCaranguejo.\nIsso pode ser feito como mostrado abaixo.\n\n\n\n\n    MundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);\n    mundoCaranguejo.contarPontos();"
+    "text": "Um dos problemas é que a lagosta gira toda hora, com isso ela fica só rodopiando.\n\nSeria melhor se ela virasse apenas de vez em quando.\nPodemos implementar isso, fazendo com que o método turn não seja chamado toda hora que o act é executado."
   },
   {
     "objectID": "greenfoot-tutorial.html#section-18",
     "href": "greenfoot-tutorial.html#section-18",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Nosso primeiro passo será criar um método público na classe MundoCaranguejo\n\nque retorna qualquer uma das larvas existentes do mundo (escolhendo aleatoriamente).\n\n\n\n    public Larva buscarUmaLarva() {\n        List&lt;Larva&gt; larvas = getObjects(Larva.class);\n        if (larvas.size() &gt; 0) {\n            int posicao = Greenfoot.getRandomNumber(larvas.size());        \n            return larvas.get(posicao);\n        }\n        return null;\n    }"
+    "text": "Uma das formas de fazer isso é mostrada abaixo.\n\n\n    move(4);\n    if (Greenfoot.getRandomNumber(100) &lt; 10) {\n        int angulo = Greenfoot.getRandomNumber(90);\n        turn(angulo);\n    }\n\nExperimente implementar e ver a diferença no comportamento da lagosta."
   },
   {
     "objectID": "greenfoot-tutorial.html#exibindo-um-texto-na-tela",
     "href": "greenfoot-tutorial.html#exibindo-um-texto-na-tela",
     "title": "Tutorial do Greenfoot",
     "section": "Exibindo um texto na tela",
-    "text": "Exibindo um texto na tela\nA classe World possui um método chamado showText que permite exibir um texto em uma determinada posição da tela.\n\nO método recebe como parâmetros uma String e as coordenadas X e Y que definem o ponto central do texto.\n\n\nVamos começar então exibindo o texto Jogo do Caranguejo na tela.\n\nPara isso, altere a classe MundoDoCaranguejo acresentando a linha abaixo no final do construtor da classe.\n\n\n\n\n    showText(\"Jogo do Caranguejo\", 200, 20);\n\n\n\nVeja que o texto apareceu na parte superior da tela.\n\nExperimente posições diferentes."
+    "text": "Exibindo um texto na tela\n\nA classe World possui um método chamado showText que permite exibir um texto em uma determinada posição da tela.\n\nO método recebe como parâmetros uma String e as coordenadas X e Y que definem o ponto central do texto.\n\n\n\nVamos começar então exibindo o texto Jogo do Caranguejo na tela.\n\nPara isso, altere a classe MundoDoCaranguejo acresentando a linha abaixo no final do construtor da classe."
   },
   {
     "objectID": "greenfoot-tutorial.html#mensagem-de-vitória",
     "href": "greenfoot-tutorial.html#mensagem-de-vitória",
     "title": "Tutorial do Greenfoot",
     "section": "Mensagem de vitória",
-    "text": "Mensagem de vitória\nAgora que sabemos como exibir um texto na tela, podemos exibir uma mensagem quando o jogador vence jogo.\n\nNo nosso jogo, a vitória acontece quando todas as larvas são devoradas.\n\n\nMas como saber se ainda existem larvas?\n\nA classe World possui um método chamado getObjects que permite consultar os objetos de uma determinada classe que estão presentes no mundo naquele momento.\nPortanto, se usarmos getObjects(Larva.class) vamos obter uma lista com as larvas que estão no mundo.\nSe a lista estiver vazia significa que jogador venceu o jogo.\n\n\n\nMas nós precisamos verificar a todo momento se as larvas já acabaram, certo?\n\nComo fazer isso?"
+    "text": "Mensagem de vitória\nAgora que sabemos como exibir um texto na tela, podemos exibir uma mensagem quando o jogador vence jogo.\n\nNo nosso jogo, a vitória acontece quando todas as larvas são devoradas.\n\n\nMas como saber se ainda existem larvas?"
   },
   {
     "objectID": "greenfoot-tutorial.html#mensagem-de-vitória-1",
     "href": "greenfoot-tutorial.html#mensagem-de-vitória-1",
     "title": "Tutorial do Greenfoot",
     "section": "Mensagem de vitória",
-    "text": "Mensagem de vitória\nPodemos implementar um método act na classe MundoDoCaranguejo com a mesma assinatura dos métodos das classes de atores.\n\nEsse método também é chamado a cada iteração do Greenfoot.\nPortanto, para tratar a mensagem de vitória, basta verificarmos se ainda existe larva dentro desse método.\n\n\nNós vamos então implementar o método como mostrado abaixo.\n\nMas, para ele compilar, precisaremos importar a classe List.\n\nPodemos fazer isso acrescentado import java.util.List; no início do arquivo.\n\n\n\n    public void act() {\n        List&lt;Larva&gt; larvas = getObjects(Larva.class);\n        if (larvas.size() == 0) {\n            showText(\"Voce venceu!\", 200, 300);\n        }\n    }"
+    "text": "Mensagem de vitória\nA classe World possui um método chamado getObjects\n\nque permite consultar os objetos de uma determinada classe que estão presentes no mundo naquele momento.\nPortanto, se usarmos getObjects(Larva.class) vamos obter uma lista com as larvas que estão no mundo.\nSe a lista estiver vazia significa que jogador venceu o jogo.\n\n\nMas nós precisamos verificar a todo momento se as larvas já acabaram, certo?\n\nComo fazer isso?"
   },
   {
     "objectID": "greenfoot-tutorial.html#section-19",
     "href": "greenfoot-tutorial.html#section-19",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Nós podemos agora chamar o método que criamos na classe Aranha para definir qual larva ela vai perseguir.\n\nPor enquanto vamos apenas guardar qual é a larva-alvo.\n\n\nAltere então a classe Aranha da seguinte forma:\n\nCrie um atributo do tipo Larva chamado larvaAlvo.\nAltere o método act para chamar o método buscarUmaLarva da classe MundoDoCaranguejo.\n\n\n\n\n    MundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);\n    larvaAlvo = mundoCaranguejo.buscarUmaLarva();\n\n\n\nPrecisamos testar se o nosso método funciona, para isso faça o seguinte:\n\nInicie o jogo e, em seguida, clique em Pausar.\nClique com o botão direito em uma aranha e acesse a opção Inspecionar.\nVerifique o valor do atributo larvaAlvo clicando na seta.\n\nDeve aparecer então as coordenadas da larva que foi definida como alvo."
+    "text": "Mas o que exatamente foi feito?\n\nVeja que o comando Greenfoot.getRandomNumber(100) retorna um número aleatório entre 0 a 99.\nSe esse método for chamado muitas vezes ele vai retornar cada numéro possível a mesma quantidade de vezes (em média).\n\nPortanto, em média, ele retorna 0 em 1% das vezes, retorna 1 em 1% das vezes e assim por diante.\nLogo, ele retorna um valor menor que 10 em 10% das vezes, certo?"
   },
   {
     "objectID": "greenfoot-tutorial.html#section-20",
     "href": "greenfoot-tutorial.html#section-20",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Nosso próximo passo é então fazer com que a aranha se vire na direção da larva alvo.\n\nParece que basta acrescentar o trecho de código abaixo ao final do método act.\n\n\n\n    public void act()\n    {\n        move(2);\n        tentarComer();\n        if (larvaAlvo != null) {\n            turnTowards(larvaAlvo.getX(), larvaAlvo.getY());\n        }\n    }\n\n\n\nFuncionou?\n\nNão né? O problema é que estamos escolhendo uma nova larva-alvo a cada iteração do Greenfoot.\n\nCom isso a aranha fica girando sem sentido.\n\nComo podemos resolver?"
+    "text": "Com isso, a expressão do comando if (Greenfoot.getRandomNumber(100) &lt; 10), retornará true, em média, a cada 10 vezes que for chamado.\n\nIsso faz com que cada lagosta se movimente de forma diferente, girando só de vez em quando."
   },
   {
     "objectID": "greenfoot-tutorial.html#game-over",
@@ -5366,7 +5366,7 @@
     "href": "greenfoot-tutorial.html#tamanho-do-mundo",
     "title": "Tutorial do Greenfoot",
     "section": "Tamanho do mundo",
-    "text": "Tamanho do mundo\nA cada passo nosso jogo terá mais personagens.\n\nPode ser interessante então criar um mundo de tamanho maior, aproveitando a resolução disponível na tela do computador.\n\n\nPara alterar o tamanho do mundo, faça o seguinte:\n\nLocalize o construtor da classe MundoDoCaranguejo.\nAltere os dois primeiros parâmetros da chamada super usando, por exemplo, 800 de largura e 600 de altura.\nReinicie o jogo e teste.\n\n\n\nAgora você tem mais espaço para projetar seu jogo 😉"
+    "text": "Tamanho do mundo\nA cada passo nosso jogo terá mais personagens.\n\nPode ser interessante então criar um mundo de tamanho maior,\naproveitando a resolução disponível na tela do computador."
   },
   {
     "objectID": "greenfoot-tutorial.html#criando-aranhas-comedoras-de-larvas",
@@ -5387,21 +5387,21 @@
     "href": "greenfoot-tutorial.html#section-21",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "O que precisamos é manter o alvo e só mudar quando a larva for devorada\n\nseja pela aranha, seja pelos caranguejos.\n\n\nPodemos fazer isso com a seguite implementação no método act\n    public void act()\n    {\n        move(2);\n        tentarComer();\n\n        // se já tem uma larva definida como alvo\n        if (larvaAlvo != null) {\n            // e ela ainda não foi devorada\n            if (larvaAlvo.getWorld() != null) {\n                // a aranha se vira na direção dela\n                turnTowards(larvaAlvo.getX(), larvaAlvo.getY());\n            }\n            else { // se a larva já foi devorada\n                // reinicializamos o atributo para definir um novo alvo\n                larvaAlvo = null;\n            }\n        }\n        // se NÃO tem uma larva definida com o alvo\n        if (larvaAlvo == null) {\n            // definimos uma obtendo-a do mundo\n            MundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);\n            larvaAlvo = mundoCaranguejo.buscarUmaLarva();\n        }\n    }"
+    "text": "Repare que podemos deixar a lagosta ainda melhor fazendo com que ela possa girar para os dois lados.\n\nComo estamos passando sempre um número positivo, ela está girando sempre para o mesmo lado.\nComo podemos fazê-la girar para os dois lados?"
   },
   {
     "objectID": "greenfoot-tutorial.html#section-22",
     "href": "greenfoot-tutorial.html#section-22",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Para desenvolver jogos no Greenfoot é importanter ter uma ideia do que ele é capaz de fazer.\n\nUma boa maneira de fazer isso é consultando a sua documentação.\n\n\nVocê pode acessar a documentação do Greenfoot através do menu:\n\nAjuda → Documentação de Classe Greenfoot.\n\n\n\nSerá exibida a documentação em HTML das classes disponíveis do Greenfoot.\n\nComo Actor, Font, Greenfoot, GreenfootImage e World.\nVocê pode clicar em uma classe e verificar os métodos que estão disponíveis.\n\n\n\nVocê também podem acessar diretamente a documentação das classes Actor e World clicando nas caixas com esses nomes no painel direito do Greenfoot."
+    "text": "Podemos mudar a forma que o ângulo é definido:\n\n        int angulo = Greenfoot.getRandomNumber(90) - 45;\n\n\nAgora teremos valores variando entre:\n\n0 - 45 = -45\ne 89 - 45 = 44."
   },
   {
     "objectID": "greenfoot-tutorial.html#section-23",
     "href": "greenfoot-tutorial.html#section-23",
     "title": "Tutorial do Greenfoot",
     "section": "",
-    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa aula e envie o código do projeto greenfoot-caranguejo da forma que ficou após as suas alterações (compacte a pasta do projeto em um arquivo .zip para enviar)."
+    "text": "Faça as últimas alterações no seu código e coloque várias lagostas e larvas, e alguns caranguejos no mundo.\n\nNão esqueça de salvar o mundo!\nJogue e veja como a lagosta é agora um inimigo bem mais desafiador."
   },
   {
     "objectID": "cap5-3.html#section-2",
@@ -7439,5 +7439,180 @@
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
     "text": "Em resumo:\n\nAtributos deveriam ser sempre privados!\n\n\n\n\n\n\nConceito\n\n\nEncapsulamento (ou ocultamento de informações) é um princípio que define que os detalhes internos da implementação de uma classe deveriam ser ocultados das outras classes. Isso permite uma melhor modularização de uma aplicação."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-24",
+    "href": "greenfoot-tutorial.html#section-24",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Você deve ter reparado que a lagosta ainda não sabe lidar bem com as bordas do mundo.\n\nComo podemos melhorar isso?\nBasta acrescentarmos um código para que ela gire 180 graus sempre que chegar perto da borda do mundo.\n\n\nVocê pode chamar o método isAtEdge para verificar se um ator está na borda do mundo."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-25",
+    "href": "greenfoot-tutorial.html#section-25",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "showText(\"Jogo do Caranguejo\", 200, 20);\n\n\nVeja que o texto apareceu na parte superior da tela.\n\nExperimente posições diferentes."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#fazendo-objetos-agirem-1",
+    "href": "greenfoot-tutorial.html#fazendo-objetos-agirem-1",
+    "title": "Tutorial do Greenfoot",
+    "section": "Fazendo objetos agirem",
+    "text": "Fazendo objetos agirem\nExperimente criar dois ursos e clicar de novo no botão Executar uma vez.\n\nOs dois ursos vão se mover.\n\n\nUrsos também comem folhas.\n\nExperimente colocar uma folha na frente de um urso e clicar no botão Executar uma vez."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#chamando-métodos-diretamente",
+    "href": "greenfoot-tutorial.html#chamando-métodos-diretamente",
+    "title": "Tutorial do Greenfoot",
+    "section": "Chamando métodos diretamente",
+    "text": "Chamando métodos diretamente\nEm vez de executar todo o cenário, você pode chamar métodos para cada objeto separadamente.\n\nExperimente clicar em um urso colocado no mundo.\nVocê verá as opções de chamar os métodos, da mesma forma que vemos no BlueJ.\n\n\nExperimente chamar o método virarAEsquerda para algum urso.\n\nE depois o método mover."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#chamando-métodos-diretamente-1",
+    "href": "greenfoot-tutorial.html#chamando-métodos-diretamente-1",
+    "title": "Tutorial do Greenfoot",
+    "section": "Chamando métodos diretamente",
+    "text": "Chamando métodos diretamente\nRepare que há um método chamado act.\n\nÉ este método que é chamado toda vez que clicamos no botão Executar uma vez."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#criando-um-novo-mundo",
+    "href": "greenfoot-tutorial.html#criando-um-novo-mundo",
+    "title": "Tutorial do Greenfoot",
+    "section": "Criando um novo mundo",
+    "text": "Criando um novo mundo\nVocê pode recomeçar tudo, criando um novo mundo.\n\nPara isso use o obtão Reiniciar.\nO objeto do mundo será descartado\n\njunto com os objetos adicionados nele.\n\nE um novo mundo será criado.\n\n\nObs.: no Greenfoot só pode existir um mundo ativo por vez."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#só-para-os-curiosos-1",
+    "href": "greenfoot-tutorial.html#só-para-os-curiosos-1",
+    "title": "Tutorial do Greenfoot",
+    "section": "Só para os curiosos",
+    "text": "Só para os curiosos\nMas, para os curiosos, vai aqui um spoiler:\n\nO método move (e outros que usaremos da mesma forma) está definido na classe Actor.\nA classe Caranguejo é uma subclasse de Actor.\n\nIsso significa que ela herda os métodos da classe Actor.\nE assim, podemos chamar os métodos da classe Actor dentro da classe Caranguejo como se eles estivessem definidos na própria classe Caranguejo."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-26",
+    "href": "greenfoot-tutorial.html#section-26",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "A implementação que fizemos funciona, mas não é eficiente.\n\nIsso porque, depois que o jogador vence o jogo, a cada iteração do Greenfoot, um novo texto \"Voce venceu!\" é colocado no lugar do anterior.\nSeria melhor se o texto fosse colocado apenas uma vez.\n\n\nComo podemos fazer isso?\n\nVeja que podemos criar um atributo booleano para indicar se o jogo terminou.\nE usá-lo para escrever a mensagem apenas uma vez."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-27",
+    "href": "greenfoot-tutorial.html#section-27",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Altere então a classe MundoDoCaranguejo acrescentando um booleano chamado jogoTerminou.\n\nO atributo deve ser inicializado com valor false no construtor.\nE o método act deve ser alterado para utilizá-lo."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-28",
+    "href": "greenfoot-tutorial.html#section-28",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Vamos então alterar o método act como mostrado abaixo.\n\nVeja que foi acrescentado um if para que a lista de larvas só seja verificada se o jogo ainda não terminou.\nAlém disso, depois que o texto é mostrado, o booleano jogoTerminou é alterado para true.\nCom isso, o texto \"Voce venceu\" é inserido na tela uma única vez.\n\n\n    public void act() {\n        if (!jogoTerminou) {\n            List&lt;Larva&gt; larvas = getObjects(Larva.class);\n            if (larvas.size() == 0) {\n                showText(\"Voce venceu!\", 200, 300);\n                jogoTerminou = true;\n            }\n        }\n    }"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-29",
+    "href": "greenfoot-tutorial.html#section-29",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "A pontuação ainda não aparece, porque precisamos agora chamar o método contarPontos toda vez que o caranguejo comer uma larva.\nPara isso, altere o método act da classe Caranguejo.\n\nLocalize o trecho de código que remove a larva comida do jogo.\nLogo após a remoção da larva, chame do método contarPontos de MundoDoCaranguejo.\n\nPara isso, precisaremos obter uma referência do mundo como uma instância da classe MundoDoCaranguejo.\nIsso pode ser feito como mostrado abaixo.\n\n\n\n\n    MundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);\n    mundoCaranguejo.contarPontos();"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#tamanho-do-mundo-1",
+    "href": "greenfoot-tutorial.html#tamanho-do-mundo-1",
+    "title": "Tutorial do Greenfoot",
+    "section": "Tamanho do mundo",
+    "text": "Tamanho do mundo\nPara alterar o tamanho do mundo, faça o seguinte:\n\nLocalize o construtor da classe MundoDoCaranguejo.\nAltere os dois primeiros parâmetros da chamada super usando, por exemplo, 800 de largura e 600 de altura.\nReinicie o jogo e teste.\n\n\nAgora você tem mais espaço para projetar seu jogo 😉"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#salvando-o-mundo-1",
+    "href": "greenfoot-tutorial.html#salvando-o-mundo-1",
+    "title": "Tutorial do Greenfoot",
+    "section": "Salvando o mundo",
+    "text": "Salvando o mundo\nPara isso, faça o seguinte:\n\nAcrescente alguns caranguejos e algumas larvas no mundo.\nAntes de clicar em Executar, clique com o botão direito no mundo e acesse a opção Salvar o mundo.\n\nO Greenfoot colocará trechos de código na classe do mundo.\nQue criam e posicionam os atores nos mesmos lugares onde você tinha colocado.\nDê uma olhada no código!"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#salvando-o-mundo-2",
+    "href": "greenfoot-tutorial.html#salvando-o-mundo-2",
+    "title": "Tutorial do Greenfoot",
+    "section": "Salvando o mundo",
+    "text": "Salvando o mundo\nDepois disso, toda vez que o mundo for criado,\n\nele já terá os caranguejos e as larvas como você os tinha posicionado ao salvar."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#tocando-sons-1",
+    "href": "greenfoot-tutorial.html#tocando-sons-1",
+    "title": "Tutorial do Greenfoot",
+    "section": "Tocando sons",
+    "text": "Tocando sons\nO projeto caranguejo já tem um arquivo comendo.wav na pasta sounds.\n\nExperimente então acrescentar a linha de código abaixo na classe Caranguejo, logo após remover uma larva do mundo:\n\nGreenfoot.playSound(\"comendo.wav\");\n\nTeste o jogo!"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#aleatoriedade-1",
+    "href": "greenfoot-tutorial.html#aleatoriedade-1",
+    "title": "Tutorial do Greenfoot",
+    "section": "Aleatoriedade",
+    "text": "Aleatoriedade\nPodemos fazer isso usando o método estático getRandomNumber da classe Greenfoot.\n\nExemplo: int angulo = Greenfoot.getRandomNumber(90);.\n\n\nE então usamos o ângulo como parâmetro do método turn. - Exemplo: turn(angulo);.\n\n\nImplemente e teste o jogo."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#aleatoriedade-2",
+    "href": "greenfoot-tutorial.html#aleatoriedade-2",
+    "title": "Tutorial do Greenfoot",
+    "section": "Aleatoriedade",
+    "text": "Aleatoriedade\nO que achou do resultado?\n\nA lagosta não é um oponente desafiador ainda, certo? :)"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-30",
+    "href": "greenfoot-tutorial.html#section-30",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Nosso primeiro passo será criar um método público na classe MundoCaranguejo\n\nque retorna qualquer uma das larvas existentes do mundo (escolhendo aleatoriamente).\n\n\n\n    public Larva buscarUmaLarva() {\n        List&lt;Larva&gt; larvas = getObjects(Larva.class);\n        if (larvas.size() &gt; 0) {\n            int posicao = Greenfoot.getRandomNumber(larvas.size());        \n            return larvas.get(posicao);\n        }\n        return null;\n    }"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-31",
+    "href": "greenfoot-tutorial.html#section-31",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Nós podemos agora chamar o método que criamos na classe Aranha para definir qual larva ela vai perseguir.\n\nPor enquanto vamos apenas guardar qual é a larva-alvo.\n\n\nAltere então a classe Aranha da seguinte forma:\n\nCrie um atributo do tipo Larva chamado larvaAlvo.\nAltere o método act para chamar o método buscarUmaLarva da classe MundoDoCaranguejo.\n\n\n\n\n    MundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);\n    larvaAlvo = mundoCaranguejo.buscarUmaLarva();\n\n\n\nPrecisamos testar se o nosso método funciona, para isso faça o seguinte:\n\nInicie o jogo e, em seguida, clique em Pausar.\nClique com o botão direito em uma aranha e acesse a opção Inspecionar.\nVerifique o valor do atributo larvaAlvo clicando na seta.\n\nDeve aparecer então as coordenadas da larva que foi definida como alvo."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-32",
+    "href": "greenfoot-tutorial.html#section-32",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Nosso próximo passo é então fazer com que a aranha se vire na direção da larva alvo.\n\nParece que basta acrescentar o trecho de código abaixo ao final do método act.\n\n\n\n    public void act()\n    {\n        move(2);\n        tentarComer();\n        if (larvaAlvo != null) {\n            turnTowards(larvaAlvo.getX(), larvaAlvo.getY());\n        }\n    }\n\n\n\nFuncionou?\n\nNão né? O problema é que estamos escolhendo uma nova larva-alvo a cada iteração do Greenfoot.\n\nCom isso a aranha fica girando sem sentido.\n\nComo podemos resolver?"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-33",
+    "href": "greenfoot-tutorial.html#section-33",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "O que precisamos é manter o alvo e só mudar quando a larva for devorada\n\nseja pela aranha, seja pelos caranguejos.\n\n\nPodemos fazer isso com a seguite implementação no método act\n    public void act()\n    {\n        move(2);\n        tentarComer();\n\n        // se já tem uma larva definida como alvo\n        if (larvaAlvo != null) {\n            // e ela ainda não foi devorada\n            if (larvaAlvo.getWorld() != null) {\n                // a aranha se vira na direção dela\n                turnTowards(larvaAlvo.getX(), larvaAlvo.getY());\n            }\n            else { // se a larva já foi devorada\n                // reinicializamos o atributo para definir um novo alvo\n                larvaAlvo = null;\n            }\n        }\n        // se NÃO tem uma larva definida com o alvo\n        if (larvaAlvo == null) {\n            // definimos uma obtendo-a do mundo\n            MundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);\n            larvaAlvo = mundoCaranguejo.buscarUmaLarva();\n        }\n    }"
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-34",
+    "href": "greenfoot-tutorial.html#section-34",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Para desenvolver jogos no Greenfoot é importanter ter uma ideia do que ele é capaz de fazer.\n\nUma boa maneira de fazer isso é consultando a sua documentação.\n\n\nVocê pode acessar a documentação do Greenfoot através do menu:\n\nAjuda → Documentação de Classe Greenfoot.\n\n\n\nSerá exibida a documentação em HTML das classes disponíveis do Greenfoot.\n\nComo Actor, Font, Greenfoot, GreenfootImage e World.\nVocê pode clicar em uma classe e verificar os métodos que estão disponíveis.\n\n\n\nVocê também podem acessar diretamente a documentação das classes Actor e World clicando nas caixas com esses nomes no painel direito do Greenfoot."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#section-35",
+    "href": "greenfoot-tutorial.html#section-35",
+    "title": "Tutorial do Greenfoot",
+    "section": "",
+    "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa aula e envie o código do projeto greenfoot-caranguejo da forma que ficou após as suas alterações (compacte a pasta do projeto em um arquivo .zip para enviar)."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#mensagem-de-vitória-2",
+    "href": "greenfoot-tutorial.html#mensagem-de-vitória-2",
+    "title": "Tutorial do Greenfoot",
+    "section": "Mensagem de vitória",
+    "text": "Mensagem de vitória\nPodemos implementar um método act na classe MundoDoCaranguejo\n\ncom a mesma assinatura dos métodos das classes de atores.\n\n\nEsse método também é chamado a cada iteração do Greenfoot.\n\nPortanto, para tratar a mensagem de vitória, basta verificarmos se ainda existe larva dentro desse método."
+  },
+  {
+    "objectID": "greenfoot-tutorial.html#mensagem-de-vitória-3",
+    "href": "greenfoot-tutorial.html#mensagem-de-vitória-3",
+    "title": "Tutorial do Greenfoot",
+    "section": "Mensagem de vitória",
+    "text": "Mensagem de vitória\nNós vamos então implementar o método act como mostrado abaixo.\n\nMas, para ele compilar, precisaremos importar a classe List.\nPodemos fazer isso acrescentado import java.util.List; no início do arquivo.\n\n    public void act() {\n        List&lt;Larva&gt; larvas = getObjects(Larva.class);\n        if (larvas.size() == 0) {\n            showText(\"Voce venceu!\", 200, 300);\n        }\n    }"
   }
 ]
