@@ -1025,12 +1025,6 @@
 <section id="section-28" class="slide level2">
 <h2></h2>
 <p>Vamos então alterar o método <code>act</code> como mostrado abaixo.</p>
-<ul>
-<li class="fragment">Veja que foi acrescentado um <code>if</code> para que a lista de larvas só seja verificada se o jogo ainda não terminou.</li>
-<li class="fragment">Além disso, depois que o texto é mostrado, o booleano <code>jogoTerminou</code> é alterado para <code>true</code>.</li>
-<li class="fragment">Com isso, o texto <code>"Voce venceu"</code> é inserido na tela uma única vez.</li>
-</ul>
-<div class="halfincfontsize">
 <div class="sourceCode" id="cb10" data-code-line-numbers="2,6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">act</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb10-2"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(!</span>jogoTerminou<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb10-3"><a aria-hidden="true" tabindex="-1"></a>            <span class="bu">List</span><span class="op">&lt;</span>Larva<span class="op">&gt;</span> larvas <span class="op">=</span> <span class="fu">getObjects</span><span class="op">(</span>Larva<span class="op">.</span><span class="fu">class</span><span class="op">);</span></span>
@@ -1040,15 +1034,26 @@
 <span id="cb10-7"><a aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
 <span id="cb10-8"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
 <span id="cb10-9"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<ul>
+<li class="fragment">Veja que foi acrescentado um <code>if</code> para que a lista de larvas só seja verificada se o jogo ainda não terminou.</li>
+<li class="fragment">Além disso, depois que o texto é mostrado, o booleano <code>jogoTerminou</code> é alterado para <code>true</code>.</li>
+<li class="fragment">Com isso, o texto <code>"Voce venceu"</code> é inserido na tela uma única vez.</li>
+</ul>
 </section>
 <section id="game-over" class="slide level2">
 <h2>Game Over!</h2>
-<p>Baseado no que fizemos para a mensagem de vitória, exiba a mensagem <code>"Game Over!"</code> quando todos os caranguejos forem comidos pelas lagostas.</p>
-<ul>
-<li class="fragment">Veja que basta seguirmos a mesma ideia, mas agora verificando se ainda existem caranguejos em vez de larvas.</li>
-</ul>
 <div class="fragment">
+<p>Baseado no que fizemos para a mensagem de vitória,</p>
+<ul>
+<li class="fragment">exiba a mensagem <code>"Game Over!"</code> quando todos os caranguejos forem comidos pelas lagostas.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Veja que basta seguirmos a mesma ideia, mas agora verificando se ainda existem caranguejos em vez de larvas.</p>
+</div>
+</section>
+<section id="game-over-1" class="slide level2">
+<h2>Game Over!</h2>
 <div class="sourceCode" id="cb11" data-code-line-numbers="9-14"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">act</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb11-2"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(!</span>jogoTerminou<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a>            <span class="co">// verificando vitoria</span></span>
@@ -1065,7 +1070,6 @@
 <span id="cb11-14"><a aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
 <span id="cb11-15"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
 <span id="cb11-16"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section></section>
 <section>
 <section id="parte-7-tratando-pontuação" class="title-slide slide level1 center" data-background-color="#40666e">
@@ -1084,14 +1088,15 @@
 <li class="fragment">Chamar esse método toda vez que um caranguejo comer uma larva.</li>
 <li class="fragment">E exibir a pontuação na tela, sempre que ela for alterada.</li>
 </ul>
-<div class="fragment">
+</section>
+<section id="section-29" class="slide level2">
+<h2></h2>
 <p>Altere então a classe <code>MundoDoCaranguejo</code> incluindo um atributo inteiro chamado <code>pontos</code>.</p>
-</div>
 <div class="fragment">
 <p>Em seguida, crie um método público chamado <code>contarPontos</code> que:</p>
 <ul>
 <li class="fragment">acrescenta 10 unidades ao atributo <code>pontos</code>;</li>
-<li class="fragment">e exibe na tela o placar atualizado, utilizando o método <code>showText</code></li>
+<li class="fragment">e exibe na tela o placar atualizado, utilizando o método <code>showText</code>:</li>
 </ul>
 </div>
 <div class="fragment">
@@ -1100,9 +1105,15 @@
 </div>
 </div>
 </section>
-<section id="section-29" class="slide level2">
+<section id="section-30" class="slide level2">
 <h2></h2>
-<p>A pontuação ainda não aparece, porque precisamos agora chamar o método <code>contarPontos</code> toda vez que o caranguejo comer uma larva.</p>
+<p>A pontuação ainda não aparece,</p>
+<ul>
+<li class="fragment">porque precisamos agora chamar o método <code>contarPontos</code> toda vez que o caranguejo comer uma larva.</li>
+</ul>
+</section>
+<section id="section-31" class="slide level2">
+<h2></h2>
 <p>Para isso, altere o método <code>act</code> da classe <code>Caranguejo</code>.</p>
 <ul>
 <li class="fragment">Localize o trecho de código que remove a larva comida do jogo.</li>
@@ -1113,10 +1124,8 @@
 </ul></li>
 </ul>
 <div class="fragment">
-<div class="halfincfontsize">
 <div class="sourceCode" id="cb13"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a>    MundoDoCaranguejo mundoCaranguejo <span class="op">=</span> <span class="fu">getWorldOfType</span><span class="op">(</span>MundoDoCaranguejo<span class="op">.</span><span class="fu">class</span><span class="op">);</span></span>
 <span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a>    mundoCaranguejo<span class="op">.</span><span class="fu">contarPontos</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </div>
 </section></section>
 <section>
@@ -1126,27 +1135,36 @@
 </section>
 <section id="criando-aranhas-comedoras-de-larvas" class="slide level2">
 <h2>Criando aranhas comedoras de larvas</h2>
-<p>A ideia agora é criar aranhas que também comam larvas, e assim dificultem a vida do jogador na obteção de uma boa pontuação.</p>
-<ul>
-<li class="fragment">Num primeiro passo, vamos fazer uma versão simplificada da aranha.</li>
-<li class="fragment">Ela sempre andará para frente e comerá uma larva se der sorte de ter uma no caminho dela.</li>
-</ul>
 <div class="fragment">
-<p>Crie então uma classe <code>Aranha</code> de forma similar ao que fizemos antes.</p>
+<p>A ideia agora é criar aranhas que também comam larvas,</p>
 <ul>
-<li class="fragment">No método <code>act</code> da classe faça a aranha movimentar (com <code>move(2)</code>);</li>
-<li class="fragment">e faça com que ela coma uma larva se tocar nela
-<ul>
-<li class="fragment">(com o mesmo código que usamos para os caranguejos).</li>
-</ul></li>
+<li class="fragment">e assim dificultem a vida do jogador na obteção de uma boa pontuação.</li>
 </ul>
 </div>
+<div class="fragment">
+<p>Num primeiro passo, vamos fazer uma versão simplificada da aranha.</p>
+<ul>
+<li class="fragment">Ela sempre andará para frente e comerá uma larva se der sorte de ter uma no caminho dela.</li>
+</ul>
+</div>
+</section>
+<section id="section-32" class="slide level2">
+<h2></h2>
+<p>Crie então uma classe <code>Aranha</code> de forma similar ao que fizemos antes.</p>
+<ul>
+<li class="fragment">No método <code>act</code> da classe faça a aranha movimentar, com <code>move(2)</code>.</li>
+<li class="fragment">e faça com que ela coma uma larva se tocar nela
+<ul>
+<li class="fragment">(com o mesmo tipo de código que usamos para os caranguejos).</li>
+</ul></li>
+</ul>
 <div class="fragment">
 <p>Posicione uma ou mais aranhas à esquerda de algumas larvas e teste o jogo.</p>
 </div>
 </section>
 <section id="tornando-as-aranhas-mais-espertas" class="slide level2">
 <h2>Tornando as aranhas mais espertas</h2>
+<div class="fragment">
 <p>Poderíamos deixar o jogo mais imprevisível se as aranhas se movimentassem aleatoriamente como as lagotas.</p>
 <ul>
 <li class="fragment">Mas podemos fazer algo ainda mais interessante:
@@ -1154,25 +1172,26 @@
 <li class="fragment">Fazer com que as aranhas caminhem em direção às larvas de forma automática.</li>
 </ul></li>
 </ul>
-<div class="fragment">
+</div>
+</section>
+<section id="section-33" class="slide level2">
+<h2></h2>
 <p>Nós podemos fazer isso usando o método <code>turnTowards</code>.</p>
 <ul>
 <li class="fragment">Esse método vira um ator na direção das coordenadas passadas por parâmetro.</li>
 <li class="fragment">Portanto, se passarmos as coordenadas de uma larva, a aranha se movimentará em direção a ela.</li>
 </ul>
-</div>
 <div class="fragment">
 <p>Nós precisamos então ter uma maneira de identificar uma larva que seja o alvo da aranha.</p>
 </div>
 </section>
-<section id="section-30" class="slide level2">
+<section id="section-34" class="slide level2">
 <h2></h2>
 <p>Nosso primeiro passo será criar um método público na classe <code>MundoCaranguejo</code></p>
 <ul>
 <li class="fragment">que retorna qualquer uma das larvas existentes do mundo (escolhendo aleatoriamente).</li>
 </ul>
 <div class="fragment">
-<div class="halfincfontsize">
 <div class="sourceCode" id="cb14"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> Larva <span class="fu">buscarUmaLarva</span><span class="op">()</span> <span class="op">{</span></span>
 <span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a>        <span class="bu">List</span><span class="op">&lt;</span>Larva<span class="op">&gt;</span> larvas <span class="op">=</span> <span class="fu">getObjects</span><span class="op">(</span>Larva<span class="op">.</span><span class="fu">class</span><span class="op">);</span></span>
 <span id="cb14-3"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>larvas<span class="op">.</span><span class="fu">size</span><span class="op">()</span> <span class="op">&gt;</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
@@ -1182,9 +1201,8 @@
 <span id="cb14-7"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">null</span><span class="op">;</span></span>
 <span id="cb14-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
 </section>
-<section id="section-31" class="slide level2">
+<section id="section-35" class="slide level2">
 <h2></h2>
 <p>Nós podemos agora chamar o método que criamos na classe <code>Aranha</code> para definir qual larva ela vai perseguir.</p>
 <ul>
@@ -1198,12 +1216,12 @@
 </ul>
 </div>
 <div class="fragment">
-<div class="halfincfontsize">
 <div class="sourceCode" id="cb15"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a>    MundoDoCaranguejo mundoCaranguejo <span class="op">=</span> <span class="fu">getWorldOfType</span><span class="op">(</span>MundoDoCaranguejo<span class="op">.</span><span class="fu">class</span><span class="op">);</span></span>
 <span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a>    larvaAlvo <span class="op">=</span> mundoCaranguejo<span class="op">.</span><span class="fu">buscarUmaLarva</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div class="fragment">
+</section>
+<section id="section-36" class="slide level2">
+<h2></h2>
 <p>Precisamos testar se o nosso método funciona, para isso faça o seguinte:</p>
 <ul>
 <li class="fragment">Inicie o jogo e, em seguida, clique em <code>Pausar</code>.</li>
@@ -1213,16 +1231,14 @@
 <li class="fragment">Deve aparecer então as coordenadas da larva que foi definida como alvo.</li>
 </ul></li>
 </ul>
-</div>
 </section>
-<section id="section-32" class="slide level2">
+<section id="section-37" class="slide level2">
 <h2></h2>
 <p>Nosso próximo passo é então fazer com que a aranha se vire na direção da larva alvo.</p>
 <ul>
 <li class="fragment">Parece que basta acrescentar o trecho de código abaixo ao final do método <code>act</code>.</li>
 </ul>
 <div class="fragment">
-<div class="halfincfontsize">
 <div class="sourceCode" id="cb16" data-code-line-numbers="5-6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">act</span><span class="op">()</span></span>
 <span id="cb16-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
 <span id="cb16-3"><a aria-hidden="true" tabindex="-1"></a>        <span class="fu">move</span><span class="op">(</span><span class="dv">2</span><span class="op">);</span></span>
@@ -1232,58 +1248,63 @@
 <span id="cb16-7"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
 <span id="cb16-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
 <div class="fragment">
 <p>Funcionou?</p>
-<ul>
-<li class="fragment">Não né? O problema é que estamos escolhendo uma nova larva-alvo a cada iteração do Greenfoot.
-<ul>
-<li class="fragment">Com isso a aranha fica girando sem sentido.</li>
-</ul></li>
-<li class="fragment">Como podemos resolver?</li>
-</ul>
 </div>
 </section>
-<section id="section-33" class="slide level2">
+<section id="section-38" class="slide level2">
 <h2></h2>
-<p>O que precisamos é manter o alvo e só mudar quando a larva for devorada</p>
+<p>Não funcionou, né?</p>
+<ul>
+<li class="fragment">O problema é que estamos escolhendo uma nova larva-alvo a cada iteração do Greenfoot.</li>
+<li class="fragment">Com isso a aranha fica girando sem sentido.</li>
+</ul>
+<div class="fragment">
+<p>Como podemos resolver?</p>
+</div>
+</section>
+<section id="section-39" class="slide level2">
+<h2></h2>
+<p>O que precisamos é manter o mesmo alvo e só mudá-lo quando a larva for devorada.</p>
 <ul>
 <li class="fragment">seja pela aranha, seja pelos caranguejos.</li>
 </ul>
 <div class="fragment">
-<p>Podemos fazer isso com a seguite implementação no método <code>act</code></p>
+<p>Podemos fazer isso com a implementação no método <code>act</code> mostrada a seguir</p>
+</div>
+</section>
+<section id="section-40" class="slide level2">
+<h2></h2>
 <div class="sourceCode" id="cb17"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">act</span><span class="op">()</span></span>
 <span id="cb17-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
 <span id="cb17-3"><a aria-hidden="true" tabindex="-1"></a>        <span class="fu">move</span><span class="op">(</span><span class="dv">2</span><span class="op">);</span></span>
 <span id="cb17-4"><a aria-hidden="true" tabindex="-1"></a>        <span class="fu">tentarComer</span><span class="op">();</span></span>
-<span id="cb17-5"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-6"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// se já tem uma larva definida como alvo</span></span>
-<span id="cb17-7"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>larvaAlvo <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb17-8"><a aria-hidden="true" tabindex="-1"></a>            <span class="co">// e ela ainda não foi devorada</span></span>
-<span id="cb17-9"><a aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(</span>larvaAlvo<span class="op">.</span><span class="fu">getWorld</span><span class="op">()</span> <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb17-10"><a aria-hidden="true" tabindex="-1"></a>                <span class="co">// a aranha se vira na direção dela</span></span>
-<span id="cb17-11"><a aria-hidden="true" tabindex="-1"></a>                <span class="fu">turnTowards</span><span class="op">(</span>larvaAlvo<span class="op">.</span><span class="fu">getX</span><span class="op">(),</span> larvaAlvo<span class="op">.</span><span class="fu">getY</span><span class="op">());</span></span>
-<span id="cb17-12"><a aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
-<span id="cb17-13"><a aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span> <span class="op">{</span> <span class="co">// se a larva já foi devorada</span></span>
-<span id="cb17-14"><a aria-hidden="true" tabindex="-1"></a>                <span class="co">// reinicializamos o atributo para definir um novo alvo</span></span>
-<span id="cb17-15"><a aria-hidden="true" tabindex="-1"></a>                larvaAlvo <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
-<span id="cb17-16"><a aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
-<span id="cb17-17"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
-<span id="cb17-18"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// se NÃO tem uma larva definida com o alvo</span></span>
-<span id="cb17-19"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>larvaAlvo <span class="op">==</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb17-20"><a aria-hidden="true" tabindex="-1"></a>            <span class="co">// definimos uma obtendo-a do mundo</span></span>
-<span id="cb17-21"><a aria-hidden="true" tabindex="-1"></a>            MundoDoCaranguejo mundoCaranguejo <span class="op">=</span> <span class="fu">getWorldOfType</span><span class="op">(</span>MundoDoCaranguejo<span class="op">.</span><span class="fu">class</span><span class="op">);</span></span>
-<span id="cb17-22"><a aria-hidden="true" tabindex="-1"></a>            larvaAlvo <span class="op">=</span> mundoCaranguejo<span class="op">.</span><span class="fu">buscarUmaLarva</span><span class="op">();</span></span>
-<span id="cb17-23"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
-<span id="cb17-24"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<span id="cb17-5"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// se já tem uma larva definida como alvo</span></span>
+<span id="cb17-6"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>larvaAlvo <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb17-7"><a aria-hidden="true" tabindex="-1"></a>            <span class="co">// e ela ainda não foi devorada</span></span>
+<span id="cb17-8"><a aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(</span>larvaAlvo<span class="op">.</span><span class="fu">getWorld</span><span class="op">()</span> <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb17-9"><a aria-hidden="true" tabindex="-1"></a>                <span class="co">// a aranha se vira na direção dela</span></span>
+<span id="cb17-10"><a aria-hidden="true" tabindex="-1"></a>                <span class="fu">turnTowards</span><span class="op">(</span>larvaAlvo<span class="op">.</span><span class="fu">getX</span><span class="op">(),</span> larvaAlvo<span class="op">.</span><span class="fu">getY</span><span class="op">());</span></span>
+<span id="cb17-11"><a aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb17-12"><a aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span> <span class="op">{</span> <span class="co">// se a larva já foi devorada</span></span>
+<span id="cb17-13"><a aria-hidden="true" tabindex="-1"></a>                <span class="co">// reinicializamos o atributo para definir um novo alvo</span></span>
+<span id="cb17-14"><a aria-hidden="true" tabindex="-1"></a>                larvaAlvo <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb17-15"><a aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb17-16"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb17-17"><a aria-hidden="true" tabindex="-1"></a>        <span class="co">// se NÃO tem uma larva definida com o alvo</span></span>
+<span id="cb17-18"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>larvaAlvo <span class="op">==</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb17-19"><a aria-hidden="true" tabindex="-1"></a>            <span class="co">// definimos uma obtendo-a do mundo</span></span>
+<span id="cb17-20"><a aria-hidden="true" tabindex="-1"></a>            MundoDoCaranguejo mundoCaranguejo <span class="op">=</span> <span class="fu">getWorldOfType</span><span class="op">(</span>MundoDoCaranguejo<span class="op">.</span><span class="fu">class</span><span class="op">);</span></span>
+<span id="cb17-21"><a aria-hidden="true" tabindex="-1"></a>            larvaAlvo <span class="op">=</span> mundoCaranguejo<span class="op">.</span><span class="fu">buscarUmaLarva</span><span class="op">();</span></span>
+<span id="cb17-22"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb17-23"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
 <section>
 <section id="parte-9-documentação-do-greenfoot" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>Parte 9: Documentação do Greenfoot</h1>
 
 </section>
-<section id="section-34" class="slide level2">
+<section id="section-41" class="slide level2">
 <h2></h2>
 <p>Para desenvolver jogos no Greenfoot é importanter ter uma ideia do que ele é capaz de fazer.</p>
 <ul>
@@ -1295,41 +1316,19 @@
 <li class="fragment"><code>Ajuda</code> → <code>Documentação de Classe Greenfoot</code>.</li>
 </ul>
 </div>
-<div class="fragment">
+</section>
+<section id="section-42" class="slide level2">
+<h2></h2>
 <p>Será exibida a documentação em HTML das classes disponíveis do Greenfoot.</p>
 <ul>
 <li class="fragment">Como <code>Actor</code>, <code>Font</code>, <code>Greenfoot</code>, <code>GreenfootImage</code> e <code>World</code>.</li>
 <li class="fragment">Você pode clicar em uma classe e verificar os métodos que estão disponíveis.</li>
 </ul>
-</div>
 <div class="fragment">
 <p>Você também podem acessar diretamente a documentação das classes <code>Actor</code> e <code>World</code> clicando nas caixas com esses nomes no painel direito do Greenfoot.</p>
-</div>
-</section></section>
-<section>
-<section id="entrega" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>Entrega</h1>
-
-</section>
-<section id="section-35" class="slide level2">
-<h2></h2>
-<div title="Entrega no Campus Virtual">
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Entrega no Campus Virtual</strong></p>
-</div>
-<div class="callout-content">
-<p>Acesse, no Campus Virtual, a atividade correspondente a essa aula e envie o código do projeto <code>greenfoot-caranguejo</code> da forma que ficou após as suas alterações (compacte a pasta do projeto em um arquivo <code>.zip</code> para enviar).</p>
-</div>
-</div>
-</div>
-</div>
 
 
+</div>
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

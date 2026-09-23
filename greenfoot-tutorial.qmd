@@ -781,13 +781,6 @@ Altere então a classe `MundoDoCaranguejo` acrescentando um booleano chamado
 
 Vamos então alterar o método `act` como mostrado abaixo.
 
-- Veja que foi acrescentado um `if` para que a lista de larvas só
-  seja verificada se o jogo ainda não terminou.
-- Além disso, depois que o texto é mostrado, o booleano `jogoTerminou`
-  é alterado para `true`.
-- Com isso, o texto `"Voce venceu"` é inserido na tela uma única vez.  
-
-::: {.halfincfontsize}
 ```{.java code-line-numbers="false" code-line-numbers="2,6"}
     public void act() {
         if (!jogoTerminou) {
@@ -799,16 +792,26 @@ Vamos então alterar o método `act` como mostrado abaixo.
         }
     }
 ```
-:::
+
+- Veja que foi acrescentado um `if` para que a lista de larvas só
+  seja verificada se o jogo ainda não terminou.
+- Além disso, depois que o texto é mostrado, o booleano `jogoTerminou`
+  é alterado para `true`.
+- Com isso, o texto `"Voce venceu"` é inserido na tela uma única vez.  
 
 ## Game Over!
 
-Baseado no que fizemos para a mensagem de vitória, exiba a mensagem
-`"Game Over!"` quando todos os caranguejos forem comidos pelas lagostas.
+. . .
 
-- Veja que basta seguirmos a mesma ideia, mas agora verificando se ainda existem caranguejos em vez de larvas.
+Baseado no que fizemos para a mensagem de vitória, 
+
+- exiba a mensagem `"Game Over!"` quando todos os caranguejos forem comidos pelas lagostas.
 
 . . .
+
+Veja que basta seguirmos a mesma ideia, mas agora verificando se ainda existem caranguejos em vez de larvas.
+
+## Game Over!
 
 ```{.java code-line-numbers="false" code-line-numbers="9-14"}
     public void act() {
@@ -844,7 +847,7 @@ Para contabilizar os pontos do jogador, precisaremos:
 - Chamar esse método toda vez que um caranguejo comer uma larva.
 - E exibir a pontuação na tela, sempre que ela for alterada.
 
-. . .
+##
 
 Altere então a classe `MundoDoCaranguejo` incluindo um atributo inteiro chamado `pontos`.
 
@@ -853,7 +856,7 @@ Altere então a classe `MundoDoCaranguejo` incluindo um atributo inteiro chamado
 Em seguida, crie um método público chamado `contarPontos` que:
 
 - acrescenta 10 unidades ao atributo `pontos`;
-- e exibe na tela o placar atualizado, utilizando o método `showText`
+- e exibe na tela o placar atualizado, utilizando o método `showText`:
 
 . . .
 
@@ -865,8 +868,11 @@ showText("Placar: " + pontos + " pontos", 200, 50);
 
 ##
 
-A pontuação ainda não aparece, porque precisamos agora chamar o 
-método `contarPontos` toda vez que o caranguejo comer uma larva.
+A pontuação ainda não aparece, 
+
+- porque precisamos agora chamar o  método `contarPontos` toda vez que o caranguejo comer uma larva.
+
+##
 
 Para isso, altere o método `act` da classe `Caranguejo`.
 
@@ -878,12 +884,10 @@ Para isso, altere o método `act` da classe `Caranguejo`.
 
 . . .
 
-::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
     MundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);
     mundoCaranguejo.contarPontos();
 ```
-:::
 
 # Parte 8: Um inimigo que persegue as larvas {background-color="#40666e"}
 
@@ -891,20 +895,25 @@ Vamos dificultar um pouco mais a vida do jogador :)
 
 ## Criando aranhas comedoras de larvas
 
-A ideia agora é criar aranhas que também comam larvas, e assim dificultem
-a vida do jogador na obteção de uma boa pontuação.
+. . .
 
-- Num primeiro passo, vamos fazer uma versão simplificada da aranha. 
-- Ela sempre andará para frente e comerá uma larva se der sorte de ter uma
-no caminho dela.
+A ideia agora é criar aranhas que também comam larvas, 
+
+- e assim dificultem a vida do jogador na obteção de uma boa pontuação.
 
 . . .
 
+Num primeiro passo, vamos fazer uma versão simplificada da aranha. 
+
+- Ela sempre andará para frente e comerá uma larva se der sorte de ter uma no caminho dela.
+
+##
+
 Crie então uma classe `Aranha` de forma similar ao que fizemos antes.
 
-- No método `act` da classe faça a aranha movimentar (com `move(2)`);
+- No método `act` da classe faça a aranha movimentar, com `move(2)`.
 - e faça com que ela coma uma larva se tocar nela 
-  - (com o mesmo código que usamos para os caranguejos).
+  - (com o mesmo tipo de código que usamos para os caranguejos).
 
 . . .
 
@@ -912,13 +921,15 @@ Posicione uma ou mais aranhas à esquerda de algumas larvas e teste o jogo.
 
 ## Tornando as aranhas mais espertas 
 
+. . .
+
 Poderíamos deixar o jogo mais imprevisível se as aranhas se movimentassem
 aleatoriamente como as lagotas.
 
 - Mas podemos fazer algo ainda mais interessante:
   - Fazer com que as aranhas caminhem em direção às larvas de forma automática.
 
-. . .
+##
 
 Nós podemos fazer isso usando o método `turnTowards`.
 
@@ -939,7 +950,6 @@ Nosso primeiro passo será criar um método público na classe `MundoCaranguejo`
 
 . . .
 
-::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
     public Larva buscarUmaLarva() {
         List<Larva> larvas = getObjects(Larva.class);
@@ -950,7 +960,6 @@ Nosso primeiro passo será criar um método público na classe `MundoCaranguejo`
         return null;
     }
 ```
-:::
 
 ##
 
@@ -969,14 +978,12 @@ Altere então a classe `Aranha` da seguinte forma:
 
 . . .
 
-::: {.halfincfontsize}
 ```{.java code-line-numbers="false"}
     MundoDoCaranguejo mundoCaranguejo = getWorldOfType(MundoDoCaranguejo.class);
     larvaAlvo = mundoCaranguejo.buscarUmaLarva();
 ```
-:::
 
-. . .
+##
 
 Precisamos testar se o nosso método funciona, para isso faça o seguinte:
 
@@ -994,7 +1001,6 @@ da larva alvo.
 
 . . .
 
-::: {.halfincfontsize}
 ```{.java code-line-numbers="false" code-line-numbers="5-6"}
     public void act()
     {
@@ -1005,33 +1011,40 @@ da larva alvo.
         }
     }
 ```
-:::
 
 . . .
 
 Funcionou?
 
-- Não né? O problema é que estamos escolhendo uma nova larva-alvo a cada iteração do Greenfoot.
-  - Com isso a aranha fica girando sem sentido.
-- Como podemos resolver?
+##
+
+Não funcionou, né? 
+
+- O problema é que estamos escolhendo uma nova larva-alvo a cada iteração do Greenfoot.
+- Com isso a aranha fica girando sem sentido.
+
+. . .
+
+Como podemos resolver?
 
 
 ##
 
-O que precisamos é manter o alvo e só mudar quando a larva for devorada
+O que precisamos é manter o mesmo alvo e só mudá-lo quando a larva for devorada.
 
 - seja pela aranha, seja pelos caranguejos.
 
 . . .
 
-Podemos fazer isso com a seguite implementação no método `act`
+Podemos fazer isso com a implementação no método `act` mostrada a seguir
+
+##
 
 ```{.java code-line-numbers="false"}
     public void act()
     {
         move(2);
         tentarComer();
-
         // se já tem uma larva definida como alvo
         if (larvaAlvo != null) {
             // e ela ainda não foi devorada
@@ -1067,7 +1080,7 @@ Você pode acessar a documentação do Greenfoot através do menu:
 
 - `Ajuda` &rarr; `Documentação de Classe Greenfoot`.
 
-. . .
+##
 
 Será exibida a documentação em HTML das classes disponíveis do Greenfoot.
 
@@ -1079,12 +1092,5 @@ Será exibida a documentação em HTML das classes disponíveis do Greenfoot.
 Você também podem acessar diretamente a documentação das classes `Actor` e `World` clicando
 nas caixas com esses nomes no painel direito do Greenfoot.
 
-# Entrega {background-color="#40666e"}
-
-## 
-
-::: {.callout-important title="Entrega no Campus Virtual"}
-Acesse, no Campus Virtual, a atividade correspondente a essa aula e envie o código do projeto `greenfoot-caranguejo` da forma que ficou após as suas alterações (compacte a pasta do projeto em um arquivo `.zip` para enviar).
-:::
 
 
