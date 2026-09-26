@@ -144,28 +144,28 @@
     "href": "cap5-3.html#section",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Na primeira parte desta aula, vamos usar o Greenfoot em vez do BlueJ.\n\nAproveitando o fato de que estamos usando o Greenfoot para o trabalho prático da disciplina.\n\n\nNós usaremos o projeto no Greenfoot para aprender conceitos que não foram vistos nas aulas teóricas anteriores:\n\nAtributos estáticos.\nMétodos estáticos.\nConstantes."
+    "text": "No capítulo anterior, fizemos um exercício que tratava do estoque de produtos.\n\nOs produtos eram guardados em um ArrayList.\nE, em várias situações, precisávamos encontrar um produto pelo seu identificador.\n\n\nRepare que, nesse contexto, podemos tratar a coleção de produtos como pares de objetos identificador-produto.\n\nOu seja, como pares de objetos chave-valor.\nQue é justamente o que um HashMap faz.\nPortanto, nos exercícios a seguir vamos alterar o projeto para trabalhar com HashMap em vez de ArrayList."
   },
   {
     "objectID": "cap5-3.html#section-1",
     "href": "cap5-3.html#section-1",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Para começar, baixe o projeto bolas-quicando.\n\nAbra o projeto no Greenfoot.\nExecute o programa e veja o que acontece.\n\n\nVamos aproveitar esse projeto para conhecer um pouco mais sobre o Greenfoot."
+    "text": "Exercício 1\n\n\nBaixe o projeto produtos que você entregou como exercício na aula prática do capítulo anterior e renomeie a pasta do projeto para produtos-com-hashmap.\nAltere o projeto substituindo o uso de ArrayList por HashMap.\n\nComo citado no slide anterior, a ideia é que o HashMap guarde entradas tendo o identificador do produto como chave e o produto como valor.\nPlaneje as alterações a serem feitas antes de realmente alterar o código.\nPense em como a implementação pode ser feita com o mínimo de alterações.\n\nTeste suas alterações (teste todos os métodos que tinha implementado)!"
   },
   {
     "objectID": "cap5-3.html#section-3",
     "href": "cap5-3.html#section-3",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\nAbra a classe Mundo e veja o código do método prepare. Repare que ele cria duas bolas e depois cria 10 objetos da classe Chao.\nAltere o método para que o programa tenha uma terceira bola.\n\nCrie a bola com diâmetro igual a 30 e posição vertical (y) 150.\nPosicione a bola na posição (300, 150)."
+    "text": "Exercício 3\n\n\nCompare o código do projeto produtos com o código do projeto produtos-com-hashmap.\nVocê viu alguma vantagem em utilizar HashMap em vez de ArrayList?\n\nSe você tivesse começando o projeto do zero, você acha que seria melhor usar HashMap desde o início? Por quê?\n\nEscreva sua resposta no comentário javadoc da classe GerenciadorDeEstoque do projeto produtos-com-hashmap."
   },
   {
     "objectID": "cap5-3.html#section-4",
     "href": "cap5-3.html#section-4",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Antes de continuarmos, vamos conhecermos alguns métodos diponíveis no Greenfoot que não tínhamos visto no tutorial.\n\ngetImage: retorna a imagem usada para o objeto (definida na hora que criamos a classe).\ngetImage().scale: permite mudar o tamanho da imagem do objeto.\nsetLocation: muda a posição do ator no mundo (coordenadas X e Y).\nisTouching: indica se o ator está colidindo com algum objeto da classe passada."
+    "text": "No projeto produtos-com-hashmap, como você tratou a versão sobrecarregada do método encontrarProduto que recebe o nome do produto por parâmetro?\n\nProvavelmente, você implementou um loop para percorrer as chaves do HashMap e verificou o nome do produto, certo?\nVocê acha que existe alguma forma mais eficiente de fazer isso?\n\n\nPense sobre isso antes de continuar."
   },
   {
     "objectID": "cap5-3.html#atributos-estáticos",
@@ -179,28 +179,28 @@
     "href": "cap5-3.html#section-5",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Agora leia o código da classe Bola e tente entender como ela funciona."
+    "text": "Repare que quando usamos um HashMap, se quisermos encontrar um valor a partir de uma chave, nós não precisamos implementar um loop.\n\nNós podemos simplesmente usar o método get.\n\n\nÉ interessante que você saiba que isso não é apenas uma questão de ficar mais fácil para implementar.\n\nUm ponto importante é que o método get de um HashMap é muito mais eficiente (ou seja, mais rápido) do que um loop que percorre todos os elementos de uma coleção.\n\nPense, por exemplo, em um estoque com milhares de produtos."
   },
   {
     "objectID": "cap5-3.html#section-6",
     "href": "cap5-3.html#section-6",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Ao avaliar o código da classe Bola você viu alguma palavra-chave nova do Java?\n\nRepare a declaração do atributo GRAVIDADE.\n\n\n\n\n\n\nExercício\n\n\nExperimente alterar o valor do atributo GRAVIDADE (aumentando e diminuindo seu valor).\nExecute o programa e veja o que acontece de diferente."
+    "text": "O método get do HashMap é mais eficiente porque usa uma estrutura de dados chamada tabela Hash\n\nque otimiza a busca de valores a partir de chaves.\n\n\nVocê aprenderá sobre isso na disciplina de Estrutura de Dados.\n\nMas, por enquanto, basta que saiba que um programa será mais rápido se usar get de HashMap em vez de um loop em um ArrayList, por exemplo."
   },
   {
     "objectID": "cap5-3.html#section-7",
     "href": "cap5-3.html#section-7",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "O atributo GRAVIDADE é declarado da seguinte forma:\n\n    private static final double GRAVIDADE = 0.7;\n\n\nHá duas palavras-chave novas nessa declaração:\n\nstatic e final"
+    "text": "Sabendo disso, como você poderia implementar, de forma mais eficiente, o método encontrarProduto que recebe o nome do produto por parâmetro?\n\nPense um pouco antes de continuar.\n\n\nVocê talvez tenha pensado que se tivermos um HashMap que use o nome do produto como chave e o produto como valor,\n\npoderíamos simplesmente usar o método get do HashMap para encontrar o produto.\nO que tornaria a busca mais rápida."
   },
   {
     "objectID": "cap5-3.html#section-9",
     "href": "cap5-3.html#section-9",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Os atributos comuns (velocidadeVertical, posY e amortecimento) são guardados nos objetos:\n\nComo criamos três objetos, há três espaços na memória para cada um desses atributos."
+    "text": "A solução nesse caso seria ter dois objetos HashMap:\n\nUm que use o identificador como chave e outro que use o nome do produto como chave.\nAssim, poderíamos usar um HashMap para buscar produtos pelo identificador e outro para buscar pelo nome.\n\n\nRepare que essa é uma solução de compromisso (trade-off).\n\nNós estamos usando mais memória do computador (para guardar um segundo HashMap).\nMas com a vantagem de tornar nosso programa mais eficiente (mais rápido)."
   },
   {
     "objectID": "cap5-3.html#métodos-estáticos",
@@ -228,7 +228,7 @@
     "href": "cap5-3.html#section-11",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Os atributos estáticos podem ser acessados normalmente dentro de qualquer método da classe.\n\nIsso significa que todos os objetos compartilham o mesmo atributo.\nSe um objeto alterar o valor do atributo estático, esse valor será usado para todos os objetos.\n\nJá que existe um único valor na memória.\n\n\n\nGeralmente usamos atributos estáticos quando todos os objetos da classe devem ter o mesmo valor para o atributo.\n\nCom isso, evitamos desperdiçar memória guardando o mesmo valor repetidas vezes para cada objeto."
+    "text": "Exercício 4\n\n\nAltere o projeto produtos-com-hashmap para que ele tenha dois objetos HashMap:\n\nUm que use o identificador como chave e outro que use o nome do produto como chave.\nAltere o método encontrarProduto que recebe o nome do produto por parâmetro para usar o HashMap que usa o nome do produto como chave.\nE, claro, lembre-se de tratar o segundo HashMap no método adicionarProduto.\n\nTeste suas alterações!"
   },
   {
     "objectID": "cap5-3.html#limitações-dos-métodos-estáticos",
@@ -4386,91 +4386,91 @@
     "href": "cap5-3.html#section-12",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "É mais comum usarmos constantes quando elas têm o mesmo valor para todos os objetos.\n\nPortanto, é mais comum ter constantes estáticas, do que como atributos comuns.\nComo é o caso do atributo GRAVIDADE da classe Bola."
+    "text": "Servidores web geralmente guardam arquivos de log de acesso às suas páginas.\n\nUsando ferramentas adequadas, esses logs permitem extrair e analisar informações úteis como:\n\nquais são as páginas mais acessadas\nde quais sites vieram o acesso a este site\nse outros sites parecem ter links quebrados para o site\na quantidade de dados que são enviados para quem acessa\no períodos mais ocupados do servidor (com mais acessos)\n\nao longo de um dia, um mês ou um ano."
   },
   {
     "objectID": "cap5-3.html#section-13",
     "href": "cap5-3.html#section-13",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Suponha, por exemplo, a seguinte declaração de constante:\n\n    private final int TAMANHO = 30;\n\n\nVeja que é uma declaração de atributo.\nMas tem a palavra-chave final antes do tipo do atributo.\n\n\nObs.: por convenção, escrevemos os nomes das constantes com letras maiúsculas."
+    "text": "Essas informações ajudam os administradores do sistema a decidir, por exemplo:\n\nSe eles precisam de máquinas mais poderosas como servidor,\nou quais são os horários com menor acesso para fazer uma manutenção."
   },
   {
     "objectID": "cap5-3.html#section-14",
     "href": "cap5-3.html#section-14",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Constantes podem ser inicializadas na própria linha da declaração, como no exemplo dado:\n\n    private final int TAMANHO = 30;\n\n\nNeste caso, todos os objetos teriam o mesmo valor.\nE, portanto, seria mais intessante que o atributo TAMANHO fosse estático."
+    "text": "O projeto analisador-logs-web tem uma aplicação que faz uma análise de dados de um servidor web.\n\nO servidor escreve uma linha de log no arquivo a cada acesso feito.\nA linha tem dados do momento do acesso, no formato:\nano mes dia hora minuto\nPor exemplo, um acesso às 16:35h no dia 25 de setembro de 2026, é representado como:\n2026 09 25 16 35"
   },
   {
     "objectID": "cap5-3.html#section-15",
     "href": "cap5-3.html#section-15",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Mas constantes podem ser inicializadas nos construtores em vez de ser na declaração.\n\nComo isso, cada objeto poderia ter um valor diferente para o atributo TAMANHO.\n\nInicializado, por exemplo, a partir de um valor recebido por parâmetro no construtor.\nA ideia seria que o objeto não poderia ter seu tamanho alterado depois de sua criação.\n\nNesse caso, não faria sentido declarar o atributo como estático."
+    "text": "A versão atual do projeto permite analisar qual hora do dia, em média, o servidor tende a ficar mais ocupado (ou menos ocupado).\n\nIsso é feito contando a quantidade de acessos feitos a cada hora a partir do arquivo de log.\nUma amostra do arquivo de log do servidor está presente no arquivo weblog.txt."
   },
   {
     "objectID": "cap5-3.html#section-16",
     "href": "cap5-3.html#section-16",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "É mais comum usarmos constantes quando elas têm o mesmo valor para todos os objetos.\n\nPortanto, é mais comum ter constantes estáticas, do que como atributos comuns.\nComo é o caso do atributo GRAVIDADE da classe Bola."
+    "text": "Abra o projeto analisador-logs-web e leia o código da classe AnalisadorDeLog.\n\nVeja que a classe tem um atributo que é um array (vetor) de inteiros.\n\n\nLembre-se que o material sobre uso de arrays em Java foi apresentado como estudo para casa na Aula 4.3.\n\nSe você ainda não estudou esse material, você deve agora parar, acessar o material da aula e procurar a seção Coleções de tamanho fixo.\nAo terminar, volte para continuar as atividades dessa aula."
   },
   {
     "objectID": "cap5-3.html#section-17",
     "href": "cap5-3.html#section-17",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nós podemos definir métodos estáticos usando a palavra-chave static na assinatura do método.\n\nSuponha, por exemplo, que uma classe Calendario tenha o método estático abaixo:\n\n    public static int obterNumeroDeDiasDoMesAtual() {\n        . . .\n    }\n\n\n\nNós poderíamos chamar esse método usando o comando abaixo:\n\nRepare que usamos o nome da classe antes do . para chamar o método, em vez de usar um objeto.\n\n\n    int dias = Calendario.obterNumeroDeDiasDoMesAtual();"
+    "text": "Teste o programa do projeto analisador-logs-web, fazendo o seguinte:\n\ncrie um objeto da classe AnalisadorDeLog,\nchame o método analisarDadosPorHora\ne, em seguida, chame o método imprimirContagensPorHora.\n\n\nQual é o horário mais ocupado do dia?"
   },
   {
     "objectID": "cap5-3.html#section-18",
     "href": "cap5-3.html#section-18",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Todos os métodos que implementamos até agora são métodos de instância (de objetos).\n\nPois eles são chamados usando objetos.\n\n\nMas nós podemos também ter métodos que são chamados usando a classe, em vez de objetos.\n\nSão os métodos estáticos.\nAssim como os atributos estáticos, os métodos estáticos pertencem à classe e não aos objetos."
+    "text": "A classe LeitorDeArquivoDeLog é bastante complexa e sugiro que você não gaste muito tempo investigando sua implementação.\n\nSua função é lidar com a tarefa de dividir cada linha de log em valores de dados separados,\nmas podemos abstrair os detalhes da implementação considerando apenas os cabeçalhos de dois de seus métodos:\n\n\n\npublic boolean hasNext()\npublic EntradaDeLog next()"
   },
   {
     "objectID": "cap5-3.html#section-19",
     "href": "cap5-3.html#section-19",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Nós podemos definir métodos estáticos usando a palavra-chave static na assinatura do método."
+    "text": "public boolean hasNext()\npublic EntradaDeLog next()\n\nEsses métodos correspondem exatamente aos que vimos com o tipo Iterator,\n\ne um LeitorDeArquivoDeLog pode ser usado exatamente da mesma maneira,\nexceto que não é permitido o uso do método remove."
   },
   {
     "objectID": "cap5-3.html#section-20",
     "href": "cap5-3.html#section-20",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Suponha, por exemplo, que uma classe Calendario tenha o método estático abaixo:\n\n    public static int obterNumeroDeDiasDoMesAtual() {\n        . . .\n    }\n\n\nNós poderíamos chamar esse método usando o comando abaixo:\n\nRepare que usamos o nome da classe antes do . para chamar o método, em vez de usar um objeto.\n\n\n    int dias = Calendario.obterNumeroDeDiasDoMesAtual();"
+    "text": "Para cada EntradaDeLog, o método analisarDadosPorHora do analisador obtém o valor do atributo hora:\n\nint hora = entrada.obterHora();\n\n\nSabemos que o valor armazenado na variável local hora estará sempre no intervalo de 0 a 23,\n\no que corresponde exatamente ao intervalo válido de índices para o vetor contagensPorHora.\nPortanto, cada vez que um valor de hora é lido, desejamos atualizar a contagem para essa hora em 1, usando:\n\n\n\n\ncontagensPorHora[hora]++;"
   },
   {
     "objectID": "cap5-3.html#section-21",
     "href": "cap5-3.html#section-21",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Podemos encontrar vários exemplos de métodos estáticos na classe Math do Java.\n\nEla possui métodos, por exemplo, para encontrar o máximo ou o mínimo entre dois números.\n\nOu ainda calcular seno e cosseno, por exemplo.\n\n\n\n\n    int maximo = Math.max(numeroA, numeroB);\n    double valor = Math.cos(angulo);"
+    "text": "Ao final do método analisarDadosPorHora,\n\ntemos um conjunto completo de contagens cumulativas para cada hora do período de registro.\n\n\nJá o método imprimirContagensPorHora usa um loop for tradicional (com contador) para exibir as informações do vetor."
   },
   {
     "objectID": "cap5-3.html#section-22",
     "href": "cap5-3.html#section-22",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "int maximo = Math.max(numeroA, numeroB);\n    double valor = Math.cos(angulo);\n\nRepare que esses métodos dependem apenas dos parâmetros passados.\n\nEles não dependem de atributos de um possível objeto Math, ou seja, não dependem do estado de um objeto.\nGeralmente é nesses casos que usamos métodos estáticos."
+    "text": "Exercício 5\n\n\nAltere a classe AnalisadorDeLog criando um construtor sobrecarregado que recebe por parâmetro o nome do arquivo de log a ser analisado. Será necessário passar o nome do arquivo para o construtor da classe LeitorDeArquivoDeLog.\nPara testar, use a classe GeradorArquivoDeLog para criar seu próprio arquivo de log de entradas aleatórias, e analise os dados desse arquivo."
   },
   {
     "objectID": "cap5-3.html#section-23",
     "href": "cap5-3.html#section-23",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "A classe Math do Java possui também exemplos de uso de constantes.\n\nO valor de PI, por exemplo, pode ser acessado com o comando Math.PI.\nRepare que estamos acessando o atributo diretamente, usando o nome da classe, em vez de um objeto.\n\nDa mesma forma que usamos para chamar métodos estáticos.\n\nNós conseguimos fazer isso porque PI é declarado como uma constante pública."
+    "text": "Exercício 6\n\n\nCrie um método numeroDeAcessos na classe AnalisadorDeLog que retorna a quantidade total de acessos armazenados em um arquivo de log.\nO método deve fazer o cálculo percorrendo (iterando) o vetor contagensPorHora.\nDica: para testar seu método, use o gerador para criar um arquivo com poucas entradas, e o utilize na análise de forma que você consiga conferir manualmente se o resultado está correto."
   },
   {
     "objectID": "cap5-3.html#section-24",
     "href": "cap5-3.html#section-24",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Mas não seria uma falha de encapsulamento declarar um atributo público?\n\nNote que não há falha de encapsulamento em declarar um atributo público, se ele for uma constante.\nJá que não seria possível alterar seu valor de fora da classe."
+    "text": "Exercício 7\n\n\nAdicione um método horaMaisOcupada na classe AnalisadorDeLog que retorna a hora com a maior quantidade de acessos.\nÉ necessário verificar todos os elementos do vetor contagensPorHora? Em caso afirmativo, qual é o tipo de loop mais adequado para fazer a implementação?\n\n\n\n\n\n\n\n\n\nExercício 8\n\n\nAdicione um método horaMaisTranquila na classe AnalisadorDeLog que retorna a hora com a menor quantidade de acessos.\nDica: lembre-se de testar um caso no qual toda as horas possuem algum acesso (ou seja, um valor diferente de zero)."
   },
   {
     "objectID": "cap10-1.html#principais-conceitos-da-aula",
@@ -5408,42 +5408,42 @@
     "href": "cap5-3.html#section-2",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\nExecute o projeto e em seguida pause o programa antes das bolas pararem de quicar. Em seguida, clique com o botão direito em uma das bolas.\n\nVeja que as opções são as mesmas do BlueJ quando clicamos em um objeto na bancada de objetos.\nVocê pode clicar em Inspecionar para ver os valores dos atributos.\nE você pode também chamar métodos do objeto."
+    "text": "Exercício 2\n\n\nConfira como você tratou a versão sobrecarregada do método encontrarProduto que recebe o ID do produto por parâmetro.\nLembre-se que, usando um HashMap, você não deve fazer um loop para encontrar o produto pelo ID. Você deve usar o método get para encontrar o produto (valor) a partir do ID (chave)."
   },
   {
     "objectID": "cap5-3.html#section-8",
     "href": "cap5-3.html#section-8",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "O diagrama abaixo ilustra bem a diferença entre os atributos comuns e estáticos."
+    "text": "Mas se substituirmos o HashMap que temos até agora, que usa o identificador como chave,\n\nteríamos que voltar a fazer um loop na outra versão do método encontrarProduto que recebe o identificador por parâmetro.\n\n\nO que poderíamos fazer então?"
   },
   {
     "objectID": "cap5-3.html#section-10",
     "href": "cap5-3.html#section-10",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Já o atributo estático GRAVIDADE é guardado na classe:\n\nCom isso, existe sempre um único espaço na memória para ele, independente da quantidade de objetos criados."
+    "text": "Em um sistema com muitos produtos, a diferença de eficiência pode ser significativa.\n\nE é importante ressaltar que os objetos não são duplicados na memória por usarmos dois hashmaps.\nJá que os HashMaps guardam ponteiros para os objetos.\n\nE, portanto, o uso adicional de memória não é tão grande."
   },
   {
     "objectID": "cap5-3.html#section-25",
     "href": "cap5-3.html#section-25",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Você já usou métodos estáticos antes, sem saber.\n\nRepare como os métodos abaixo são chamados.\n\n\n\nGreenfoot.isKeyDown(\"left\");\n\nGreenfoot.playSound(\"comendo.wav\");\n\nGreenfoot.getRandomNumber(90);"
+    "text": "Exercício 9\n\n\nAdicione um método duasHorasSeguidasMaisOcupadas na classe AnalisadorDeLog que retorna o período de duas horas consecutivas com a maior quantidade de acessos.\nO método deve retornar a hora de início do período em questão.\nExemplo: se as duas horas consecutivas mais ocupadas são de 10h às 12h (correspondente às horas 10 e 11), o método deve retornar 10."
   },
   {
     "objectID": "cap5-3.html#section-26",
     "href": "cap5-3.html#section-26",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Greenfoot.isKeyDown(\"left\");\n\nGreenfoot.playSound(\"comendo.wav\");\n\nGreenfoot.getRandomNumber(90);\n\nEm todas essas chamadas nós usamos o nome da classe Greenfoot para chamar o método.\n\nIsso porque todos esses métodos são estáticos.\nTodos eles implementam ações que dependem apenas dos parâmetros passados\n\n(não dependem do estado de um objeto)."
+    "text": "Exercício 10 - Desafio\n\n\nVamos melhorar o projeto para permitir também a análise de acessos por dia da semana, e não apenas por hora.\nA ideia é que consigamos saber:\n\nA quantidade de acessos de cada dia da semana.\nO dia da semana com a maior quantidade de acessos.\nO dia da semana com a menor quantidade de acessos.\n\nDicas:\n\nVocê precisará criar método de acesso na classe EntradaDeLog que retorne o dia da semana no qual aquele acesso foi feito.\n\n\nPesquisa na internet como o atributo constante, público e estático DAY_OF_WEEK da classe Calendar pode ser usado na sua implementação.\n\n\nVocê precisará guardar as informações também por dia da semana na classe AnalisadorDeLog. Para isso é melhor usar vetor, ArrayList ou HashMap?"
   },
   {
     "objectID": "cap5-3.html#section-27",
     "href": "cap5-3.html#section-27",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Exercício\n\n\nAltere a declaração do atributo GRAVIDADE da classe Bola de forma que ele não seja mais uma constante. Mas, mantenha a inicialização do atributo na declaração.\nCrie um método modificador que permita alterar o valor do atributo.\nExecute o programa e pause-o antes das bolas pararem de quicar. Clique em uma das bolas e chame o método que você criou, informando um novo valor para a gravidade.\nContinue a execução do programa e repare que acontece. A gravidade foi alterada só para a bola que você chamou o método, ou para todas elas?\nDepois que as bolas pararem, pause o programa novamente, e use a opção Inspecionar em cada bola para conferir o valor do atributo GRAVIDADE. (Obs.: na janela de inspeção, use o botão mostrar campos estáticos)."
+    "text": "Exercício 10 - Desafio\n\n\nVamos melhorar o projeto para permitir também a análise de acessos por dia da semana, e não apenas por hora.\nA ideia é que consigamos saber:\n\nA quantidade de acessos de cada dia da semana.\nO dia da semana com a maior quantidade de acessos.\nO dia da semana com a menor quantidade de acessos.\n\nDicas: você precisará criar método de acesso na classe EntradaDeLog que retorne o dia da semana no qual aquele acesso foi feito. Pesquisa na internet como o atributo constante, público e estático DAY_OF_WEEK da classe Calendar pode ser usado na sua implementação."
   },
   {
     "objectID": "cap5-3.html#section-28",

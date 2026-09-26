@@ -3,404 +3,7 @@ title: IPOO - Cap. 5 Comportamento Mais Sofisticado
 subtitle: Aula 5.3 - Prática
 ---
 
-# Projeto no Greenfoot {background-color="#40666e"}
-
-## 
-
-Na primeira parte desta aula, vamos usar o Greenfoot em vez do BlueJ.
-
-- Aproveitando o fato de que estamos usando o Greenfoot para o trabalho prático da disciplina.
-
-. . .
-
-Nós usaremos o projeto no Greenfoot para aprender conceitos que não foram vistos nas aulas teóricas anteriores:
-
-- Atributos estáticos.
-- Métodos estáticos.
-- Constantes.
-
-##
-
-Para começar, baixe o projeto [bolas-quicando](https://github.com/ufla-ipoo/bolas-quicando).
-
-- Abra o projeto no Greenfoot.
-- Execute o programa e veja o que acontece.
-
-. . .
-
-Vamos aproveitar esse projeto para conhecer um pouco mais sobre o Greenfoot.
-
-##
-
-::: {.callout-note title="Exercício" icon=false}
-::: {.nonincremental}
-**Execute** o projeto e em seguida **pause o programa** antes das bolas pararem de quicar.
-Em seguida, **clique com o botão direito** em uma das bolas.
-
-- Veja que as opções são as mesmas do BlueJ quando clicamos em um objeto na bancada de objetos.
-- Você pode clicar em **Inspecionar** para ver os valores dos atributos.
-- E você pode também **chamar métodos** do objeto.
-:::
-::: 
-
-##
-
-::: {.callout-note title="Exercício" icon=false}
-Abra a classe `Mundo` e veja o código do método `prepare`.
-Repare que ele cria duas bolas e depois cria 10 objetos da classe `Chao`.
-
-::: {.nonincremental}
-Altere o método para que o programa tenha uma terceira bola.
-
-- Crie a bola com diâmetro igual a 30 e posição vertical (y) 150.
-- Posicione a bola na posição (300, 150).
-:::
-:::
-
-##
-
-Antes de continuarmos, vamos conhecermos alguns métodos diponíveis no Greenfoot
-que não tínhamos visto no tutorial.
-
-- `getImage`: retorna a imagem usada para o objeto (definida na hora que criamos a classe).
-- `getImage().scale`: permite mudar o tamanho da imagem do objeto.
-- `setLocation`: muda a posição do ator no mundo (coordenadas X e Y).
-- `isTouching`: indica se o ator está colidindo com algum objeto da classe passada.
-
-##
-
-Agora leia o código da classe `Bola` e tente entender como ela funciona.
-
-# Atributos estáticos e constantes {background-color="#40666e"}
-
-## 
-
-Ao avaliar o código da classe `Bola` você viu alguma palavra-chave nova do Java?
-
-- Repare a declaração do atributo `GRAVIDADE`.
-
-. . .
-
-::: {.callout-note title="Exercício" icon=false}
-Experimente alterar o valor do atributo `GRAVIDADE` (aumentando e diminuindo seu valor).
-
-Execute o programa e veja o que acontece de diferente.
-:::
-
-##
-
-O atributo `GRAVIDADE` é declarado da seguinte forma:
-
-::: {.halfincfontsize}
-```{.java code-line-numbers="false"}
-    private static final double GRAVIDADE = 0.7;
-```
-:::
-
-. . .
-
-Há duas palavras-chave novas nessa declaração: 
-
-- `static` e `final`
-
-## Atributos estáticos
-
-A palalavra-chave `static` do Java serve para declarar [atributos estáticos]{.alert}.
-
-- Atributos desse tipo são guardados na própria classe, não nos objetos.
-  - Ele são também chamados de [variáveis de classe]{.alert}.
-- Isso torna esses atributos muito diferentes dos atributos comuns que vimos até agora.
-  - Lembrando que os atributos comuns são também chamados de **variáveis de instância**.
-
-## 
-
-O diagrama abaixo ilustra bem a diferença entre os atributos comuns e estáticos.
-
-![](imagens/atributo-estatico-diagrama-objetos.png){.r-stretch}
-
-## 
-
-![](imagens/atributo-estatico-diagrama-objetos.png){.r-stretch}
-
-Os **atributos comuns** (`velocidadeVertical`, `posY` e `amortecimento`) são guardados nos objetos:
-
-- Como criamos três objetos, há **três espaços na memória** para cada um desses atributos.
-
-## 
-
-![](imagens/atributo-estatico-diagrama-objetos.png){.r-stretch}
-
-Já o **atributo estático** `GRAVIDADE` é guardado na classe:
-
-- Com isso, existe sempre **um único espaço na memória** para ele, independente da quantidade de objetos criados.
-
-## 
-
-Os **atributos estáticos** podem ser acessados normalmente dentro de qualquer método da classe.
-
-- Isso significa que todos os objetos compartilham o mesmo atributo.
-- Se um objeto alterar o valor do atributo estático, esse valor será usado para todos os objetos.
-  - Já que existe um único valor na memória.
-
-. . .
-
-Geralmente usamos atributos estáticos quando todos os objetos da classe devem ter o mesmo valor para o atributo.
-
-- Com isso, evitamos desperdiçar memória guardando o mesmo valor repetidas vezes para cada objeto.
-
-# 
-
-::: {.callout-note title="Exercício" icon=false}
-Como um atributo estático poderia ser usado para contabilizar a quantidade de objetos criados em uma classe?
-
-Por exemplo, como a própria classe `Bola` poderia contar quantas bolas foram criadas durante o programa?
-::: 
-
-## Constantes 
-
-[Constantes]{.alert} são parecidas com variáveis,
-
-- mas a diferença é que seus valores não podem ser alterados depois de inicializados.
-- Definimos constantes em Java usando a **palavra-chave** `final`.
-
-##
-
-Suponha, por exemplo, a seguinte declaração de constante:
-
-::: {.halfincfontsize}
-```{.java code-line-numbers="false"}
-    private final int TAMANHO = 30;
-```
-:::
-
-- Veja que é uma declaração de atributo.
-- Mas tem a palavra-chave `final` antes do tipo do atributo.
-
-. . .
-
-Obs.: por convenção, escrevemos os nomes das constantes com letras maiúsculas.
-
-##
-
-Constantes podem ser inicializadas na própria linha da declaração, como no exemplo dado:
-
-::: {.halfincfontsize}
-```{.java code-line-numbers="false"}
-    private final int TAMANHO = 30;
-```
-:::
-
-- Neste caso, todos os objetos teriam o mesmo valor.
-- E, portanto, seria mais intessante que o atributo `TAMANHO` fosse estático.
-
-##
-
-Mas constantes podem ser inicializadas nos construtores em vez de ser na declaração.
-
-- Como isso, cada objeto poderia ter um valor diferente para o atributo `TAMANHO`.
-  - Inicializado, por exemplo, a partir de um valor recebido por parâmetro no construtor.
-  - A ideia seria que o objeto não poderia ter seu tamanho alterado depois de sua criação.
-- Nesse caso, não faria sentido declarar o atributo como estático.
-
-## 
-
-É mais comum usarmos constantes quando elas têm o mesmo valor para todos os objetos.
-
-- Portanto, é mais comum ter constantes estáticas, do que como atributos comuns.
-- Como é o caso do atributo `GRAVIDADE` da classe `Bola`.
-
-#
-
-::: {.callout-note title="Exercício" icon=false}
-Repare que o atributo `amortecimento` da classe `Bola` é constante, mas não é estático.
-Com isso, as bolas poderiam ter valores diferentes de amortecimento.
-
-Altere então a classe `Bola` de forma que o valor do atributo `amortecimento` 
-seja recebido por parâmetro no construtor.
-Você precisará, é claro, alterar a criação das bolas na classe `Mundo`.
-
-Experimente usar valores diferentes para cada bola (ex: 2, 3 e 4).
-Execute o programa para testar.
-
-O que acontece com bolas que têm maior amortecimento?
-:::
-
-# Métodos estáticos {background-color="#40666e"}
-
-## 
-
-Todos os métodos que implementamos até agora são **métodos de instância** (de objetos).
-
-- Pois eles são chamados usando objetos.
-
-. . .
-
-Mas nós podemos também ter métodos que são chamados usando a classe, em vez de objetos.
-
-- São os [métodos estáticos]{.alert}.
-- Assim como os atributos estáticos, os métodos estáticos pertencem à classe e não aos objetos.
-
-## 
-
-Nós podemos definir **métodos estáticos** usando a palavra-chave `static` na assinatura do método.
-
-##
-
-Suponha, por exemplo, que uma classe `Calendario` tenha o método estático abaixo: 
-
-::: {.halfincfontsize}
-```{.java code-line-numbers="false"}
-    public static int obterNumeroDeDiasDoMesAtual() {
-        . . .
-    }
-```
-:::
-
-. . .
-
-Nós poderíamos chamar esse método usando o comando abaixo:
-
-- Repare que usamos o **nome da classe** antes do `.` para chamar o método, **em vez de usar um objeto**.
-
-::: {.halfincfontsize}
-```{.java code-line-numbers="false"}
-    int dias = Calendario.obterNumeroDeDiasDoMesAtual();
-```
-:::
-
-## 
-
-Podemos encontrar vários exemplos de métodos estáticos na classe `Math` do Java.
-
-- Ela possui métodos, por exemplo, para encontrar o máximo ou o mínimo entre dois números.
-  - Ou ainda calcular seno e cosseno, por exemplo.
-
-. . .
-
-::: {.halfincfontsize}
-```{.java code-line-numbers="false"}
-    int maximo = Math.max(numeroA, numeroB);
-    double valor = Math.cos(angulo);
-```
-:::
-
-
-##
-
-::: {.halfincfontsize}
-```{.java code-line-numbers="false"}
-    int maximo = Math.max(numeroA, numeroB);
-    double valor = Math.cos(angulo);
-```
-:::
-
-Repare que esses métodos dependem apenas dos parâmetros passados.
-
-- Eles não dependem de atributos de um possível objeto `Math`, ou seja, não dependem do estado de um objeto.
-- Geralmente é nesses casos que usamos métodos estáticos.
-
-## 
-
-A classe `Math` do Java possui também exemplos de uso de constantes.
-
-- O valor de `PI`, por exemplo, pode ser acessado com o comando `Math.PI`.
-- Repare que estamos acessando o atributo diretamente, usando o nome da classe, em vez de um objeto.
-  - Da mesma forma que usamos para chamar métodos estáticos.
-- Nós conseguimos fazer isso porque PI é declarado como uma constante pública.
-
-##
-
-Mas não seria uma falha de encapsulamento declarar um atributo público?
-
-- Note que não há falha de encapsulamento em declarar um atributo público, se ele for uma constante.
-- Já que não seria possível alterar seu valor de fora da classe.
-
-## 
-
-Você já usou métodos estáticos antes, sem saber.
-
-- Repare como os métodos abaixo são chamados.
-
-. . .
-
-::: {.halfincfontsize}
-```{.java code-line-numbers="false"}
-Greenfoot.isKeyDown("left");
-
-Greenfoot.playSound("comendo.wav");
-
-Greenfoot.getRandomNumber(90);
-```
-:::
-
-##
-
-::: {.halfincfontsize}
-```{.java code-line-numbers="false"}
-Greenfoot.isKeyDown("left");
-
-Greenfoot.playSound("comendo.wav");
-
-Greenfoot.getRandomNumber(90);
-```
-:::
-
-Em todas essas chamadas nós usamos o nome da classe `Greenfoot` para chamar o método.
-
-- Isso porque todos esses métodos são estáticos.
-- Todos eles implementam ações que dependem apenas dos parâmetros passados
-  - (não dependem do estado de um objeto).
-
-## Limitações dos métodos estáticos 
-
-É importante sabermos que os **métodos estáticos** (métodos de classe) têm **limitações**.
-
-- Como eles pertencem à classe e não aos objetos, eles não podem acessar atributos comuns (variáveis de instância).
-- Eles podem acessar apenas **atributos estáticos** (variáveis de classe).
-
-. . .
-
-Da mesma forma, métodos estáticos não podem chamar métodos de instância da mesma classe.
-
-- Podem chamar apenas outros métodos estáticos.
-
-## Limitações dos métodos estáticos 
-
-Por que você acha que essas limitações existem?
-
-- Imagine que um método estático qualquer (vamos chamar de `metodoA`), de uma classe `ClasseX` acessasse um atributo comum.
-- Tente imaginar o que aconteceria se você fizesse uma chamada `ClasseX.metodoA()` sem ter criado nenhum objeto da classe.
-  - E se existissem vários objetos da classe?
-
-. . .
-
-E o que isso tem a ver com um método estático não poder chamar um método de instância?
-
-
-## 
-
-::: {.callout-note title="Exercício" icon=false}
-Altere a declaração do atributo `GRAVIDADE` da classe `Bola` de forma que ele não seja mais uma constante.
-Mas, mantenha a inicialização do atributo na declaração.
-
-Crie um **método modificador** que permita alterar o valor do atributo.
-
-Execute o programa e pause-o antes das bolas pararem de quicar.
-Clique em uma das bolas e chame o método que você criou, informando um novo valor para a gravidade.
-
-Continue a execução do programa e repare que acontece. 
-A gravidade foi alterada só para a bola que você chamou o método, ou para todas elas?
-
-Depois que as bolas pararem, pause o programa novamente, e use a opção *Inspecionar* em cada bola para conferir
-o valor do atributo `GRAVIDADE`.
-(Obs.: na janela de inspeção, use o botão *mostrar campos estáticos*).
-::: 
-
-# ArrayList vs. HashMap {background-color="#40666e"}
-
-## 
-
-Na segunda parte da aula, faremos um exercício que nos permitirá **comparar o uso** de `ArrayList` e `HashMap`.
+# Comparando uso de ArrayList e HashMap {background-color="#40666e"}
 
 ##
 
@@ -419,7 +22,7 @@ Repare que, nesse contexto, podemos tratar a coleção de produtos como **pares 
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 1" icon=false}
 ::: {.nonincremental}
 Baixe o projeto `produtos` que você entregou como exercício na aula prática do capítulo anterior e renomeie 
 a pasta do projeto para `produtos-com-hashmap`.
@@ -436,7 +39,7 @@ Teste suas alterações (teste todos os métodos que tinha implementado)!
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 2" icon=false}
 ::: {.nonincremental}
 Confira como você tratou a versão sobrecarregada do método `encontrarProduto` que recebe o ID do produto por parâmetro.
 
@@ -447,7 +50,7 @@ Você deve usar o método `get` para encontrar o produto (valor) a partir do ID 
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 3" icon=false}
 ::: {.nonincremental}
 Compare o código do projeto `produtos` com o código do projeto `produtos-com-hashmap`.
 
@@ -461,7 +64,7 @@ Escreva sua resposta no comentário `javadoc` da classe `GerenciadorDeEstoque` d
 
 ## 
 
-No projeto `produtos-com-hashmap` como você tratou a versão sobrecarregada do método `encontrarProduto` que recebe **o nome do produto** por parâmetro?
+No projeto `produtos-com-hashmap`, como você tratou a versão sobrecarregada do método `encontrarProduto` que recebe **o nome do produto** por parâmetro?
 
 - Provavelmente, você implementou um loop para percorrer as chaves do `HashMap` e verificou o nome do produto, certo?
 - Você acha que existe alguma forma mais eficiente de fazer isso?
@@ -480,7 +83,7 @@ Repare que quando usamos um `HashMap`, se quisermos encontrar um valor a partir 
 
 É interessante que você saiba que isso não é apenas uma questão de ficar mais fácil para implementar.
 
-- Um ponto **importante** é que o método `get` de um `HashMap` **é muito mais eficiente** do que um loop que percorre todos os elementos de uma coleção.
+- Um ponto **importante** é que o método `get` de um `HashMap` **é muito mais eficiente** (ou seja, mais rápido) do que um loop que percorre todos os elementos de uma coleção.
   - Pense, por exemplo, em um estoque com milhares de produtos.
 
 ##
@@ -543,7 +146,7 @@ Em um sistema com muitos produtos, a diferença de eficiência pode ser signific
 
 ##
 
-::: {.callout-note title="Exercício" icon=false}
+::: {.callout-note title="Exercício 4" icon=false}
 ::: {.nonincremental}
 Altere o projeto `produtos-com-hashmap` para que ele tenha dois objetos   `HashMap`:
 
@@ -555,17 +158,225 @@ Teste suas alterações!
 :::
 :::
 
-# Entregas dessa Aula {background-color="#40666e"}
+# Analisador de Logs Web {background-color="#40666e"}
 
 ##
 
-::: {.callout-important title="Entrega no Campus Virtual"}
-Acesse, no Campus Virtual, as atividades dessa aula e envie os códigos dos projetos 
-`bolas-quicando` e `produtos-com-hashmap` da forma que ficaram após as suas alterações 
-(compacte a pasta em um arquivo `.zip` para enviar).
+Servidores web geralmente guardam arquivos de log de acesso às suas páginas.
+
+- Usando ferramentas adequadas, esses logs permitem extrair e analisar informações úteis como:
+  - quais são as páginas mais acessadas
+  - de quais sites vieram o acesso a este site
+  - se outros sites parecem ter links quebrados para o site
+  - a quantidade de dados que são enviados para quem acessa
+  - o períodos mais ocupados do servidor (com mais acessos)
+    - ao longo de um dia, um mês ou um ano.
+
+##
+
+Essas informações ajudam os administradores do sistema a decidir, por exemplo:
+
+- Se eles precisam de máquinas mais poderosas como servidor,
+- ou quais são os horários com menor acesso para fazer uma manutenção.
+
+##
+
+O projeto [`analisador-logs-web`](https://github.com/ufla-ipoo/analisador-logs-web) 
+tem uma aplicação que faz uma análise de dados de um servidor web.
+
+- O servidor escreve uma linha de log no arquivo a cada acesso feito.
+- A linha tem dados do momento do acesso, no formato:
+
+  `ano mes dia hora minuto`
+
+- Por exemplo, um acesso às 16:35h no dia 25 de setembro de 2026, é representado como:
+
+  `2026 09 25 16 35`
+
+##
+
+A versão atual do projeto permite analisar qual hora do dia, em média,
+o servidor tende a ficar mais ocupado (ou menos ocupado).
+
+- Isso é feito contando a quantidade de acessos feitos a cada hora a partir do arquivo de log.
+- Uma amostra do arquivo de log do servidor está presente no arquivo `weblog.txt`.
+
+## 
+
+Abra o projeto `analisador-logs-web` e leia o código da classe `AnalisadorDeLog`.
+
+- Veja que a classe tem um atributo que é um array (vetor) de inteiros.
+
+. . .
+
+Lembre-se que o material sobre uso de arrays em Java foi apresentado como estudo
+para casa na Aula 4.3.
+
+- Se você ainda não estudou esse material, você deve agora parar, acessar o material
+  da aula e procurar a seção **Coleções de tamanho fixo**.
+- Ao terminar, volte para continuar as atividades dessa aula.
+
+##
+
+
+Teste o programa do projeto `analisador-logs-web`, fazendo o seguinte:
+
+- crie um objeto da classe `AnalisadorDeLog`,
+- chame o método `analisarDadosPorHora`
+- e, em seguida, chame o método `imprimirContagensPorHora`.
+
+. . .
+
+Qual é o horário mais ocupado do dia?
+
+## {auto-animate=true}
+
+A classe `LeitorDeArquivoDeLog` é bastante complexa e sugiro que você não gaste muito tempo investigando sua implementação. 
+
+- Sua função é lidar com a tarefa de dividir cada linha de log em valores de dados separados, 
+- mas podemos abstrair os detalhes da implementação considerando apenas os cabeçalhos de dois de seus métodos:
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public boolean hasNext()
+public EntradaDeLog next()
+```
 :::
 
+## {auto-animate=true}
 
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+public boolean hasNext()
+public EntradaDeLog next()
+```
+:::
 
+Esses métodos correspondem exatamente aos que vimos com o tipo `Iterator`, 
 
+- e um `LeitorDeArquivoDeLog` pode ser usado exatamente da mesma maneira, 
+- exceto que não é permitido o uso do método `remove`. 
 
+##
+
+Para cada `EntradaDeLog`, o método `analisarDadosPorHora` do analisador obtém o valor do atributo `hora`:
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+int hora = entrada.obterHora();
+```
+:::
+
+. . .
+
+Sabemos que o valor armazenado na variável local `hora` estará sempre no intervalo de 0 a 23,
+
+- o que corresponde exatamente ao intervalo válido de índices para o vetor `contagensPorHora`. 
+- Portanto, cada vez que um valor de hora é lido, desejamos atualizar a contagem para essa hora em 1, usando:
+
+. . .
+
+::: {.halfincfontsize}
+```{.java code-line-numbers="false"}
+contagensPorHora[hora]++;
+```
+:::
+
+##
+
+Ao final do método `analisarDadosPorHora`, 
+
+- temos um conjunto completo de contagens cumulativas para cada hora do período de registro.
+
+. . .
+
+Já o método `imprimirContagensPorHora` usa um loop `for` tradicional (com contador) para exibir as informações do vetor.
+
+##
+
+::: {.callout-note title="Exercício 5" icon=false}
+::: {.nonincremental}
+Altere a classe `AnalisadorDeLog` criando um construtor sobrecarregado que recebe por parâmetro
+o nome do arquivo de log a ser analisado.
+Será necessário passar o nome do arquivo para o construtor da classe `LeitorDeArquivoDeLog`.
+
+Para testar, use a classe `GeradorArquivoDeLog` para criar seu próprio arquivo de log de entradas aleatórias,
+e analise os dados desse arquivo.
+:::
+::: 
+
+##
+
+::: {.callout-note title="Exercício 6" icon=false}
+::: {.nonincremental}
+Crie um método `numeroDeAcessos` na classe `AnalisadorDeLog` que retorna a quantidade total de
+acessos armazenados em um arquivo de log.
+
+O método **deve** fazer o cálculo percorrendo (iterando) o vetor `contagensPorHora`.
+
+Dica: para testar seu método, use o gerador para criar um arquivo com poucas entradas, e o utilize
+na análise de forma que você consiga conferir manualmente se o resultado está correto.
+:::
+::: 
+
+##
+
+::: {.callout-note title="Exercício 7" icon=false}
+::: {.nonincremental}
+Adicione um método `horaMaisOcupada` na classe `AnalisadorDeLog` que retorna a hora com a **maior**
+quantidade de acessos.
+
+É necessário verificar todos os elementos do vetor `contagensPorHora`? 
+Em caso afirmativo, qual é o tipo de loop mais adequado para fazer a implementação?
+:::
+::: 
+
+. . .
+
+::: {.callout-note title="Exercício 8" icon=false}
+::: {.nonincremental}
+Adicione um método `horaMaisTranquila` na classe `AnalisadorDeLog` que retorna a hora com a **menor**
+quantidade de acessos.
+
+Dica: lembre-se de testar um caso no qual toda as horas possuem algum acesso (ou seja, um valor diferente de zero).
+:::
+::: 
+
+##
+
+::: {.callout-note title="Exercício 9" icon=false}
+::: {.nonincremental}
+Adicione um método `duasHorasSeguidasMaisOcupadas` na classe `AnalisadorDeLog` que retorna o período de duas horas **consecutivas**
+com a **maior** quantidade de acessos.
+
+O método deve retornar a hora de início do período em questão.
+
+Exemplo: se as duas horas consecutivas mais ocupadas são de 10h às 12h (correspondente às horas 10 e 11),
+ o método deve retornar 10.
+:::
+::: 
+
+##
+
+::: {.callout-note title="Exercício 10 - [Desafio]{.alert}" icon=false}
+::: {.nonincremental}
+Vamos melhorar o projeto para permitir também a análise de acessos por dia da semana, e não apenas por hora.
+
+A ideia é que consigamos saber:
+
+- A quantidade de acessos de cada dia da semana.
+- O dia da semana com a maior quantidade de acessos.
+- O dia da semana com a menor quantidade de acessos.
+
+Dicas: 
+
+1. Você precisará criar método de acesso na classe `EntradaDeLog` que retorne o dia da semana 
+no qual aquele acesso foi feito.
+  - Pesquisa na internet como o atributo constante, público e estático `DAY_OF_WEEK` da classe `Calendar`
+pode ser usado na sua implementação.
+2. Você precisará guardar as informações também por dia da semana na classe `AnalisadorDeLog`.
+   Para isso é melhor usar vetor, `ArrayList` ou `HashMap`?
+:::
+::: 

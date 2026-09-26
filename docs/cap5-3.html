@@ -15,7 +15,6 @@
   <meta name="generator" content="quarto-1.7.33">
 
   <meta name="author" content="Prof.&nbsp;Julio César Alves">
-  <meta name="dcterms.date" content="2025-09-10">
   <title>GAC125 - Introdução à Programação Orientada a Objetos – IPOO - Cap. 5 Comportamento Mais Sofisticado</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -101,7 +100,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-aaa2c491d90ff9543f9827eff0142c1e.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-5858f4e81da34f86931d7ba7687d5e8e.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -216,454 +215,14 @@
     </div>
 </div>
 
-  <p class="date">09/10/2025</p>
+  <p class="date">26/09/2026</p>
 </section>
 <section>
-<section id="projeto-no-greenfoot" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>Projeto no Greenfoot</h1>
+<section id="comparando-uso-de-arraylist-e-hashmap" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Comparando uso de ArrayList e HashMap</h1>
 
 </section>
 <section id="section" class="slide level2">
-<h2></h2>
-<p>Na primeira parte desta aula, vamos usar o Greenfoot em vez do BlueJ.</p>
-<ul>
-<li class="fragment">Aproveitando o fato de que estamos usando o Greenfoot para o trabalho prático da disciplina.</li>
-</ul>
-<div class="fragment">
-<p>Nós usaremos o projeto no Greenfoot para aprender conceitos que não foram vistos nas aulas teóricas anteriores:</p>
-<ul>
-<li class="fragment">Atributos estáticos.</li>
-<li class="fragment">Métodos estáticos.</li>
-<li class="fragment">Constantes.</li>
-</ul>
-</div>
-</section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<p>Para começar, baixe o projeto <a href="https://github.com/ufla-ipoo/bolas-quicando">bolas-quicando</a>.</p>
-<ul>
-<li class="fragment">Abra o projeto no Greenfoot.</li>
-<li class="fragment">Execute o programa e veja o que acontece.</li>
-</ul>
-<div class="fragment">
-<p>Vamos aproveitar esse projeto para conhecer um pouco mais sobre o Greenfoot.</p>
-</div>
-</section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-<div title="Exercício">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício</strong></p>
-</div>
-<div class="callout-content">
-<p><strong>Execute</strong> o projeto e em seguida <strong>pause o programa</strong> antes das bolas pararem de quicar. Em seguida, <strong>clique com o botão direito</strong> em uma das bolas.</p>
-<ul>
-<li>Veja que as opções são as mesmas do BlueJ quando clicamos em um objeto na bancada de objetos.</li>
-<li>Você pode clicar em <strong>Inspecionar</strong> para ver os valores dos atributos.</li>
-<li>E você pode também <strong>chamar métodos</strong> do objeto.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<div title="Exercício">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício</strong></p>
-</div>
-<div class="callout-content">
-<p>Abra a classe <code>Mundo</code> e veja o código do método <code>prepare</code>. Repare que ele cria duas bolas e depois cria 10 objetos da classe <code>Chao</code>.</p>
-<p>Altere o método para que o programa tenha uma terceira bola.</p>
-<ul>
-<li>Crie a bola com diâmetro igual a 30 e posição vertical (y) 150.</li>
-<li>Posicione a bola na posição (300, 150).</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<p>Antes de continuarmos, vamos conhecermos alguns métodos diponíveis no Greenfoot que não tínhamos visto no tutorial.</p>
-<ul>
-<li class="fragment"><code>getImage</code>: retorna a imagem usada para o objeto (definida na hora que criamos a classe).</li>
-<li class="fragment"><code>getImage().scale</code>: permite mudar o tamanho da imagem do objeto.</li>
-<li class="fragment"><code>setLocation</code>: muda a posição do ator no mundo (coordenadas X e Y).</li>
-<li class="fragment"><code>isTouching</code>: indica se o ator está colidindo com algum objeto da classe passada.</li>
-</ul>
-</section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<p>Agora leia o código da classe <code>Bola</code> e tente entender como ela funciona.</p>
-</section></section>
-<section>
-<section id="atributos-estáticos-e-constantes" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>Atributos estáticos e constantes</h1>
-
-</section>
-<section id="section-6" class="slide level2">
-<h2></h2>
-<p>Ao avaliar o código da classe <code>Bola</code> você viu alguma palavra-chave nova do Java?</p>
-<ul>
-<li class="fragment">Repare a declaração do atributo <code>GRAVIDADE</code>.</li>
-</ul>
-<div class="fragment">
-<div title="Exercício">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício</strong></p>
-</div>
-<div class="callout-content">
-<p>Experimente alterar o valor do atributo <code>GRAVIDADE</code> (aumentando e diminuindo seu valor).</p>
-<p>Execute o programa e veja o que acontece de diferente.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="section-7" class="slide level2">
-<h2></h2>
-<p>O atributo <code>GRAVIDADE</code> é declarado da seguinte forma:</p>
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="dt">double</span> GRAVIDADE <span class="op">=</span> <span class="fl">0.7</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<p>Há duas palavras-chave novas nessa declaração:</p>
-<ul>
-<li class="fragment"><code>static</code> e <code>final</code></li>
-</ul>
-</div>
-</section>
-<section id="atributos-estáticos" class="slide level2">
-<h2>Atributos estáticos</h2>
-<p>A palalavra-chave <code>static</code> do Java serve para declarar <span class="alert">atributos estáticos</span>.</p>
-<ul>
-<li class="fragment">Atributos desse tipo são guardados na própria classe, não nos objetos.
-<ul>
-<li class="fragment">Ele são também chamados de <span class="alert">variáveis de classe</span>.</li>
-</ul></li>
-<li class="fragment">Isso torna esses atributos muito diferentes dos atributos comuns que vimos até agora.
-<ul>
-<li class="fragment">Lembrando que os atributos comuns são também chamados de <strong>variáveis de instância</strong>.</li>
-</ul></li>
-</ul>
-</section>
-<section id="section-8" class="slide level2">
-<h2></h2>
-<p>O diagrama abaixo ilustra bem a diferença entre os atributos comuns e estáticos.</p>
-<img data-src="imagens/atributo-estatico-diagrama-objetos.png" class="r-stretch">
-</section>
-<section id="section-9" class="slide level2">
-<h2></h2>
-<img data-src="imagens/atributo-estatico-diagrama-objetos.png" class="r-stretch">
-<p>Os <strong>atributos comuns</strong> (<code>velocidadeVertical</code>, <code>posY</code> e <code>amortecimento</code>) são guardados nos objetos:</p>
-<ul>
-<li class="fragment">Como criamos três objetos, há <strong>três espaços na memória</strong> para cada um desses atributos.</li>
-</ul>
-</section>
-<section id="section-10" class="slide level2">
-<h2></h2>
-<img data-src="imagens/atributo-estatico-diagrama-objetos.png" class="r-stretch">
-<p>Já o <strong>atributo estático</strong> <code>GRAVIDADE</code> é guardado na classe:</p>
-<ul>
-<li class="fragment">Com isso, existe sempre <strong>um único espaço na memória</strong> para ele, independente da quantidade de objetos criados.</li>
-</ul>
-</section>
-<section id="section-11" class="slide level2">
-<h2></h2>
-<p>Os <strong>atributos estáticos</strong> podem ser acessados normalmente dentro de qualquer método da classe.</p>
-<ul>
-<li class="fragment">Isso significa que todos os objetos compartilham o mesmo atributo.</li>
-<li class="fragment">Se um objeto alterar o valor do atributo estático, esse valor será usado para todos os objetos.
-<ul>
-<li class="fragment">Já que existe um único valor na memória.</li>
-</ul></li>
-</ul>
-<div class="fragment">
-<p>Geralmente usamos atributos estáticos quando todos os objetos da classe devem ter o mesmo valor para o atributo.</p>
-<ul>
-<li class="fragment">Com isso, evitamos desperdiçar memória guardando o mesmo valor repetidas vezes para cada objeto.</li>
-</ul>
-</div>
-</section></section>
-<section>
-<section id="section-12" class="title-slide slide level1 center">
-<h1></h1>
-<div title="Exercício">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício</strong></p>
-</div>
-<div class="callout-content">
-<p>Como um atributo estático poderia ser usado para contabilizar a quantidade de objetos criados em uma classe?</p>
-<p>Por exemplo, como a própria classe <code>Bola</code> poderia contar quantas bolas foram criadas durante o programa?</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="constantes" class="slide level2">
-<h2>Constantes</h2>
-<p><span class="alert">Constantes</span> são parecidas com variáveis,</p>
-<ul>
-<li class="fragment">mas a diferença é que seus valores não podem ser alterados depois de inicializados.</li>
-<li class="fragment">Definimos constantes em Java usando a <strong>palavra-chave</strong> <code>final</code>.</li>
-</ul>
-</section>
-<section id="section-13" class="slide level2">
-<h2></h2>
-<p>Suponha, por exemplo, a seguinte declaração de constante:</p>
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> <span class="dt">int</span> TAMANHO <span class="op">=</span> <span class="dv">30</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li class="fragment">Veja que é uma declaração de atributo.</li>
-<li class="fragment">Mas tem a palavra-chave <code>final</code> antes do tipo do atributo.</li>
-</ul>
-<div class="fragment">
-<p>Obs.: por convenção, escrevemos os nomes das constantes com letras maiúsculas.</p>
-</div>
-</section>
-<section id="section-14" class="slide level2">
-<h2></h2>
-<p>Constantes podem ser inicializadas na própria linha da declaração, como no exemplo dado:</p>
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> <span class="dt">int</span> TAMANHO <span class="op">=</span> <span class="dv">30</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li class="fragment">Neste caso, todos os objetos teriam o mesmo valor.</li>
-<li class="fragment">E, portanto, seria mais intessante que o atributo <code>TAMANHO</code> fosse estático.</li>
-</ul>
-</section>
-<section id="section-15" class="slide level2">
-<h2></h2>
-<p>Mas constantes podem ser inicializadas nos construtores em vez de ser na declaração.</p>
-<ul>
-<li class="fragment">Como isso, cada objeto poderia ter um valor diferente para o atributo <code>TAMANHO</code>.
-<ul>
-<li class="fragment">Inicializado, por exemplo, a partir de um valor recebido por parâmetro no construtor.</li>
-<li class="fragment">A ideia seria que o objeto não poderia ter seu tamanho alterado depois de sua criação.</li>
-</ul></li>
-<li class="fragment">Nesse caso, não faria sentido declarar o atributo como estático.</li>
-</ul>
-</section>
-<section id="section-16" class="slide level2">
-<h2></h2>
-<p>É mais comum usarmos constantes quando elas têm o mesmo valor para todos os objetos.</p>
-<ul>
-<li class="fragment">Portanto, é mais comum ter constantes estáticas, do que como atributos comuns.</li>
-<li class="fragment">Como é o caso do atributo <code>GRAVIDADE</code> da classe <code>Bola</code>.</li>
-</ul>
-</section></section>
-<section id="section-17" class="title-slide slide level1 center">
-<h1></h1>
-<div title="Exercício">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício</strong></p>
-</div>
-<div class="callout-content">
-<p>Repare que o atributo <code>amortecimento</code> da classe <code>Bola</code> é constante, mas não é estático. Com isso, as bolas poderiam ter valores diferentes de amortecimento.</p>
-<p>Altere então a classe <code>Bola</code> de forma que o valor do atributo <code>amortecimento</code> seja recebido por parâmetro no construtor. Você precisará, é claro, alterar a criação das bolas na classe <code>Mundo</code>.</p>
-<p>Experimente usar valores diferentes para cada bola (ex: 2, 3 e 4). Execute o programa para testar.</p>
-<p>O que acontece com bolas que têm maior amortecimento?</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section>
-<section id="métodos-estáticos" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>Métodos estáticos</h1>
-
-</section>
-<section id="section-18" class="slide level2">
-<h2></h2>
-<p>Todos os métodos que implementamos até agora são <strong>métodos de instância</strong> (de objetos).</p>
-<ul>
-<li class="fragment">Pois eles são chamados usando objetos.</li>
-</ul>
-<div class="fragment">
-<p>Mas nós podemos também ter métodos que são chamados usando a classe, em vez de objetos.</p>
-<ul>
-<li class="fragment">São os <span class="alert">métodos estáticos</span>.</li>
-<li class="fragment">Assim como os atributos estáticos, os métodos estáticos pertencem à classe e não aos objetos.</li>
-</ul>
-</div>
-</section>
-<section id="section-19" class="slide level2">
-<h2></h2>
-<p>Nós podemos definir <strong>métodos estáticos</strong> usando a palavra-chave <code>static</code> na assinatura do método.</p>
-</section>
-<section id="section-20" class="slide level2">
-<h2></h2>
-<p>Suponha, por exemplo, que uma classe <code>Calendario</code> tenha o método estático abaixo:</p>
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">int</span> <span class="fu">obterNumeroDeDiasDoMesAtual</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span> <span class="op">.</span> <span class="op">.</span></span>
-<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<p>Nós poderíamos chamar esse método usando o comando abaixo:</p>
-<ul>
-<li class="fragment">Repare que usamos o <strong>nome da classe</strong> antes do <code>.</code> para chamar o método, <strong>em vez de usar um objeto</strong>.</li>
-</ul>
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb5"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> dias <span class="op">=</span> Calendario<span class="op">.</span><span class="fu">obterNumeroDeDiasDoMesAtual</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</section>
-<section id="section-21" class="slide level2">
-<h2></h2>
-<p>Podemos encontrar vários exemplos de métodos estáticos na classe <code>Math</code> do Java.</p>
-<ul>
-<li class="fragment">Ela possui métodos, por exemplo, para encontrar o máximo ou o mínimo entre dois números.
-<ul>
-<li class="fragment">Ou ainda calcular seno e cosseno, por exemplo.</li>
-</ul></li>
-</ul>
-<div class="fragment">
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> maximo <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span><span class="op">(</span>numeroA<span class="op">,</span> numeroB<span class="op">);</span></span>
-<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> valor <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">cos</span><span class="op">(</span>angulo<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</section>
-<section id="section-22" class="slide level2">
-<h2></h2>
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> maximo <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span><span class="op">(</span>numeroA<span class="op">,</span> numeroB<span class="op">);</span></span>
-<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> valor <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">cos</span><span class="op">(</span>angulo<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Repare que esses métodos dependem apenas dos parâmetros passados.</p>
-<ul>
-<li class="fragment">Eles não dependem de atributos de um possível objeto <code>Math</code>, ou seja, não dependem do estado de um objeto.</li>
-<li class="fragment">Geralmente é nesses casos que usamos métodos estáticos.</li>
-</ul>
-</section>
-<section id="section-23" class="slide level2">
-<h2></h2>
-<p>A classe <code>Math</code> do Java possui também exemplos de uso de constantes.</p>
-<ul>
-<li class="fragment">O valor de <code>PI</code>, por exemplo, pode ser acessado com o comando <code>Math.PI</code>.</li>
-<li class="fragment">Repare que estamos acessando o atributo diretamente, usando o nome da classe, em vez de um objeto.
-<ul>
-<li class="fragment">Da mesma forma que usamos para chamar métodos estáticos.</li>
-</ul></li>
-<li class="fragment">Nós conseguimos fazer isso porque PI é declarado como uma constante pública.</li>
-</ul>
-</section>
-<section id="section-24" class="slide level2">
-<h2></h2>
-<p>Mas não seria uma falha de encapsulamento declarar um atributo público?</p>
-<ul>
-<li class="fragment">Note que não há falha de encapsulamento em declarar um atributo público, se ele for uma constante.</li>
-<li class="fragment">Já que não seria possível alterar seu valor de fora da classe.</li>
-</ul>
-</section>
-<section id="section-25" class="slide level2">
-<h2></h2>
-<p>Você já usou métodos estáticos antes, sem saber.</p>
-<ul>
-<li class="fragment">Repare como os métodos abaixo são chamados.</li>
-</ul>
-<div class="fragment">
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">isKeyDown</span><span class="op">(</span><span class="st">"left"</span><span class="op">);</span></span>
-<span id="cb8-2"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">playSound</span><span class="op">(</span><span class="st">"comendo.wav"</span><span class="op">);</span></span>
-<span id="cb8-4"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">getRandomNumber</span><span class="op">(</span><span class="dv">90</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</section>
-<section id="section-26" class="slide level2">
-<h2></h2>
-<div class="halfincfontsize">
-<div class="sourceCode" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">isKeyDown</span><span class="op">(</span><span class="st">"left"</span><span class="op">);</span></span>
-<span id="cb9-2"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">playSound</span><span class="op">(</span><span class="st">"comendo.wav"</span><span class="op">);</span></span>
-<span id="cb9-4"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">getRandomNumber</span><span class="op">(</span><span class="dv">90</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Em todas essas chamadas nós usamos o nome da classe <code>Greenfoot</code> para chamar o método.</p>
-<ul>
-<li class="fragment">Isso porque todos esses métodos são estáticos.</li>
-<li class="fragment">Todos eles implementam ações que dependem apenas dos parâmetros passados
-<ul>
-<li class="fragment">(não dependem do estado de um objeto).</li>
-</ul></li>
-</ul>
-</section>
-<section id="limitações-dos-métodos-estáticos" class="slide level2">
-<h2>Limitações dos métodos estáticos</h2>
-<p>É importante sabermos que os <strong>métodos estáticos</strong> (métodos de classe) têm <strong>limitações</strong>.</p>
-<ul>
-<li class="fragment">Como eles pertencem à classe e não aos objetos, eles não podem acessar atributos comuns (variáveis de instância).</li>
-<li class="fragment">Eles podem acessar apenas <strong>atributos estáticos</strong> (variáveis de classe).</li>
-</ul>
-<div class="fragment">
-<p>Da mesma forma, métodos estáticos não podem chamar métodos de instância da mesma classe.</p>
-<ul>
-<li class="fragment">Podem chamar apenas outros métodos estáticos.</li>
-</ul>
-</div>
-</section>
-<section id="limitações-dos-métodos-estáticos-1" class="slide level2">
-<h2>Limitações dos métodos estáticos</h2>
-<p>Por que você acha que essas limitações existem?</p>
-<ul>
-<li class="fragment">Imagine que um método estático qualquer (vamos chamar de <code>metodoA</code>), de uma classe <code>ClasseX</code> acessasse um atributo comum.</li>
-<li class="fragment">Tente imaginar o que aconteceria se você fizesse uma chamada <code>ClasseX.metodoA()</code> sem ter criado nenhum objeto da classe.
-<ul>
-<li class="fragment">E se existissem vários objetos da classe?</li>
-</ul></li>
-</ul>
-<div class="fragment">
-<p>E o que isso tem a ver com um método estático não poder chamar um método de instância?</p>
-</div>
-</section>
-<section id="section-27" class="slide level2">
-<h2></h2>
-<div title="Exercício">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício</strong></p>
-</div>
-<div class="callout-content">
-<p>Altere a declaração do atributo <code>GRAVIDADE</code> da classe <code>Bola</code> de forma que ele não seja mais uma constante. Mas, mantenha a inicialização do atributo na declaração.</p>
-<p>Crie um <strong>método modificador</strong> que permita alterar o valor do atributo.</p>
-<p>Execute o programa e pause-o antes das bolas pararem de quicar. Clique em uma das bolas e chame o método que você criou, informando um novo valor para a gravidade.</p>
-<p>Continue a execução do programa e repare que acontece. A gravidade foi alterada só para a bola que você chamou o método, ou para todas elas?</p>
-<p>Depois que as bolas pararem, pause o programa novamente, e use a opção <em>Inspecionar</em> em cada bola para conferir o valor do atributo <code>GRAVIDADE</code>. (Obs.: na janela de inspeção, use o botão <em>mostrar campos estáticos</em>).</p>
-</div>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="arraylist-vs.-hashmap" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>ArrayList vs.&nbsp;HashMap</h1>
-
-</section>
-<section id="section-28" class="slide level2">
-<h2></h2>
-<p>Na segunda parte da aula, faremos um exercício que nos permitirá <strong>comparar o uso</strong> de <code>ArrayList</code> e <code>HashMap</code>.</p>
-</section>
-<section id="section-29" class="slide level2">
 <h2></h2>
 <p>No capítulo anterior, fizemos um exercício que tratava do <strong>estoque de produtos</strong>.</p>
 <ul>
@@ -679,13 +238,13 @@
 </ul>
 </div>
 </section>
-<section id="section-30" class="slide level2">
+<section id="section-1" class="slide level2">
 <h2></h2>
-<div title="Exercício">
+<div title="Exercício 1">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício</strong></p>
+<p><strong>Exercício 1</strong></p>
 </div>
 <div class="callout-content">
 <p>Baixe o projeto <code>produtos</code> que você entregou como exercício na aula prática do capítulo anterior e renomeie a pasta do projeto para <code>produtos-com-hashmap</code>.</p>
@@ -701,13 +260,13 @@
 </div>
 </div>
 </section>
-<section id="section-31" class="slide level2">
+<section id="section-2" class="slide level2">
 <h2></h2>
-<div title="Exercício">
+<div title="Exercício 2">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício</strong></p>
+<p><strong>Exercício 2</strong></p>
 </div>
 <div class="callout-content">
 <p>Confira como você tratou a versão sobrecarregada do método <code>encontrarProduto</code> que recebe o ID do produto por parâmetro.</p>
@@ -717,13 +276,13 @@
 </div>
 </div>
 </section>
-<section id="section-32" class="slide level2">
+<section id="section-3" class="slide level2">
 <h2></h2>
-<div title="Exercício">
+<div title="Exercício 3">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício</strong></p>
+<p><strong>Exercício 3</strong></p>
 </div>
 <div class="callout-content">
 <p>Compare o código do projeto <code>produtos</code> com o código do projeto <code>produtos-com-hashmap</code>.</p>
@@ -737,9 +296,9 @@
 </div>
 </div>
 </section>
-<section id="section-33" class="slide level2">
+<section id="section-4" class="slide level2">
 <h2></h2>
-<p>No projeto <code>produtos-com-hashmap</code> como você tratou a versão sobrecarregada do método <code>encontrarProduto</code> que recebe <strong>o nome do produto</strong> por parâmetro?</p>
+<p>No projeto <code>produtos-com-hashmap</code>, como você tratou a versão sobrecarregada do método <code>encontrarProduto</code> que recebe <strong>o nome do produto</strong> por parâmetro?</p>
 <ul>
 <li class="fragment">Provavelmente, você implementou um loop para percorrer as chaves do <code>HashMap</code> e verificou o nome do produto, certo?</li>
 <li class="fragment">Você acha que existe alguma forma mais eficiente de fazer isso?</li>
@@ -748,7 +307,7 @@
 <p>Pense sobre isso antes de continuar.</p>
 </div>
 </section>
-<section id="section-34" class="slide level2">
+<section id="section-5" class="slide level2">
 <h2></h2>
 <p>Repare que quando usamos um <code>HashMap</code>, se quisermos encontrar um valor a partir de uma chave, nós <strong>não precisamos</strong> implementar <strong>um loop</strong>.</p>
 <ul>
@@ -757,14 +316,14 @@
 <div class="fragment">
 <p>É interessante que você saiba que isso não é apenas uma questão de ficar mais fácil para implementar.</p>
 <ul>
-<li class="fragment">Um ponto <strong>importante</strong> é que o método <code>get</code> de um <code>HashMap</code> <strong>é muito mais eficiente</strong> do que um loop que percorre todos os elementos de uma coleção.
+<li class="fragment">Um ponto <strong>importante</strong> é que o método <code>get</code> de um <code>HashMap</code> <strong>é muito mais eficiente</strong> (ou seja, mais rápido) do que um loop que percorre todos os elementos de uma coleção.
 <ul>
 <li class="fragment">Pense, por exemplo, em um estoque com milhares de produtos.</li>
 </ul></li>
 </ul>
 </div>
 </section>
-<section id="section-35" class="slide level2">
+<section id="section-6" class="slide level2">
 <h2></h2>
 <p>O método <code>get</code> do <code>HashMap</code> é mais eficiente porque usa uma estrutura de dados chamada <strong>tabela Hash</strong></p>
 <ul>
@@ -777,7 +336,7 @@
 </ul>
 </div>
 </section>
-<section id="section-36" class="slide level2">
+<section id="section-7" class="slide level2">
 <h2></h2>
 <p>Sabendo disso, como você poderia implementar, de forma mais eficiente, o método <code>encontrarProduto</code> que recebe o nome do produto por parâmetro?</p>
 <ul>
@@ -791,7 +350,7 @@
 </ul>
 </div>
 </section>
-<section id="section-37" class="slide level2">
+<section id="section-8" class="slide level2">
 <h2></h2>
 <p>Mas se substituirmos o <code>HashMap</code> que temos até agora, que usa o identificador como chave,</p>
 <ul>
@@ -801,7 +360,7 @@
 <p>O que poderíamos fazer então?</p>
 </div>
 </section>
-<section id="section-38" class="slide level2">
+<section id="section-9" class="slide level2">
 <h2></h2>
 <p>A solução nesse caso seria ter dois objetos <code>HashMap</code>:</p>
 <ul>
@@ -816,7 +375,7 @@
 </ul>
 </div>
 </section>
-<section id="section-39" class="slide level2">
+<section id="section-10" class="slide level2">
 <h2></h2>
 <p>Em um sistema com muitos produtos, a diferença de eficiência pode ser significativa.</p>
 <ul>
@@ -827,13 +386,13 @@
 </ul></li>
 </ul>
 </section>
-<section id="section-40" class="slide level2">
+<section id="section-11" class="slide level2">
 <h2></h2>
-<div title="Exercício">
+<div title="Exercício 4">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício</strong></p>
+<p><strong>Exercício 4</strong></p>
 </div>
 <div class="callout-content">
 <p>Altere o projeto <code>produtos-com-hashmap</code> para que ele tenha dois objetos <code>HashMap</code>:</p>
@@ -849,23 +408,242 @@
 </div>
 </section></section>
 <section>
-<section id="entregas-dessa-aula" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>Entregas dessa Aula</h1>
+<section id="analisador-de-logs-web" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Analisador de Logs Web</h1>
 
 </section>
-<section id="section-41" class="slide level2">
+<section id="section-12" class="slide level2">
 <h2></h2>
-<div title="Entrega no Campus Virtual">
-<div class="callout callout-important callout-titled callout-style-default">
+<p>Servidores web geralmente guardam arquivos de log de acesso às suas páginas.</p>
+<ul>
+<li class="fragment">Usando ferramentas adequadas, esses logs permitem extrair e analisar informações úteis como:
+<ul>
+<li class="fragment">quais são as páginas mais acessadas</li>
+<li class="fragment">de quais sites vieram o acesso a este site</li>
+<li class="fragment">se outros sites parecem ter links quebrados para o site</li>
+<li class="fragment">a quantidade de dados que são enviados para quem acessa</li>
+<li class="fragment">o períodos mais ocupados do servidor (com mais acessos)
+<ul>
+<li class="fragment">ao longo de um dia, um mês ou um ano.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="section-13" class="slide level2">
+<h2></h2>
+<p>Essas informações ajudam os administradores do sistema a decidir, por exemplo:</p>
+<ul>
+<li class="fragment">Se eles precisam de máquinas mais poderosas como servidor,</li>
+<li class="fragment">ou quais são os horários com menor acesso para fazer uma manutenção.</li>
+</ul>
+</section>
+<section id="section-14" class="slide level2">
+<h2></h2>
+<p>O projeto <a href="https://github.com/ufla-ipoo/analisador-logs-web"><code>analisador-logs-web</code></a> tem uma aplicação que faz uma análise de dados de um servidor web.</p>
+<ul>
+<li class="fragment"><p>O servidor escreve uma linha de log no arquivo a cada acesso feito.</p></li>
+<li class="fragment"><p>A linha tem dados do momento do acesso, no formato:</p>
+<p><code>ano mes dia hora minuto</code></p></li>
+<li class="fragment"><p>Por exemplo, um acesso às 16:35h no dia 25 de setembro de 2026, é representado como:</p>
+<p><code>2026 09 25 16 35</code></p></li>
+</ul>
+</section>
+<section id="section-15" class="slide level2">
+<h2></h2>
+<p>A versão atual do projeto permite analisar qual hora do dia, em média, o servidor tende a ficar mais ocupado (ou menos ocupado).</p>
+<ul>
+<li class="fragment">Isso é feito contando a quantidade de acessos feitos a cada hora a partir do arquivo de log.</li>
+<li class="fragment">Uma amostra do arquivo de log do servidor está presente no arquivo <code>weblog.txt</code>.</li>
+</ul>
+</section>
+<section id="section-16" class="slide level2">
+<h2></h2>
+<p>Abra o projeto <code>analisador-logs-web</code> e leia o código da classe <code>AnalisadorDeLog</code>.</p>
+<ul>
+<li class="fragment">Veja que a classe tem um atributo que é um array (vetor) de inteiros.</li>
+</ul>
+<div class="fragment">
+<p>Lembre-se que o material sobre uso de arrays em Java foi apresentado como estudo para casa na Aula 4.3.</p>
+<ul>
+<li class="fragment">Se você ainda não estudou esse material, você deve agora parar, acessar o material da aula e procurar a seção <strong>Coleções de tamanho fixo</strong>.</li>
+<li class="fragment">Ao terminar, volte para continuar as atividades dessa aula.</li>
+</ul>
+</div>
+</section>
+<section id="section-17" class="slide level2">
+<h2></h2>
+<p>Teste o programa do projeto <code>analisador-logs-web</code>, fazendo o seguinte:</p>
+<ul>
+<li class="fragment">crie um objeto da classe <code>AnalisadorDeLog</code>,</li>
+<li class="fragment">chame o método <code>analisarDadosPorHora</code></li>
+<li class="fragment">e, em seguida, chame o método <code>imprimirContagensPorHora</code>.</li>
+</ul>
+<div class="fragment">
+<p>Qual é o horário mais ocupado do dia?</p>
+</div>
+</section>
+<section id="section-18" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<p>A classe <code>LeitorDeArquivoDeLog</code> é bastante complexa e sugiro que você não gaste muito tempo investigando sua implementação.</p>
+<ul>
+<li class="fragment">Sua função é lidar com a tarefa de dividir cada linha de log em valores de dados separados,</li>
+<li class="fragment">mas podemos abstrair os detalhes da implementação considerando apenas os cabeçalhos de dois de seus métodos:</li>
+</ul>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb1-1" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">hasNext</span><span class="op">()</span></span>
+<span id="cb1-2" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> EntradaDeLog <span class="fu">next</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-19" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy" data-id="quarto-animate-code"><code class="sourceCode java hljs"><span id="cb2-1" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">hasNext</span><span class="op">()</span></span>
+<span id="cb2-2" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> EntradaDeLog <span class="fu">next</span><span class="op">()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Esses métodos correspondem exatamente aos que vimos com o tipo <code>Iterator</code>,</p>
+<ul>
+<li class="fragment">e um <code>LeitorDeArquivoDeLog</code> pode ser usado exatamente da mesma maneira,</li>
+<li class="fragment">exceto que não é permitido o uso do método <code>remove</code>.</li>
+</ul>
+</section>
+<section id="section-20" class="slide level2">
+<h2></h2>
+<p>Para cada <code>EntradaDeLog</code>, o método <code>analisarDadosPorHora</code> do analisador obtém o valor do atributo <code>hora</code>:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> hora <span class="op">=</span> entrada<span class="op">.</span><span class="fu">obterHora</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Sabemos que o valor armazenado na variável local <code>hora</code> estará sempre no intervalo de 0 a 23,</p>
+<ul>
+<li class="fragment">o que corresponde exatamente ao intervalo válido de índices para o vetor <code>contagensPorHora</code>.</li>
+<li class="fragment">Portanto, cada vez que um valor de hora é lido, desejamos atualizar a contagem para essa hora em 1, usando:</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a>contagensPorHora<span class="op">[</span>hora<span class="op">]++;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-21" class="slide level2">
+<h2></h2>
+<p>Ao final do método <code>analisarDadosPorHora</code>,</p>
+<ul>
+<li class="fragment">temos um conjunto completo de contagens cumulativas para cada hora do período de registro.</li>
+</ul>
+<div class="fragment">
+<p>Já o método <code>imprimirContagensPorHora</code> usa um loop <code>for</code> tradicional (com contador) para exibir as informações do vetor.</p>
+</div>
+</section>
+<section id="section-22" class="slide level2">
+<h2></h2>
+<div title="Exercício 5">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Entrega no Campus Virtual</strong></p>
+<p><strong>Exercício 5</strong></p>
 </div>
 <div class="callout-content">
-<p>Acesse, no Campus Virtual, as atividades dessa aula e envie os códigos dos projetos <code>bolas-quicando</code> e <code>produtos-com-hashmap</code> da forma que ficaram após as suas alterações (compacte a pasta em um arquivo <code>.zip</code> para enviar).</p>
+<p>Altere a classe <code>AnalisadorDeLog</code> criando um construtor sobrecarregado que recebe por parâmetro o nome do arquivo de log a ser analisado. Será necessário passar o nome do arquivo para o construtor da classe <code>LeitorDeArquivoDeLog</code>.</p>
+<p>Para testar, use a classe <code>GeradorArquivoDeLog</code> para criar seu próprio arquivo de log de entradas aleatórias, e analise os dados desse arquivo.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-23" class="slide level2">
+<h2></h2>
+<div title="Exercício 6">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 6</strong></p>
+</div>
+<div class="callout-content">
+<p>Crie um método <code>numeroDeAcessos</code> na classe <code>AnalisadorDeLog</code> que retorna a quantidade total de acessos armazenados em um arquivo de log.</p>
+<p>O método <strong>deve</strong> fazer o cálculo percorrendo (iterando) o vetor <code>contagensPorHora</code>.</p>
+<p>Dica: para testar seu método, use o gerador para criar um arquivo com poucas entradas, e o utilize na análise de forma que você consiga conferir manualmente se o resultado está correto.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-24" class="slide level2">
+<h2></h2>
+<div title="Exercício 7">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 7</strong></p>
+</div>
+<div class="callout-content">
+<p>Adicione um método <code>horaMaisOcupada</code> na classe <code>AnalisadorDeLog</code> que retorna a hora com a <strong>maior</strong> quantidade de acessos.</p>
+<p>É necessário verificar todos os elementos do vetor <code>contagensPorHora</code>? Em caso afirmativo, qual é o tipo de loop mais adequado para fazer a implementação?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div title="Exercício 8">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 8</strong></p>
+</div>
+<div class="callout-content">
+<p>Adicione um método <code>horaMaisTranquila</code> na classe <code>AnalisadorDeLog</code> que retorna a hora com a <strong>menor</strong> quantidade de acessos.</p>
+<p>Dica: lembre-se de testar um caso no qual toda as horas possuem algum acesso (ou seja, um valor diferente de zero).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-25" class="slide level2">
+<h2></h2>
+<div title="Exercício 9">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 9</strong></p>
+</div>
+<div class="callout-content">
+<p>Adicione um método <code>duasHorasSeguidasMaisOcupadas</code> na classe <code>AnalisadorDeLog</code> que retorna o período de duas horas <strong>consecutivas</strong> com a <strong>maior</strong> quantidade de acessos.</p>
+<p>O método deve retornar a hora de início do período em questão.</p>
+<p>Exemplo: se as duas horas consecutivas mais ocupadas são de 10h às 12h (correspondente às horas 10 e 11), o método deve retornar 10.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-26" class="slide level2">
+<h2></h2>
+<div title="Exercício 10 - [Desafio]{.alert}">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício 10 - <span class="alert">Desafio</span></strong></p>
+</div>
+<div class="callout-content">
+<p>Vamos melhorar o projeto para permitir também a análise de acessos por dia da semana, e não apenas por hora.</p>
+<p>A ideia é que consigamos saber:</p>
+<ul>
+<li>A quantidade de acessos de cada dia da semana.</li>
+<li>O dia da semana com a maior quantidade de acessos.</li>
+<li>O dia da semana com a menor quantidade de acessos.</li>
+</ul>
+<p>Dicas:</p>
+<ol type="1">
+<li>Você precisará criar método de acesso na classe <code>EntradaDeLog</code> que retorne o dia da semana no qual aquele acesso foi feito.</li>
+</ol>
+<ul>
+<li>Pesquisa na internet como o atributo constante, público e estático <code>DAY_OF_WEEK</code> da classe <code>Calendar</code> pode ser usado na sua implementação.</li>
+</ul>
+<ol start="2" type="1">
+<li>Você precisará guardar as informações também por dia da semana na classe <code>AnalisadorDeLog</code>. Para isso é melhor usar vetor, <code>ArrayList</code> ou <code>HashMap</code>?</li>
+</ol>
 </div>
 </div>
 </div>
