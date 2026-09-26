@@ -215,7 +215,7 @@
     </div>
 </div>
 
-  <p class="date">20/09/2026</p>
+  <p class="date">26/09/2026</p>
 </section>
 <section>
 <section id="escrevendo-documentação-de-classes" class="title-slide slide level1 center" data-background-color="#40666e">
@@ -274,7 +274,7 @@
 </section>
 <section id="section-4" class="slide level2">
 <h2></h2>
-<p>Assim, o mesmo argumento usado para as classes da biblioteca Java vale para as classes que você escreve.</p>
+<p>Assim, o mesmo raciocínio usado para as classes da biblioteca Java vale para as classes que você escreve.</p>
 <ul>
 <li class="fragment">Se podemos usar as classes sem ter que ler e entender toda a implementação, nossa tarefa fica mais fácil.</li>
 <li class="fragment">Nós precisamos apenas da interface das classes e não da implementação.</li>
@@ -285,6 +285,11 @@
 </section>
 <section id="section-5" class="slide level2">
 <h2></h2>
+<p>A documentação das classes pode ser útil inclusive para as ferramentas de IA.</p>
+<ul>
+<li class="fragment">Que podem usá-la para complementar o entedimento do código.</li>
+</ul>
+<div class="fragment">
 <div title="Conceito">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -297,20 +302,21 @@
 </div>
 </div>
 </div>
-<div class="fragment">
-<p>O Java tem uma ferramenta chamada <a href=".alert">javadoc</a> que gera documentação a partir de comentários no código.</p>
-<ul>
-<li class="fragment">Toda a documentação oficial das classes da biblioteca Java é gerada com o javadoc.</li>
-</ul>
 </div>
 </section>
 <section id="section-6" class="slide level2">
 <h2></h2>
+<p>O Java tem uma ferramenta chamada <a href=".alert">javadoc</a> que gera documentação a partir de comentários no código.</p>
+<ul>
+<li class="fragment">Toda a documentação oficial das classes da biblioteca Java é gerada com o javadoc.</li>
+</ul>
+<div class="fragment">
 <p>O BlueJ usa o javadoc para gerar documentação das classes.</p>
 <ul>
 <li class="fragment"><p>Com o código de uma classe aberto no BlueJ, podemos acessar a caixa de opções no canto superior direito e mudar de <em>código-fonte</em> para <em>documentação</em>.</p></li>
 <li class="fragment"><p>Ou podemos também usar o menu <code>Ferramentas</code> → <code>Documentaçao do Projeto</code> para gerar a documentação de todas as classes do projeto.</p></li>
 </ul>
+</div>
 </section>
 <section id="section-7" class="slide level2">
 <h2></h2>
@@ -442,6 +448,8 @@
 <h2>Público vs.&nbsp;Privado</h2>
 <div class="fragment">
 <p>Vocês já notaram que usamos a todo momento as palavras-chave <code>public</code> e <code>private</code> em nossos programas em Java, como mostrado no exemplo abaixo:</p>
+</div>
+<div class="fragment">
 <div class="halfincfontsize">
 <div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="co">// declaração de atributos</span></span>
 <span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> numeroDeAssentos<span class="op">;</span></span>
@@ -508,11 +516,11 @@
 <h2></h2>
 <p>Portanto, podemos dizer que:</p>
 <ul>
-<li class="fragment">A palavra-chave <code>public</code> declara que um elemento de uma classe (atributo ou método) faz parte de sua <strong>interface</strong>.
+<li class="fragment">A palavra-chave <code>public</code> declara que um <strong>membro</strong> (atributo ou método) de uma classe faz parte de sua <strong>interface</strong>.
 <ul>
 <li class="fragment">Ou seja, é visível publicamente.</li>
 </ul></li>
-<li class="fragment">Já a palavra-chave <code>private</code> declara que um elemento é parte da implementação.
+<li class="fragment">Já a palavra-chave <code>private</code> declara que um <strong>membro</strong> é parte da implementação.
 <ul>
 <li class="fragment">Ou seja, está escondida de acesso externo.</li>
 </ul></li>
@@ -682,11 +690,13 @@
 </section>
 <section id="atributos-sempre-privados" class="slide level2">
 <h2>Atributos sempre privados!</h2>
+<div class="fragment">
 <p>A linguagem Java permite que atributos sejam declarados como privados ou públicos.</p>
 <ul>
 <li class="fragment">Mas você deve ter notado que nos exemplos <strong>sempre declaramos os atributos como privados</strong>.</li>
 <li class="fragment">Isso é fundamental para respeitar o conceito de <strong>encapsulamento</strong>.</li>
 </ul>
+</div>
 </section>
 <section id="section-31" class="slide level2">
 <h2></h2>
@@ -702,7 +712,7 @@
 </section>
 <section id="section-32" class="slide level2">
 <h2></h2>
-<p>Outro motivo para manter os atributos privados é permitir que a <strong>classe tenha</strong> um maior <strong>controle sobre o estado</strong> dos seus objetos.</p>
+<p>Outro motivo para manter os atributos privados é permitir que a <strong>classe tenha</strong> um maior <strong>controle sobre o estado dos seus objetos</strong>.</p>
 <ul>
 <li class="fragment">Se o atributo é encapsulado e só é acessível através de métodos de acesso (obter/get) e modificadores (definir/set),</li>
 <li class="fragment">a classe pode garantir que o atributo nunca tenha um valor inválido ou inconsistente.</li>
@@ -771,13 +781,19 @@
 <p>Mas repare que podem existir diversos trechos de código no programa que alteram o valor do diâmetro.</p>
 <ul>
 <li class="fragment">E seria necessário colocar essa verificação em todos esses lugares.</li>
-<li class="fragment">Outro problema é que tudo isso está acontecendo sem o conhecimento da classe <code>Circulo</code>.
-<ul>
-<li class="fragment">Mas é ela quem deveria ser responsável por garantir que o estado dos seus objetos é sempre válido.</li>
-</ul></li>
 </ul>
+<div class="fragment">
+<p>E pior, no futuro, quem fizesse algum código novo, também precisaria se lembrar de fazer a verificação.</p>
+</div>
 </section>
 <section id="section-37" class="slide level2">
+<h2></h2>
+<p>Outro problema é que tudo isso está acontecendo sem o conhecimento da classe <code>Circulo</code>.</p>
+<ul>
+<li class="fragment">Mas é ela quem deveria ser responsável por garantir que o estado dos seus objetos é sempre válido.</li>
+</ul>
+</section>
+<section id="section-38" class="slide level2">
 <h2></h2>
 <p>Vamos comparar com uma versão bem implementada da classe <code>Circulo</code>:</p>
 <ul>
@@ -796,16 +812,19 @@
 </div>
 </div>
 </section>
-<section id="section-38" class="slide level2">
+<section id="section-39" class="slide level2">
 <h2></h2>
-<p>Repare que, com isso, o diâmetro só pode ser alterado através da chamada do método <code>mudarDiametro</code>.</p>
+<p>Repare que, com isso, o diâmetro só pode ser alterado através da chamada do método <code>definirDiametro</code>.</p>
 <ul>
 <li class="fragment">E agora fica mais fácil evitar o problema anterior.</li>
 <li class="fragment">Pois basta colocarmos a verificação (<code>if</code>) no método <code>definirDiametro</code>.</li>
-<li class="fragment">Não é necessário tratar todos os lugares que chamam o método <code>mudarDiametro</code>.</li>
+<li class="fragment">Não é necessário tratar todos os lugares que chamam o método <code>definirDiametro</code>.</li>
 </ul>
+<div class="fragment">
+<p>E, no futuro, em códigos novos, ninguém precisará se lembrar de ter que fazer essa verificação.</p>
+</div>
 </section>
-<section id="section-39" class="slide level2">
+<section id="section-40" class="slide level2">
 <h2></h2>
 <p>Em resumo:</p>
 <ul>
@@ -824,9 +843,446 @@
 </div>
 </div>
 </div>
-
-
 </div>
+</section></section>
+<section>
+<section id="projeto-no-greenfoot" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Projeto no Greenfoot</h1>
+
+</section>
+<section id="section-41" class="slide level2">
+<h2></h2>
+<p>Aproveitando o fato de que vamos usar o <span class="alert">Greenfoot</span> para o trabalho prático da disciplina,</p>
+<ul>
+<li class="fragment">usaremos um projeto do <strong>Greenfoot</strong> para aprender os próximos conceitos de POO.</li>
+</ul>
+<div class="fragment">
+<p>Aprenderemos sobre:</p>
+<ul>
+<li class="fragment"><strong>Atributos estáticos</strong></li>
+<li class="fragment"><strong>Métodos estáticos</strong></li>
+<li class="fragment"><strong>Constantes</strong></li>
+</ul>
+</div>
+</section>
+<section id="section-42" class="slide level2">
+<h2></h2>
+<p>Para começar, baixe o projeto <a href="https://github.com/ufla-ipoo/bolas-quicando">bolas-quicando</a>.</p>
+<ul>
+<li class="fragment">Vamos aproveitar esse projeto para também conhecer um pouco mais sobre o Greenfoot.</li>
+</ul>
+<div class="fragment">
+<p>Abra o projeto no Greenfoot.</p>
+<ul>
+<li class="fragment">Execute o programa e veja o que acontece.</li>
+</ul>
+</div>
+</section>
+<section id="section-43" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Execute</strong> o projeto e logo em seguida <strong>pause o programa</strong> (antes das bolas pararem de quicar). <strong>Clique então com o botão direito</strong> em uma das bolas.</p>
+<ul>
+<li>Veja que as opções são as mesmas do BlueJ quando clicamos em um objeto na bancada de objetos.</li>
+<li>Você pode clicar em <strong>Inspecionar</strong> para ver os valores dos atributos.</li>
+<li>E você pode também <strong>chamar métodos</strong> do objeto.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-44" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Abra a classe <code>Mundo</code> e veja o código do método <code>prepare</code>. Repare que ele cria duas bolas e depois cria 10 objetos da classe <code>Chao</code>.</p>
+<p>Altere o método para que o programa tenha uma terceira bola.</p>
+<ul>
+<li>Crie a bola com diâmetro igual a 30 e posição vertical (y) 150.</li>
+<li>Posicione a bola na posição (300, 150).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-45" class="slide level2">
+<h2></h2>
+<p>Antes de continuarmos, vamos conhecermos alguns métodos diponíveis no Greenfoot que não tínhamos visto no tutorial.</p>
+<ul>
+<li class="fragment"><code>getImage</code>: retorna a imagem usada para o objeto (definida na hora que criamos a classe).</li>
+<li class="fragment"><code>getImage().scale</code>: permite mudar o tamanho da imagem do objeto.</li>
+<li class="fragment"><code>setLocation</code>: muda a posição do ator no mundo (coordenadas X e Y).</li>
+<li class="fragment"><code>isTouching</code>: indica se o ator está colidindo com algum objeto da classe passada.</li>
+</ul>
+</section>
+<section id="section-46" class="slide level2">
+<h2></h2>
+<p>Agora leia o código da classe <code>Bola</code> e tente entender como ela funciona.</p>
+</section></section>
+<section>
+<section id="atributos-estáticos-e-constantes" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Atributos estáticos e constantes</h1>
+
+</section>
+<section id="section-47" class="slide level2">
+<h2></h2>
+<p>Ao avaliar o código da classe <code>Bola</code> você viu alguma palavra-chave nova do Java?</p>
+<ul>
+<li class="fragment">Repare a declaração do atributo <code>GRAVIDADE</code>.</li>
+</ul>
+<div class="fragment">
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Experimente alterar o valor do atributo <code>GRAVIDADE</code> para 0.4 e 0.9, por exemplo.</p>
+<p>Execute o programa para cada alteração e veja o que acontece de diferente.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-48" class="slide level2">
+<h2></h2>
+<p>O atributo <code>GRAVIDADE</code> é declarado da seguinte forma:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="dt">double</span> GRAVIDADE <span class="op">=</span> <span class="fl">0.7</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Há duas palavras-chave novas nessa declaração:</p>
+<ul>
+<li class="fragment"><code>static</code> e <code>final</code></li>
+</ul>
+</div>
+</section>
+<section id="atributos-estáticos" class="slide level2">
+<h2>Atributos estáticos</h2>
+<p>A palalavra-chave <code>static</code> do Java serve para declarar <span class="alert">atributos estáticos</span>.</p>
+<ul>
+<li class="fragment">Atributos desse tipo são guardados na própria classe, não nos objetos.
+<ul>
+<li class="fragment">Ele são também chamados de <span class="alert">variáveis de classe</span>.</li>
+</ul></li>
+<li class="fragment">Isso torna esses atributos muito diferentes dos atributos comuns que vimos até agora.
+<ul>
+<li class="fragment">Lembrando que os atributos comuns são também chamados de <strong>variáveis de instância</strong>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-49" class="slide level2">
+<h2></h2>
+<p>O diagrama abaixo ilustra bem a diferença entre os atributos comuns e estáticos.</p>
+<img data-src="imagens/atributo-estatico-diagrama-objetos.png" class="r-stretch">
+</section>
+<section id="section-50" class="slide level2">
+<h2></h2>
+<img data-src="imagens/atributo-estatico-diagrama-objetos.png" class="r-stretch">
+<p>Os <strong>atributos comuns</strong> (<code>velocidadeVertical</code>, <code>posY</code> e <code>amortecimento</code>) são guardados nos objetos:</p>
+<ul>
+<li class="fragment">Como criamos três objetos, há <strong>três espaços na memória</strong> para cada um desses atributos.</li>
+</ul>
+</section>
+<section id="section-51" class="slide level2">
+<h2></h2>
+<img data-src="imagens/atributo-estatico-diagrama-objetos.png" class="r-stretch">
+<p>Já o <strong>atributo estático</strong> <code>GRAVIDADE</code> é guardado na classe:</p>
+<ul>
+<li class="fragment">Com isso, existe sempre <strong>um único espaço na memória</strong> para ele, independente da quantidade de objetos criados.</li>
+</ul>
+</section>
+<section id="section-52" class="slide level2">
+<h2></h2>
+<p>Os <strong>atributos estáticos</strong> podem ser acessados normalmente dentro de qualquer método da classe.</p>
+<ul>
+<li class="fragment">Isso significa que todos os objetos compartilham o mesmo atributo.</li>
+<li class="fragment">Se um objeto alterar o valor do atributo estático, esse valor será usado para todos os objetos.
+<ul>
+<li class="fragment">Já que existe um único valor na memória.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Geralmente usamos atributos estáticos quando todos os objetos da classe devem ter o mesmo valor para o atributo.</p>
+<ul>
+<li class="fragment">Com isso, evitamos desperdiçar memória guardando o mesmo valor repetidas vezes para cada objeto.</li>
+</ul>
+</div>
+</section>
+<section id="section-53" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Como um atributo estático poderia ser usado para contabilizar a quantidade de objetos criados em uma classe?</p>
+<p>Por exemplo, como a própria classe <code>Bola</code> poderia contar quantas bolas foram criadas durante o programa?</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="constantes" class="slide level2">
+<h2>Constantes</h2>
+<p><span class="alert">Constantes</span> são parecidas com variáveis,</p>
+<ul>
+<li class="fragment">mas a diferença é que seus valores não podem ser alterados depois de inicializados.</li>
+<li class="fragment">Definimos constantes em Java usando a <strong>palavra-chave</strong> <code>final</code>.</li>
+</ul>
+</section>
+<section id="section-54" class="slide level2">
+<h2></h2>
+<p>Suponha, por exemplo, a seguinte declaração de constante:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> <span class="dt">int</span> TAMANHO <span class="op">=</span> <span class="dv">30</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li class="fragment">Veja que é uma declaração de atributo.</li>
+<li class="fragment">Mas tem a palavra-chave <code>final</code> antes do tipo do atributo.</li>
+</ul>
+<div class="fragment">
+<p>Obs.: por convenção, escrevemos os nomes das constantes com todas as letras maiúsculas.</p>
+</div>
+</section>
+<section id="section-55" class="slide level2">
+<h2></h2>
+<p>Constantes podem ser inicializadas na própria linha da declaração, como no exemplo dado:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb10"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> <span class="dt">int</span> TAMANHO <span class="op">=</span> <span class="dv">30</span><span class="op">;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li class="fragment">Neste caso, todos os objetos teriam o mesmo valor.</li>
+<li class="fragment">E, portanto, seria mais intessante que o atributo <code>TAMANHO</code> fosse estático.</li>
+</ul>
+</section>
+<section id="section-56" class="slide level2">
+<h2></h2>
+<p>Mas constantes podem ser inicializadas nos construtores em vez de ser na declaração.</p>
+<ul>
+<li class="fragment">Como isso, cada objeto poderia ter um valor diferente para o atributo <code>TAMANHO</code>.
+<ul>
+<li class="fragment">Inicializado, por exemplo, a partir de um valor recebido por parâmetro no construtor.</li>
+<li class="fragment">A ideia seria que o objeto não poderia ter seu tamanho alterado depois de sua criação.</li>
+</ul></li>
+<li class="fragment">Nesse caso, não faria sentido declarar o atributo como estático.</li>
+</ul>
+</section>
+<section id="section-57" class="slide level2">
+<h2></h2>
+<p>É mais comum usarmos constantes quando elas têm o mesmo valor para todos os objetos.</p>
+<ul>
+<li class="fragment">Portanto, é mais comum ter constantes estáticas, do que como atributos comuns.</li>
+<li class="fragment">Como é o caso do atributo <code>GRAVIDADE</code> da classe <code>Bola</code>.</li>
+</ul>
+</section></section>
+<section id="section-58" class="title-slide slide level1 center">
+<h1></h1>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Repare que o atributo <code>amortecimento</code> da classe <code>Bola</code> é constante, mas não é estático. Com isso, as bolas poderiam ter valores diferentes de amortecimento.</p>
+<p>Altere então a classe <code>Bola</code> de forma que o valor do atributo <code>amortecimento</code> seja recebido por parâmetro no construtor. Você precisará, é claro, alterar a criação das bolas na classe <code>Mundo</code>.</p>
+<p>Experimente usar valores diferentes para cada bola (ex: 2, 3 e 4). Execute o programa para testar.</p>
+<p>O que acontece com bolas que têm maior amortecimento?</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<section id="métodos-estáticos" class="title-slide slide level1 center" data-background-color="#40666e">
+<h1>Métodos estáticos</h1>
+
+</section>
+<section id="section-59" class="slide level2">
+<h2></h2>
+<p>Todos os métodos que implementamos até agora são <strong>métodos de instância</strong> (de objetos).</p>
+<ul>
+<li class="fragment">Pois eles são chamados usando objetos.</li>
+</ul>
+<div class="fragment">
+<p>Mas nós podemos também ter métodos que são chamados usando a classe, em vez de objetos.</p>
+<ul>
+<li class="fragment">São os <span class="alert">métodos estáticos</span>.</li>
+<li class="fragment">Assim como os atributos estáticos, os métodos estáticos pertencem à classe e não aos objetos.</li>
+</ul>
+</div>
+</section>
+<section id="section-60" class="slide level2">
+<h2></h2>
+<p>Nós podemos definir <strong>métodos estáticos</strong> usando a palavra-chave <code>static</code> na assinatura do método.</p>
+</section>
+<section id="section-61" class="slide level2">
+<h2></h2>
+<p>Suponha, por exemplo, que uma classe <code>Calendario</code> tenha o método estático abaixo:</p>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb11"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">int</span> <span class="fu">obterNumeroDeDiasDoMesAtual</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb11-2"><a aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span> <span class="op">.</span> <span class="op">.</span></span>
+<span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Nós poderíamos chamar esse método usando o comando abaixo:</p>
+<ul>
+<li class="fragment">Repare que usamos o <strong>nome da classe</strong> antes do <code>.</code> para chamar o método, <strong>em vez de usar um objeto</strong>.</li>
+</ul>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb12"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> dias <span class="op">=</span> Calendario<span class="op">.</span><span class="fu">obterNumeroDeDiasDoMesAtual</span><span class="op">();</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-62" class="slide level2">
+<h2></h2>
+<p>Podemos encontrar vários exemplos de métodos estáticos na classe <code>Math</code> do Java.</p>
+<ul>
+<li class="fragment">Ela possui métodos, por exemplo, para encontrar o máximo ou o mínimo entre dois números.
+<ul>
+<li class="fragment">Ou ainda calcular seno e cosseno, por exemplo.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb13"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> maximo <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span><span class="op">(</span>numeroA<span class="op">,</span> numeroB<span class="op">);</span></span>
+<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> valor <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">cos</span><span class="op">(</span>angulo<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-63" class="slide level2">
+<h2></h2>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb14"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> maximo <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span><span class="op">(</span>numeroA<span class="op">,</span> numeroB<span class="op">);</span></span>
+<span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> valor <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">cos</span><span class="op">(</span>angulo<span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Repare que esses métodos dependem apenas dos parâmetros passados.</p>
+<ul>
+<li class="fragment">Eles não dependem de atributos de um possível objeto <code>Math</code>, ou seja, não dependem do estado de um objeto.</li>
+<li class="fragment">Geralmente é nesses casos que usamos métodos estáticos.</li>
+</ul>
+</section>
+<section id="section-64" class="slide level2">
+<h2></h2>
+<p>A classe <code>Math</code> do Java possui também exemplos de uso de constantes.</p>
+<ul>
+<li class="fragment">O valor de <code>PI</code>, por exemplo, pode ser acessado com o comando <code>Math.PI</code>.</li>
+<li class="fragment">Repare que estamos acessando o atributo diretamente, usando o nome da classe, em vez de um objeto.
+<ul>
+<li class="fragment">Da mesma forma que usamos para chamar métodos estáticos.</li>
+</ul></li>
+<li class="fragment">Nós conseguimos fazer isso porque PI é declarado como uma constante pública.</li>
+</ul>
+</section>
+<section id="section-65" class="slide level2">
+<h2></h2>
+<p>Mas não seria uma falha de encapsulamento declarar um atributo público?</p>
+<ul>
+<li class="fragment">Note que não há falha de encapsulamento em declarar um atributo público, se ele for uma constante.</li>
+<li class="fragment">Já que não seria possível alterar seu valor de fora da classe.</li>
+</ul>
+</section>
+<section id="section-66" class="slide level2">
+<h2></h2>
+<p>Você já usou métodos estáticos antes, sem saber.</p>
+<ul>
+<li class="fragment">Repare como os métodos abaixo são chamados.</li>
+</ul>
+<div class="fragment">
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb15"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">isKeyDown</span><span class="op">(</span><span class="st">"left"</span><span class="op">);</span></span>
+<span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">playSound</span><span class="op">(</span><span class="st">"comendo.wav"</span><span class="op">);</span></span>
+<span id="cb15-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">getRandomNumber</span><span class="op">(</span><span class="dv">90</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-67" class="slide level2">
+<h2></h2>
+<div class="halfincfontsize">
+<div class="sourceCode" id="cb16"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">isKeyDown</span><span class="op">(</span><span class="st">"left"</span><span class="op">);</span></span>
+<span id="cb16-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">playSound</span><span class="op">(</span><span class="st">"comendo.wav"</span><span class="op">);</span></span>
+<span id="cb16-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a aria-hidden="true" tabindex="-1"></a>Greenfoot<span class="op">.</span><span class="fu">getRandomNumber</span><span class="op">(</span><span class="dv">90</span><span class="op">);</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Em todas essas chamadas nós usamos o nome da classe <code>Greenfoot</code> para chamar o método.</p>
+<ul>
+<li class="fragment">Isso porque todos esses métodos são estáticos.</li>
+<li class="fragment">Todos eles implementam ações que dependem apenas dos parâmetros passados
+<ul>
+<li class="fragment">(não dependem do estado de um objeto).</li>
+</ul></li>
+</ul>
+</section>
+<section id="limitações-dos-métodos-estáticos" class="slide level2">
+<h2>Limitações dos métodos estáticos</h2>
+<p>É importante sabermos que os <strong>métodos estáticos</strong> (métodos de classe) têm <strong>limitações</strong>.</p>
+<ul>
+<li class="fragment">Como eles pertencem à classe e não aos objetos, eles não podem acessar atributos comuns (variáveis de instância).</li>
+<li class="fragment">Eles podem acessar apenas <strong>atributos estáticos</strong> (variáveis de classe).</li>
+</ul>
+<div class="fragment">
+<p>Da mesma forma, métodos estáticos não podem chamar métodos de instância da mesma classe.</p>
+<ul>
+<li class="fragment">Podem chamar apenas outros métodos estáticos.</li>
+</ul>
+</div>
+</section>
+<section id="limitações-dos-métodos-estáticos-1" class="slide level2">
+<h2>Limitações dos métodos estáticos</h2>
+<p>Por que você acha que essas limitações existem?</p>
+<ul>
+<li class="fragment">Imagine que um método estático qualquer (vamos chamar de <code>metodoA</code>), de uma classe <code>ClasseX</code> acessasse um atributo comum.</li>
+<li class="fragment">Tente imaginar o que aconteceria se você fizesse uma chamada <code>ClasseX.metodoA()</code> sem ter criado nenhum objeto da classe.
+<ul>
+<li class="fragment">E se existissem vários objetos da classe?</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>E o que isso tem a ver com um método estático não poder chamar um método de instância?</p>
+</div>
+</section>
+<section id="section-68" class="slide level2">
+<h2></h2>
+<div title="Exercício">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Exercício</strong></p>
+</div>
+<div class="callout-content">
+<p>Altere a declaração do atributo <code>GRAVIDADE</code> da classe <code>Bola</code> de forma que ele não seja mais uma constante. Mas, mantenha a inicialização do atributo na declaração.</p>
+<p>Crie um <strong>método modificador</strong> que permita alterar o valor do atributo.</p>
+<p>Execute o programa e pause-o antes das bolas pararem de quicar. Clique em uma das bolas e chame o método que você criou, informando um novo valor para a gravidade.</p>
+<p>Continue a execução do programa e repare que acontece. A gravidade foi alterada só para a bola que você chamou o método, ou para todas elas?</p>
+<p>Depois que as bolas pararem, pause o programa novamente, e use a opção <em>Inspecionar</em> em cada bola para conferir o valor do atributo <code>GRAVIDADE</code>. (Obs.: na janela de inspeção, use o botão <em>mostrar campos estáticos</em>).</p>
+</div>
+</div>
+</div>
+</div>
+
+
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

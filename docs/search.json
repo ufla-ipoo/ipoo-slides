@@ -3623,21 +3623,21 @@
     "href": "cap5-2.html#section-4",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Assim, o mesmo argumento usado para as classes da biblioteca Java vale para as classes que você escreve.\n\nSe podemos usar as classes sem ter que ler e entender toda a implementação, nossa tarefa fica mais fácil.\nNós precisamos apenas da interface das classes e não da implementação.\n\n\nPortanto, precisamos escrever boa documentação de classes também para as nossas próprias classes."
+    "text": "Assim, o mesmo raciocínio usado para as classes da biblioteca Java vale para as classes que você escreve.\n\nSe podemos usar as classes sem ter que ler e entender toda a implementação, nossa tarefa fica mais fácil.\nNós precisamos apenas da interface das classes e não da implementação.\n\n\nPortanto, precisamos escrever boa documentação de classes também para as nossas próprias classes."
   },
   {
     "objectID": "cap5-2.html#section-5",
     "href": "cap5-2.html#section-5",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Conceito\n\n\nA documentação de uma classe deve ser detalhada o suficiente para que outros programadores consigam usar a classe sem precisar ler o código fonte.\n\n\n\n\n\nO Java tem uma ferramenta chamada javadoc que gera documentação a partir de comentários no código.\n\nToda a documentação oficial das classes da biblioteca Java é gerada com o javadoc."
+    "text": "A documentação das classes pode ser útil inclusive para as ferramentas de IA.\n\nQue podem usá-la para complementar o entedimento do código.\n\n\n\n\n\n\nConceito\n\n\nA documentação de uma classe deve ser detalhada o suficiente para que outros programadores consigam usar a classe sem precisar ler o código fonte."
   },
   {
     "objectID": "cap5-2.html#section-6",
     "href": "cap5-2.html#section-6",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "O BlueJ usa o javadoc para gerar documentação das classes.\n\nCom o código de uma classe aberto no BlueJ, podemos acessar a caixa de opções no canto superior direito e mudar de código-fonte para documentação.\nOu podemos também usar o menu Ferramentas → Documentaçao do Projeto para gerar a documentação de todas as classes do projeto."
+    "text": "O Java tem uma ferramenta chamada javadoc que gera documentação a partir de comentários no código.\n\nToda a documentação oficial das classes da biblioteca Java é gerada com o javadoc.\n\n\nO BlueJ usa o javadoc para gerar documentação das classes.\n\nCom o código de uma classe aberto no BlueJ, podemos acessar a caixa de opções no canto superior direito e mudar de código-fonte para documentação.\nOu podemos também usar o menu Ferramentas → Documentaçao do Projeto para gerar a documentação de todas as classes do projeto."
   },
   {
     "objectID": "cap5-2.html#section-7",
@@ -3735,7 +3735,7 @@
     "href": "cap5-2.html#section-20",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Portanto, podemos dizer que:\n\nA palavra-chave public declara que um elemento de uma classe (atributo ou método) faz parte de sua interface.\n\nOu seja, é visível publicamente.\n\nJá a palavra-chave private declara que um elemento é parte da implementação.\n\nOu seja, está escondida de acesso externo.\n\n\n\n\n\n\n\nConceito\n\n\nModificadores de acesso definem a visibilidade de um atributo, construtor ou método. Elementos públicos são acessíveis de dentro da classe e a partir de outras classes; já elementos privados são acessíveis somente de dentro da mesma classe."
+    "text": "Portanto, podemos dizer que:\n\nA palavra-chave public declara que um membro (atributo ou método) de uma classe faz parte de sua interface.\n\nOu seja, é visível publicamente.\n\nJá a palavra-chave private declara que um membro é parte da implementação.\n\nOu seja, está escondida de acesso externo.\n\n\n\n\n\n\n\nConceito\n\n\nModificadores de acesso definem a visibilidade de um atributo, construtor ou método. Elementos públicos são acessíveis de dentro da classe e a partir de outras classes; já elementos privados são acessíveis somente de dentro da mesma classe."
   },
   {
     "objectID": "cap5-2.html#section-21",
@@ -3847,7 +3847,7 @@
     "href": "cap5-2.html#section-36",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "int d = calcularNovoDiametro();\nif (d &gt; 0) {\n    circulo.diametro = d;\n}\n\nMas repare que podem existir diversos trechos de código no programa que alteram o valor do diâmetro.\n\nE seria necessário colocar essa verificação em todos esses lugares.\nOutro problema é que tudo isso está acontecendo sem o conhecimento da classe Circulo.\n\nMas é ela quem deveria ser responsável por garantir que o estado dos seus objetos é sempre válido."
+    "text": "int d = calcularNovoDiametro();\nif (d &gt; 0) {\n    circulo.diametro = d;\n}\n\nMas repare que podem existir diversos trechos de código no programa que alteram o valor do diâmetro.\n\nE seria necessário colocar essa verificação em todos esses lugares.\n\n\nE pior, no futuro, quem fizesse algum código novo, também precisaria se lembrar de fazer a verificação."
   },
   {
     "objectID": "cap6-1.html#section",
@@ -7354,7 +7354,7 @@
     "href": "cap5-2.html#público-vs.-privado",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "Público vs. Privado",
-    "text": "Público vs. Privado\n\nVocês já notaram que usamos a todo momento as palavras-chave public e private em nossos programas em Java, como mostrado no exemplo abaixo:\n\n    // declaração de atributos\n    private int numeroDeAssentos;\n    // métodos\n    public void definirIdade(int novaIdade) {\n      ...\n    }    \n    private int calcularMedia() {\n      ...\n    }"
+    "text": "Público vs. Privado\n\nVocês já notaram que usamos a todo momento as palavras-chave public e private em nossos programas em Java, como mostrado no exemplo abaixo:\n\n\n\n    // declaração de atributos\n    private int numeroDeAssentos;\n    // métodos\n    public void definirIdade(int novaIdade) {\n      ...\n    }    \n    private int calcularMedia() {\n      ...\n    }"
   },
   {
     "objectID": "cap5-2.html#encapsulamento-1",
@@ -7417,28 +7417,28 @@
     "href": "cap5-2.html#atributos-sempre-privados",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "Atributos sempre privados!",
-    "text": "Atributos sempre privados!\nA linguagem Java permite que atributos sejam declarados como privados ou públicos.\n\nMas você deve ter notado que nos exemplos sempre declaramos os atributos como privados.\nIsso é fundamental para respeitar o conceito de encapsulamento."
+    "text": "Atributos sempre privados!\n\nA linguagem Java permite que atributos sejam declarados como privados ou públicos.\n\nMas você deve ter notado que nos exemplos sempre declaramos os atributos como privados.\nIsso é fundamental para respeitar o conceito de encapsulamento."
   },
   {
     "objectID": "cap5-2.html#section-37",
     "href": "cap5-2.html#section-37",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Vamos comparar com uma versão bem implementada da classe Circulo:\n\nela teria o atributo diametro privado;\ne um método modificador para alterar o diâmetro.\n\n\n\npublic class Circulo {\n    private int diametro;\n    ...\n    public void definirDiametro(int diametro) {\n        this.diametro = diametro;\n    }\n}"
+    "text": "Outro problema é que tudo isso está acontecendo sem o conhecimento da classe Circulo.\n\nMas é ela quem deveria ser responsável por garantir que o estado dos seus objetos é sempre válido."
   },
   {
     "objectID": "cap5-2.html#section-38",
     "href": "cap5-2.html#section-38",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Repare que, com isso, o diâmetro só pode ser alterado através da chamada do método mudarDiametro.\n\nE agora fica mais fácil evitar o problema anterior.\nPois basta colocarmos a verificação (if) no método definirDiametro.\nNão é necessário tratar todos os lugares que chamam o método mudarDiametro."
+    "text": "Vamos comparar com uma versão bem implementada da classe Circulo:\n\nela teria o atributo diametro privado;\ne um método modificador para alterar o diâmetro.\n\n\n\npublic class Circulo {\n    private int diametro;\n    ...\n    public void definirDiametro(int diametro) {\n        this.diametro = diametro;\n    }\n}"
   },
   {
     "objectID": "cap5-2.html#section-39",
     "href": "cap5-2.html#section-39",
     "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
     "section": "",
-    "text": "Em resumo:\n\nAtributos deveriam ser sempre privados!\n\n\n\n\n\n\nConceito\n\n\nEncapsulamento (ou ocultamento de informações) é um princípio que define que os detalhes internos da implementação de uma classe deveriam ser ocultados das outras classes. Isso permite uma melhor modularização de uma aplicação."
+    "text": "Repare que, com isso, o diâmetro só pode ser alterado através da chamada do método definirDiametro.\n\nE agora fica mais fácil evitar o problema anterior.\nPois basta colocarmos a verificação (if) no método definirDiametro.\nNão é necessário tratar todos os lugares que chamam o método definirDiametro.\n\n\nE, no futuro, em códigos novos, ninguém precisará se lembrar de ter que fazer essa verificação."
   },
   {
     "objectID": "greenfoot-tutorial.html#section-24",
@@ -7677,5 +7677,229 @@
     "title": "Tutorial do Greenfoot",
     "section": "",
     "text": "Entrega no Campus Virtual\n\n\nAcesse, no Campus Virtual, a atividade correspondente a essa aula e envie o código do projeto greenfoot-caranguejo da forma que ficou após as suas alterações (compacte a pasta do projeto em um arquivo .zip para enviar)."
+  },
+  {
+    "objectID": "cap5-2.html#section-40",
+    "href": "cap5-2.html#section-40",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Em resumo:\n\nAtributos deveriam ser sempre privados!\n\n\n\n\n\n\nConceito\n\n\nEncapsulamento (ou ocultamento de informações) é um princípio que define que os detalhes internos da implementação de uma classe deveriam ser ocultados das outras classes. Isso permite uma melhor modularização de uma aplicação."
+  },
+  {
+    "objectID": "cap5-2.html#section-41",
+    "href": "cap5-2.html#section-41",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Aproveitando o fato de que vamos usar o Greenfoot para o trabalho prático da disciplina,\n\nusaremos um projeto do Greenfoot para aprender os próximos conceitos de POO.\n\n\nAprenderemos sobre:\n\nAtributos estáticos\nMétodos estáticos\nConstantes"
+  },
+  {
+    "objectID": "cap5-2.html#section-42",
+    "href": "cap5-2.html#section-42",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Para começar, baixe o projeto bolas-quicando.\n\nVamos aproveitar esse projeto para também conhecer um pouco mais sobre o Greenfoot.\n\n\nAbra o projeto no Greenfoot.\n\nExecute o programa e veja o que acontece."
+  },
+  {
+    "objectID": "cap5-2.html#section-43",
+    "href": "cap5-2.html#section-43",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Exercício\n\n\nExecute o projeto e logo em seguida pause o programa (antes das bolas pararem de quicar). Clique então com o botão direito em uma das bolas.\n\nVeja que as opções são as mesmas do BlueJ quando clicamos em um objeto na bancada de objetos.\nVocê pode clicar em Inspecionar para ver os valores dos atributos.\nE você pode também chamar métodos do objeto."
+  },
+  {
+    "objectID": "cap5-2.html#section-44",
+    "href": "cap5-2.html#section-44",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Exercício\n\n\nAbra a classe Mundo e veja o código do método prepare. Repare que ele cria duas bolas e depois cria 10 objetos da classe Chao.\nAltere o método para que o programa tenha uma terceira bola.\n\nCrie a bola com diâmetro igual a 30 e posição vertical (y) 150.\nPosicione a bola na posição (300, 150)."
+  },
+  {
+    "objectID": "cap5-2.html#section-45",
+    "href": "cap5-2.html#section-45",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Antes de continuarmos, vamos conhecermos alguns métodos diponíveis no Greenfoot que não tínhamos visto no tutorial.\n\ngetImage: retorna a imagem usada para o objeto (definida na hora que criamos a classe).\ngetImage().scale: permite mudar o tamanho da imagem do objeto.\nsetLocation: muda a posição do ator no mundo (coordenadas X e Y).\nisTouching: indica se o ator está colidindo com algum objeto da classe passada."
+  },
+  {
+    "objectID": "cap5-2.html#section-46",
+    "href": "cap5-2.html#section-46",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Agora leia o código da classe Bola e tente entender como ela funciona."
+  },
+  {
+    "objectID": "cap5-2.html#section-47",
+    "href": "cap5-2.html#section-47",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Ao avaliar o código da classe Bola você viu alguma palavra-chave nova do Java?\n\nRepare a declaração do atributo GRAVIDADE.\n\n\n\n\n\n\nExercício\n\n\nExperimente alterar o valor do atributo GRAVIDADE para 0.4 e 0.9, por exemplo.\nExecute o programa para cada alteração e veja o que acontece de diferente."
+  },
+  {
+    "objectID": "cap5-2.html#section-48",
+    "href": "cap5-2.html#section-48",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "O atributo GRAVIDADE é declarado da seguinte forma:\n\n    private static final double GRAVIDADE = 0.7;\n\n\nHá duas palavras-chave novas nessa declaração:\n\nstatic e final"
+  },
+  {
+    "objectID": "cap5-2.html#atributos-estáticos",
+    "href": "cap5-2.html#atributos-estáticos",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Atributos estáticos",
+    "text": "Atributos estáticos\nA palalavra-chave static do Java serve para declarar atributos estáticos.\n\nAtributos desse tipo são guardados na própria classe, não nos objetos.\n\nEle são também chamados de variáveis de classe.\n\nIsso torna esses atributos muito diferentes dos atributos comuns que vimos até agora.\n\nLembrando que os atributos comuns são também chamados de variáveis de instância."
+  },
+  {
+    "objectID": "cap5-2.html#section-49",
+    "href": "cap5-2.html#section-49",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "O diagrama abaixo ilustra bem a diferença entre os atributos comuns e estáticos."
+  },
+  {
+    "objectID": "cap5-2.html#section-50",
+    "href": "cap5-2.html#section-50",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Os atributos comuns (velocidadeVertical, posY e amortecimento) são guardados nos objetos:\n\nComo criamos três objetos, há três espaços na memória para cada um desses atributos."
+  },
+  {
+    "objectID": "cap5-2.html#section-51",
+    "href": "cap5-2.html#section-51",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Já o atributo estático GRAVIDADE é guardado na classe:\n\nCom isso, existe sempre um único espaço na memória para ele, independente da quantidade de objetos criados."
+  },
+  {
+    "objectID": "cap5-2.html#section-52",
+    "href": "cap5-2.html#section-52",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Os atributos estáticos podem ser acessados normalmente dentro de qualquer método da classe.\n\nIsso significa que todos os objetos compartilham o mesmo atributo.\nSe um objeto alterar o valor do atributo estático, esse valor será usado para todos os objetos.\n\nJá que existe um único valor na memória.\n\n\n\nGeralmente usamos atributos estáticos quando todos os objetos da classe devem ter o mesmo valor para o atributo.\n\nCom isso, evitamos desperdiçar memória guardando o mesmo valor repetidas vezes para cada objeto."
+  },
+  {
+    "objectID": "cap5-2.html#constantes",
+    "href": "cap5-2.html#constantes",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Constantes",
+    "text": "Constantes\nConstantes são parecidas com variáveis,\n\nmas a diferença é que seus valores não podem ser alterados depois de inicializados.\nDefinimos constantes em Java usando a palavra-chave final."
+  },
+  {
+    "objectID": "cap5-2.html#section-54",
+    "href": "cap5-2.html#section-54",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Suponha, por exemplo, a seguinte declaração de constante:\n\n    private final int TAMANHO = 30;\n\n\nVeja que é uma declaração de atributo.\nMas tem a palavra-chave final antes do tipo do atributo.\n\n\nObs.: por convenção, escrevemos os nomes das constantes com todas as letras maiúsculas."
+  },
+  {
+    "objectID": "cap5-2.html#section-55",
+    "href": "cap5-2.html#section-55",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Constantes podem ser inicializadas na própria linha da declaração, como no exemplo dado:\n\n    private final int TAMANHO = 30;\n\n\nNeste caso, todos os objetos teriam o mesmo valor.\nE, portanto, seria mais intessante que o atributo TAMANHO fosse estático."
+  },
+  {
+    "objectID": "cap5-2.html#section-56",
+    "href": "cap5-2.html#section-56",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Mas constantes podem ser inicializadas nos construtores em vez de ser na declaração.\n\nComo isso, cada objeto poderia ter um valor diferente para o atributo TAMANHO.\n\nInicializado, por exemplo, a partir de um valor recebido por parâmetro no construtor.\nA ideia seria que o objeto não poderia ter seu tamanho alterado depois de sua criação.\n\nNesse caso, não faria sentido declarar o atributo como estático."
+  },
+  {
+    "objectID": "cap5-2.html#section-57",
+    "href": "cap5-2.html#section-57",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "É mais comum usarmos constantes quando elas têm o mesmo valor para todos os objetos.\n\nPortanto, é mais comum ter constantes estáticas, do que como atributos comuns.\nComo é o caso do atributo GRAVIDADE da classe Bola."
+  },
+  {
+    "objectID": "cap5-2.html#section-59",
+    "href": "cap5-2.html#section-59",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Todos os métodos que implementamos até agora são métodos de instância (de objetos).\n\nPois eles são chamados usando objetos.\n\n\nMas nós podemos também ter métodos que são chamados usando a classe, em vez de objetos.\n\nSão os métodos estáticos.\nAssim como os atributos estáticos, os métodos estáticos pertencem à classe e não aos objetos."
+  },
+  {
+    "objectID": "cap5-2.html#section-60",
+    "href": "cap5-2.html#section-60",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Nós podemos definir métodos estáticos usando a palavra-chave static na assinatura do método."
+  },
+  {
+    "objectID": "cap5-2.html#section-61",
+    "href": "cap5-2.html#section-61",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Suponha, por exemplo, que uma classe Calendario tenha o método estático abaixo:\n\n    public static int obterNumeroDeDiasDoMesAtual() {\n        . . .\n    }\n\n\nNós poderíamos chamar esse método usando o comando abaixo:\n\nRepare que usamos o nome da classe antes do . para chamar o método, em vez de usar um objeto.\n\n\n    int dias = Calendario.obterNumeroDeDiasDoMesAtual();"
+  },
+  {
+    "objectID": "cap5-2.html#section-62",
+    "href": "cap5-2.html#section-62",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Podemos encontrar vários exemplos de métodos estáticos na classe Math do Java.\n\nEla possui métodos, por exemplo, para encontrar o máximo ou o mínimo entre dois números.\n\nOu ainda calcular seno e cosseno, por exemplo.\n\n\n\n\n    int maximo = Math.max(numeroA, numeroB);\n    double valor = Math.cos(angulo);"
+  },
+  {
+    "objectID": "cap5-2.html#section-63",
+    "href": "cap5-2.html#section-63",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "int maximo = Math.max(numeroA, numeroB);\n    double valor = Math.cos(angulo);\n\nRepare que esses métodos dependem apenas dos parâmetros passados.\n\nEles não dependem de atributos de um possível objeto Math, ou seja, não dependem do estado de um objeto.\nGeralmente é nesses casos que usamos métodos estáticos."
+  },
+  {
+    "objectID": "cap5-2.html#section-64",
+    "href": "cap5-2.html#section-64",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "A classe Math do Java possui também exemplos de uso de constantes.\n\nO valor de PI, por exemplo, pode ser acessado com o comando Math.PI.\nRepare que estamos acessando o atributo diretamente, usando o nome da classe, em vez de um objeto.\n\nDa mesma forma que usamos para chamar métodos estáticos.\n\nNós conseguimos fazer isso porque PI é declarado como uma constante pública."
+  },
+  {
+    "objectID": "cap5-2.html#section-65",
+    "href": "cap5-2.html#section-65",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Mas não seria uma falha de encapsulamento declarar um atributo público?\n\nNote que não há falha de encapsulamento em declarar um atributo público, se ele for uma constante.\nJá que não seria possível alterar seu valor de fora da classe."
+  },
+  {
+    "objectID": "cap5-2.html#section-66",
+    "href": "cap5-2.html#section-66",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Você já usou métodos estáticos antes, sem saber.\n\nRepare como os métodos abaixo são chamados.\n\n\n\nGreenfoot.isKeyDown(\"left\");\n\nGreenfoot.playSound(\"comendo.wav\");\n\nGreenfoot.getRandomNumber(90);"
+  },
+  {
+    "objectID": "cap5-2.html#section-67",
+    "href": "cap5-2.html#section-67",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Greenfoot.isKeyDown(\"left\");\n\nGreenfoot.playSound(\"comendo.wav\");\n\nGreenfoot.getRandomNumber(90);\n\nEm todas essas chamadas nós usamos o nome da classe Greenfoot para chamar o método.\n\nIsso porque todos esses métodos são estáticos.\nTodos eles implementam ações que dependem apenas dos parâmetros passados\n\n(não dependem do estado de um objeto)."
+  },
+  {
+    "objectID": "cap5-2.html#limitações-dos-métodos-estáticos",
+    "href": "cap5-2.html#limitações-dos-métodos-estáticos",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Limitações dos métodos estáticos",
+    "text": "Limitações dos métodos estáticos\nÉ importante sabermos que os métodos estáticos (métodos de classe) têm limitações.\n\nComo eles pertencem à classe e não aos objetos, eles não podem acessar atributos comuns (variáveis de instância).\nEles podem acessar apenas atributos estáticos (variáveis de classe).\n\n\nDa mesma forma, métodos estáticos não podem chamar métodos de instância da mesma classe.\n\nPodem chamar apenas outros métodos estáticos."
+  },
+  {
+    "objectID": "cap5-2.html#limitações-dos-métodos-estáticos-1",
+    "href": "cap5-2.html#limitações-dos-métodos-estáticos-1",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "Limitações dos métodos estáticos",
+    "text": "Limitações dos métodos estáticos\nPor que você acha que essas limitações existem?\n\nImagine que um método estático qualquer (vamos chamar de metodoA), de uma classe ClasseX acessasse um atributo comum.\nTente imaginar o que aconteceria se você fizesse uma chamada ClasseX.metodoA() sem ter criado nenhum objeto da classe.\n\nE se existissem vários objetos da classe?\n\n\n\nE o que isso tem a ver com um método estático não poder chamar um método de instância?"
+  },
+  {
+    "objectID": "cap5-2.html#section-68",
+    "href": "cap5-2.html#section-68",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Exercício\n\n\nAltere a declaração do atributo GRAVIDADE da classe Bola de forma que ele não seja mais uma constante. Mas, mantenha a inicialização do atributo na declaração.\nCrie um método modificador que permita alterar o valor do atributo.\nExecute o programa e pause-o antes das bolas pararem de quicar. Clique em uma das bolas e chame o método que você criou, informando um novo valor para a gravidade.\nContinue a execução do programa e repare que acontece. A gravidade foi alterada só para a bola que você chamou o método, ou para todas elas?\nDepois que as bolas pararem, pause o programa novamente, e use a opção Inspecionar em cada bola para conferir o valor do atributo GRAVIDADE. (Obs.: na janela de inspeção, use o botão mostrar campos estáticos)."
+  },
+  {
+    "objectID": "cap5-2.html#section-53",
+    "href": "cap5-2.html#section-53",
+    "title": "IPOO - Cap. 5 Comportamento Mais Sofisticado",
+    "section": "",
+    "text": "Exercício\n\n\nComo um atributo estático poderia ser usado para contabilizar a quantidade de objetos criados em uma classe?\nPor exemplo, como a própria classe Bola poderia contar quantas bolas foram criadas durante o programa?"
   }
 ]

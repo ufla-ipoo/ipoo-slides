@@ -1424,7 +1424,7 @@ Veja portanto que, em termos práticos, a única coisa que precisamos lembrar é
 
 ##
 
-Veja no Apêndice B do livro uma lista completa dos tipos primitivos e suas classes empacotadoras.
+Veja no **Apêndice B do livro** uma lista completa dos tipos primitivos e suas classes empacotadoras.
 
 - Vale ressaltar também que o mesmo conceito é aplicado para as demais coleções, como a classe `HashMap`.
 
