@@ -662,17 +662,5 @@ O conteúdo de [Estratégias de Depuração]{.alert} está em uma [apresentaçã
 
 ![](imagens/slides_estrategias_depuracao.png)
 
-# Entregas dessa Aula {background-color="#40666e"}
 
-## {.smaller}
-
-::: {.nonincremental}
-
-Para ter **presença** nessa aula teórica ANP, você deve fazer a atividade abaixo.
-
-::: {.callout-important title="Entregas no Campus Virtual"}
-Responda a tarefa no Campus Virtual enviando os trechos de código em Java que você fez no exercício marcado para entrega.
-:::
-
-:::
 
